@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#837#> - <#382#></title>
+<title><#838#> - <#383#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script type="text/javascript" src="/state.js"></script>
@@ -40,7 +40,7 @@ if(((sw_mode == 2 || sw_mode == 4) && '<% nvram_get("wl_unit"); %>' == '<% nvram
 (band60g_support && '<% nvram_get("wl_unit"); %>' == '3')){
 for(var i=4; i>=2; i--)
 document.getElementById("MainTable1").deleteRow(i);
-document.getElementById("repeaterModeHint_desc").innerHTML = "<#1653#>";
+document.getElementById("repeaterModeHint_desc").innerHTML = "<#1658#>";
 document.getElementById("repeaterModeHint").style.display = "";
 document.getElementById("submitBtn").style.display = "none";
 }
@@ -64,7 +64,7 @@ notIPv6 = true;
 if(!validator.ipAddrFinal(document.form.wl_radius_ipaddr, 'wl_radius_ipaddr', 1))
 notIPv4 = true;
 if(notIPv6 && notIPv4){
-alert(document.form.wl_radius_ipaddr.value+" <#329#>");
+alert(document.form.wl_radius_ipaddr.value+" <#330#>");
 document.form.wl_radius_ipaddr.value = "";
 document.form.wl_radius_ipaddr.focus();
 document.form.wl_radius_ipaddr.select();
@@ -147,13 +147,13 @@ $("#lantiq_ready").hide();
 <tr>
 <td bgcolor="#4D595D" valign="top" >
 <div>&nbsp;</div>
-<div class="formfonttitle"><#377#> - <#382#></div>
+<div class="formfonttitle"><#378#> - <#383#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#3728#></div>
+<div class="formfontdesc"><#3740#></div>
 <div id="lantiq_ready" style="display:none;color:#FC0;margin-left:5px;font-size:13px;">Wireless is setting...</div>
 <table id="MainTable1" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 <tr id="wl_unit_field">
-<th><#2289#></th>
+<th><#2299#></th>
 <td>
 <select name="wl_unit" class="input_option" onChange="change_wl_unit();">
 <option class="content_input_fd" value="0" <% nvram_match("wl_unit", "0","selected"); %>>2.4GHz</option>
@@ -162,12 +162,12 @@ $("#lantiq_ready").hide();
 </td>
 </tr>
 <tr id="repeaterModeHint" style="display:none;">
-<td id="repeaterModeHint_desc" colspan="2" style="color:#FFCC00;height:30px;" align="center"><#462#></td>
+<td id="repeaterModeHint_desc" colspan="2" style="color:#FFCC00;height:30px;" align="center"><#463#></td>
 </tr>
 <tr>
 <th>
 <a class="hintstyle" href="javascript:void(0);" onClick="openHint(2,1);">
-<#3730#></a>
+<#3742#></a>
 </th>
 <td>
 <input type="text" maxlength="39" class="input_32_table" name="wl_radius_ipaddr" value="<% nvram_get("wl_radius_ipaddr"); %>" onKeyPress="return validator.isIPAddr(this, event)" autocorrect="off" autocapitalize="off">
@@ -176,7 +176,7 @@ $("#lantiq_ready").hide();
 <tr>
 <th>
 <a class="hintstyle" href="javascript:void(0);" onClick="openHint(2,2);">
-<#3734#></a>
+<#3746#></a>
 </th>
 <td>
 <input type="text" maxlength="5" class="input_6_table" name="wl_radius_port" value="<% nvram_get("wl_radius_port"); %>" onkeypress="return validator.isNumber(this,event)" autocorrect="off" autocapitalize="off"/>
@@ -185,7 +185,7 @@ $("#lantiq_ready").hide();
 <tr>
 <th >
 <a class="hintstyle" href="javascript:void(0);" onClick="openHint(2,3);">
-<#3732#></a>
+<#3744#></a>
 </th>
 <td>
 <input type="password" maxlength="64" class="input_32_table" name="wl_radius_key" value="<% nvram_get("wl_radius_key"); %>" autocorrect="off" autocapitalize="off">
@@ -193,7 +193,7 @@ $("#lantiq_ready").hide();
 </tr>
 </table>
 <div id="submitBtn" class="apply_gen">
-<input class="button_gen" onclick="applyRule()" type="button" value="<#195#>"/>
+<input class="button_gen" onclick="applyRule()" type="button" value="<#196#>"/>
 </div>
 </td>
 </tr>

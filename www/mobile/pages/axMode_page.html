@@ -28,47 +28,47 @@ color: #FC0 !important;
 <div class="desktop_left_field">
 <div>
 <div class="titleMain">802.11ax</div>
-<div class="titleSub"><#496#></div>
+<div class="titleSub"><#497#></div>
 </div>
 </div>
 <div class="table_td">
 <div class="pageDesc">
-<#497#>
 <#498#>
+<#499#>
 </div>
 <div class="labelContainer" id="axMode_checkbox_container">
 <div class="ui-checkbox ui-mini">
 <label for="axMode_checkbox" class="labelInput ui-btn ui-corner-all ui-btn-inherit ui-btn-icon-left ui-checkbox-off axMode_label">
-<#3772#>
+<#3784#>
 </label>
 <input type="checkbox" id="axMode_checkbox" value="0" data-mini="false">
 </div>
 </div>
 <div class="pageDesc">
 <ul style="word-break:break-all;">
-<li><#500#>
+<li><#501#>
 <ul>
 <li><b>Intel:</b> <a target="_blank" href="https://downloadcenter.intel.com">https://downloadcenter.intel.com</a></li>
 <li><b>Mediatek:</b> <a target="_blank" href="https://www.mediatek.com/products/connectivity-and-networking/broadband-wifi">https://www.mediatek.com/products/connectivity-and-networking/broadband-wifi</a></li>
 <li><b>Realtek:</b> <a target="_blank" href="https://www.realtek.com/en/downloads">https://www.realtek.com/en/downloads</a></li>
 </ul>
 </li>
-<li id="dfs_160_desc" style="margin-top: 15px"><#499#></li>
+<li id="dfs_160_desc" style="margin-top: 15px"><#500#></li>
 </ul>
 </div>
 <div>
 <div class="footer_desktop">
-<div class="desktop_abortBtn" onclick="abort.axMode()"><#204#></div>
-<div class="desktop_applyBtn btn_wireless_apply" onclick="apply.axMode()"><#203#></div>
+<div class="desktop_abortBtn" onclick="abort.axMode()"><#205#></div>
+<div class="desktop_applyBtn btn_wireless_apply" onclick="apply.axMode()"><#204#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort" style="width:50%" onclick="abort.axMode()">
-<div class="mobile_abortBtn"><#204#></div>
+<div class="mobile_abortBtn"><#205#></div>
 </td>
 <td class="mobileApply" onclick="apply.axMode()">
-<div class="mobile_applyBtn btn_wireless_apply"><#203#></div>
+<div class="mobile_applyBtn btn_wireless_apply"><#204#></div>
 </td>
 </tr>
 </table>
@@ -86,7 +86,7 @@ $("#Intel_dl_link") //for string tag: QIS_ax_Ready_note_Intel
 $("#axMode_checkbox")
 .enableCheckBox((systemVariable.isDefault) ? true : enableAx)
 $(".btn_wireless_apply")
-.html("<#203#>");
+.html("<#204#>");
 $("#axMode_checkbox")
 .click(function(){
 $(this).enableCheckBox($(this).is(":checked"))

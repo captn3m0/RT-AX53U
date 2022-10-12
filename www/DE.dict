@@ -128,6 +128,7 @@ Außerdem kann ASUS zur Aktivierung Ihrer IFTTT™ Fernsteuerungsfunktion über 
 ASUS ist verpflichtet, die Datenschutzbestimmungen zu beachten und einzuhalten.; Sie können Advanced Settings (Erweiterte Einstellungen) > Administration (Verwaltung) > Privacy (Datenschutz) aufrufen, um die Weitergabe Ihrer Produktdaten an ASUS jederzeit zu aktivieren/deaktivieren. Um mehr darüber zu erfahren, wie ASUS Ihre Daten schützt, lesen Sie bitte die <a id="eula_url" style="font-weight: bolder;text-decoration:underline;cursor:pointer;" target="_blank">ASUS Datenschutzrichtlinien</a>.
 Ich bin 16 Jahre oder älter.
 Bitte bestätigen Sie, dass Sie 16 Jahre oder älter sind.
+Bitte bestätigen Sie, dass ASUS-Nutzungsbedingungen.
 Für %1$@ und Remote Connection (ASUS Router APP/Lyra APP/AiCloud/AiDisk):
 Bitte beachten Sie, dass Ihre Daten, einschließlich der Modellbezeichnung Ihres Produkts, Firmware-Version, Internetstatus, IP-Adresse, MAC-Adresse und des DDNS-Namens, von ASUS über die obigen Funktionen erfasst werden.
 Wenn Sie die Weitergabe Ihrer Daten an ASUS über die obigen Funktionen deaktivieren möchten, klicken Sie bitte unten auf <span style="font-weight: bold;">[Withdraw] ([Zurücknehmen])</span>. Bitte beachten Sie jedoch, dass diese Features/Funktionen möglicherweise nicht funktionieren, wenn Sie die Weitergabe Ihrer Daten an ASUS einstellen.
@@ -139,12 +140,12 @@ Wenn Sie beabsichtigen, in der Zukunft die Funktionen von Alexa™ und IFTTT™ 
 Sie können den Vorgang des Zurücknehmens ohne Internetverbindung nicht abschließen. Bitte nehmen Sie die Aktivierung zurück, wenn Sie mit dem Internet verbunden sind.
 Sie können den Vorgang des Zurücknehmens nicht abschließen, weil die Internetverbindung nicht stabil ist. Bitte nehmen Sie die Aktivierung später noch einmal zurück.
 Indem Sie ASUS AiProtection benutzen, stimmen Sie dem Folgenden zu:
-Durch die Nutzung von AiProtection, Traffic Analyzer, Apps Analyzer, Adaptive QoS (Quality of Service)/Game Boost und dem Webseitenverlauf stimmen Sie der <a id="eula_url" style="text-decoration:underline;" target="_blank">Endbenutzer-Lizenzvereinbarung von Trend Micro</a> zu.
-Bitte beachten Sie, dass Ihre Daten von Trend Micro über AiProtection, Traffic Analyzer, Apps Analyzer, Adaptive QoS (Quality of Service) und den Webseitenverlauf erfasst werden. Sie bestätigen und stimmen zu, dass ASUS weder für Vereinbarungen zwischen Ihnen und Trend Micro noch für die zur Verfügung gestellten Inhalte des Dienstes von Trend Micro verantwortlich ist. Wenn Sie Fragen dazu haben, wie Trend Micro Ihre oben genannten Daten erhebt, verarbeitet und verwendet,  lesen Sie bitte die von Trend Micro herausgegebene Datenschutzerklärung oder wenden Sie sich für weitere Informationen direkt an Trend Micro.
+Durch die Nutzung von AiProtection, Kindersicherung( Web & App Filter ), Traffic Analyzer, Apps Analyzer, Adaptive QoS (Quality of Service)/Game Boost und dem Webseitenverlauf stimmen Sie der <a id="eula_url" style="text-decoration:underline;" target="_blank">Endbenutzer-Lizenzvereinbarung von Trend Micro</a> zu.
+Bitte beachten Sie, dass Ihre Daten von Trend Micro über AiProtection, Kindersicherung( Web & App Filter ), Traffic Analyzer, Apps Analyzer, Adaptive QoS (Quality of Service) und den Webseitenverlauf erfasst werden. Sie bestätigen und stimmen zu, dass ASUS weder für Vereinbarungen zwischen Ihnen und Trend Micro noch für die zur Verfügung gestellten Inhalte des Dienstes von Trend Micro verantwortlich ist. Wenn Sie Fragen dazu haben, wie Trend Micro Ihre oben genannten Daten erhebt, verarbeitet und verwendet,  lesen Sie bitte die von Trend Micro herausgegebene Datenschutzerklärung oder wenden Sie sich für weitere Informationen direkt an Trend Micro.
 Wenn Sie die Weitergabe Ihrer Daten an Trend Micro über die obigen Funktionen deaktivieren möchten, rufen Sie bitte Folgendes auf: Router web GUI (Router Web-Benutzeroberfläche) > Advanced settings (Erweiterte Einstellungen) > Administration (Verwaltung) > Privacy (Datenschutz).
 <a id="tm_eula_url" style="text-decoration:underline;" target="_blank">TrendMicro Privacy Policy</a>
 <a id="tm_disclosure_url" style="text-decoration:underline;" target="_blank">Privacy and Personal Data Collection Disclosure</a>
-Für AiProtection, Traffic Analyzer, Apps Analyzer, Adaptive QoS (Quality of Service)/Game Boost und Webseitenverlauf:
+Für AiProtection, Kindersicherung( Web & App Filter ), Traffic Analyzer, Apps Analyzer, Adaptive QoS (Quality of Service)/Game Boost und Webseitenverlauf:
 Bitte beachten Sie, dass Ihre Daten von Trend Micro über die obigen Funktionen erfasst werden.
 Wenn Sie die Weitergabe Ihrer Daten an Trend Micro über die folgenden Funktionen deaktivieren möchten, klicken Sie bitte unten auf <span style="font-weight: bold;">[Withdraw] ([Zurücknehmen])</span>. Bitte beachten Sie jedoch, dass diese Features/Funktionen möglicherweise nicht funktionieren, wenn Sie die Weitergabe Ihrer Daten an Trend Micro einstellen.
 Möchten Sie die Aktivierung wirklich zurücknehmen?
@@ -271,7 +272,7 @@ Firmware-Aktualisierung fehlgeschlagen. Dies kann an einer falschen Image-Datei 
 Firmware wird aktualisiert. Bitte warten Sie etwa 3 Minuten.
 Die Firmware-Aktualisierung ist abgeschlossen. Schließen Sie dieses Fenster und greifen Sie dann erneut auf Ihren AiMesh-Router zu.
 Firmware-Aktualisierung abgeschlossen. Bitte starten Sie den RT-AX53U manuell neu.
-To comply with regulatory amendments, we have modified our certification rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
+To comply with regulatory amendments, we have modified our certificate rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
 Sie haben 5-Mal ein falsches Passwort eingegeben. Sie werden abgemeldet.
 2022 ASUSTeK Computer Inc. Alle Rechte vorbehalten.
 Konfigurationsparameter bleiben während des Aktualisierungsvorgangs erhalten.
@@ -998,13 +999,14 @@ Wenn Sie die SSID ändern, wirkt sich dies auf die WLAN-Konnektivität des AiMes
 Wenn Sie die WPA-Kennwort ändern, wirkt sich dies auf die WLAN-Konnektivität des AiMesh-Knotenpunkts aus.
 Wenn Sie den Ländercode ändern, kann sich dies auf Ihr AiMesh-System auswirken.
 Wenn Sie die Funk-Funktion deaktivieren, wirkt sich dies auf die WLAN-Konnektivität des AiMesh-Routers aus.
-Wenn Sie die SSID verstecken, wirkt sich dies auf die WLAN-Konnektivität des AiMesh-Routers aus.
+Eine verborgene SSID hilft nicht beim Schutz Ihres WLAN-Netzwerks und kann zu Verbindungsproblemen führen.
 Wenn Sie die SSID verstecken, wird die WIPS-Funktion deaktiviert. Dies wirkt sich auf die WLAN-Konnektivität des AiMesh-Routers aus.
 Wenn Sie den DHCP-Server deaktivieren, wirkt sich dies auch auf die WLAN-Konnektivität des AiMesh-Routers aus.
 In Anbetracht der Kompatibilität von AiMesh-System und Endgeräten empfehlen wir Ihnen die Verwendung von WPA2-Personal. Möchten Sie zu #AUTHMODE wechseln?\n*Wenn Sie Verbindungsprobleme feststellen, wechseln Sie bitte zu WPA2-Personal, oder wenden Sie sich dan den/die Hersteller, um weitere Informationen zu erhalten.
 Um die Verbindung Ihres AiMesh-Systems und der Endgeräte sicherzustellen, lesen Sie bitte diese <a id="wpa3FaqLink">FAQ</a>, bevor Sie zu WPA3-Personal wechseln.
 Sie verwenden aktuell WPA3-Personal. Um ein AiMesh-System zu erstellen, wird Ihre Authentifizierungsmethode in WPA2/WPA3-Personal geändert. Möchten Sie fortfahren?
 You can read this <a id='wpa3FaqLink'>FAQ</a> for more information.
+Wenn Sie weitere Details wünschen, besuchen Sie bitte: <a style='font-weight: bolder;text-decoration: underline;' href='' target='_blank'>diesen FAQ</a>
 Advanced ASUS AiMesh ist eine neue innovative Routerfunktion, durch die mehrere ASUS Router miteinander verbunden werden können und so für eine WLAN-Abdeckung in Ihrem gesamten Zuhause gesorgt wird.
 Erfahren Sie mehr über ASUS AiMesh
 AiMesh-Netzknoten finden
@@ -1090,6 +1092,9 @@ Balkon
 Konferenzraum
 Benutzerdefiniert
 Garage
+Erdgeschoss
+Gaming-Raum
+Sportraum
 Tipps, wenn die Verbindung offline ist
 Stellen Sie sicher, dass Ihr AiMesh-Netzknoten eingeschaltet ist.
 Starten Sie Ihren AiMesh-Netzknoten neu und versuchen Sie es erneut.
@@ -1687,6 +1692,8 @@ Importieren Sie Ihr eigenes Zertifikat
 Laden Sie hier ein Zertifikat hoch, das von einer Zertifizierungsinstanz ausgestellt wurde. Ihr privater Schlüssel und Ihr SSL-Zertifikat sind erforderlich.
 Privater Schlüssel
 Private Schlüssel können nicht durch Kennwörter geschützt werden.
+IPv6-Update
+Wenn die Netzwerkumgebung des Client eine IPv6-Netzwerkadresse nutzt, wird das Domain durch die Aktivierung dieser Funktion zuerst an eine IPv6-Netzwerkadresse gegeben, wenn remote auf das Geräte zugegriffen wird.
 SSL-Zertifikat
 Nutzungsbedingungen
 Transfer ASUS DDNS name
@@ -2028,11 +2035,11 @@ Aktivieren Sie die Firewall, um Ihr lokales Netzwerk vor Hackerangriffen zu sch�
 <b>Schwarzlistendauer :</b> Während der geplanten Dauer können die angegebenen Netzwerkdienste nicht von in der Schwarzliste geführten Clients genutzt werden. Nach Ablauf der festgelegten Dauer können sämtliche Clients im LAN wieder auf die angegebenen Netzwerkdienste zugreifen.<br><b>Weißlistendauer :</b> Während der geplanten Dauer können die in der Weißliste geführten Clients AUSSCHLIESSLICH die angegebenen Netzwerkdienste nutzen. Nach Ablauf der festgelegten Dauer können in der Weißliste geführte Clients weder auf das Internet noch auf Internetdienste zugreifen.
 <b>HINWEIS :</b> Wenn Sie eine Weißliste für das Subnetz erstellen, können IP-Adressen außerhalb des Subnetzes weder auf Internet noch auf Internetdienste zugreifen.
 Mit dem MAC-Filter können Sie den Netzwerkzugriff für Geräte mit bestimmten MAC-Adressen freigeben oder sperren. <p>Sie können den MAC-Filter zu Zulassungs- oder Sperrmodus setzen. <p>Im Sperrmodus wird Geräten in der Liste der Netzwerkzugang verwehrt. <p>Im Zulassungsmodus können nur Geräte in der Liste auf das Netzwerk zugreifen. Geräte, die nicht in der Liste aufgeführt sind, können nicht auf das Netzwerk zugreifen.
-Eine DoS-Attacke (Denial-of-Service) ist ein vorsätzlicher Versuch, berechtigten Benutzern den Zugang zu Diensten oder Computerressourcen zu verwehren. <p>Das Aktivieren dieser Funktion schützt den Router vor DoS-Attacken, steigert aber die Auslastung des Routers.
+Das Aktivieren dieser Funktion schützt den Router vor DoS-Attacken (Denial- of-Service), steigert aber die Auslastung des Routers.
 DoS-Schutz aktivieren
 Das Deaktivieren der Firewall deaktiviert alle damit verbundenen Funktionen.
 Firewall aktivieren
-IPv4 Firewall aktivieren
+IPv4 eingehende firewall regeln aktivieren
 IPv4 Firewall
 Wenn Sie bei der WAN-Einstellung den Wert 20:21 für den Port-Bereich des FTP-Servers eingeben, wird Ihr FTP-Server in Konflikt mit dem Standard FTP-Server des RT-AX53U stehen.
 Schlüsselwortfilter aktivieren
@@ -2140,6 +2147,9 @@ Updated
 Neue Firmware ist verfügbar.
 Veröffentlichungshinweis wird geladen, bitte warten ...
 Veröffentlichungshinweis konnte nicht gefunden werden.
+Rollback
+Eine Firmware-Version wählen
+Firmware Rollback Selector
 Game Acceleration
 Game Boost
 Triple-Level Game Acceleration
@@ -2878,6 +2888,7 @@ Neuen RADIUS-Client erstellen
 Gruppentabelle
 Partitionsname
 Für den Quell- oder Ziel-Port-Bereich können Sie: a) Einen bestimmten Port, z.B. \"95\" eingeben; oder b) Einen Port-Bereich, z.B. \"103:315\", \">100\" eingeben, oder \"<65535\" eingeben.
+Gaming-Anschluss
 Port Mapping
 Port Mapping unterstützt die IPTV WAN-Schnitstalle für einen bestimmten LAN-Port. Sie können den entsprechenden LAN-Port auswählen und dann auf Anwenden klicken.
 Port Mapping aktivieren
@@ -3322,6 +3333,7 @@ Atlantische Zeit (Kanada)
 La Paz
 Caracas
 Santiago
+Asunción
 Neufundland
 Brasilia
 Buenos Aires, Georgetown
@@ -3351,7 +3363,7 @@ Kaliningrad
 Athen
 Jerusalem
 Harare, Pretoria
-Kiew
+Kyiv
 Moskau, St. Petersburg
 Wolgograd
 Kuwait, Riad
@@ -3413,7 +3425,7 @@ Upload-Priorität
 Daten gesendet/Sek.
 Daten gesendet
 Richten Sie iTunes- und UPnP-Medienserver ein.
-Der RT-AX53U unterstützt UPnP-Standards. Sie können dies aktivieren und anderen UPnP-Geraten wie PS3 oder digitalen Medienplayern den Zugriff auf Multimediadateien des USB-Laufwerks erlauben.
+Die <a id='upnp_link'>UPnP, iTunes</a>, <a id='ftp_link'>FTP</a> und <a id='samba_link'>Network Place (Samba)</a> einrichten.
 URL Keyword
 Überprüfen Sie bitte Ihre USB-Anwendung
 Disk überprüfen
@@ -3500,7 +3512,7 @@ Samba-Freigabedienstunterstützung
 Inserieren Sie DNS zu Clients
 Autorisations-Modus
 Nur Benutzername / Passwort Auth.
-Authorization Mode fixes on TLS
+Authentication Mode fixes on TLS
 HMAC Berechtigung
 Zusätzliche HMAC Berechtigung
 Zulassen von Client <-> Client
@@ -4089,7 +4101,7 @@ Bitte deaktivieren Sie das Profil, bevor Sie es löschen.
 Alle für ein VPN-Profil festgelegten Vorgabenausnahmen werden ebenfalls gelöscht, wenn das Profil gelöscht wird. Möchten Sie das Profil wirklich löschen?
 Möchten Sie dieses Profil wirklich löschen?
 Durch das Löschen der Client-Vorgabe in der Ausnahmenliste wird auch die Client-IP-Bindung des DHCP-Servers gelöscht. Möchten Sie wirklich löschen?
-<a id="faq1" href="" target="_blank" style="font-weight:bolder;text-decoration:underline;">Multiple VPN Connection FAQ.</a>
+<a id="faq1" href="" target="_blank" style="font-weight:bolder;text-decoration:underline;">VPN Fusion - Häufig gestellte Fragen.</a>
 Eine Festlegung als Standardverbindung für die Zielvorgabe ist nicht möglich.
 Beta test only
 You can also select [Cancel], the device will automatically start downloading the update during the night time.
@@ -4129,6 +4141,7 @@ GeForce Now
 Wählen Sie GeForce Now aus, um entsprechende Gaming-Geräte zu bevorzugen. So profitieren Sie von verbessertem Gaming.
 LED On/Off
 The LED on/off control is used to turn off all LEDs includes Aura light.
+To enable Aura RGB, LED must remain on. Please turn on LED by pressing hardware button on the router for 3 seconds or enable it via web/app interface.
 Ereignis
 Die folgenden Ereignisse werden vom System erkannt, woraufhin entsprechende LED-Effekte als Benachrichtigung ausgelöst werden.
 Wenn Sie Game Boost verwenden, zeigt die LED-Leiste einen Atmungseffekt in Rot.

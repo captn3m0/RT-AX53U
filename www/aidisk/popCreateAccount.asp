@@ -35,7 +35,7 @@ return false;
 function validForm(){
 showtext(document.getElementById("alert_msg2"), "");
 if(document.getElementById("account").value.length == 0){
-alert("<#263#>");
+alert("<#264#>");
 document.getElementById("account").focus();
 return false;
 }
@@ -51,18 +51,18 @@ if(document.getElementById("account").value == "root"
 || document.getElementById("account").value == "guest"
 || document.getElementById("account").value == "anonymous"
 ){
-alert("<#776#>");
+alert("<#777#>");
 document.getElementById("account").focus();
 return false;
 }
 else if(checkDuplicateName(document.getElementById("account").value, parent.get_accounts())){
-alert("<#266#>");
+alert("<#267#>");
 document.getElementById("account").focus();
 return false;
 }
 }
 if(document.getElementById("password").value.length <= 0 || document.getElementById("confirm_password").value.length <= 0){
-showtext(document.getElementById("alert_msg2"),"*<#267#>");
+showtext(document.getElementById("alert_msg2"),"*<#268#>");
 if(document.getElementById("password").value.length <= 0){
 document.getElementById("password").focus();
 document.getElementById("password").select();
@@ -73,7 +73,7 @@ document.getElementById("confirm_password").select();
 return false;
 }
 if(document.getElementById("password").value != document.getElementById("confirm_password").value){
-showtext(document.getElementById("alert_msg2"),"*<#268#>");
+showtext(document.getElementById("alert_msg2"),"*<#269#>");
 document.getElementById("confirm_password").focus();
 return false;
 }
@@ -83,7 +83,7 @@ document.getElementById("password").select();
 return false;
 }
 if(document.getElementById("password").value.length > 32){
-showtext(document.getElementById("alert_msg2"),"*<#351#>");
+showtext(document.getElementById("alert_msg2"),"*<#352#>");
 document.getElementById("password").focus();
 document.getElementById("password").select();
 return false;
@@ -97,32 +97,32 @@ return true;
 <table width="90%" class="popTable" border="0" align="center" cellpadding="0" cellspacing="0">
 <thead>
 <tr>
-<td colspan="2"><span style="color:#FFF"><#905#></span><img src="../images/button-close.gif" onClick="parent.hidePop('OverlayMask');"></td>
+<td colspan="2"><span style="color:#FFF"><#906#></span><img src="../images/button-close.gif" onClick="parent.hidePop('OverlayMask');"></td>
 </tr>
 </thead>
 <tbody>
 <tr align="center">
-<td height="25" colspan="2"><#904#></td>
+<td height="25" colspan="2"><#905#></td>
 </tr>
 <tr>
-<th><#955#>: </th>
+<th><#956#>: </th>
 <td>
 <input class="input_15_table" name="account" id="account" type="text" maxlength="32" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><#2261#>: </th>
+<th><#2271#>: </th>
 <td><input type="password" class="input_15_table" name="password" id="password" onKeyPress="return validator.isString(this, event);" maxlength="33" autocorrect="off" autocapitalize="off"></td>
 </tr>
 <tr>
-<th><#1608#>: </th>
+<th><#1613#>: </th>
 <td><input type="password" class="input_15_table" name="confirm_password" id="confirm_password" onKeyPress="return validator.isString(this, event);" maxlength="33" autocorrect="off" autocapitalize="off">
 <br/><span id="alert_msg2" style="color:#FC0;margin-left:8px;"></span>
 </td>
 </tr>
 </tbody>
 <tr>
-<th colspan="2" align="right"><input id="Submit" type="button" class="button_gen" value="<#1632#>"></td> </tr>
+<th colspan="2" align="right"><input id="Submit" type="button" class="button_gen" value="<#1637#>"></td> </tr>
 </table>
 </form>
 </body>

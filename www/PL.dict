@@ -128,6 +128,7 @@ Ponadto w celu obsługi funkcji zdalnego sterowania IFTTT™ za pomocą produktu
 Firmie ASUS zależy na ochronie i poszanowaniu prywatności użytkownika; Można przejść kolejno do pozycji Advanced Settings (Ustawienia zaawansowane) > Administration (Administracja) > Privacy (Prywatność) w celu włączenia/wyłączenia stałego udostępniania firmie ASUS informacji o produkcie. Więcej informacji na temat ochrony prywatności użytkowników przez firmę ASUS można znaleźć w dokumencie <a id="eula_url" style="font-weight: bolder;text-decoration:underline;cursor:pointer;" target="_blank">Polityka prywatności firmy ASUS</a>.
 Mam więcej niż 16 lat.
 Potwierdź, że masz więcej niż 16 lat.
+Potwierdź, że Warunki korzystania ASUS.
 W przypadku %1$@ i połączenia zdalnego(aplikacja ASUS Router/Lyra/AiCloud/AiDisk):
 Należy pamiętać, że informacje użytkownika, w tym nazwa modelu produktu, wersja oprogramowania sprzętowego, stan połączenia z Internetem, adres IP, adres MAC i nazwa DDNS, będą gromadzone przez firmę ASUS za pośrednictwem powyższych funkcji.
 Aby wyłączyć udostępnianie informacji użytkownika firmie ASUS za pośrednictwem powyższych funkcji, należy kliknąć pozycję <span style="font-weight: bold;">[Withdraw] (Wycofaj zgodę)</span> poniżej. Należy jednak pamiętać, że po zaprzestaniu udostępniania informacji użytkownika firmie ASUS funkcje te mogą nie działać.
@@ -139,12 +140,12 @@ W celu włączenia funkcji Alexa™ i IFTTT™ w przyszłości konieczne będzie
 Nie można ukończyć procedury wycofania zgody bez połączenia z Internetem. Wycofaj zgodę po nawiązaniu połączenia z Internetem.
 Nie można ukończyć procedury wycofania zgody ze względu na niestabilność połączenia z Internetem. Spróbuj ponownie wycofać zgodę później.
 Korzystanie z ASUS AiProtection oznacza zgodę na
-Korzystanie z funkcji AiProtection, Traffic analyzer (Analizator ruchu), Apps analyzer (Analizator aplikacji), Adaptive QoS (Adaptacyjna funkcja QoS)/Game boost (Przyspieszenie gier), Web history (Historia stron sieci Web) oznacza zgodę na postanowienia <a id="eula_url" style="text-decoration:underline;" target="_blank"> Umowy licencyjnej użytkownika oprogramowania firmy Trend Micro</a>.
-Należy pamiętać, że firma Trend Micro będzie gromadzić informacje użytkownika za pośrednictwem funkcji AiProtection, Traffic analyzer (Analizator ruchu), Apps analyzer (Analizator aplikacji), Adaptive QoS (Adaptacyjna funkcja QoS) i Web history (Historia stron sieci Web). Użytkownik przyjmuje ponadto do wiadomości i zgadza się na to, że firma ASUS nie ponosi odpowiedzialności za żadne umowy między użytkownikiem a firmą Trend Micro ani za jakąkolwiek zawartość usługi zapewnianej przez firmę Trend Micro. W razie jakichkolwiek pytań dotyczących sposobów gromadzenia, przetwarzania i wykorzystywania powyższych informacji użytkownika przez firmę Trend Micro, należy zapoznać się z oświadczeniem firmy Trend Micro w sprawie ochrony prywatności lub skontaktować się z firmą Trend Micro w celu uzyskania szczegółowych informacji.
+Korzystanie z funkcji AiProtection, Kontrola rodzicielska( Filtry Sieci i Aplikacji ), Traffic analyzer (Analizator ruchu), Apps analyzer (Analizator aplikacji), Adaptive QoS (Adaptacyjna funkcja QoS)/Game boost (Przyspieszenie gier), Web history (Historia stron sieci Web) oznacza zgodę na postanowienia <a id="eula_url" style="text-decoration:underline;" target="_blank"> Umowy licencyjnej użytkownika oprogramowania firmy Trend Micro</a>.
+Należy pamiętać, że firma Trend Micro będzie gromadzić informacje użytkownika za pośrednictwem funkcji AiProtection, Kontrola rodzicielska( Filtry Sieci i Aplikacji ), Traffic analyzer (Analizator ruchu), Apps analyzer (Analizator aplikacji), Adaptive QoS (Adaptacyjna funkcja QoS) i Web history (Historia stron sieci Web). Użytkownik przyjmuje ponadto do wiadomości i zgadza się na to, że firma ASUS nie ponosi odpowiedzialności za żadne umowy między użytkownikiem a firmą Trend Micro ani za jakąkolwiek zawartość usługi zapewnianej przez firmę Trend Micro. W razie jakichkolwiek pytań dotyczących sposobów gromadzenia, przetwarzania i wykorzystywania powyższych informacji użytkownika przez firmę Trend Micro, należy zapoznać się z oświadczeniem firmy Trend Micro w sprawie ochrony prywatności lub skontaktować się z firmą Trend Micro w celu uzyskania szczegółowych informacji.
 Aby wyłączyć udostępnianie informacji użytkownika firmie Trend Micro za pośrednictwem powyższych funkcji, należy przejść kolejno do pozycji:  Interfejs Web GUI routera > Advanced settings (Ustawienia zaawansowane) > Administration (Administracja) > Privacy (Prywatność).
 <a id="tm_eula_url" style="text-decoration:underline;" target="_blank">TrendMicro Privacy Policy</a>
 <a id="tm_disclosure_url" style="text-decoration:underline;" target="_blank">Privacy and Personal Data Collection Disclosure</a>
-W przypadku funkcji AiProtection, Traffic Analyzer (Analizator ruchu), Apps analyzer (Analizator aplikacji), Adaptive QoS (Adaptacyjna funkcja QoS)/Game boost (Przyspieszenie gier), Web history (Historia stron sieci Web):
+W przypadku funkcji AiProtection, Kontrola rodzicielska( Filtry Sieci i Aplikacji ), Traffic Analyzer (Analizator ruchu), Apps analyzer (Analizator aplikacji), Adaptive QoS (Adaptacyjna funkcja QoS)/Game boost (Przyspieszenie gier), Web history (Historia stron sieci Web):
 Please noted that your information will be collected by Trend Micro through the above functionsNależy pamiętać, że firma Trend Micro będzie gromadzić informacje użytkownika za pośrednictwem powyższych funkcji.
 Aby wyłączyć udostępnianie informacji użytkownika firmie Trend Micro za pośrednictwem tych funkcji, należy kliknąć pozycję <span style="font-weight: bold;">[Withdraw] (Wycofaj zgodę)</span> poniżej. Należy jednak pamiętać, że po zaprzestaniu udostępniania informacji użytkownika firmie Trend Micro funkcje te mogą nie działać.
 Czy na pewno chcesz wycofać zgodę?
@@ -271,7 +272,7 @@ Aktualizacja firmware przerwana. Sprawdź plik źródłowy, połączenie pomięd
 Trwa aktualizacja firmware. Potrwa to około 3 minuty.
 Aktualizacja oprogramowania sprzętowego została zakończona. Zamknij to okno i uzyskaj ponownie dostęp do routera AiMesh.
 Aktualizacja firmware została wykonana. Uruchom ponownie RT-AX53U ręcznie.
-To comply with regulatory amendments, we have modified our certification rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
+To comply with regulatory amendments, we have modified our certificate rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
 5 razy podano niepoprawne hasło. Nastąpi wylogowanie.
 2022 ASUSTeK Computer Inc. Wszystkie prawa zastrzeżone.
 Parametry konfiguracji będą utrzymają swoje ustawienia podczas aktualizacji firmware.
@@ -461,7 +462,7 @@ Tryb WISP
 RT-AX53U łączy się bezprzewodowo z posiadanym głównym routerem, punktem dostępowym lub publicznym hotspotem udostępnia internet klientom przewodowym/bezprzewodowym. W tym trybie, domyślnie włączone są NAT, firewall i serwer DHCP.
 Podczas łączenia z hotspotem WiFi, należy się upewnić, że posiada się uprawnienia dostępu do Internetu.
 Ta funkcja jest wyłączona.
-kontrola rodzicielska
+Kontrola rodzicielska
 Nowe hasło
 Powtórz hasło
 Bardzo słaby
@@ -998,13 +999,14 @@ Zmiana identyfikatora SSID będzie miała wpływ na łączność WiFi węzła Ai
 Zmiana identyfikatora klucza WPA-PSK będzie miała wpływ na łączność WiFi węzła AiMesh.
 Zmiana kodu kraju może mieć wpływ na działanie systemu AiMesh.
 Wyłączenie funkcji radiowej będzie miało wpływ na łączność WiFi routera AiMesh.
-Ukrycie identyfikatora SSID będzie miało wpływ na łączność WiFi routera AiMesh.
+Ukrycie identyfikatora SSID nie pomaga zabezpieczyć sieci Wi-Fi i może powodować problemy z nawiązaniem połączenia.
 Ukrycie identyfikatora SSID spowoduje wyłączenie funkcji WPS i będzie miało wpływ na łączność WiFi routera AiMesh.
 Wyłączenie serwera DHCP będzie miało wpływ na łączność WiFi routera AiMesh.
 Ze względu na kompatybilność systemu AiMesh i urządzeń końcowych zalecamy korzystanie z trybu WPA2-Personal. Czy chcesz przełączyć na tryb #AUTHMODE?\n*W razie problemów z połączeniem przełącz na tryb WPA2-Personal lub zapoznaj się z informacjami dostarczonymi przez producenta.
 Aby zapewnić bezproblemową łączność systemu AiMesh i urządzeń końcowych, zapoznaj się z tą stroną <a id="wpa3FaqLink">FAQ</a> przed przełączeniem w tryb WPA3-Personal.
 Obecnie używasz trybu WPA3-personal. W ramach tworzenia systemu AiMesh metoda uwierzytelniania zostanie zmieniona na WPA2/WPA3-personal. Czy chcesz kontynuować?
 You can read this <a id='wpa3FaqLink'>FAQ</a> for more information.
+Więcej informacji można znaleźć w witrynie <a style='font-weight: bolder;text-decoration: underline;' href='' target='_blank'>tym FAQ</a>
 Zaawansowany system ASUS AiMesh to innowacyjna nowa funkcja routerów, umożliwiająca połączenie wielu routerów ASUS w celu utworzenia sieci WiFi w całym domu.
 Dowiedz się więcej o funkcji ASUS AiMesh
 Znajdź węzeł AiMesh
@@ -1090,6 +1092,9 @@ Balkon
 Pokój spotkań
 Niestandardowy
 Garaż
+Parter
+Pokój gier
+Sala gimnastyczna
 Porady offline
 Upewnij się, że węzeł AiMesh jest włączony.
 Uruchom ponownie węzeł AiMesh i spróbuj ponownie.
@@ -1687,6 +1692,8 @@ Importuj własny certyfikat
 Pobierz tutaj wydany certyfikat wydany przez urząd certyfikacji. Konieczny jest twój klucz prywatny i certyfikat SSL.
 Klucz prywatny
 Klucz prywatny nie może być chroniony hasłem.
+Aktualizacja IPv6
+Jeśli w środowisku sieciowym klienta jest używany adres sieciowy IPv6, włączenie tej funkcji będzie najpierw tłumaczyć domenę na adres IPv6 w przypadku dostępu zdalnego urządzenia.
 Certyfikat SSL
 Zasady korzystania ze strony
 Transfer ASUS DDNS name
@@ -1904,7 +1911,7 @@ Po szersze informacje dotyczące konfiguracji wejdź tu
 Liczba ponownych prób przełączanie awaryjne
 Fan tuning
 Fine tune the radio power to enhance/decrease the coverage and change the cooler spin mode.Please note: If the output power is increased for long distance signal transmission, the client also need to use high power card to get the best performance.
-System Temperature
+Temperatury Systemu
 Szczegółowe wyjaśnienia dostępne są na stronie często zadawanych pytań <a id="network_detect_faq" href="" target="_blank" style="margin-left:5px; text-decoration: underline;">portalu ASUS Support</a>, i mogą one pomóc w skutecznym skorzystaniu z tej funkcji.
 Znajdź FAQ
 3G/4G Log (Dziennik 3G/4G)
@@ -2028,11 +2035,11 @@ Włącz firewall w celu zabezpieczenia sieci lokalnej przed atakami hakerów. Fi
 <b>Czas obowiązywania czarnej listy :</b> W zaplanowanym czasie, klienci znajdujący się na czarnej liści, nie będą mogli używać określonych usług sieciowych. Po określonym czasie, wszyscy klienci w sieci LAN mogą uzyskać dostęp do określonych usług sieciowych.<br><b>Czas obowiązywania białej listy :</b> W zaplanowanym czasie, klienci znajdujący się na białej liście, będą mogli używać JEDYNIE określonych usług sieciowych. Po określonym czasie, klienci na białej liście i inni klienci sieciowi, nie będą mogli uzyskać dostępu do Internetu lub dowolnej usługi sieciowej.
 <b>UWAGA :</b> Po ustawieniu podsieci dla białej listy, adresy IP poza podsiecią nie będą mogły uzyskać dostępu do Internetu lub do dowolnej usługi Internetu.
 Filtr MAC, umożliwia akceptację lub uniemożliwienie dostępu do sieci urządzeniom o specyficznych adresach MAC.<p>Filtr MAC można ustawić na tryb akceptacji lub odrzucenia.<p>W trybie Reject (Odrzucenie), urządzeniom na liście uniemożliwia się dostęp do sieci.<p>W trybie Accept (Akceptacja), dostęp do sieci mogą uzyskać wyłącznie urrządzenia wymienione na liście. Urządzeniom, których nie ma na liście, uniemożliwia się dostęp do sieci.
-Atak \"denial-of-service\" to próba uniemożliwienia korzystania przez użytkowników z usługi lub z zasobu komputera.<p>Włączenie tej funkcji, może zabezpieczyć router przed atakiem DoS ale zwiększa obciążenie routera.
+Włączenie tej funkcji, może zabezpieczyć router przed atakiem DoS (Denial- of-Service) ale zwiększa obciążenie routera.
 Włącz zabezpieczenia przed atakami DoS
 Wyłączenie firewalla spowoduje dezaktywację wszystkich powiązanych funkcji.
 Uruchomić firewall
-Uruchom IPv4 Firewall
+Uruchom reguły firewalla dla połączeń wewnętrznych
 Firewall IPv4
 Po ustawieniu 20:21 jako zakresu portów serwera FTP do ustawień WAN, może wystąpić konflikt serwera FTP z oryginalnym serwerem FTP RT-AX53U.
 Włączenie filtra słów kluczowych
@@ -2140,6 +2147,9 @@ Updated
 Dostępne jest nowe oprogramowanie sprzętowe.
 Wczytywanie informacji o wersji, proszę czekać…
 Nie znaleziono informacji o wersji.
+Wycofanie
+Wybierz wersję firmware
+Selektor wycofania firmware
 Przyspieszenie gry
 Przyspieszanie gier
 Trzypoziomowe przyspieszenie gry
@@ -2183,7 +2193,7 @@ WTFast łączy sieć domową z serwerem gier przez najkrótszą trasę z najmnie
 Wyższy bieg
 Priorytet urządzeń do gier
 Nadaj najwyższy priorytet urządzeniom używanym do gier, aby zapewnić maksymalną wydajność rozgrywki.
-Game Device List
+Lista urządzeń do gier
 OpenNAT oferuje bezproblemowe tworzenie reguł przekierowania portów dla gier online i optymalizuje routing pakietów z konsoli do gier do modemu, zapewniając optymalną jakość grania w gry.
 * To ensure the gaming connection, we suggest you use a Full Cone NAT. More details on NAT type, please refer to this <a id="faq">FAQ.</a>
 Typ NAT
@@ -2200,7 +2210,7 @@ Zgodnie z zastrzeżeniem zamieszczonym na stronie produktu WTFast nadal rozwija 
 Wydajność sieci GPN zależy od usługodawcy internetowego i lokalizacji. Należy pamiętać, że oprogramowanie sprzętowe powinno być zawsze aktualne.
 Jak wybrać odpowiedni serwer GPN? <span><a id="link" href="javascript:open_link('gpn1')" style="text-decoration:underline;color:#008DE5;">Tutaj</a></span> Jak uzyskać najwyższą jakość podczas grania? <span><a id="link" href="javascript:open_link('gpn2')" style="text-decoration:underline;color:#008DE5;">Tutaj</a></span>
 Jak korzystać z WTFast na routerze ASUS? <span><a id="link" href="javascript:open_link('howto')" style="text-decoration:underline;color:#008DE5;">Tutaj</a></span>
-Mobile Game Mode
+Tryb Gry Mobilnej
 Przyspiesz działanie gier na urządzeniach mobilnych
 Pobierz i zainstaluj aplikację ASUS Router. Włącz w aplikacji tryb gier mobilnych, aby zapewnić maksymalną wydajność grania na urządzeniach mobilnych.
 Konfigurowanie przekierowania portów w 3 krokach
@@ -2293,7 +2303,7 @@ Internet status
 Odstęp czasu
 Demo wprowadzające
 Zaproszenie
-Взаимодействие
+Interakcja
 Szybkość Internetu
 Usługę udostępnia firma Ookla®. Usługa mierzy szybkość wysyłania i pobierania danych między routerem a Internetem. Wykonanie testu trwa około minuty. Korzystając z tej usługi, akceptujesz warunki <a href="https://www.speedtest.net/about/privacy" style="font-family:Lucida Console;text-decoration:underline;color:#7ECAFF;" target="_blank">Polityki prywatności firmy Ookla</a>.
 Ookla® i Speedtest® stanowią zastrzeżone znaki towarowe firmy Ookla, LLC.
@@ -2821,7 +2831,7 @@ Odmów
 Wyłącz <a id="disable_NAT" style="color:#FC0;text-decoration: underline;" href="" target="_blank">Przyspieszenie NAT</a>, aby uzyskać bardziej precyzyjną kontrolę nad harmonogramem.
 Włącz kontrola rodzicielska
 Włącz Ustalanie harmonogramu
-kontrola rodzicielska umożliwia ustawienie ograniczenia czasu używania sieci klienta. Aby korzystać z kontroli rodzicielskiej:
+Kontrola rodzicielska umożliwia ustawienie ograniczenia czasu używania sieci klienta. Aby korzystać z kontroli rodzicielskiej:
 Funkcja Ustalanie harmonogramu umożliwia ustawienie ograniczenia czasu używania sieci klienta. Korzystanie z funkcji Ustalanie harmonogramu:
 W kolumnie [Nazwa klienta], wybierz klienta, którego korzystanie z sieci chcesz kontrolować. Można także wprowadzić adres MAC klienta w kolumnie [Adres MAC klienta].
 W kolumnie [Dodaj / Usuń], kliknij ikonę Edycja.
@@ -2878,6 +2888,7 @@ Utwórz nowego klienta RADIUS
 Tabela grup
 Nazwa partycji
 Dla zakresu portów źródłowego lub docelowego, można : a) wprowadzić specyficzny port, taki jak \"95\"; lub b) wprowadzić porty z zakresu, takie jak \"103:315\", \">100\" albo \"<65535\".
+Port gier
 Mapowanie portów
 Mapowanie portów obsługuje interfejs IPTV WAN dla określonych gniazd sieci LAN. Można wybrać odpowiednie gniazdo sieci LAN, a następnie kliknąć Apply (Zastosuj).
 Włącz mapowanie portów
@@ -3235,7 +3246,7 @@ Połącz swoje urządzenie z routerem ASUS przez połączenie przewodowe lub bez
 Lista synchronizacji
 Lokalny folder synchronizacji
 System adjustment
-Temperature unit
+Jednostka temperatury
 Fan speed
 Zmiana hasła logowania routera, strefy czasowej i ustawień serwera NTP.
 Konfiguracja podstawowa
@@ -3322,6 +3333,7 @@ Atlantic Time (Canada)
 La Paz
 Caracas
 Santiago
+Asuncion
 Newfoundland
 Brasilia
 Buenos Aires, Georgetown
@@ -3397,7 +3409,7 @@ Solomon Is.
 New Caledonia
 Marshall Is.
 Magadan
-Fiji
+Fidżi
 Auckland, Wellington
 Nuku'alofa
 Anadyr, Pietropawłowsk Kamczacki
@@ -3413,7 +3425,7 @@ Priorytet przesyłania
 Dane wysłane/s
 Dane wysłane
 Skonfiguruj serwer multimediów iTunes i UPnP.
-RT-AX53U oferuje wsparcie dla UPnP. Możesz je włączyć oraz zezwolić innym urządzeniom UPnP, jak PS3 bądź cyfrowy odtwarzacz audio, by uzyskać dostęp do plików multimedialnych na dysku USB.
+Skonfiguruj <a id='upnp_link'>UPnP, iTunes</a>, <a id='ftp_link'>FTP</a> i <a id='samba_link'>Miejsce sieciowe (Samba)</a>.
 URL Keyword
 Sprawdź aplikację USB
 Sprawdzanie dysku
@@ -3500,7 +3512,7 @@ Obsługa miejsca sieciowego (Samba)
 Anonsowanie DNS klientom
 Tryb autoryzacji
 Autoryzacja tylko za pomocą nazwy użytkownika / hasła
-Authorization Mode fixes on TLS
+Authentication Mode fixes on TLS
 Autoryzacja HMAC
 Dodatkowa autoryzacja HMAC
 Zezwalaj na Klient <-> Klient
@@ -3516,8 +3528,8 @@ If your WAN IP address is dynamic, please click <a href="http://router.asus.com/
 Przydziel z serwera DHCP
 Szyfrowanie
 Konflikt dotyczący routingu! <p>Sprawdź ustawienia adresu IP klienta na stronie Ustawienia Zaawansowane lub sprawdź tabelę routingu w dzienniku systemu.
-Błąd w polu Certification Authentication (Uwierzytelnianie certyfikatów) / Server certification (Certyfikaty serwera) / Server Key (Klucz serwera)! <p>Sprawdź zawartość pozycji Keys and Certification (Klucze i certyfikacja) na stronie Ustawienia Zaawansowane.
-Błąd w polu Diffle Hellman parameters (Parametry Diffiego-Hellmana)! <p>Sprawdź zawartość pozycji Keys and Certification (Klucze i certyfikacja) na stronie Ustawienia Zaawansowane.
+Błąd w polu Certificate Authentication (Uwierzytelnianie certyfikatów) / Server certificate (Certyfikaty serwera) / Server Key (Klucz serwera)! <p>Sprawdź zawartość pozycji Keys and Certificate (Klucze i certyfikacja) na stronie Ustawienia Zaawansowane.
+Błąd w polu Diffle Hellman parameters (Parametry Diffiego-Hellmana)! <p>Sprawdź zawartość pozycji Keys and Certificate (Klucze i certyfikacja) na stronie Ustawienia Zaawansowane.
 Uruchomienie demona serwera OpenVPN nie powiodło się.  <p>Sprawdź środowisko działania urządzenia lub zawartość na stronie Ustawienia Zaawansowane.
 Aby użyć własny klucz, kliknij żółte łącze w celu modyfikacji ustawień.
 Sprawdź <a style="font-weight: bolder;text-decoration:underline;" class="hyperlink" href="Main_LogStatus_Content.asp">Logi systemowe</a> dla uzyskania komunikatów błędu powiązanych z OpenVPN.
@@ -4089,7 +4101,7 @@ Przed usunięciem profil należy wyłączyć.
 Po usunięciu profilu, usunięte zostaną wszystkie wyjątki zasad ustawione dla profilu VPN. Czy na pewno chcesz usunąć profil?
 Czy na pewno chcesz usunąć ten profil?
 Usunięcie zasad klienta na liście wyjątków, spowoduje także usunięcie powiązania IP klienta serwera DHCP. Czy na pewno chcesz je usunąć?
-<a id="faq1" href="" target="_blank" style="font-weight:bolder;text-decoration:underline;">Multiple VPN Connection FAQ.</a>
+<a id="faq1" href="" target="_blank" style="font-weight:bolder;text-decoration:underline;">Często zadawane pytania dotyczące funkcji VPN Fusion.</a>
 Nie można ustawić, jako domyślnej sieci WAN dla docelowych zasad.
 Beta test only
 You can also select [Cancel], the device will automatically start downloading the update during the night time.
@@ -4129,6 +4141,7 @@ GeForce Now
 Wybierz GeForce Now, aby nadać priorytet urządzeniom obsługującym usługę gamingową GeForce Now i zapewnić większą szybkość oraz wyższą jakość podczas grania w gry.
 LED On/Off
 The LED on/off control is used to turn off all LEDs includes Aura light.
+To enable Aura RGB, LED must remain on. Please turn on LED by pressing hardware button on the router for 3 seconds or enable it via web/app interface.
 Zdarzenie
 System będzie wykrywał poniższe zdarzenia i uaktywniał różne efekty LED.
 Po włączeniu funkcji Game Boost (Przyspieszenie gier) pasek LED będzie świecił czerwonym oddychającym światłem.

@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#837#> - <#386#></title>
+<title><#838#> - <#387#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="device-map/device-map.css">
@@ -104,13 +104,13 @@ if(pptpd_support){
 var chk_vpn = check_vpn();
 if(chk_vpn == true){
 document.getElementById("VPN_conflict").style.display = "";
-document.getElementById("VPN_conflict_span").innerHTML = "<#3483#>"+pptpd_clients;
+document.getElementById("VPN_conflict_span").innerHTML = "<#3495#>"+pptpd_clients;
 }
 }
 if(yadns_support){
 if(yadns_enable != 0 && yadns_mode != -1){
 document.getElementById("yadns_hint").style.display = "";
-document.getElementById("yadns_hint").innerHTML = "<span><#3946#></span>";
+document.getElementById("yadns_hint").innerHTML = "<span><#3958#></span>";
 }
 }
 document.form.sip_server.disabled = true;
@@ -122,7 +122,7 @@ vpnc_dev_policy_list_array_ori = vpnc_dev_policy_list_array.slice();
 if(lyra_hide_support){
 $("#dhcpEnable").hide();
 }
-$("#GWStatic").html("<#2485#>&nbsp;(<#2576#>&nbsp;"+MaxRule_extend_limit+")");
+$("#GWStatic").html("<#2495#>&nbsp;(<#2586#>&nbsp;"+MaxRule_extend_limit+")");
 }
 function addRow_Group(){
 if(dhcp_enable != "1")
@@ -131,16 +131,16 @@ if(static_enable != "1")
 document.form.dhcp_static_x[0].checked = true;
 var rule_num = Object.keys(manually_dhcp_list_array).length;
 if(rule_num >= MaxRule_extend_limit){
-alert("<#2444#> " + MaxRule_extend_limit + " <#2445#>");
+alert("<#2454#> " + MaxRule_extend_limit + " <#2455#>");
 return false;
 }
 if(document.form.dhcp_staticmac_x_0.value==""){
-alert("<#315#>");
+alert("<#316#>");
 document.form.dhcp_staticmac_x_0.focus();
 document.form.dhcp_staticmac_x_0.select();
 return false;
 }else if(document.form.dhcp_staticip_x_0.value==""){
-alert("<#315#>");
+alert("<#316#>");
 document.form.dhcp_staticip_x_0.focus();
 document.form.dhcp_staticip_x_0.select();
 return false;
@@ -157,14 +157,14 @@ if(manually_dhcp_list_array.hasOwnProperty(key)){
 var exist_ip = key;
 var exist_mac = manually_dhcp_list_array[exist_ip].mac;
 if(exist_mac == document.form.dhcp_staticmac_x_0.value.toUpperCase()) {
-alert("<#2437#>");
+alert("<#2447#>");
 document.form.dhcp_staticmac_x_0.focus();
 document.form.dhcp_staticmac_x_0.select();
 match_flag = true;
 break;
 }
 if(exist_ip == document.form.dhcp_staticip_x_0.value) {
-alert("<#2437#>");
+alert("<#2447#>");
 document.form.dhcp_staticip_x_0.focus();
 document.form.dhcp_staticip_x_0.select();
 match_flag = true;
@@ -201,8 +201,15 @@ function del_Row(r){
 var i = r.parentNode.parentNode.rowIndex;
 var delIP = document.getElementById('dhcp_staticlist_table').rows[i].cells[1].innerHTML;
 if(vpn_fusion_support) {
-if(manually_dhcp_list_array_ori[delIP] != undefined) {
-if(!confirm("Remove the client's IP binding will also delete the client's policy in the exception list of <#4069#>. Are you sure you want to delete?"))/*untranslated*/
+var policy_flag = false;
+$.each(vpnc_dev_policy_list_array_ori, function(index, value){
+if(value[0] == delIP){
+policy_flag = true;
+return false;
+}
+});
+if(policy_flag){
+if(!confirm("Remove the client's IP binding will also delete the client's policy in the exception list of <#4081#>. Are you sure you want to delete?"))/*untranslated*/
 return false;
 }
 }
@@ -235,7 +242,7 @@ var code = "";
 var clientListEventData = [];
 code += '<table width="100%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="dhcp_staticlist_table">';
 if(Object.keys(manually_dhcp_list_array).length == 0)
-code += '<tr><td style="color:#FFCC00;"><#2372#></td></tr>';
+code += '<tr><td style="color:#FFCC00;"><#2382#></td></tr>';
 else {
 var userIconBase64 = "NoIcon";
 var clientName, deviceType, deviceVender;
@@ -252,7 +259,7 @@ var clientIP = value;
 var clientMac = manually_dhcp_list_array[clientIP]["mac"].toUpperCase();
 var clientDNS = manually_dhcp_list_array[clientIP]["dns"];
 if(clientDNS == "")
-clientDNS = "<#3076#>";
+clientDNS = "<#3087#>";
 var clientHostname = manually_dhcp_list_array[clientIP]["hostname"];
 var clientIconID = "clientIcon_" + clientMac.replace(/\:/g, "");
 if(clientList[clientMac]) {
@@ -361,7 +368,7 @@ function validate_dhcp_range(ip_obj){
 var ip_num = inet_network(ip_obj.value);
 var subnet_head, subnet_end;
 if(ip_num <= 0){
-alert(ip_obj.value+" <#329#>");
+alert(ip_obj.value+" <#330#>");
 ip_obj.value = "";
 ip_obj.focus();
 ip_obj.select();
@@ -370,7 +377,7 @@ return 0;
 subnet_head = getSubnet(document.form.lan_ipaddr.value, document.form.lan_netmask.value, "head");
 subnet_end = getSubnet(document.form.lan_ipaddr.value, document.form.lan_netmask.value, "end");
 if(ip_num <= subnet_head || ip_num >= subnet_end){
-alert(ip_obj.value+" <#329#>");
+alert(ip_obj.value+" <#330#>");
 ip_obj.value = "";
 ip_obj.focus();
 ip_obj.select();
@@ -381,7 +388,7 @@ return 1;
 function validForm(){
 var re = new RegExp('^[a-zA-Z0-9][a-zA-Z0-9\.\-]*[a-zA-Z0-9]$','gi');
 if((!re.test(document.form.lan_domain.value) || document.form.lan_domain.value.indexOf("asuscomm.com") > 0) && document.form.lan_domain.value != ""){
-alert("<#328#>");
+alert("<#329#>");
 document.form.lan_domain.focus();
 document.form.lan_domain.select();
 return false;
@@ -405,7 +412,7 @@ document.form.dhcp_end.value = tmp;
 var default_pool = new Array();
 default_pool =get_default_pool(document.form.lan_ipaddr.value, document.form.lan_netmask.value);
 if((inet_network(document.form.dhcp_start.value) < inet_network(default_pool[0])) || (inet_network(document.form.dhcp_end.value) > inet_network(default_pool[1]))){
-if(confirm("<#2436#>")){ //Acceptable DHCP ip pool : "+default_pool[0]+"~"+default_pool[1]+"\n
+if(confirm("<#2446#>")){ //Acceptable DHCP ip pool : "+default_pool[0]+"~"+default_pool[1]+"\n
 document.form.dhcp_start.value=default_pool[0];
 document.form.dhcp_end.value=default_pool[1];
 }else{return false;}
@@ -480,7 +487,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#347#>";
+document.getElementById("check_mac").innerHTML="<#348#>";
 document.getElementById("check_mac").style.display = "";
 obj.focus();
 obj.select();
@@ -490,7 +497,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#308#>";
+document.getElementById("check_mac").innerHTML="<#309#>";
 document.getElementById("check_mac").style.display = "";
 obj.focus();
 obj.select();
@@ -596,53 +603,53 @@ showdhcp_staticlist();
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#384#> - <#386#></div>
+<div class="formfonttitle"><#385#> - <#387#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#2469#></div>
-<div id="router_in_pool" class="formfontdesc" class="hint-color" style="display:none;"><#2470#><span id="LANIP"></span></div>
+<div class="formfontdesc"><#2479#></div>
+<div id="router_in_pool" class="formfontdesc" class="hint-color" style="display:none;"><#2480#><span id="LANIP"></span></div>
 <div id="VPN_conflict" class="formfontdesc" class="hint-color" style="display:none;"><span id="VPN_conflict_span"></span></div>
 <div class="formfontdesc" style="margin-top:-10px;">
-<a id="faq" href="" target="_blank" style="font-family:Lucida Console;text-decoration:underline;"><#2485#>&nbsp;FAQ</a>
+<a id="faq" href="" target="_blank" style="font-family:Lucida Console;text-decoration:underline;"><#2495#>&nbsp;FAQ</a>
 </div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#3240#></td>
+<td colspan="2"><#3251#></td>
 </tr>
 </thead>
 <tr id="dhcpEnable">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,1);"><#2468#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,1);"><#2478#></a></th>
 <td>
-<input type="radio" value="1" name="dhcp_enable_x" class="content_input_fd" onClick="return change_common_radio(this, 'LANHostConfig', 'dhcp_enable_x', '1')" <% nvram_match("dhcp_enable_x", "1", "checked"); %>><#186#>
-<input type="radio" value="0" name="dhcp_enable_x" class="content_input_fd" onClick="return change_common_radio(this, 'LANHostConfig', 'dhcp_enable_x', '0')" <% nvram_match("dhcp_enable_x", "0", "checked"); %>><#185#>
+<input type="radio" value="1" name="dhcp_enable_x" class="content_input_fd" onClick="return change_common_radio(this, 'LANHostConfig', 'dhcp_enable_x', '1')" <% nvram_match("dhcp_enable_x", "1", "checked"); %>><#187#>
+<input type="radio" value="0" name="dhcp_enable_x" class="content_input_fd" onClick="return change_common_radio(this, 'LANHostConfig', 'dhcp_enable_x', '0')" <% nvram_match("dhcp_enable_x", "0", "checked"); %>><#186#>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,2);"><#2479#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,2);"><#2489#></a></th>
 <td>
 <input type="text" maxlength="32" class="input_25_table" name="lan_domain" value="<% nvram_get("lan_domain"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,3);"><#2491#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,3);"><#2501#></a></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="dhcp_start" value="<% nvram_get("dhcp_start"); %>" onKeyPress="return validator.isIPAddr(this,event);" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,4);"><#2489#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,4);"><#2499#></a></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="dhcp_end" value="<% nvram_get("dhcp_end"); %>" onKeyPress="return validator.isIPAddr(this,event)" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,5);"><#2481#> (<#3047#>)</a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,5);"><#2491#> (<#3058#>)</a></th>
 <td>
 <input type="text" maxlength="6" name="dhcp_lease" class="input_15_table" value="<% nvram_get("dhcp_lease"); %>" onKeyPress="return validator.isNumber(this,event)" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,6);"><#305#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,6);"><#306#></a></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="dhcp_gateway_x" value="<% nvram_get("dhcp_gateway_x"); %>" onKeyPress="return validator.isIPAddr(this,event)" autocorrect="off" autocapitalize="off">
 </td>
@@ -657,31 +664,31 @@ showdhcp_staticlist();
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable" style="margin-top:8px">
 <thead>
 <tr>
-<td colspan="2"><#2539#></td>
+<td colspan="2"><#2549#></td>
 </tr>
 </thead>
 <tr>
-<th width="200"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,7);"><#2538#> 1</a></th>
+<th width="200"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,7);"><#2548#> 1</a></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="dhcp_dns1_x" value="<% nvram_get("dhcp_dns1_x"); %>" onKeyPress="return validator.isIPAddr(this,event)" autocorrect="off" autocapitalize="off">
 <div id="yadns_hint" style="display:none;"></div>
 </td>
 </tr>
 <tr>
-<th width="200"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,7);"><#2538#> 2</a></th>
+<th width="200"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,7);"><#2548#> 2</a></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="dhcp_dns2_x" value="<% nvram_get("dhcp_dns2_x"); %>" onKeyPress="return validator.isIPAddr(this,event)">
 </td>
 </tr>
 <tr>
-<th><#353#></th>
+<th><#354#></th>
 <td>
-<input type="radio" value="1" name="dhcpd_dns_router" class="content_input_fd" onClick="return change_common_radio(this, 'LANHostConfig', 'dhcpd_dns_router', '1')" <% nvram_match("dhcpd_dns_router", "1", "checked"); %>><#186#>
-<input type="radio" value="0" name="dhcpd_dns_router" class="content_input_fd" onClick="return change_common_radio(this, 'LANHostConfig', 'dhcpd_dns_router', '0')" <% nvram_match("dhcpd_dns_router", "0", "checked"); %>><#185#>
+<input type="radio" value="1" name="dhcpd_dns_router" class="content_input_fd" onClick="return change_common_radio(this, 'LANHostConfig', 'dhcpd_dns_router', '1')" <% nvram_match("dhcpd_dns_router", "1", "checked"); %>><#187#>
+<input type="radio" value="0" name="dhcpd_dns_router" class="content_input_fd" onClick="return change_common_radio(this, 'LANHostConfig', 'dhcpd_dns_router', '0')" <% nvram_match("dhcpd_dns_router", "0", "checked"); %>><#186#>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,8);"><#2556#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,8);"><#2566#></a></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="dhcp_wins_x" value="<% nvram_get("dhcp_wins_x"); %>" onkeypress="return validator.isIPAddr(this,event)" autocorrect="off" autocapitalize="off"/>
 </td>
@@ -690,14 +697,14 @@ showdhcp_staticlist();
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable" style="margin-top:8px;" >
 <thead>
 <tr>
-<td colspan="3"><#2484#></td>
+<td colspan="3"><#2494#></td>
 </tr>
 </thead>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,9);"><#2483#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,9);"><#2493#></a></th>
 <td colspan="2" style="text-align:left;">
-<input type="radio" value="1" name="dhcp_static_x" onclick="return change_common_radio(this, 'LANHostConfig', 'dhcp_static_x', '1')" <% nvram_match("dhcp_static_x", "1", "checked"); %> /><#186#>
-<input type="radio" value="0" name="dhcp_static_x" onclick="return change_common_radio(this, 'LANHostConfig', 'dhcp_static_x', '0')" <% nvram_match("dhcp_static_x", "0", "checked"); %> /><#185#>
+<input type="radio" value="1" name="dhcp_static_x" onclick="return change_common_radio(this, 'LANHostConfig', 'dhcp_static_x', '1')" <% nvram_match("dhcp_static_x", "1", "checked"); %> /><#187#>
+<input type="radio" value="0" name="dhcp_static_x" onclick="return change_common_radio(this, 'LANHostConfig', 'dhcp_static_x', '0')" <% nvram_match("dhcp_static_x", "0", "checked"); %> /><#186#>
 </td>
 </tr>
 </table>
@@ -708,16 +715,16 @@ showdhcp_staticlist();
 </tr>
 </thead>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);"><#1521#> (<#2913#>)</a></th>
-<th class="sort_border" onClick="sortClientIP()"><#289#></th>
-<th><#2538#> (Optional)</th>
-<th><#2522#> (Optional)</th>
-<th><#2575#></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);"><#1526#> (<#2924#>)</a></th>
+<th class="sort_border" onClick="sortClientIP()"><#290#></th>
+<th><#2548#> (Optional)</th>
+<th><#2532#> (Optional)</th>
+<th><#2585#></th>
 </tr>
 <tr>
 <td width="30%">
 <input type="text" class="input_20_table" maxlength="17" name="dhcp_staticmac_x_0" style="margin-left:-20px;width:190px;" onKeyPress="return validator.isHWAddr(this,event)" onClick="hideClients_Block();" autocorrect="off" autocapitalize="off" placeholder="ex: <% nvram_get("lan_hwaddr"); %>">
-<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#3055#>">
+<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#3066#>">
 <div id="ClientList_Block_PC" class="clientlist_dropdown" style="margin-left:-1px;"></div>
 </td>
 <td width="20%">
@@ -738,7 +745,7 @@ showdhcp_staticlist();
 </table>
 <div id="dhcp_staticlist_Block"></div>
 <div class="apply_gen">
-<input type="button" name="button" class="button_gen" onclick="applyRule();" value="<#195#>"/>
+<input type="button" name="button" class="button_gen" onclick="applyRule();" value="<#196#>"/>
 </div>
 </td>
 </tr>

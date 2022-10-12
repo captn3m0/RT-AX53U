@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#837#> - <#4100#></title>
+<title><#838#> - <#4112#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script language="JavaScript" type="text/javascript" src="/state.js"></script>
@@ -47,7 +47,7 @@ var services_array = {
 "without_ifttt" : "Account Binding, DDNS, Google Assistant, Alexa™",
 "within_alexa_ifttt" : "For Account Binding, DDNS, Google Assistant, Alexa™, IFTTT™"
 }
-var services_show = "<#130#>";
+var services_show = "<#131#>";
 function initial(){
 var url = "";
 show_menu();
@@ -65,12 +65,12 @@ document.getElementById("alexa_ifttt").style.display = "none";
 else if(alexa_support && !ifttt_support){
 services_show = services_show.replace('%1$@', services_array.without_ifttt);
 document.getElementById("asus_eula_title").innerHTML = services_show;
-document.getElementById("alexa_ifttt").innerHTML = "<#136#>";
+document.getElementById("alexa_ifttt").innerHTML = "<#137#>";
 }
 else{
 services_show = services_show.replace('%1$@', services_array.within_alexa_ifttt);
 document.getElementById("asus_eula_title").innerHTML = services_show;
-document.getElementById("alexa_ifttt").innerHTML = "<#137#>";
+document.getElementById("alexa_ifttt").innerHTML = "<#138#>";
 }
 }
 else
@@ -128,9 +128,9 @@ hide_withdraw_sec('asus');
 function withdraw_eula(eula_type){
 switch(eula_type){
 case"asus":
-if(confirm("<#149#>")){
+if(confirm("<#150#>")){
 if(link_internet != "2"){
-alert("<#138#>");
+alert("<#139#>");
 return false;
 }
 else{
@@ -146,7 +146,7 @@ check_unregister_result();
 }
 break;
 case "tm":
-if(confirm("<#149#>")){
+if(confirm("<#150#>")){
 document.getElementById('tm_withdraw_btn').style.display = "none";
 document.getElementById('tm_loadingicon').style.display = "";
 $.ajax({
@@ -188,41 +188,41 @@ break;
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div id="formfonttitle" class="formfonttitle"><#405#> - <#4101#></div>
+<div id="formfonttitle" class="formfonttitle"><#406#> - <#4113#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
 <div id="privacy_desc" style="font-size:14px; margin: 20px 10px auto 10px; display:none;"><#115#></div>
 <div id="asus_eula" class="eula_withdraw" style="display:none;">
 <div class="eula_withdraw_title" id="asus_eula_title"></div>
 <div class="eula_withdraw_content">
-<div><#131#></div>
 <div><#132#></div>
-<div style="margin-top:5px;"><#133#>
+<div><#133#></div>
+<div style="margin-top:5px;"><#134#>
 <ol style="margin-top:0px;">
-<li><#134#></li>
 <li><#135#></li>
+<li><#136#></li>
 <li id="alexa_ifttt"></li>
 </ol>
 </div>
 </div>
 <div style="text-align: center;">
 <div style="margin: 0px auto 10px;">
-<input class="button_gen" id="asus_withdraw_btn" onclick="withdraw_eula('asus');" type="button" value="<#150#>"/>
+<input class="button_gen" id="asus_withdraw_btn" onclick="withdraw_eula('asus');" type="button" value="<#151#>"/>
 <img id="asus_loadingicon" style="display:none;" src="/images/InternetScan.gif">
 </div>
 </div>
 </div>
 <div id="tm_eula" class="eula_withdraw" style="display:none;">
-<div class="eula_withdraw_title"><#146#></div>
+<div class="eula_withdraw_title"><#147#></div>
 <div class="eula_withdraw_content">
-<div><#147#></div>
-<div style="margin-top:5px;"><#148#>
-<div><#144#></div>
+<div><#148#></div>
+<div style="margin-top:5px;"><#149#>
 <div><#145#></div>
+<div><#146#></div>
 </div>
 </div>
 <div style="text-align:center;">
 <div style="margin: 0px auto 10px;">
-<input class="button_gen" id="tm_withdraw_btn" onclick="withdraw_eula('tm');" type="button" value="<#150#>"/>
+<input class="button_gen" id="tm_withdraw_btn" onclick="withdraw_eula('tm');" type="button" value="<#151#>"/>
 <img id="tm_loadingicon" style="display:none;" src="/images/InternetScan.gif">
 </div>
 </div>

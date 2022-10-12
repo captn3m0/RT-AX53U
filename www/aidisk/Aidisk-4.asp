@@ -31,13 +31,13 @@ document.getElementById("finish").focus();
 function show_dummyshareway(){
 switch(parent.document.getElementById("dummyShareway").value){
 case "0":
-showtext(document.getElementById("dummyShareStr"), "\"<#3193#>\"");
+showtext(document.getElementById("dummyShareStr"), "\"<#3204#>\"");
 break;
 case "1":
-showtext(document.getElementById("dummyShareStr"), "\"<#3194#>\"");
+showtext(document.getElementById("dummyShareStr"), "\"<#3205#>\"");
 break;
 case "2":
-showtext(document.getElementById("dummyShareStr"), "\"<#3195#>\"");
+showtext(document.getElementById("dummyShareStr"), "\"<#3206#>\"");
 break;
 }
 }
@@ -141,13 +141,13 @@ parent.initialAccount();
 </td>
 </tr>
 <tr>
-<td align="left" class="formfonttitle" style="padding-left:20px;" height="72"><#3196#></td>
+<td align="left" class="formfonttitle" style="padding-left:20px;" height="72"><#3207#></td>
 </tr>
 <tr>
 <td colspan="3" valign="top" align="left" class="">
 <div style="width:660px; line-height:180%;">
 <ul>
-<li><#3947#>
+<li><#3959#>
 <span id="dummyShareStr"></span>
 </li>
 <span id="haveDDNS">
@@ -156,13 +156,13 @@ Internet FTP address: <a target="_blank" style="text-decoration: underline; font
 </li>
 </span>
 <span id="priv_wan_ip" style="color:#FFCC00;">
-<li><#2517#></li>
+<li><#2527#></li>
 </span>
 <span id="noFTP" class="ServerClose">
-<li><#2572#></li>
+<li><#2582#></li>
 </span>
 <span id="noDDNS" class="ServerClose">
-<li><#2573#></li>
+<li><#2583#></li>
 </span>
 </ul>
 </div>
@@ -176,8 +176,8 @@ Internet FTP address: <a target="_blank" style="text-decoration: underline; font
 <tr valign="bottom">
 <td width="20%">
 <div class="apply_gen" style="margin-top:30px">
-<input type="button" id="prevButton" value="<#204#>" onclick="go_pre_page();" class="button_gen">
-<input type="button" id="finish" value="<#1645#>" class="button_gen">
+<input type="button" id="prevButton" value="<#205#>" onclick="go_pre_page();" class="button_gen">
+<input type="button" id="finish" value="<#1650#>" class="button_gen">
 </div>
 </td>
 </tr>

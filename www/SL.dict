@@ -128,6 +128,7 @@ Poleg tega, da bi vam lahko omogočili funkcijo daljinskega nadzora IFTTT™ z v
 Podjetje ASUS je zavezano k varovanju in spoštovanju vaše zasebnosti; Da bi omogočili/onemogočili delitev podatkov o vašem izdelku s podjetjem ASUS, lahko kadar koli obiščete Napredne nastavitve> Skrbništvo > Zasebnost. Če želite izvedeti več o tem, kako podjetje ASUS varuje vašo zasebnost, prosimo, obiščite <a id="eula_url" style="font-weight: bolder;text-decoration:underline;cursor:pointer;" target="_blank">Pravilnik o zasebnosti podjetja ASUS</a>.
 Sem starejši/-a od 16 let.
 Prosimo, potrdite, da ste starejši od 16 let.
+Prosimo, potrdite, da Pogoji uporabe ASUS.
 Za funkcije %1$@ in oddaljena povezava(aplikacija usmerjevalnika ASUS/aplikacija Lyra/AiCloud/AiDisk):
 Prosimo, upoštevajte, da bo podjetje ASUS prek zgoraj navedenih funkcij zbiralo vaše podatke, vključno z imenom modela izdelka, različico vdelane programske opreme, stanjem interneta, naslovom IP, naslovom MAC in imenom DDNS.
 Če želite onemogočiti delitev vaših podatkov s podjetjem ASUS prek zgoraj navedenih funkcij, prosimo kliknite <span style="font-weight: bold;">[Odstop]</span> spodaj. Vendar prosimo, upoštevajte, da takšne funkcije/funkcionalnosti morda ne bodo delovale, če prenehate deliti podatke s podjetjem ASUS.
@@ -139,12 +140,12 @@ Z uporabo povezave v lokalno omrežje boste lahko uporabljali aplikacijo usmerje
 Če nimate vzpostavljene internetne povezave, ne boste mogli dokončati postopka odstopa. Prosimo, da odstop izvedete, ko bo vzpostavljena internetna povezava.
 Ker je stanje interneta nestabilno, ni mogoče dokončati postopka odstopa. Prosimo, poskusite izvesti postopek odstopa pozneje.
 Če uporabljate ASUS AiProtection, se strinjate s
-Z uporabo funkcij AiProtection, Traffic analyzer, Apps analyzer, Adaptive QoS/Game boost, spletna zgodovina se strinjate z <a id="eula_url" style="text-decoration:underline;" target="_blank">Licenčno pogodbo za končnega uporabnika podjetja Trend Micro</a>.
-Prosimo, upoštevajte, da bo podjetje Trend Micro vaše podatke zbiralo prek funkcij AiProtection, Traffic analyzer, Apps analyzer, Adaptive QoS in spletna zgodovina. Prav tako potrjujete in se strinjate, da podjetje ASUS ni odgovorno niti za pogodbo med vami in podjetjem Trend Micro, niti za vsebino storitve, ki jo nudi podjetje Trend Micro. Če imate kakršna koli vprašanja o tem, kako podjetje Trend Micro zbira, obdeluje in uporablja vaše zgoraj navedene podatke, si, prosimo, oglejte izjavo o zasebnosti podjetja Trend Micro ali se za več informacij obrnite na podjetje Trend Micro, prosimo, oglejte izjavo o zasebnosti podjetja Trend Micro ali se za več informacij obrnite na podjetje Trend Micro.
+Z uporabo funkcij AiProtection, Starševski nadzor( Spletni filtri in filtri programov ), Traffic analyzer, Apps analyzer, Adaptive QoS/Game boost, spletna zgodovina se strinjate z <a id="eula_url" style="text-decoration:underline;" target="_blank">Licenčno pogodbo za končnega uporabnika podjetja Trend Micro</a>.
+Prosimo, upoštevajte, da bo podjetje Trend Micro vaše podatke zbiralo prek funkcij AiProtection, Starševski nadzor( Spletni filtri in filtri programov ), Traffic analyzer, Apps analyzer, Adaptive QoS in spletna zgodovina. Prav tako potrjujete in se strinjate, da podjetje ASUS ni odgovorno niti za pogodbo med vami in podjetjem Trend Micro, niti za vsebino storitve, ki jo nudi podjetje Trend Micro. Če imate kakršna koli vprašanja o tem, kako podjetje Trend Micro zbira, obdeluje in uporablja vaše zgoraj navedene podatke, si, prosimo, oglejte izjavo o zasebnosti podjetja Trend Micro ali se za več informacij obrnite na podjetje Trend Micro, prosimo, oglejte izjavo o zasebnosti podjetja Trend Micro ali se za več informacij obrnite na podjetje Trend Micro.
 Če želite onemogočiti delitev vaših podatkov s podjetjem Trend Micro prek zgoraj navedenih funkcij, prosimo obiščite:  Router web GUI (Spletni grafični uporabniški vmesnik usmerjevalnika) > Advanced settings (Napredne nastavitve) > Administration (Skrbništvo) > Privacy (Zasebnost).
 <a id="tm_eula_url" style="text-decoration:underline;" target="_blank">TrendMicro Privacy Policy</a>
 <a id="tm_disclosure_url" style="text-decoration:underline;" target="_blank">Privacy and Personal Data Collection Disclosure</a>
-Za funkcije AiProtection, Traffic Analyzer, Apps analyzer, Adaptive QoS/Game boost, spletna zgodovina:
+Za funkcije AiProtection, Starševski nadzor( Spletni filtri in filtri programov ), Traffic Analyzer, Apps analyzer, Adaptive QoS/Game boost, spletna zgodovina:
 Prosimo, upoštevajte, da bo podjetje Trend Micro zbiralo vaše podatke prek zgornjih funkcij.
 Če želite onemogočiti delitev vaših podatkov s podjetjem Trend Micro prek naslednjih funkcij, prosimo kliknite <span style="font-weight: bold;">[Odstop]</span> spodaj. Vendar prosimo, upoštevajte, da takšne funkcije/funkcionalnosti morda ne bodo delovale, če prenehate deliti podatke s podjetjem Trend Micro.
 Ali ste prepričani, da želite odstopiti?
@@ -998,13 +999,14 @@ Kadar uporabljate preverjanje pristnosti
 Če spremenite svoj predhodno deljen ključ WPA, bo to vplivalo na povezljivost omrežja WiFi na vozlišču AiMesh.
 Sprememba kode države lahko vpliva na sistem AiMesh.
 Če onemogočite radijsko funkcionalnost, bo to vplivalo na povezljivost omrežja WiFi na usmerjevalniku AiMesh.
-Če skrijete svoj SSID, bo to vplivalo na povezljivost omrežja WiFi na usmerjevalniku AiMesh.
+Skriti SSID ne pomaga zaščititi omrežja Wi-Fi in lahko povzroči težave pri povezovanju.
 Če skrijete SSID, bo funkcija WPS onemogočena in to bo vplivalo na povezljivost omrežja WiFi na usmerjevalniku AiMesh.
 Če onemogočite strežnik DHCP, bo to vplivalo na povezljivost omrežja WiFi na usmerjevalniku AiMesh.
 Glede na združljivost sistema AiMesh in končnih naprav priporočamo, da uporabite način WPA2-Personal. Želite preklopiti na način  #AUTHMODE?\n*Če se pojavijo težave s povezavo, preklopite na način WPA2-Personal ali se obrnite na proizvajalca, pri katerem boste dobili več informacij.
 Za vzpostavitev povezave med sistemom AiMesh in končnimi napravami pred preklopom na način WPA3-Personal preberite temo <a id="wpa3FaqLink">FAQ</a>.
 Trenutno uporabljate WPA3-personal. Z namenom ustvarjanja sistema AiMesh bo način preverjanja pristnosti spremenjen v WPA2/WPA3-personal. Ali želite nadaljevati?
 You can read this <a id='wpa3FaqLink'>FAQ</a> for more information.
+Dodatne podrobnosti najdete na spletnem mestu <a style='font-weight: bolder;text-decoration: underline;' href='' target='_blank'>pogosto zastavljeno vprašanje</a>
 Napredni ASUS AiMesh je inovativna nova funkcija usmerjevalnikov, ki povezuje več usmerjevalnikov ASUS in ustvarja omrežje WiFi za celoten dom.
 Več o funkciji ASUS AiMesh
 Iskanje vozlišča AiMesh
@@ -1090,6 +1092,9 @@ Balkon
 Soba za sestanke
 Po meri
 Garaža
+Prvo nadstropje
+Soba za igranje
+Telovadnica
 Namigi za uporabo brez povezave
 Prepričajte se, da je vaše vozlišče AiMesh vklopljeno.
 Znova zaženite vozlišče AiMesh in poskusite znova.
@@ -1687,6 +1692,8 @@ Uvozite svoje lastno potrdilo
 Potrdilo, ki ga je izdal overitelj digitalnih potrdil, naložite tukaj. Potrebno je vnesti vaš zasebni ključ in potrdilo SSL.
 Zasebni ključ
 Zasebni ključi ne morejo biti zaščiteni z geselsko frazo.
+Posodobitev IPv6
+Če omrežno okolje odjemalca uporablja omrežni naslov IPv6, boste pri oddaljenem dostopanju do naprave z omogočenjem te funkcije najprej razrešili domeno v omrežni naslov IPv6.
 Potrdilo SSL
 Obvestilo o pogojih uporabe
 Transfer ASUS DDNS name
@@ -2028,11 +2035,11 @@ Omogočite požarni zid, da zaščitite svoje lokalno omrežje pred napadi heker
 <b>Veljavnost seznama nedovoljenih:</b> odjemalci na seznamu nedovoljenih v obdobju načrtovane veljavnosti ne morejo uporabljati navedenih omrežnih storitev. Po poteku obdobja veljavnosti lahko vsi odjemalci v lokalnem omrežju dostopajo do navedenih omrežnih storitev.<br><b>Veljavnost seznama dovoljenih:</b> odjemalci na seznamu dovoljenih lahko v obdobju načrtovane veljavnosti uporabljajo SAMO navedene omrežne storitve. Po poteku obdobja veljavnosti odjemalci na seznamu dovoljenih in drugi omrežni odjemalci ne bodo mogli dostopati do interneta in nobenih drugih internetnih storitev.
 <b>OPOMBA:</b> Če nastavite podomrežje za seznam dovoljenih, naslovi IP zunaj podomrežja ne bodo mogli dostopati do interneta in nobenih drugih internetnih storitev.
 Filter naslovov MAC vam omogoča, da sprejmete ali zavrnete dostop do omrežja za naprave z določenimi naslovi MAC.<p>Filter naslovov MAC lahko nastavite na način »Sprejmi« ali »Zavrni«.<p>V načinu »Zavrni« je napravam na seznamu zavrnjen dostop do omrežja.<p>V načinu »Sprejmi« lahko do omrežja dostopajo samo naprave, ki so na seznamu. Napravam, ki niso na seznamu, je zavrnjen dostop do omrežja.
-Napada »z ohromitvijo storitve« je eksplicitni poskus preprečitve uporabe storitve ali sredstva računalnika zakonitim uporabnikom.<p>Če omogočite to funkcijo, lahko usmerjevalnik zaščitite pred napadom z ohromitvijo storitve, vendar s tem povečate obremenitev usmerjevalnika.
+Če omogočite to funkcijo, lahko usmerjevalnik zaščitite pred napadi DoS (Denial- of-Service) napadom z ohromitvijo storitve, vendar s tem povečate obremenitev usmerjevalnika.
 Omogoči zaščito pred napadi DoS
 Če onemogočite požarni zid, deaktivirate vse z njim povezane funkcije.
 Omogoči požarni zid
-Omogoči požarni zid IPv4
+Omogoči pravila požarnega zidu za dohodni promet
 Požarni zid IPv4
 Če pri nastavitvi omrežja WAN za obseg vrat strežnika FTP nastavite 20:21, je strežnik FTP v sporu z izvornim strežnikom FTP usmerjevalnika RT-AX53U.
 Omogoči filter ključnih besed
@@ -2140,6 +2147,9 @@ Updated
 Na voljo je nova vdelana programska oprema.
 Nalaganje opomb ob izdaji. Prosimo, počakajte …
 Opomb ob izdaji ni bilo mogoče najti.
+Povrnitev
+Izberite različico vdelane programske opreme
+Izbiralnik povrnitve vdelane programske opreme
 Pospeševanje iger
 Pospešitev igre
 Pospeševanje iger na treh stopnjah
@@ -2293,7 +2303,7 @@ Internet
 Interval
 Predstavitev
 Povabilo
-Tương tác
+Interakcija
 Hitrost internetne povezave
 To storitev zagotavlja Ookla®. Zaznava hitrost prenašanja in nalaganja iz usmerjevalnika v internet. Ta preskus traja približno eno minuto. Če uporabljate to storitev, soglašate s <a href="https://www.speedtest.net/about/privacy" style="font-family:Lucida Console;text-decoration:underline;color:#7ECAFF;" target="_blank">pravilnikom o zasebnosti Ookla</a>.
 Ookla® in Speedtest® sta registrirana v zveznem registru kot Ookla, LLC.
@@ -2878,6 +2888,7 @@ Ustvari novega odjemalca RADIUS
 Tabela skupin
 Ime particije
 Za obseg izvornih ali ciljnih vrat lahko: a) vnesete določena vrata, na primer »95«, ali b) vnesete vrata v obsegu, na primer »103:315«, »>100» ali »<65535«.
+Vrata za igre
 Preslikava vrat
 Preslikava vrat podpira vmesnik IPTV WAN za določena vrata LAN. Izberite ustrezna vrata LAN in kliknite »Uporabi«.
 Omogoči preslikavo vrat
@@ -3322,6 +3333,7 @@ Atlantski čas (Kanada)
 La Paz
 Caracas
 Santiago
+Asuncion
 Nova Fundlandija
 Brasilia
 Buenos Aires, Georgetown
@@ -3500,7 +3512,7 @@ Podpora za omrežni pogon (Samba)
 Oglašuj sistem DNS odjemalcem
 Način odobritve
 Preverjanje pristnosti z uporabniškim imenom/geslom Samo
-Authorization Mode fixes on TLS
+Authentication Mode fixes on TLS
 Dodatna odobritev HMAC
 Dodatna odobritev HMAC
 Dovoli odjemalec<->odjemalec
@@ -4089,7 +4101,7 @@ Pred brisanjem profil deaktivirajte.
 Ko boste profil izbrisali, bodo odstranjene tudi vse izjeme pravilnikov, določene za profil VPN. Ali ste prepričani, da želite izbrisati profil?
 Ali ste prepričani, da želite izbrisati ta profil?
 Če boste izbrisali pravilnik odjemalca na seznamu izjem, boste izbrisali tudi IP povezavo odjemalca s strežnikom DHCP. Ali ste prepričani, da želite to izbrisati?
-<a id="faq1" href="" target="_blank" style="font-weight:bolder;text-decoration:underline;">Multiple VPN Connection FAQ.</a>
+<a id="faq1" href="" target="_blank" style="font-weight:bolder;text-decoration:underline;">Pogosta vprašanja o funkciji VPN Fusion</a>
 Ni mogoče nastaviti kot privzeto za ciljni pravilnik.
 Beta test only
 You can also select [Cancel], the device will automatically start downloading the update during the night time.
@@ -4129,6 +4141,7 @@ GeForce Now
 Izberite možnost GeForce Now, da določite vrstni red pomembnosti igralnih naprav GeForce Now za hitrejše in boljše igralne izkušnje.
 LED On/Off
 The LED on/off control is used to turn off all LEDs includes Aura light.
+To enable Aura RGB, LED must remain on. Please turn on LED by pressing hardware button on the router for 3 seconds or enable it via web/app interface.
 Dogodek
 Sistem bo zaznal naslednje dogodke in sprožil LED-učinke.
 Ko omogočite Game Boost, boste videli, da LED-vrstica uporablja rdeč učinek utripanja.

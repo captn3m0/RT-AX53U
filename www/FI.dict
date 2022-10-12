@@ -128,6 +128,7 @@ Sen lisäksi, voidaksesi ottaa IFTTT™:n kaukosäädintoiminnon käyttöön tuo
 ASUS on sitoutunut suojaamaan ja kunnioittamaan yksityisyyttäsi. Voit siirtyä kohtaan Advanced Settings (Lisäasetukset) > Administration (Hallinta)> Privacy (Tietosuoja) ottaaksesi milloin tahansa käyttöön / pois käytöstä tuotetietojen jakamisen ASUKSEN kanssa. Saadaksesi lisätietoja, kuinka ASUS suojaa yksityisyyttäsi, siirry kohtaan <a id="eula_url" style="font-weight: bolder;text-decoration:underline;cursor:pointer;" target="_blank">ASUS-tietosuojakäytäntö</a>.
 Olen yli 16-vuotias.
 Vahvista, että ikäsi on yli 16 vuotta.
+Vahvista, että ASUS-käyttöehdot.
 Sovelluksa  %1$@ ja Etäyhteydet  (ASUS-reititinsovellus/Lyra-sovellus/AiCloud/ AiDisk) varten:
 Huomaa, että ASUS kerää tietojasi, mukaan lukien tuotteesi mallinimi, laiteohjelmistoversio, internet-tila, IP-osoite, MAC-osoite ja DDNS-nimi, yllä mainituilla toiminnoilla.
 Jos haluat ottaa pois käytöstä tietojesi jakamisen yllä mainituilla toiminnoilla ASUKSEN kanssa, napsauta alla olevaa <span style="font-weight: bold;">[Withdraw] (Peruuta) </span> -painiketta. Huomaa kuitenkin, että kyseiset ominaisuudet/toiminnot eivät ehkä toimi, jos lopetat tietojesi jakamisen ASUKSEN kanssa.
@@ -139,12 +140,12 @@ Jos aiot ottaa tulevaisuudessa käyttöön Alexa™- ja IFTTT™-toiminnot, sinu
 Et voi suorittaa loppuun perumistoimintoa ilman internet-yhteyttä. Suorita peruminen, kun internet-yhteys on muodostettu.
 Et voi suorittaa loppuun perumistoimintoa, koska internet-tila on epävakaa. Yritä perumista myöhemmin uudelleen.
 Käyttämällä AiProtectionia, sinä hyväksyt
-Käyttämällä sovelluksia AiProtection, Traffic analyzer, Apps analyzer, Adaptive QoS/Game boost, Web history, sinä hyväksyt <a id="eula_url" style="text-decoration:underline;" target="_blank">Trend Micro loppukäyttäjän käyttöoikeussopimuksen</a>.
-Sinä myös hyväksyt ja suostut, että ASUS ei ole vastuussa sinun ja Trend Micro välisestä sopimuksesta eikä mistään Trend Micron tarjoaman palvelun sisällöstä. Sinä myös hyväksyt ja suostut, että ASUS ei ole vastuussa sinun ja Trend Micron välisestä sopimuksesta eikä mistään Trend Micro tarjoaman palvelun sisällöstä. Jos sinulla on kysyttävää, kuinka Trend Micro kerää, käsittelee ja käyttää yllä mainittuja tietoja, katso lisätietoja Trend Micron julkaisemasta tietosuoja-aiheeseen liityvästä ilmoituksesta tai ota yhteyttä Trend Micro.
+Käyttämällä sovelluksia AiProtection, lapsilukko( Web- ja Sovellussuodattimet ), Traffic analyzer, Apps analyzer, Adaptive QoS/Game boost, Web history, sinä hyväksyt <a id="eula_url" style="text-decoration:underline;" target="_blank">Trend Micro loppukäyttäjän käyttöoikeussopimuksen</a>.
+Sinä myös hyväksyt ja suostut, että ASUS ei ole vastuussa sinun ja Trend Micron välisestä sopimuksesta eikä mistään Trend Micro tarjoaman palvelun sisällöstä. Jos sinulla on kysyttävää, kuinka Trend Micro kerää, käsittelee ja käyttää yllä mainittuja tietoja, katso lisätietoja Trend Micron julkaisemasta tietosuoja-aiheeseen liityvästä ilmoituksesta tai ota yhteyttä Trend Micro.
 Jos haluat ottaa pois käytöstä tietojesi jakamisen yllä mainituilla toiminnoilla Trend Micron kanssa, siirry kohtaan:  Router web GUI  (Reitittimen graafinen käyttöliittymä) > Advanced settings (Lisäasetukset) > Administration (Hallinta) > Privacy (Tietosuoja).
 <a id="tm_eula_url" style="text-decoration:underline;" target="_blank">TrendMicro Privacy Policy</a>
 <a id="tm_disclosure_url" style="text-decoration:underline;" target="_blank">Privacy and Personal Data Collection Disclosure</a>
-Sovelluksille  AiProtection, Traffic Analyzer, Apps analyzer, Adaptive QoS/Game boost, Web history:
+Sovelluksille  AiProtection, lapsilukko( Web- ja Sovellussuodattimet ), Traffic Analyzer, Apps analyzer, Adaptive QoS/Game boost, Web history:
 Huomaa, että tietojasi kerätään yllä mainituille Trend Micro sovelluksilla.
 Jos haluat ottaa pois käytöstä tietojesi jakamisen Trend Micron kanssa seuraavilla toiminnoilla, napsauta  <span style="font-weight: bold;">[Withdraw] (Peruuta) </span>. Huomaa kuitenkin, että tällaiset ominaisuudet/toiminnot eivät ehkä toimi, jos lopetat tietojesi jakamisen Trend Micro kanssa.
 Haluatko varmasti peruuttaa?
@@ -271,7 +272,7 @@ Laiteohjelmiston päivitys epäonnistui. Se voi johtua väärästä kuvasta tai 
 Laiteohjelmistoa päivitetään. Odota noin 3 minuuttia.
 Laiteohjelmistopäivityksesi on valmis. Sulje tämä ikkuna ja käytä AiMesh-reititintäsi uudelleen.
 Laiteohjelmistopäivitys on valmis. Käynnistä RT-AX53U manuaalisesti uudelleen.
-To comply with regulatory amendments, we have modified our certification rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
+To comply with regulatory amendments, we have modified our certificate rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
 Olet antanut väärän salasanan viidellä yrityskerralla. Sinut kirjataan ulos.
 2022 ASUSTeK Computer Inc. Kaikki oikeudet pidätetään.
 Jotta määritysparametri voi olla mukana sekä vanhassa että uudessa laiteohjelmistossa, sen asetus säilytetään päivitysprosessin ajan.
@@ -461,7 +462,7 @@ WISP-tila
 RT-AX53U muodostaa langattoman yhteyden pääreitittimeesi, tukiasemaan tai julkiseen verkkopisteeseen, ja jakaa internetin langallisten/langattomien asiakkaittesi kanssa. Tässä tilassa, NAT, palomuuri ja DHCP-palvelin ovat oletuksena käytössä.
 Kun muodostat yhteyden WiFi-verkkopisteeseen, varmista, sinulla on valtuudet käyttää internetiä.
 Tämä toiminto on otettu pois käytöstä.
-lapsilukko
+Lapsilukko
 Uusi salasana
 Kirjoita salasana uudelleen
 Hyvin heikko
@@ -998,13 +999,14 @@ Jos vaihdat langattoman verkon tunnusta, tämä vaikuttaa AiMesh-solmusi WiFi-yh
 Jos vaihdat esijaettua WPA-avainta, tämä vaikuttaa AiMesh-solmusi WiFi-yhteyksiin.
 Jos vaihdat maanumeroasi, tämä saattaa vaikuttaa AiMesh-järjestelmääsi.
 Jos poistat Radio-toiminnon käytöstä, tämä vaikuttaa AiMesh-reitittimesi WiFi-yhteyksiin.
-Jos piilotat langattoman verkon tunnuksen, tämä vaikuttaa AiMesh-reitittimesi WiFi-yhteyksiin.
+Piilotettu SSID-nimi ei auta Wi-Fi-verkkosi suojaamisessa ja saattaa aiheuttaa joitakin yhteysongelmia.
 Jos piilotat langattoman verkon tunnuksen, WPS-toiminto poistetaan käytöstä. Lisäksi tämä vaikuttaa AiMesh-reitittimesi WiFi-yhteyksiin.
 Jos poistat DHCP-palvelimen käytöstä, tämä vaikuttaa AiMesh-reitittimesi WiFi-yhteyksiin.
 Ottaen huomioon AiMesh-järjestelmän ja päätelaitteiden yhteensopivuuden suosittelemme käyttämään WPA2-Personal-salausta. Haluatko vaihtaa todennustilaan #AUTHMODE ?\n*Jos kärsit yhteysongelmista, vaihda WPA2-Personal-salaukseen tai pyydä tarkempia tietoja laitteen valmistajalta.
 Jotta AiMesh-järjestelmäsi ja päätelaitteidesi pysyvät yhteydessä keskenään, lue <a id="wpa3FaqLink">Usein kysytyt kysymykset</a>, ennen kuin vaihdat salaustilaksi WPA3-Personal.
 Käytät tällä hetkellä WPA3-personal-salausta. Jotta voit AiMesh-järjestelmän, todennusmenetelmäksi on vaihdettava WPA2/WPA3-personal. Haluatko jatkaa?
 You can read this <a id='wpa3FaqLink'>FAQ</a> for more information.
+Katso lisätietoja osoitteesta <a style='font-weight: bolder;text-decoration: underline;' href='' target='_blank'>tässä UKK-asiakirjassa</a>
 Edistynyt ASUS AiMesh on uusi innovatiivinen reitittimen ominaisuus, joka yhdistää useita ASUS-reitittimiä yhteen luoden koko kodin kattavan WiFi-verkon.
 Lue lisää ASUS AiMesh -ominaisuudesta
 Etsi AiMesh-noodi
@@ -1090,6 +1092,9 @@ Parveke
 Kokoushuone
 Mukauta
 Autotalli
+Ensimmäinen kerros
+Pelihuone
+Kuntosali
 Offline-vinkkejä
 Varmista, että AiMesh-noodin virta on kytketty päälle.
 Käynnistä AiMesh-noodi ja yritä uudelleen.
@@ -1687,6 +1692,8 @@ Tuo oma varmenteesi
 Siirrä varmenteenmyöntäjän myöntämä varmenne tässä. Yksityinen avaimesi ja SSL-varmenne ovat välttämättömiä.
 Yksityinen avain
 Yksityiset avaimet eivät voi olla salasanasuojattuja.
+IPv6-päivitys
+Asiakkaan verkko käyttää IPv6-verkko-osoitetta, ja tätä ominaisuutta käyttämällä verkko selvitetään ensin IPv6-verkko-osoitteella ennen etälaitteen käyttöä.
 SSL-varmenne
 palvelun ehdot
 Transfer ASUS DDNS name
@@ -2028,11 +2035,11 @@ Ota palomuuri käyttöön suojataksesi paikallisverkkoasi hakkerien hyökkäyksi
 <b>Kielletyt-luettelon kesto :</b> Aikataulun mukaisen keston aikana Kielletyt-luettelossa olevat asiakkaat eivät voi käyttää määritettyjä verkkopalveluita. Määritetyn keston jälkeen kaikki LAN-verkossa olevat asiakkaat voivat käyttää määritettyjä verkkopalveluita.<br><b>Sallitut-luettelon kesto :</b> Aikataulun mukaisen keston aikana Sallitut-luettelossa olevat asiakkaat voivat käyttää VAIN määritettyjä verkkopalveluita. Määritetyn keston jälkeen Sallitut-luettelossa olevat asiakkaat ja muut verkkoasiakkaat eivät pysty käyttämään internetiä tai mitään internet-palveluja.
 <b>HUOMAUTUS :</b> Jos asetat Sallitut-luettelolle aliverkon, aliverkon ulkopuolella olevat IP-osoitteet eivät voi käyttää internetiä tai mitään internet-palveluita.
 MAC-suodatin sallii käyttäjän hyväksyä tai kieltää verkkokäytön laitteilta tai määrätyiltä MAC-osoitteilta.<p>Voit asettaa MAC-suodattimen Accept (Hyväksy) tai Reject (Hylkää) -tilaan.<p>Hylkää-tilassa verkon käyttö on kielletty luettelon laitteilta.<p>Hyväksy-tilassa vain luettelossa olevat laitteet voivat käyttää verkkoa. Laitteet, jotka eivät ole luettelossa, eivät voi käyttää verkkoa.
-\"Palveunesto\"-hyökkäys on nimenomainen yritys estää laillisia käyttäjiä käyttämästä palvelua tai tietokoneresurssia.<p>Tämän ominaisuuden käyttöönotto suojaa reititintä DoS-hyökkäykseltä. Se kuitenkin lisää reitittimen työkuormaa.
+Tämän ominaisuuden käyttöönotto suojaa reititintä DoS-hyökkäykseltä (Denial- of-Service). Se kuitenkin lisää reitittimen työkuormaa.
 Otetaanko DoS-suojaus käyttöön
 Palomuurin ottaminen pois käytöstä deaktivoi kaikki siihen liittyvät toiminnot.
 Otetaanko palomuuri käyttöön
-Otetaanko IPv4 Palomuuri käyttöön
+Otetaanko IPv4 saapuvan liikenteen palomuurisäännöt
 IPv4-palomuuri
 Kun asetat WAN-asetusta varten FTP-palvelimesi porttialueeksi 20:21, FTP-palvelin tulee olemaan ristiriidassa RT-AX53U-reitittimen alkuperäisen FTP-palvelimen kanssa.
 Ota avainsanasuodatin käyttöön
@@ -2140,6 +2147,9 @@ Updated
 Uusi laiteohjelmisto käytettävissä.
 Ladataan julkaisutietoja, odota...
 Ei löydetty julkaisutietoja.
+Palautus
+Valitse laiteohjelmiston versio
+Laiteohjelmiston palautuksen valitsin
 Peliliikenteen nopeutus
 Pelien tehostus
 Kolmitasoinen peliliikenteen nopeutus
@@ -2878,6 +2888,7 @@ Luo uusi RADIUS-asiakas
 Ryhmätaulukko
 Osion nimi
 Lähde- ja kohdeport-tialueiksi voit joko: a) antaa määrätyn portin, kuten \"95\"; tai b) antaa portit jollakin alueella, kuten \"103:315\", \">100\" tai \"<65535\".
+Peliportti
 Porttimääritys
 Porttimääritys sallii tietyn LAN-portin IPTV WAN -liittymän. Voit valita sopivan LAN-portin ja napsauttaa Käytä.
 Ota porttimääritys käyttöön
@@ -3322,6 +3333,7 @@ Atlantin aika (Kanada)
 La Paz
 Caracas
 Santiago
+Asuncion
 Newfoundland
 Brasilia
 Buenos Aires, Georgetown
@@ -3397,7 +3409,7 @@ Salomon-saaret.
 Uusi-Kaledonia
 Marshall-saaret
 Magadan
-Fidzisaaret
+Fidži
 Auckland, Wellington
 Nuku'alofa
 Anadyr, Petropavlovsk-Kamchatskin
@@ -3413,7 +3425,7 @@ Ensisijaisuus palvelimelle lataamisessa
 Dataa lähetetty/sekuntia
 Dataa lähetetty
 Aseta iTunes- ja UPnP-mediapalvelin.
-RT-AX53U tukee UpnP-standardeja. Voit ottaa sen käyttöön ja sallia muiden UpnP-laitteiden, kuten PS3:n tai digitaalisen mediasoittimen, käyttää USB-levyn multimediatiedostoja.
+Määritä <a id='upnp_link'>UPnP, iTunes</a>, <a id='ftp_link'>FTP</a> ja <a id='samba_link'>verkkosijainti (Samba)</a>.
 URL-avainsana
 Valitse USB-sovellus
 Tarkistetaan levyä
@@ -3500,7 +3512,7 @@ Verkkosijainti (Samba) -tuki
 Ilmoita DNS asiakkaille
 Käyttöoikeuksien myöntämistila
 Vain Käyttäjänimi / Salasanan todennus
-Authorization Mode fixes on TLS
+Authentication Mode fixes on TLS
 HMAC-todennus
 Ylimääräinen HMAC-todennus
 Salli Asiakas <-> Asiakas
@@ -4089,7 +4101,7 @@ Deaktivoi profiili ennen sen poistamista.
 Kaikki VPN-profiilille asetetut käytäntöpoikkeukset poistetaan, kun profiili poistetaan. Haluatko varmasti poistaa profiiliin?
 Haluatko varmasti poistaa tämän profiilin?
 Asiakkaan käytännön poistaminen poikkeusluettelossa poistaa myös asiakkaan DHCP-palvelimen IP-sidonnan. Haluatko varmasti poistaa tämän?
-<a id="faq1" href="" target="_blank" style="font-weight:bolder;text-decoration:underline;">Multiple VPN Connection FAQ.</a>
+<a id="faq1" href="" target="_blank" style="font-weight:bolder;text-decoration:underline;">VPN Fusion - Usein kysyttyä.</a>
 Ei voi asettaa oletus WAN:ksi kohdekäytännön vuoksi.
 Beta test only
 You can also select [Cancel], the device will automatically start downloading the update during the night time.
@@ -4129,6 +4141,7 @@ GeForce Now
 Jos haluat priorisoida GeForce Now -pelilaitteita pelaamisen nopeuttamiseksi ja parantamiseksi, valitse GeForce Now.
 LED On/Off
 The LED on/off control is used to turn off all LEDs includes Aura light.
+To enable Aura RGB, LED must remain on. Please turn on LED by pressing hardware button on the router for 3 seconds or enable it via web/app interface.
 Tapahtuma
 Järjestelmä tunnistaa seuraavat tapahtumat ja käynnistää erilaisia leditehosteita.
 Kun otat Game Boostin käyttöön, näet ledipalkissa punaisen hengitystehosteen.

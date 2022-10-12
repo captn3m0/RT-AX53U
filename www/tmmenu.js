@@ -1450,7 +1450,7 @@ for (var i = 0; i < arguments.length; ++i){
 if(arguments[i][0].indexOf("WIRELESS") != -1){
 if(wireless_tabs.length > 1){
 if(!wireless_tab){
-buf.push('<li><a style="margin-right: 3px;" href="#" id="wireless_tabs"><#377#></a>');
+buf.push('<li><a style="margin-right: 3px;" href="#" id="wireless_tabs"><#378#></a>');
 buf.push('<ul>');
 for(var j = 0; j < wireless_tabs.length; j++){
 buf.push('<li><a href="javascript:tabSelect(\'' + wireless_tabs[j][0] +'\')" id="' + wireless_tabs[j][0] + '">' + wireless_tabs[j][1] + '</a></li>');
@@ -1465,7 +1465,7 @@ buf.push('<li><a style="margin-right: 3px;" href="javascript:tabSelect(\'' + arg
 else if(arguments[i][0].indexOf("INTERNET") != -1){
 if(internet_tabs.length > 1){
 if(!internet_tab){
-buf.push('<li><a style="margin-right: 3px;" href="#" id="internet_tabs"><#389#></a>');
+buf.push('<li><a style="margin-right: 3px;" href="#" id="internet_tabs"><#390#></a>');
 buf.push('<ul>');
 for(var j = 0; j < internet_tabs.length; j++){
 buf.push('<li><a href="javascript:tabSelect(\'' + internet_tabs[j][0] +'\')" id="' + internet_tabs[j][0] + '">' + internet_tabs[j][1] + '</a></li>');
@@ -1475,7 +1475,7 @@ internet_tab = 1;
 }
 }
 else
-buf.push('<li><a style="margin-right: 3px;" href="javascript:tabSelect(\'' + arguments[i][0] + '\')" id="' + arguments[i][0] + '">' + '<#389#> (' + arguments[i][1] + ')</a></li>');
+buf.push('<li><a style="margin-right: 3px;" href="javascript:tabSelect(\'' + arguments[i][0] + '\')" id="' + arguments[i][0] + '">' + '<#390#> (' + arguments[i][1] + ')</a></li>');
 }
 else if(arguments[i][0].indexOf("WAGGR") != -1){
 if(internet_tabs.length > 1){
@@ -1495,7 +1495,7 @@ buf.push('<li><a style="margin-right: 3px;" href="javascript:tabSelect(\'' + arg
 else if(arguments[i][0].indexOf("WIRED") != -1){
 if(wired_tabs.length > 1){
 if(!wired_tab){
-buf.push('<li><a style="margin-right: 3px;" href="#" id="wired_tabs"><#3270#></a>');
+buf.push('<li><a style="margin-right: 3px;" href="#" id="wired_tabs"><#3281#></a>');
 buf.push('<ul>');
 for(var j = 0; j < wired_tabs.length; j++){
 buf.push('<li><a href="javascript:tabSelect(\'' + wired_tabs[j][0] +'\')" id="' + wired_tabs[j][0] + '">' + wired_tabs[j][1] + '</a></li>');

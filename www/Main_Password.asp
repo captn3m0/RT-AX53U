@@ -288,14 +288,14 @@ if(!validator.chkLoginId(document.form.http_username_x)){
 return false;
 }
 if(document.form.http_passwd_x.value == ""){
-showError("<#267#>");
+showError("<#268#>");
 document.form.http_passwd_x.value = "";
 document.form.http_passwd_x.focus();
 document.form.http_passwd_x.select();
 return false;
 }
 if(document.form.http_passwd_x.value != document.form.http_passwd_2_x.value){
-showError("<#268#>");
+showError("<#269#>");
 document.form.http_passwd_x.value = "";
 document.form.http_passwd_x.focus();
 document.form.http_passwd_x.select();
@@ -306,7 +306,7 @@ if(!validator.chkLoginPw_KR(document.form.http_passwd_x)){
 return false;
 }
 if(document.form.http_passwd_x.value == document.form.http_username_x.value){
-alert("<#332#>");
+alert("<#333#>");
 document.form.http_passwd_x.focus();
 document.form.http_passwd_x.select();
 return false;
@@ -318,7 +318,7 @@ return false;
 }
 }
 if(document.form.http_passwd_x.value == '<% nvram_default_get("http_passwd"); %>'){
-showError("<#487#>");
+showError("<#488#>");
 document.form.http_passwd_x.value = "";
 document.form.http_passwd_x.focus();
 document.form.http_passwd_x.select();
@@ -326,7 +326,7 @@ return false;
 }
 var is_common_string = check_common_string(document.form.http_passwd_x.value, "httpd_password");
 if(document.form.http_passwd_x.value.length > 0 && is_common_string){
-if(!confirm("<#311#>")){
+if(!confirm("<#312#>")){
 document.form.http_passwd_x.focus();
 document.form.http_passwd_x.select();
 return false;
@@ -360,9 +360,8 @@ document.form.submit();
 setTimeout(function(){
 httpApi.chpass(postData);
 }, 100);
-var nextPage = decodeURIComponent('<% get_ascii_parameter("nextPage"); %>');
 setTimeout(function(){
-location.href = (nextPage != "") ? nextPage : "/";
+location.href = "/";
 }, showLoading_time);
 }
 else
@@ -372,7 +371,7 @@ var validator = {
 chkLoginId: function(obj){
 var re = new RegExp("^[a-zA-Z0-9][a-zA-Z0-9\-\_]+$","gi");
 if(obj.value == ""){
-showError("<#263#>");
+showError("<#264#>");
 obj.value = "";
 obj.focus();
 obj.select();
@@ -380,7 +379,7 @@ return false;
 }
 else if(re.test(obj.value)){
 if(obj.value == "root" || obj.value == "guest" || obj.value == "anonymous"){
-showError("<#776#>");
+showError("<#777#>");
 obj.value = "";
 obj.focus();
 obj.select();
@@ -390,9 +389,9 @@ return true;
 }
 else{
 if(obj.value.length < 2)
-showError("<#327#>");
+showError("<#328#>");
 else
-showError("<#2448#>");
+showError("<#2458#>");
 obj.value = "";
 obj.focus();
 obj.select();
@@ -401,21 +400,28 @@ return false;
 },
 chkLoginPw: function(obj){
 if(obj.value.length > 0 && obj.value.length < 5){
-showError("<#326#> <#320#>");
+showError("<#327#> <#321#>");
 obj.value = "";
 obj.focus();
 obj.select();
 return false;
 }
 if(obj.value.length > 32){
-showError("<#318#>");
+showError("<#319#>");
 obj.value = "";
 obj.focus();
 obj.select();
 return false;
 }
 if(obj.value.charAt(0) == '"'){
-showError('<#337#> ["]');
+showError('<#338#> ["]');
+obj.value = "";
+obj.focus();
+obj.select();
+return false;
+}
+else if(obj.value.charAt(obj.value.length - 1) == '"'){
+showError('<#340#> ["]');
 obj.value = "";
 obj.focus();
 obj.select();
@@ -429,7 +435,7 @@ invalid_char = invalid_char+obj.value.charAt(i);
 }
 }
 if(invalid_char != ""){
-showError("<#338#> '"+invalid_char+"' !");
+showError("<#339#> '"+invalid_char+"' !");
 obj.value = "";
 obj.focus();
 obj.select();
@@ -444,14 +450,28 @@ if(!/[A-Za-z]/.test(obj.value) || !/[0-9]/.test(obj.value) || string_length < 10
 || !/[\!\"\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\[\\\]\^\_\`\{\|\}\~]/.test(obj.value)
 || /([A-Za-z0-9\!\"\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\[\\\]\^\_\`\{\|\}\~])\1/.test(obj.value)
 ){
-showError("<#332#>");
+showError("<#333#>");
 obj.value = "";
 obj.focus();
 obj.select();
 return false;
 }
 if(obj.value.length > 32){
-showError("<#318#>");
+showError("<#319#>");
+obj.value = "";
+obj.focus();
+obj.select();
+return false;
+}
+if(obj.value.charAt(0) == '"'){
+showError('<#338#> ["]');
+obj.value = "";
+obj.focus();
+obj.select();
+return false;
+}
+else if(obj.value.charAt(obj.value.length - 1) == '"'){
+showError('<#340#> ["]');
 obj.value = "";
 obj.focus();
 obj.select();
@@ -464,7 +484,7 @@ invalid_char = invalid_char+obj.value.charAt(i);
 }
 }
 if(invalid_char != ""){
-showError("<#338#> '"+invalid_char+"' !");
+showError("<#339#> '"+invalid_char+"' !");
 obj.value = "";
 obj.focus();
 obj.select();
@@ -497,37 +517,37 @@ $("#error_status_field").html(str);
 <tr>
 <td>
 <div class="main_content">
-<div class="title_name"><#2844#></div>
+<div class="title_name"><#2854#></div>
 <div class="sub_title_name">
 <div>
-<#586#>
+<#587#>
 </div>
 <div id="KRHint" style="display:none">
-<#332#>
+<#333#>
 </div>
 </div>
 <div id="router_name_tr" class="ie_title">
-<div><#714#></div>
+<div><#715#></div>
 </div>
 <div>
-<input type="text" name="http_username_x" tabindex="1" class="form_input" maxlength="32" value="" autocapitalize="off" autocomplete="off" placeholder="<#714#>">
+<input type="text" name="http_username_x" tabindex="1" class="form_input" maxlength="32" value="" autocapitalize="off" autocomplete="off" placeholder="<#715#>">
 </div>
 <div id="router_password_tr" class="ie_title">
-<div><#464#></div>
+<div><#465#></div>
 </div>
 <div>
-<input type="password" autocapitalize="off" autocomplete="off" value="" name="http_passwd_x" tabindex="2" class="form_input" maxlength="33" onkeyup="" onpaste="return false;"/ onBlur="" placeholder="<#464#>">
+<input type="password" autocapitalize="off" autocomplete="off" value="" name="http_passwd_x" tabindex="2" class="form_input" maxlength="33" onkeyup="" onpaste="return false;"/ onBlur="" placeholder="<#465#>">
 </div>
 <div id="router_password_confirm_tr" class="ie_title" >
-<div><#1608#></div>
+<div><#1613#></div>
 </div>
 <div>
-<input type="password" autocapitalize="off" autocomplete="off" value="" name="http_passwd_2_x" tabindex="3" class="form_input" maxlength="33" onkeyup="" onpaste="return false;"/ onBlur="" placeholder="<#1608#>">
+<input type="password" autocapitalize="off" autocomplete="off" value="" name="http_passwd_2_x" tabindex="3" class="form_input" maxlength="33" onkeyup="" onpaste="return false;"/ onBlur="" placeholder="<#1613#>">
 </div>
 <div id="error_status_field"></div>
 <div class="btn_bg">
 <div id="btn_modify">
-<input name="btn_modify" type="button" class="button" tabindex="4" onclick="submitForm();" value="<#202#>">
+<input name="btn_modify" type="button" class="button" tabindex="4" onclick="submitForm();" value="<#203#>">
 </div>
 <div id="loadingIcon"></div>
 </div>

@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#837#> - <#169#></title>
+<title><#838#> - <#170#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="menu_style.css">
@@ -90,14 +90,14 @@ var wan0_ipaddr = wanlink_ipaddr();
 var wan1_ipaddr = secondary_wanlink_ipaddr();
 document.getElementById("wan_ctrl").style.display = "none";
 document.getElementById("dualwan_ctrl").style.display = "";
-document.getElementById("dualwan_ctrl").innerHTML = "<#2933#> <span class=\"formfontdesc\">Primary WAN IP : " + wan0_ipaddr + " </sapn><span class=\"formfontdesc\">Secondary WAN IP : " + wan1_ipaddr + "</sapn>";
+document.getElementById("dualwan_ctrl").innerHTML = "<#2944#> <span class=\"formfontdesc\">Primary WAN IP : " + wan0_ipaddr + " </sapn><span class=\"formfontdesc\">Secondary WAN IP : " + wan1_ipaddr + "</sapn>";
 if(validator.isPrivateIP(wan0_ipaddr) && validator.isPrivateIP(wan1_ipaddr)){
 document.getElementById("privateIP_notes").style.display = "";
 }
 }
 else {
 var wan_ipaddr = wanlink_ipaddr();
-document.getElementById("wan_ctrl").innerHTML = "<#2933#>" + wan_ipaddr;
+document.getElementById("wan_ctrl").innerHTML = "<#2944#>" + wan_ipaddr;
 setTimeout("show_warning_message();", 1000);
 }
 if(document.form.pptpd_ms_network.value == "1") {
@@ -243,23 +243,23 @@ for(var y=0; y<pptpd_connected_clients.length; y++) {
 if($rowObj.children(":first").next().attr("title") == pptpd_connected_clients[y].username){
 have_client_flag = true;
 if($rowObj.children(":first").children().length == 0) {
-$rowObj.children(":first").html('<a class="hintstyle2" href="javascript:void(0);" onClick="showPPTPClients(\''+pptpd_connected_clients[y].username+'\');"><#188#></a>');
+$rowObj.children(":first").html('<a class="hintstyle2" href="javascript:void(0);" onClick="showPPTPClients(\''+pptpd_connected_clients[y].username+'\');"><#189#></a>');
 }
 break;
 }
 }
 if(!have_client_flag) {
 if($rowObj.children().length == 1)
-$rowObj.children(":first").html("<#2372#>");
+$rowObj.children(":first").html("<#2382#>");
 else
-$rowObj.children(":first").html("<#216#>");
+$rowObj.children(":first").html("<#217#>");
 }
 }
 else {
 if($rowObj.children().length == 1)
-$rowObj.children(":first").html("<#2372#>");
+$rowObj.children(":first").html("<#2382#>");
 else
-$rowObj.children(":first").html("<#216#>");
+$rowObj.children(":first").html("<#217#>");
 }
 }
 }
@@ -277,7 +277,7 @@ if(j != item_num - 3)
 tmp_value += ">";
 }
 }
-if(tmp_value == "<"+"<#2372#>" || tmp_value == "<")
+if(tmp_value == "<"+"<#2382#>" || tmp_value == "<")
 tmp_value = "";
 return tmp_value;
 };
@@ -291,7 +291,7 @@ document.form._pptpd_clients_start.select();
 return false;
 }
 if(document.form._pptpd_clients_start.value.split(".")[3] == 255) {
-alert(document.form._pptpd_clients_start.value + " <#329#>");
+alert(document.form._pptpd_clients_start.value + " <#330#>");
 document.form._pptpd_clients_start.focus();
 document.form._pptpd_clients_start.select();
 return false;
@@ -315,13 +315,13 @@ document.form.pptpd_dns2.value = "";
 }
 else {
 if(document.form.pptpd_dns1.value == "") {
-alert("<#315#>");
+alert("<#316#>");
 document.form.pptpd_dns1.focus();
 document.form.pptpd_dns1.select();
 return false;
 }
 else if(document.form.pptpd_dns2.value == "") {
-alert("<#315#>");
+alert("<#316#>");
 document.form.pptpd_dns2.focus();
 document.form.pptpd_dns2.select();
 return false;
@@ -343,13 +343,13 @@ document.form.pptpd_wins2.value = "";
 }
 else {
 if(document.form.pptpd_wins1.value == "") {
-alert("<#315#>");
+alert("<#316#>");
 document.form.pptpd_wins1.focus();
 document.form.pptpd_wins1.select();
 return false;
 }
 else if(document.form.pptpd_wins2.value == "") {
-alert("<#315#>");
+alert("<#316#>");
 document.form.pptpd_wins2.focus();
 document.form.pptpd_wins2.select();
 return false;
@@ -403,7 +403,7 @@ function validForm(){
 var valid_username = document.form.pptpd_clientlist_username;
 var valid_password = document.form.pptpd_clientlist_password;
 if(valid_username.value == "") {
-alert("<#315#>");
+alert("<#316#>");
 valid_username.focus();
 return false;
 }
@@ -411,7 +411,7 @@ else if(!Block_chars(valid_username, [" ", "@", "*", "+", "|", ":", "?", "<", ">
 return false;
 }
 if(valid_password.value == "") {
-alert("<#315#>");
+alert("<#316#>");
 valid_password.focus();
 return false;
 }
@@ -426,14 +426,14 @@ var password_obj = document.form.pptpd_clientlist_password;
 var rule_num = document.getElementById("pptpd_clientlist_table").rows.length;
 var item_num = document.getElementById("pptpd_clientlist_table").rows[0].cells.length;
 if(rule_num >= upper) {
-alert("<#2444#> " + upper + " <#2445#>");
+alert("<#2454#> " + upper + " <#2455#>");
 return false;
 }
 if(validForm()){
 if(item_num >= 2) {
 for(var i = 0; i < rule_num; i +=1 ) {
 if(username_obj.value == document.getElementById("pptpd_clientlist_table").rows[i].cells[1].title) {
-alert("<#2437#>");
+alert("<#2447#>");
 username_obj.focus();
 username_obj.select();
 return false;
@@ -499,7 +499,7 @@ var code = "";
 var pptp_user_name = "";
 code +='<table width="100%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="pptpd_clientlist_table">';
 if(pptpd_clientlist_row.length == 1)
-code +='<tr><td style="color:#FFCC00;" colspan="5"><#2372#></td></tr>';
+code +='<tr><td style="color:#FFCC00;" colspan="5"><#2382#></td></tr>';
 else{
 for(var i = 1; i < pptpd_clientlist_row.length; i++){
 overlib_str0[i] = "";
@@ -614,7 +614,7 @@ return false;
 }
 var lan_ipaddr = httpApi.nvramGet(["lan_ipaddr"]).lan_ipaddr;
 if(pptpd_sr_ipaddr == lan_ipaddr){
-alert("<#3486#> " + lan_ipaddr);
+alert("<#3498#> " + lan_ipaddr);
 return false;
 }
 var usernameFlag = false;
@@ -678,14 +678,14 @@ function check_pptpd_clients_range(){
 var pptpd_clients_start_ip = parseInt(document.form._pptpd_clients_start.value.split(".")[3]);
 var pptpd_clients_end_ip = parseInt(document.form._pptpd_clients_end.value);
 if(pptpd_clients_start_ip > pptpd_clients_end_ip) {
-alert("<#3473#> " + document.form._pptpd_clients_start.value);
+alert("<#3485#> " + document.form._pptpd_clients_start.value);
 document.form._pptpd_clients_end.focus();
 document.form._pptpd_clients_end.select();
 setEnd();
 return false;
 }
 if( (pptpd_clients_end_ip - pptpd_clients_start_ip) > max_shift ) {
-alert("<#3495#>");
+alert("<#3507#>");
 document.form._pptpd_clients_start.focus();
 document.form._pptpd_clients_start.select();
 setEnd();
@@ -712,7 +712,7 @@ var pptpd_clients_end_ip = parseInt(document.form._pptpd_clients_end.value);
 if( lan_ip_subnet == pptpd_clients_subnet
 && lan_ip_end >= pptpd_clients_start_ip
 && lan_ip_end <= pptpd_clients_end_ip ){
-document.getElementById("pptpd_conflict").innerHTML = "<#3486#> <b>"+origin_lan_ip+"</b>";
+document.getElementById("pptpd_conflict").innerHTML = "<#3498#> <b>"+origin_lan_ip+"</b>";
 return;
 }
 if( pool_subnet == pptpd_clients_subnet
@@ -720,7 +720,7 @@ if( pool_subnet == pptpd_clients_subnet
 || (pool_end_end >= pptpd_clients_start_ip && pool_end_end <= pptpd_clients_end_ip)
 || (pptpd_clients_start_ip >= pool_start_end && pptpd_clients_start_ip <= pool_end_end)
 || (pptpd_clients_end_ip >= pool_start_end && pptpd_clients_end_ip <= pool_end_end))){
-document.getElementById("pptpd_conflict").innerHTML = "<#3484#> <b>"+pool_start+" ~ "+pool_end+"</b>";
+document.getElementById("pptpd_conflict").innerHTML = "<#3496#> <b>"+pool_start+" ~ "+pool_end+"</b>";
 return;
 }
 if(dhcp_staticlists != ""){
@@ -733,7 +733,7 @@ static_end = parseInt(static_ip.split(".")[3]);
 if( static_subnet == pptpd_clients_subnet
 && static_end >= pptpd_clients_start_ip
 && static_end <= pptpd_clients_end_ip){
-document.getElementById("pptpd_conflict").innerHTML = "<#3485#> <b>"+static_ip+"</b>";
+document.getElementById("pptpd_conflict").innerHTML = "<#3497#> <b>"+static_ip+"</b>";
 return;
 }
 }
@@ -801,18 +801,18 @@ setTimeout("update_pptp_client_status();", 3000);
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div id="divVPNTitle" class="formfonttitle"><#169#> - PPTP</div>
+<div id="divVPNTitle" class="formfonttitle"><#170#> - PPTP</div>
 <div id="divSwitchMenu" style="margin-top:-40px;float:right;"></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div id="privateIP_notes" class="formfontdesc" style="display:none;color:#FC0;"><#3552#></div>
+<div id="privateIP_notes" class="formfontdesc" style="display:none;color:#FC0;"><#3564#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#3240#></td>
+<td colspan="2"><#3251#></td>
 </tr>
 </thead>
 <tr>
-<th><#3491#></th>
+<th><#3503#></th>
 <td>
 <div align="center" class="left" style="width:94px; float:left; cursor:pointer;" id="radio_VPNServer_enable"></div>
 <script type="text/javascript">
@@ -830,47 +830,47 @@ formShowAndHide(0, "pptpd");
 </td>
 </tr>
 <tr id="trVPNServerMode">
-<th><#777#></th>
+<th><#778#></th>
 <td>
 <select id="selSwitchMode" onchange="switchMode(this.options[this.selectedIndex].value)" class="input_option">
-<option value="1" selected><#378#></option>
-<option value="2"><#376#></option>
+<option value="1" selected><#379#></option>
+<option value="2"><#377#></option>
 </select>
 </td>
 </tr>
 <tr id="pptp_samba">
-<th><#3498#></th>
+<th><#3510#></th>
 <td>
-<input type="radio" value="1" name="pptpd_ms_network_option" onClick="set_pptpd_broadcast(this);"/><#186#>
-<input type="radio" value="0" name="pptpd_ms_network_option" onClick="set_pptpd_broadcast(this);"/><#185#>
+<input type="radio" value="1" name="pptpd_ms_network_option" onClick="set_pptpd_broadcast(this);"/><#187#>
+<input type="radio" value="0" name="pptpd_ms_network_option" onClick="set_pptpd_broadcast(this);"/><#186#>
 </td>
 </tr>
 </table>
 <div id="PPTP_setting" style="display:none;margin-top:8px;">
-<div class="formfontdesc"><#2932#></div>
+<div class="formfontdesc"><#2943#></div>
 <div id="wan_ctrl" class="formfontdesc"></div>
 <div id="dualwan_ctrl" style="display:none;" class="formfontdesc"></div>
-<div class="formfontdesc" style="margin-top:-10px;"><#2934#></div>
-<div class="formfontdesc" style="margin-top:-10px;">(7) <#2801#></div>
+<div class="formfontdesc" style="margin-top:-10px;"><#2945#></div>
+<div class="formfontdesc" style="margin-top:-10px;">(7) <#2811#></div>
 <div class="formfontdesc" style="margin:-10px 0px 0px -15px;">
 <ul>
 <li>
-<a id="faq" href="" target="_blank" style="font-family:Lucida Console;text-decoration:underline;"><#169#> FAQ</a>
+<a id="faq" href="" target="_blank" style="font-family:Lucida Console;text-decoration:underline;"><#170#> FAQ</a>
 </li>
 </ul>
 </div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table" style="margin-top:8px;">
 <thead>
 <tr>
-<td colspan="5"><#3457#>&nbsp;(<#2576#>&nbsp;16)</td>
+<td colspan="5"><#3469#>&nbsp;(<#2586#>&nbsp;16)</td>
 </tr>
 </thead>
 <tr>
-<th><#483#></th>
-<th><#3456#></th>
-<th><#2261#></th>
-<th><#2575#></th>
-<th><#2961#></th>
+<th><#484#></th>
+<th><#3468#></th>
+<th><#2271#></th>
+<th><#2585#></th>
+<th><#2972#></th>
 </tr>
 <tr>
 <td width="15%" style="text-align:center;">-</td>
@@ -892,63 +892,63 @@ formShowAndHide(0, "pptpd");
 <table id="tbAdvanced" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable" style="display:none;margin-top:8px;">
 <thead>
 <tr>
-<td colspan="2"><#376#></td>
+<td colspan="2"><#377#></td>
 </tr>
 </thead>
 <tr>
-<th><#3478#></th>
+<th><#3490#></th>
 <td>
-<input type="radio" value="1" name="pptpd_broadcast_option" onClick="setBroadcast(this);"/><#186#>
-<input type="radio" value="0" name="pptpd_broadcast_option" onClick="setBroadcast(this);"/><#185#>
-<span id="pptpd_broadcast_hint" style="font-family: Lucida Console;color: #FFCC00;display: none;"><#2931#></span>
+<input type="radio" value="1" name="pptpd_broadcast_option" onClick="setBroadcast(this);"/><#187#>
+<input type="radio" value="0" name="pptpd_broadcast_option" onClick="setBroadcast(this);"/><#186#>
+<span id="pptpd_broadcast_hint" style="font-family: Lucida Console;color: #FFCC00;display: none;"><#2942#></span>
 </td>
 </tr>
 <tr>
-<th><#2899#></th>
+<th><#2910#></th>
 <td>
 <select name="pptpd_chap" class="input_option">
-<option value="0" <% nvram_match("pptpd_chap", "0","selected"); %>><#152#></option>
+<option value="0" <% nvram_match("pptpd_chap", "0","selected"); %>><#153#></option>
 <option value="1" <% nvram_match("pptpd_chap", "1","selected"); %>>MS-CHAPv1</option>
 <option value="2" <% nvram_match("pptpd_chap", "2","selected"); %>>MS-CHAPv2</option>
 </select>
 </td>
 </tr>
 <tr>
-<th><#2730#></th>
+<th><#2740#></th>
 <td>
 <input type="checkbox" class="input" name="pptpd_mppe_128" onClick="return changeMppe();">MPPE-128<br>
 <input type="checkbox" class="input" name="pptpd_mppe_40" onClick="return changeMppe();">MPPE-40<br>
-<input type="checkbox" class="input" name="pptpd_mppe_no" onClick="return changeMppe();"><#2789#>
+<input type="checkbox" class="input" name="pptpd_mppe_no" onClick="return changeMppe();"><#2799#>
 </td>
 </tr>
 <tr>
-<th><#303#></th>
+<th><#304#></th>
 <td>
-<input type="radio" name="pptpd_dnsenable_x" class="input" value="1" onclick="return change_pptpd_radio(this)" /><#186#>
-<input type="radio" name="pptpd_dnsenable_x" class="input" value="0" onclick="return change_pptpd_radio(this)" /><#185#>
+<input type="radio" name="pptpd_dnsenable_x" class="input" value="1" onclick="return change_pptpd_radio(this)" /><#187#>
+<input type="radio" name="pptpd_dnsenable_x" class="input" value="0" onclick="return change_pptpd_radio(this)" /><#186#>
 </td>
 </tr>
 <tr>
-<th><#293#></th>
+<th><#294#></th>
 <td><input type="text" maxlength="15" class="input_15_table" name="pptpd_dns1" value="<% nvram_get("pptpd_dns1"); %>" onkeypress="return validator.isIPAddr(this, event)" autocorrect="off" autocapitalize="off"></td>
 </tr>
 <tr>
-<th><#295#></th>
+<th><#296#></th>
 <td><input type="text" maxlength="15" class="input_15_table" name="pptpd_dns2" value="<% nvram_get("pptpd_dns2"); %>" onkeypress="return validator.isIPAddr(this, event)" autocorrect="off" autocapitalize="off"></td>
 </tr>
 <tr>
-<th><#2390#></th>
+<th><#2400#></th>
 <td>
-<input type="radio" name="pptpd_winsenable_x" class="input" value="1" onclick="return change_pptpd_radio(this)" /><#186#>
-<input type="radio" name="pptpd_winsenable_x" class="input" value="0" onclick="return change_pptpd_radio(this)" /><#185#>
+<input type="radio" name="pptpd_winsenable_x" class="input" value="1" onclick="return change_pptpd_radio(this)" /><#187#>
+<input type="radio" name="pptpd_winsenable_x" class="input" value="0" onclick="return change_pptpd_radio(this)" /><#186#>
 </td>
 </tr>
 <tr>
-<th><#2388#></th>
+<th><#2398#></th>
 <td><input type="text" maxlength="15" class="input_15_table" name="pptpd_wins1" value="<% nvram_get("pptpd_wins1"); %>" onkeypress="return validator.isIPAddr(this, event)" autocorrect="off" autocapitalize="off"></td>
 </tr>
 <tr>
-<th><#2389#></th>
+<th><#2399#></th>
 <td><input type="text" maxlength="15" class="input_15_table" name="pptpd_wins2" value="<% nvram_get("pptpd_wins2"); %>" onkeypress="return validator.isIPAddr(this, event)" autocorrect="off" autocapitalize="off"></td>
 </tr>
 <tr>
@@ -960,16 +960,16 @@ formShowAndHide(0, "pptpd");
 <td><input type="text" maxlength="4" class="input_15_table" name="pptpd_mtu" value="<% nvram_get("pptpd_mtu"); %>" onKeyPress="return validator.isNumber(this,event)" autocorrect="off" autocapitalize="off"></td>
 </tr>
 <tr>
-<th><#3482#></th>
+<th><#3494#></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="_pptpd_clients_start" onBlur="setEnd();" onKeyPress="return validator.isIPAddr(this, event);" value="" autocorrect="off" autocapitalize="off"/> ~
-<span id="pptpd_subnet" style="font-family: Lucida Console;color: #FFF;"></span><input type="text" maxlength="3" class="input_3_table" name="_pptpd_clients_end" value="" autocorrect="off" autocapitalize="off"/><span style="color:#FFCC00;"> <#3496#></span>
+<span id="pptpd_subnet" style="font-family: Lucida Console;color: #FFF;"></span><input type="text" maxlength="3" class="input_3_table" name="_pptpd_clients_end" value="" autocorrect="off" autocapitalize="off"/><span style="color:#FFCC00;"> <#3508#></span>
 <br /><span id="pptpd_conflict"></span>
 </td>
 </tr>
 </table>
 <div id="divApply" class="apply_gen" style="display:none;">
-<input class="button_gen" onclick="applyRule()" type="button" value="<#195#>"/>
+<input class="button_gen" onclick="applyRule()" type="button" value="<#196#>"/>
 </div>
 </td>
 </tr>
@@ -989,21 +989,21 @@ formShowAndHide(0, "pptpd");
 </tr>
 </thead>
 <tr>
-<th width="30%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(6,1);"><#3019#></a></th>
+<th width="30%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(6,1);"><#3030#></a></th>
 <td>
 <input type="text" class="input_20_table" maxlength="15" name="pptpd_sr_ipaddr" onKeyPress="return validator.isIPAddr(this, event)" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th width="30%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(6,2);"><#3020#></a></th>
+<th width="30%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(6,2);"><#3031#></a></th>
 <td>
 <input type="text" class="input_20_table" maxlength="15" name="pptpd_sr_netmask" onKeyPress="return validator.isIPAddr(this, event)" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 </table>
 <div style="margin-top:10px;text-align:center;">
-<input class="button_gen" type="button" onclick="srCancel();" value="<#198#>">
-<input class="button_gen" type="button" onclick="srConfirm();" value="<#1654#>">
+<input class="button_gen" type="button" onclick="srCancel();" value="<#199#>">
+<input class="button_gen" type="button" onclick="srConfirm();" value="<#1659#>">
 </div>
 </div>
 </form>

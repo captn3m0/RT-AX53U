@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#837#> - <#3713#></title>
+<title><#838#> - <#3725#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="device-map/device-map.css">
@@ -50,7 +50,7 @@ var code = "";
 var clientListEventData = [];
 code += '<table width="100%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="wl_maclist_x_table">';
 if(Object.keys(wl_rast_static_client_array).length == 0)
-code += '<tr><td style="color:#FFCC00;"><#2372#></td></tr>';
+code += '<tr><td style="color:#FFCC00;"><#2382#></td></tr>';
 else{
 var userIconBase64 = "NoIcon";
 var clientName, deviceType, deviceVender;
@@ -123,11 +123,11 @@ show_wl_maclist_x();
 function addRow(obj, upper){
 var mac = obj.value.toUpperCase();
 if(Object.keys(wl_rast_static_client_array).length >= upper) {
-alert("<#2444#> " + upper + " <#2445#>");
+alert("<#2454#> " + upper + " <#2455#>");
 return false;
 }
 if(mac == "") {
-alert("<#315#>");
+alert("<#316#>");
 obj.focus();
 obj.select();
 return false;
@@ -138,7 +138,7 @@ obj.select();
 return false;
 }
 if(wl_rast_static_client_array[mac] != null) {
-alert("<#2437#>");
+alert("<#2447#>");
 obj.focus();
 obj.select();
 return false;
@@ -228,7 +228,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#347#>";
+document.getElementById("check_mac").innerHTML="<#348#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else if(flag ==2){
@@ -236,7 +236,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#308#>";
+document.getElementById("check_mac").innerHTML="<#309#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else{
@@ -423,15 +423,15 @@ wlHintHtml += '<meta content="telephone=no" name="format-detection"><meta name="
 wlHintHtml += '<div id="wlHint">';
 wlHintHtml += '<div class="div_table main_field_gap">';
 wlHintHtml += '<div class="div_tr">';
-wlHintHtml += '<div class="prod_madelName"><div class="title_name"><div class="div_td img_gap"><div class="login_img"></div></div><div class="div_td"><#838#></div></div></div>';
+wlHintHtml += '<div class="prod_madelName"><div class="title_name"><div class="div_td img_gap"><div class="login_img"></div></div><div class="div_td"><#839#></div></div></div>';
 wlHintHtml += '<div id="login_filed">';
-wlHintHtml += "<div class='p1 title_gap'><#217#></div>";
+wlHintHtml += "<div class='p1 title_gap'><#218#></div>";
 for(var i=0; i<wlObj.length; i++){
 wlHintHtml += '<div class="p1 title_gap">'+ wlObj[i].band +'</div>';
 wlHintHtml += '<div class="nologin">';
-wlHintHtml += '<#557#>: <b>';
+wlHintHtml += '<#558#>: <b>';
 wlHintHtml += wlObj[i].ssid + '</b><br>';
-wlHintHtml += '<#422#>: <b>';
+wlHintHtml += '<#423#>: <b>';
 wlHintHtml += (wlObj[i].key == "") ? "Open System" : wlObj[i].key;
 wlHintHtml += '</b></div>';
 }
@@ -467,37 +467,37 @@ top.document.write(wlHintCss + wlHintHtml);
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#377#> - <#3713#></div>
+<div class="formfonttitle"><#378#> - <#3725#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#2991#></div>
+<div class="formfontdesc"><#3002#></div>
 <table id="MainTable1" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#3240#></td>
+<td colspan="2"><#3251#></td>
 </tr>
 </thead>
 <tr>
-<th width="30%"><#2992#></th>
+<th width="30%"><#3003#></th>
 <td>
-<label><input type="radio" name="enable_roaming" value="1" onclick="enable_roaming_block();" <% nvram_match("rast_static_cli_enable", "1","checked"); %>><#186#></label>
-<label><input type="radio" name="enable_roaming" value="0" onclick="enable_roaming_block();" <% nvram_match("rast_static_cli_enable", "0","checked"); %>><#185#></label>
+<label><input type="radio" name="enable_roaming" value="1" onclick="enable_roaming_block();" <% nvram_match("rast_static_cli_enable", "1","checked"); %>><#187#></label>
+<label><input type="radio" name="enable_roaming" value="0" onclick="enable_roaming_block();" <% nvram_match("rast_static_cli_enable", "0","checked"); %>><#186#></label>
 </td>
 </tr>
 </table>
 <table id="MainTable2" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table">
 <thead>
 <tr>
-<td colspan="2"><#3713#>&nbsp;(<#2576#>&nbsp;64)</td>
+<td colspan="2"><#3725#>&nbsp;(<#2586#>&nbsp;64)</td>
 </tr>
 </thead>
 <tr>
-<th width="80%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);"><#1521#> (<#2913#>)</a></th>
-<th width="20%"><#2575#></th>
+<th width="80%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);"><#1526#> (<#2924#>)</a></th>
+<th width="20%"><#2585#></th>
 </tr>
 <tr>
 <td width="80%">
 <input type="text" maxlength="17" class="input_macaddr_table" name="wlX_rast_static_client" onKeyPress="return validator.isHWAddr(this,event)" onClick="hideClients_Block();" autocorrect="off" autocapitalize="off" placeholder="ex: <% nvram_get("lan_hwaddr"); %>" style="width:255px;">
-<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;" onclick="pullWLMACList(this);" title="<#3060#>">
+<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;" onclick="pullWLMACList(this);" title="<#3071#>">
 <div id="WL_MAC_List_Block" class="clientlist_dropdown" style="margin-left:167px;"></div>
 </td>
 <td width="20%">
@@ -507,7 +507,7 @@ top.document.write(wlHintCss + wlHintHtml);
 </table>
 <div id="wl_rast_static_client_Block"></div>
 <div id="submitBtn" class="apply_gen">
-<input class="button_gen" onclick="applyRule()" type="button" value="<#195#>"/>
+<input class="button_gen" onclick="applyRule()" type="button" value="<#196#>"/>
 </div>
 </td>
 </tr>

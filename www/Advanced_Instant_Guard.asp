@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#837#> - <#4175#></title>
+<title><#838#> - <#4188#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="other.css">
@@ -43,22 +43,22 @@ overflow: auto;
 var tableStruct = {
 data: [],
 container: "tableContainer",
-title: "<#483#>",
+title: "<#484#>",
 header: [
 {
 "title" : "Remote IP",/*untranslated*/
 "width" : "20%"
 },
 {
-"title" : "<#3183#>",
+"title" : "<#3194#>",
 "width" : "20%"
 },
 {
-"title" : "<#868#>",
+"title" : "<#869#>",
 "width" : "20%"
 },
 {
-"title" : "<#1524#>",
+"title" : "<#1529#>",
 "width" : "20%"
 },
 {
@@ -116,7 +116,7 @@ $("textarea#textarea").html(ipsec_log);
 }
 function set_ig_config(_status){
 if(_status == "0"){
-var confirmFlag = confirm("Turn off feature will make all Instant Guard clients disconnect. You can turn on the feature again by clicking connection button on Instant Guard app.\n<#3071#>");/*untranslated*/
+var confirmFlag = confirm("Turn off feature will make all Instant Guard clients disconnect. You can turn on the feature again by clicking connection button on Instant Guard app.\n<#3082#>");/*untranslated*/
 if(!confirmFlag){
 $('#radio_IG_enable').find('.iphone_switch').animate({backgroundPosition: 0}, "slow");
 curState = "1";
@@ -131,7 +131,7 @@ location.href = document.form.current_page.value
 }, 3*1000);
 }
 function update_ipsec_conn(){
-var statusText = [[""], ["<#188#>"], ["<#1612#>"], ["<#1612#>"]]
+var statusText = [[""], ["<#189#>"], ["<#1617#>"], ["<#1617#>"]]
 var get_ipsec_conn = httpApi.hookGet("get_ipsec_conn", true);
 var parseArray = [];
 get_ipsec_conn.forEach(function(item, index, array){
@@ -191,10 +191,10 @@ tableApi.genTableAPI(tableStruct);
 <div id="ipsec_view_log_panel" class="ipsec_view_log_panel" style="padding:15px;">
 <textarea cols="63" rows="44" wrap="off" readonly="readonly" id="textarea" style="width:99%; font-family:'Courier New', Courier, mono; font-size:11px;background:#475A5F;color:#FFFFFF;resize:none;"><% nvram_dump("ipsec.log",""); %></textarea>
 <div style='text-align:center;margin-top:15px;'>
-<input class="button_gen" onclick="cancel_viewLog();" type="button" value="<#198#>"/>
-<input class="button_gen" onclick="clear_viewLog();" type="button" value="<#1636#>"/>
-<input class="button_gen" onclick="save_viewLog();" type="button" value="<#1655#>"/>
-<input class="button_gen" onclick="refresh_viewLog();" type="button" value="<#1657#>"/>
+<input class="button_gen" onclick="cancel_viewLog();" type="button" value="<#199#>"/>
+<input class="button_gen" onclick="clear_viewLog();" type="button" value="<#1641#>"/>
+<input class="button_gen" onclick="save_viewLog();" type="button" value="<#1660#>"/>
+<input class="button_gen" onclick="refresh_viewLog();" type="button" value="<#1662#>"/>
 </div>
 </div>
 <table width="760px" border="0" cellpadding="5" cellspacing="0" class="FormTitle" id="FormTitle">
@@ -202,17 +202,17 @@ tableApi.genTableAPI(tableStruct);
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#4175#></div>
+<div class="formfonttitle"><#4188#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#4176#></div>
+<div class="formfontdesc"><#4189#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#3240#></td>
+<td colspan="2"><#3251#></td>
 </tr>
 </thead>
 <tr>
-<th><#4175#></th>
+<th><#4188#></th>
 <td>
 <div align="center" class="left" style="float:left;cursor:pointer;" id="radio_IG_enable"></div>
 <div class="iphone_switch_container" style="height:32px; width:74px; position: relative; overflow: hidden;"></div>
@@ -234,13 +234,13 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 </td>
 </tr>
 <tr>
-<th><#3730#></th>
+<th><#3742#></th>
 <td id="ig_server_address">-</td>
 </tr>
 <tr>
-<th><#742#></th>
+<th><#743#></th>
 <td>
-<input class="button_gen" onclick="viewLog()" type="button" value="<#1635#>"/>
+<input class="button_gen" onclick="viewLog()" type="button" value="<#1640#>"/>
 </td>
 </tr>
 </table>

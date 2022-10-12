@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#837#> - <#393#></title>
+<title><#838#> - <#394#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script language="JavaScript" type="text/javascript" src="/state.js"></script>
@@ -185,7 +185,7 @@ submitForm();
 }
 }
 function force_update() {
-var r = confirm("<#2514#>");
+var r = confirm("<#2524#>");
 if(r == false)
 return false
 submitForm();
@@ -201,7 +201,7 @@ var ddns_hostname_title = ddns_hostname_x_t.substring(0, ddns_hostname_x_t.index
 if(ddns_hostname_x_t != '' && ddns_hostname_title)
 document.getElementById("DDNSName").value = ddns_hostname_title;
 else
-document.getElementById("DDNSName").value = "<#151#>";
+document.getElementById("DDNSName").value = "<#152#>";
 }
 else{
 document.form.ddns_hostname_x.parentNode.style.display = "";
@@ -211,7 +211,7 @@ inputCtrl(document.form.ddns_passwd_x, 1);
 if(ddns_hostname_x_t != '')
 document.getElementById("ddns_hostname_x").value = ddns_hostname_x_t;
 else
-document.getElementById("ddns_hostname_x").value = "<#151#>";
+document.getElementById("ddns_hostname_x").value = "<#152#>";
 }
 showhide("ddns_ipcheck_tr", 1);
 change_ddns_setting(document.form.ddns_server_x.value);
@@ -254,14 +254,14 @@ if((ddns_return_code.indexOf('200')!=-1 || ddns_return_code.indexOf('220')!=-1 |
 showhide("wan_ip_hide2", 0);
 if(ddns_server_x == "WWW.ASUS.COM"){
 showhide("wan_ip_hide3", 1);
-document.getElementById("ddns_status").innerHTML = "<#723#>";
+document.getElementById("ddns_status").innerHTML = "<#724#>";
 if(inadyn)
 $("#deregister_btn").css("display", "inline");
 }
 }
 else{
 if(ddns_server_x == "WWW.ASUS.COM"){
-document.getElementById("ddns_status").innerHTML = "<#724#>";
+document.getElementById("ddns_status").innerHTML = "<#725#>";
 if(ddnsStatus != "")
 $("#ddns_status_detail").css("display", "inline");
 }
@@ -300,7 +300,7 @@ function validForm(){
 if(document.form.ddns_enable_x[0].checked){ //ddns enable
 if(document.form.ddns_server_x.selectedIndex == 0){ //WWW.ASUS.COM
 if(document.form.DDNSName.value == ""){
-alert("<#2497#>");
+alert("<#2507#>");
 document.form.DDNSName.focus();
 document.form.DDNSName.select();
 return false;
@@ -325,7 +325,7 @@ return true;
 }
 }else{
 if(document.form.ddns_server_x.value != "WWW.ORAY.COM" && document.form.ddns_hostname_x.value == ""){
-alert("<#2497#>");
+alert("<#2507#>");
 document.form.ddns_hostname_x.focus();
 document.form.ddns_hostname_x.select();
 return false;
@@ -333,7 +333,7 @@ return false;
 return false;
 }
 if(document.form.ddns_username_x.value == ""){
-alert("<#669#>");
+alert("<#670#>");
 document.form.ddns_username_x.focus();
 document.form.ddns_username_x.select();
 return false;
@@ -341,7 +341,7 @@ return false;
 return false;
 }
 if(document.form.ddns_passwd_x.value == ""){
-alert("<#267#>");
+alert("<#268#>");
 document.form.ddns_passwd_x.focus();
 document.form.ddns_passwd_x.select();
 return false;
@@ -349,7 +349,7 @@ return false;
 return false;
 }
 if(document.form.ddns_regular_period.value < 30){
-alert("<#2846#> : 30");
+alert("<#2856#> : 30");
 document.form.ddns_regular_period.focus();
 document.form.ddns_regular_period.select();
 return false;
@@ -397,14 +397,14 @@ if((ddns_return_code.indexOf('200')!=-1 || ddns_return_code.indexOf('220')!=-1 |
 showhide("wan_ip_hide2", 0);
 if(ddns_server_x == "WWW.ASUS.COM"){
 showhide("wan_ip_hide3", 1);
-document.getElementById("ddns_status").innerHTML = "<#723#>";
+document.getElementById("ddns_status").innerHTML = "<#724#>";
 if(inadyn)
 $("#deregister_btn").css("display", "inline");
 }
 }
 else{
 if(ddns_server_x == "WWW.ASUS.COM"){
-document.getElementById("ddns_status").innerHTML = "<#724#>";
+document.getElementById("ddns_status").innerHTML = "<#725#>";
 if(ddnsStatus != "")
 $("#ddns_status_detail").css("display", "inline");
 }
@@ -416,12 +416,12 @@ function validate_ddns_hostname(o){
 dot=0;
 s=o.value;
 if(s == ""){
-show_alert_block("<#669#>");
+show_alert_block("<#670#>");
 return false;
 }
 var unvalid_start=new RegExp("^[0-9].*", "gi");
 if(unvalid_start.test(s) ){
-show_alert_block("<#2507#>");
+show_alert_block("<#2517#>");
 return false;
 }
 if (!validator.string(o)){
@@ -432,12 +432,12 @@ c = s.charCodeAt(i);
 if (c==46){
 dot++;
 if(dot>0){
-show_alert_block("<#2507#>");
+show_alert_block("<#2517#>");
 return false;
 }
 }
 if (!validator.hostNameChar(c)){
-show_alert_block("<#2496#> '" + s.charAt(i) +"' !");
+show_alert_block("<#2506#> '" + s.charAt(i) +"' !");
 return false;
 }
 }
@@ -448,7 +448,7 @@ document.getElementById("alert_block").style.display = "block";
 showtext(document.getElementById("alert_str"), alert_str);
 }
 function cleandef(){
-if(document.form.DDNSName.value == "<#151#>")
+if(document.form.DDNSName.value == "<#152#>")
 document.form.DDNSName.value = "";
 }
 function onSubmitApply(s){
@@ -477,7 +477,7 @@ var ddns_hostname_title = ddns_hostname_x_t.substring(0, ddns_hostname_x_t.index
 if(ddns_hostname_x_t != '' && ddns_hostname_title)
 document.getElementById("DDNSName").value = ddns_hostname_title;
 else
-document.getElementById("DDNSName").value = "<#151#>";
+document.getElementById("DDNSName").value = "<#152#>";
 inputCtrl(document.form.ddns_username_x, 0);
 inputCtrl(document.form.ddns_passwd_x, 0);
 document.form.ddns_wildcard_x[0].disabled= 1;
@@ -491,12 +491,12 @@ inputCtrl(document.form.ddns_regular_period, 0);
 document.getElementById("ddns_status_tr").style.display = "";
 if(ddns_enable_x == "1" && ddns_server_x_t == "WWW.ASUS.COM" &&
 (ddns_return_code_chk.indexOf('200')!=-1 || ddns_return_code_chk.indexOf('220')!=-1 || ddns_return_code_chk == 'register,230')){
-document.getElementById("ddns_status").innerHTML = "<#723#>";
+document.getElementById("ddns_status").innerHTML = "<#724#>";
 if(inadyn)
 $("#deregister_btn").css("display", "inline");
 }
 else
-document.getElementById("ddns_status").innerHTML = "<#724#>";
+document.getElementById("ddns_status").innerHTML = "<#725#>";
 }
 else if( v == "WWW.ORAY.COM"){
 document.getElementById("ddns_hostname_tr").style.display="none";
@@ -574,9 +574,9 @@ document.getElementById("cert_details").style.display = "none";
 break;
 case "1":
 document.getElementById("cert_desc").style.display = "";
-document.getElementById("le_desc").innerHTML = "<#2534#>";
+document.getElementById("le_desc").innerHTML = "<#2544#>";
 html_code = '<div style="margin-top:5px;"><input type="checkbox" name="letsEncryptTerm_check" checked>';
-html_code += "<#1684#>";
+html_code += "<#1689#>";
 html_code += '<a href="https://letsencrypt.org/documents/LE-SA-v1.2-November-15-2017.pdf" target="_blank" style="margin-left: 5px; color:#FFF; text-decoration: underline;">Term of Service</a>'
 html_code += "</div>";
 document.getElementById("cert_act").innerHTML = html_code;
@@ -593,7 +593,7 @@ document.form.letsEncryptTerm_check.checked = true;
 break;
 case "2":
 document.getElementById("cert_desc").style.display = "none";
-html_code += '<div style="display:table-cell"><input class="button_gen" onclick="open_upload_window();" type="button" value="<#1664#>"/><img id="loadingicon" style="margin-left:5px;display:none;" src="/images/InternetScan.gif"></div>';
+html_code += '<div style="display:table-cell"><input class="button_gen" onclick="open_upload_window();" type="button" value="<#1669#>"/><img id="loadingicon" style="margin-left:5px;display:none;" src="/images/InternetScan.gif"></div>';
 document.getElementById("cert_act").innerHTML = html_code;
 document.getElementById("cert_act").style.display = "";
 if(orig_le_enable != "0")
@@ -614,13 +614,13 @@ function show_cert_details(){
 if(httpd_cert_info.issueTo != "" && httpd_cert_info.issueBy != "" && httpd_cert_info.expire != ""){
 if(orig_le_enable == "1" && le_state == "0"){
 if(httpd_cert_info.issueBy.indexOf("Let's Encrypt") == -1)
-document.getElementById("cert_status").innerHTML = "<#3526#>";
+document.getElementById("cert_status").innerHTML = "<#3538#>";
 else
-document.getElementById("cert_status").innerHTML = "<#3409#>";
+document.getElementById("cert_status").innerHTML = "<#3421#>";
 setTimeout("get_cert_info();", 1000);
 }
 else{
-document.getElementById("cert_status").innerHTML = "<#723#>";
+document.getElementById("cert_status").innerHTML = "<#724#>";
 document.getElementById("issueTo").innerHTML = httpd_cert_info.issueTo;
 document.getElementById("issueBy").innerHTML = httpd_cert_info.issueBy;
 document.getElementById("expireOn").innerHTML = httpd_cert_info.expire;
@@ -628,12 +628,12 @@ document.getElementById("expireOn").innerHTML = httpd_cert_info.expire;
 }
 else{
 if(le_auxstate_t == "5" && le_sbstate_t == "7"){
-var ddnsHint = "<#1681#>";
+var ddnsHint = "<#1686#>";
 $("#cert_status").text(ddnsHint);
 $("#cert_status").css("color", "#FFCC00")
 }
 else{
-document.getElementById("cert_status").innerHTML = "<#3526#>";
+document.getElementById("cert_status").innerHTML = "<#3538#>";
 setTimeout("get_cert_info();", 1000);
 }
 }
@@ -700,12 +700,12 @@ timeout = 1;
 }
 if(timeout || return_status != ""){
 if(return_status == "200"){
-alert("<#2499#>");
+alert("<#2509#>");
 refreshpage();
 }
 else{
 hideLoading();
-alert("<#2501#>");
+alert("<#2511#>");
 deregister_fail = 1;
 retry_count = 0;
 }
@@ -744,29 +744,29 @@ retry_count = 0;
 <tr>
 <td bgcolor="#4D595D" valign="top" >
 <div>&nbsp;</div>
-<div class="formfonttitle"><#388#> - <#393#></div>
+<div class="formfonttitle"><#389#> - <#394#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#2516#></div>
-<div class="formfontdesc" style="margin-top:-8px;"><#2801#></div>
-<div class="formfontdesc" id="wan_ip_hide2" style="color:#FFCC00; display:none;"><#2517#></div>
-<div class="formfontdesc" id="wan_ip_hide3" style="color:#FFCC00; display:none;"><#2518#></div>
-<div class="formfontdesc" id="lb_note" style="color:#FFCC00; display:none;"><#2562#></div>
+<div class="formfontdesc"><#2526#></div>
+<div class="formfontdesc" style="margin-top:-8px;"><#2811#></div>
+<div class="formfontdesc" id="wan_ip_hide2" style="color:#FFCC00; display:none;"><#2527#></div>
+<div class="formfontdesc" id="wan_ip_hide3" style="color:#FFCC00; display:none;"><#2528#></div>
+<div class="formfontdesc" id="lb_note" style="color:#FFCC00; display:none;"><#2572#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <input type="hidden" name="wl_gmode_protection_x" value="<% nvram_get("wl_gmode_protection_x"); %>">
 <tr>
-<th><#2515#></th>
+<th><#2525#></th>
 <td>
-<input type="radio" value="1" name="ddns_enable_x" onClick="change_cert_method();show_cert_details();return change_common_radio(this, 'LANHostConfig', 'ddns_enable_x', '1')" <% nvram_match("ddns_enable_x", "1", "checked"); %>><#186#>
-<input type="radio" value="0" name="ddns_enable_x" onClick="return change_common_radio(this, 'LANHostConfig', 'ddns_enable_x', '0')" <% nvram_match("ddns_enable_x", "0", "checked"); %>><#185#>
+<input type="radio" value="1" name="ddns_enable_x" onClick="change_cert_method();show_cert_details();return change_common_radio(this, 'LANHostConfig', 'ddns_enable_x', '1')" <% nvram_match("ddns_enable_x", "1", "checked"); %>><#187#>
+<input type="radio" value="0" name="ddns_enable_x" onClick="return change_common_radio(this, 'LANHostConfig', 'ddns_enable_x', '0')" <% nvram_match("ddns_enable_x", "0", "checked"); %>><#186#>
 </td>
 </tr>
 <tr>
-<th id="ddns_wan_unit_th"><#3632#></th>
+<th id="ddns_wan_unit_th"><#3644#></th>
 <td id="ddns_wan_unit_td">
 <select name="ddns_wan_unit" class="input_option">
-<option class="content_input_fd" value="-1" <% nvram_match("ddns_wan_unit", "-1","selected"); %>><#152#></option>
-<option class="content_input_fd" value="0" <% nvram_match("ddns_wan_unit", "0","selected"); %>><#1846#></option>
-<option class="content_input_fd" value="1"<% nvram_match("ddns_wan_unit", "1","selected"); %>><#1853#></option>
+<option class="content_input_fd" value="-1" <% nvram_match("ddns_wan_unit", "-1","selected"); %>><#153#></option>
+<option class="content_input_fd" value="0" <% nvram_match("ddns_wan_unit", "0","selected"); %>><#1853#></option>
+<option class="content_input_fd" value="1"<% nvram_match("ddns_wan_unit", "1","selected"); %>><#1860#></option>
 </select>
 </td>
 </tr>
@@ -774,13 +774,20 @@ retry_count = 0;
 <th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,17);">Method to retrieve WAN IP</a></th>
 <td>
 <select name="ddns_realip_x" class="input_option">
-<option class="content_input_fd" value="0" <% nvram_match("ddns_realip_x", "0","selected"); %>><#2377#></option>
-<option class="content_input_fd" value="1" <% nvram_match("ddns_realip_x", "1","selected"); %>><#2375#></option>
+<option class="content_input_fd" value="0" <% nvram_match("ddns_realip_x", "0","selected"); %>><#2387#></option>
+<option class="content_input_fd" value="1" <% nvram_match("ddns_realip_x", "1","selected"); %>><#2385#></option>
 </select>
 </td>
 </tr>
+<tr id="ddns_ipv6update_tr" style="display: none;">
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,18);"><#1694#></a></th>
+<td>
+<input type="radio" name="ddns_ipv6_update" class="input" value="1" <% nvram_match("ddns_ipv6_update", "1", "checked"); %>><#187#>
+<input type="radio" name="ddns_ipv6_update" class="input" value="0" <% nvram_match("ddns_ipv6_update", "0", "checked"); %>><#186#>
+</td>
+</tr>
 <tr>
-<th><#2525#></th>
+<th><#2535#></th>
 <td>
 <select name="ddns_server_x"class="input_option" onchange="change_ddns_setting(this.value); change_cert_method();">
 <option value="WWW.ASUS.COM" <% nvram_match("ddns_server_x", "WWW.ASUS.COM","selected"); %>>WWW.ASUS.COM</option>
@@ -796,12 +803,12 @@ retry_count = 0;
 <option value="WWW.ORAY.COM" <% nvram_match("ddns_server_x", "WWW.ORAY.COM","selected"); %>>WWW.ORAY.COM(花生壳)</option>
 </select>
 <input id="deregister_btn" class="button_gen" style="display: none; margin-left: 5px;" type="button" value="Deregister" onclick="showLoading();asuscomm_deregister();"/>
-<a id="link" href="javascript:openLink('x_DDNSServer')" style=" margin-left:5px; text-decoration: underline;"><#2526#></a>
-<a id="linkToHome" href="javascript:openLink('x_DDNSServer')" style=" margin-left:5px; text-decoration: underline;"><#1680#></a>
+<a id="link" href="javascript:openLink('x_DDNSServer')" style=" margin-left:5px; text-decoration: underline;"><#2536#></a>
+<a id="linkToHome" href="javascript:openLink('x_DDNSServer')" style=" margin-left:5px; text-decoration: underline;"><#1685#></a>
 </td>
 </tr>
 <tr id="ddns_hostname_tr">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,13);"><#2522#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,13);"><#2532#></a></th>
 <td>
 <div id="ddnsname_input" style="display:none;">
 <input type="text" maxlength="63" class="input_25_table" name="ddns_hostname_x" id="ddns_hostname_x" value="<% nvram_get("ddns_hostname_x"); %>" onKeyPress="return validator.isString(this, event)" autocorrect="off" autocapitalize="off">
@@ -815,42 +822,42 @@ retry_count = 0;
 </td>
 </tr>
 <tr id="ddns_hostname_info_tr" style="display:none;">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,13);"><#2522#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,13);"><#2532#></a></th>
 <td id="ddns_hostname_x_value"><% nvram_get("ddns_hostname_x"); %></td>
 </tr>
 <tr>
-<th><#2531#></th>
+<th><#2541#></th>
 <td><input type="text" maxlength="32" class="input_25_table" name="ddns_username_x" value="<% nvram_get("ddns_username_x"); %>" onKeyPress="return validator.isString(this, event)" autocomplete="off" autocorrect="off" autocapitalize="off"></td>
 </tr>
 <tr>
-<th><#2524#></th>
+<th><#2534#></th>
 <td><input type="password" maxlength="64" class="input_25_table" name="ddns_passwd_x" value="<% nvram_get("ddns_passwd_x"); %>" autocomplete="off" autocorrect="off" autocapitalize="off"></td>
 </tr>
 <tr id="wildcard_field">
-<th><#2533#></th>
+<th><#2543#></th>
 <td>
-<input type="radio" value="1" name="ddns_wildcard_x" onClick="return change_common_radio(this, 'LANHostConfig', 'ddns_wildcard_x', '1')" <% nvram_match("ddns_wildcard_x", "1", "checked"); %>><#186#>
-<input type="radio" value="0" name="ddns_wildcard_x" onClick="return change_common_radio(this, 'LANHostConfig', 'ddns_wildcard_x', '0')" <% nvram_match("ddns_wildcard_x", "0", "checked"); %>><#185#>
+<input type="radio" value="1" name="ddns_wildcard_x" onClick="return change_common_radio(this, 'LANHostConfig', 'ddns_wildcard_x', '1')" <% nvram_match("ddns_wildcard_x", "1", "checked"); %>><#187#>
+<input type="radio" value="0" name="ddns_wildcard_x" onClick="return change_common_radio(this, 'LANHostConfig', 'ddns_wildcard_x', '0')" <% nvram_match("ddns_wildcard_x", "0", "checked"); %>><#186#>
 </td>
 </tr>
 <tr id="check_ddns_field" style="display:none;">
-<th><#1692#></th>
+<th><#1699#></th>
 <td>
-<input type="radio" value="1" name="ddns_regular_check" onClick="change_ddns_setting(document.form.ddns_server_x.value);" <% nvram_match("ddns_regular_check", "1", "checked"); %>><#186#>
-<input type="radio" value="0" name="ddns_regular_check" onClick="change_ddns_setting(document.form.ddns_server_x.value);" <% nvram_match("ddns_regular_check", "0", "checked"); %>><#185#>
+<input type="radio" value="1" name="ddns_regular_check" onClick="change_ddns_setting(document.form.ddns_server_x.value);" <% nvram_match("ddns_regular_check", "1", "checked"); %>><#187#>
+<input type="radio" value="0" name="ddns_regular_check" onClick="change_ddns_setting(document.form.ddns_server_x.value);" <% nvram_match("ddns_regular_check", "0", "checked"); %>><#186#>
 </td>
 </tr>
 <tr style="display:none;">
-<th><#1693#></th>
+<th><#1700#></th>
 <td>
-<input type="text" maxlength="5" class="input_6_table" name="ddns_regular_period" value="<% nvram_get("ddns_regular_period"); %>" autocorrect="off" autocapitalize="off"> <#2622#>
+<input type="text" maxlength="5" class="input_6_table" name="ddns_regular_period" value="<% nvram_get("ddns_regular_period"); %>" autocorrect="off" autocapitalize="off"> <#2632#>
 </td>
 </tr>
 <tr style="display:none;">
-<th><#2529#></th>
+<th><#2539#></th>
 <td>
 <input type="hidden" maxlength="15" class="button_gen" size="12" name="" value="<% nvram_get("DDNSStatus"); %>">
-<input type="submit" maxlength="15" class="button_gen" onclick="showLoading();return onSubmitApply('ddnsclient');" size="12" name="LANHostConfig_x_DDNSStatus_button" value="<#2527#>" /></td>
+<input type="submit" maxlength="15" class="button_gen" onclick="showLoading();return onSubmitApply('ddnsclient');" size="12" name="LANHostConfig_x_DDNSStatus_button" value="<#2537#>" /></td>
 </tr>
 <tr id="ddns_status_tr" style="display:none;">
 <th>DDNS Status</th>
@@ -861,14 +868,14 @@ retry_count = 0;
 <td id="ddns_result"></td>
 </tr>
 <tr id="https_cert" style="display:none;">
-<th><#1682#></th>
+<th><#1687#></th>
 <td>
 <span id="le_crypt" style="color:#FFF;display:none;">
-<input type="radio" value="1" name="le_enable" onClick="change_cert_method(this.value);" <% nvram_match("le_enable", "1", "checked"); %>><#1683#>
+<input type="radio" value="1" name="le_enable" onClick="change_cert_method(this.value);" <% nvram_match("le_enable", "1", "checked"); %>><#1688#>
 </span>
-<input type="radio" value="2" name="le_enable" onClick="change_cert_method(this.value);" <% nvram_match("le_enable", "2", "checked"); %>><#1685#>
+<input type="radio" value="2" name="le_enable" onClick="change_cert_method(this.value);" <% nvram_match("le_enable", "2", "checked"); %>><#1690#>
 <span id="self_signed" style="color:#FFF;">
-<input type="radio" value="0" name="le_enable" onClick="change_cert_method(this.value);" <% nvram_match("le_enable", "0", "checked"); %>><#842#>
+<input type="radio" value="0" name="le_enable" onClick="change_cert_method(this.value);" <% nvram_match("le_enable", "0", "checked"); %>><#843#>
 </span>
 <div id="cert_desc" style="color:#FFCC00; margin-top: 5px;">
 <span id="le_desc"></span>
@@ -880,32 +887,32 @@ retry_count = 0;
 </td>
 </tr>
 <tr id="cert_details" style="display:none;">
-<th><#3532#></th>
+<th><#3544#></th>
 <td>
 <div style="display: flex;">
-<div class="cert_status_title"><#726#> :</div>
+<div class="cert_status_title"><#727#> :</div>
 <div id="cert_status" class="cert_status_val"></div>
 </div>
 <div style="display: flex;">
-<div class="cert_status_title"><#3535#> :</div>
+<div class="cert_status_title"><#3547#> :</div>
 <div id="issueTo" class="cert_status_val"></div>
 </div>
 <div style="display: flex;">
-<div class="cert_status_title"><#3534#> :</div>
+<div class="cert_status_title"><#3546#> :</div>
 <div id="issueBy" class="cert_status_val"></div>
 </div>
 <div style="display: flex;">
-<div class="cert_status_title"><#3533#> :</div>
+<div class="cert_status_title"><#3545#> :</div>
 <div id="expireOn" class="cert_status_val"></div>
 </div>
 <div>
-<input class="button_gen" onclick="save_cert_key();" type="button" value="<#1510#>" />
+<input class="button_gen" onclick="save_cert_key();" type="button" value="<#1515#>" />
 </div>
 </td>
 </tr>
 </table>
 <div class="apply_gen">
-<input class="button_gen" onclick="apply_eula_check();" type="button" value="<#195#>" />
+<input class="button_gen" onclick="apply_eula_check();" type="button" value="<#196#>" />
 </div>
 </td>
 </tr>
@@ -926,20 +933,20 @@ retry_count = 0;
 <input type="hidden" name="action_wait" value="">
 <input type="hidden" name="le_enable" value="2">
 <div id="upload_cert_window" class="contentM_upload" style="box-shadow: 1px 5px 10px #000;">
-<div class="formfonttitle" style="margin-top: 15px; margin-left: 15px;"><#1685#></div>
-<div class="formfontdesc" style="margin-left: 15px;"><#1686#></div>
+<div class="formfonttitle" style="margin-top: 15px; margin-left: 15px;"><#1690#></div>
+<div class="formfontdesc" style="margin-left: 15px;"><#1691#></div>
 <div class="Upload_item">
-<div style="display:table-cell; width: 45%;"><#1687#> :</div>
+<div style="display:table-cell; width: 45%;"><#1692#> :</div>
 <div style="display:table-cell;"><input type="file" name="file_key" class="input Upload_file"></div>
 </div>
 <div class="Upload_item">
-<div style="display:table-cell; width: 45%;"><#1689#> :</div>
+<div style="display:table-cell; width: 45%;"><#1696#> :</div>
 <div style="display:table-cell;"><input type="file" name="file_cert" class="input Upload_file"></div>
 </div>
-<div style="color: #FC0; margin-left: 15px; margin-top: 20px">* <#1688#></div>
+<div style="color: #FC0; margin-left: 15px; margin-top: 20px">* <#1693#></div>
 <div align="center" style="margin-top:30px; padding-bottom:15px;">
-<div style="display:table-cell;"><input class="button_gen" type="button" onclick="hide_upload_window();" id="cancelBtn" value="<#198#>"></div>
-<div style="display:table-cell; padding-left: 5px;"><input class="button_gen" type="button" onclick="upload_cert_key();" value="<#1654#>"></div>
+<div style="display:table-cell;"><input class="button_gen" type="button" onclick="hide_upload_window();" id="cancelBtn" value="<#199#>"></div>
+<div style="display:table-cell; padding-left: 5px;"><input class="button_gen" type="button" onclick="upload_cert_key();" value="<#1659#>"></div>
 </div>
 </div>
 </form>

@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#837#> - <#1187#></title>
+<title><#838#> - <#1192#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script type="text/javascript" src="/state.js"></script>
@@ -187,7 +187,7 @@ success: function(response){
 var code = ""
 cc_count = event_count.cc_n;
 code += cc_count;
-code += '<span style="font-size: 16px;padding-left: 5px;"><#1266#></span>';
+code += '<span style="font-size: 16px;padding-left: 5px;"><#1271#></span>';
 $("#cc_count").html(code);
 }
 });
@@ -255,7 +255,7 @@ code += '</div>';
 code += '</div>';
 }
 if(code == ''){
-code += '<div style="font-size:16px;text-align:center;margin-top:70px;color:#FC0"><#1199#></div>';
+code += '<div style="font-size:16px;text-align:center;margin-top:70px;color:#FC0"><#1204#></div>';
 }
 $("#vp_bar_table").html(code);
 }
@@ -364,13 +364,13 @@ window.open(url, '_blank');
 function generateDetailTable(dataObj){
 var code = '';
 code += '<div style="font-size:14px;font-weight:bold;border-bottom: 1px solid #797979">';
-code += '<div style="display:table-cell;width:180px;padding-right:5px;"><#1748#></div>';
-code += '<div style="display:table-cell;width:200px;padding-right:5px;"><#1197#></div>';
-code += '<div style="display:table-cell;width:150px;padding-right:5px;"><#1196#></div>';
-code += '<div style="display:table-cell;width:100px;padding-right:5px;"><#1195#></div>';
+code += '<div style="display:table-cell;width:180px;padding-right:5px;"><#1755#></div>';
+code += '<div style="display:table-cell;width:200px;padding-right:5px;"><#1202#></div>';
+code += '<div style="display:table-cell;width:150px;padding-right:5px;"><#1201#></div>';
+code += '<div style="display:table-cell;width:100px;padding-right:5px;"><#1200#></div>';
 code += '</div>';
 if(dataObj == ""){
-code += '<div style="text-align:center;font-size:16px;color:#FC0;margin-top:90px;"><#2372#></div>';
+code += '<div style="text-align:center;font-size:16px;color:#FC0;margin-top:90px;"><#2382#></div>';
 }
 else{
 for(i=0;i<Object.keys(dataObj).length;i++){
@@ -388,7 +388,7 @@ if(clientList[dataObj[eventID].source[0]]){
 _name = clientList[dataObj[eventID].source[0]].name;
 }
 code += '<div style="display:table-cell;width:150px;height:30px;vertical-align:middle;padding-right:5px;">'+ _name +'</div>';
-code += '<div style="display:table-cell;width:100px;height:30px;vertical-align:middle;padding-right:5px;cursor: pointer;text-decoration: underline;" title="<#1306#>" onclick="TMEvent();">'+ dataObj[eventID].destination[0] +'</div>';
+code += '<div style="display:table-cell;width:100px;height:30px;vertical-align:middle;padding-right:5px;cursor: pointer;text-decoration: underline;" title="<#1311#>" onclick="TMEvent();">'+ dataObj[eventID].destination[0] +'</div>';
 code += '</div>';
 }
 }
@@ -433,7 +433,7 @@ applyRule();
 var reboot_confirm=0;
 function applyRule(){
 if(ctf_disable == 0 && ctf_fa_mode == 2){
-if(!confirm("<#1629#>")){
+if(!confirm("<#1634#>")){
 return false;
 }
 else{
@@ -482,7 +482,7 @@ document.form.wrs_cc_t.value = timestamp.toString().substring(0, 10);
 applyRule();
 }
 function showEraseConfirm(){
-$('#model_name').html(based_modelid)
+$('#model_name').html("<#839#>");
 cal_panel_block("erase_confirm", 0.25);
 $('#erase_confirm').fadeIn(300);
 }
@@ -522,15 +522,15 @@ return true;
 <div id="Loading" class="popup_bg"></div>
 <div id="erase_confirm" class="confirm">
 <div style="margin: 16px 24px;font-size:24px;"><span id="model_name"></span> : </div>
-<div style="margin: 16px 24px;font-size:16px;"><#1194#></div>
+<div style="margin: 16px 24px;font-size:16px;"><#1199#></div>
 <div style="display:flex;justify-content: flex-end;margin: 36px 24px;">
-<div class="confirm-button" onclick="hideConfirm();"><#198#></div>
-<div class="confirm-button" onclick="eraseDatabase();"><#1654#></div>
+<div class="confirm-button" onclick="hideConfirm();"><#199#></div>
+<div class="confirm-button" onclick="eraseDatabase();"><#1659#></div>
 </div>
 </div>
 <div id="hiddenMask" class="popup_bg" style="z-index:999;">
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center"></table>
-<!--[if lte IE 6.5.]><script>alert("<#1349#>");</script><![endif]-->
+<!--[if lte IE 6.5.]><script>alert("<#1354#>");</script><![endif]-->
 </div>
 <iframe name="hidden_frame" id="hidden_frame" width="0" height="0" frameborder="0"></iframe>
 <form method="post" name="form" action="/start_apply.htm" target="hidden_frame">
@@ -567,7 +567,7 @@ return true;
 <table width="730px">
 <tr>
 <td align="left">
-<span class="formfonttitle"><#1277#> - <#1187#></span>
+<span class="formfonttitle"><#1282#> - <#1192#></span>
 </td>
 </tr>
 </table>
@@ -577,7 +577,7 @@ return true;
 <table width="700px" style="margin-left:25px;">
 <tr>
 <td style="font-size:14px;">
-<div><#1186#></div>
+<div><#1191#></div>
 </td>
 </tr>
 </table>
@@ -586,7 +586,7 @@ return true;
 <div style="display:table;margin: 10px 15px">
 <div style="display:table-cell;width:370px;height:350px;">
 <div style="display:table-row">
-<div style="font-size:16px;margin:0 0 5px 5px;text-align:center"><#1193#></div>
+<div style="font-size:16px;margin:0 0 5px 5px;text-align:center"><#1198#></div>
 </div>
 <div id="vulner_table" style="background-color:#444f53;width:350px;height:340px;border-radius: 10px;display:table-cell;position:relative;">
 <div id="bar_shade" style="position:absolute;width:330px;height:330px;background-color:#505050;opacity:0.6;margin:5px;display:none"></div>
@@ -603,17 +603,17 @@ return true;
 </div>
 </div>
 <div style="height:240px;margin-top:0px;">
-<div style="text-align:center;font-size:16px;"><#1292#></div>
+<div style="text-align:center;font-size:16px;"><#1297#></div>
 <div id="vp_bar_table" style="height:235px;margin: 0 10px;border-radius:10px;overflow:auto"></div>
 </div>
 </div>
 </div>
 <div style="display:table-cell;width:370px;height:350px;padding-left:10px;">
-<div style="font-size:16px;margin:0 0 5px 5px;text-align:center;"><#1181#></div>
+<div style="font-size:16px;margin:0 0 5px 5px;text-align:center;"><#1186#></div>
 <div style="background-color:#444f53;width:350px;height:340px;border-radius: 10px;display:table-cell;padding-left:10px;position:relative">
 <div id="chart_shade" style="position:absolute;width:350px;height:330px;background-color:#505050;opacity:0.6;margin:5px 0 5px -5px;display:none"></div>
 <div>
-<div style="display:inline-block;margin:5px 10px"><#1266#></div>
+<div style="display:inline-block;margin:5px 10px"><#1271#></div>
 </div>
 <div style="width:90%">
 <div>
@@ -625,10 +625,10 @@ return true;
 </div>
 <div style="margin: 0 24px;">
 <div style="display:flex;justify-content: space-between;align-content: center;">
-<div style="text-align:center;font-size:16px;"><#1198#></div>
+<div style="text-align:center;font-size:16px;"><#1203#></div>
 <div style="display: flex;">
-<div style="margin: 0 8px;"><div id="save_icon" class="icon-container icon-save" title="<#1655#>" onclick="download(csvContent, 'InfectedDevicePreventBlock.csv', 'data:text/csv;charset=utf-8');"></div></div>
-<div style="margin: 0 8px;"><div id="delete_icon" class="icon-container icon-delete" onclick="showEraseConfirm();" title="<#1638#>"></div></div>
+<div style="margin: 0 8px;"><div id="save_icon" class="icon-container icon-save" title="<#1660#>" onclick="download(csvContent, 'InfectedDevicePreventBlock.csv', 'data:text/csv;charset=utf-8');"></div></div>
+<div style="margin: 0 8px;"><div id="delete_icon" class="icon-container icon-delete" onclick="showEraseConfirm();" title="<#1643#>"></div></div>
 </div>
 </div>
 </div>
@@ -636,10 +636,10 @@ return true;
 <div id="info_shade" style="position:absolute;width:710px;height:490px;background-color:#505050;opacity:0.6;margin:5px;display:none"></div>
 <div id="detail_info_table" style="padding: 10px 15px;">
 <div style="font-size:14px;font-weight:bold;border-bottom: 1px solid #797979">
-<div style="display:table-cell;width:180px;padding-right:5px;"><#1748#></div>
-<div style="display:table-cell;width:200px;padding-right:5px;"><#1197#></div>
-<div style="display:table-cell;width:150px;padding-right:5px;"><#1196#></div>
-<div style="display:table-cell;width:100px;padding-right:5px;"><#1195#></div>
+<div style="display:table-cell;width:180px;padding-right:5px;"><#1755#></div>
+<div style="display:table-cell;width:200px;padding-right:5px;"><#1202#></div>
+<div style="display:table-cell;width:150px;padding-right:5px;"><#1201#></div>
+<div style="display:table-cell;width:100px;padding-right:5px;"><#1200#></div>
 </div>
 </div>
 </div>

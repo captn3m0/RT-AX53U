@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#837#> - <#220#></title>
+<title><#838#> - <#221#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="/js/table/table.css">
@@ -119,12 +119,14 @@ function initial(){
 show_menu();
 wans_flag = (wans_dualwan_orig.search("none") != -1 || !parent.dualWAN_support) ? 0 : 1;
 if(wan_bonding_support){
-if(orig_bond_wan == 1 && (based_modelid == "RT-AX89U" || based_modelid == "GT-AXY16000")){
+if(orig_bond_wan == 1) {
+if (based_modelid == "RT-AX89U" || based_modelid == "GT-AXY16000"){
 var i = wans_caps.split(" ").indexOf("wan2");
 if(i != -1 && wanports_bond.split(" ").indexOf("30") != -1){
 var new_wans_cap = wans_caps.split(" ");
 new_wans_cap.splice(i, 1);
 wans_caps = new_wans_cap.toString().replace(/,/g," ");
+}
 }
 }
 }
@@ -189,6 +191,16 @@ var name = ["LAN Port 1", "LAN Port 2", "2.5G/1G LAN"];
 var value = ["1", "2", "3"];
 add_options_x2(document.form.wans_lanport1, name, value, <% nvram_get("wans_lanport"); %>);
 add_options_x2(document.form.wans_lanport2, name, value, <% nvram_get("wans_lanport"); %>);
+}
+if (based_modelid == "TUF-AX4200") {
+var desc = [ "LAN Port 1", "LAN Port 2", "LAN Port 3", "LAN Port 4" ];
+var value = [ "1", "2", "3", "4" ];
+if (based_modelid == "TUF-AX4200" && "<% nvram_get("HwId"); %>" == "B") {
+desc.push("2.5G LAN");
+value.push("5");
+}
+add_options_x2(document.form.wans_lanport1, desc, value, <% nvram_get("wans_lanport"); %>);
+add_options_x2(document.form.wans_lanport2, desc, value, <% nvram_get("wans_lanport"); %>);
 }
 if(wan_bonding_support)
 $("#wan_aggre_desc").css("display", "");
@@ -379,7 +391,7 @@ return false;
 if(!validator.range(document.form.wans_lb_ratio_1, 1, 9))
 return false;
 if(wans_mode_orig != "lb" && check_bwdpi_engine_status()) {
-var confirm_flag = confirm("<#1825#>");
+var confirm_flag = confirm("<#1832#>");
 if(confirm_flag) {
 document.form.action_script.value = "dpi_disable;reboot;";
 }
@@ -428,8 +440,14 @@ document.form.wans_extwan.value = "0";
 document.form.wan_unit.value = 0;
 document.form.wandog_enable.value = "0";
 }
-if(document.form.wandog_enable_chk.checked)
+if(document.form.wandog_enable_chk.checked){
+if(document.form.wandog_target.value == "" || document.form.wandog_target.value.trim().length==0){
+alert("<#316#>");
+document.form.wandog_target.focus();
+return false;
+}
 document.form.wandog_enable.value = "1";
+}
 else
 document.form.wandog_enable.value = "0";
 if(document.form.dns_probe_chk.checked)
@@ -481,7 +499,7 @@ port_conflict = true;
 }
 }
 if (port_conflict) {
-alert("<#3024#>");
+alert("<#3035#>");
 return;
 }
 if(lacp_support && lacp_enabled == "1"){
@@ -500,7 +518,7 @@ conflict_lanport_text = bonding_port_settings[i].text.toUpperCase();
 }
 }
 if(conflict_lanport_text != ""){
-var confirm_str = "Configure "+ conflict_lanport_text +" as WAN will disable \""+"<#2743#>"+"\" function, are you sure to do it?";//untranslated
+var confirm_str = "Configure "+ conflict_lanport_text +" as WAN will disable \""+"<#2753#>"+"\" function, are you sure to do it?";//untranslated
 if(confirm(confirm_str)){
 document.form.lacp_enabled.disabled = false;
 document.form.lacp_enabled.value = "0";
@@ -538,7 +556,7 @@ document.form.bond_wan.value = "0";
 }
 if(wans_dualwan_orig != document.form.wans_dualwan.value &&　qos_enable_orig == 1){
 if(qos_type_orig == 1 || qos_type_orig == 0 || qos_type_orig == 3){ //(qos_type_orig == 1 && document.form.bw_setting_name[1].checked == true ) ||
-if( !confirm("<#1848#>")){
+if( !confirm("<#1855#>")){
 return false;
 }
 }
@@ -584,7 +602,7 @@ wanscapName = "Ethernet WAN";
 else if(wanscapName == "LAN")
 wanscapName = "Ethernet LAN";
 else if(wanscapName == "USB" && based_modelid.substring(0,3) == "4G-")
-wanscapName = "<#2705#>";
+wanscapName = "<#2715#>";
 else if(wanscapName == "LAN2"){
 wanscapName = "2.5G WAN";
 }
@@ -593,6 +611,9 @@ if(wanscapName == "WAN2")
 wanscapName = "10G base-T";
 else if(wanscapName == "SFP+")
 wanscapName = "10G SFP+";
+} else if (based_modelid == "TUF-AX4200") {
+if (wanscapName == "WAN")
+wanscapName = "2.5G WAN";
 }
 obj.options[i] = new Option(wanscapName, wanscapItem[i]);
 }
@@ -876,14 +897,14 @@ new_html_str = document.getElementById("retry_intervale_setting").innerHTML.repl
 document.getElementById("retry_intervale_setting").innerHTML = new_html_str;
 replace_html = '<input type="text" name="wandog_maxfail" class="input_3_table" maxlength="2" value="<% nvram_get("wandog_maxfail"); %>" onKeyPress="return validator.isNumber(this, event);" placeholder="5" autocorrect="off" autocapitalize="off">';
 if(wans_flag && (document.form.wans_mode.value == "fo" || document.form.wans_mode.value == "fb")){
-$("#fo_detection_count_hd").html("<#1821#>");
-new_html_str = "<#1820#>".replace("$WANDOG_MAXFAIL", replace_html);
+$("#fo_detection_count_hd").html("<#1828#>");
+new_html_str = "<#1827#>".replace("$WANDOG_MAXFAIL", replace_html);
 $("#wandog_maxfail_setting").html(new_html_str);
 }
 else{
 var new_str = "When the current WAN fails $WANDOG_MAXFAIL continuous times, it is deemed a disconnection.";//untranslated
 new_html_str = new_str.replace("$WANDOG_MAXFAIL", replace_html);
-$("#fo_detection_count_hd").html("<#2771#>");
+$("#fo_detection_count_hd").html("<#2781#>");
 $("#wandog_maxfail_setting").html(new_html_str);
 }
 appendMonitorOption(document.form.dns_probe_chk);
@@ -913,7 +934,7 @@ function show_wans_rules(){
 var tableStruct = {
 data: wans_routing_rulelist_array,
 container: "Routing_rules_table",
-title: "<#1852#>",
+title: "<#1859#>",
 capability: {
 add: true,
 del: true,
@@ -921,15 +942,15 @@ clickEdit: true,
 },
 header: [
 {
+"title" : "<#2061#>",
+"width" : "30%"
+},
+{
 "title" : "<#2054#>",
 "width" : "30%"
 },
 {
-"title" : "<#2047#>",
-"width" : "30%"
-},
-{
-"title" : "<#1854#>",
+"title" : "<#1861#>",
 "width" : "30%"
 }
 ],
@@ -937,22 +958,22 @@ createPanel: {
 inputs : [
 {
 "editMode" : "text",
-"title" : "<#2054#>",
+"title" : "<#2061#>",
 "maxlength" : "18",
 "validator" : "dualWanRoutingRules",
-"placeholder" : "<#2053#>"
+"placeholder" : "<#2060#>"
 },
 {
 "editMode" : "text",
-"title" : "<#2047#>",
+"title" : "<#2054#>",
 "maxlength" : "18",
 "validator" : "dualWanRoutingRules",
-"placeholder" : "<#2053#>"
+"placeholder" : "<#2060#>"
 },
 {
 "editMode" : "select",
-"title" : "<#1854#>",
-"option" : {"<#1846#>" : "0", "<#1853#>" : "1"}
+"title" : "<#1861#>",
+"option" : {"<#1853#>" : "0", "<#1860#>" : "1"}
 },
 ],
 maximum: 32
@@ -971,7 +992,7 @@ inputs : [
 },
 {
 "editMode" : "select",
-"option" : {"<#1846#>" : "0", "<#1853#>" : "1"}
+"option" : {"<#1853#>" : "0", "<#1860#>" : "1"}
 }
 ]
 },
@@ -1135,7 +1156,7 @@ return;
 }
 }
 function hotstandby_act(enable){
-var confirm_str_on = "<#3671#>";
+var confirm_str_on = "<#3683#>";
 if(enable){
 if(mobile_enable_orig == "0"){
 if(confirm(confirm_str_on)){
@@ -1155,7 +1176,7 @@ var MBytes = 1024*1024;
 if(based_modelid.substring(0,3) == "4G-"){
 consume_bytes = 86400/interval_value*128*30;
 consume_bytes = Math.ceil(consume_bytes/MBytes);
-consume_warning_str = "<#214#> "+consume_bytes+" <#215#>";
+consume_warning_str = "<#215#> "+consume_bytes+" <#216#>";
 document.getElementById("consume_bytes_warning").style.display= "";
 document.getElementById("consume_bytes_warning").innerHTML = consume_warning_str;
 }
@@ -1222,24 +1243,24 @@ document.form.submit();
 <input type="hidden" name="bond_wan" value="<% nvram_get("bond_wan"); %>" disabled>
 <div id="detect_time_confirm" style="display:none;">
 <table width="90%" border="0" align="left" cellpadding="4" cellspacing="0" style="margin:15px 20px 15px; text-align:left;">
-<tr><td colspan="2"><#3172#></td></tr><tr><td colspan="2"><#3173#>&nbsp;:&nbsp;<span id="str_detect_time"></span>&nbsp;<#3047#>.</td></tr>
+<tr><td colspan="2"><#3183#></td></tr><tr><td colspan="2"><#3184#>&nbsp;:&nbsp;<span id="str_detect_time"></span>&nbsp;<#3058#>.</td></tr>
 <tr>
-<th style="width:30%;"><#3180#></th>
+<th style="width:30%;"><#3191#></th>
 <td>
-<input type="text" name="detect_interval" class="input_3_table" maxlength="1" value=""; placeholder="5" autocorrect="off" autocapitalize="off" onKeyPress="return validator.isNumber(this, event);" onblur="update_str_time();" style="width: 38px; margin: 0px;">&nbsp;&nbsp;<#3047#>
+<input type="text" name="detect_interval" class="input_3_table" maxlength="1" value=""; placeholder="5" autocorrect="off" autocapitalize="off" onKeyPress="return validator.isNumber(this, event);" onblur="update_str_time();" style="width: 38px; margin: 0px;">&nbsp;&nbsp;<#3058#>
 </td>
 </tr>
 <tr>
-<th><#3182#></th>
+<th><#3193#></th>
 <td>
 <select name="detect_count" class="input_option" onchange="update_str_time();" style="margin: 0px 0px;"></select>
-<span id="detect_tail_msg">&nbsp;( Detection Time: <span id="detection_time_value"></span>&nbsp;&nbsp;<#3047#>)</span>
+<span id="detect_tail_msg">&nbsp;( Detection Time: <span id="detection_time_value"></span>&nbsp;&nbsp;<#3058#>)</span>
 </td>
 </tr>
 </table>
 <div style="padding-bottom:10px;width:100%;text-align:center;">
-<input id="yesButton" class="button_gen" type="button" value="<#186#>" onclick="change_detect_settings();">
-<input id="noButton" class="button_gen" type="button" value="<#185#>" onclick="remain_origins();">
+<input id="yesButton" class="button_gen" type="button" value="<#187#>" onclick="change_detect_settings();">
+<input id="noButton" class="button_gen" type="button" value="<#186#>" onclick="remain_origins();">
 </div>
 </div>
 <table class="content" align="center" cellpadding="0" cellspacing="0">
@@ -1259,18 +1280,18 @@ document.form.submit();
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#388#> - <#220#></div>
+<div class="formfonttitle"><#389#> - <#221#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#1814#><a id="dualwan_faq" href="" target="_blank" style="margin-left:5px; text-decoration: underline;"><#220#> FAQ</a></div>
-<div id="wan_aggre_desc" class="formfontdesc" style="color:#FFCC00; display:none;"><#3697#></div>
+<div class="formfontdesc"><#1821#><a id="dualwan_faq" href="" target="_blank" style="margin-left:5px; text-decoration: underline;"><#221#> FAQ</a></div>
+<div id="wan_aggre_desc" class="formfontdesc" style="color:#FFCC00; display:none;"><#3709#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#3240#></td>
+<td colspan="2"><#3251#></td>
 </tr>
 </thead>
 <tr id="wans_mode_enable_tr">
-<th><#1815#></th>
+<th><#1822#></th>
 <td>
 <div class="left" style="width:94px; float:left; cursor:pointer;" id="ad_radio_dualwan_enable"></div>
 <div class="iphone_switch_container" style="height:32px; width:74px; position: relative; overflow: hidden">
@@ -1278,7 +1299,7 @@ document.form.submit();
 $('#ad_radio_dualwan_enable').iphoneSwitch(wans_dualwan_array[1] != 'none',
 function() {
 if(wan_bonding_support && orig_bond_wan == "1"){
-var msg = "<#3691#>";
+var msg = "<#3703#>";
 if(confirm(msg)){
 document.form.bond_wan.disabled = false;
 document.form.bond_wan.value = "0";
@@ -1329,7 +1350,7 @@ document.form.bond_wan.value = orig_bond_wan;
 </td>
 </tr>
 <tr>
-<th><#1846#></th>
+<th><#1853#></th>
 <td>
 <select name="wans_primary" class="input_option" onchange="changeWANProto(this);"></select>
 <select id="wans_lanport1" name="wans_lanport1" class="input_option" style="margin-left:7px;">
@@ -1341,7 +1362,7 @@ document.form.bond_wan.value = orig_bond_wan;
 </td>
 </tr>
 <tr>
-<th><#1853#></th>
+<th><#1860#></th>
 <td>
 <select name="wans_second" class="input_option" onchange="changeWANProto(this);"></select>
 <select id="wans_lanport2" name="wans_lanport2" class="input_option" style="margin-left:7px;">
@@ -1353,36 +1374,36 @@ document.form.bond_wan.value = orig_bond_wan;
 </td>
 </tr>
 <tr id="wans_mode_tr">
-<th><#1828#></th>
+<th><#1835#></th>
 <td>
 <input type="hidden" name="wans_mode" value=''>
 <select id="wans_mode_option" class="input_option" onchange="appendModeOption(this.value);">
-<option value="fo"><#1829#></option>
-<option value="lb" <% nvram_match("wans_mode", "lb", "selected"); %>><#1830#></option>
+<option value="fo"><#1836#></option>
+<option value="lb" <% nvram_match("wans_mode", "lb", "selected"); %>><#1837#></option>
 </select>
-<span id="wans_mode_fo" style="margin-left:5px; color:#FFF; display:none;"><#1829#></span>
-<span id="fb_span" style="display:none"><input type="checkbox" id="fb_checkbox"><#1816#></span>
+<span id="wans_mode_fo" style="margin-left:5px; color:#FFF; display:none;"><#1836#></span>
+<span id="fb_span" style="display:none"><input type="checkbox" id="fb_checkbox"><#1823#></span>
 <script>
 document.getElementById("fb_checkbox").onclick = function(){
 document.form.wans_mode.value = (this.checked == true ? "fb" : "fo");
 document.getElementById("wandog_fb_count_tr").style.display = (this.checked == true ? "" : "none");
 }
 </script>
-<div id="lb_note" style="color:#FFCC00; display:none;"><#1826#></div>
-<div id="lb_note2" style="color:#FFCC00; display:none;"><#1827#></div>
+<div id="lb_note" style="color:#FFCC00; display:none;"><#1833#></div>
+<div id="lb_note2" style="color:#FFCC00; display:none;"><#1834#></div>
 </td>
 </tr>
 <tr id="wans_standby_tr" style="display:none;">
-<th><#3171#></th>
+<th><#3182#></th>
 <td>
 <select name="wans_standby" id="wans_standby" class="input_option" onchange="hotstandby_act(this.value);">
-<option value="1" <% nvram_match("wans_standby", "1", "selected"); %>><#3797#></option>
-<option value="0" <% nvram_match("wans_standby", "0", "selected"); %>><#3798#></option>
+<option value="1" <% nvram_match("wans_standby", "1", "selected"); %>><#3809#></option>
+<option value="0" <% nvram_match("wans_standby", "0", "selected"); %>><#3810#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th><#1831#></th>
+<th><#1838#></th>
 <td>
 <input type="text" maxlength="1" class="input_3_table" name="wans_lb_ratio_0" value="" onkeypress="return validator.isNumber(this,event);" autocorrect="off" autocapitalize="off"/>
 &nbsp; : &nbsp;
@@ -1390,22 +1411,22 @@ document.getElementById("wandog_fb_count_tr").style.display = (this.checked == t
 </td>
 </tr>
 <tr class="ISPProfile">
-<th><#1823#></th>
+<th><#1830#></th>
 <td>
 <input type="radio" value="0" name="wans_isp_unit" class="content_input_fd" onClick="change_isp_unit(this.value);">None
-<input type="radio" value="1" name="wans_isp_unit" class="content_input_fd" onClick="change_isp_unit(this.value);"><#1846#>
-<input type="radio" value="2" name="wans_isp_unit" class="content_input_fd" onClick="change_isp_unit(this.value);"><#1853#>
+<input type="radio" value="1" name="wans_isp_unit" class="content_input_fd" onClick="change_isp_unit(this.value);"><#1853#>
+<input type="radio" value="2" name="wans_isp_unit" class="content_input_fd" onClick="change_isp_unit(this.value);"><#1860#>
 </td>
 </tr>
 <tr class="ISPProfile">
-<th><#1822#></th>
+<th><#1829#></th>
 <td>
 <select name="wan0_isp_country" class="input_option" onchange="appendcountry(this);" value=""></select>
 <select name="wan0_isp_list" class="input_option" style="display:none;"value=""></select>
 </td>
 </tr>
 <tr class="ISPProfile">
-<th><#1824#></th>
+<th><#1831#></th>
 <td>
 <select name="wan1_isp_country" class="input_option" onchange="appendcountry(this);" value=""></select>
 <select name="wan1_isp_list" class="input_option" style="display:none;"value=""></select>
@@ -1415,47 +1436,47 @@ document.getElementById("wandog_fb_count_tr").style.display = (this.checked == t
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable" style="margin-top:8px;" id="watchdog_table">
 <thead>
 <tr>
-<td colspan="2"><#1845#><div style="font-weight: normal; font-style: italic; margin-top: 5px;"><#1907#></div></td>
+<td colspan="2"><#1852#><div style="font-weight: normal; font-style: italic; margin-top: 5px;"><#1914#></div></td>
 </tr>
 </thead>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(26,3);"><#3181#></a></th>
-<td id="retry_intervale_setting"><#255#>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(26,3);"><#3192#></a></th>
+<td id="retry_intervale_setting"><#256#>
 <div><span id="consume_bytes_warning" style=""></span></div>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(26,5);"><div id="fo_detection_count_hd"><#1821#></div></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(26,5);"><div id="fo_detection_count_hd"><#1828#></div></a></th>
 <td id="wandog_maxfail_setting"></td>
 </tr>
 <tr id="wandog_fb_count_tr">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(26,6);"><div id="fb_detection_count_hd"><#1819#></div></a></th>
-<td id="wandog_fbcount_setting"><#1818#></td>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(26,6);"><div id="fb_detection_count_hd"><#1826#></div></a></th>
+<td id="wandog_fbcount_setting"><#1825#></td>
 </tr>
 <tr>
-<th><#2762#></th>
+<th><#2772#></th>
 <td>
-<input type="checkbox" name="dns_probe_chk" value="" <% nvram_match("dns_probe", "1", "checked"); %> onClick="appendMonitorOption(this);"><div style="display: inline-block; vertical-align: middle; margin-bottom: 2px;" ><#1774#></div>
-<input type="checkbox" name="wandog_enable_chk" value="" <% nvram_match("wandog_enable", "1", "checked"); %> onClick="appendMonitorOption(this);"><div style="display: inline-block; vertical-align: middle; margin-bottom: 2px;"><#2856#></div>
+<input type="checkbox" name="dns_probe_chk" value="" <% nvram_match("dns_probe", "1", "checked"); %> onClick="appendMonitorOption(this);"><div style="display: inline-block; vertical-align: middle; margin-bottom: 2px;" ><#1781#></div>
+<input type="checkbox" name="wandog_enable_chk" value="" <% nvram_match("wandog_enable", "1", "checked"); %> onClick="appendMonitorOption(this);"><div style="display: inline-block; vertical-align: middle; margin-bottom: 2px;"><#2866#></div>
 </td>
 </tr>
 <tr>
-<th><#2980#></th>
+<th><#2991#></th>
 <td>
 <input type="text" class="input_32_table" name="dns_probe_host" maxlength="255" autocorrect="off" autocapitalize="off" value="<% nvram_get("dns_probe_host"); %>">
 </td>
 </tr>
 <tr>
-<th><#2981#></th>
+<th><#2992#></th>
 <td>
 <input type="text" class="input_32_table" name="dns_probe_content" maxlength="1024" autocorrect="off" autocapitalize="off" value="<% nvram_get("dns_probe_content"); %>">
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(26,2);"><#2857#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(26,2);"><#2867#></a></th>
 <td>
 <input type="text" class="input_32_table" name="wandog_target" maxlength="100" value="<% nvram_get("wandog_target"); %>" placeholder="ex: www.google.com" autocorrect="off" autocapitalize="off">
-<img id="pull_arrow" class="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#3056#>" onmouseover="over_var=1;" onmouseout="over_var=0;">
+<img id="pull_arrow" class="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#3067#>" onmouseover="over_var=1;" onmouseout="over_var=0;">
 <div id="ClientList_Block_PC" name="ClientList_Block_PC" class="ClientList_Block_PC" style="display:none;"></div>
 </td>
 </tr>
@@ -1463,20 +1484,20 @@ document.getElementById("wandog_fb_count_tr").style.display = (this.checked == t
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable" style="margin-top:8px;" id="routing_table">
 <thead>
 <tr>
-<td colspan="2"><#1850#></td>
+<td colspan="2"><#1857#></td>
 </tr>
 </thead>
 <tr>
-<th><#1851#></th>
+<th><#1858#></th>
 <td>
-<input type="radio" value="1" name="wans_routing_enable" onClick="enable_lb_rules(this.value)" class="content_input_fd" <% nvram_match("wans_routing_enable", "1", "checked"); %>><#186#>
-<input type="radio" value="0" name="wans_routing_enable" onClick="enable_lb_rules(this.value)" class="content_input_fd" <% nvram_match("wans_routing_enable", "0", "checked"); %>><#185#>
+<input type="radio" value="1" name="wans_routing_enable" onClick="enable_lb_rules(this.value)" class="content_input_fd" <% nvram_match("wans_routing_enable", "1", "checked"); %>><#187#>
+<input type="radio" value="0" name="wans_routing_enable" onClick="enable_lb_rules(this.value)" class="content_input_fd" <% nvram_match("wans_routing_enable", "0", "checked"); %>><#186#>
 </td>
 </tr>
 </table>
 <div id="Routing_rules_table"></div>
 <div class="apply_gen">
-<input class="button_gen" onclick="applyRule()" type="button" value="<#195#>"/>
+<input class="button_gen" onclick="applyRule()" type="button" value="<#196#>"/>
 </div>
 </td>
 </tr>

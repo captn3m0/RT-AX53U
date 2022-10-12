@@ -37,7 +37,7 @@ var disk_list_array = new Array();
 var usb_fatfs_mod = '<% nvram_get("usb_fatfs_mod"); %>';
 var usb_ntfs_mod = '<% nvram_get("usb_ntfs_mod"); %>';
 var usb_hfs_mod = '<% nvram_get("usb_hfs_mod"); %>';
-disk_list_array = { "info" : ["<#1736#>", "disk.asp"], "health" : ["<#1729#>", "disk_utility.asp"], "format" : ["<#1647#>", "disk_format.asp"]};
+disk_list_array = { "info" : ["<#1743#>", "disk.asp"], "health" : ["<#1736#>", "disk_utility.asp"], "format" : ["<#1652#>", "disk_format.asp"]};
 if(!parent.diskUtility_support) {
 delete disk_list_array.health;
 delete disk_list_array.format;
@@ -120,7 +120,7 @@ dec_html_code += '<div class="quotabar" style="width:' + percentbar + ';height:1
 dec_html_code += '</div>\n';
 }
 else{
-dec_html_code += '<div class="style1"><strong id="diskUnmount'+ device.usbPath +'"><#1727#></strong></div>\n';
+dec_html_code += '<div class="style1"><strong id="diskUnmount'+ device.usbPath +'"><#1734#></strong></div>\n';
 }
 parent.document.getElementById("deviceDec_"+device.usbPath).innerHTML = dec_html_code;
 }
@@ -133,7 +133,7 @@ invalid_char += obj.value.charAt(i);
 }
 }
 if(invalid_char != "") {
-alert('<#338#>" '+ invalid_char +'" !');
+alert('<#339#>" '+ invalid_char +'" !');
 obj.focus();
 return false;
 }
@@ -148,7 +148,7 @@ invalid_char += keywordArray[i];
 }
 }
 if(invalid_char != "") {
-alert(invalid_char+ " <#2439#>");
+alert(invalid_char+ " <#2449#>");
 obj.focus();
 return false;
 }
@@ -170,7 +170,7 @@ document.form.disk_name.value = temp_label.substr(0, 30);
 }
 if(!Block_chars(document.form.disk_name, ["~", "`", "!", "#", "$", "%", "^", "&", "*", "(", ")", "+", "=", "{", "[", "}", "]", "|", "\\", ":", ";", "\"", "'", "<", ">", ",", ".", "?", "/", " "]))
 return false;
-if(!confirm("<#2111#>")) {
+if(!confirm("<#2118#>")) {
 document.getElementById('scan_status_field').style.display = "";
 document.getElementById('progressBar').style.display = "none";
 return false;
@@ -236,7 +236,7 @@ if(progressBar <= 5)
 progressBar = 6;
 else if (progressBar >= 15)
 progressBar = 15;
-document.getElementById('scan_message').innerHTML = "<#1749#>";
+document.getElementById('scan_message').innerHTML = "<#1756#>";
 }
 else if(disk_format_flag == "2") {
 if(progressBar <= 15)
@@ -250,7 +250,7 @@ if(progressBar <= 70)
 progressBar = 71;
 else if (progressBar >= 95)
 progressBar = 95;
-document.getElementById('scan_message').innerHTML = "<#1741#>";
+document.getElementById('scan_message').innerHTML = "<#1748#>";
 }
 else if(disk_format_flag == "4") {
 if(progressBar <= 95)
@@ -321,7 +321,7 @@ setTimeout("showLoadingUpdate();", 100);
 <div id="scan_status_field" style="margin-top:10px;margin-left:10px;">
 <table>
 <tr>
-<td><#2108#></td>
+<td><#2115#></td>
 </tr>
 </table>
 </div>
@@ -336,14 +336,14 @@ setTimeout("showLoadingUpdate();", 100);
 </div>
 <div style="margin-top:5px;*margin-top:-10px;width:283px;" class="line_horizontal"></div>
 <div style="padding:7px;">
-<div class="formfonttitle_nwm"><#1728#> :</div>
+<div class="formfonttitle_nwm"><#1735#> :</div>
 <div>
 <input type="text" maxlength="32" class="input_25_table" name="disk_name" value="" onkeypress="return validator.isString(this, event)" autocorrect="off" autocapitalize="off">
 </div>
 </div>
 <div style="margin-top:5px;*margin-top:-10px;width:283px;" class="line_horizontal"></div>
 <div style="padding:7px;">
-<div class="formfonttitle_nwm"><#2110#> :</div>
+<div class="formfonttitle_nwm"><#2117#> :</div>
 <div>
 <select name="disk_system" id="disk_system" class="input_option" style="margin-left:2px;" onChange="change_disk_system();">
 <option value="tntfs">NTFS</option>
@@ -353,12 +353,12 @@ setTimeout("showLoadingUpdate();", 100);
 </div>
 </div>
 <div style="margin-top:5px;*margin-top:-10px;width:283px;" class="line_horizontal"></div>
-<div class="formfonttitle_nwm" style="margin-left:10px;margin-bottom:5px;margin-top:10px;"><#2109#></div>
+<div class="formfonttitle_nwm" style="margin-left:10px;margin-bottom:5px;margin-top:10px;"><#2116#></div>
 <span id="log_field" >
 <textarea cols="15" rows="13" readonly="readonly" id="textarea_disk0" class="textarea_bg" style="resize:none;display:;width:93%; font-family:'Courier New', Courier, mono; font-size:11px;margin-left:8px;color:#FFFFFF;"></textarea>
 </span>
 <div style="margin-top:20px;margin-bottom:10px;"align="center">
-<input id="btn_format" type="button" class="button_gen" onclick="go_format();" value="<#1647#>">
+<input id="btn_format" type="button" class="button_gen" onclick="go_format();" value="<#1652#>">
 <img id="loadingIcon" style="display:none;margin-right:10px;" src="/images/InternetScan.gif">
 </div>
 </td>

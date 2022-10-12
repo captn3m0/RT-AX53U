@@ -105,6 +105,7 @@ kernel/net/ipv6/netfilter/ip6table_mangle.ko
 kernel/net/ipv6/netfilter/nf_reject_ipv6.ko
 kernel/net/ipv6/netfilter/ip6t_REJECT.ko
 kernel/net/ipv6/sit.ko
+kernel/net/ipv6/ip6_tunnel.ko
 kernel/net/bridge/netfilter/ebtables.ko
 kernel/net/bridge/netfilter/ebtable_broute.ko
 kernel/net/bridge/netfilter/ebtable_filter.ko

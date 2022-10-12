@@ -7,7 +7,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#837#> - <#411#></title>
+<title><#838#> - <#412#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script language="JavaScript" type="text/javascript" src="/state.js"></script>
@@ -56,7 +56,7 @@ function showDST(){
 var system_timezone_dut = "<% nvram_get("time_zone"); %>";
 if(system_timezone_dut.search("DST") >= 0 && "<% nvram_get("time_zone_dst"); %>" == "1"){
 document.getElementById('dstzone').style.display = "";
-document.getElementById('dstzone').innerHTML = "<#278#>";
+document.getElementById('dstzone').innerHTML = "<#279#>";
 }
 }
 function initial(){
@@ -181,9 +181,9 @@ setTimeout("get_log_data();", 5000);
 <tr>
 <td bgcolor="#4D595D" colspan="3" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#742#> - <#411#></div>
+<div class="formfonttitle"><#743#> - <#412#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#2213#></div>
+<div class="formfontdesc"><#2223#></div>
 <form method="post" name="config_form" action="start_apply.htm" target="hidden_frame">
 <input type="hidden" name="current_page" value="Main_LogStatus_Content.asp">
 <input type="hidden" name="next_page" value="Main_LogStatus_Content.asp">
@@ -192,33 +192,33 @@ setTimeout("get_log_data();", 5000);
 <input type="hidden" name="action_wait" value="5">
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
-<th width="20%"><#279#></th>
+<th width="20%"><#280#></th>
 <td>
 <span id="system_time" class="devicepin" style="color:#FFFFFF;"></span>
 <br><span id="dstzone" style="display:none;margin-left:5px;color:#FFFFFF;"></span>
 </td>
 </tr>
 <tr>
-<th><#2212#></a></th>
-<td><span id="boot_days"></span> <#1679#> <span id="boot_hours"></span> <#2245#> <span id="boot_minutes"></span> <#2622#> <span id="boot_seconds"></span> <#3047#></td>
+<th><#2222#></a></th>
+<td><span id="boot_days"></span> <#1684#> <span id="boot_hours"></span> <#2255#> <span id="boot_minutes"></span> <#2632#> <span id="boot_seconds"></span> <#3058#></td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(11,1)"><#2545#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(11,1)"><#2555#></a></th>
 <td>
 <input type="text" maxlength="64" class="input_30_table" name="log_ipaddr" value="<% nvram_get("log_ipaddr"); %>" onKeyPress="return validator.isString(this, event)" autocorrect="off" autocapitalize="off">
 <br/><span id="alert_msg1" class="hint-color"></span>
 </td>
 </tr>
 <tr>
-<th><#2547#></th>
+<th><#2557#></th>
 <td>
 <input type="text" class="input_6_table" maxlength="5" name="log_port" onKeyPress="return validator.isNumber(this,event);" autocorrect="off" autocapitalize="off" value='<% nvram_get("log_port"); %>'>
-<div class="hint-color"><#2546#></div>
+<div class="hint-color"><#2556#></div>
 </td>
 </tr>
 </table>
 </form>
-<div style="margin-top: 5px; text-align: center;"><input class="button_gen" onclick="applySettings();" type="button" value="<#195#>" /></div>
+<div style="margin-top: 5px; text-align: center;"><input class="button_gen" onclick="applySettings();" type="button" value="<#196#>" /></div>
 <div style="margin-top:8px">
 <textarea cols="63" rows="27" wrap="off" readonly="readonly" id="textarea" class="textarea_ssh_table" style="width:99%; font-family:'Courier New', Courier, mono; font-size:11px;"></textarea>
 </div>
@@ -229,12 +229,12 @@ setTimeout("get_log_data();", 5000);
 <form method="post" name="form1" action="apply.cgi">
 <input type="hidden" name="current_page" value="Main_LogStatus_Content.asp">
 <input type="hidden" name="action_mode" value=" Clear ">
-<input type="submit" onClick="onSubmitCtrl(this, ' Clear ')" value="<#1636#>" class="button_gen">
+<input type="submit" onClick="onSubmitCtrl(this, ' Clear ')" value="<#1641#>" class="button_gen">
 </form>
 </td>
 <td width="50%" align="left">
 <form method="post" name="form2" action="syslog.txt">
-<input type="submit" onClick="onSubmitCtrl(this, ' Save ');" value="<#1655#>" class="button_gen">
+<input type="submit" onClick="onSubmitCtrl(this, ' Save ');" value="<#1660#>" class="button_gen">
 </form>
 </td>
 </tr>

@@ -81,6 +81,8 @@ break;
 }
 }
 }
+var get_s46_hgw_case = '<% nvram_get("s46_hgw_case"); %>'; //topology 2,3,6
+var s46_ports_check_flag = (get_s46_hgw_case=='3' || get_s46_hgw_case=='6')? true:false; //true for topology 3||6
 var check_ipv6_s46_ports_hook = (Softwire46_support && wan_proto=="v6plus")? '<%chk_s46_port_range();%>':'0';
 var check_ipv6_s46_ports = "0";
 if(check_ipv6_s46_ports_hook != "" && check_ipv6_s46_ports_hook != "0"){
@@ -264,32 +266,32 @@ $.each(check_ipv6_s46_ports, function (key, data) {
 if(data=='1'){
 switch(key) {
 case "pf" :
-items += "<li><a href='/Advanced_VirtualServer_Content.asp' style='text-decoration:underline;cursor:pointer;'><#391#></a></li>";
+items += "<li><a href='/Advanced_VirtualServer_Content.asp' style='text-decoration:underline;cursor:pointer;'><#392#></a></li>";
 break;
 case "open_nat" :
 items += "<li><a href='/GameProfile.asp' target='_blank' style='text-decoration:underline;cursor:pointer;'>OPEN NAT</a></li>";
 break;
 case "pt" :
-items += "<li><a href='/Advanced_PortTrigger_Content.asp' target='_blank' style='text-decoration:underline;cursor:pointer;'><#390#></a></li>";
+items += "<li><a href='/Advanced_PortTrigger_Content.asp' target='_blank' style='text-decoration:underline;cursor:pointer;'><#391#></a></li>";
 break;
 case "https" :
-items += "<li><a href='/Advanced_System_Content.asp' target='_blank' style='text-decoration:underline;cursor:pointer;'><#2085#></a></li>";
+items += "<li><a href='/Advanced_System_Content.asp' target='_blank' style='text-decoration:underline;cursor:pointer;'><#2092#></a></li>";
 break;
 case "ssh" :
-items += "<li><a href='/Advanced_System_Content.asp' target='_blank' style='text-decoration:underline;cursor:pointer;'><#2884#></a></li>";
+items += "<li><a href='/Advanced_System_Content.asp' target='_blank' style='text-decoration:underline;cursor:pointer;'><#2895#></a></li>";
 break;
 case "openvpn" :
 items += "<li><a href='/Advanced_VPN_OpenVPN.asp' target='_blank' style='text-decoration:underline;cursor:pointer;'>OpenVPN</a></li>";
 break;
 case "ftp" :
-items += "<li><a href='/Advanced_NATPassThrough_Content.asp' target='_blank' style='text-decoration:underline;cursor:pointer;'><#421#> - <#2115#></a></li>";
+items += "<li><a href='/Advanced_NATPassThrough_Content.asp' target='_blank' style='text-decoration:underline;cursor:pointer;'><#422#> - <#2122#></a></li>";
 break;
 case "ipsec" :
 if(ipsec_server_enable=='1'){
 items += "<li><a href='/Advanced_VPN_IPSec.asp' target='_blank' style='text-decoration:underline;cursor:pointer;'>IP Sec</a></li>";
 }
 if(ipsec_ig_enable=='1'){
-items += "<li><a href='/Advanced_Instant_Guard.asp' target='_blank' style='text-decoration:underline;cursor:pointer;'><#4175#></a></li>";
+items += "<li><a href='/Advanced_Instant_Guard.asp' target='_blank' style='text-decoration:underline;cursor:pointer;'><#4188#></a></li>";
 }
 break;
 default :
@@ -405,8 +407,8 @@ var data_usage = tx_bytes + rx_bytes;
 if(gobi_support && (usb_index != -1) && (notification.sim_state != "") && (modem_bytes_data_limit > 0) && (data_usage >= modem_bytes_data_limit)){
 notification.array[12] = 'noti_mobile_traffic';
 notification.mobile_traffic = 1;
-notification.desc[12] = "<#2649#>";
-notification.action_desc[12] = "<#1406#>";
+notification.desc[12] = "<#2659#>";
+notification.action_desc[12] = "<#1411#>";
 notification.clickCallBack[12] = "setTrafficLimit();";
 }
 else{
@@ -416,7 +418,7 @@ notification.mobile_traffic = 0;
 if(gobi_support && (usb_index != -1) && (sim_state != "") && (modem_sim_order == -1)){
 notification.array[13] = 'noti_sim_record';
 notification.sim_record = 1;
-notification.desc[13] = "<#2676#>";
+notification.desc[13] = "<#2686#>";
 notification.action_desc[13] = "Delete now";
 notification.clickCallBack[13] = "upated_sim_record();";
 }
@@ -443,8 +445,8 @@ cookie.unset("notification_history");
 if(notice_pw_is_default == 1){ //case1
 notification.array[0] = 'noti_acpw';
 notification.acpw = 1;
-notification.desc[0] = '<#1399#>';
-notification.action_desc[0] = '<#1406#>';
+notification.desc[0] = '<#1404#>';
+notification.action_desc[0] = '<#1411#>';
 notification.clickCallBack[0] = "location.href = 'Advanced_System_Content.asp?af=http_passwd2';";
 }else
 notification.acpw = 0;
@@ -452,8 +454,8 @@ if(amesh_support && ameshRouter_support) {
 if(aimesh_system_new_fw_flag) {
 notification.array[1] = 'noti_upgrade';
 notification.upgrade = 1;
-notification.desc[1] = '<#1400#>';
-notification.action_desc[1] = '<#1407#>';
+notification.desc[1] = '<#1405#>';
+notification.action_desc[1] = '<#1412#>';
 notification.clickCallBack[1] = "location.href = 'Advanced_FirmwareUpgrade_Content.asp?confirm_show=0';"
 }
 else
@@ -463,13 +465,13 @@ else {
 if(webs_state_flag == 1 || webs_state_flag == 2){
 notification.array[1] = 'noti_upgrade';
 notification.upgrade = 1;
-notification.desc[1] = '<#1400#>';
+notification.desc[1] = '<#1405#>';
 if(!live_update_support || !HTTPS_support){
-notification.action_desc[1] = '<a id="link_to_downlodpage" target="_blank" href="'+get_helplink()+'" style="color:#FFCC00;"><#1407#></a>';
+notification.action_desc[1] = '<a id="link_to_downlodpage" target="_blank" href="'+get_helplink()+'" style="color:#FFCC00;"><#1412#></a>';
 notification.clickCallBack[1] = "";
 }
 else{
-notification.action_desc[1] = '<#1407#>';
+notification.action_desc[1] = '<#1412#>';
 notification.clickCallBack[1] = "location.href = 'Advanced_FirmwareUpgrade_Content.asp?confirm_show=0'";
 }
 }else
@@ -478,55 +480,55 @@ notification.upgrade = 0;
 if(band2g_support && sw_mode != 4 && noti_auth_mode_2g == 'open'){ //case3-1
 notification.array[2] = 'noti_wifi_2g';
 notification.wifi_2g = 1;
-notification.desc[2] = '<#1401#>';
-notification.action_desc[2] = '<#1406#> (2.4GHz)';
+notification.desc[2] = '<#1406#>';
+notification.action_desc[2] = '<#1411#> (2.4GHz)';
 notification.clickCallBack[2] = "change_wl_unit_status(0);";
 }else
 notification.wifi_2g = 0;
 if(band5g_support && sw_mode != 4 && noti_auth_mode_5g == 'open'){ //case3-2
 notification.array[3] = 'noti_wifi_5g';
 notification.wifi_5g = 1;
-notification.desc[3] = '<#1401#>';
+notification.desc[3] = '<#1406#>';
 if(band5g2_support)
-notification.action_desc[3] = '<#1406#> (5GHz-1)';
+notification.action_desc[3] = '<#1411#> (5GHz-1)';
 else
-notification.action_desc[3] = '<#1406#> (5GHz)';
+notification.action_desc[3] = '<#1411#> (5GHz)';
 notification.clickCallBack[3] = "change_wl_unit_status(1);";
 }else
 notification.wifi_5g = 0;
 if(band5g2_support && sw_mode != 4 && noti_auth_mode_5g2 == 'open'){ //case3-3
 notification.array[19] = 'noti_wifi_5g2';
 notification.wifi_5g2 = 1;
-notification.desc[19] = '<#1401#>';
-notification.action_desc[19] = '<#1406#> (5GHz-2)';
+notification.desc[19] = '<#1406#>';
+notification.action_desc[19] = '<#1411#> (5GHz-2)';
 notification.clickCallBack[19] = "change_wl_unit_status(2);";
 }else
 notification.wifi_5g2 = 0;
 if(usb_support && !noftp_support && enable_ftp == 1 && st_ftp_mode == 1 && st_ftp_force_mode == '' ){ //case4_1
 notification.array[4] = 'noti_ftp';
 notification.ftp = 1;
-notification.desc[4] = '<#1403#>';
-notification.action_desc[4] = '<#818#>';
+notification.desc[4] = '<#1408#>';
+notification.action_desc[4] = '<#819#>';
 notification.clickCallBack[4] = "showLoading();setTimeout('document.noti_ftp.submit();', 1);setTimeout('notification.redirectftp()', 2000);";
 }else if(usb_support && !noftp_support && enable_ftp == 1 && st_ftp_mode != 2){ //case4
 notification.array[4] = 'noti_ftp';
 notification.ftp = 1;
-notification.desc[4] = '<#1402#>';
-notification.action_desc[4] = '<#1406#>';
+notification.desc[4] = '<#1407#>';
+notification.action_desc[4] = '<#1411#>';
 notification.clickCallBack[4] = "showLoading();setTimeout('document.noti_ftp.submit();', 1);setTimeout('notification.redirectftp()', 2000);";
 }else
 notification.ftp = 0;
 if(usb_support && enable_samba == 1 && st_samba_mode == 1 && st_samba_force_mode == ''){ //case5_1
 notification.array[5] = 'noti_samba';
 notification.samba = 1;
-notification.desc[5] = '<#1405#>';
-notification.action_desc[5] = '<#818#>';
+notification.desc[5] = '<#1410#>';
+notification.action_desc[5] = '<#819#>';
 notification.clickCallBack[5] = "showLoading();setTimeout('document.noti_samba.submit();', 1);setTimeout('notification.redirectsamba()', 2000);";
 }else if(usb_support && enable_samba == 1 && st_samba_mode != 4){ //case5
 notification.array[5] = 'noti_samba';
 notification.samba = 1;
-notification.desc[5] = '<#1404#>';
-notification.action_desc[5] = '<#1406#>';
+notification.desc[5] = '<#1409#>';
+notification.action_desc[5] = '<#1411#>';
 notification.clickCallBack[5] = "showLoading();setTimeout('document.noti_samba.submit();', 1);setTimeout('notification.redirectsamba()', 2000);";
 }else
 notification.samba = 0;
@@ -556,7 +558,7 @@ notification.experience_FB = 1;
 notification.desc[7] = Untranslated.ASUSGATE_note7;
 notification.action_desc[7] = Untranslated.ASUSGATE_act_feedback;
 notification.clickCallBack[7] = "setTimeout('document.noti_experience_Feedback.submit();', 1);setTimeout('notification.redirectFeedback()', 1000);";
-notification.action_desc[18] = '<#198#>';
+notification.action_desc[18] = '<#199#>';
 notification.clickCallBack[18] = "setTimeout('document.noti_experience_Feedback.submit();', 1);setTimeout('notification.redirectRefresh()', 1000);";
 }else
 notification.experience_FB = 0;
@@ -564,7 +566,7 @@ if(noti_notif_Flag == 1 && notif_msg != ""){ //case8
 notification.array[8] = 'noti_notif_hint';
 notification.notif_hint = 1;
 notification.desc[8] = notif_msg;
-notification.action_desc[8] = "<#1654#>";
+notification.action_desc[8] = "<#1659#>";
 notification.clickCallBack[8] = "setTimeout('document.noti_notif_hint.submit();', 1);setTimeout('notification.redirectHint()', 100);"
 }else
 notification.notif_hint = 0;
@@ -581,7 +583,7 @@ if(browser.ie){
 if(browser.ie.indexOf('8') != "-1" || browser.ie.indexOf('9') != "-1" || browser.ie.indexOf('10') != "-1"){
 notification.ie_legacy = 1;
 notification.array[16] = 'noti_ie_legacy';
-notification.desc[16] = '<#283#><#284#><#285#><#286#>';
+notification.desc[16] = '<#284#><#285#><#286#><#287#>';
 notification.action_desc[16] = "";
 notification.clickCallBack[16] = "";
 }
@@ -607,8 +609,8 @@ else if(is_TW_sku && autodet_state == 2 && autodet_auxstate == 6 && !is_CHT_pppo
 if(is_TW_sku && autodet_state == 2 && autodet_auxstate == 6 && wan_proto != "pppoe"){
 notification.pppoe_tw = 1;
 notification.array[15] = 'noti_pppoe_tw';
-notification.desc[15] = '<#3949#>';
-notification.action_desc[15] = '<#3950#>';
+notification.desc[15] = '<#3961#>';
+notification.action_desc[15] = '<#3962#>';
 notification.clickCallBack[15] = "location.href = 'Advanced_WAN_Content.asp?af=wan_proto'";
 }
 if( notification.acpw || notification.upgrade || notification.wifi_2g || notification.wifi_5g || notification.wifi_5g2 || notification.ftp || notification.samba || notification.loss_sync || notification.experience_FB || notification.notif_hint || notification.send_debug_log || notification.mobile_traffic || notification.sim_record || notification.pppoe_tw || notification.pppoe_tw_static || notification.ie_legacy || notification.s46_ports){

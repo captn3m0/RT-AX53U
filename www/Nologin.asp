@@ -20,7 +20,7 @@ hostName = " (" + elem[1] + ")";
 return false;
 }
 })
-return '<#2583#> ' + loginUserIp + hostName;
+return '<#2593#> ' + loginUserIp + hostName;
 })();
 top.document.body.style.background = "#DDD";
 top.document.body.style.textAlign = "center";
@@ -35,7 +35,7 @@ top.document.body.innerHTML = ""
 + 'font-family:Segoe UI, Arial, sans-serif;'
 + 'color:#000;'
 + 'text-align:center;'
-+ '"><span><#2584#><br>'
++ '"><span><#2594#><br>'
 + loginUser
 + '</span></div>';
 })()

@@ -540,7 +540,7 @@ retData.wanType = wanTypeList.check;
 return retData;
 },
 "getWanInfo": function(_index){
-var connect_proto_array = {"dhcp":"<#166#>", "static": "<#167#>", "pppoe": "PPPoE","pptp": "PPTP","l2tp": "L2TP"};
+var connect_proto_array = {"dhcp":"<#167#>", "static": "<#168#>", "pppoe": "PPPoE","pptp": "PPTP","l2tp": "L2TP"};
 var result = {
 "status": "",
 "status_text": "",
@@ -552,16 +552,16 @@ var wan_index = (_index == undefined) ? 0 : _index;
 if(dualwan_enabled){
 if(active_wan_unit != wan_index && (wans_mode == "fo" || wans_mode == "fb")){
 result.status = "standby";
-result.status_text = "<#3170#>";
+result.status_text = "<#3181#>";
 }
 else{//lb
 result.status = (httpApi.isConnected(wan_index)) ? "connected" : "disconnected";
-result.status_text = (result.status == "connected") ? "<#188#>" : "<#216#>";
+result.status_text = (result.status == "connected") ? "<#189#>" : "<#217#>";
 }
 }
 else{
 result.status = (httpApi.isConnected(wan_index)) ? "connected" : "disconnected";
-result.status_text = (result.status == "connected") ? "<#188#>" : "<#216#>";
+result.status_text = (result.status == "connected") ? "<#189#>" : "<#217#>";
 }
 if(result.status == "connected"){
 var wanInfo = httpApi.nvramGet(["wan" + wan_index + "_ipaddr", "wan" + wan_index + "_proto"], true);
@@ -730,23 +730,23 @@ $.get("/update_wlanlog.cgi");
 var retData = {
 "GAME_BOOST": {
 "value": 3,
-"text": "<#4108#>",
-"desc": "<#4124#>"
+"text": "<#4120#>",
+"desc": "<#4136#>"
 },
 "ACS_DFS": {
 "value": 1,
-"text": "<#3765#>",
-"desc": "<#4126#>"
+"text": "<#3777#>",
+"desc": "<#4138#>"
 },
 "LED": {
 "value": 0,
-"text": "<#4129#>",
-"desc": "<#4130#>"
+"text": "<#4141#>",
+"desc": "<#4142#>"
 },
 "AURA_RGB": {
 "value": 2,
-"text": "<#4109#>",
-"desc": "<#4110#>"
+"text": "<#4121#>",
+"desc": "<#4122#>"
 }
 };
 var productid = httpApi.nvramGet(["productid"]).productid;
@@ -755,13 +755,13 @@ delete retData.LED;
 delete retData.AURA_RGB;
 retData.AURA_SHUFFLE = {
 "value": 4,
-"text": "<#4111#>",
-"desc": "<#4112#>"
+"text": "<#4123#>",
+"desc": "<#4124#>"
 }
 retData.GEFORCE_NOW = {
 "value": 5,
-"text": "<#4127#>",
-"desc": "<#4128#>"
+"text": "<#4139#>",
+"desc": "<#4140#>"
 }
 }
 var sw_mode = (window.hasOwnProperty("qisPostData") && qisPostData.hasOwnProperty("sw_mode")) ? qisPostData.sw_mode : httpApi.nvramGet(["sw_mode"]).sw_mode;
@@ -800,7 +800,7 @@ papStatus = get_ssid(_band);
 else if(wlc_psta_state.wlc_state == "2" && wlc_psta_state.wlc_state_auth == "1")
 papStatus = "<#100#>";
 else
-papStatus = "<#216#>";
+papStatus = "<#217#>";
 }
 else{
 var wlc_state = "0";
@@ -810,7 +810,7 @@ else
 wlc_state = httpApi.nvramGet(["wlc" + _band + "_state"])["wlc" + _band + "_state"];
 switch(wlc_state){
 case "0":
-papStatus = "<#216#>";
+papStatus = "<#217#>";
 break;
 case "1":
 papStatus = "<#100#>";
@@ -819,7 +819,7 @@ case "2":
 papStatus = get_ssid(_band);
 break;
 default:
-papStatus = "<#216#>";
+papStatus = "<#217#>";
 break;
 }
 }
@@ -1046,7 +1046,7 @@ else
 return parseInt(enable_ftp);
 }
 },
-hint : "<#2366#>\n<#2367#>"
+hint : "<#2376#>\n<#2377#>"
 },
 port_forwarding : {
 enabled : function(){
@@ -1096,7 +1096,7 @@ break break_loop;
 }
 return state;
 },
-hint : "<#2366#>\n<#2368#>"
+hint : "<#2376#>\n<#2378#>"
 },
 conflict : function(){
 return (httpApi.ftp_port_conflict_check.usb_ftp.enabled() && httpApi.ftp_port_conflict_check.port_forwarding.enabled()) ? true : false;

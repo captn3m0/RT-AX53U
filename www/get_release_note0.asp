@@ -15,7 +15,7 @@ dataType: 'text',
 timeout: 1500,
 error: function(xhr){
 if(dead > 30){
-$("#noteArea0").html("<#2141#>");
+$("#noteArea0").html("<#2148#>");
 }
 else{
 dead++;
@@ -28,7 +28,7 @@ if(content.length > 10){
 $("#noteArea0").html(content);
 }
 else{
-$("#noteArea0").html("<#2141#>");
+$("#noteArea0").html("<#2148#>");
 }
 }
 });

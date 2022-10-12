@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#837#> - <#397#></title>
+<title><#838#> - <#398#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script type="text/javascript" src="/js/jquery.js"></script>
@@ -88,23 +88,23 @@ document.form.submit();
 <table width="730px">
 <tr>
 <td align="left">
-<span class="formfonttitle"><#394#> - <#397#></span>
+<span class="formfonttitle"><#395#> - <#398#></span>
 </td>
 <td align="right">
-<img onclick="go_setting('/APP_Installation.asp')" align="right" style="cursor:pointer;position:absolute;margin-left:-20px;margin-top:-30px;" title="<#374#>" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'">
+<img onclick="go_setting('/APP_Installation.asp')" align="right" style="cursor:pointer;position:absolute;margin-left:-20px;margin-top:-30px;" title="<#375#>" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'">
 </td>
 </tr>
 </table>
 </div>
 <div style="margin:5px;" class="splitLine"></div>
-<div class="formfontdesc"><#3419#></div>
+<div class="formfontdesc"><#3431#></div>
 <table width="98%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
 <th width="40%">WebDav to Samba</th>
 <td>
 <select name="enable_webdav" class="input_option" onChange="hideAll(this.value);">
-<option value="0" <% nvram_match("enable_webdav", "0","selected"); %> ><#3798#></option>
-<option value="1" <% nvram_match("enable_webdav", "1","selected"); %> ><#3797#></option>
+<option value="0" <% nvram_match("enable_webdav", "0","selected"); %> ><#3810#></option>
+<option value="1" <% nvram_match("enable_webdav", "1","selected"); %> ><#3809#></option>
 </select>
 </td>
 </tr>
@@ -132,7 +132,7 @@ document.form.submit();
 </tr>
 </table>
 <div class="apply_gen">
-<input type="button" class="button_gen" value="<#195#>" onclick="applyRule();">
+<input type="button" class="button_gen" value="<#196#>" onclick="applyRule();">
 </div>
 </td>
 </tr>

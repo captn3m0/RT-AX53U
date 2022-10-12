@@ -128,6 +128,7 @@ Además, para habilitar su función de control remoto de IFTTT™ a través del 
 ASUS se compromete a proteger y respetar su privacidad; Puede visitar Configuración avanzada > Administración > Privacidad para habilitar y deshabilitar el uso compartido de la información del producto con ASUS en todo momento. Para obtener más información sobre cómo ASUS protege su privacidad, visite la <a id="eula_url" style="font-weight: bolder;text-decoration:underline;cursor:pointer;" target="_blank">política de privacidad de ASUS</a>.
 Tengo más de 16 años de edad.
 Confirme que tiene más de 16 años.
+Confirme que Condiciones de uso de ASUS.
 Para %1$@ y Conexión remota  (aplicación ASUS Router/aplicación Lyra/AiCloud/AiDisk):
 Tenga en cuenta que ASUS, a través de las funciones anteriores, recopilará su información, incluido el nombre del modelo del producto, la versión de firmware, el estado de Internet, la dirección IP, la dirección MAC y el nombre DDNS.
 Si desea deshabilitar el uso compartido de la información con ASUS a través de las funciones anteriores, haga clic en <span style="font-weight: bold;">[Renunciar]</span> a continuación. Sin embargo, tenga en  que dichas características y funciones pueden no estar disponibles si deja de compartir su información con ASUS.
@@ -139,12 +140,12 @@ En el futuro, si tiene la intención de habilitar las funciones de Alexa ™ e I
 No puede completar el procedimiento de renuncia sin conexión a Internet. Intente realizar la renuncia cuando se conecte a Internet.
 No puede completar el procedimiento de renuncia porque el estado de Internet es inestable. Realice la renuncia más tarde.
 Al utilizar ASUS AiProtection, acepta la
-Al usar AiProtection, el analizador de tráfico, el analizador de aplicaciones, CdS adaptativa/realce de juegos y el historial web, acepta el <a id="eula_url" style="text-decoration:underline;" target="_blank">Contrato de Licencia para el Usuario Final de Trend Micro</a>.
-Tenga en cuentaque Trend Micro recopilará su información a través de AiProtection, el analizador de tráfico, el analizador de aplicaciones, CdS adaptativo y el historial web. También reconoce y acepta que ASUS no es responsable ni del acuerdo entre usted y Trend Micro ni de ningún contenido del servicio provisto por Trend Micro. Si tiene alguna consulta sobre cómo Trend Micro recopila, procesa y usa su información anterior, consulte la declaración relacionada con la privacidad emitida por Trend Micro o póngase en contacto con Trend Micro para obtener más detalles.
+Al usar AiProtection, Control paterno( Filtros Web y de aplicaciones ), el analizador de tráfico, el analizador de aplicaciones, CdS adaptativa/realce de juegos y el historial web, acepta el <a id="eula_url" style="text-decoration:underline;" target="_blank">Contrato de Licencia para el Usuario Final de Trend Micro</a>.
+Tenga en cuentaque Trend Micro recopilará su información a través de AiProtection, Control paterno( Filtros Web y de aplicaciones ), el analizador de tráfico, el analizador de aplicaciones, CdS adaptativo y el historial web. También reconoce y acepta que ASUS no es responsable ni del acuerdo entre usted y Trend Micro ni de ningún contenido del servicio provisto por Trend Micro. Si tiene alguna consulta sobre cómo Trend Micro recopila, procesa y usa su información anterior, consulte la declaración relacionada con la privacidad emitida por Trend Micro o póngase en contacto con Trend Micro para obtener más detalles.
 Si desea deshabilitar el uso compartido de la información con Trend Micro a través de las funciones anteriores, vaya a:  GUI web del router > Configuración avanzada > Administración > Privacidad.
 <a id="tm_eula_url" style="text-decoration:underline;" target="_blank">TrendMicro Privacy Policy</a>
 <a id="tm_disclosure_url" style="text-decoration:underline;" target="_blank">Privacy and Personal Data Collection Disclosure</a>
-Para AiProtection, analizador de tráfico, analizador de aplicaciones, CdS adaptativo, realce de juegos e historial web:
+Para AiProtection, Control paterno( Filtros Web y de aplicaciones ), analizador de tráfico, analizador de aplicaciones, CdS adaptativo, realce de juegos e historial web:
 Tenga en cuenta que Trend Micro recopilará su información a través de las funciones anteriores.
 ISi desea deshabilitar el uso compartido de la información con Trend Micro a través de las funciones anteriores, haga clic en <span style="font-weight: bold;">[Renunciar]</span> a continuación. Sin embargo, tenga en  que dichas características y funciones pueden no estar disponibles si deja de compartir su información con Trend Micro.
 ¿Está seguro de que desea renunciar?
@@ -271,7 +272,7 @@ Error de actualización del firmware. Esta anomalía puede estar provocada por u
 El firmware se está actualizando. Espere aproximadamente 3 minutos.
 La actualización de firmware ha finalizado. Cierre esta ventana y vuelva a acceder al router AiMesh.
 Actualización de firmware finalizada. Reinicie RT-AX53U manualmente.
-To comply with regulatory amendments, we have modified our certification rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
+To comply with regulatory amendments, we have modified our certificate rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
 Ha introducido una contraseña incorrecta 5 veces. Se cerrará su sesión.
 2022 ASUSTeK Computer Inc. Reservados todos los derechos.
 Los parámetros de configuración mantendrán sus ajustes durante el proceso de actualización del firmware.
@@ -998,13 +999,14 @@ Si cambia su SSID, la conectividad WiFi del nodo AiMesh se verá afectada.
 Si cambia su clave precompartida WPA, la conectividad WiFi del nodo AiMesh se verá afectada.
 El cambio de código de país puede afectar al sistema AiMesh.
 Si deshabilita la funcionalidad Radio, la conectividad WiFi del router AiMesh se verá afectada.
-Si oculta su SSID, la conectividad WiFi del router AiMesh se verá afectada.
+SSID oculta no ayuda a proteger su red Wi-Fi y podría provocar ciertos problemas de conexión.
 Si oculta su SSID, la función WPS se deshabilitará y la conectividad WiFi del router AiMesh se verá afectada.
 Si deshabilita el servidor DHCP, la conectividad WiFi del router AiMesh se verá afectada.
 Considerando la compatibilidad del sistema AiMesh y de los dispositivos finales, le sugerimos que utilice WPA2-Personal. ¿Desea cambiar a  #AUTHMODE ?\n*Si observa problemas de conexión, cambie a WPA2-Personal o consulte al fabricante para obtener más información.
 Para asegurar la conexión de su sistema AiMesh y de los dispositivos finales, lea esto <a id="wpa3FaqLink">FAQ</a> antes de cambiar a WPA3-Personal.
 Actualmente utiliza WPA3-personal. Para crear un sistema AiMesh, su método de autenticación cambiará a WPA2/WPA3-personal. ¿Desea continuar?
 You can read this <a id='wpa3FaqLink'>FAQ</a> for more information.
+Para obtener más detalles, visite <a style='font-weight: bolder;text-decoration: underline;' href='' target='_blank'>esta Pregunta Frecuente</a>
 Advanced ASUS AiMesh es una nueva e innovadora función de router que conecta varios routers de ASUS conjuntamente, creando una red WiFi para toda la casa.
 Buscar más información sobre ASUS AiMesh
 Buscar nodo AiMesh
@@ -1090,6 +1092,9 @@ Balcón
 Sala de reuniones
 Personalizado
 Garaje
+Primera planta
+Sala de juegos
+Gimnasio
 Sugerencias cuando no hay conexión
 Asegúrese de que el nodo AiMesh está encendido.
 Reinicie el nodo AiMesh e inténtelo de nuevo.
@@ -1687,6 +1692,8 @@ Importa su propio certificado
 Cargue aquí un certificado emitido por una entidad de certificación. Se necesita una clave privada y el certificado SSL.
 Clave privada
 Las claves privadas no se pueden proteger mediante frase de paso.
+Actualización de IPv6
+Si el entorno de red del cliente utiliza una dirección de red IPv6, al habilitar esta función se resolverá el dominio a una dirección de red IPv6 primero al acceder al dispositivo remoto.
 Certificado SSL
 Término de servicio
 Transfer ASUS DDNS name
@@ -2032,7 +2039,7 @@ Permite habilitar o deshabilitar la función de protección de denegación de se
 Desea habilitar la protección DoS
 Deshabilitar el cortafuegos provocará la desactivación de todas las funciones relacionadas.
 Desea habilitar el firewall
-Desea habilitar IPv4 Firewall
+Desea habilitar IPv4 reglas de firewall de entrada
 Firewall IPv4
 Cuando establece 20:21 como el rango de puerto de su servidor FTP para la configuración de su WAN, su servidor FTP está reñido con el servidor FTP nativo del RT-AX53U.
 Habilitar filtro de palabras clave
@@ -2140,6 +2147,9 @@ Updated
 Nuevo firmware disponible.
 Cargando la nota de la versión; espere…
 No se pudo encontrar la nota de la versión.
+Restaurar
+Elija una versión de firmware
+Selector de restauración de firmware
 Aceleración del juego
 Mejora de juegos
 Aceleración del juego de triple nivel
@@ -2878,6 +2888,7 @@ Crear un nuevo cliente RADIUS
 Tabla de grupos
 Nombre de la partición
 Para el intervalo de puertos de origen o destino, puede llevar a cabo una de las acciones siguientes: a) introduzca un puerto específico, como por ejemplo \"95\"; o b) introduzca puertos que se encuentren dentro de un intervalo, como por ejemplo \"103:315\", \">100\" o \"<65535\".
+Puerto de juegos
 Port Mapping (Asignación de puertos)
 Port Mapping (Asignación de puertos) admite la interfaz IPTV WAN para un puerto LAN específico. Puede seleccionar el puerto LAN apropiado y, a continuación, hacer clic en Apply (Aplicar).
 Habilitar asignación de puertos
@@ -3322,6 +3333,7 @@ Hora del Atlántico (Canadá)
 La Paz
 Caracas
 Santiago
+Asunción
 Terranova
 Brasilia
 Buenos Aires, Georgetown
@@ -3351,7 +3363,7 @@ Kaliningrado
 Atenas
 Jerusalén
 Harare, Pretoria
-Kiev
+Kyiv
 Moscú, San Petersburgo
 Volgogrado
 Kuwait, Riad
@@ -3413,7 +3425,7 @@ Prioridad de carga
 Datos enviados/s
 Datos enviados
 Configure el servidor de iTunes y multimedia UPnP.
-RT-AX53U admite los estándares UPnP. Puede habilitarlo y permitir que otros dispositivos UPnP, como por ejemplo PS3 o un reproductor multimedia digital, acceda a los archivos multimedia que se encuentran en el disco USB.
+Configure <a id='upnp_link'>UPnP, iTunes</a>, <a id='ftp_link'>FTP</a> y <a id='samba_link'>Network Place (Samba)</a>.
 Palabra clave de dirección URL
 Compruebe la aplicación USB
 Comprobando el disco
@@ -3500,7 +3512,7 @@ Compatibilidad con sitio de red (Samba)
 Anunciar DNS a clientes
 Modo de autorización
 Solo autenticación mediante nombre de usuario y contraseña
-Authorization Mode fixes on TLS
+Authentication Mode fixes on TLS
 Autorización HMAC
 Autorización HMAC adicional
 Permitir Cliente <-> Cliente
@@ -4089,7 +4101,7 @@ Desactive el perfil antes de eliminarlo.
 Todas las excepciones de política establecidas para un perfil VPN se quitarán cuando se elimine dicho perfil. ¿Está seguro de que desea eliminar el perfil?
 ¿Está seguro de que desea eliminar este perfil?
 La eliminación de la política del cliente en la lista de excepciones también eliminará el enlace IP del cliente del servidor DHCP. ¿Está seguro de que desea eliminar esto?
-<a id="faq1" href="" target="_blank" style="font-weight:bolder;text-decoration:underline;">Multiple VPN Connection FAQ.</a>
+<a id="faq1" href="" target="_blank" style="font-weight:bolder;text-decoration:underline;">Preguntas más frecuentes sobre fusión VPN.</a>
 No se puede establecer como WAN predeterminada para la política de destino.
 Beta test only
 You can also select [Cancel], the device will automatically start downloading the update during the night time.
@@ -4129,6 +4141,7 @@ GeForce Now
 Seleccione GeForce Now para priorizar los dispositivos de juego de GeForce Now para una experiencia de juego más rápida y mejor.
 LED On/Off
 The LED on/off control is used to turn off all LEDs includes Aura light.
+To enable Aura RGB, LED must remain on. Please turn on LED by pressing hardware button on the router for 3 seconds or enable it via web/app interface.
 Evento
 El sistema detectará los siguientes eventos y activará diferentes efectos de LED.
 Cuando habilite Game Boost (Realce de juego), verá que la barra de LED utiliza un efecto de respiración rojo.

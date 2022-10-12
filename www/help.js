@@ -90,7 +90,7 @@ showLoading(2);
 document.titleForm.submit();
 }
 function remove_all_disk(){
-var str = "<#3039#>";
+var str = "<#3050#>";
 if(confirm(str)){
 showLoading();
 document.diskForm_title.disk.value = "all";
@@ -103,8 +103,8 @@ function remove_disk(disksIndex){
 require(['/require/modules/diskList.js?hash=' + Math.random().toString()], function(diskList){
 var removeHandler = function(disk){
 var str = "";
-str += (disk.isBusy) ? "<#1346#> ".split(":")[1] : "" ;
-str += "<#3039#>";
+str += (disk.isBusy) ? "<#1351#> ".split(":")[1] : "" ;
+str += "<#3050#>";
 if(confirm(str)){
 parent.showLoading();
 document.diskForm_title.disk.value = disk.node;
@@ -180,32 +180,32 @@ document.titleForm.submit();
 var debug_end_time = parseInt("<% nvram_get("dslx_diag_end_uptime"); %>");
 var wans_mode = '<%nvram_get("wans_mode");%>';
 var wans_lanport = '<% nvram_get("wans_lanport"); %>';
-var orig_wnaports_bond = '<% nvram_get("wanports_bond"); %>';
+var orig_wanports_bond = '<% nvram_get("wanports_bond"); %>';
 function overHint(itemNum){
 var statusmenu = "";
 var title2 = 0;
 var title5 = 0;
 var title5_2 = 0;
 if(itemNum == 101){
-statusmenu ="<span><#3695#></span>";
+statusmenu ="<span><#3707#></span>";
 }
 else if(itemNum == 102){
-statusmenu ="<span><#3696#></span>".replace(/LAN-*\D* 4/, wanAggr_p2_name(orig_wnaports_bond));
+statusmenu ="<span><#3708#></span>".replace(/LAN-*\D* 4/, wanAggr_p2_name(orig_wanports_bond));
 }
 if(itemNum == 50){
-statusmenu ="<span><#594#></span>";
+statusmenu ="<span><#595#></span>";
 }
 if(itemNum == 85){
-statusmenu ="<span><#883#></span>";
+statusmenu ="<span><#884#></span>";
 }
 else if(itemNum == 86){
-statusmenu ="<span><#886#><br><#875#></span>";
+statusmenu ="<span><#887#><br><#876#></span>";
 }
 else if(itemNum == 87){
-statusmenu ="<span><#898#><br><#876#></span>";
+statusmenu ="<span><#899#><br><#877#></span>";
 }
 else if(itemNum == 88){
-statusmenu ="<span><#900#><br><#878#></span>";
+statusmenu ="<span><#901#><br><#879#></span>";
 }
 else if(itemNum == 89){
 statusmenu ="<span>Enable this function allow block advertisement in the streaming video.</span>";
@@ -214,121 +214,121 @@ else if(itemNum == 90){
 statusmenu ="<span>Enable this function allow you to block websites used to display banner or popup advertisement.</span>";
 }
 else if(itemNum == 91){
-statusmenu ="<span><#875#></span>";
-}
-else if(itemNum == 92){
 statusmenu ="<span><#876#></span>";
 }
-else if(itemNum == 93){
+else if(itemNum == 92){
 statusmenu ="<span><#877#></span>";
 }
-else if(itemNum == 94){
+else if(itemNum == 93){
 statusmenu ="<span><#878#></span>";
 }
-else if(itemNum == 95){
+else if(itemNum == 94){
 statusmenu ="<span><#879#></span>";
 }
-else if(itemNum == 96){
+else if(itemNum == 95){
 statusmenu ="<span><#880#></span>";
 }
-else if(itemNum == 97){
+else if(itemNum == 96){
 statusmenu ="<span><#881#></span>";
 }
+else if(itemNum == 97){
+statusmenu ="<span><#882#></span>";
+}
 else if(itemNum == 103){
-statusmenu ="<span><#903#></span>";
+statusmenu ="<span><#904#></span>";
 }
 else if(itemNum == 104){
-statusmenu ="<span><#902#></span>";
+statusmenu ="<span><#903#></span>";
 }
 if(itemNum == 98){
 var signal = parseInt(sim_signal);
 if(isNaN(signal) || signal <= 0){
-statusmenu += "<div class='StatusHint'><#2665#></div>";
+statusmenu += "<div class='StatusHint'><#2675#></div>";
 }
 else if(usb_state == 2 && usb_sbstate == 0 && usb_auxstate != 1){
-statusmenu += "<div class='StatusHint'><#188#> <#2259#>: </div><span>" + decodeURIComponent(modem_act_provider) + "</span>";
+statusmenu += "<div class='StatusHint'><#189#> <#2269#>: </div><span>" + decodeURIComponent(modem_act_provider) + "</span>";
 }
 else{
-statusmenu += "<div class='StatusHint'><#216#></div>";
+statusmenu += "<div class='StatusHint'><#217#></div>";
 }
 }
 if(itemNum == 99){
 if(sim_state == "1")
-statusmenu += "<div class='StatusHint'><#2695#></div>";
+statusmenu += "<div class='StatusHint'><#2705#></div>";
 else if(sim_state == "2"){
 if( g3err_pin == "1" && pin_remaining_count < 3)
 statusmenu += "<div class='StatusHint'>Wrong PIN code. Please input the correct PIN code.</div>";
 else
-statusmenu += "<div class='StatusHint'><#2656#></div>";
+statusmenu += "<div class='StatusHint'><#2666#></div>";
 }
 else if(sim_state == "3")
-statusmenu += "<div class='StatusHint'><#2658#></div>";
+statusmenu += "<div class='StatusHint'><#2668#></div>";
 else if(sim_state == "4")
-statusmenu += "<div class='StatusHint'><#2657#></div>";
+statusmenu += "<div class='StatusHint'><#2667#></div>";
 else if(sim_state == "5")
-statusmenu += "<div class='StatusHint'><#2659#></div>";
+statusmenu += "<div class='StatusHint'><#2669#></div>";
 else if(sim_state == "6")
-statusmenu += "<div class='StatusHint'><#2717#></div>";
+statusmenu += "<div class='StatusHint'><#2727#></div>";
 else if(sim_state == "-1")
-statusmenu += "<div class='StatusHint'><#2692#></div>";
+statusmenu += "<div class='StatusHint'><#2702#></div>";
 else if(sim_state == "-10" || sim_state == "-2")
-statusmenu += "<div><#2690#></div>";
+statusmenu += "<div><#2700#></div>";
 else
-statusmenu += "<div><#2635#></div>";
+statusmenu += "<div><#2645#></div>";
 }
 if(itemNum == 24)
 statusmenu += "<span>The USB 3.0 cable without well-shielded would affect the 2.4Ghz wireless range.Enabling this feature to ensure the best wireless performance If your USB 3.0 device is not USB-IF certified.</span>";
 if(itemNum == 25)
-statusmenu += "<span><#1264#></span>";
+statusmenu += "<span><#1269#></span>";
 else if(itemNum == 23)
-statusmenu += "<span><#1263#></span>";
+statusmenu += "<span><#1268#></span>";
 else if(itemNum == 22)
-statusmenu += "<span><#1262#></span>";
+statusmenu += "<span><#1267#></span>";
 else if(itemNum == 21)
-statusmenu += "<span><#1261#></span>";
+statusmenu += "<span><#1266#></span>";
 else if(itemNum == 20)
-statusmenu += "<span><#1260#></span>";
+statusmenu += "<span><#1265#></span>";
 else if(itemNum == 19)
-statusmenu += "<span><#1259#></span>";
+statusmenu += "<span><#1264#></span>";
 else if(itemNum == 18)
-statusmenu += "<span><#1258#></span>";
+statusmenu += "<span><#1263#></span>";
 else if(itemNum == 17)
-statusmenu += "<span><#1257#></span>";
+statusmenu += "<span><#1262#></span>";
 else if(itemNum == 16)
-statusmenu += "<span><#1256#></span>";
+statusmenu += "<span><#1261#></span>";
 else if(itemNum == 15)
-statusmenu += "<span><#1255#></span>";
+statusmenu += "<span><#1260#></span>";
 else if(itemNum == 14)
-statusmenu += "<span><#1254#></span>";
+statusmenu += "<span><#1259#></span>";
 else if(itemNum == 13)
-statusmenu += "<span><#1253#></span>";
+statusmenu += "<span><#1258#></span>";
 else if(itemNum == 12)
-statusmenu += "<span><#1252#></span>";
+statusmenu += "<span><#1257#></span>";
 else if(itemNum == 11)
-statusmenu += "<span><#1251#></span>";
+statusmenu += "<span><#1256#></span>";
 else if(itemNum == 10)
-statusmenu += "<span><#1250#></span>";
+statusmenu += "<span><#1255#></span>";
 if(itemNum == 26)
-statusmenu += "<span><#2975#></span>";
+statusmenu += "<span><#2986#></span>";
 if(itemNum == "A"){
-statusmenu = "<div class='StatusHint'><#892#> :</div>";
+statusmenu = "<div class='StatusHint'><#893#> :</div>";
 if(bwdpi_app_rulelist.indexOf('game') != -1){
-modeDesc = "<#1224#>"; /* untranslated */
+modeDesc = "<#1229#>"; /* untranslated */
 }
 else if(bwdpi_app_rulelist.indexOf('media') != -1){
-modeDesc = "<#1225#>"; /* untranslated */
+modeDesc = "<#1230#>"; /* untranslated */
 }
 else if(bwdpi_app_rulelist.indexOf('web') != -1){
-modeDesc = "<#899#>"; /* untranslated */
+modeDesc = "<#900#>"; /* untranslated */
 }
 else if(bwdpi_app_rulelist.indexOf('eLearning') != -1){
-modeDesc = "<#901#>"; /* untranslated */
+modeDesc = "<#902#>"; /* untranslated */
 }
 else if(bwdpi_app_rulelist.indexOf('videoConference') != -1){
-modeDesc = "<#889#>"; /* untranslated */
+modeDesc = "<#890#>"; /* untranslated */
 }
 else{
-modeDesc = "<#1670#>"; /* untranslated */
+modeDesc = "<#1675#>"; /* untranslated */
 }
 statusmenu += "<span>" + modeDesc + "</span>";
 }
@@ -336,13 +336,13 @@ if(itemNum == 27){ //Feedback Diagnostic
 if(diag_dblog_enable == "1") {
 var lineDesc = "";
 statusmenu = "<div class='StatusHint'>System Diagnostic :</div>"; /* untranslated */
-lineDesc = "<#1933#><br>";
+lineDesc = "<#1940#><br>";
 statusmenu += "<span>" + lineDesc + "</span>";
-statusmenu += "<div class='StatusHint'><#1509#> :</div>";
+statusmenu += "<div class='StatusHint'><#1514#> :</div>";
 lineDesc = ""; /* Untranslated */
 var transform_dblog_service = function() {
 var dblog_service = parseInt('<% nvram_get("dblog_service"); %>');
-var dblog_service_mapping = ["", "WiFi", "<#1772#>", "<#775#>", "AiMesh"];/* untranslated */
+var dblog_service_mapping = ["", "WiFi", "<#1779#>", "<#776#>", "AiMesh"];/* untranslated */
 var dblog_service_text = "";
 for(var i = 1; dblog_service != 0 && i <= 4; i++) {
 if(dblog_service & 1) {
@@ -357,7 +357,7 @@ return dblog_service_text;
 };
 lineDesc += transform_dblog_service();
 statusmenu += "<span>" + lineDesc + "</span>";
-statusmenu += "<div class='StatusHint'><#2731#> :</div>";
+statusmenu += "<div class='StatusHint'><#2741#> :</div>";
 lineDesc = ""; /* Untranslated */
 var transform_dblog_remaining = function() {
 var dblog_remaining = parseInt(diag_dblog_remaining);
@@ -367,17 +367,17 @@ var minutes = Math.floor(dblog_remaining / 60 % 60);
 var seconds = Math.floor(dblog_remaining % 60);
 var remaining_time_str = "";
 if(dblog_remaining == 0) {
-remaining_time_str += "0" + " <#3047#> ";
+remaining_time_str += "0" + " <#3058#> ";
 return remaining_time_str;
 }
 if(days)
-remaining_time_str += days + " <#1679#> ";
+remaining_time_str += days + " <#1684#> ";
 if(hours)
-remaining_time_str += hours + " <#2245#> ";
+remaining_time_str += hours + " <#2255#> ";
 if(minutes)
-remaining_time_str += minutes + " <#2622#> ";
+remaining_time_str += minutes + " <#2632#> ";
 if(seconds)
-remaining_time_str += seconds + " <#3047#> ";
+remaining_time_str += seconds + " <#3058#> ";
 return remaining_time_str;
 };
 lineDesc += transform_dblog_remaining();
@@ -396,7 +396,7 @@ lineDesc += "Initializing";
 else
 lineDesc += "Link down";
 if(wan_diag_state == "1" && allUsbStatus.search("storage") >= 0){
-lineDesc += "<br><#1933#><br>";
+lineDesc += "<br><#1940#><br>";
 lineDesc += show_diagTime(boottime_update);
 }
 statusmenu += "<span>" + lineDesc + "</span>";
@@ -405,35 +405,35 @@ if(itemNum == 8){
 statusmenu = "<div class='StatusHint'>WiFi :</div>";
 if(wl_info.band5g_2_support){
 if(wlan0_radio_flag == "0")
-wifiDesc = "<b>2.4GHz -</b> <#1508#>";
+wifiDesc = "<b>2.4GHz -</b> <#1513#>";
 else
-wifiDesc = "<b>2.4GHz -</b> <#1509#>";
+wifiDesc = "<b>2.4GHz -</b> <#1514#>";
 if(wlan1_radio_flag == "0")
-wifiDesc += "<br><br><b>5GHz-1 -</b> <#1508#>";
+wifiDesc += "<br><br><b>5GHz-1 -</b> <#1513#>";
 else
-wifiDesc += "<br><br><b>5GHz-1 -</b> <#1509#>";
+wifiDesc += "<br><br><b>5GHz-1 -</b> <#1514#>";
 if(wlan2_radio_flag == "0")
-wifiDesc += "<br><br><b>5GHz-2 -</b> <#1508#>";
+wifiDesc += "<br><br><b>5GHz-2 -</b> <#1513#>";
 else
-wifiDesc += "<br><br><b>5GHz-2 -</b> <#1509#>";
+wifiDesc += "<br><br><b>5GHz-2 -</b> <#1514#>";
 statusmenu += "<span>" + wifiDesc + "</span>";
 }
 else if(wl_info.band5g_support){
 if(wlan0_radio_flag == "0" && wlan1_radio_flag == "0")
-wifiDesc = "<b>2.4GHz -</b><br><#1508#><br><br><b>5 GHz -</b><br><#1508#>";
+wifiDesc = "<b>2.4GHz -</b><br><#1513#><br><br><b>5 GHz -</b><br><#1513#>";
 else if(wlan0_radio_flag == "1" && wlan1_radio_flag == "0")
-wifiDesc = "<b>2.4GHz -</b><br><#1509#><br><br><b>5 GHz -</b><br><#1508#>";
+wifiDesc = "<b>2.4GHz -</b><br><#1514#><br><br><b>5 GHz -</b><br><#1513#>";
 else if(wlan0_radio_flag == "0" && wlan1_radio_flag == "1")
-wifiDesc = "<b>2.4GHz -</b><br><#1508#><br><br><b>5 GHz -</b><br><#1509#>";
+wifiDesc = "<b>2.4GHz -</b><br><#1513#><br><br><b>5 GHz -</b><br><#1514#>";
 else
-wifiDesc = "<b>2.4GHz -</b><br><#1509#><br><br><b>5 GHz -</b><br><#1509#>";
+wifiDesc = "<b>2.4GHz -</b><br><#1514#><br><br><b>5 GHz -</b><br><#1514#>";
 statusmenu += "<span>" + wifiDesc + "</span>";
 }
 else{
 if(wlan0_radio_flag == "0")
-wifiDesc = "<#1508#>";
+wifiDesc = "<#1513#>";
 else
-wifiDesc = "<#1509#>";
+wifiDesc = "<#1514#>";
 statusmenu += "<span>" + wifiDesc + "</span>";
 }
 }
@@ -454,19 +454,19 @@ for(var i=0; i<usbDevicesList.length; i++){
 if(usbDevicesList[i].deviceType != "printer") continue;
 statusmenu += "<div class='StatusHint' style='margin-top:8px'>" + usbDevicesList[i].deviceName + ":</div>";
 if(usbDevicesList[i].serialNum == '<% nvram_get("u2ec_serial"); %>'){
-statusmenu += "<div><#1644#></div>";
+statusmenu += "<div><#1649#></div>";
 if(monoClient != "monoClient=")
-statusmenu += "<div><#2944#>" + monoClient.substring(11, monoClient.length) + "</div>";
+statusmenu += "<div><#2955#>" + monoClient.substring(11, monoClient.length) + "</div>";
 }
 else
-statusmenu += "<div><#1641#></div>";
+statusmenu += "<div><#1646#></div>";
 }
 if(statusmenu != "")
 return overlib(statusmenu, OFFSETX, -160, LEFT, DELAY, 400);
 });
 }
 if(itemNum == 5){
-statusmenu = "<span class='StatusHint'><#2790#></span>";
+statusmenu = "<span class='StatusHint'><#2800#></span>";
 }
 if(itemNum == 4){
 for(var i=0; i<gn_array_2g.length; i++){
@@ -480,21 +480,21 @@ show_str = decodeURIComponent(show_str);
 show_str = handle_show_str(show_str);
 statusmenu += "<span><b>" + show_str + "</b><br> (";
 if(gn_array_2g[i][11] == 0)
-statusmenu += "<#2569#>)</span><br>";
+statusmenu += "<#2579#>)</span><br>";
 else{
 var expire_day = Math.floor(gn_array_2g[i][13]/86400);
 var expire_hr = Math.floor((gn_array_2g[i][13]%86400)/3600);
 var expire_min = Math.floor((gn_array_2g[i][13]%3600)/60);
-statusmenu += '<#2731#>: ';
+statusmenu += '<#2741#>: ';
 if(expire_day > 0)
-statusmenu += '<b id="expire_day_'+i+'">'+ expire_day + '</b> <#1679#> <b id="expire_hr_'+i+'">'+ expire_hr + '</b> <#2245#> <b id="expire_min_'+i+'">' + expire_min +'</b> <#2622#>';
+statusmenu += '<b id="expire_day_'+i+'">'+ expire_day + '</b> <#1684#> <b id="expire_hr_'+i+'">'+ expire_hr + '</b> <#2255#> <b id="expire_min_'+i+'">' + expire_min +'</b> <#2632#>';
 else if(expire_hr > 0)
-statusmenu += '<b id="expire_hr_'+i+'">'+ expire_hr + '</b> <#2245#> <b id="expire_min_'+i+'">' + expire_min +'</b> <#2622#>';
+statusmenu += '<b id="expire_hr_'+i+'">'+ expire_hr + '</b> <#2255#> <b id="expire_min_'+i+'">' + expire_min +'</b> <#2632#>';
 else{
 if(expire_min > 0)
-statusmenu += '<b id="expire_min_'+i+'">' + expire_min +'</b> <#2622#>';
+statusmenu += '<b id="expire_min_'+i+'">' + expire_min +'</b> <#2632#>';
 else
-statusmenu += '<b id="expire_min_'+i+'">< 1</b> <#2622#>';
+statusmenu += '<b id="expire_min_'+i+'">< 1</b> <#2632#>';
 }
 statusmenu += ")</span><br>";
 }
@@ -515,21 +515,21 @@ show_str = decodeURIComponent(show_str);
 show_str = handle_show_str(show_str);
 statusmenu += "<span><b>" + show_str + "</b><br> (";
 if(gn_array_5g[i][11] == 0)
-statusmenu += '<#2569#>)</span><br>';
+statusmenu += '<#2579#>)</span><br>';
 else{
 var expire_day = Math.floor(gn_array_5g[i][13]/86400);
 var expire_hr = Math.floor((gn_array_5g[i][13]%86400)/3600);
 var expire_min = Math.floor((gn_array_5g[i][13]%3600)/60);
-statusmenu += '<#2731#>: ';
+statusmenu += '<#2741#>: ';
 if(expire_day > 0)
-statusmenu += '<b id="expire_day_'+i+'">'+ expire_day + '</b> <#1679#> <b id="expire_hr_'+i+'">'+ expire_hr + '</b> <#2245#> <b id="expire_min_'+i+'">' + expire_min +'</b> <#2622#>';
+statusmenu += '<b id="expire_day_'+i+'">'+ expire_day + '</b> <#1684#> <b id="expire_hr_'+i+'">'+ expire_hr + '</b> <#2255#> <b id="expire_min_'+i+'">' + expire_min +'</b> <#2632#>';
 else if(expire_hr > 0)
-statusmenu += '<b id="expire_hr_'+i+'">'+ expire_hr + '</b> <#2245#> <b id="expire_min_'+i+'">' + expire_min +'</b> <#2622#>';
+statusmenu += '<b id="expire_hr_'+i+'">'+ expire_hr + '</b> <#2255#> <b id="expire_min_'+i+'">' + expire_min +'</b> <#2632#>';
 else{
 if(expire_min > 0)
-statusmenu += '<b id="expire_min_'+i+'">' + expire_min +'</b> <#2622#>';
+statusmenu += '<b id="expire_min_'+i+'">' + expire_min +'</b> <#2632#>';
 else
-statusmenu += '<b id="expire_min_'+i+'">< 1</b> <#2622#>';
+statusmenu += '<b id="expire_min_'+i+'">< 1</b> <#2632#>';
 }
 statusmenu += ")</span><br>";
 }
@@ -553,21 +553,21 @@ show_str = decodeURIComponent(show_str);
 show_str = handle_show_str(show_str);
 statusmenu += "<span><b>" + show_str + "</b><br> (";
 if(gn_array_5g_2[i][11] == 0)
-statusmenu += '<#2569#>)</span><br>';
+statusmenu += '<#2579#>)</span><br>';
 else{
 var expire_day = Math.floor(gn_array_5g_2[i][13]/86400);
 var expire_hr = Math.floor((gn_array_5g_2[i][13]%86400)/3600);
 var expire_min = Math.floor((gn_array_5g_2[i][13]%3600)/60);
-statusmenu += '<#2731#>: ';
+statusmenu += '<#2741#>: ';
 if(expire_day > 0)
-statusmenu += '<b id="expire_day_'+i+'">'+ expire_day + '</b> <#1679#> <b id="expire_hr_'+i+'">'+ expire_hr + '</b> <#2245#> <b id="expire_min_'+i+'">' + expire_min +'</b> <#2622#>';
+statusmenu += '<b id="expire_day_'+i+'">'+ expire_day + '</b> <#1684#> <b id="expire_hr_'+i+'">'+ expire_hr + '</b> <#2255#> <b id="expire_min_'+i+'">' + expire_min +'</b> <#2632#>';
 else if(expire_hr > 0)
-statusmenu += '<b id="expire_hr_'+i+'">'+ expire_hr + '</b> <#2245#> <b id="expire_min_'+i+'">' + expire_min +'</b> <#2622#>';
+statusmenu += '<b id="expire_hr_'+i+'">'+ expire_hr + '</b> <#2255#> <b id="expire_min_'+i+'">' + expire_min +'</b> <#2632#>';
 else{
 if(expire_min > 0)
-statusmenu += '<b id="expire_min_'+i+'">' + expire_min +'</b> <#2622#>';
+statusmenu += '<b id="expire_min_'+i+'">' + expire_min +'</b> <#2632#>';
 else
-statusmenu += '<b id="expire_min_'+i+'">< 1</b> <#2622#>';
+statusmenu += '<b id="expire_min_'+i+'">< 1</b> <#2632#>';
 }
 statusmenu += ")</span><br>";
 }
@@ -575,28 +575,28 @@ statusmenu += ")</span><br>";
 }
 }
 if(title2 == 0 && title5 == 0 && title5_2 == 0)
-statusmenu += "<div class='StatusHint'><#281#>:</div><span><#1641#></span>";
+statusmenu += "<div class='StatusHint'><#282#>:</div><span><#1646#></span>";
 }
 if(itemNum == 3){
-var eLAN_str = "<#1879#>".replace(/WAN/, "LAN");
+var eLAN_str = "<#1886#>".replace(/WAN/, "LAN");
 (function(){
 var wans_mode = '<%nvram_get("wans_mode");%>';
 var connect_obj = function(_link_status, _link_sbstatus, _link_auxstatus, unit){
 if(dualwan_enabled && active_wan_unit != unit && (wans_mode == "fo" || wans_mode == "fb")){
-this.hint = "<#3170#>";
+this.hint = "<#3181#>";
 }
 else{
-this.hint = "<#216#>";
+this.hint = "<#217#>";
 }
 if(_link_status == "1"){
-this.hint = "<#806#>";
+this.hint = "<#807#>";
 }
 else if(_link_status == "2" && _link_sbstatus == "0"){
 if(dualwan_enabled && active_wan_unit != unit && (wans_mode == "fo" || wans_mode == "fb")){
-this.hint = "<#3171#>";
+this.hint = "<#3182#>";
 }
 else if(link_internet == "2"){
-this.hint = "<#188#>";
+this.hint = "<#189#>";
 }
 }
 else{
@@ -605,9 +605,9 @@ _wan_enable = (unit == 0)? wan0_enable : wan1_enable;
 if( wans_dualwan_array[unit] == "usb"){
 if(_wan_enable == "0"){
 if(gobi_support)
-this.hint = "<#2633#>";
+this.hint = "<#2643#>";
 else
-this.hint = "<#3426#>";
+this.hint = "<#3438#>";
 }
 else{
 if(sim_state != "" && sim_state != "1"){
@@ -615,49 +615,49 @@ if(sim_state == "2"){
 if( g3err_pin == "1" && pin_remaining_count < 3)
 this.hint = "Wrong PIN code. Please input the correct PIN code.";
 else
-this.hint = "<#2656#>";
+this.hint = "<#2666#>";
 }
 else if(sim_state == "3")
-this.hint = "<#2658#>";
+this.hint = "<#2668#>";
 else if(sim_state == "4")
-this.hint = "<#2657#>";
+this.hint = "<#2667#>";
 else if(sim_state == "5")
-this.hint = "<#2659#>";
+this.hint = "<#2669#>";
 else if(sim_state == "6")
-this.hint = "<#2717#>";
+this.hint = "<#2727#>";
 else if(sim_state == "-1")
-this.hint = "<#2692#>";
+this.hint = "<#2702#>";
 else if(sim_state == "-10" || sim_state == "-2")
-this.hint = "<#2690#>";
+this.hint = "<#2700#>";
 else
-this.hint = "<#2635#>";
+this.hint = "<#2645#>";
 }
 }
 }
 else{
 if(_wan_enable == 0){
-this.hint = "<#3629#>";
+this.hint = "<#3641#>";
 }
 else{
 if(_link_auxstatus == "1"){
 if( wans_dualwan_array[unit] == "lan"){
-this.hint = "<#1518#> : <#2883#> "+wans_lanport;
+this.hint = "<#1523#> : <#2894#> "+wans_lanport;
 }
 else
-this.hint = "<#2965#>";
+this.hint = "<#2976#>";
 }
 else if(_link_sbstatus == "1")
-this.hint = "<#808#>";
+this.hint = "<#809#>";
 else if(_link_sbstatus == "2")
-this.hint = "<#690#>";
+this.hint = "<#691#>";
 else if(_link_sbstatus == "3")
-this.hint = "<#689#>";
+this.hint = "<#690#>";
 else if(_link_sbstatus == "4")
-this.hint = "<#811#>";
+this.hint = "<#812#>";
 else if(_link_sbstatus == "5")
-this.hint = "<#810#>";
+this.hint = "<#811#>";
 else if(_link_sbstatus == "6")
-this.hint = "System error. <#2972#>";
+this.hint = "System error. <#2983#>";
 }
 }
 }
@@ -695,43 +695,43 @@ var connect_status = {
 primary: new connect_obj(first_link_status, first_link_sbstatus, first_link_auxstatus, 0),
 secondary: new connect_obj(secondary_link_status, secondary_link_sbstatus, secondary_link_auxstatus, 1)
 };
-statusmenu = "<div class='StatusHint'><#1846#>:</div>";
+statusmenu = "<div class='StatusHint'><#1853#>:</div>";
 if( wans_dualwan_array[0] == "wan")
-statusmenu += "<b><#1879#> - </b><br>";
+statusmenu += "<b><#1886#> - </b><br>";
 else if( wans_dualwan_array[0] == "lan")
-statusmenu += "<div class='StatusHint'>"+eLAN_str+" (<#2883#> "+wans_lanport+") - </div>";
+statusmenu += "<div class='StatusHint'>"+eLAN_str+" (<#2894#> "+wans_lanport+") - </div>";
 else if( wans_dualwan_array[0] == "usb"){
 if(gobi_support)
-statusmenu += "<div class='StatusHint'><#2705#> - </div>";
+statusmenu += "<div class='StatusHint'><#2715#> - </div>";
 else
-statusmenu += "<b><#398#> - </b><br>";
+statusmenu += "<b><#399#> - </b><br>";
 }
 statusmenu += "<span>" + connect_status.primary.hint + "</span>";
-statusmenu += "<div class='StatusHint'><br><#1853#>:</div>";
+statusmenu += "<div class='StatusHint'><br><#1860#>:</div>";
 if( wans_dualwan_array[1] == "wan")
-statusmenu += "<b><#1879#> - </b><br>";
+statusmenu += "<b><#1886#> - </b><br>";
 else if( wans_dualwan_array[1] == "lan")
-statusmenu += "<div class='StatusHint'>"+eLAN_str+" (<#2883#> "+wans_lanport+") - </div>";
+statusmenu += "<div class='StatusHint'>"+eLAN_str+" (<#2894#> "+wans_lanport+") - </div>";
 else if( wans_dualwan_array[1] == "usb"){
 if(gobi_support)
-statusmenu += "<div class='StatusHint'><#2705#> - </div>";
+statusmenu += "<div class='StatusHint'><#2715#> - </div>";
 else
-statusmenu += "<b><#398#> - </b><br>";
+statusmenu += "<b><#399#> - </b><br>";
 }
 statusmenu += "<span>" + connect_status.secondary.hint + "</span>";
 }
 else{
 var connect_status = new connect_obj(link_status, link_sbstatus, link_auxstatus, 0);
-statusmenu = "<div class='StatusHint'><#3184#>:</div>";
+statusmenu = "<div class='StatusHint'><#3195#>:</div>";
 if( wans_dualwan_array[0] == "wan")
-statusmenu += "<b><#1879#> - </b><br>";
+statusmenu += "<b><#1886#> - </b><br>";
 else if( wans_dualwan_array[0] == "lan")
-statusmenu += "<div class='StatusHint'>"+eLAN_str+" (<#2883#> "+wans_lanport+") - </div>";
+statusmenu += "<div class='StatusHint'>"+eLAN_str+" (<#2894#> "+wans_lanport+") - </div>";
 else if( wans_dualwan_array[0] == "usb"){
 if(gobi_support)
-statusmenu += "<div class='StatusHint'><#2705#> - </div>";
+statusmenu += "<div class='StatusHint'><#2715#> - </div>";
 else
-statusmenu += "<b><#398#> - </b><br>";
+statusmenu += "<b><#399#> - </b><br>";
 }
 statusmenu += "<span>" + connect_status.hint + "</span>"
 }
@@ -746,18 +746,18 @@ if(usbDevicesList[i].deviceType == "printer") continue;
 statusmenu += "<div class='StatusHint' style='margin-top:8px'>" + usbDevicesList[i].deviceName + ":</div>";
 statusmenu += "<div>" + usbDevicesList[i].deviceType.charAt(0).toUpperCase() + usbDevicesList[i].deviceType.substring(1).toLowerCase() + "</div>";
 if(usbDevicesList[i].deviceType == "storage" && usbDevicesList[i].mountNumber == 0)
-statusmenu += "<div><#1727#></div>";
+statusmenu += "<div><#1734#></div>";
 else if(usbDevicesList[i].hasErrPart)
-statusmenu += "<div><#1730#></div>";
+statusmenu += "<div><#1737#></div>";
 else{
 if(usbDevicesList[i].hasAppDev)
-statusmenu += "<div><#394#></div>";
+statusmenu += "<div><#395#></div>";
 if(usbDevicesList[i].hasTM)
 statusmenu += "<div>Time Machine</div>";
 }
 }
 if( statusmenu == "" )
-statusmenu = "<div class='StatusHint'><#2791#></div>";
+statusmenu = "<div class='StatusHint'><#2801#></div>";
 return overlib(statusmenu, OFFSETX, -160, LEFT, DELAY, 400);
 });
 }
@@ -769,9 +769,9 @@ Etime = debug_end_time - boottime_update;
 EHours = Math.floor(Etime / 3600);
 EMinutes = Math.floor(Etime % 3600 / 60);
 if(EHours <= 0 && EMinutes <= 0)
-return "<#2731#> : <span>0</span> <#2245#> <span>0</span> <#2622#>";
+return "<#2741#> : <span>0</span> <#2255#> <span>0</span> <#2632#>";
 else
-return "<#2731#> : <span>"+EHours+"</span> <#2245#> <span>"+EMinutes+"</span> <#2622#>";
+return "<#2741#> : <span>"+EHours+"</span> <#2255#> <span>"+EMinutes+"</span> <#2632#>";
 }
 function cancel_diag(){
 parent.document.canceldiagForm.submit();
@@ -784,39 +784,39 @@ statusmenu = "";
 if(hint_array_id == 24){
 var _caption = "";
 if(hint_show_id == 10){ // Feedback System Diagnostic Capture
-statusmenu = "<span class='StatusClickHint' onclick='cancel_dblog();' onmouseout='this.className=\"StatusClickHint\"' onmouseover='this.className=\"StatusClickHint_mouseover\"'><#1932#></span>";
+statusmenu = "<span class='StatusClickHint' onclick='cancel_dblog();' onmouseout='this.className=\"StatusClickHint\"' onmouseover='this.className=\"StatusClickHint_mouseover\"'><#1939#></span>";
 _caption = "System Diagnostic capture";
 }
 else if(hint_show_id == 9){ //2015.07 Viz add for bwdpi : Adaptive QoS mode
-statusmenu = "<span class='StatusClickHint' onclick='priority_change();' onmouseout='this.className=\"StatusClickHint\"' onmouseover='this.className=\"StatusClickHint_mouseover\"'><#882#></span><br>";
-statusmenu += "<span class='StatusClickHint' onclick='qos_disable();' onmouseout='this.className=\"StatusClickHint\"' onmouseover='this.className=\"StatusClickHint_mouseover\"'><#1893#></span>";
-_caption = "<#892#>";
+statusmenu = "<span class='StatusClickHint' onclick='priority_change();' onmouseout='this.className=\"StatusClickHint\"' onmouseover='this.className=\"StatusClickHint_mouseover\"'><#883#></span><br>";
+statusmenu += "<span class='StatusClickHint' onclick='qos_disable();' onmouseout='this.className=\"StatusClickHint\"' onmouseover='this.className=\"StatusClickHint_mouseover\"'><#1900#></span>";
+_caption = "<#893#>";
 }
 else if(hint_show_id == 8){ //2014.10 Viz add for dsl dslx_diag_state
-statusmenu = "<span class='StatusClickHint' onclick='cancel_diag();' onmouseout='this.className=\"StatusClickHint\"' onmouseover='this.className=\"StatusClickHint_mouseover\"'><#1932#></span>";
+statusmenu = "<span class='StatusClickHint' onclick='cancel_diag();' onmouseout='this.className=\"StatusClickHint\"' onmouseover='this.className=\"StatusClickHint_mouseover\"'><#1939#></span>";
 _caption = "DSL Line Diagnostic capture";
 }
 else if(hint_show_id == 7){
 statusmenu = "<span class='StatusClickHint' onclick='gotoModem();' onmouseout='this.className=\"StatusClickHint\"' onmouseover='this.className=\"StatusClickHint_mouseover\"'>";
 if(dualWAN_support){
 if(usb_index == -1){
-statusmenu += "<#873#></span>"
-_caption = "<#220#>";
+statusmenu += "<#874#></span>"
+_caption = "<#221#>";
 }
 else{
 if(gobi_support){
-statusmenu += "<#2688#></span>"
-_caption = "<#2705#>";
+statusmenu += "<#2698#></span>"
+_caption = "<#2715#>";
 }
 else{
-statusmenu += "<#2216#></span>"
-_caption = "<#398#>";
+statusmenu += "<#2226#></span>"
+_caption = "<#399#>";
 }
 }
 }
 else{
-statusmenu += "<#2216#></span>"
-_caption = "<#398#>";
+statusmenu += "<#2226#></span>"
+_caption = "<#399#>";
 }
 }
 else if(hint_show_id == 6){ // Viz add 2013.04 for dsl sync status
@@ -824,91 +824,91 @@ statusmenu = "<span class='StatusClickHint' onclick='gotoDSL_log();' onmouseout=
 _caption = "DSL Log";
 }
 else if(hint_show_id == 5){
-statusmenu = "<span class='StatusClickHint' onclick='gotocooler();' onmouseout='this.className=\"StatusClickHint\"' onmouseover='this.className=\"StatusClickHint_mouseover\"'><#1904#></span>";
+statusmenu = "<span class='StatusClickHint' onclick='gotocooler();' onmouseout='this.className=\"StatusClickHint\"' onmouseover='this.className=\"StatusClickHint_mouseover\"'><#1911#></span>";
 _caption = "Perfomance Tuning";
 }
 else if(hint_show_id == 4){
-statusmenu = "<span class='StatusClickHint' onclick='gotoguestnetwork();' onmouseout='this.className=\"StatusClickHint\"' onmouseover='this.className=\"StatusClickHint_mouseover\"'><#2215#></span>";
+statusmenu = "<span class='StatusClickHint' onclick='gotoguestnetwork();' onmouseout='this.className=\"StatusClickHint\"' onmouseover='this.className=\"StatusClickHint_mouseover\"'><#2225#></span>";
 _caption = "Guest Network";
 }
 else if(hint_show_id == 3){
-var eLAN_str = "<#1879#>".replace(/WAN/, "LAN");
+var eLAN_str = "<#1886#>".replace(/WAN/, "LAN");
 if(sw_mode == 1){
 if(!dualWAN_support || wans_dualwan_array[1] == "none"){
 if((link_status == "2" && link_auxstatus == "0") || (link_status == "2" && link_auxstatus == "2"))
-statusmenu = "<span class='StatusClickHint' onclick='suspendconn(0, 0);' onmouseout='this.className=\"StatusClickHint\"' onmouseover='this.className=\"StatusClickHint_mouseover\"'><#1726#></span>";
+statusmenu = "<span class='StatusClickHint' onclick='suspendconn(0, 0);' onmouseout='this.className=\"StatusClickHint\"' onmouseover='this.className=\"StatusClickHint_mouseover\"'><#1733#></span>";
 else{
 statusmenu = "<span class='StatusClickHint' onclick='goToWAN(0);' onmouseout='this.className=\"StatusClickHint\"' onmouseover='this.className=\"StatusClickHint_mouseover\"'>";
 if(usb_index == 0){
 if(gobi_support)
-statusmenu += "<#2688#></span>";
+statusmenu += "<#2698#></span>";
 else
-statusmenu += "<#2216#></span>";
+statusmenu += "<#2226#></span>";
 }
 else
-statusmenu += "<#3643#></span>";
+statusmenu += "<#3655#></span>";
 }
 }
 else{
 if(gobi_support){
 if( wans_dualwan_array[0] == "wan")
-statusmenu += "<div class='StatusHint'><#1879#>:</div>";
+statusmenu += "<div class='StatusHint'><#1886#>:</div>";
 else if( wans_dualwan_array[0] == "lan")
-statusmenu += "<div class='StatusHint'>"+eLAN_str+" (<#2883#> "+wans_lanport+"):</div>";
+statusmenu += "<div class='StatusHint'>"+eLAN_str+" (<#2894#> "+wans_lanport+"):</div>";
 else if( wans_dualwan_array[0] == "usb")
-statusmenu += "<div class='StatusHint'><#2705#>:</div>";
+statusmenu += "<div class='StatusHint'><#2715#>:</div>";
 }
 else{
-statusmenu = "<div class='StatusHint'><#1846#>:</div>";
+statusmenu = "<div class='StatusHint'><#1853#>:</div>";
 if( wans_dualwan_array[0] == "wan")
-statusmenu += "<b><#1879#> -</b><br>";
+statusmenu += "<b><#1886#> -</b><br>";
 else if( wans_dualwan_array[0] == "lan")
-statusmenu += "<b><#2883#> "+wans_lanport+" -</b><br>";
+statusmenu += "<b><#2894#> "+wans_lanport+" -</b><br>";
 else if( wans_dualwan_array[0] == "usb")
-statusmenu += "<b><#398#> -</b><br>";
+statusmenu += "<b><#399#> -</b><br>";
 }
 if((first_link_status == "2" && first_link_auxstatus == "0") || (first_link_status == "2" && first_link_auxstatus == "2"))
-statusmenu += "<span class='StatusClickHint' onclick='suspendconn(0, 0);' onmouseout='this.className=\"StatusClickHint\"' onmouseover='this.className=\"StatusClickHint_mouseover\"'><#1726#></span>";
+statusmenu += "<span class='StatusClickHint' onclick='suspendconn(0, 0);' onmouseout='this.className=\"StatusClickHint\"' onmouseover='this.className=\"StatusClickHint_mouseover\"'><#1733#></span>";
 else{
 statusmenu += "<span class='StatusClickHint' onclick='goToWAN(0);' onmouseout='this.className=\"StatusClickHint\"' onmouseover='this.className=\"StatusClickHint_mouseover\"'>";
 if(usb_index == 0){
 if(gobi_support)
-statusmenu += "<#2688#></span>";
+statusmenu += "<#2698#></span>";
 else
-statusmenu += "<#2216#></span>";
+statusmenu += "<#2226#></span>";
 }
 else
-statusmenu += "<#3643#></span>";
+statusmenu += "<#3655#></span>";
 }
 if(gobi_support){
 if( wans_dualwan_array[1] == "wan")
-statusmenu += "<div class='StatusHint'><br><#1879#>:</div>";
+statusmenu += "<div class='StatusHint'><br><#1886#>:</div>";
 else if( wans_dualwan_array[1] == "lan")
-statusmenu += "<div class='StatusHint'><br>"+eLAN_str+" (<#2883#> "+wans_lanport+"):</div>";
+statusmenu += "<div class='StatusHint'><br>"+eLAN_str+" (<#2894#> "+wans_lanport+"):</div>";
 else if( wans_dualwan_array[1] == "usb")
-statusmenu += "<div class='StatusHint'><br><#2705#>:</div>";
+statusmenu += "<div class='StatusHint'><br><#2715#>:</div>";
 }
 else{
-statusmenu += "<div class='StatusHint'><br><#1853#>:</div>";
+statusmenu += "<div class='StatusHint'><br><#1860#>:</div>";
 if( wans_dualwan_array[1] == "wan")
-statusmenu += "<b><#1879#> -</b><br>";
+statusmenu += "<b><#1886#> -</b><br>";
 else if( wans_dualwan_array[1] == "lan")
-statusmenu += "<b><#2883#> "+wans_lanport+" -</b><br>";
+statusmenu += "<b><#2894#> "+wans_lanport+" -</b><br>";
 else if( wans_dualwan_array[1] == "usb")
-statusmenu += "<b><#398#> -</b><br>";
+statusmenu += "<b><#399#> -</b><br>";
 }
 if((secondary_link_status == "2" && secondary_link_auxstatus == "0") || (secondary_link_status == "2" && secondary_link_auxstatus == "2"))
-statusmenu += "<span class='StatusClickHint' onclick='suspendconn(1, 0);' onmouseout='this.className=\"StatusClickHint\"' onmouseover='this.className=\"StatusClickHint_mouseover\"'><#1726#></span>";
+statusmenu += "<span class='StatusClickHint' onclick='suspendconn(1, 0);' onmouseout='this.className=\"StatusClickHint\"' onmouseover='this.className=\"StatusClickHint_mouseover\"'><#1733#></span>";
 else{
 statusmenu += "<span class='StatusClickHint' onclick='goToWAN(1);' onmouseout='this.className=\"StatusClickHint\"' onmouseover='this.className=\"StatusClickHint_mouseover\"'>";
 if(usb_index == 1){
 if(gobi_support)
-statusmenu += "<#2688#></span>";
+statusmenu += "<#2698#></span>";
 else
-statusmenu += "<#2216#></span>";
+statusmenu += "<#2226#></span>";
 }
 else
-statusmenu += "<#3643#></span>";
+statusmenu += "<#3655#></span>";
 }
 }
 }
@@ -927,11 +927,11 @@ var usbDevicesList = diskList.list();
 for(var i=0; i<usbDevicesList.length; i++){
 if(usbDevicesList[i].mountNumber > 0){
 statusmenu += "<div style='margin-top:2px;' class='StatusClickHint' onclick='remove_disk("+ usbDevicesList[i].node +");' onmouseout='this.className=\"StatusClickHint\"' onmouseover='this.className=\"StatusClickHint_mouseover\"'>";
-statusmenu += "<#1855#> <span style='font-weight:normal'>"+ usbDevicesList[i].deviceName +"</span></div>";
+statusmenu += "<#1862#> <span style='font-weight:normal'>"+ usbDevicesList[i].deviceName +"</span></div>";
 }
 }
 if(statusmenu == "")
-statusmenu = "<span class='StatusHint'><#1727#></span>";
+statusmenu = "<span class='StatusHint'><#1734#></span>";
 else if(statusmenu.howMany("remove_disk") > 1)
 statusmenu += "<div style='margin-top:2px;' class='StatusClickHint' onclick='remove_all_disk();' onmouseout='this.className=\"StatusClickHint\"' onmouseover='this.className=\"StatusClickHint_mouseover\"'>Eject all USB disks</div>";
 _caption = "USB storage";
@@ -942,21 +942,21 @@ else if(hint_show_id == 1){
 if(hadPlugged("printer"))
 statusmenu = "<span class='StatusClickHint' onclick='enableMonomode();' onmouseout='this.className=\"StatusClickHint\"' onmouseover='this.className=\"StatusClickHint_mouseover\"'>Enable Monopoly mode</span>";
 else
-statusmenu = "<span class='StatusHint'><#2790#></span>";
+statusmenu = "<span class='StatusHint'><#2800#></span>";
 _caption = "Printer";
 }
 return overlib(statusmenu, OFFSETX, -160, LEFT, STICKY, CAPTION, " ", CLOSETITLE, '');
 }
 else if(hint_array_id == 28){ //wan aggregation
 statusmenu = "<div>";
-statusmenu += "<#3698#>";
+statusmenu += "<#3710#>";
 statusmenu += "<ol>";
-statusmenu += "<li><#3699#></li>".replace("LAN 4", wanAggr_p2_name(orig_wnaports_bond));
-statusmenu += "<li><#3700#></li>";
-statusmenu += "<li><#3701#></li>";
-statusmenu += "<li><#3702#></li>";
+statusmenu += "<li><#3711#></li>".replace("LAN 4", wanAggr_p2_name(orig_wanports_bond));
+statusmenu += "<li><#3712#></li>";
+statusmenu += "<li><#3713#></li>";
+statusmenu += "<li><#3714#></li>";
 statusmenu += "</ol>";
-statusmenu += "<#3703#>";
+statusmenu += "<#3715#>";
 statusmenu += "</div>";
 return overlib(statusmenu, OFFSETX, -160, LEFT, DELAY, 400, WIDTH, 300, STICKY, CAPTION, " ");
 }
@@ -964,12 +964,12 @@ var tag_name= document.getElementsByTagName('a');
 for (var i=0;i<tag_name.length;i++)
 tag_name[i].onmouseout=nd;
 if(helpcontent == [] || helpcontent == "" || hint_array_id > helpcontent.length)
-return overlib('<#213#>', HAUTO, VAUTO);
+return overlib('<#214#>', HAUTO, VAUTO);
 else if(hint_array_id == 0 && hint_show_id > 21 && hint_show_id < 24)
 return overlib(helpcontent[hint_array_id][hint_show_id], FIXX, 270, FIXY, 30);
 else{
 if(hint_show_id > helpcontent[hint_array_id].length)
-return overlib('<#213#>', HAUTO, VAUTO);
+return overlib('<#214#>', HAUTO, VAUTO);
 else
 return overlib(helpcontent[hint_array_id][hint_show_id], HAUTO, VAUTO);
 }
@@ -997,7 +997,7 @@ if (typeof ol_border=='undefined') var ol_border="1";
 if (typeof ol_cellpad=='undefined') var ol_cellpad=6;
 if (typeof ol_offsetx=='undefined') var ol_offsetx=10;
 if (typeof ol_offsety=='undefined') var ol_offsety=10;
-if (typeof ol_text=='undefined') var ol_text='<#937#>';
+if (typeof ol_text=='undefined') var ol_text='<#938#>';
 if (typeof ol_cap=='undefined') var ol_cap="";
 if (typeof ol_sticky=='undefined') var ol_sticky=0;
 if (typeof ol_background=='undefined') var ol_background="";
@@ -2243,18 +2243,18 @@ sSeqSymbol = "- " + parseInt(nSeqSymbol * nMultSeqSymbol);
 /* Determine complexity based on overall score */
 if (nScore > 100) { nScore = 100; } else if (nScore < 0) { nScore = 0; }
 if(typeof document.forms[0] == "undefined" || (typeof document.forms[0] != "undefined" && document.form.current_page.value != "AiProtection_HomeProtection.asp")){
-if (nScore >= 0 && nScore < 20) { sComplexity = "<#1265#>"; }
-else if (nScore >= 20 && nScore < 40) { sComplexity = "<#467#>"; }
-else if (nScore >= 40 && nScore < 60) { sComplexity = "<#468#>"; }
-else if (nScore >= 60 && nScore < 80) { sComplexity = "<#469#>"; }
-else if (nScore >= 80 && nScore <= 100) { sComplexity = "<#470#>"; }
+if (nScore >= 0 && nScore < 20) { sComplexity = "<#1270#>"; }
+else if (nScore >= 20 && nScore < 40) { sComplexity = "<#468#>"; }
+else if (nScore >= 40 && nScore < 60) { sComplexity = "<#469#>"; }
+else if (nScore >= 60 && nScore < 80) { sComplexity = "<#470#>"; }
+else if (nScore >= 80 && nScore <= 100) { sComplexity = "<#471#>"; }
 }
 else{
-if (nScore >= 0 && nScore < 20) { sComplexity = "<a href='Advanced_Wireless_Content.asp' target='_blank'><#466#></a>"; }
-else if (nScore >= 20 && nScore < 40) { sComplexity = "<a href='Advanced_Wireless_Content.asp' target='_blank'><#467#></a>"; }
-else if (nScore >= 40 && nScore < 60) { sComplexity = "<a href='Advanced_Wireless_Content.asp' target='_blank'><#468#></a>"; }
-else if (nScore >= 60 && nScore < 80) { sComplexity = "<a href='Advanced_Wireless_Content.asp' target='_blank'><#469#></a>"; }
-else if (nScore >= 80 && nScore <= 100) { sComplexity = "<a href='Advanced_Wireless_Content.asp' target='_blank'><#470#></a>"; }
+if (nScore >= 0 && nScore < 20) { sComplexity = "<a href='Advanced_Wireless_Content.asp' target='_blank'><#467#></a>"; }
+else if (nScore >= 20 && nScore < 40) { sComplexity = "<a href='Advanced_Wireless_Content.asp' target='_blank'><#468#></a>"; }
+else if (nScore >= 40 && nScore < 60) { sComplexity = "<a href='Advanced_Wireless_Content.asp' target='_blank'><#469#></a>"; }
+else if (nScore >= 60 && nScore < 80) { sComplexity = "<a href='Advanced_Wireless_Content.asp' target='_blank'><#470#></a>"; }
+else if (nScore >= 80 && nScore <= 100) { sComplexity = "<a href='Advanced_Wireless_Content.asp' target='_blank'><#471#></a>"; }
 }
 /* Display updated score criteria to client */
 if(typeof document.forms[0] == "undefined" || (typeof document.forms[0] != "undefined" && document.form.current_page.value != "AiProtection_HomeProtection.asp")){ //for Router weakness status, Jimeing added at 2014/06/07

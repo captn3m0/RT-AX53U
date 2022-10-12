@@ -24,9 +24,9 @@ return header_info.protocol + "://" + header_info.host + ":" + header_info.port;
 },
 "dropbox" : {
 "server" : "https://www.dropbox.com/oauth2/authorize?",
-"response_type" : "token",
-"client_id" : "qah4ku73k3qmigj",
-"redirect_uri" : encodeURIComponent("" + oauthServer + "dropbox.html")
+"response_type" : "code",
+"client_id" : "tv67373nwrd5gl2",
+"redirect_uri" : encodeURIComponent("" + oauthServer + "dropbox3.html")
 }
 };
 var base64Encode = function(input) {
@@ -119,6 +119,8 @@ url += "&client_id=" + oauthVariable.dropbox.client_id;
 url += "&redirect_uri=" + oauthVariable.dropbox.redirect_uri;
 url += "&state=base64_" + base64Encode(gen_callback_url(_callBackFunc.name));
 url += "&force_reapprove=true&force_reauthentication=true";
+url += "&token_access_type=offline";
+url += "&action=set_dropbox_code";
 window.open(url,"mywindow","menubar=1,resizable=1,width=630,height=550");
 setListener(_callBackFunc);
 }

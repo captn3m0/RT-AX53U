@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#837#> - Blocking Page</title>
+<title><#838#> - Blocking Page</title>
 <script type="text/JavaScript" src="/js/jquery.js"></script>
 <style>
 body{
@@ -234,52 +234,52 @@ var flag = '<% get_parameter("flag"); %>';
 var block_info = '<% bwdpi_redirect_info(); %>';
 if(block_info != "")
 block_info = JSON.parse(block_info);
-var category_info = [ ["Parental Controls", "1", "<#1201#>", "<#1203#>", "<#1434#>"],
-["Parental Controls", "3", "<#1201#>", "<#1203#>", "<#1436#>"],
-["Parental Controls", "4", "<#1201#>", "<#1203#>", "<#1437#>"],
-["Parental Controls", "5", "<#1201#>", "<#1203#>", "<#1438#>"],
-["Parental Controls", "6", "<#1201#>", "<#1203#>", "<#1439#>"],
-["Parental Controls", "8", "<#1201#>", "<#1203#>", "<#1440#>"],
-["Parental Controls", "9", "<#1201#>", "<#1204#>", "<#1441#>"],
-["Parental Controls", "10", "<#1201#>", "<#1204#>", "<#1442#>"],
-["Parental Controls", "14", "<#1201#>", "<#1204#>", "<#1443#>"],
-["Parental Controls", "15", "<#1201#>", "<#1204#>", "<#1444#>"],
-["Parental Controls", "16", "<#1201#>", "<#1204#>", "<#1445#>"],
-["Parental Controls", "25", "<#1201#>", "<#1204#>", "<#1446#>"],
-["Parental Controls", "26", "<#1201#>", "<#1204#>", "<#1447#>"],
-["Parental Controls", "11", "<#1201#>", "<#1205#>", "<#1448#>"],
-["Parental Controls", "24", "<#1216#>", "<#1206#>", "<#1449#>"],
-["Parental Controls", "51", "<#1216#>", "<#1207#>", "<#1450#>"],
-["Parental Controls", "53", "<#1216#>", "<#1208#>", "<#1451#>"],
-["Parental Controls", "89", "<#1216#>", "<#1208#>", "<#1452#>"],
-["Parental Controls", "42", "<#1216#>", "<#1209#>", "<#1453#>"],
-["Parental Controls", "56", "<#1219#>", "<#1221#>", "<#1454#>"],
-["Parental Controls", "70", "<#1219#>", "<#1221#>", "<#1455#>"],
-["Parental Controls", "71", "<#1219#>", "<#1221#>", "<#1456#>"],
-["Parental Controls", "57", "<#1219#>", "<#1222#>", "<#1457#>"],
-["Parental Controls", "69", "<#1223#>", "<#1225#>", "<#1458#>"],
-["Parental Controls", "23", "<#1223#>", "<#1226#>", "<#1459#>"],
-["Home Protection", "91", "Anti-Trojan detecting and blocked", "", "<#1460#>"],
-["Home Protection", "2", "Malicious site blocked", "", "<#1435#>"],
-["Home Protection", "39", "Malicious site blocked", "", "<#1461#>"],
-["Home Protection", "73", "Malicious site blocked", "", "<#1462#>"],
-["Home Protection", "74", "Malicious site blocked", "", "<#1463#>"],
-["Home Protection", "75", "Malicious site blocked", "", "<#1464#>"],
-["Home Protection", "76", "Malicious site blocked", "", "<#1465#>"],
-["Home Protection", "77", "Malicious site blocked", "", "<#1466#>"],
-["Home Protection", "78", "Malicious site blocked", "", "<#1467#>"],
-["Home Protection", "79", "Malicious site blocked", "", "<#1468#>"],
-["Home Protection", "80", "Malicious site blocked", "", "<#1469#>"],
-["Home Protection", "81", "Malicious site blocked", "", "<#1470#>"],
-["Home Protection", "82", "Malicious site blocked", "", "<#1471#>"],
-["Home Protection", "83", "Malicious site blocked", "", "<#1472#>"],
-["Home Protection", "84", "Malicious site blocked", "", "<#1473#>"],
-["Home Protection", "85", "Malicious site blocked", "", "<#1474#>"],
-["Home Protection", "86", "Malicious site blocked", "", "<#1475#>"],
-["Home Protection", "88", "Malicious site blocked", "", "<#1476#>"],
-["Home Protection", "92", "Malicious site blocked", "", "<#1477#>"],
-["Home Protection", "94", "Malicious site blocked", "", "<#1478#>"],
-["Home Protection", "95", "Malicious site blocked", "", "<#1479#>"]
+var category_info = [ ["Parental Controls", "1", "<#1206#>", "<#1208#>", "<#1439#>"],
+["Parental Controls", "3", "<#1206#>", "<#1208#>", "<#1441#>"],
+["Parental Controls", "4", "<#1206#>", "<#1208#>", "<#1442#>"],
+["Parental Controls", "5", "<#1206#>", "<#1208#>", "<#1443#>"],
+["Parental Controls", "6", "<#1206#>", "<#1208#>", "<#1444#>"],
+["Parental Controls", "8", "<#1206#>", "<#1208#>", "<#1445#>"],
+["Parental Controls", "9", "<#1206#>", "<#1209#>", "<#1446#>"],
+["Parental Controls", "10", "<#1206#>", "<#1209#>", "<#1447#>"],
+["Parental Controls", "14", "<#1206#>", "<#1209#>", "<#1448#>"],
+["Parental Controls", "15", "<#1206#>", "<#1209#>", "<#1449#>"],
+["Parental Controls", "16", "<#1206#>", "<#1209#>", "<#1450#>"],
+["Parental Controls", "25", "<#1206#>", "<#1209#>", "<#1451#>"],
+["Parental Controls", "26", "<#1206#>", "<#1209#>", "<#1452#>"],
+["Parental Controls", "11", "<#1206#>", "<#1210#>", "<#1453#>"],
+["Parental Controls", "24", "<#1221#>", "<#1211#>", "<#1454#>"],
+["Parental Controls", "51", "<#1221#>", "<#1212#>", "<#1455#>"],
+["Parental Controls", "53", "<#1221#>", "<#1213#>", "<#1456#>"],
+["Parental Controls", "89", "<#1221#>", "<#1213#>", "<#1457#>"],
+["Parental Controls", "42", "<#1221#>", "<#1214#>", "<#1458#>"],
+["Parental Controls", "56", "<#1224#>", "<#1226#>", "<#1459#>"],
+["Parental Controls", "70", "<#1224#>", "<#1226#>", "<#1460#>"],
+["Parental Controls", "71", "<#1224#>", "<#1226#>", "<#1461#>"],
+["Parental Controls", "57", "<#1224#>", "<#1227#>", "<#1462#>"],
+["Parental Controls", "69", "<#1228#>", "<#1230#>", "<#1463#>"],
+["Parental Controls", "23", "<#1228#>", "<#1231#>", "<#1464#>"],
+["Home Protection", "91", "Anti-Trojan detecting and blocked", "", "<#1465#>"],
+["Home Protection", "2", "Malicious site blocked", "", "<#1440#>"],
+["Home Protection", "39", "Malicious site blocked", "", "<#1466#>"],
+["Home Protection", "73", "Malicious site blocked", "", "<#1467#>"],
+["Home Protection", "74", "Malicious site blocked", "", "<#1468#>"],
+["Home Protection", "75", "Malicious site blocked", "", "<#1469#>"],
+["Home Protection", "76", "Malicious site blocked", "", "<#1470#>"],
+["Home Protection", "77", "Malicious site blocked", "", "<#1471#>"],
+["Home Protection", "78", "Malicious site blocked", "", "<#1472#>"],
+["Home Protection", "79", "Malicious site blocked", "", "<#1473#>"],
+["Home Protection", "80", "Malicious site blocked", "", "<#1474#>"],
+["Home Protection", "81", "Malicious site blocked", "", "<#1475#>"],
+["Home Protection", "82", "Malicious site blocked", "", "<#1476#>"],
+["Home Protection", "83", "Malicious site blocked", "", "<#1477#>"],
+["Home Protection", "84", "Malicious site blocked", "", "<#1478#>"],
+["Home Protection", "85", "Malicious site blocked", "", "<#1479#>"],
+["Home Protection", "86", "Malicious site blocked", "", "<#1480#>"],
+["Home Protection", "88", "Malicious site blocked", "", "<#1481#>"],
+["Home Protection", "92", "Malicious site blocked", "", "<#1482#>"],
+["Home Protection", "94", "Malicious site blocked", "", "<#1483#>"],
+["Home Protection", "95", "Malicious site blocked", "", "<#1484#>"]
 ];
 var target_info = {
 url: "",
@@ -299,7 +299,7 @@ target_info.category_id = block_info[2];
 get_category_info();
 }
 else{ //for Parental Controls (Time Scheduling)
-target_info.desc = "<#1490#>";
+target_info.desc = "<#1495#>";
 }
 }
 function get_category_info(){
@@ -323,19 +323,19 @@ var code_suggestion = "";
 var code_title = "";
 var parental_string = "";
 code = "<ul>";
-code += "<li><div><span class='desc_info'><#1700#>:</span><br>" + target_info.desc + "</div></li>";
+code += "<li><div><span class='desc_info'><#1707#>:</span><br>" + target_info.desc + "</div></li>";
 if(casenum != "")
 code += "<li><div><span class='desc_info'>URL: </span>" + target_info.url +"</div></li>";
 if(target_info.category_type == "Parental Controls")
-code += "<li><div><span class='desc_info'><#1211#> :</span>" + target_info.content_category + "</div></li>";
+code += "<li><div><span class='desc_info'><#1216#> :</span>" + target_info.content_category + "</div></li>";
 code += "</ul>";
 document.getElementById('detail_info').innerHTML = code;
 if(target_info.category_type == "Parental Controls"){ //Webs Apps filter
-code_title = "<div class='er_title' style='height:auto;'><#1489#></div>";
+code_title = "<div class='er_title' style='height:auto;'><#1494#></div>";
 code_suggestion = "<ul>";
-code_suggestion += "<li><span><#1488#></span></li>";
 code_suggestion += "<li><span><#1493#></span></li>";
-code_suggestion += '<li><#1271#><a href="https://global.sitesafety.trendmicro.com/index.php" target="_blank"><#1272#></a></li>';
+code_suggestion += "<li><span><#1498#></span></li>";
+code_suggestion += '<li><#1276#><a href="https://global.sitesafety.trendmicro.com/index.php" target="_blank"><#1277#></a></li>';
 code_suggestion += "</ul>";
 document.getElementById('tm_block').style.display = "none";
 $("#go_btn").click(function(){
@@ -344,7 +344,7 @@ location.href = "AiProtection_WebProtector.asp";
 document.getElementById('go_btn').style.display = "";
 }
 else if(target_info.category_type == "Home Protection"){
-code_title = "<div class='er_title' style='height:auto;'><#1485#></div>";
+code_title = "<div class='er_title' style='height:auto;'><#1490#></div>";
 code_suggestion = "<ul>";
 code_suggestion += '<li>If you are not sure of this website, visit <a href="https://global.sitesafety.trendmicro.com/index.php" target="_blank">TrendMicro\'s Site Safety Center</a> for more information. You can check the safety level of a particular URL that might seem suspicious.</li>';
 code_suggestion += "<li>If you trust this website, click <a id='goToSetup' style='text-decoration:underline;'>here</a> to unblock (administrator credential required)</li>";
@@ -356,14 +356,14 @@ location.href = "AiProtection_HomeProtection.asp";
 document.getElementById('go_btn').style.display = "";*/
 }
 else if(flag != ""){
-code_title = "<div class='er_title' style='height:auto;'><#803#></div>";
-document.getElementById('main_reason').innerHTML = "<#802#>";
+code_title = "<div class='er_title' style='height:auto;'><#804#></div>";
+document.getElementById('main_reason').innerHTML = "<#803#>";
 code = "";
-code += "<div><#813#></div>";
+code += "<div><#814#></div>";
 document.getElementById('detail_info').innerHTML = code;
 code_suggestion = "<ul>";
-code_suggestion += "<li><span><#814#></span></li>";
 code_suggestion += "<li><span><#815#></span></li>";
+code_suggestion += "<li><span><#816#></span></li>";
 code_suggestion += "</ul>";
 $("#go_btn").click(function(){
 location.href = "AdaptiveQoS_TrafficLimiter.asp";
@@ -371,14 +371,14 @@ location.href = "AdaptiveQoS_TrafficLimiter.asp";
 document.getElementById('go_btn').style.display = "";
 }
 else{ //for Parental Control(Time Scheduling)
-code_title = "<div class='er_title' style='height:auto;'><#1494#></div>"
+code_title = "<div class='er_title' style='height:auto;'><#1499#></div>"
 code_suggestion = "<ul>";
 if(bwdpi_support)
-parental_string = "<#3245#>";
+parental_string = "<#3256#>";
 else
-parental_string = "<#463#>";
-code_suggestion += "<li><#1491#> "+ parental_string +" <#1492#></li>";
-code_suggestion += "<li><#1493#></li>";
+parental_string = "<#464#>";
+code_suggestion += "<li><#1496#> "+ parental_string +" <#1497#></li>";
+code_suggestion += "<li><#1498#></li>";
 code_suggestion += "</ul>";
 $("#go_btn").click(function(){
 location.href = "ParentalControl.asp";
@@ -407,8 +407,8 @@ location.href = "/AiProtection_MaliciousSitesBlocking.asp"
 </div>
 <div id="page_title" class="div_td title_text"></div>
 </div>
-<div class="prod_madelName"><#838#></div>
-<div id="main_reason" class="p1 title_gap"><#1481#></div>
+<div class="prod_madelName"><#839#></div>
+<div id="main_reason" class="p1 title_gap"><#1486#></div>
 <div ></div>
 <div>
 <div class="p1 title_gap"></div>
@@ -416,19 +416,19 @@ location.href = "/AiProtection_MaliciousSitesBlocking.asp"
 <div id="detail_info"></div>
 </div>
 </div>
-<div class="p1 title_gap"><#822#></div>
+<div class="p1 title_gap"><#823#></div>
 <div>
 <div class="p1 title_gap"></div>
 <div class="nologin">
 <div id="case_content"></div>
 <div id="suggestion"></div>
 <div id="tm_block" style="display:none">
-<!--div><#1484#></div-->
+<!--div><#1489#></div-->
 <div class="tm_logo"></div>
 </div>
 </div>
 </div>
-<div id="go_btn" class='button' style="display:none;"><#1511#></div>
+<div id="go_btn" class='button' style="display:none;"><#1516#></div>
 </div>
 </body>
 </html>

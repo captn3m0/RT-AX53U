@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#837#> - IP Sec</title>
+<title><#838#> - IP Sec</title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="pwdmeter.css">
@@ -139,10 +139,10 @@ while(document.form.ipsec_local_public_interface.options.length > 0){
 document.form.ipsec_local_public_interface.remove(0);
 }
 var wan_type_list = [];
-var option = ["wan", "<#1846#>"];
+var option = ["wan", "<#1853#>"];
 wan_type_list.push(option);
 if(dualWAN_support) {
-option = ["wan2", "<#1853#>"];
+option = ["wan2", "<#1860#>"];
 wan_type_list.push(option);
 }
 for(var i = 0; i < wan_type_list.length; i += 1) {
@@ -181,7 +181,7 @@ httpApi.get_ipsec_clientlist(function(response){
 ipsec_client_list_json = response;
 showipsec_clientlist();
 });
-$("#cert_status").html("<#1412#>");
+$("#cert_status").html("<#1417#>");
 httpApi.get_ipsec_cert_info(function(response){
 if(response != "") {
 if(response.issueTo != "" && response.issueTo != undefined)
@@ -191,7 +191,7 @@ $("#cert_issueBy").html(response.issueBy);
 if(response.expire != "" && response.expire != undefined)
 $("#cert_expire").html(response.expire);
 if($("#cert_issueTo").html() != "" && $("#cert_issueBy").html() != "" && $("#cert_expire").html() != ""){
-$("#cert_status").html("<#1411#>");
+$("#cert_status").html("<#1416#>");
 $(".ipsec_inactive").hide();
 $(".button_gen_dis.ipsec_active").removeClass("button_gen_dis").addClass("button_gen");
 $(".button_gen.ipsec_active.export").unbind("click");
@@ -199,7 +199,7 @@ $(".button_gen.ipsec_active.export").click(function(e){export_cert("0");});
 $(".button_gen.ipsec_active.renew").unbind("click");
 $(".button_gen.ipsec_active.renew").click(function(e){export_cert("1");});
 if(response.update_state == "1")
-$(".ipsec_inactive.renew_hint").show().html("<br><#3604#>");
+$(".ipsec_inactive.renew_hint").show().html("<br><#3616#>");
 }
 }
 });
@@ -238,7 +238,7 @@ $("#client_pwd_strength").css("display", "none");
 var MAX_RETRY_NUM = 5;
 var external_ip_retry_cnt = MAX_RETRY_NUM;
 function show_warning_message(){
-var set_ddns_text = '<a href="../Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration: underline; font-family:Lucida Console;"><#3612#></a>';
+var set_ddns_text = '<a href="../Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration: underline; font-family:Lucida Console;"><#3624#></a>';
 var set_ip_and_ddns_text = wanlink_ipaddr() + ', ' + set_ddns_text;
 if(realip_support && (based_modelid == "BRT-AC828"|| wans_mode != "lb")){
 if(realip_state != "2" && external_ip_retry_cnt > 0){
@@ -249,7 +249,7 @@ setTimeout("get_real_ip();", 3000);
 }
 else if(realip_state != "2"){
 if(validator.isPrivateIP(wanlink_ipaddr())){
-document.getElementById("privateIP_notes").innerHTML = "<#3552#>";
+document.getElementById("privateIP_notes").innerHTML = "<#3564#>";
 document.getElementById("privateIP_notes").style.display = "";
 $(".general_server_addr").html("-");
 document.getElementById("faq_port_forwarding").href=faq_href_port_forwarding; //this id is include in string : #vpn_privateIP_hint#
@@ -267,7 +267,7 @@ $(".general_server_addr").html(set_ip_and_ddns_text);
 }
 else{
 if(!external_ip){
-document.getElementById("privateIP_notes").innerHTML = "<#3552#>";
+document.getElementById("privateIP_notes").innerHTML = "<#3564#>";
 document.getElementById("privateIP_notes").style.display = "";
 $(".general_server_addr").html("-");
 document.getElementById("faq_port_forwarding").href=faq_href_port_forwarding; //this id is include in string : #vpn_privateIP_hint#
@@ -285,7 +285,7 @@ $(".general_server_addr").html(set_ip_and_ddns_text);
 }
 }
 else if(validator.isPrivateIP(wanlink_ipaddr())){
-document.getElementById("privateIP_notes").innerHTML = "<#3552#>";
+document.getElementById("privateIP_notes").innerHTML = "<#3564#>";
 document.getElementById("privateIP_notes").style.display = "";
 $(".general_server_addr").html("-");
 document.getElementById("faq_port_forwarding").href=faq_href_port_forwarding; //this id is include in string : #vpn_privateIP_hint#
@@ -343,7 +343,7 @@ var ipsec_user_name = "";
 var ipsec_user_pwd = "";
 code +='<table width="100%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="ipsec_client_list_table">';
 if(Object.keys(ipsec_client_list_json).length == 0)
-code +='<tr><td style="color:#FFCC00;" colspan="5"><#2372#></td></tr>';
+code +='<tr><td style="color:#FFCC00;" colspan="5"><#2382#></td></tr>';
 else{
 for(var username in ipsec_client_list_json) {
 if(ipsec_client_list_json.hasOwnProperty(username)) {
@@ -380,14 +380,14 @@ var ike_obj = document.form.ipsec_client_list_ike;
 var rule_num = document.getElementById("ipsec_client_list_table").rows.length;
 var item_num = document.getElementById("ipsec_client_list_table").rows[0].cells.length;
 if(rule_num >= upper) {
-alert("<#2444#> " + upper + " <#2445#>");
+alert("<#2454#> " + upper + " <#2455#>");
 return false;
 }
 var validAccount = function() {
 var valid_username = document.form.ipsec_client_list_username;
 var valid_password = document.form.ipsec_client_list_password;
 if(valid_username.value == "") {
-alert("<#315#>");
+alert("<#316#>");
 valid_username.focus();
 return false;
 }
@@ -395,7 +395,7 @@ else if(!Block_chars(valid_username, [" ", "@", "*", "+", "|", ":", "?", "<", ">
 return false;
 }
 if(valid_password.value == "") {
-alert("<#315#>");
+alert("<#316#>");
 valid_password.focus();
 return false;
 }
@@ -409,7 +409,7 @@ return false;
 }
 var is_common_string = check_common_string(valid_password.value, "httpd_password");
 if(valid_password.value.length > 0 && is_common_string){
-if(!confirm("<#2261#> : <#311#>")){
+if(!confirm("<#2271#> : <#312#>")){
 valid_password.focus();
 valid_password.select();
 return false;
@@ -421,7 +421,7 @@ if(validAccount()) {
 if(item_num >= 2) {
 for(var i = 0; i < rule_num; i +=1 ) {
 if(ipsec_client_list_json.hasOwnProperty(username_obj.value)) {
-alert("<#2437#>");
+alert("<#2447#>");
 username_obj.focus();
 username_obj.select();
 return false;
@@ -488,7 +488,7 @@ return false;
 }
 var is_common_string = check_common_string(document.form.ipsec_preshared_key.value, "wpa_key");
 if(is_common_string){
-if(!confirm("<#3562#> : <#311#>")){
+if(!confirm("<#3574#> : <#312#>")){
 document.form.ipsec_preshared_key.focus();
 document.form.ipsec_preshared_key.select();
 return false;
@@ -497,7 +497,7 @@ return false;
 var ipAddr = document.form.ipsec_clients_start.value.trim() + ".1";
 var ipformat = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
 if(!(ipformat.test(ipAddr))) {
-alert(document.form.ipsec_clients_start.value+" <#329#>");
+alert(document.form.ipsec_clients_start.value+" <#330#>");
 document.form.ipsec_clients_start.focus();
 document.form.ipsec_clients_start.select();
 return false;
@@ -507,7 +507,7 @@ var ipsecLanNetMask = "255.255.255.0";
 var ipConflict;
 ipConflict = checkIPConflict("LAN", ipsecLanIPAddr, ipsecLanNetMask);
 if(ipConflict.state) {
-alert("<#2433#>: " + ipConflict.ipAddr + ",\n" + "<#2765#>: " + ipConflict.netLegalRangeStart + " ~ " + ipConflict.netLegalRangeEnd);
+alert("<#2443#>: " + ipConflict.ipAddr + ",\n" + "<#2775#>: " + ipConflict.netLegalRangeStart + " ~ " + ipConflict.netLegalRangeEnd);
 document.form.ipsec_clients_start.focus();
 document.form.ipsec_clients_start.select();
 return false;
@@ -546,7 +546,7 @@ return true;
 }
 function applyRule() {
 if(validForm()) {
-var confirmFlag = confirm('<#3610#>');
+var confirmFlag = confirm('<#3622#>');
 if(!confirmFlag)
 return false;
 /* data structure
@@ -706,7 +706,7 @@ totalcnt += ipsec_connect_status_array[get_ipsec_conn[index][0]].length;
 if(totalcnt > 0) {
 var code = "";
 code +='<a class="hintstyle2" href="javascript:void(0);" onClick="showIPSecClients(conn_name_array, event);">';
-code +='<#1509#>(' + totalcnt + ')</a>';
+code +='<#1514#>(' + totalcnt + ')</a>';
 $(".general_connection_status").html(code);
 }
 setTimeout("update_connect_status();",3000);
@@ -722,16 +722,16 @@ $("#connection_ipsec_profile_panel").css("top", "440px");
 $("#connection_ipsec_profile_panel").css("left", "225px");
 html += "<div class='ipsec_connect_status_title_bg'>";
 html += "<div class='ipsec_connect_status_title' style='width:240px;'>Remote IP</div>";/*untranslated*/
-html += "<div class='ipsec_connect_status_title'><#3183#></div>";
-html += "<div class='ipsec_connect_status_title'><#868#></div>";
-html += "<div class='ipsec_connect_status_title'><#3569#> <#2852#></div>";
+html += "<div class='ipsec_connect_status_title'><#3194#></div>";
+html += "<div class='ipsec_connect_status_title'><#869#></div>";
+html += "<div class='ipsec_connect_status_title'><#3581#> <#2862#></div>";
 html += "<div class='ipsec_connect_status_title'>PSKRAUTHTIME</div>";/*untranslated*/
 html += "<div class='ipsec_connect_status_close'><a onclick='close_connect_status();'><img width='18px' height='18px' src=\"/images/button-close.png\" onmouseover='this.src=\"/images/button-close2.png\"' onmouseout='this.src=\"/images/button-close.png\"' border='0'></a></div>";
 html += "</div>";
 html += "<div style='clear:both;'></div>";
 $("#connection_ipsec_profile_panel").html(html);
 html = "";
-var statusText = [[""], ["<#188#>"], ["<#1612#>"], ["<#1612#>"]];
+var statusText = [[""], ["<#189#>"], ["<#1617#>"], ["<#1617#>"]];
 for(var i = 0; i < ipsec_conn_name_array.length; i += 1) {
 ipsec_connect_status_array[ipsec_conn_name_array[i]].forEach(function(item, index, array){
 if(item != "") {
@@ -774,7 +774,7 @@ if(ikev2_cert_state == "3"){
 clearInterval(interval_check);
 $(".button_gen.ipsec_active.renew").show();
 $(".renewLoadingIcon").hide();
-alert("<#3608#>");
+alert("<#3620#>");
 }
 else{
 count++;
@@ -782,7 +782,7 @@ if(count >= timer){
 clearInterval(interval_check);
 $(".button_gen.ipsec_active.renew").show();
 $(".renewLoadingIcon").hide();
-alert("<#3609#>");
+alert("<#3621#>");
 }
 }
 }, 1000);
@@ -824,10 +824,10 @@ alert("<#3609#>");
 <div id="ipsec_view_log_panel" class="ipsec_view_log_panel" style="padding:15px;">
 <textarea cols="63" rows="44" wrap="off" readonly="readonly" id="textarea" style="width:99%; font-family:'Courier New', Courier, mono; font-size:11px;background:#475A5F;color:#FFFFFF;resize:none;"><% nvram_dump("ipsec.log",""); %></textarea>
 <div style='text-align:center;margin-top:15px;'>
-<input class="button_gen" onclick="cancel_viewLog();" type="button" value="<#198#>"/>
-<input class="button_gen" onclick="clear_viewLog();" type="button" value="<#1636#>"/>
-<input class="button_gen" onclick="save_viewLog();" type="button" value="<#1655#>"/>
-<input class="button_gen" onclick="refresh_viewLog();" type="button" value="<#1657#>"/>
+<input class="button_gen" onclick="cancel_viewLog();" type="button" value="<#199#>"/>
+<input class="button_gen" onclick="clear_viewLog();" type="button" value="<#1641#>"/>
+<input class="button_gen" onclick="save_viewLog();" type="button" value="<#1660#>"/>
+<input class="button_gen" onclick="refresh_viewLog();" type="button" value="<#1662#>"/>
 </div>
 </div>
 <table width="760px" border="0" cellpadding="5" cellspacing="0" class="FormTitle" id="FormTitle">
@@ -835,21 +835,21 @@ alert("<#3609#>");
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#169#> - IPSec VPN</div>
+<div class="formfonttitle"><#170#> - IPSec VPN</div>
 <div id="divSwitchMenu" style="margin-top:-40px;float:right;"></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
 <div id="privateIP_notes" class="formfontdesc" style="display:none;color:#FFCC00;"></div>
 <div class="formfontdesc">
-<span class="hint-color"><#3578#></span>
+<span class="hint-color"><#3590#></span>
 </div>
 <table id="ipsec_general_setting" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#3240#></td>
+<td colspan="2"><#3251#></td>
 </tr>
 </thead>
 <tr>
-<th><#3488#></th>
+<th><#3500#></th>
 <td>
 <div align="center" class="left" style="float:left;cursor:pointer;" id="radio_ipsec_enable"></div>
 <div class="iphone_switch_container" style="height:32px; width:74px; position: relative; overflow: hidden;"></div>
@@ -869,32 +869,32 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 </td>
 </tr>
 <tr class="ipsec_setting_content">
-<th><#3730#></th>
+<th><#3742#></th>
 <td class="general_server_addr">-</td>
 </tr>
 <tr class="ipsec_setting_content">
-<th><#483#></th>
+<th><#484#></th>
 <td class="general_connection_status">-</td>
 </tr>
 <tr class="ipsec_setting_content">
-<th><#742#></th>
+<th><#743#></th>
 <td>
-<input class="button_gen" onclick="viewLog()" type="button" value="<#1635#>"/>
+<input class="button_gen" onclick="viewLog()" type="button" value="<#1640#>"/>
 </td>
 </tr>
 <tr class="ipsec_setting_content">
-<th><#777#></th>
+<th><#778#></th>
 <td>
 <select id="selSwitchMode" onchange="switchSettingsMode(this.options[this.selectedIndex].value)" class="input_option" style="margin-left:2px;">
-<option value="1" selected><#378#></option>
-<option value="2"><#376#></option>
+<option value="1" selected><#379#></option>
+<option value="2"><#377#></option>
 </select>
 </td>
 </tr>
 <tr class="ipsec_setting_content">
-<th><#3562#></th>
+<th><#3574#></th>
 <td>
-<input id="ipsec_preshared_key" name="ipsec_preshared_key" type="password" autocapitalization="off" onBlur="switchType(this, false);" onFocus="switchType(this, true);" class="input_25_table" maxlength="32" placeholder="<#3554#>" autocomplete="off" autocorrect="off" autocapitalize="off">
+<input id="ipsec_preshared_key" name="ipsec_preshared_key" type="password" autocapitalization="off" onBlur="switchType(this, false);" onFocus="switchType(this, true);" class="input_25_table" maxlength="32" placeholder="<#3566#>" autocomplete="off" autocorrect="off" autocapitalize="off">
 <div id="preshared_key_strength"></div>
 </td>
 </tr>
@@ -903,19 +903,19 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable setting_adv" style="margin-top:15px;">
 <thead>
 <tr>
-<td colspan="2"><#376#></td>
+<td colspan="2"><#377#></td>
 </tr>
 </thead>
 <tr>
-<th><#3597#></th>
+<th><#3609#></th>
 <td>500</td>
 </tr>
 <tr>
-<th><#3598#></th>
+<th><#3610#></th>
 <td>4500</td>
 </tr>
 <tr>
-<th><#3482#></th>
+<th><#3494#></th>
 <td>
 <input type="text" maxlength="11" class="input_12_table" name="ipsec_clients_start" onBlur="setClientsEnd();" value="10.10.10" autocomplete="off" autocorrect="off" autocapitalize="off"/>
 <span style="font-family: Lucida Console;color: #FFF;">.1 ~ </span>
@@ -923,35 +923,35 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 </td>
 </tr>
 <tr>
-<th><#293#></th>
+<th><#294#></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="ipsec_dns1" onkeypress="return validator.isIPAddr(this, event)" autocomplete="off" autocorrect="off" autocapitalize="off">
-<span class="hint-color"><#1973#></span>
+<span class="hint-color"><#1980#></span>
 </td>
 </tr>
 <tr>
-<th><#295#></th>
+<th><#296#></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="ipsec_dns2" onkeypress="return validator.isIPAddr(this, event)" autocomplete="off" autocorrect="off" autocapitalize="off">
-<span class="hint-color"><#1973#></span>
+<span class="hint-color"><#1980#></span>
 </td>
 </tr>
 <tr>
-<th><#2388#></th>
+<th><#2398#></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="ipsec_wins1" onkeypress="return validator.isIPAddr(this, event)" autocomplete="off" autocorrect="off" autocapitalize="off">
-<span class="hint-color"><#1973#></span>
+<span class="hint-color"><#1980#></span>
 </td>
 </tr>
 <tr>
-<th><#2389#></th>
+<th><#2399#></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="ipsec_wins2" onkeypress="return validator.isIPAddr(this, event)" autocomplete="off" autocorrect="off" autocapitalize="off">
-<span class="hint-color"><#1973#></span>
+<span class="hint-color"><#1980#></span>
 </td>
 </tr>
 <tr id="tr_localPublicInterface" style="display:none;">
-<th><#3561#></th>
+<th><#3573#></th>
 <td>
 <select name="ipsec_local_public_interface" class="input_option"></select>
 </td>
@@ -964,23 +964,23 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 <td colspan="2">IKEv1 Config</td></tr>
 </thead>
 <tr id="tr_adv_exchange_mode">
-<th><#3567#></th>
-<td><#3568#></td>
+<th><#3579#></th>
+<td><#3580#></td>
 </tr>
 <tr id="tr_adv_dead_peer_detection">
-<th><#3570#></th>
+<th><#3582#></th>
 <td>
 <input type="radio" name="ipsec_dead_peer_detection" id="ipsec_dead_peer_detection_en" class="input" value="1" onchange="changeAdvDeadPeerDetection(this)" checked>
-<label for='ipsec_dead_peer_detection_en' id="ipsec_dead_peer_detection_en_label"><#3797#></label>
+<label for='ipsec_dead_peer_detection_en' id="ipsec_dead_peer_detection_en_label"><#3809#></label>
 <input type="radio" name="ipsec_dead_peer_detection" id="ipsec_dead_peer_detection_dis" class="input" value="0" onchange="changeAdvDeadPeerDetection(this)">
-<label for='ipsec_dead_peer_detection_dis' id="ipsec_dead_peer_detection_dis_label"><#3798#></label>
+<label for='ipsec_dead_peer_detection_dis' id="ipsec_dead_peer_detection_dis_label"><#3810#></label>
 </td>
 </tr>
 <tr id="tr_adv_dpd_interval">
-<th><#3571#></th>
+<th><#3583#></th>
 <td>
 <input type="text" class="input_3_table" name="ipsec_dpd" maxlength="3" value="10" onKeyPress="return validator.isNumber(this,event)" autocomplete="off" autocorrect="off" autocapitalize="off">
-<span class="hint-color">(10~900) <#3047#></span>
+<span class="hint-color">(10~900) <#3058#></span>
 </td>
 </tr>
 </table>
@@ -990,33 +990,33 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 <td colspan="2">IKEv2 Config</td></tr>
 </thead>
 <tr>
-<th><#3493#></th>
+<th><#3505#></th>
 <td>
-<div><#726#> : <span id="cert_status"></span></div>
-<div><#3602#> : <span id="cert_issueTo"></span></div>
-<div><#3601#> : <span id="cert_issueBy"></span></div>
-<div><#3533#> : <span id="cert_expire"></span></div>
+<div><#727#> : <span id="cert_status"></span></div>
+<div><#3614#> : <span id="cert_issueTo"></span></div>
+<div><#3613#> : <span id="cert_issueBy"></span></div>
+<div><#3545#> : <span id="cert_expire"></span></div>
 <div>
-<input class="button_gen_dis ipsec_active export" type="button" value="<#1510#>">
-<span class="ipsec_inactive"><#724#></span>
+<input class="button_gen_dis ipsec_active export" type="button" value="<#1515#>">
+<span class="ipsec_inactive"><#725#></span>
 <input type="radio" name="ipsec_export_cert" id="ipsec_export_cert_windows" class="input" value="0" checked>
-<label for="ipsec_export_cert_windows"><#3606#></label>
+<label for="ipsec_export_cert_windows"><#3618#></label>
 <input type="radio" name="ipsec_export_cert" id="ipsec_export_cert_mobile" class="input" value="1">
-<label for="ipsec_export_cert_mobile"><#3607#></label>
+<label for="ipsec_export_cert_mobile"><#3619#></label>
 </div>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(33,2);"><#3603#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(33,2);"><#3615#></a></th>
 <td style="position:relative;">
-<input class="button_gen_dis ipsec_active renew" type="button" value="<#205#>">
-<span class="ipsec_inactive renew_hint"><#724#></span>
+<input class="button_gen_dis ipsec_active renew" type="button" value="<#206#>">
+<span class="ipsec_inactive renew_hint"><#725#></span>
 <div class="renewLoadingIcon"></div>
 </td>
 </tr>
 </table>
 <div class="formfontdesc" style="margin-top:8px;">
-<#3489#> :
+<#3501#> :
 <span class="faq_link">1. <a id="faq_windows" href="" target="_blank" style="text-decoration:underline;">Windows</a></span>
 <span class="faq_link">2. <a id="faq_macOS" href="" target="_blank" style="text-decoration:underline;">Mac OS</a></span>
 <span class="faq_link">3. <a id="faq_iPhone" href="" target="_blank" style="text-decoration:underline;">iOS</a></span>
@@ -1025,14 +1025,14 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 <table id="tbAccountList" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table" style="margin-top:15px;">
 <thead>
 <tr>
-<td colspan="4"><#3457#>&nbsp;(<#2576#>&nbsp;8)</td>
+<td colspan="4"><#3469#>&nbsp;(<#2586#>&nbsp;8)</td>
 </tr>
 </thead>
 <tr>
-<th><#3456#></th>
-<th><#2261#></th>
-<th><#3611#></th>
-<th><#2575#></th>
+<th><#3468#></th>
+<th><#2271#></th>
+<th><#3623#></th>
+<th><#2585#></th>
 </tr>
 <tr>
 <td width="30%">
@@ -1057,7 +1057,7 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 </div>
 </div>
 <div id="ipsec_apply" class="apply_gen">
-<input class="button_gen" onclick="applyRule()" type="button" value="<#195#>"/>
+<input class="button_gen" onclick="applyRule()" type="button" value="<#196#>"/>
 </div>
 </td>
 </tr>

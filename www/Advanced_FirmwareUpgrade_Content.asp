@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#837#> - <#409#></title>
+<title><#838#> - <#410#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="css/confirm_block.css">
@@ -216,7 +216,7 @@ function showDST(){
 var system_timezone_dut = "<% nvram_get("time_zone"); %>";
 if(system_timezone_dut.search("DST") >= 0 && "<% nvram_get("time_zone_dst"); %>" == "1"){
 document.getElementById('dstzone').style.display = "";
-document.getElementById('dstzone').innerHTML = "<#278#>";
+document.getElementById('dstzone').innerHTML = "<#279#>";
 }
 }
 function load_time_hour(){
@@ -277,7 +277,7 @@ document.getElementById("asus_link2").href = helplink; //#FW_desc0#
 document.getElementById("faq_link1").href=faq_href1; //#FW_n3#
 $("#FWString").append("<span class='current_fw_release_note'>"+FWString+"</span>"); //Untranslated
 if(afwupg_support && webs_update_enable_orig == 1){
-$(".current_fw_release_note").click({"model_name": "<#838#>", "fwver": FWString}, show_current_release_note);
+$(".current_fw_release_note").click({"model_name": "<#839#>", "fwver": FWString}, show_current_release_note);
 }
 if(revertfw_support && RevertFWver != ""){
 $("#FWString").append("<span class='label-fw_revert'>Revert</span>"); //Untranslated
@@ -294,15 +294,15 @@ var get_cfg_clientlist = httpApi.hookGet("get_cfg_clientlist", true);
 $("#fw_version_tr").empty();
 var html = "";
 html += "<tr id='update_div' style='display:none;'>";
-html += "<th><#989#></th>";
+html += "<th><#990#></th>";
 html += "<td>";
 html += '<div>';
-html += '<input type="button" id="update" name="update" class="button_gen" onclick="show_offline_msg(true);" value="<#2577#>" />';
-html += '<div><input type="button" id="amas_update" class="button_gen" style="margin:-33px 0px 0px 200px;display:none;" onclick="cfgsync_firmware_upgrade();" value="<#1663#>"/><div>';
+html += '<input type="button" id="update" name="update" class="button_gen" onclick="show_offline_msg(true);" value="<#2587#>" />';
+html += '<div><input type="button" id="amas_update" class="button_gen" style="margin:-33px 0px 0px 200px;display:none;" onclick="cfgsync_firmware_upgrade();" value="<#1668#>"/><div>';
 html += '</div>';
-html += '<div id="check_beta_div"><input type="checkbox" name="check_beta" id="amas_beta" onclick="change_beta_path()" value="" <% nvram_match("webs_update_beta", "1", "checked"); %>/><#2121#></div>'; // Untranslated
+html += '<div id="check_beta_div"><input type="checkbox" name="check_beta" id="amas_beta" onclick="change_beta_path()" value="" <% nvram_match("webs_update_beta", "1", "checked"); %>/><#2128#></div>'; // Untranslated
 html += '<div id="linkpage_div" class="button_helplink" style="margin-left:200px;margin-top:-38px;display:none;">';
-html += '<a id="linkpage" target="_blank"><div style="padding-top:5px;"><#2577#></div></a>';
+html += '<a id="linkpage" target="_blank"><div style="padding-top:5px;"><#2587#></div></a>';
 html += '</div>';
 html += '<div id="check_states">';
 html += '<span id="update_states"></span>';
@@ -315,11 +315,11 @@ $("#fw_version_tr").before(html);
 var mac_id = '<% get_lan_hwaddr(); %>'.replace(/:/g, "");
 html = "";
 html += "<tr>";
-html += "<td class='aimesh_node_category_bg' colspan='2'><#1099#></td>";
+html += "<td class='aimesh_node_category_bg' colspan='2'><#1104#></td>";
 html += "</tr>";
 html += "<tr>";
 html += "<th>";
-html += "<#838#>";
+html += "<#839#>";
 html += "</th>";
 html += "</th>";
 html += "<td id='amas_" + mac_id + "' current_online='1'>";
@@ -329,8 +329,8 @@ html += "<span class='aimesh_fw_revert'>Revert</span>";
 }
 html += "</div>";
 html += "<div id='amesh_manual_upload_fw'>";
-html += "<#2128#> : ";
-html += "<span class='aimesh_fw_update_offline' style='margin-left:0px;' onclick='open_AiMesh_router_fw_upgrade();'><#1664#></span>";
+html += "<#2135#> : ";
+html += "<span class='aimesh_fw_update_offline' style='margin-left:0px;' onclick='open_AiMesh_router_fw_upgrade();'><#1669#></span>";
 html += "</div>";
 html += "<div id='checkNewFW' class='checkNewFW' style='display:none;'><#98#> : <span class='checkFWResult'></span></div>";
 html += "</td>";
@@ -338,7 +338,7 @@ html += "</tr>";
 $("#fw_version_tr").before(html);
 if(afwupg_support && webs_update_enable_orig == 1){
 $("#amas_" + mac_id + "").children().find(".checkFWCurrent").addClass("aimesh_fw_release_note");
-$("#amas_" + mac_id + "").children().find(".checkFWCurrent").click({"model_name": "<#838#>", "fwver": FWString}, show_current_release_note);
+$("#amas_" + mac_id + "").children().find(".checkFWCurrent").click({"model_name": "<#839#>", "fwver": FWString}, show_current_release_note);
 }
 if(revertfw_support && RevertFWver != "" && !isSame_org && !isUnderREQ){
 $("#amas_" + mac_id + "").children().find(".aimesh_fw_revert").click(show_revertfw_release_note);
@@ -374,14 +374,14 @@ alias = get_cfg_clientlist[idx].config.misc.cfg_alias;
 html = "";
 if(!have_node) {
 html += "<tr>";
-html += "<td class='aimesh_node_category_bg' colspan='2'><#1030#></td>";
+html += "<td class='aimesh_node_category_bg' colspan='2'><#1032#></td>";
 html += "</tr>";
 }
 html += "<tr>";
 html += "<th>";
 html += ui_model_name + " ( " + labelMac + " )";
 html += "<br>";
-html += "<#1066#> : " + htmlEnDeCode.htmlEncode(alias);
+html += "<#1068#> : " + htmlEnDeCode.htmlEncode(alias);
 html += "</th>";
 html += "<td id='amas_" + mac_id + "' current_online='" + online + "'>";
 html += "<div id='current_version'><#97#> : <span class='checkFWCurrent'>" + fwver + "</span>";
@@ -568,7 +568,7 @@ if(dead < 30)
 setTimeout("detect_firmware();", 1000);
 else{
 document.getElementById('update_scan').style.display="none";
-document.getElementById('update_states').innerHTML="<#2288#>&nbsp;<#2132#>";
+document.getElementById('update_states').innerHTML="<#2298#>&nbsp;<#2139#>";
 document.getElementById("faq_link2").href=faq_href2;
 document.getElementById('update').disabled = false;
 }
@@ -581,7 +581,7 @@ setTimeout("detect_firmware();", 1000);
 else{ // got fw info
 if(cfg_check == "2" || cfg_check == "3"){
 document.getElementById('update_scan').style.display="none";
-document.getElementById('update_states').innerHTML="<#2288#>&nbsp;<#2132#>";
+document.getElementById('update_states').innerHTML="<#2298#>&nbsp;<#2139#>";
 document.getElementById("faq_link2").href=faq_href2;
 document.getElementById('update').disabled = false;
 }
@@ -605,13 +605,13 @@ setTimeout("detect_firmware();", 1000);
 else{ // got fw info
 if(webs_state_error == "1"){ //1:wget fail
 document.getElementById('update_scan').style.display="none";
-document.getElementById('update_states').innerHTML="<#2288#>&nbsp;<#2132#>";
+document.getElementById('update_states').innerHTML="<#2298#>&nbsp;<#2139#>";
 document.getElementById("faq_link2").href=faq_href2;
 document.getElementById('update').disabled = false;
 }
 else if(webs_state_error == "3"){ //3: FW check/RSA check fail
 document.getElementById('update_scan').style.display="none";
-document.getElementById('update_states').innerHTML="<#269#><br><#2123#>";
+document.getElementById('update_states').innerHTML="<#270#><br><#2130#>";
 document.getElementById('update').disabled = false;
 }
 else{
@@ -633,12 +633,12 @@ document.getElementById('update_scan').style.display="none";
 document.getElementById('update_states').style.display="none";
 confirm_asus({
 title: "New Firmware Available",
-contentA: "<#258#><br>",
-contentC: "<br><#915#> <#367#>",
-left_button: (flag==2)? "<#211#>":"<#198#>",
+contentA: "<#259#><br>",
+contentC: "<br><#916#> <#368#>",
+left_button: (flag==2)? "<#212#>":"<#199#>",
 left_button_callback: function(){confirm_cancel();},
 left_button_args: {},
-right_button: (flag==2)? "<#212#>":"<#1663#>",
+right_button: (flag==2)? "<#213#>":"<#1668#>",
 right_button_callback: function(){
 if(cfg_sync_support){
 cfgsync_firmware_upgrade();
@@ -658,7 +658,7 @@ note_display_flag: note_display
 else{
 document.getElementById('update_scan').style.display="none";
 document.getElementById('update_states').style.display="";
-document.getElementById('update_states').innerHTML="<#309#>";
+document.getElementById('update_states').innerHTML="<#310#>";
 }
 }
 function cfgsync_firmware_check(){
@@ -698,12 +698,12 @@ download_info++;
 else{
 document.getElementById('update_scan').style.display="none";
 document.getElementById('update_states').style.display="";
-document.getElementById('update_states').innerHTML="<#1609#>";
+document.getElementById('update_states').innerHTML="<#1614#>";
 return false;
 }
 if(download_info > 0){
 document.getElementById('update_states').style.display="";
-document.getElementById('update_states').innerHTML="<#1519#>";
+document.getElementById('update_states').innerHTML="<#1524#>";
 document.getElementById('update_scan').style.display="";
 document.getElementById('update').disabled = true;
 if(cfg_sync_support){
@@ -728,7 +728,7 @@ if(dead > 5){
 document.getElementById('loading_block1').style.display = "none";
 document.getElementById('loading_block2').style.display = "none";
 document.getElementById('loading_block3').style.display = "";
-document.getElementById('loading_block3').innerHTML = "<div><#272#></div>";
+document.getElementById('loading_block3').innerHTML = "<div><#273#></div>";
 }
 else{
 dead++;
@@ -752,7 +752,7 @@ if(rebooting < 30){
 setTimeout("isDownloading();", 1000);
 }
 else{
-document.getElementById("drword").innerHTML = "<#1609#>";
+document.getElementById("drword").innerHTML = "<#1614#>";
 return false;
 }
 },
@@ -760,17 +760,17 @@ success: function(){
 if(cfg_sync_support){
 if(cfg_check == "7") {
 if(cfg_upgrade == "1" || cfg_upgrade == "6" || cfg_upgrade == "8"){
-document.getElementById("drword").innerHTML = "&nbsp;&nbsp;&nbsp;<#2124#>...";
+document.getElementById("drword").innerHTML = "&nbsp;&nbsp;&nbsp;<#2131#>...";
 setTimeout("isDownloading();", 1000);
 }
 }
 else if(cfg_check == "0") {
 if(cfg_upgrade == "2" || cfg_upgrade == "3"){
-document.getElementById("drword").innerHTML = "<#1609#>";
+document.getElementById("drword").innerHTML = "<#1614#>";
 return false;
 }
 else if(cfg_upgrade == "4"){
-document.getElementById("drword").innerHTML = "<#269#><br><#2123#>";
+document.getElementById("drword").innerHTML = "<#270#><br><#2130#>";
 return false;
 }
 else if(cfg_upgrade == "10"){ // start upgrading
@@ -790,20 +790,20 @@ return false;
 }
 else{
 if(webs_state_upgrade == 0){
-document.getElementById("drword").innerHTML = "&nbsp;&nbsp;&nbsp;<#2124#>..."+fwdl_percent;
+document.getElementById("drword").innerHTML = "&nbsp;&nbsp;&nbsp;<#2131#>..."+fwdl_percent;
 setTimeout("isDownloading();", 1000);
 }
 else{ // webs_upgrade.sh is done
 if(webs_state_error == 1){
-document.getElementById("drword").innerHTML = "<#1609#>";
+document.getElementById("drword").innerHTML = "<#1614#>";
 return false;
 }
 else if(webs_state_error == 2){
-document.getElementById("drword").innerHTML = "Memory space is NOT enough to upgrade on internet. Please wait for rebooting.<br><#2123#>"; /* untranslated */ //Untranslated. fw_size_higher_mem
+document.getElementById("drword").innerHTML = "Memory space is NOT enough to upgrade on internet. Please wait for rebooting.<br><#2130#>"; /* untranslated */ //Untranslated. fw_size_higher_mem
 return false;
 }
 else if(webs_state_error == 3){
-document.getElementById("drword").innerHTML = "<#269#><br><#2123#>";
+document.getElementById("drword").innerHTML = "<#270#><br><#2130#>";
 return false;
 }
 else{ // start upgrading
@@ -831,7 +831,7 @@ return false;
 function startDownloading(){
 disableCheckChangedStatus();
 dr_advise();
-document.getElementById("drword").innerHTML = "&nbsp;&nbsp;&nbsp;<#2124#>...";
+document.getElementById("drword").innerHTML = "&nbsp;&nbsp;&nbsp;<#2131#>...";
 isDownloading();
 }
 var revert_rebooting = 0;
@@ -846,26 +846,26 @@ if(revert_rebooting < 30){
 setTimeout("isRevertDownloading();", 1000);
 }
 else{
-document.getElementById("drword").innerHTML = "<#1609#>";
+document.getElementById("drword").innerHTML = "<#1614#>";
 return false;
 }
 },
 success: function(){
 if(webs_state_upgrade == 0){
-document.getElementById("drword").innerHTML = "&nbsp;&nbsp;&nbsp;<#2124#>..."+fwdl_percent;
+document.getElementById("drword").innerHTML = "&nbsp;&nbsp;&nbsp;<#2131#>..."+fwdl_percent;
 setTimeout("isRevertDownloading();", 1000);
 }
 else{ // webs_upgrade.sh is done
 if(webs_state_error == 1){
-document.getElementById("drword").innerHTML = "<#1609#>";
+document.getElementById("drword").innerHTML = "<#1614#>";
 return false;
 }
 else if(webs_state_error == 2){
-document.getElementById("drword").innerHTML = "Memory space is NOT enough to upgrade on internet. Please wait for rebooting.<br><#2123#>"; /* untranslated */ //Untranslated. fw_size_higher_mem
+document.getElementById("drword").innerHTML = "Memory space is NOT enough to upgrade on internet. Please wait for rebooting.<br><#2130#>"; /* untranslated */ //Untranslated. fw_size_higher_mem
 return false;
 }
 else if(webs_state_error == 3){
-document.getElementById("drword").innerHTML = "<#269#><br><#2123#>";
+document.getElementById("drword").innerHTML = "<#270#><br><#2130#>";
 return false;
 }
 else{ // start upgrading
@@ -892,13 +892,13 @@ return false;
 function startRevertDownloading(){
 disableCheckChangedStatus();
 dr_advise();
-document.getElementById("drword").innerHTML = "&nbsp;&nbsp;&nbsp;<#2124#>...";
+document.getElementById("drword").innerHTML = "&nbsp;&nbsp;&nbsp;<#2131#>...";
 isRevertDownloading();
 }
 function check_zip(obj){
 var reg = new RegExp("^.*.(zip|ZIP|rar|RAR|7z|7Z)$", "gi");
 if(reg.test(obj.value)){
-alert("<#2137#>");
+alert("<#2144#>");
 obj.focus();
 obj.select();
 return false;
@@ -923,7 +923,7 @@ function sig_version_check(){
 document.getElementById("sig_check").disabled = true;
 $("#sig_status").show();
 document.sig_update.submit();
-$("#sig_status").html("<#3108#>");
+$("#sig_status").html("<#3119#>");
 document.getElementById("sig_update_scan").style.display = "";
 setTimeout("sig_check_status();", 8000);
 }
@@ -947,13 +947,13 @@ success: function(){
 --sig_chk_count;
 $("#sig_status").show();
 if(sig_state_flag == 0 && sig_state_error == 0 && sig_state_update == 1){ // no need upgrade
-$("#sig_status").html("<#3109#>");
+$("#sig_status").html("<#3120#>");
 document.getElementById("sig_update_scan").style.display = "none";
 document.getElementById("sig_check").disabled = false;
 }
 else{
 if(sig_state_error != 0){ // update error
-$("#sig_status").html("<#3110#>");
+$("#sig_status").html("<#3121#>");
 document.getElementById("sig_update_scan").style.display = "none";
 document.getElementById("sig_check").disabled = false;
 }
@@ -968,7 +968,7 @@ document.getElementById("sig_update_scan").style.display = "none";
 document.getElementById("sig_check").disabled = false;
 }
 else{
-$("#sig_status").html("<#3111#>");
+$("#sig_status").html("<#3122#>");
 setTimeout("sig_check_status();", 1000);
 }
 }
@@ -993,7 +993,7 @@ else{
 document.getElementById("sig_update_date").innerHTML = "";
 document.getElementById("sig_update_scan").style.display = "none";
 document.getElementById("sig_check").disabled = false;
-$("#sig_status").html("<#3112#>");
+$("#sig_status").html("<#3123#>");
 $("#sig_ver_word").html(sig_ver);
 }
 }
@@ -1018,12 +1018,12 @@ return(rd.value+rh.value+rm.value);
 }
 function validForm(){
 if(document.form.webs_update_time_x_hour.value.length==0){
-alert("<#315#>");
+alert("<#316#>");
 document.form.webs_update_time_x_hour.focus();
 return false;
 }
 if(document.form.webs_update_time_x_min.value.length==0){
-alert("<#315#>");
+alert("<#316#>");
 document.form.webs_update_time_x_min.focus();
 return false;
 }
@@ -1052,7 +1052,7 @@ var minute = t.getMinutes();
 if(minute < 10){
 minute = "0" + minute;
 }
-var date_format = "<#2138#> : " + year + "/" + month + "/" + date + " " + hour + ":" + minute;
+var date_format = "<#2145#> : " + year + "/" + month + "/" + date + " " + hour + ":" + minute;
 return date_format;
 }
 function show_offline_msg(_checkFlag) {
@@ -1073,22 +1073,22 @@ $offlineHtml.appendTo($('body'));
 var $amesh_hint_offline = $('<div>');
 $amesh_hint_offline.addClass("amesh_hint_text");
 $amesh_hint_offline.css("color", "#FC0");
-$amesh_hint_offline.html("<#2136#>");
+$amesh_hint_offline.html("<#2143#>");
 $offlineHtml.append($amesh_hint_offline);
 var $amesh_hint_text = $('<div>');
 $amesh_hint_text.addClass("amesh_hint_text");
-$amesh_hint_text.html("<#1092#> :");
+$amesh_hint_text.html("<#1097#> :");
 $offlineHtml.append($amesh_hint_text);
 var $amesh_hint_content = $('<div>');
 $amesh_hint_content.addClass("amesh_hint_text");
 $amesh_hint_content.css("margin-left", "auto");
 $offlineHtml.append($amesh_hint_content);
 var $msg_item = $('<ol>');
-var msg_text = "<li><#1093#></li>";
-msg_text += "<li><#1094#></li>";
-msg_text += "<li><#1095#></li>";
-msg_text += "<li><#1096#></li>";
-msg_text += "<li><#1097#></li>";
+var msg_text = "<li><#1098#></li>";
+msg_text += "<li><#1099#></li>";
+msg_text += "<li><#1100#></li>";
+msg_text += "<li><#1101#></li>";
+msg_text += "<li><#1102#></li>";
 $msg_item.html(msg_text);
 $amesh_hint_content.append($msg_item);
 var $amesh_action_bg = $('<div>');
@@ -1096,7 +1096,7 @@ $amesh_action_bg.addClass("amesh_action_bg");
 $offlineHtml.append($amesh_action_bg);
 var $amesh_ok = $('<input/>');
 $amesh_ok.addClass("button_gen");
-$amesh_ok.attr({"type" : "button", "value" : "<#1654#>"});
+$amesh_ok.attr({"type" : "button", "value" : "<#1659#>"});
 $amesh_action_bg.append($amesh_ok);
 $amesh_ok.click(
 function() {
@@ -1129,7 +1129,7 @@ var frs_model_name = get_cfg_clientlist[idx].frs_model_name;
 var mac = get_cfg_clientlist[idx].mac;
 var newfwver = get_cfg_clientlist[idx].newfwver;
 var mac_id = mac.replace(/:/g, "");
-var ck_fw_result = "<#309#>";
+var ck_fw_result = "<#310#>";
 var online = get_cfg_clientlist[idx].online;
 $("#amas_" + mac_id + "").children().find(".checkFWResult").html(ck_fw_result);
 if(newfwver != "") {
@@ -1159,7 +1159,7 @@ contentC: "",
 left_button: "",
 left_button_callback: {},
 left_button_args: {},
-right_button: "<#1637#>",
+right_button: "<#1642#>",
 right_button_callback: function(){confirm_cancel();},
 right_button_args: {},
 iframe: "get_release_note_amas.asp",
@@ -1196,7 +1196,7 @@ $(".confirm_block").children().find("#status_iframe").attr("src", "get_release_n
 $(".confirm_block").children().find("#status_iframe").load();
 }
 else
-$(".confirm_block").children().find("#status_iframe").contents().find("#amas_release_note_hint").val("<#2141#>");
+$(".confirm_block").children().find("#status_iframe").contents().find("#amas_release_note_hint").val("<#2148#>");
 }
 function show_fw_release_note(event) {
 if($(".confirm_block").length > 0)
@@ -1206,12 +1206,12 @@ document.amas_release_note.version.value = event.data.newfwver;
 document.amas_release_note.submit();
 confirm_asus({
 title: "Release Note",
-contentA: "<#258#><br>",
+contentA: "<#259#><br>",
 contentC: "",
 left_button: "",
 left_button_callback: {},
 left_button_args: {},
-right_button: "<#1637#>",
+right_button: "<#1642#>",
 right_button_callback: function(){confirm_cancel();},
 right_button_args: {},
 iframe: "get_release_note_amas.asp",
@@ -1248,7 +1248,7 @@ $(".confirm_block").children().find("#status_iframe").attr("src", "get_release_n
 $(".confirm_block").children().find("#status_iframe").load();
 }
 else
-$(".confirm_block").children().find("#status_iframe").contents().find("#amas_release_note_hint").val("<#2141#>");
+$(".confirm_block").children().find("#status_iframe").contents().find("#amas_release_note_hint").val("<#2148#>");
 }
 function show_revertfw_release_note(event) {
 var notice="";
@@ -1257,15 +1257,15 @@ $(".confirm_block").remove();
 document.revertfw_note.model.value = frsmodel;
 document.revertfw_note.version.value = RevertFWver;
 document.revertfw_note.submit();
-notice = "<#2133#><br><br>If you want to revert both your main router and node(s) firmware to the previous version, please revert node(s) first before the main router."; //Untranslated
+notice = "<#2140#><br><br>If you want to revert both your main router and node(s) firmware to the previous version, please revert node(s) first before the main router."; //Untranslated
 if(document.firmware_form.webs_update_enable.value == 1){
 notice += "<br><br>If you would like to revert to previous firmware version, we suggest you temporarily disable auto firmware update to make sure you grant every upgrade."; //Untranslated
 }
 confirm_asus({
 title: support_site_modelid,
-contentA: "<#2126#> : "+RevertFWver+"<br>",
+contentA: "<#2133#> : "+RevertFWver+"<br>",
 contentC: notice,
-left_button: "<#1637#>",
+left_button: "<#1642#>",
 left_button_callback: function(){confirm_cancel();},
 left_button_args: {},
 right_button: "Revert",
@@ -1410,32 +1410,21 @@ $("#amas_" + mac_id + "").children().find(".aimesh_fw_revert_node").html(gen_AiM
 function gen_AiMesh_fw_status(_manual_status, _node_info) {
 var html = "";
 if(_manual_status) {
-html += "<#2128#> : ";
+html += "<#2135#> : ";
 if(_node_info.online == "0") {
-html += "<span class='aimesh_fw_update_offline' style='margin-left:0px;' onclick='show_offline_msg(false);'><#1529#></span>";
+html += "<span class='aimesh_fw_update_offline' style='margin-left:0px;' onclick='show_offline_msg(false);'><#1534#></span>";
 }
 else {
-html += "<span class='aimesh_fw_update_offline' style='margin-left:0px;' ><#1664#></span>";
+html += "<span class='aimesh_fw_update_offline' style='margin-left:0px;' ><#1669#></span>";
 }
 }
 else {
-html += "<span class='aimesh_fw_update_offline' style='margin-left:0px;text-decoration:none;cursor:none;'><#2135#></span>";
+html += "<span class='aimesh_fw_update_offline' style='margin-left:0px;text-decoration:none;cursor:none;'><#2142#></span>";
 }
 return html;
 }
 function check_AiMesh_fw_version(_fw) {
-var support_manual_fw_id = 382;
-var support_manual_fw_num = 18000;
-var manual_status = false;
-var fw_array = _fw.match(/(\d+)\.(\d+)\.(\d+)\.(\d+)\.([^_]+)_([^-]+)/);
-if(fw_array){
-var fw_id = parseInt(fw_array[5]) || 0;
-var fw_num = parseInt(fw_array[6]) || 0;
-if(fw_id > support_manual_fw_id ||
-(fw_id == support_manual_fw_id && fw_num >= support_manual_fw_num)){
-manual_status = true;
-}
-}
+var manual_status = true;
 if(support_site_modelid == "GT-AC2900_SH"){
 manual_status = false;
 }
@@ -1443,7 +1432,7 @@ return manual_status;
 }
 function upgrade_modem_fw(){
 if(document.modem_form.file.value.length == 0){
-alert("<#325#>");
+alert("<#326#>");
 document.modem_form.focus();
 return;
 }
@@ -1459,11 +1448,11 @@ if(upgrade_status.mobile_upgrade_md5 != "1" && upgrade_status.mobile_upgrade_nam
 setTimeout(get_mobile_fw_upgrade_status, 1000);
 else{
 if(upgrade_status.mobile_upgrade_md5 == "1" || upgrade_status.mobile_upgrade_name == "1")
-alert("<#2652#>");
+alert("<#2662#>");
 else if(upgrade_status.mobile_upgrade_now == "1")
-alert("<#2651#>");
+alert("<#2661#>");
 else if(upgrade_status.mobile_upgrade_status == "3")
-alert("<#193#>");
+alert("<#194#>");
 }
 }
 else
@@ -1481,7 +1470,7 @@ return;
 <span id="proceeding_img_text"></span>
 <div id="proceeding_img"></div>
 </div>
-<div id="loading_block2" style="margin:5px auto; width:85%;"><#270#><br><#367#></div>
+<div id="loading_block2" style="margin:5px auto; width:85%;"><#271#><br><#368#></div>
 <div id="loading_block3" style="margin:5px auto;width:85%; font-size:12pt;"></div>
 </td>
 </tr>
@@ -1492,7 +1481,7 @@ return;
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center" style="height:100px;">
 <tr>
 <td>
-<div class="drword" id="drword" style="">&nbsp;&nbsp;&nbsp;&nbsp;<#366#> <#363#>...</div>
+<div class="drword" id="drword" style="">&nbsp;&nbsp;&nbsp;&nbsp;<#367#> <#364#>...</div>
 </td>
 </tr>
 </table>
@@ -1524,25 +1513,25 @@ return;
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#405#> - <#409#></div>
+<div class="formfonttitle"><#406#> - <#410#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><strong><#2133#></strong>
+<div class="formfontdesc"><strong><#2140#></strong>
 <ol>
-<li><#2129#></li>
-<li><#276#></li>
-<li id="fw_note2"><#2130#>&nbsp;<#2131#></li>
-<li id="fw_note3"><#2122#></li>
+<li><#2136#></li>
+<li><#277#></li>
+<li id="fw_note2"><#2137#>&nbsp;<#2138#></li>
+<li id="fw_note3"><#2129#></li>
 </ol>
 </div>
 <br>
 <table id="auto_upgrade_setting" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#2119#></td>
+<td colspan="2"><#2126#></td>
 </tr>
 </thead>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(11, 14);"><#2119#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(11, 14);"><#2126#></a></th>
 <td>
 <div align="center" class="left" style="width:75px; float:left; cursor:pointer;" id="switch_webs_update_enable"></div>
 <script type="text/javascript">
@@ -1560,7 +1549,7 @@ save_update_enable('off');
 </td>
 </tr>
 <tr>
-<th><#2118#></th>
+<th><#2125#></th>
 <td>
 <select name="webs_update_time_x_hour" class="input_option" onchange="save_update_enable();"></select> :
 <select name="webs_update_time_x_min" class="input_option" onchange="save_update_enable();"></select>
@@ -1572,15 +1561,15 @@ save_update_enable('off');
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr id="fw_tr">
-<td colspan="2"><#2126#></td>
+<td colspan="2"><#2133#></td>
 </tr>
 </thead>
 <tr id="productid_tr">
-<th><#2125#></th>
-<td><#838#></td>
+<th><#2132#></th>
+<td><#839#></td>
 </tr>
 <tr id="dsl_n55u_fwver" style="display:none;">
-<th><#916#></th>
+<th><#917#></th>
 <td><input type="text" class="input_15_table" value="<% nvram_dump("adsl/tc_fw_ver_short.txt",""); %>" readonly="1" autocorrect="off" autocapitalize="off"></td>
 </tr>
 <tr id="dsl_n55u_ras" style="display:none;">
@@ -1588,19 +1577,19 @@ save_update_enable('off');
 <td><input type="text" class="input_20_table" value="<% nvram_dump("adsl/tc_ras_ver.txt",""); %>" readonly="1" autocorrect="off" autocapitalize="off"></td>
 </tr>
 <tr id="dsl_ac68u_fwver" style="display:none;">
-<th>DSL <#2126#></th>
+<th>DSL <#2133#></th>
 <td><% nvram_get("dsllog_fwver"); %></td>
 </tr>
 <tr id="dsl_ac68u_drvver" style="display:none;">
-<th><#916#></th>
+<th><#917#></th>
 <td><% nvram_get("dsllog_drvver"); %></td>
 </tr>
 <tr id="sig_ver_field" style="display:none;">
-<th><#3113#></th>
+<th><#3124#></th>
 <td >
 <div style="height:33px;margin-top:5px;"><span id="sig_ver_word" style="color:#FFFFFF;"></span><span id="sig_update_date"></span></div>
 <div style="margin-left:200px;margin-top:-38px;">
-<input type="button" id="sig_check" name="sig_check" class="button_gen" onclick="sig_version_check();" value="<#2577#>">
+<input type="button" id="sig_check" name="sig_check" class="button_gen" onclick="sig_version_check();" value="<#2587#>">
 </div>
 <div>
 <span id="sig_status" style="display:none"></span>
@@ -1609,15 +1598,15 @@ save_update_enable('off');
 </td>
 </tr>
 <tr id="fw_version_tr">
-<th><#2126#></th>
+<th><#2133#></th>
 <td>
 <div id="FWString" style="height:33px;margin-top:5px;"></div>
 <div id="update_div" style="margin-left:200px;margin-top:-38px;display:none;">
-<input type="button" id="update" name="update" class="button_gen" onclick="detect_update();" value="<#2577#>" />
+<input type="button" id="update" name="update" class="button_gen" onclick="detect_update();" value="<#2587#>" />
 </div>
-<div id="check_beta_div"><input type="checkbox" name="check_beta" id="path_beta" onclick="change_beta_path()" value="" <% nvram_match("webs_update_beta", "1", "checked"); %>/><#2121#></div>
+<div id="check_beta_div"><input type="checkbox" name="check_beta" id="path_beta" onclick="change_beta_path()" value="" <% nvram_match("webs_update_beta", "1", "checked"); %>/><#2128#></div>
 <div id="linkpage_div" class="button_helplink" style="margin-left:200px;margin-top:-38px;display:none;">
-<a id="linkpage" target="_blank"><div style="padding-top:5px;"><#2577#></div></a>
+<a id="linkpage" target="_blank"><div style="padding-top:5px;"><#2587#></div></a>
 </div>
 <div id="check_states">
 <span id="update_states"></span>
@@ -1626,15 +1615,15 @@ save_update_enable('off');
 </td>
 </tr>
 <tr id="manually_upgrade_tr">
-<th><#2127#></th>
+<th><#2134#></th>
 <td>
 <input type="file" name="file" class="input" style="color:#FFCC00;*color:#000;width: 194px;">
-<input type="button" name="upload" class="button_gen" onclick="submitForm()" value="<#1664#>" />
+<input type="button" name="upload" class="button_gen" onclick="submitForm()" value="<#1669#>" />
 </td>
 </tr>
 </table>
 <div class="aimesh_manual_fw_update_hint" style="display:none;">
-<#2133#> <#2134#>
+<#2140#> <#2141#>
 </div>
 </form>
 <form method="post" action="do_modem_fwupgrade.cgi" name="modem_form" target="hidden_frame" enctype="multipart/form-data">
@@ -1648,15 +1637,15 @@ save_update_enable('off');
 <table id="modem_fw_upgrade" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable" style="display: none;">
 <thead>
 <tr>
-<td colspan="2"><#2653#></td>
+<td colspan="2"><#2663#></td>
 </tr>
 </thead>
-<tr><th><#2725#></th><td><div id="usb_modem_act_swver"><% nvram_get("usb_modem_act_swver"); %></div></td></tr>
+<tr><th><#2735#></th><td><div id="usb_modem_act_swver"><% nvram_get("usb_modem_act_swver"); %></div></td></tr>
 <tr>
-<th><#2787#></th>
+<th><#2797#></th>
 <td>
 <input type="file" name="file" class="input" style="color:#FFCC00;*color:#000;width: 194px;">
-<input type="button" name="upload" class="button_gen" onclick="upgrade_modem_fw()" value="<#1664#>" />
+<input type="button" name="upload" class="button_gen" onclick="upgrade_modem_fw()" value="<#1669#>" />
 </td>
 </tr>
 </table>

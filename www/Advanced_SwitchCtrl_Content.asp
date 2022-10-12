@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#837#> - <#3200#></title>
+<title><#838#> - <#3211#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="other.css">
@@ -82,23 +82,33 @@ if(qca_support){
 var nataccel = '<% nvram_get("qca_sfe"); %>';
 var nataccel_status = '<% nat_accel_status(); %>';
 if(nataccel == '1' && nataccel_status == '1'){
-document.getElementById("natAccelDesc").innerHTML = "<#2738#>";
+document.getElementById("natAccelDesc").innerHTML = "<#2748#>";
 }
 else{
-document.getElementById("natAccelDesc").innerHTML = "<#2734#>";
+document.getElementById("natAccelDesc").innerHTML = "<#2744#>";
+}
+}
+else if(mtk_support){
+var nataccel = '<% nvram_get("hwnat"); %>';
+var nataccel_status = '<% nat_accel_status(); %>';
+if(nataccel == '1' && nataccel_status == '1'){
+document.getElementById("MTKnatAccelDesc").innerHTML = "<#2748#>";
+}
+else{
+document.getElementById("MTKnatAccelDesc").innerHTML = "<#2744#>";
 }
 }
 else{
 var ctf_disable = '<% nvram_get("ctf_disable"); %>';
 var ctf_fa_mode = '<% nvram_get("ctf_fa_mode"); %>';
 if(ctf_disable == 1){
-document.getElementById("ctfLevelDesc").innerHTML = "<#2734#>";
+document.getElementById("ctfLevelDesc").innerHTML = "<#2744#>";
 }
 else{
 if(ctf_fa_mode == '2')
-document.getElementById("ctfLevelDesc").innerHTML = "<#2736#>";
+document.getElementById("ctfLevelDesc").innerHTML = "<#2746#>";
 else
-document.getElementById("ctfLevelDesc").innerHTML = "<#2735#>";
+document.getElementById("ctfLevelDesc").innerHTML = "<#2745#>";
 }
 }
 if (re_mode == "1"){
@@ -138,7 +148,7 @@ document.getElementById("qca_tr").style.display = "";
 document.form.qca_sfe.disabled = false;
 }
 }
-else if(based_modelid == "RT-ACRH18" || based_modelid == "4G-AC86U" || based_modelid == "4G-AX56" || based_modelid == "RT-AX53U" || based_modelid == "RT-AX54" || based_modelid == "XD4S"){//MTK
+else if(mtk_support || based_modelid == "RT-ACRH18" || based_modelid == "4G-AC86U" || based_modelid == "4G-AX56" || based_modelid == "RT-AX53U" || based_modelid == "RT-AX54" || based_modelid == "XD4S"){//MTK
 document.getElementById("mtk_tr").style.display = "";
 document.form.hwnat.disabled = false;
 document.getElementById("ctf_tr").style.display = "none";
@@ -262,7 +272,7 @@ document.getElementById("lacp_desc").style.display = "none";
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center">
 <tr>
 <td>
-<div class="drword" id="drword" style="height:110px;"><#366#> <#363#>...
+<div class="drword" id="drword" style="height:110px;"><#367#> <#364#>...
 <br/>
 <br/>
 </div>
@@ -304,63 +314,63 @@ document.getElementById("lacp_desc").style.display = "none";
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#384#> - <#3200#></div>
+<div class="formfonttitle"><#385#> - <#3211#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#3204#></div>
+<div class="formfontdesc"><#3215#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr id="jumbo_tr">
-<th><#2464#></th>
+<th><#2474#></th>
 <td>
 <select name="jumbo_frame_enable" class="input_option">
-<option class="content_input_fd" value="0" <% nvram_match("jumbo_frame_enable", "0","selected"); %>><#3798#></option>
-<option class="content_input_fd" value="1" <% nvram_match("jumbo_frame_enable", "1","selected"); %>><#3797#></option>
+<option class="content_input_fd" value="0" <% nvram_match("jumbo_frame_enable", "0","selected"); %>><#3810#></option>
+<option class="content_input_fd" value="1" <% nvram_match("jumbo_frame_enable", "1","selected"); %>><#3809#></option>
 </select>
 </td>
 </tr>
 <tr id="ctf_tr" style="display: none;">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(29,2);"><#2732#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(29,2);"><#2742#></a></th>
 <td>
 <select name="ctf_disable_force" class="input_option" disabled>
-<option class="content_input_fd" value="1" <% nvram_match("ctf_disable_force", "1","selected"); %>><#3798#></option>
-<option class="content_input_fd" value="0" <% nvram_match("ctf_disable_force", "0","selected"); %>><#152#></option>
+<option class="content_input_fd" value="1" <% nvram_match("ctf_disable_force", "1","selected"); %>><#3810#></option>
+<option class="content_input_fd" value="0" <% nvram_match("ctf_disable_force", "0","selected"); %>><#153#></option>
 </select>
 &nbsp
 <span id="ctfLevelDesc"></span>
 </td>
 </tr>
 <tr id="qca_tr" style="display: none;">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(29,2);"><#2732#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(29,2);"><#2742#></a></th>
 <td>
 <select name="qca_sfe" class="input_option" disabled>
-<option class="content_input_fd" value="0" <% nvram_match("qca_sfe", "0","selected"); %>><#3798#></option>
-<option class="content_input_fd" value="1" <% nvram_match("qca_sfe", "1","selected"); %>><#3797#></option>
+<option class="content_input_fd" value="0" <% nvram_match("qca_sfe", "0","selected"); %>><#3810#></option>
+<option class="content_input_fd" value="1" <% nvram_match("qca_sfe", "1","selected"); %>><#3809#></option>
 </select>
 &nbsp
 <span id="natAccelDesc"></span>
 </td>
 </tr>
 <tr id="mtk_tr" style="display: none;">
-<th><#2732#></th>
+<th><#2742#></th>
 <td>
 <select name="hwnat" class="input_option" disabled>
-<option class="content_input_fd" value="0" <% nvram_match("hwnat", "0","selected"); %>><#3798#></option>
-<option class="content_input_fd" value="1" <% nvram_match("hwnat", "1","selected"); %>><#152#></option>
+<option class="content_input_fd" value="0" <% nvram_match("hwnat", "0","selected"); %>><#3810#></option>
+<option class="content_input_fd" value="1" <% nvram_match("hwnat", "1","selected"); %>><#153#></option>
 </select>
 &nbsp
-<span id="natAccelDesc"></span>
+<span id="MTKnatAccelDesc"></span>
 </td>
 </tr>
 <tr style="display:none">
-<th><#3205#></th>
+<th><#3216#></th>
 <td>
-<input type="radio" name="gro_disable_force" value="0" <% nvram_match("gro_disable_force", "0", "checked"); %>><#186#>
-<input type="radio" name="gro_disable_force" value="1" <% nvram_match("gro_disable_force", "1", "checked"); %>><#185#>
+<input type="radio" name="gro_disable_force" value="0" <% nvram_match("gro_disable_force", "0", "checked"); %>><#187#>
+<input type="radio" name="gro_disable_force" value="1" <% nvram_match("gro_disable_force", "1", "checked"); %>><#186#>
 </td>
 </tr>
 <tr id="aqr_hwnat_type_tr" style="display:none">
 <th>10G base-T port acceleration type</th><td>
 <select name="aqr_hwnat_type" class="input_option" disabled>
-<option value="0" <% nvram_match("aqr_hwnat_type", "0","selected"); %>><#152#></option>
+<option value="0" <% nvram_match("aqr_hwnat_type", "0","selected"); %>><#153#></option>
 <option value="1" <% nvram_match("aqr_hwnat_type", "1","selected"); %>>PPE + NSS</option>
 <option value="2" <% nvram_match("aqr_hwnat_type", "2","selected"); %>>NSS</option>
 </select>
@@ -369,7 +379,7 @@ document.getElementById("lacp_desc").style.display = "none";
 <tr id="aqr_link_speed_tr" style="display:none">
 <th>10G base-T port link speed</th><td>
 <select name="aqr_link_speed" class="input_option" disabled>
-<option value="0" <% nvram_match("aqr_link_speed", "0","selected"); %>><#152#></option>
+<option value="0" <% nvram_match("aqr_link_speed", "0","selected"); %>><#153#></option>
 <option value="1000" <% nvram_match("aqr_link_speed", "1000","selected"); %>>1Gbps</option>
 <option value="2500" <% nvram_match("aqr_link_speed", "2500","selected"); %>>2.5Gbps</option>
 <option value="5000" <% nvram_match("aqr_link_speed", "5000","selected"); %>>5Gbps</option>
@@ -380,7 +390,7 @@ document.getElementById("lacp_desc").style.display = "none";
 <tr id="aqr_ipg_tr" style="display:none">
 <th>10G base-T interpacket gap</th><td>
 <select name="aqr_ipg" class="input_option" disabled>
-<option value="96" <% nvram_match("aqr_ipg", "96","selected"); %>><#1640#></option>
+<option value="96" <% nvram_match("aqr_ipg", "96","selected"); %>><#1645#></option>
 <option value="128" <% nvram_match("aqr_ipg", "128","selected"); %>>128 bit times</option>
 </select>
 </td>
@@ -388,7 +398,7 @@ document.getElementById("lacp_desc").style.display = "none";
 <tr id="sfpp_hwnat_type_tr" style="display:none">
 <th>SFP+ port acceleration type</th><td>
 <select name="sfpp_hwnat_type" class="input_option" disabled>
-<option value="0" <% nvram_match("sfpp_hwnat_type", "0","selected"); %>><#152#></option>
+<option value="0" <% nvram_match("sfpp_hwnat_type", "0","selected"); %>><#153#></option>
 <option value="1" <% nvram_match("sfpp_hwnat_type", "1","selected"); %>>PPE + NSS</option>
 <option value="2" <% nvram_match("sfpp_hwnat_type", "2","selected"); %>>NSS</option>
 </select>
@@ -397,7 +407,7 @@ document.getElementById("lacp_desc").style.display = "none";
 <tr id="sfpp_max_speed_tr" style="display:none">
 <th>SFP+ port maximum link speed</th><td>
 <select name="sfpp_max_speed" class="input_option" disabled>
-<option value="0" <% nvram_match("sfpp_max_speed", "0","selected"); %>><#152#></option>
+<option value="0" <% nvram_match("sfpp_max_speed", "0","selected"); %>><#153#></option>
 <option value="1000" <% nvram_match("sfpp_max_speed", "1000","selected"); %>>1Gbps</option>
 <option value="10000" <% nvram_match("sfpp_max_speed", "10000","selected"); %>>10Gbps</option>
 </select>
@@ -405,32 +415,32 @@ document.getElementById("lacp_desc").style.display = "none";
 </tr>
 <tr id="sfpp_force_on_tr" style="display:none">
 <th>SFP+ port TX clock</th><td>
-<input type="radio" name="sfpp_force_on" value="0" <% nvram_match("sfpp_force_on", "0", "checked"); %>><#152#>
+<input type="radio" name="sfpp_force_on" value="0" <% nvram_match("sfpp_force_on", "0", "checked"); %>><#153#>
 <input type="radio" name="sfpp_force_on" value="1" <% nvram_match("sfpp_force_on", "1", "checked"); %>>ON</td>
 </tr>
 <tr id="lacp_tr" style="display:none;">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(29,1);"><#2743#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(29,1);"><#2753#></a></th>
 <td>
 <select name="lacp_enabled" class="input_option" onchange="check_bonding_policy(this);" disabled>
-<option class="content_input_fd" value="0" <% nvram_match("lacp_enabled", "0","selected"); %>><#3798#></option>
-<option class="content_input_fd" value="1" <% nvram_match("lacp_enabled", "1","selected"); %>><#3797#></option>
+<option class="content_input_fd" value="0" <% nvram_match("lacp_enabled", "0","selected"); %>><#3810#></option>
+<option class="content_input_fd" value="1" <% nvram_match("lacp_enabled", "1","selected"); %>><#3809#></option>
 </select>
-<div id="lacp_desc" style="display:none"><span id="lacp_note"><#2746#></span><div>
+<div id="lacp_desc" style="display:none"><span id="lacp_note"><#2756#></span><div>
 </td>
 </tr>
 <tr id="lacp_policy_tr" style="display:none">
-<th><#3201#></th>
+<th><#3212#></th>
 <td>
 <select name="bonding_policy" class="input_option" disabled>
-<option value="0"><#1640#></option>
-<option value="1"><#3203#></option>
-<option value="2"><#3202#></option>
+<option value="0"><#1645#></option>
+<option value="1"><#3214#></option>
+<option value="2"><#3213#></option>
 </select>
 </td>
 </tr>
 </table>
 <div class="apply_gen">
-<input class="button_gen" onclick="applyRule()" type="button" value="<#195#>"/>
+<input class="button_gen" onclick="applyRule()" type="button" value="<#196#>"/>
 </div>
 </td>
 </tr>

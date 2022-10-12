@@ -128,6 +128,7 @@ Navíc pro zajištění vaší vzdáleně ovládané funkce IFTTT™ přes váš
 Společnost ASUS se zavazuje chránit a respektovat vaše soukromí. Můžete kdykoli navštívit Advancend Settings (Pokročilá nastavení) > Administration (Správa) > Privacy (Soukromí) pro zapnutí/vypnutí sdílení informací o vašem produktu se společností ASUS. Pro podrobnosti o tom, jak společnost ASUS chrání vaše soukromí prosím navštivte <a id="eula_url" style="font-weight: bolder;text-decoration:underline;cursor:pointer;" target="_blank">Zásady ochrany soukromí ASUS</a>.
 Jsem starší 16 let.
 Prosím potvrďte, že jste starší 16 let.
+Prosím potvrďte, že Podmínky používání ASUS.
 Pro %1$@ a vzdálené připojení (ASUS Router APP/Lyra APP/AiCloud/AiDisk):
 Upozorňujeme vás, že vaše informace, včetně názvu modelu vašeho produktu, verze firmwaru, stavu internetu, IP adresy, adresy MAC a názvu DDNS, budou shromažďovány společností ASUS přes výše uvedené funkce.
 Chcete-li zakázat sdílení vašich informací se společností ASUS přes výše uvedené funkce, klikněte prosím na <span style="font-weight: bold;">[[Odvolat]</span> níže. Nicméně vás upozorňujeme, že pokud zastavíte sdílení vašich informací se společností ASUS, tyto funkce nemusí fungovat.
@@ -139,12 +140,12 @@ Pokud budete chtít v budoucnu povolit funkce Alexa™ a IFTTT™, budete muset 
 Proces odvolání nelze dokončit bez připojení k internetu. Odvolání prosím proveďte, když jste připojeni k internetu.
 Proces odvolání nemůžete dokončit, protože stav internetu je nestabilní. Zkuste to prosím později.
 Použitím ASUS AiProtection souhlasíte se
-Použitím AiProtection, Traffic Analyzer, Apps Analyzer, Adaptive QoS/Game boost webové historie souhlasíte s <a id="eula_url" style="text-decoration:underline;" target="_blank">Licenční smlouvou společnosti Trend Micro s koncovým uživatelem</a>.
-Upozorňujeme, že vaše údaje budou shromažďovány Trend Micro přes AiProtection, Traffic Analyzer, Apps Analyzer, Adaptive QoS a webovou historii. Také berete na vědomí a souhlasíte s tím, že společnost ASUS není zodpovědná za smlouvu mezi vámi a společností Trend Micro ani za žádný obsah služby poskytované společností Trend Micro. Máte-li nějaké dotazy ohledně toho, jak společnost Trend Micro shromažďuje, zpracovává a používá výše uvedené informace, přečtěte si prosím prohlášení ohledně soukromí vydané společností Trend Micro nebo kontaktujte společnost Trend Micro pro více informací.
+Použitím AiProtection, rodičovská kontrola( Filtry pro webové stránky a aplikace ), Traffic Analyzer, Apps Analyzer, Adaptive QoS/Game boost webové historie souhlasíte s <a id="eula_url" style="text-decoration:underline;" target="_blank">Licenční smlouvou společnosti Trend Micro s koncovým uživatelem</a>.
+Upozorňujeme, že vaše údaje budou shromažďovány Trend Micro přes AiProtection, rodičovská kontrola( Filtry pro webové stránky a aplikace ), Traffic Analyzer, Apps Analyzer, Adaptive QoS a webovou historii. Také berete na vědomí a souhlasíte s tím, že společnost ASUS není zodpovědná za smlouvu mezi vámi a společností Trend Micro ani za žádný obsah služby poskytované společností Trend Micro. Máte-li nějaké dotazy ohledně toho, jak společnost Trend Micro shromažďuje, zpracovává a používá výše uvedené informace, přečtěte si prosím prohlášení ohledně soukromí vydané společností Trend Micro nebo kontaktujte společnost Trend Micro pro více informací.
 Chcete-li zakázat sdílení vašich údajů se společností Trend Micro přes výše uvedené funkce přejděte prosím na:  Router web GUI (Web GUI směrovače) > Advanced settings (Pokročilá nastavení) > Administration (Správa) > Privacy (Soukromí).
 <a id="tm_eula_url" style="text-decoration:underline;" target="_blank">TrendMicro Privacy Policy</a>
 <a id="tm_disclosure_url" style="text-decoration:underline;" target="_blank">Privacy and Personal Data Collection Disclosure</a>
-Pro AiProtection, Traffic Analyzer, Apps Analyzer, Adaptive QoS/Game boost, webovou historii:
+Pro AiProtection, rodičovská kontrola( Filtry pro webové stránky a aplikace ), Traffic Analyzer, Apps Analyzer, Adaptive QoS/Game boost, webovou historii:
 Upozorňujeme vás, že vaše informace budou shromažďovány společností Trend Micro přes výše uvedené funkce.
 Chcete-li zakázat sdílení vašich informací se společností Trend Micro přes následující funkce, klikněte prosím na <span style="font-weight: bold;">[(Odvolat]</span> níže. Nicméně vás upozorňujeme, že pokud zastavíte sdílení vašich informací se společností Trend Micro, tyto funkce nemusí fungovat.
 Určitě chcete odvolat?
@@ -271,7 +272,7 @@ Aktualizace firmwaru se nezdařila. Může to být důsledek špatného image ne
 Firmware se aktualizuje. Prosím vyčkejte asi 3 minuty.
 Aktualizace firmwaru byla dokončena. Zavřete toto okno a znovu přejděte na svůj router AiMesh.
 Upgrade firmwaru byl proveden. Restartujte RT-AX53U ručně.
-To comply with regulatory amendments, we have modified our certification rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
+To comply with regulatory amendments, we have modified our certificate rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
 5× jste zadali nesprávné uživatelské jméno nebo heslo. Budete odhlášeni.
 2022 ASUSTeK Computer Inc. Všechna práva vyhrazena.
 Během aktualizace firmwaru budou zachována nastavení parametrů konfigurace.
@@ -461,7 +462,7 @@ Režim Klient
 RT-AX53U se bezdrátově připojí k hlavnímu routeru, přístupovému bodu nebo veřejnému hot spotu a sdílí připojení s kabelovými / bezdrátovými klienty. V tomto režimu jsou NAT, firewall a DHCP server ve výchozím nastavení povoleny.
 Ujistěte se, že jste oprávněni k přístupu k internetu, pokud se připojujete k veřejným hot spotům.
 Tato funkce je deaktivována.
-rodičovská kontrola
+Rodičovská kontrola
 Nové heslo
 Zadejte heslo znovu
 Velmi slabé
@@ -998,13 +999,14 @@ Pokud změníte svůj SSID, bude to mít negativní vliv na připojení WiFi va�
 Pokud změníte svůj WPA předsdílený klíč, bude to mít negativní vliv na připojení WiFi vašeho uzlu AiMesh.
 Změna kódu země může mít negativní vliv na váš systém AiMesh.
 Pokud deaktivujete funkci Radio (Rádio), bude to mít negativní vliv na připojení WiFi vašeho routeru AiMesh.
-Pokud skryjete svůj SSID, bude to mít negativní vliv na připojení WiFi vašeho routeru AiMesh.
+Skrytý identifikátor SSID nepomáhá zabezpečit síť Wi-Fi a může způsobit problémy s připojením.
 Pokud skryjete svůj SSID, funkce WPS bude deaktivována a bude to mít negativní vliv na připojení WiFi vašeho routeru AiMesh.
 Pokud deaktivujete server DHCP, bude to mít negativní vliv na připojení WiFi vašeho routeru AiMesh.
 Z důvodu kompatibility systému AiMesh a koncových zařízení doporučujeme používat WPA2-Personal. Chcete přepnout na #AUTHMODE ?\n*Pokud zaznamenáte problémy s připojením, přepněte na WPA2-Personal nebo se výrobce zeptejte na další informace.
 Chcete-li zajistit připojení systému AiMesh a koncových zařízení, měli byste si před přepnutím na WPA3-Personal přečíst tento přehled <a id="wpa3FaqLink">Nejčastější dotazy</a>.
 Aktuálně používáte WPA3-personal. Chcete-li vytvořit systém AiMesh, je nutné změnit způsob ověřování na WPA2/WPA3-personal. Chcete pokračovat?
 You can read this <a id='wpa3FaqLink'>FAQ</a> for more information.
+Další podrobnosti najdete na webu <a style='font-weight: bolder;text-decoration: underline;' href='' target='_blank'>Nejčastější dotazy</a>
 Pokročilý ASUS AiMesh je inovativní nová funkce směrovače, která připojuje více směrovačů ASUS a vytváří celou domácí síť WiFi.
 Zjistěte víc o ASUS AiMesh
 Najít uzel AiMesh
@@ -1090,6 +1092,9 @@ Balkón
 Jednací místnost
 Vlastní
 Garáž
+První patro
+Herní místnost
+Tělocvična
 Offline tipy
 Zkontrolujte, zda je zapnuté napájení vašeho uzlu AiMesh.
 Restartujte uzel AiMesh a zkuste to znovu.
@@ -1687,6 +1692,8 @@ Importujte vlastní certifikát
 Odešlete certifikát vystavený certifikační autoritou zde. Je nezbytný váš privátní klíč a certifikát SSL.
 Privátní klíč
 Privátní klíče nemohou být chráněny heslem.
+Aktualizace IPv6
+Pokud síťové prostředí klienta používá síťovou adresu IPv6, povolením této funkce dojde nejdříve při přístupu ke vzdálenému zařízení k překladu domény na síťovou adresu IPv6.
 Certifikát SSL
 Ustanovení a Podmínky použití
 Transfer ASUS DDNS name
@@ -2028,11 +2035,11 @@ Aktivujte bránu firewall na ochranu vaší místní sítě před útoky hacker�
 <b>Doba trvání - černá listina :</b> Během plánované doby trvání nemohou klienti na černé listině používat určené síťové služby. Po uplynutí určené doby trvání mohou všichni klienti v místní síti LAN přistupovat k určeným síťovým službám.<br><b>Doba trvání - bílá listina :</b> Během plánované doby trvání nemohou určené síťové služby používat POUZE klienti na bílé listině. Po uplynutí určené dob trvání nebudou moci klienti na bílé listině a ostatní síťoví klienti přistupovat k Internetu ani k žádné internetové službě.
 <b>POZNÁMKA :</b> Nastavíte-li masku podsítě pro bílou listinu, adresy IP mimo podsíť nebudou moci přistupovat k Internetu ani k žádné internetové službě.
 Filtr adres MAC umožňuje povolovat nebo odmítat přístup k síti pro zařízení se specifickými adresami MAC.<p>Filtr adres MAC lze nastavit na režim Přijmout nebo Odmítnout.<p>V režimu Odmítnout bude zařízením v seznamu odmítnut přístup k síti.<p>V režimu Přijmout mohou přistupovat k síti pouze zařízení v seznamu. Zařízení, která nejsou v seznamu, mají zamítnutý přístup k síti.
-Útok DoS (Denial-of-Service) je otevřený pokus zabránit legitimním uživatelům v používání služby nebo počítačového zdroje.<p>Aktivací této funkce lze chránit směrovač před útokem DoS, ale zvýší se tím zatížení směrovače.
+Aktivací této funkce lze chránit směrovač před útokem DoS (Denial- of-Service), ale zvýší se tím zatížení směrovače.
 Povolit ochranu DoS
 Deaktivací brány firewall budou deaktivovány všechny související funkce.
 Povolit Firewall
-Povolit IPv4 Firewall
+Povolit IPv4 Příchozí pravidla brány firewall
 Brána firewall IPv4
 Když pro konfiguraci vaší sítě WAN nastavíte 20:21 jako rozsah portů serveru FTP, potom bude váš server FTP v konfliktu s nativním serverem FTP zařízení RT-AX53U.
 Povolit filtr klíčových slov
@@ -2140,6 +2147,9 @@ Updated
 K dispozici je nový firmware.
 Načítají se poznámky k verzi, čekejte prosím...
 Poznámky k verzi se nepodařilo najít.
+Vrácení zpět
+Vyberte verzi firmwaru
+Výběr vrácení firmwaru zpět
 Herní akcelerace
 Zrychlení her
 Trojúrovňová herní akcelerace
@@ -2878,6 +2888,7 @@ Vytvořit nového klienta RADIUS
 Skupinová tabulka
 Název oddílu
 Pro zdrojový nebo cílový rozsah portů můžete: a) zadat konkrétní port, například \"95\"; nebo b) zadat porty v určitém rozsahu, například \"103:315\", \">100\" nebo \"<65535\".
+Herní port
 Port Mapping (Mapování portů)
 Mapování portů podporuje rozhraní IPTV WAN pro specifický port LAN. Můžete vybrat příslušný port LAN a potom klepněte na Apply (Použít).
 Enable Port Mapping (Povolit mapování portů)
@@ -3322,6 +3333,7 @@ Atlantický čas (Kanada)
 La Paz
 Caracas
 Santiago
+Asunción
 Newfoundland
 Brazílie
 Buenos Aires, Georgetown
@@ -3397,7 +3409,7 @@ Guam, Port Moresby
 Nová Kaledonie
 Marshallovy ostrovy
 Magadan
-Fiji
+Fidži
 Auckland, Wellington
 Nuku'alofa
 Anadyr, Petropavlovsk-Kamchatsky
@@ -3413,7 +3425,7 @@ Priorita odesílání
 Odeslaná data/s
 Odeslaná data
 Nastavte iTunes a mediální server UPnP.
-RT-AX53U podporuje standard UPnP. Můžete jej povolit a umožnit jiným UPnP zařízením, jako je PS3 nebo digitální přehrávač, přístup k multimediálním souborům na USB disku.
+Nastavte <a id='upnp_link'>UPnP, iTunes</a>, <a id='ftp_link'>FTP</a> a <a id='samba_link'>Místa v síti (Samba)</a>.
 URL klíčových slov
 Zkontrolujte aplikaci USB
 Kontrola disku
@@ -3500,7 +3512,7 @@ Podpora místa v síti (Samba)
 Inzerovat DNS do klientů
 Režim ověření
 Pouze ověření uživatelským jménem / heslem
-Authorization Mode fixes on TLS
+Authentication Mode fixes on TLS
 Ověření HMAC
 Dodatečné ověření HMAC
 Povolit Klient <-> Klient
@@ -4089,7 +4101,7 @@ Před smazáním profilu prosím profil deaktivujte.
 Veškeré výjimky ze zásad pro profil VPN budou při smazání profilu odstraněny. Opravdu chcete profil odstranit?
 Opravdu chcete tento profil odstranit?
 Smazáním zásady klienta v seznamu výjimek smažete také klientovu IP vazbu serveru DHCP. Opravdu toto chcete odstranit?
-<a id="faq1" href="" target="_blank" style="font-weight:bolder;text-decoration:underline;">Multiple VPN Connection FAQ.</a>
+<a id="faq1" href="" target="_blank" style="font-weight:bolder;text-decoration:underline;">Často kladené dotazy k fúzi VPN.</a>
 Nelze nastavit jako výchozí WAN pro cílovou zásadu.
 Beta test only
 You can also select [Cancel], the device will automatically start downloading the update during the night time.
@@ -4129,6 +4141,7 @@ GeForce Now
 Výběrem GeForce Now budou upřednostněna zařízení GeForce Now pro zážitek z rychlejšího a lepšího hraní.
 LED On/Off
 The LED on/off control is used to turn off all LEDs includes Aura light.
+To enable Aura RGB, LED must remain on. Please turn on LED by pressing hardware button on the router for 3 seconds or enable it via web/app interface.
 Událost
 Systém rozpoznává následující události a aktivuje různé efekty LED.
 Při aktivaci Game Boost se na panelu LED zobrazí červený efekt pulzování.

@@ -128,6 +128,7 @@ Ezenkívül ha az IFTTT™ távoli vezérlési funkcióját engedélyezni szeret
 Az ASUS mindent megtesz a személyes adatok védelme és tiszteletben tartása érdekében. Bármikor igény szerint megnyithatja az Advanced Settings (Speciális beállítások) > Administration (Adminisztrálás) > Privacy (Adatvédelem) menüpontot, és engedélyezheti vagy letilthatja a termékkel kapcsolatos információk megosztását az ASUS vállalattal. Ha további részleteket szeretne megtudni arról, hogy az ASUS hogyan gondoskodik az adatok védelméről, tekintse meg az <a id="eula_url" style="font-weight: bolder;text-decoration:underline;cursor:pointer;" target="_blank">ASUS adatvédelmi nyilatkozatát</a>.
 Már elmúltam 16 éves.
 Kérjük, erősítse meg, hogy már elmúlt 16 éves.
+Kérjük, erősítse meg, hogy ASUS használati feltételek.
 A %1$@ és távoli csatlakozás (ASUS Router alkalmazás/Lyra alkalmazás/AiCloud/AiDisk) esetében:
 Kérjük, vegye figyelembe, hogy az ASUS a fenti funkciókon keresztül gyűjti az információkat, többek között a termék típusának nevét, a firmware verziószámát, az internet állapotát, az IP-címet, a MAC-címet és a DDNS-nevet.
 Ha azt szeretné, hogy az információk ne legyenek megosztva az ASUS vállalattal a fenti funkciókon keresztül, kattintson az alábbi <span style="font-weight: bold;">[Visszavonás]</span> lehetőségre. Azt mindenképpen vegye figyelembe, hogy ha nem osztja meg az információkat az ASUS vállalattal, akkor elképzelhető, hogy ezek a szolgáltatások és funkciók nem fognak működni.
@@ -139,12 +140,12 @@ Ha a későbbiekben engedélyezni szeretné az Alexa™ és az IFTTT™ funkció
 Internetkapcsolat nélkül nem lehet elvégezni a visszavonási folyamatot. Kérjük, hogy a visszavonást akkor végezze el, amikor csatlakozik az internethez.
 Jelenleg nem lehet elvégezni a visszavonási folyamatot, mivel az internetkapcsolat instabil. Kérjük, próbálja újra a visszavonást később.
 Az ASUS AiProtection használatával egyetért az
-Az AiProtection, a forgalomelemző, az alkalmazáselemző, az Adaptive QoS/Game boost és a webes előzmények használatával Ön elfogadja a <a id="eula_url" style="text-decoration:underline;" target="_blank">Trend Micro végfelhasználói licencszerződését</a>.
-Kérjük, vegye figyelembe, hogy a Trend Micro gyűjti az információkat az AiProtection, a forgalomelemző, az alkalmazáselemző, az Adaptive QoS szolgáltatáson és a webes előzményeken keresztül. Ön azt is elismeri és elfogadja, hogy az ASUS nem felelős az Ön és a Trend Micro között létrejött megállapodásért, illetve a Trend Micro által biztosított szolgáltatás tartalmáért. Amennyiben kérdései vannak arról, hogy a Trend Micro hogyan gyűjti, hogyan dolgozza fel és hogyan használja a fenti információkat, tekintse meg a Trend Micro által kiadott adatvédelmi nyilatkozatot, vagy kérjen bővebb tájékoztatást a Trend Micro vállalattól.
+Az AiProtection, a forgalomelemző, Szülői felügyelet( Web és Applikáció Szűrés ), az alkalmazáselemző, az Adaptive QoS/Game boost és a webes előzmények használatával Ön elfogadja a <a id="eula_url" style="text-decoration:underline;" target="_blank">Trend Micro végfelhasználói licencszerződését</a>.
+Kérjük, vegye figyelembe, hogy a Trend Micro gyűjti az információkat az AiProtection, a Szülői felügyelet( Web és Applikáció Szűrés ), a forgalomelemző, az alkalmazáselemző, az Adaptive QoS szolgáltatáson és a webes előzményeken keresztül. Ön azt is elismeri és elfogadja, hogy az ASUS nem felelős az Ön és a Trend Micro között létrejött megállapodásért, illetve a Trend Micro által biztosított szolgáltatás tartalmáért. Amennyiben kérdései vannak arról, hogy a Trend Micro hogyan gyűjti, hogyan dolgozza fel és hogyan használja a fenti információkat, tekintse meg a Trend Micro által kiadott adatvédelmi nyilatkozatot, vagy kérjen bővebb tájékoztatást a Trend Micro vállalattól.
 Ha azt szeretné, hogy az információk ne legyenek megosztva a Trend Micro vállalattal a fenti funkciókon keresztül, nyissa meg a következő menüpontot:  Router web GUI (Router webes felhasználói felülete) > Advanced settings (Speciális beállítások) > Administration (Adminisztrálás) > Privacy (Adatvédelem).
 <a id="tm_eula_url" style="text-decoration:underline;" target="_blank">TrendMicro Privacy Policy</a>
 <a id="tm_disclosure_url" style="text-decoration:underline;" target="_blank">Privacy and Personal Data Collection Disclosure</a>
-Az AiProtection, a forgalomelemző, az alkalmazáselemző, az Adaptive QoS/Game boost és a webes előzmények esetében:
+Az AiProtection, a Szülői felügyelet( Web és Applikáció Szűrés ), a forgalomelemző, az alkalmazáselemző, az Adaptive QoS/Game boost és a webes előzmények esetében:
 Kérjük, vegye figyelembe, hogy a Trend Micro gyűjti az információkat a fenti funkciókon keresztül.
 Ha azt szeretné, hogy az információk ne legyenek megosztva a Trend Micro vállalattal az alábbi funkciókon keresztül, kattintson az alábbi <span style="font-weight: bold;">[<Visszavonás]</span> lehetőségre. Azt mindenképpen vegye figyelembe, hogy ha nem osztja meg az információkat a Trend Micro vállalattal, akkor elképzelhető, hogy ezek a szolgáltatások és funkciók nem fognak működni.
 Biztosan vissza szeretné vonni az információk megosztását?
@@ -271,7 +272,7 @@ A firmware frissítése sikertelen. Ellenőrizze a firmware verzióját és pró
 A Firmware frissítése folyik. Kérjük, várjon kb. 3 percig.
 A firmware frissítés befejeződött. Zárja be ezt az ablakot és lépjen be újra az AiMesh routerre,
 A firmware frissítése sikeresen megtörtént. Kérjük, indítsa újra manuálisan a RT-AX53U-t.
-To comply with regulatory amendments, we have modified our certification rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
+To comply with regulatory amendments, we have modified our certificate rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
 5 alkalommal is helytelen jelszót adott meg. A rendszer kijelentkezteti.
 2022 ASUSTeK Computer Inc. Minden jog fenntartva.
 A konfigurációs paraméterek beállításai a firmware-frissítési folyamat során megmaradnak.
@@ -998,13 +999,14 @@ Amennyiben megváltoztatja az SSID-t, az AiMesh csomópont WiFi csatlakozása me
 Amennyiben megváltoztatja az a WPA előre megosztott kulcsot, az AiMesh csomópont WiFi csatlakozása megsínyli ezt.
 Az országkód megváltoztatása befolyásolhatja az AiMesh rendszert.
 Amennyiben kikapcsolja a rádió funkciót, az AiMesh router WiFi csatlakozása megsínyli ezt.
-Amennyiben elrejti az SSID-t, az AiMesh router WiFi csatlakozása megsínyli ezt.
+A rejtett SSID nem segíti a Wi-Fi hálózat biztonságát, és kapcsolódási problémákat okozhat.
 Amennyiben elrejti az SSID-t, a WPS funkció kikapcsol és az AiMesh router WiFi csatlakozása megsínyli ezt.
 Amennyiben kikapcsolja a DHCP kiszolgálót, az AiMesh router WiFi csatlakozása megsínyli ezt.
 Az AiMesh rendszer és a végeszközök kompatibilitására figyelemmel javasoljuk a WPA2-Personal használatát. Szeretne átváltani a következőre: #AUTHMODE ?\n*Ha kapcsolódási problémák merülnek fel, váltson WPA2-Personal módszerre, vagy forduljon a gyártó(k)hoz további információkért.
 Az AiMesh rendszer és a végeszköz(ök) kapcsolódásának biztosítása érdekében olvassa el ezt a <a id="wpa3FaqLink">FAQ</a>-ot, mielőtt WPA3-Personal módra váltana.
 Ön jelenleg WPA3-personal biztonságot használ. AiMesh rendszer létrehozásához a hitelesítési módszer WPA2/WPA3-personal-ra változik. Kívánja folytatni?
 You can read this <a id='wpa3FaqLink'>FAQ</a> for more information.
+A további részletekért látogasson el a <a style='font-weight: bolder;text-decoration: underline;' href='' target='_blank'>ezt a GYIK-et</a> oldalra.
 A továbbfejlesztett ASUS AiMesh egy olyan új, innovatív router funkció, amely több ASUS routert összekötve egész otthonra kiterjedő WiFi hálózatot hoz létre.
 Bővebben az ASUS AiMesh funkcióról
 AiMesh csomópont keresése
@@ -1090,6 +1092,9 @@ Erkély
 Találkozó szoba
 Egyedi
 Garázs
+Első emelet
+Játékszoba
+Edzőterem
 Offline tanácsok
 Győződjön meg arról, hogy AiMesh csomópontja be van kapcsolva.
 Indítsa újra AiMesh csomópontját és próbálja meg újra.
@@ -1687,6 +1692,8 @@ Saját tanúsítvány importálása
 Töltsön fel ide egy tanúsító testület által kiadott tanúsítványt. Az Ön privát kulcsa és SSL tanúsítványa szükségesek.
 Privát kulcs
 A privát kulcsok nem lehetnek jelszóval védettek.
+IPv6-frissítés
+Ha az ügyfél hálózati környezete IPv6 hálózati címet használ, akkor a funkció engedélyezésekor távoli eszköz elérése esetén a tartományt először IPv6 hálózati címre oldja fel a rendszer.
 SSL tanúsítvány
 Értesítés a használati feltételekről
 Transfer ASUS DDNS name
@@ -2028,11 +2035,11 @@ Engedélyezze a tűzfalat, hogy megvédje helyi hálózatát a hekkerek támadá
 <b>Feketelista időtartama:</b> az ütemezett időtartamban a Feketelistán szereplő kliensek nem használhatják a megadott hálózati szolgáltatásokat. A megadott időtartam elteltével a LAN összes kliense elérheti a megadott hálózati szolgáltatásokat.<br><b>Fehérlista időtartama:</b> az ütemezett időtartamban CSAK a Fehérlistán szereplő kliensek használhatják a megadott hálózati szolgáltatásokat. A megadott időtartam elteltével a Fehérlistán szereplő kliensek és az egyéb hálózati kliensek elérhetik az internetet, illetve bármely internetes szolgáltatást.
 <b>MEGJEGYZÉS:</b> ha beállítja az alhálózatot a Fehérlistához, az alhálózaton kívüli IP-címek nem érhetik el az internetet, illetve bármely internetes szolgáltatást.
 A MAC-szűrő lehetővé teszi az adott MAC-címmel rendelkező eszközök hálózati elérésének engedélyezését, illetve tiltását.<p>A MAC-szűrőt Elfogadás vagy Elutasítás módra állíthatja.<p>Elutasítás módban a listán szereplő eszközök hálózati elérése tiltásra kerül.<p>Elfogadás módban csak a listán szereplő eszközök érhetik el a hálózatot. A listán nem szereplő eszközök nem érhetik el a hálózatot.
-A \"denial-of-service\" támadás explicit kísérlet arra, hogy a jogos felhasználók számára egy szolgáltatás vagy számítógépes erőforrás elérése megvonásra kerüljön.<p>E szolgáltatás engedélyezése megvédheti a routert DoS támadással szemben, azonban növeli a router terhelését.
+E szolgáltatás engedélyezése megvédheti a routert DoS (Denial- of-Service) támadással szemben, azonban növeli a router terhelését.
 DoS védelem engedélyezése
 A tűzfal letiltása visszavonja az összes kapcsolódó funkció aktiválását.
 Tűzfal engedélyezése
-IPv4 Tűzfal engedélyezése
+IPv4 bejövő tűzfal-szabályok engedélyezése
 IPv4 tűzfal
 Ha a 20:21-et állítja be mint az FTP szerver porttartománya a WAN-beállításokban, akkor az FTP szerver összeütközésbe kerülne a RT-AX53U saját FTP szerverével.
 Kulcsszó szűrő engedélyezése
@@ -2140,6 +2147,9 @@ Updated
 Új firmware áll rendelkezésre.
 Verziót kísérő megjegyzés betöltése folyamatban van, várjon.
 Nem található verziót kísérő megjegyzés.
+Visszaállítás
+Válasszon firmware-verziót
+Firmware-visszaállításválasztó
 Szintű játékgyorsítás
 Játékfokozás
 Tripla szintű játékgyorsítás
@@ -2878,6 +2888,7 @@ Jelszó megerősítése
 Csoporttáblázat
 Partíció neve
 A forrás- vagy célport tartomány tekintetében vagy: a) adott portot adhat meg, pl. \"95\", vagy b) tartományon belüli portokat adhat meg, pl. \"103:315\", \">100\" vagy \"<65535\".
+Játékport
 Port leképzés
 A Port leképzés támogatja az IPTV WAN felületet adott LAN port esetében. Válassza ki a megfelelő LAN portot, majd kattintson az Alkalmaz gombra.
 Port leképzés engedélyezése
@@ -3322,6 +3333,7 @@ Atlanti-óceán idő (Kanada)
 La Paz
 Caracas
 Santiago
+Asunción
 Új-Fundland
 Brasilia
 Buenos Aires, Georgetown
@@ -3500,7 +3512,7 @@ Hálózati hely (Samba) támogatás
 DNS hirdetése kliensek felé
 Hitelesítési mód
 Csak Felhasználónév- / Jelszó-hitelesítés
-Authorization Mode fixes on TLS
+Authentication Mode fixes on TLS
 HMAC hitelesítés
 Extra HMAC hitelesítés
 Kliens <-> Kliens engedélyezése
@@ -4089,7 +4101,7 @@ Kérjük, hogy törlés előtt inaktiválja a profilt.
 A VPN-profilhoz beállított összes házirend-kivétel el lesz távolítva a profil törlésekor. Biztos, hogy törölni szeretné a profilt?
 Biztos, hogy törölni szeretné ezt a profilt?
 Ha törli a kliens házirendjét a kivételek listáján, azzal a DHCP-kiszolgáló IP-kötését is törli a kliensnél. Biztos, hogy törölni szeretné ezt?
-<a id="faq1" href="" target="_blank" style="font-weight:bolder;text-decoration:underline;">Multiple VPN Connection FAQ.</a>
+<a id="faq1" href="" target="_blank" style="font-weight:bolder;text-decoration:underline;">VPN Fusion – GYIK</a>
 Nem lehet beállítani alapértelmezett WAN-ként a cél-házirendhez.
 Beta test only
 You can also select [Cancel], the device will automatically start downloading the update during the night time.
@@ -4129,6 +4141,7 @@ GeForce Now
 Válassza a GeForce Now lehetőséget, hogy előnyben részesítse a GeForce Now játékeszközöket gyorsabb és jobb játékélmény érdekében.
 LED On/Off
 The LED on/off control is used to turn off all LEDs includes Aura light.
+To enable Aura RGB, LED must remain on. Please turn on LED by pressing hardware button on the router for 3 seconds or enable it via web/app interface.
 Esemény
 A rendszer érzékeli a következő eseményeket és különböző LED effektusokat kapcsol be.
 Amikor engedélyezi a Game Boost módot, a LED sávon vörös légzési effektust láthat.

@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#837#> - <#396#></title>
+<title><#838#> - <#397#></title>
 <link rel="stylesheet" type="text/css" href="/index_style.css">
 <link rel="stylesheet" type="text/css" href="/form_style.css">
 <link rel="stylesheet" type="text/css" href="/aidisk/AiDisk_style.css">
@@ -67,11 +67,11 @@ showPermissionTitle();
 if("<% nvram_get("ddns_enable_x"); %>" == 1)
 document.getElementById("machine_name").innerHTML = "<% nvram_get("ddns_hostname_x"); %>";
 if(get_manage_type(PROTOCOL)){
-document.getElementById("loginMethod").innerHTML = "<#959#>";
+document.getElementById("loginMethod").innerHTML = "<#960#>";
 document.getElementById("accountMask").style.display = "none";
 }
 else{
-document.getElementById("loginMethod").innerHTML = "<#958#>";
+document.getElementById("loginMethod").innerHTML = "<#959#>";
 document.getElementById("accountMask").style.display = "block";
 }
 setTimeout('get_disk_tree();', 1000);
@@ -89,7 +89,7 @@ if(FTP_status && httpApi.ftp_port_conflict_check.conflict()){
 $("#ftpPortConflict").show();
 var text = httpApi.ftp_port_conflict_check.usb_ftp.hint;
 text += "<br>";
-text += "<a id='ftp_port_conflict_faq' href='' target='_blank' style='text-decoration:underline;color:#FC0;'><#1908#></a>";
+text += "<a id='ftp_port_conflict_faq' href='' target='_blank' style='text-decoration:underline;color:#FC0;'><#1915#></a>";
 $("#ftpPortConflict").html(text);
 }
 if($("#ftpPortConflict").find("#ftp_port_conflict_faq").length){
@@ -115,12 +115,7 @@ if(protocol != "cifs" && protocol != "ftp" && protocol != "webdav")
 return;
 switch(get_manage_type(protocol)){
 case 1:
-if(ftp_tls_orig=="1"){
-alert("Allow anonymous login is in conflict with TLS settings."); /* Untranslated */
-refreshpage();
-break;
-}
-if(confirm("<#960#>")){
+if(confirm("<#961#>")){
 document.aidiskForm.action = "/aidisk/switch_share_mode.asp";
 document.aidiskForm.protocol.value = protocol;
 document.aidiskForm.mode.value = "share";
@@ -148,18 +143,18 @@ var status;
 var confirm_str_on, confirm_str_off;
 if(protocol == "cifs"){
 status = this.NN_status;
-confirm_str_off= "<#1602#>"; //"<#1604#>"+ By Viz 2011.09
-confirm_str_on = "<#1606#>";
+confirm_str_off= "<#1607#>"; //"<#1609#>"+ By Viz 2011.09
+confirm_str_on = "<#1611#>";
 }
 else if(protocol == "ftp"){
 status = this.FTP_status;
-confirm_str_off = "<#1603#>";
-confirm_str_on = "<#1607#>";
+confirm_str_off = "<#1608#>";
+confirm_str_on = "<#1612#>";
 if(httpApi.ftp_port_conflict_check.port_forwarding.enabled() && httpApi.ftp_port_conflict_check.port_forwarding.use_usb_ftp_port()){
 confirm_str_on += "\n";
 confirm_str_on += httpApi.ftp_port_conflict_check.usb_ftp.hint;
 confirm_str_on += "\n";
-confirm_str_on += "<#1908#> : ";
+confirm_str_on += "<#1915#> : ";
 confirm_str_on += usb_port_conflict_faq;
 }
 }
@@ -197,7 +192,7 @@ account_group_list = this.groups;
 else
 account_group_list = this.accounts;
 if(this.account_group_list.length <= 0)
-account_group_menu_code += '<div class="noAccount" id="noAccount"><#2792#></div>\n'
+account_group_menu_code += '<div class="noAccount" id="noAccount"><#2802#></div>\n'
 else{
 for(var i = 0; i < account_group_list.length; ++i){
 account_group_menu_code += '<div class="userIcon" id="';
@@ -225,12 +220,12 @@ code += '<table width="190"><tr>';
 if(PROTOCOL == "cifs"){
 code += '<td width="34%" align="center">R/W</td>';
 code += '<td width="28%" align="center">R</td>';
-code += '<td width="38%" align="center"><#185#></td>';
+code += '<td width="38%" align="center"><#186#></td>';
 }else if(PROTOCOL == "ftp"){
 code += '<td width="28%" align="center">R/W</td>';
 code += '<td width="22%" align="center">W</td>';
 code += '<td width="22%" align="center">R</td>';
-code += '<td width="28%" align="center"><#185#></td>';
+code += '<td width="28%" align="center"><#186#></td>';
 }
 code += '</tr></table>';
 document.getElementById("permissionTitle").innerHTML = code;
@@ -426,7 +421,7 @@ var accounts_length = this.accounts.length;
 var maximum_account = httpApi.nvramGet(["st_max_user"]).st_max_user;
 document.getElementById("createAccountBtn").onclick = function(){
 if(accounts_length >= maximum_account) {
-alert("<#2444#> " + maximum_account + " <#2445#>");
+alert("<#2454#> " + maximum_account + " <#2455#>");
 return false;
 }
 else
@@ -444,13 +439,13 @@ changeActionButton(document.getElementById("createAccountBtn"), 'User', 'Add');
 document.getElementById("createAccountBtn").onclick = function(){};
 document.getElementById("createAccountBtn").onmouseover = function(){};
 document.getElementById("createAccountBtn").onmouseout = function(){};
-document.getElementById("createAccountBtn").title = (accounts.length < 11)?"<#905#>":"<#871#>";
+document.getElementById("createAccountBtn").title = (accounts.length < 11)?"<#906#>":"<#872#>";
 }
 if(this.accounts.length > 0 && this.selectedAccount != null && this.selectedAccount.length > 0 && this.accounts[0] != this.selectedAccount){
 changeActionButton(document.getElementById("modifyAccountBtn"), 'User', 'Mod', 0);
 document.getElementById("modifyAccountBtn").onclick = function(){
 if(!selectedAccount){
-alert("<#977#>");
+alert("<#978#>");
 return;
 }
 popupWindow('OverlayMask','/aidisk/popModifyAccount.asp');
@@ -472,7 +467,7 @@ if(this.accounts.length > 1 && this.selectedAccount != null && this.selectedAcco
 changeActionButton(document.getElementById("deleteAccountBtn"), 'User', 'Del', 0);
 document.getElementById("deleteAccountBtn").onclick = function(){
 if(!selectedAccount){
-alert("<#977#>");
+alert("<#978#>");
 return;
 }
 popupWindow('OverlayMask','/aidisk/popDeleteAccount.asp');
@@ -494,11 +489,11 @@ if(this.selectedPoolOrder >= 0 && this.selectedFolderOrder < 0){
 changeActionButton(document.getElementById("createFolderBtn"), 'Folder', 'Add', 0);
 document.getElementById("createFolderBtn").onclick = function(){
 if(selectedDiskOrder < 0){
-alert("<#978#>");
+alert("<#979#>");
 return;
 }
 if(selectedPoolOrder < 0){
-alert("<#980#>");
+alert("<#981#>");
 return;
 }
 popupWindow('OverlayMask','/aidisk/popCreateFolder.asp');
@@ -521,7 +516,7 @@ changeActionButton(document.getElementById("deleteFolderBtn"), 'Folder', 'Del', 
 changeActionButton(document.getElementById("modifyFolderBtn"), 'Folder', 'Mod', 0);
 document.getElementById("deleteFolderBtn").onclick = function(){
 if(selectedFolderOrder < 0){
-alert("<#979#>");
+alert("<#980#>");
 return;
 }
 popupWindow('OverlayMask','/aidisk/popDeleteFolder.asp');
@@ -534,7 +529,7 @@ changeActionButton(this, 'Folder', 'Del', 0);
 };
 document.getElementById("modifyFolderBtn").onclick = function(){
 if(selectedFolderOrder < 0){
-alert("<#979#>");
+alert("<#980#>");
 return;
 }
 popupWindow('OverlayMask','/aidisk/popModifyFolder.asp');
@@ -608,12 +603,14 @@ lastClickedObj = 0;
 setTimeout('get_disk_tree();', 1000);
 }
 function secure_check(flag){
+if(ftp_ssl_support){
+document.getElementById("TLS_disabled").innerHTML = (flag==1)? "":"<#3463#>";
 if(flag==1 && !get_manage_type(PROTOCOL)){
-alert("<#3452#>");
+alert("<#3464#>");
 document.form.ftp_tls[1].checked = true;
 return;
 }
-document.getElementById("TLS_disabled").innerHTML = (flag==1)? "":"<#3451#>";
+}
 }
 </script>
 </head>
@@ -657,20 +654,20 @@ document.getElementById("TLS_disabled").innerHTML = (flag==1)? "":"<#3451#>";
 <tr>
 <td>
 <div style="width: 99%; margin-top: 30px; margin-bottom: 5px;">
-<span class="formfonttitle"><#394#> - <#396#></span>
+<span class="formfonttitle"><#395#> - <#397#></span>
 <span id="returnBtn" class="returnBtn">
-<img onclick="go_setting('/APP_Installation.asp')" align="right" title="<#374#>" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'">
+<img onclick="go_setting('/APP_Installation.asp')" align="right" title="<#375#>" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'">
 </span>
 </div>
 <div id="splitLine" class="splitLine"></div>
-<div class="formfontdesc" style="margin-top: 10px;"><#2116#></div>
+<div class="formfontdesc" style="margin-top: 10px;"><#2123#></div>
 </td>
 </tr>
 <tr>
 <td>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
-<th><#1871#></th>
+<th><#1878#></th>
 <td>
 <div class="left" style="width:94px; float:left; cursor:pointer;" id="radio_ftp_enable"></div>
 <div class="iphone_switch_container" style="height:32px; width:74px; position: relative; overflow: hidden">
@@ -689,7 +686,7 @@ switchAppStatus(PROTOCOL);
 </td>
 </tr>
 <tr>
-<th><#1872#></th>
+<th><#1879#></th>
 <td>
 <div class="left" style="width:94px; float:left; cursor:pointer;" id="radio_wan_ftp_enable"></div>
 <div class="iphone_switch_container" style="height:32px; width:74px; position: relative; overflow: hidden">
@@ -710,19 +707,19 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 </td>
 </tr>
 <tr id="radio_anonymous_enable_tr" style="height: 60px;">
-<th><#956#></th>
+<th><#957#></th>
 <td>
 <div class="left" style="margin-top:5px;width:94px; float:left; cursor:pointer;" id="radio_anonymous_enable"></div>
 <div class="iphone_switch_container" style="display: table-cell;vertical-align: middle;height:45px; position: relative; overflow: hidden">
 <script type="text/javascript">
 $('#radio_anonymous_enable').iphoneSwitch(!get_manage_type(PROTOCOL),
 function() {
-if(ftp_tls_orig=="0"){
-switchAccount(PROTOCOL);
+if(ftp_ssl_support && ftp_tls_orig=="1"){
+alert("<#3464#>");
+refreshpage();
 }
 else{
-alert("Allow anonymous login is in conflict with TLS settings."); /* Untranslated */
-refreshpage();
+switchAccount(PROTOCOL);
 }
 },
 function() {
@@ -735,16 +732,16 @@ switchAccount(PROTOCOL);
 </td>
 </tr>
 <tr id="radio_ftp_tls_enable_tr">
-<th><#976#></th>
+<th><#977#></th>
 <td>
-<input type="radio" name="ftp_tls" class="input" value="1" <% nvram_match_x("", "ftp_tls", "1", "checked"); %> onChange="secure_check(1);"><#186#>
-<input type="radio" name="ftp_tls" class="input" value="0" <% nvram_match_x("", "ftp_tls", "0", "checked"); %> onChange="secure_check(0);"><#185#>
+<input type="radio" name="ftp_tls" class="input" value="1" <% nvram_match_x("", "ftp_tls", "1", "checked"); %> onChange="secure_check(1);"><#187#>
+<input type="radio" name="ftp_tls" class="input" value="0" <% nvram_match_x("", "ftp_tls", "0", "checked"); %> onChange="secure_check(0);"><#186#>
 <span id="TLS_disabled" style="color:#FC0;margin-left:10px;"></span>
 </td>
 </tr>
 <tr>
 <th>
-<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,1);"><#3099#></a>
+<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,1);"><#3110#></a>
 </th>
 <td>
 <input type="text" name="st_max_user" class="input_3_table" maxlength="2" value="<% nvram_get("st_max_user"); %>" onKeyPress="return validator.isNumber(this, event);" autocorrect="off" autocapitalize="off">
@@ -752,21 +749,21 @@ switchAccount(PROTOCOL);
 </tr>
 <tr>
 <th>
-<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,9);"><#3093#></a>
+<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,9);"><#3104#></a>
 </th>
 <td>
 <select name="ftp_lang" class="input_option">
-<option value="CN" <% nvram_match("ftp_lang", "CN", "selected"); %>>GBK</option><!-- <#3096#> -->
-<option value="TW" <% nvram_match("ftp_lang", "TW", "selected"); %>>Big5</option><!-- <#3095#> -->
-<option value="EN" <% nvram_match("ftp_lang", "EN", "selected"); %>>UTF-8</option><!--<#3094#>-->
-<option value="RU" <% nvram_match("ftp_lang", "RU", "selected"); %>><#3097#></option>
-<option value="CZ" <% nvram_match("ftp_lang", "CZ", "selected"); %>><#3098#></option>
+<option value="CN" <% nvram_match("ftp_lang", "CN", "selected"); %>>GBK</option><!-- <#3107#> -->
+<option value="TW" <% nvram_match("ftp_lang", "TW", "selected"); %>>Big5</option><!-- <#3106#> -->
+<option value="EN" <% nvram_match("ftp_lang", "EN", "selected"); %>>UTF-8</option><!--<#3105#>-->
+<option value="RU" <% nvram_match("ftp_lang", "RU", "selected"); %>><#3108#></option>
+<option value="CZ" <% nvram_match("ftp_lang", "CZ", "selected"); %>><#3109#></option>
 </select>
 </td>
 </tr>
 </table>
 <div id="apply_btn">
-<input type="button" class="button_gen" value="<#195#>" onclick="applyRule();">
+<input type="button" class="button_gen" value="<#196#>" onclick="applyRule();">
 </div>
 <div id="shareStatus">
 <div id="tableMask"></div>
@@ -776,15 +773,15 @@ switchAccount(PROTOCOL);
 <td width="25%" style="border: 1px solid #222;">
 <table align="right">
 <tr id="trAccount" style="display:none;">
-<td><div id="createAccountBtn" title="<#905#>"></div></td>
-<td><div id="deleteAccountBtn" title="<#1696#>"></div></td>
-<td><div id="modifyAccountBtn" title="<#2723#>"></div></td>
+<td><div id="createAccountBtn" title="<#906#>"></div></td>
+<td><div id="deleteAccountBtn" title="<#1703#>"></div></td>
+<td><div id="modifyAccountBtn" title="<#2733#>"></div></td>
 </tr>
 <tr id="trPMGroup" style="display:none;">
 <td>
 <select name="" id="user_type" class="input_option" onchange="switchUserType(this.value);">
-<option value="group"><#2850#></option>
-<option value="account"><#2852#></option>
+<option value="group"><#2860#></option>
+<option value="account"><#2862#></option>
 </select>
 </td>
 </tr>
@@ -793,9 +790,9 @@ switchAccount(PROTOCOL);
 <td width="75%">
 <table align="right">
 <tr>
-<td><div id="createFolderBtn" title="<#907#>"></div></td>
-<td><div id="deleteFolderBtn" title="<#1699#>"></div></td>
-<td><div id="modifyFolderBtn" title="<#2727#>"></div></td>
+<td><div id="createFolderBtn" title="<#908#>"></div></td>
+<td><div id="deleteFolderBtn" title="<#1706#>"></div></td>
+<td><div id="modifyFolderBtn" title="<#2737#>"></div></td>
 </tr>
 </table>
 </td>
@@ -811,7 +808,7 @@ switchAccount(PROTOCOL);
 <table width="480" border="0" cellspacing="0" cellpadding="0" class="FileStatusTitle">
 <tr>
 <td width="290" height="20" align="left">
-<div id="machine_name" class="machineName"><#838#></div>
+<div id="machine_name" class="machineName"><#839#></div>
 </td>
 <td>
 <div id="permissionTitle"></div>
@@ -820,7 +817,7 @@ switchAccount(PROTOCOL);
 </table>
 <div id="e0" style="font-size:10pt; margin-top:2px;"></div>
 <div style="text-align:center; margin:10px auto; border-top:1px dotted #CCC; width:95%; padding:2px;">
-<input name="changePermissionBtn" id="changePermissionBtn" type="button" value="<#1655#>" class="button_gen_dis" disabled="disabled">
+<input name="changePermissionBtn" id="changePermissionBtn" type="button" value="<#1660#>" class="button_gen_dis" disabled="disabled">
 </div>
 </td>
 </tr>

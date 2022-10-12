@@ -114,9 +114,11 @@ width: 580px;
 margin:100px auto 0;
 }
 .warming_desc{
-font-size: 16px;
+margin:10px 0px -10px 78px;
+font-size: 14px;
 color:#FC0;
-width: 600px;
+line-height:20px;
+width: 520px;
 }
 #captcha_img_div{
 margin: 30px 0px 0px 30px;
@@ -350,19 +352,24 @@ return (ui_support[_ptn]) ? ui_support[_ptn] : 0;
 var captcha_support = isSupport("captcha");
 var captcha_enable = htmlEnDeCode.htmlEncode(decodeURIComponent('<% nvram_char_to_ascii("", "captcha_enable"); %>'));
 if(captcha_support && captcha_enable != "0")
-var captcha_on = (login_info.error_num >= 2 && login_info.error_status != "7")? true : false;
+var captcha_on = (login_info.error_num >= 2 && login_info.error_status != "7" && login_info.error_status != "11")? true : false;
 else
 var captcha_on = false;
+var faq_href = "https://nw-dlcdnet.asus.com/support/forward.html?model=&type=SG_TeleStand&lang=&kw=&num=";
 function initial(){
 var flag = login_info.error_status;
 if(isIE8 || isIE9){
 document.getElementById("name_title_ie").style.display ="";
 document.getElementById("password_title_ie").style.display ="";
 }
+if(flag != 11 && login_info.last_time_lock_warning){
+document.getElementById("last_time_lock_warning").style.display ="";
+document.getElementById("last_time_lock_warning").innerHTML ="You have entered an incorrect username or password 9 times. If there's one more failed account or password attempt, your router will be blocked from accessing, and need to be reset to factory setting.";
+}
 if(flag != ""){
 document.getElementById("error_status_field").style.display ="";
 if(flag == 3){
-document.getElementById("error_status_field").innerHTML ="* <#2449#>";
+document.getElementById("error_status_field").innerHTML ="* <#2459#>";
 }
 else if(flag == 7){
 document.getElementById("error_status_field").innerHTML ="You have entered an incorrect username or password 5 times. Please try again after "+"<span id='rtime'></span>"+" seconds.";
@@ -383,6 +390,13 @@ document.getElementById("nologin_field").style.display ="";
 }
 else if(flag == 10){
 document.getElementById("error_captcha_field").style.display ="";
+}
+else if(flag == 11){
+document.getElementById("error_status_field").innerHTML ="For security reasons, this router has been locked out because of 10 times of incorrect username and password attempts.<br>To unlock, please manually reset your router to factory setting by pressing the reset button on the back.<br>Click <a id=\"faq_SG\" href=\"\" target=\"_blank\" style=\"color:#FC0;text-decoration:underline;\">here</a> for more details.";
+document.getElementById("faq_SG").href = faq_href;
+document.getElementById("error_status_field").className = "error_hint error_hint1";
+disable_input(1);
+disable_button(1);
 }
 else{
 document.getElementById("error_status_field").style.display ="none";
@@ -581,38 +595,39 @@ captcha_pic.src = "captcha.gif" + queryString;
 <div class="div_td img_gap">
 <div class="login_img"></div>
 </div>
-<div class="div_td"><#208#></div>
+<div class="div_td"><#209#></div>
 </div>
-<div class="prod_madelName"><#838#></div>
+<div class="prod_madelName"><#839#></div>
 <div id="login_filed">
-<div class="p1 title_gap"><#721#></div>
-<div id="name_title_ie" style="display:none;margin:20px 0 -10px 78px;" class="p1 title_gap"><#3456#></div>
+<div class="p1 title_gap"><#722#></div>
+<div id="name_title_ie" style="display:none;margin:20px 0 -10px 78px;" class="p1 title_gap"><#3468#></div>
 <div class="title_gap">
-<input type="text" id="login_username" name="login_username" tabindex="1" class="form_input" maxlength="128" autocapitalize="off" autocomplete="off" placeholder="<#3456#>">
+<input type="text" id="login_username" name="login_username" tabindex="1" class="form_input" maxlength="128" autocapitalize="off" autocomplete="off" placeholder="<#3468#>">
 </div>
-<div id="password_title_ie" style="display:none;margin:20px 0 -20px 78px;" class="p1 title_gap"><#2261#></div>
+<div id="password_title_ie" style="display:none;margin:20px 0 -20px 78px;" class="p1 title_gap"><#2271#></div>
 <div class="password_gap">
-<input type="password" name="login_passwd" tabindex="2" class="form_input" maxlength="128" placeholder="<#2261#>" autocapitalize="off" autocomplete="off">
+<input type="password" name="login_passwd" tabindex="2" class="form_input" maxlength="128" placeholder="<#2271#>" autocapitalize="off" autocomplete="off">
 </div>
 <div class="error_hint" style="display:none;" id="error_status_field"></div>
+<div class="warming_desc" style="display:none;" id="last_time_lock_warning"></div>
 <div id="captcha_field" style="display: none;">
 <div id="captcha_input_div"><input id ="captcha_text" name="captcha_text" tabindex="3" maxlength="5" autocapitalize="off" autocomplete="off"></div>
 <div id="captcha_img_div"><img id="captcha_pic"></div>
 <div id="reCaptcha" onclick="regen_captcha();"></div>
 <div class="error_hint" style="display:none; clear:left;" id="error_captcha_field">Captcha is wrong. Please input again.</div>
 </div>
-<div class="button" onclick="login();"><#208#></div>
+<div class="button" onclick="login();"><#209#></div>
 </div>
 <div id="nologin_field" style="display:none;">
 <div class="p1 title_gap"></div>
 <div class="nologin">
-<#2584#>
+<#2594#>
 <div id="logined_ip_str"></div>
 </div>
 </div>
 <div id="logout_field" style="display:none;">
 <div class="p1 title_gap"></div>
-<div class="nologin"><#2585#></div>
+<div class="nologin"><#2595#></div>
 </div>
 </div>
 </div>

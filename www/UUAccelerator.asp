@@ -7,7 +7,7 @@
 <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
-<link rel="icon" href="images/favicon.png"><title><#837#> - <#4144#></title>
+<link rel="icon" href="images/favicon.png"><title><#838#> - <#4157#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="usp_style.css">
@@ -57,7 +57,7 @@ window.open('https://router.uu.163.com/asus/pc.html#/acce?gwSn=' + _mac + '&type
 <table width="730px">
 <tr>
 <td align="left">
-<span class="formfonttitle"><#4144#></span>
+<span class="formfonttitle"><#4157#></span>
 </td>
 </tr>
 </table>
@@ -75,14 +75,14 @@ window.open('https://router.uu.163.com/asus/pc.html#/acce?gwSn=' + _mac + '&type
 <div style="width:1px;height: 120px;background-color: #929EA1"></div>
 <div style="width:350px;margin: 0 12px;">
 <div style="display:flex;justify-content: space-between;margin-bottom:12px;">
-<div style="font-size: 16px;"><#4144#></div>
+<div style="font-size: 16px;"><#4157#></div>
 <div style="margin-right:12px;"><a href="https://uu.163.com/router/" target="_blank">FAQ</a></div>
 </div>
-<div style="color: #FC0;"><#4145#></div>
+<div style="color: #FC0;"><#4158#></div>
 </div>
 <div style="width:1px;height: 120px;background-color: #929EA1"></div>
 <div style="margin: auto;" onclick="uuRegister(label_mac);">
-<input type="button" class="button_gen" value="<#1511#>">
+<input type="button" class="button_gen" value="<#1516#>">
 </div>
 </div>
 </div>

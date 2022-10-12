@@ -7,7 +7,7 @@
 <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
-<link rel="icon" href="images/favicon.png"><title><#837#> - <#2764#></title>
+<link rel="icon" href="images/favicon.png"><title><#838#> - <#2774#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="usp_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
@@ -120,15 +120,15 @@ document.getElementById("help2").style.color = "#FFF";
 <div class="printerServer_table content_bg" id="FormTitle">
 <table>
 <tr>
-<td class="formfonttitle"><#2764#>
-<img onclick="go_setting('/APP_Installation.asp')" align="right" style="cursor:pointer;margin-right:10px;margin-top:-10px" title="<#374#>" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'">
+<td class="formfonttitle"><#2774#>
+<img onclick="go_setting('/APP_Installation.asp')" align="right" style="cursor:pointer;margin-right:10px;margin-top:-10px" title="<#375#>" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'">
 </td>
 </tr>
 <tr>
 <td><div class="splitLine"></div></td>
 </tr>
 <tr>
-<td><div class="formfontdesc"><#2763#></div></td>
+<td><div class="formfontdesc"><#2773#></div></td>
 </tr>
 <tr>
 <td>
@@ -144,14 +144,14 @@ document.getElementById("help2").style.color = "#FFF";
 <div class="">
 <ul class="">
 <li>
-<a id="faq1" href="" target="_blank" style="text-decoration:underline;font-size:14px;font-weight:bolder;color:#FFF"><#1398#> FAQ</a>&nbsp;&nbsp;
-<a href="http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Printer.zip" style="text-decoration:underline;font-size:14px;font-weight:bolder;color:#FC0"><#1782#></a>
+<a id="faq1" href="" target="_blank" style="text-decoration:underline;font-size:14px;font-weight:bolder;color:#FFF"><#1403#> FAQ</a>&nbsp;&nbsp;
+<a href="http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Printer.zip" style="text-decoration:underline;font-size:14px;font-weight:bolder;color:#FC0"><#1789#></a>
 </li>
 <li style="margin-top:10px;">
-<a id="faq2" href="" target="_blank" style="text-decoration:underline;font-size:14px;font-weight:bolder;color:#FFF"><#2589#> FAQ (Windows)</a>&nbsp;&nbsp;
+<a id="faq2" href="" target="_blank" style="text-decoration:underline;font-size:14px;font-weight:bolder;color:#FFF"><#2599#> FAQ (Windows)</a>&nbsp;&nbsp;
 </li>
 <li style="margin-top:10px;">
-<a id="faq3" href="" target="_blank" style="text-decoration:underline;font-size:14px;font-weight:bolder;color:#FFF"><#2589#> FAQ (MAC)</a>&nbsp;&nbsp;
+<a id="faq3" href="" target="_blank" style="text-decoration:underline;font-size:14px;font-weight:bolder;color:#FFF"><#2599#> FAQ (MAC)</a>&nbsp;&nbsp;
 </li>
 </ul>
 </div>
@@ -162,7 +162,7 @@ document.getElementById("help2").style.color = "#FFF";
 <tr>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
-<th><#2764#></th>
+<th><#2774#></th>
 <td>
 <div class="left" style="width:94px; float:left; cursor:pointer;" id="network_printer_enable"></div>
 <div class="iphone_switch_container" style="height:32px; width:74px; position: relative; overflow: hidden">

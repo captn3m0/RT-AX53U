@@ -397,7 +397,7 @@ else
 return 0;
 }
 else
-alert("<#1330#>");
+alert("<#1335#>");
 }
 function getPoolDevice(barCode){
 var layer = get_layer(barCode);

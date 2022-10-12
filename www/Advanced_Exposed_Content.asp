@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#837#> - <#392#></title>
+<title><#838#> - <#393#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script language="JavaScript" type="text/javascript" src="/state.js"></script>
@@ -40,7 +40,7 @@ document.form.dmz1_ip.value = "";
 }
 else{
 if(document.form.dmz_enable[0].checked){
-alert("<#315#>");
+alert("<#316#>");
 document.form.dmz_ip.focus();
 return false;
 }
@@ -48,7 +48,7 @@ return false;
 }
 else{
 if(document.form.dmz_enable[0].checked && document.form.dmz_ip.value == "" && document.form.dmz1_ip.value == ""){
-alert("<#315#>");
+alert("<#316#>");
 if (document.form.dmz_ip.value == "")
 document.form.dmz_ip.focus();
 else if (document.form.dmz1_ip.value == "")
@@ -154,17 +154,17 @@ document.getElementById('dmz1_ip_tr').style.display = "none";
 <td bgcolor="#4D595D" valign="top" >
 <div>&nbsp;</div>
 <div class="formfonttitle">
-<#388#> - <#392#>
+<#389#> - <#393#>
 </div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
 <div class="formfontdesc">
-<#2351#>
+<#2361#>
 <br/>
 <br/>
-<#2349#>:
+<#2359#>:
 <ul>
-<li><#2347#></li>
-<li><#2348#></li>
+<li><#2357#></li>
+<li><#2358#></li>
 <script>
 document.getElementById("addVtsRule_ftp").onclick = function(){
 /* untranslated */
@@ -178,36 +178,36 @@ location.href = "/Advanced_VirtualServer_Content.asp?af=KnownApps&item=ftp";
 <div class="formfontdesc" style="margin-top:-10px;">
 <a id="faq" href="" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">DMZ FAQ</a>
 </div>
-<div class="formfontdesc" id="lb_note" style="color:#FFCC00; display:none;"><#2563#></div>
+<div class="formfontdesc" id="lb_note" style="color:#FFCC00; display:none;"><#2573#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
-<th><#1857#></th>
+<th><#1864#></th>
 <td>
+<input type="radio" name="dmz_enable" class="input" onclick="dmz_on_off()" ><#187#>
 <input type="radio" name="dmz_enable" class="input" onclick="dmz_on_off()" ><#186#>
-<input type="radio" name="dmz_enable" class="input" onclick="dmz_on_off()" ><#185#>
 </td>
 </tr>
 <tr id="wan_dmz_ip_tr">
-<th colspan=2><#1846#></th>
+<th colspan=2><#1853#></th>
 </tr>
 <tr id="dmz_ip_tr">
-<th><#2350#></th>
+<th><#2360#></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="dmz_ip" value="<% nvram_get("dmz_ip"); %>" onkeypress="return validator.isIPAddr(this, event)" autocorrect="off" autocapitalize="off"/>
 </td>
 </tr>
 <tr id="wan_dmz1_ip_tr">
-<th colspan=2><#1853#></th>
+<th colspan=2><#1860#></th>
 </tr>
 <tr id="dmz1_ip_tr">
-<th><#2350#></th>
+<th><#2360#></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="dmz1_ip" value="<% nvram_get("dmz1_ip"); %>" onkeypress="return validator.isIPAddr(this, event)" autocorrect="off" autocapitalize="off"/>
 </td>
 </tr>
 </table>
 <div class="apply_gen">
-<input name="button" type="button" class="button_gen" onclick="applyRule()" value="<#195#>"/>
+<input name="button" type="button" class="button_gen" onclick="applyRule()" value="<#196#>"/>
 </div>
 </td>
 </tr>

@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#837#> - <#413#></title>
+<title><#838#> - <#414#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script language="JavaScript" type="text/javascript" src="/state.js"></script>
@@ -25,7 +25,7 @@ return encodeURIComponent(str).replace(/%/g,"\\x").toLowerCase();
 UnHexCode:function(str){
 return str.replace(/(?:\\x[\da-fA-F]{2})+/g, m =>
 decodeURIComponent(m.replace(/\\x/g, '%'))).replace(/\\n/g,
-'<br>').replace(/\\/g, '');
+'<br>');
 }
 }
 var content = "";
@@ -45,8 +45,9 @@ setTimeout("GenContent();", 1000);
 }
 },
 success: function(resp){
-content = htmlEnDeCode.htmlEncode(resp);
+content = decodeURIComponent(resp);
 content = classObj.UnHexCode(content);
+content = htmlEnDeCode.htmlEncode(content);
 if(content.length > 10){
 $("#wl_log").html(content);
 }
@@ -93,14 +94,14 @@ GenContent();
 <tr bgcolor="#4D595D">
 <td valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#742#> - <#413#></div>
+<div class="formfonttitle"><#743#> - <#414#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#3914#></div>
+<div class="formfontdesc"><#3926#></div>
 <div style="margin-top:8px">
 <textarea id="wl_log" cols="63" rows="30" class="textarea_ssh_table" style="width:99%;font-family:'Courier New', Courier, mono; font-size:13px;" readonly="readonly" wrap="off"></textarea>
 </div>
 <div class="apply_gen">
-<input type="button" onClick="location.reload();" value="<#1657#>" class="button_gen" >
+<input type="button" onClick="location.reload();" value="<#1662#>" class="button_gen" >
 </div>
 </td>
 </tr>

@@ -128,6 +128,7 @@ IP 設定更新成功，即將為您導回設定頁面。
 華碩致力於保護並十分尊重您的個人隱私和權益，您可以透過以下方式隨時開啟或關閉與華碩共享您的產品資料 : 進階設定 > 系統管理 > 隱私權。若想進一步了解華碩如何保護您的隱私，亦建議您造訪<a id="eula_url" style="font-weight: bolder;text-decoration:underline;cursor:pointer;" target="_blank">華碩隱私權保護政策</a>。
 我已滿16歲。
 請確認您已滿 16 歲。
+請確認 ASUS 使用條款。
 使用 %1$@ 與遠端連線功能（ASUS Router APP、Lyra APP、AiCloud、AiDisk）：
 華碩將透過以上功能蒐集下列資訊：您的產品型號、韌體版本、網際網路狀態、IP 位址、MAC 位址與 DDNS 名稱。
 如果您不想透過以上功能與華碩分享資訊，請點選下方<span style="font-weight: bold;">[關閉傳送資料]</span>選項。請注意，一旦您停止與華碩間的資訊分享，上述功能將被停用。
@@ -139,12 +140,12 @@ IP 設定更新成功，即將為您導回設定頁面。
 無法連線至網際網路並完成設定，請在連線至網際網路的狀態下點選「關閉資料傳送」。
 網際網路狀態不穩定，無法完成設定。請稍後再試。
 透過使用 ASUS AiProtection，您同意
-使用 AiProtection 智慧安全防護、流量分析、應用程式分析、頻寬管理 Adaptive QoS/Game boost 以及網頁瀏覽歷史功能前，請先同意<a id="eula_url" style="text-decoration:underline;" target="_blank">Trend Micro 使用者授權協定</a>。
-請注意，AiProtection 智慧安全防護、流量分析、應用程式分析、頻寬管理 Adaptive QoS/Game boost 以及網頁瀏覽歷史功能將會蒐集您的資料。您了解並同意華碩對於您與 Trend Micro 之間的協議或者是 Trend Micro 所提供的服務內容不承擔任何責任。如果您對 Trend Micro 蒐集資料的方法、過程亦或是如何使用您的資料存在疑慮，請參閱 Trend Micro 所發佈之隱私權相關聲明，或者請聯絡 Trend Micro 以獲得更多細節。
+使用 AiProtection 智慧安全防護、家長電腦控制程式（網頁及 Apps 過濾）、流量分析、應用程式分析、頻寬管理 Adaptive QoS/Game boost 以及網頁瀏覽歷史功能前，請先同意<a id="eula_url" style="text-decoration:underline;" target="_blank">Trend Micro 使用者授權協定</a>。
+請注意，AiProtection 智慧安全防護、家長電腦控制程式（網頁及 Apps 過濾）、流量分析、應用程式分析、頻寬管理 Adaptive QoS/Game boost 以及網頁瀏覽歷史功能將會蒐集您的資料。您了解並同意華碩對於您與 Trend Micro 之間的協議或者是 Trend Micro 所提供的服務內容不承擔任何責任。如果您對 Trend Micro 蒐集資料的方法、過程亦或是如何使用您的資料存在疑慮，請參閱 Trend Micro 所發佈之隱私權相關聲明，或者請聯絡 Trend Micro 以獲得更多細節。
 如果您不想透過以上功能與 Trend Micro 分享資訊，請透過此路徑更改設定：路由器網頁管理介面 > 進階設定 > 系統管理 > 隱私權。
 <a id="tm_eula_url" style="text-decoration:underline;" target="_blank">TrendMicro 隱私權條款</a>
 <a id="tm_disclosure_url" style="text-decoration:underline;" target="_blank">TrendMicro 隱私與個人資料收集</a>
-使用 AiProtection 智慧安全防護、流量分析、應用程式分析、頻寬管理 Adaptive QoS/Game Boost 以及網頁瀏覽歷史功能：
+使用 AiProtection 智慧安全防護、家長電腦控制程式（網頁及 Apps 過濾）、流量分析、應用程式分析、頻寬管理 Adaptive QoS/Game Boost 以及網頁瀏覽歷史功能：
 請注意，Trend Micro 將透過以上功能蒐集您的資訊。
 如果您不想透過以上功能與 Trend Micro 分享資訊，請點選下方<span style="font-weight: bold;">[關閉資料傳送]</span>選項。請注意，一旦您停止與 Trend Micro 間的資訊分享，上述功能將被停用。
 請確認是否關閉？
@@ -271,7 +272,7 @@ IP 位址被更新。若此步驟花費了超過兩分鐘的時間，請按照�
 韌體升級中，過程大約需要三分鐘...
 已完成韌體更新。關閉此頁面並再次存取您的 AiMesh 路由器。
 韌體更新完成。請手動重新啟動 RT-AX53U。
-為了符合新法規修訂，ASUS 調整驗證規則以提供更好的韌體品質。您使用的韌體版本與先前發布的韌體及未經驗證過的第三方韌體不相容，建議您至官方網站下載最新版韌體使用。
+為了符合新法規修訂，ASUS 調整憑證規則以提供更好的韌體品質。您使用的韌體版本與先前發布的韌體及未經驗證過的第三方韌體不相容，建議您至官方網站下載最新版韌體使用。
 密碼輸入錯誤 5 次。您將被登出。
 2022 版權屬於 華碩電腦股份有限公司
 配置參數在韌體更新過程中將保持其設定。
@@ -998,13 +999,14 @@ AiDisk 精靈
 更改 WPA Pre-Shared Key 將會影響 AiMesh 節點的 WiFi 連線。
 更改地區代碼將會影響您的 AiMesh 系統。
 關閉無線電功能將會影響 AiMesh 路由器的 WiFi 連線。
-隱藏 SSID 將會影響 AiMesh 路由器的 WiFi 連線。
+隱藏 SSID 無助於保護您的 Wi-Fi 網路，還可能導致一些連線問題。
 隱藏 SSID 將關閉 WPS 功能，並且會影響 AiMesh 路由器的 WiFi 連線。
 關閉 DHCP 伺服器將會影響 AiMesh 路由器的 WiFi 連線。
 考量到 AiMesh 系統與終端裝置的相容性，我們建議您使用 WPA2-Personal。您確定要切換到 #AUTHMODE 嗎？\n*如果遇到連線問題，請切換到 WPA2-Personal，或洽詢製造商以取得進一步資訊。
 為確保您的 AiMesh 系統與終端裝置順利連線，再切換到 WPA3-Personal之前，請先閱讀 <a id="wpa3FaqLink">FAQ</a>。
 您目前使用 WPA3-personal。若要建立 AiMesh 系統，您的無線授權方式將會變更為 WPA2/WPA3-personal。您要繼續嗎？
 您也可以閱讀此篇 <a id='wpa3FaqLink'>FAQ</a> 以得到更多資訊。
+要了解更多資訊，請參考 <a style='font-weight: bolder;text-decoration: underline;' href='' target='_blank'>常見問題</a>
 ASUS AiMesh 是創新的無線路由器功能，可連接多台 ASUS 無線路由器，打造出覆蓋全家的 WiFi 網路。
 關於 ASUS AiMesh 的更多資訊
 搜尋 AiMesh 節點
@@ -1090,6 +1092,9 @@ AiMesh 系統中的 AiMesh 節點清單
 會議室
 自訂
 車庫
+一樓
+電競房
+健身房
 離線提示
 請確認您的 AiMesh 節點已開機。
 重置您的 AiMesh 節點並重試。
@@ -1679,7 +1684,7 @@ Click <a style="text-decoration:underline" href="Advanced_SwitchCtrl_Content.asp
 三
 天
 註冊
-授權失敗。(目前的 DDNS 服務無法透過 80 連接埠從網路處理憑證更新。建議您改用 ASUS DDNS 伺服器。)
+驗證失敗。(目前的 DDNS 服務無法透過 80 連接埠從網路處理憑證更新。建議您改用 ASUS DDNS 伺服器。)
 HTTPS/SSL 憑證
 Let's Encrypt 的免費憑證
 我同意 Let's Encrypt
@@ -1687,6 +1692,8 @@ Let's Encrypt 的免費憑證
 請在此處上傳由憑證授權機構簽發的憑證，需要您的私密金鑰和 SSL 憑證。
 私密金鑰
 私密金鑰不受密碼保護。
+IPv6 更新
+假如客戶端的網路環境使用IPv6網路位址, 開啟此功能將使客戶端存取您的網域名稱時，優先解析為IPv6網路位址
 SSL 憑證
 使用條款
 轉移華碩 DDNS 網域名
@@ -2028,11 +2035,11 @@ FileFlex 簡介
 <b>黑名單限制時間：</b>在設定的時間內，黑名單中的用戶端無法使用特定的網路服務。在設定時間外，區域網路中的所有用戶端都可以存取特定的網路服務。<br><b>白名單限制時間：</b>在設定的時間內，白名單中的用戶端僅可以使用特定的網路服務。在設定的時間外，白名單中的用戶端與其他網路用戶端都無法存取網際網路或任何網路服務。
 <b>注意：</b>若您在白名單中設定了某一網段，此網段外的 IP 位址皆無法存取網際網路或任何網路服務。
 MAC 存取控制能夠控制網路中特定網路卡實體位址 MAC Address）的存取。<p>您可以在 MAC 過濾器設置接受或拒絕模式。<p>在拒絕模式中，清單中的裝置被拒絕訪問網路。<p>在接收模式中，僅清單中的裝置可獲取網路。未在清單中的網路拒絕訪問網路。
-阻斷服務攻擊( DoS attack )可阻止合法的使用者使用網路服務。<p>開啟此項功能可保護路由器不受 DoS 危害，但這會增大路由器工作負載。
+開啟此項功能可保護路由器不受 DoS (Denial- of-Service) 危害，但這會增大路由器工作負載。
 啟動 DoS 防護
 關閉防火牆會撤銷所有相關功能。
 啟用防火牆
-啟動 IPv4 防火牆
+啟動 IPv4 傳入防火牆規則
 IPv4 防火牆
 當使用 RT-AX53U 內建的 FTP 伺服器功能時，設定外網( WAN 端)通訊埠為20:21，會與 RT-AX53U 內建的 FTP 伺服器使用的通訊埠衝突.
 開啟關鍵字過濾器
@@ -2140,6 +2147,9 @@ Check on <a id=\"faq_link2\" style=\"font-weight: bolder;text-decoration: underl
 新韌體可供更新。
 正在載入版本說明，請稍候...
 找不到版本說明。
+回轉
+選擇韌體版本
+韌體回轉選擇器
 電競加速
 遊戲加速
 三段電競加速
@@ -2878,6 +2888,7 @@ RADIUS 用戶端
 分組清單
 磁區名稱
 在來源或目的通訊通訊埠的範圍方面，您可輸入一特定通訊埠，如「95」，或在一範圍內的通訊通訊埠，如「103:315」、「>100」或是「<65535」。
+遊戲埠
 埠映射
 埠映射(Port Mapping)支援將 IPTV WAN 介面映射到指定的 LAN 連接埠。您可以選擇適當的 LAN 連接埠，然後點選 套用。
 開啟埠映射
@@ -3322,6 +3333,7 @@ Traffic Analyzer 可分析網路流量並將結果以直覺式的曲線圖方式
 拉帕茲
 卡拉卡斯
 聖地牙哥
+亞松森
 紐芬蘭
 巴西利亞
 布宜諾斯艾利斯，佐治敦
@@ -3491,8 +3503,8 @@ VPN 用戶端至 LAN
 開啟 OpenVPN 伺服器
 開啟 PPTP VPN 伺服器
 匯出 OpenVPN 設定檔
-匯出目前驗證
-匯入原始驗證
+匯出目前憑證
+匯入原始憑證
 VPN 伺服器最多僅支援 10 個用戶端！
 最多 10 個客戶
 伺服器模式
@@ -3500,7 +3512,7 @@ VPN 伺服器最多僅支援 10 個用戶端！
 廣告 DNS 至用戶端
 驗證模式
 僅使用者名稱 / 密碼驗證
-Authorization Mode fixes on TLS
+Authentication Mode fixes on TLS
 HMAC 驗證
 附加 HMAC 驗證
 允許用戶端 <-> 用戶端
@@ -3509,15 +3521,15 @@ HMAC 驗證
 壓縮
 IP / 路由衝突
 自訂設定
-RT-AX53U 將自動生成一個帶有驗證金鑰的 .ovpn 檔案。您可以將使用者名稱和密碼伴隨.ovpn 檔案提供給所有連接到 .ovpn 伺服器的使用者。
+RT-AX53U 將自動生成一個帶有憑證金鑰的 .ovpn 檔案。您可以將使用者名稱和密碼伴隨.ovpn 檔案提供給所有連接到 .ovpn 伺服器的使用者。
 要更改 OpenVPN 伺服器設定，請進入進階設定
 您可以變更 OpenVPN 伺服器的預設設定，為特定的連接類型提供一個自訂 .ovpn 檔案。
 若您的 WAN IP 地址為動態 IP，請點擊 <a href="http://router.asus.com/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">這裡</a> 進行 DDNS 設定。
 從 DHCP 指定
 加密密碼
 路由衝突! <p>請在進階設定頁面查看用戶端 IP 位址設定或在系統日誌中查看路由表。
-授權認證 / 伺服器認證 / 伺服器金鑰錯誤！ <p>請在進階設定頁面中檢查金鑰及認證內容。
-Diffle Hellman 參數錯誤！ <p>請在進階設定頁面中檢查關鍵字及認證內容。
+授權憑證 / 伺服器憑證 / 伺服器金鑰錯誤！ <p>請在進階設定頁面中檢查金鑰及憑證內容。
+Diffle Hellman 參數錯誤！ <p>請在進階設定頁面中檢查關鍵字及憑證內容。
 開啟 VPN 伺服器背景啟用失敗。<p>請在進階設定頁面中檢查裝置環境或內容。
 要使用您自己的金鑰，點選黃色連結來修改設定。
 參考 <a style="font-weight: bolder;text-decoration:underline;" class="hyperlink" href="Main_LogStatus_Content.asp">系統記錄</a> 了解關於 OpenVPN 的錯誤訊息。
@@ -3525,21 +3537,21 @@ Diffle Hellman 參數錯誤！ <p>請在進階設定頁面中檢查關鍵字及�
 正在初始化 OpenVPN 伺服器。在 VPN 用戶端建立連接之前，請稍候幾分鐘等待伺服器設定完成。
 介面類型
 授權中
-驗證授權
+CA 憑證
 Diffie Hellman 參數
 僅貼上內容
 。 （包括這兩行線）
 限制：每欄位 3999 字元
-伺服器驗證
+伺服器憑證
 過期日
 憑證核發方
 憑證核發對象
 伺服器金鑰
 靜態金鑰
-金鑰與驗證
+金鑰與憑證
 本地 / 遠端端點位址
 必須手動設定。
-金鑰與驗證內容修改
+金鑰與憑證內容修改
 輪詢間隔
 允許用戶端存取 LAN
 重新導向用戶端網路流量
@@ -3688,7 +3700,7 @@ TCP MSS 選項
 VLAN ID
 WAN Aggregation 融合了兩條網路連線，將您的 WAN 傳送速度提高至 2Gbps。請使用同一規格的兩條網路線將路由器的 WAN 連接埠和 LAN 4 連接埠分別連接至數據機的 LAN 連接埠。 <a id="wanAgg_faq" target="_blank" style="color:#FFCC00;text-decoration:underline;">WAN Aggregation FAQ</a>
 啟用 WAN 聚合
-已啟用路由器的雙 WAN 功能，啟用 WAN Aggregation 將關閉 WAN 功能。確認繼續嗎？
+已啟用路由器的雙 WAN 功能，啟用 WAN Aggregation 將關閉雙 WAN 功能。確認繼續嗎？
 已啟用路由器的 WAN Aggregation 功能，啟用雙 WAN 將關閉 WAN Aggregation。確認繼續嗎？
 WAN Aggregation 正在使用路由器的 LAN 4 連接埠，啟用 IPTV 將自動關閉 WAN Aggregation。確認繼續嗎？
 IPTV 正在使用路由器的 LAN 4 連接埠，啟用 WAN Aggregation 將自動關閉 IPTV。確認繼續嗎？
@@ -4089,7 +4101,7 @@ Free WiFi 可讓您輕鬆建立訪客網路，並推廣您的品牌以及行銷�
 刪除設定檔後，所有此 VPN 設定檔相關的例外設定也將被刪除。確定要刪除此設定檔？
 確定要刪除此設定檔？
 刪除用戶端例外清單中的原則將會同時刪除用戶端 DHCP 伺服器的 IP 綁定。確定刪除？
-<a id="faq1" href="" target="_blank" style="font-weight:bolder;text-decoration:underline;">Multiple VPN Connection FAQ.</a>
+<a id="faq1" href="" target="_blank" style="font-weight:bolder;text-decoration:underline;">VPN Fusion 疑難解答</a>
 無法設定為目標原則的預設連線。
 Beta test only
 或是按下[取消]，系統將於夜間自動更新。
@@ -4129,6 +4141,7 @@ GeForce Now
 選擇 GeForce Now 以優化 GeForce Now 電競裝置，為您提供更快更佳的電競體驗。
 LED On/Off
 The LED on/off control is used to turn off all LEDs includes Aura light.
+To enable Aura RGB, LED must remain on. Please turn on LED by pressing hardware button on the router for 3 seconds or enable it via web/app interface.
 事件
 系統將會偵測下列事件並觸發不同的 LED 燈效。
 啟用 Game Boost 時，LED 燈帶使用紅色呼吸效果。

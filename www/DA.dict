@@ -128,6 +128,7 @@ Besides, in order to enable your remote control function of IFTTT™ via your pr
 ASUS er forpligtet til at beskytte og respektere dit privatliv. Du kan altid gå til Advanced Settings (Avancerede indstillinger) > Administration (Administrering) > Privacy (Fortrolighed) for, at aktivere/deaktivere deling af dine produktoplysninger med ASUS. For flere oplysninger om, hvordan ASUS beskytter dit privatliv, bedes du se <a id="eula_url" style="font-weight: bolder;text-decoration:underline;cursor:pointer;" target="_blank">ASUS' fortrolighedspolitik</a>.
 Jeg er over 16 år.
 Bekræft venligst, at du er over 16 år.
+Bekræft venligst, ASUS Brugsvilkår.
 For %1$@ og Fjernforbindelse  (ASUS Router APP/Lyra APP/AiCloud/AiDisk):
 Bemærk venligst at dine oplysninger, herunder dit produkts modelnavn, firmwareversion, internetstatus, IP-adresse, MAC-adresse og DDNS-navn, indsamles af ASUS via ovenstående funktioner.
 Hvis du ønsker, at deaktivere delingen af dine oplysninger med ASUS via ovenstående funktioner, bedes du venligst klikke på <span style="font-weight: bold;">[Frameld]</span> nedenfor. Men bemærk venligst at sådanne funktioner muligvis holder op med at virke, hvis du ikke længere ønsker, at dele dine oplysninger med ASUS.
@@ -139,12 +140,12 @@ Hvis du senere ønsker, at aktivere funktionerne i Alexa™ og IFTTT™, skal du
 Det er ikke muligt, at framelde delingen af dine oplysninger uden en internetforbindelse. Frameld delingen af dine oplysninger, når du er forbundet til internettet.
 Det er ikke muligt, at framelde delingen af dine oplysninger, da din internetforbindelse er ustabil. Prøv venligst igen senere.
 Når du bruger ASUS AiProtection, accepterer du
-Ved at bruge AiProtection, Traffic Analyzer, Apps Analyzer, Adaptive QoS/Game boost, Webhistorikken, accepterer du <a id="eula_url" style="text-decoration:underline;" target="_blank">slutbrugerlicensaftalen fra Trend Micro</a>.
-Bemærk venligst at dine oplysninger indsamles af Trend Micro via AiProtection, Traffic Analyzer, Apps analysator, Adaptive QoS og din webhistorik. Du anerkender og accepterer også, at ASUS ikke er ansvarlig for hverken aftalen mellem dig og Trend Micro eller indholdet i tjenesten, der leveres af Trend Micro. Hvis du eventuelt har spørgsmål til, hvordan Trend Micro indsamler, behandler og bruger dine ovenstående oplysninger, bedes du venligst se fortrolighedserklæringen, der udstedes af Trend Micro, eller kontakt Trend Micro for yderligere oplysninger.
+Ved at bruge AiProtection, forældrekontrol( Internet- og Apps-filtre ), Traffic Analyzer, Apps Analyzer, Adaptive QoS/Game boost, Webhistorikken, accepterer du <a id="eula_url" style="text-decoration:underline;" target="_blank">slutbrugerlicensaftalen fra Trend Micro</a>.
+Bemærk venligst at dine oplysninger indsamles af Trend Micro via AiProtection, forældrekontrol( Internet- og Apps-filtre ), Traffic Analyzer, Apps analysator, Adaptive QoS og din webhistorik. Du anerkender og accepterer også, at ASUS ikke er ansvarlig for hverken aftalen mellem dig og Trend Micro eller indholdet i tjenesten, der leveres af Trend Micro. Hvis du eventuelt har spørgsmål til, hvordan Trend Micro indsamler, behandler og bruger dine ovenstående oplysninger, bedes du venligst se fortrolighedserklæringen, der udstedes af Trend Micro, eller kontakt Trend Micro for yderligere oplysninger.
 Hvis du ønsker, at deaktivere delingen af dine oplysninger med Trend Micro via ovenstående funktioner, bedes du venligst gå til:  Router web GUI (routerens webbrugergrænseflade) > Advanced settings (Avancerede indstillinger) > Administration (Administrering) > Privacy (Fortrolighed).
 <a id="tm_eula_url" style="text-decoration:underline;" target="_blank">TrendMicro Privacy Policy</a>
 <a id="tm_disclosure_url" style="text-decoration:underline;" target="_blank">Privacy and Personal Data Collection Disclosure</a>
-For AiProtection, Traffic Analyzer, Apps analyzer, Adaptive QoS/Game boost og din webhistorik:
+For AiProtection, forældrekontrol( Internet- og Apps-filtre ), Traffic Analyzer, Apps analyzer, Adaptive QoS/Game boost og din webhistorik:
 Bemærk venligst at dine oplysninger indsamles af Trend Micro via ovenstående funktioner.
 Hvis du ønsker, at deaktivere delingen af dine oplysninger med Trend Micro via følgende funktioner, bedes du venligst klikke på <span style="font-weight: bold;">[Frameld]span> nedenfor. Men bemærk venligst at sådanne funktioner muligvis holder op med at virke, hvis du ikke længere ønsker, at dele dine oplysninger med Trend Micro.
 Er du sikker på, du vil frameld indsamlingen af dine oplysninger?
@@ -271,7 +272,7 @@ Det lykkedes ikke at opgradere firmwaren. Det kan skyldes et forkert billede ell
 Firmwaren opgraderes. Vent i 3 minutter.
 Opdateringen af din firmware er færdig. Luk vinduet, og gå ind i AiMesh-routeren igen.
 Firmwareopdateringen er færdig. Genstart venligst RT-AX53U manuelt.
-To comply with regulatory amendments, we have modified our certification rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
+To comply with regulatory amendments, we have modified our certificate rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
 Du har indtastet en forkert adgangskode 5 gange. Du vil blive logget ud.
 2022 ASUSTeK Computer Inc. Alle rettigheder forbeholdes.
 Hvis en konfigurationsparameter findes i både den gamle og den nye firmware, vil dens indstilling blive bevaret i løbet af opgraderingsprocessen.
@@ -461,7 +462,7 @@ WISP
 RT-AX53U opretter en trådløs forbindelse til din router, AP eller offentlige hotspot, og deler internetadgangen med din kabelforbundne/trådløse klienter. På denne funktion, er NAT-, firewall- og DHCP-serveren som standard slået til.
 Når du opretter forbindelse til et WiFi hotspot, skal du sørge for at du har tilladelse til at få adgang til internettet.
 Denne funktion er deaktiveret.
-forældrekontrol
+Forældrekontrol
 Ny adgangskode
 Indtast din adgangskode igen
 Meget svagt
@@ -998,13 +999,14 @@ Hvis du ændrer din SSID, vil det påvirke AiMesh-nodens WiFi-forbindelse.
 Hvis du ændrer din WPA Pre-Shared Key, vil det påvirke AiMesh-nodens WiFi-forbindelse.
 Hvis du ændrer din landekode, kan det påvirke AiMesh-systemet.
 Hvis du deaktiverer Radio-funktionen, vil det påvirke AiMesh-routerens WiFi-forbindelse.
-Hvis du skjuler din SSID, vil det påvirke AiMesh-routerens WiFi-forbindelse.
+Skjult SSID hjælper ikke med at sikre dit Wi-Fi-netværk og kan forårsage forbindelsesproblemer.
 Hvis du skjuler din SSID, vil det deaktivere WPS-funktionen og påvirke AiMesh-routerens WiFi-forbindelse.
 Hvis du deaktiverer DHCP Server, vil det påvirke AiMesh-routerens WiFi-forbindelse.
 Vi anbefaler, at du bruger WPA2-Personal af hensyn til kompatibilitet mellem AiMesh-systemet og slutenhederne. Vil du skifte til #AUTHMODE ?\n*Hvis du møder forbindelsesproblemer, skal du skifte til WPA2-Personal eller undersøge med producenter for at få flere oplysninger.
 For at sikre forbindelsen for dit AiMesh-system til dine slutenheder skal du lære denne <a id="wpa3FaqLink">FAQ</a>, før du skifter til WPA3-Personal.
 Du bruger i øjeblikket WPA3-personal. For at oprette et AiMesh-system ændres din godkendelsesmetode til WPA2/WPA3-personal. Vil du fortsætte?
 You can read this <a id='wpa3FaqLink'>FAQ</a> for more information.
+For yderligere oplysninger, bedes du venligst besøge <a style='font-weight: bolder;text-decoration: underline;' href='' target='_blank'>ofte stillede spørgsmål</a>
 Avanceret ASUS AiMesh er en innovativ ny routerfunktion, der forbinder flere ASUS-routere på samme tid, og derved opretter et WiFi-netværk i hele hjemmet.
 Læs mere om ASUS AiMesh
 Find AiMesh-forbindelsespunkter
@@ -1090,6 +1092,9 @@ Balkon
 Mødelokale
 Brugerdefineret
 Garage
+Første sal
+Spilrum
+Træningscenter
 Offline tips
 Sørg for, at dit AiMesh-forbindelsespunkt er slået til.
 Genstart dit AiMesh-forbindelsespunkt og prøv igen.
@@ -1687,6 +1692,8 @@ Importer dit eget certifikat
 Upload et certifikat udstedt af en certificeringsmyndighed her. Du skal bruge din private nøgle og SSL-certifikat.
 Privat nøgle
 De private nøgler må ikke været beskyttet med adgangsudtryk.
+IPv6-opdatering
+Hvis brugerens netværksmiljø bruger en IPv6-netværksadresse, vil aktivering af denne funktion først ændre domænet til en IPv6-netværksadresse, når fjernenheden får adgang.
 SSL-certifikat
 vilkårene for tjenesten
 Transfer ASUS DDNS name
@@ -2028,11 +2035,11 @@ Aktiver din firewall til, at beskytte dit LAN netværk mod angreb fra hackere. D
 <b>Sortlistens varighed :</b> I den planlagte periode, er det ikke muligt for klienterne på sortlisten, at bruge de bestemte netværkstjenester. Når den planlagte periode er udløbet, er det muligt for alle klienterne på LAN-netværket, at få adgang til de bestemte netværkstjenester.<br><b>Hvidlistens varighed :</b> I den planlagte periode, er det kun muligt for klienterne på hvidlisten, at bruge de bestemte netværkstjenester. Når den planlagte periode er udløbet, er det hverken muligt for klienterne på hvidlisten eller andre netværksklienter, at få adgang til internettet eller andre internettjenester.
 <b>BEMÆRK :</b> Hvis du opretter hvidlisten på undernettet, er det ikke muligt for IP-adresser udenfor undernettet, at få adgang til internettet eller andre internettjenester.
 MAC filteret giver dig mulighed for, at acceptere eller afvise netværksadgang til enheder, med bestemte MAC adresser.<p>Du kan sætte MAC filteret til enten at acceptere (accept) eller afvise (reject).<p>Når du vælger afvis (reject), afvises enheder, som ikke findes på listen, adgang til netværket.<p>Når du vælger accepter (accept), er det kun enhederne, som findes på listen, der har adgang til netværket. Enhederne, som ikke findes på listen, afvises adgang til netværket.
-Et DoS (Denial-of-Service) angreb er et udtrykkeligt forsøg på, at benægte legitime brugere i, at bruge en tjeneste eller computerressourcer.<p>Aktiveres denne funktion beskyttes din router mod DoS angreb, men den bliver også mere belastet.
+Aktiveres denne funktion beskyttes din router mod DoS (Denial- of-Service) angreb, men den bliver også mere belastet.
 Skal DoS-beskyttelse aktiveres
 Hvis du deaktiverer din firewall, vil alle relaterede funktioner også blive deaktiveret.
 Skal brandmuren aktiveres
-Skal IPv4 Brandmur aktiveres
+Skal IPv4 regler for indgående firewall aktiveres
 IPv4 Firewall
 Når 20:21 er sat som ftp-serverens portinterval til WAN-indstillingen, så er ftp-serveren i konflikt med RT-AX53U'ens indbyggede ftp-server.
 Aktiver nøgleordsfiltret
@@ -2140,6 +2147,9 @@ Updated
 Ny firmware er klar.
 Overfører udgivelsesnote, vent venligst …
 Kunne ikke finde udgivelsesnote.
+Annullering af opdatering
+Vælg en firmware-version
+Vælg annullering af firmware-opdatering
 Spil accelerering
 Game Boost
 Tredobbelt spilaccelerering
@@ -2878,6 +2888,7 @@ Opret en ny RADIUS-klient
 Gruppetabel
 Partitionsnavn
 Som kilde eller destinationens portinterval kan der enten: a) indtastes en bestemt port, såsom \"95\"; eller b) indtastes port inden for et vist interval, såsom \"103:315\", \">100\" eller \"<65535\".
+Spilport
 Portkortlægning
 Portkortlægningen understøtter IPTV WAN grænsefladen på en bestemt LAN-port. Vælg den ønskede LAN-port og klik på Anvend.
 Aktiver portkortlægning
@@ -3322,6 +3333,7 @@ Atlantic-tid (Canada)
 La Paz
 Caracas
 Santiago
+Asuncion
 Newfoundland
 Brasilien
 Buenos Aires, Georgetown
@@ -3351,7 +3363,7 @@ Kaliningrad
 Athen
 Jerusalem
 Harare, Pretoria
-Kijev
+Kyiv
 Moskva, Skt. Petersborg
 Volgograd
 Kuwait, Riyad
@@ -3397,7 +3409,7 @@ Salomonøerne
 Ny Kaledonien
 Marshalløerne
 Magadan
-Fiji-øerne
+Fiji
 Auckland, Wellington
 Nuku'alofa
 Anadyr, Petropavlovsk-Kamchatsky
@@ -3413,7 +3425,7 @@ Upload prioritet
 Data sendt/sekund
 Data sendt
 Indstil iTunes og UPnP-medieserver.
-RT-AX53U\'en understøtter UPnP-standarder. Den kan aktiveres og tillade andet UPnP-udstyr, såsom PS3 eller en digital medieafspiller, at få adgang til multimediefiler på USB-disken.
+Opsæt <a id='upnp_link'>UPnP, iTunes</a>, <a id='ftp_link'>FTP</a> og <a id='samba_link'>Netværkssted (Samba)</a>.
 URL nøgleord
 Kontrollér USB-applikationen
 Kontrollerer disken
@@ -3500,7 +3512,7 @@ Understøttelse af netværkstedet (Samba)
 Annoncer DNS til klienter
 Godkendelsestilstand
 Kun godkendelse af brugernavn / adgangskode
-Authorization Mode fixes on TLS
+Authentication Mode fixes on TLS
 HMAC-godkendelse
 Ekstra HMAC-godkendelse
 Tillad klient <-> Klient
@@ -3536,10 +3548,10 @@ Udstedt af
 Udstedt til
 Servernøgle
 Statisk nøgle
-Nøgler og certification
+Nøgler og certificate
 Lokale / fjern slutpunktsadresser
 Skal konfigureres manuelt.
-Indholdsændring af nøglerne & certificationen.
+Indholdsændring af nøglerne & certificate.
 Puljeinterval
 Push LAN til klienter
 Direkte klienter for at omdirrigere internettrafikken
@@ -4089,7 +4101,7 @@ Profilen skal deaktiveres, inden den kan slettes.
 Alle politik-undtagelserne, der er sat angivet en VPN-profil, fjernes, når profilen slettes. Er du sikker på, du vil slette profilen?
 Er du sikker på, du vil slette denne profil?
 Hvis kundens politik på listen over undtagelser slettes, slettes kundens IP-binding på DHCP-serveren også. Er du sikker på du vil slette dette?
-<a id="faq1" href="" target="_blank" style="font-weight:bolder;text-decoration:underline;">Multiple VPN Connection FAQ.</a>
+<a id="faq1" href="" target="_blank" style="font-weight:bolder;text-decoration:underline;">Ofte stillede spørgsmål om VPN Fusion.</a>
 Kan ikke angives som standard WAN for målpolitikken.
 Beta test only
 You can also select [Cancel], the device will automatically start downloading the update during the night time.
@@ -4129,6 +4141,7 @@ GeForce Now
 Vælg GeForce Now for at prioritere GeForce Now-gamingenheder for en hurtigere og bedre spiloplevelse.
 LED On/Off
 The LED on/off control is used to turn off all LEDs includes Aura light.
+To enable Aura RGB, LED must remain on. Please turn on LED by pressing hardware button on the router for 3 seconds or enable it via web/app interface.
 Begivenhed
 Systemet registrerer følgende begivenheder og udløser forskellige LED-effekter.
 Når du aktiverer Game Boost, kan du se en rød vejrtræknings-effekt i LED-bjælken.

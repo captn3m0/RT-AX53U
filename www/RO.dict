@@ -128,6 +128,7 @@ Informații despre produs: informații legate de produsul dvs., inclusiv număru
 ASUS se angajează să vă protejeze și respecte confidențialitatea. Puteți vizita Setări avansate > Administrare> Confidențialitate pentru a activa/dezactiva în orice moment trimiterea informațiilor despre produs la ASUS. Pentru a afla mai multe despre modul în care ASUS vă protejează confidențialitatea, vizitați <a id="eula_url" style="font-weight: bolder;text-decoration:underline;cursor:pointer;" target="_blank">Politica de confidențialitate ASUS</a>.
 Am peste 16 ani.
 Confirmați că vârsta dvs. este mai mare de 16 ani.
+Confirmați că Condiții de utilizare ASUS.
 Pentru %1$@ și Conexiunea la distanță  (aplicație ASUS Router/aplicație Lyra/AiCloud/AiDisk):
 Vă rugăm să rețineți că informațiile dvs., inclusiv numele modelului de produs, versiunea firmware, starea internetului, adresa IP, adresa MAC și numele DDNS, vor fi colectate de ASUS prin intermediul funcțiilor de mai sus.
 Daca doriți să dezactivați partajarea informațiilor cu ASUS prin intermediul funcțiilor de mai sus, faceți clic pe <span style="font-weight: bold;">[<Retragere]</span> de mai jos. În orice caz, vă rugăm să rețineți că astfel de caracteristici/funcții ar putea să nu funcționeze dacă nu mai trimiteți informațiile la ASUS.
@@ -139,12 +140,12 @@ Aveți posibilitatea să utilizați aplicația ASUS Router, aplicație Lyra, AiC
 Nu puteți finaliza procedura de retragere fără conexiune la internet. Vă rugăm să vă retrageți consimțământul atunci când sunteți conectat la internet.
 Nu puteți finaliza procedura de retragere a consimțământului deoarece starea internetului este instabilă. Reîncercați mai târziu.
 Folosind ASUS AiProtection, sunteți de acord cu
-Prin utilizarea lui AiProtection, a Traffic analyzer (Analizor de trafic), a Apps analyzer (Analizor de aplicații), Adaptive QoS (Adaptiv QoS)/Game boost (Accelerare jocuri), Istoricul web, sunteți de acord cu <a id="eula_url" style="text-decoration:underline;" target="_blank">Acordul de licență pentru utilizatorul final Trend Micro</a>.
-Vă rugăm să rețineți că informațiile dvs. vor fi colectate de Trend Micro prin AiProtection, Traffic Analyzer (Analizor de trafic), Apps analyzer (Analizor de trafic), Adaptive QoS (Adaptiv QoS) și istoric web. De asemenea, recunoașteți și sunteți de acord că ASUS nu este responsabil nici pentru acordul dintre dvs. și Trend Micro și nici pentru conținutul serviciului oferit de Trend Micro. Dacă aveți întrebări despre modul în care Trend Micro colectează, procesează și utilizează informațiile de mai sus, consultați declarația referitoare la confidențialitate emisă de Trend Micro sau contactați Trend Micro pentru mai multe detalii.
+Prin utilizarea lui AiProtection, a Control parental( Filtre Aplicații și Web ), a Traffic analyzer (Analizor de trafic), a Apps analyzer (Analizor de aplicații), Adaptive QoS (Adaptiv QoS)/Game boost (Accelerare jocuri), Istoricul web, sunteți de acord cu <a id="eula_url" style="text-decoration:underline;" target="_blank">Acordul de licență pentru utilizatorul final Trend Micro</a>.
+Vă rugăm să rețineți că informațiile dvs. vor fi colectate de Trend Micro prin AiProtection, a Control parental( Filtre Aplicații și Web ), Traffic Analyzer (Analizor de trafic), Apps analyzer (Analizor de trafic), Adaptive QoS (Adaptiv QoS) și istoric web. De asemenea, recunoașteți și sunteți de acord că ASUS nu este responsabil nici pentru acordul dintre dvs. și Trend Micro și nici pentru conținutul serviciului oferit de Trend Micro. Dacă aveți întrebări despre modul în care Trend Micro colectează, procesează și utilizează informațiile de mai sus, consultați declarația referitoare la confidențialitate emisă de Trend Micro sau contactați Trend Micro pentru mai multe detalii.
 Daca doriți să dezactivați partajarea informațiilor cu Trend Micro prin intermediul funcțiilor de mai sus, accesați:  Router web GUI (GUI web router) > Advanced settings (Setări avansate) > Administration (Administrare) > Privacy (Confidențialitate).
 <a id="tm_eula_url" style="text-decoration:underline;" target="_blank">TrendMicro Privacy Policy</a>
 <a id="tm_disclosure_url" style="text-decoration:underline;" target="_blank">Privacy and Personal Data Collection Disclosure</a>
-Analizor de trafic, Analizator aplicații, QoS adaptiv/ Accelerare jocuri, Istoric web:
+AiProtection, a Control parental( Filtre Aplicații și Web ), Analizor de trafic, Analizator aplicații, QoS adaptiv/ Accelerare jocuri, Istoric web:
 Vă rugăm să rețineți că informațiile dvs. vor fi colectate de Trend Micro prin intermediul funcțiilor de mai sus.
 Daca doriți să dezactivați trimiterea informațiilor cu Trend Micro prin funcțiile următoare, faceți clic pe <span style="font-weight: bold;">[Retragere]</span> de mai jos. În orice caz, vă rugăm să rețineți că astfel de caracteristici/funcții ar putea să nu funcționeze dacă mai trimiteți informațiile la Trend Micro.
 Sigur doriţi să retrageți consimțământul?
@@ -271,7 +272,7 @@ Nu s-a putut actualiza componenta firmware. Verificaţi versiunea firmware şi �
 Componenta firmware în curs de actualizare. Aşteptaţi circa 3 minute.
 Actualizarea firmware-ului dvs. a fost terminată. Închideți această fereastră și accesați din nou routerul AiMesh.
 Componenta firmware a fost actualizată cu succes. Reporniţi manual dispozitivul RT-AX53U.
-To comply with regulatory amendments, we have modified our certification rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
+To comply with regulatory amendments, we have modified our certificate rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
 Ați introdus o parolă incorectă de 5 ori. Veți fi deconectat.
 2022 ASUSTeK Computer Inc. Toate drepturile rezervate.
 Parametrii de configurare își vor păstra setările în timpul procesului de actualizare a firmware-ului.
@@ -998,13 +999,14 @@ Dacă schimbați SSID, conectivitatea WiFi a nodului AiMesh va fi afectată.
 Dacă schimbați pre-partajată WPA, conectivitatea WiFi a nodului AiMesh va fi afectată.
 Schimbarea codului de țară poate afecta sistemul dvs. AiMesh.
 Dacă dezactivați funcția Radio, conectivitatea WiFi a routerului AiMesh va fi afectată.
-Dacă ascundeți SSID, conectivitatea WiFi a routerului AiMesh va fi afectată.
+SSID ascuns nu ajută la securizarea rețelei Wi-Fi și poate cauza unele probleme de conexiune.
 Dacă ascundeți SSID, funcția WPS va fi dezactivată și conectivitatea WiFi a routerului AiMesh va fi afectată.
 Dacă dezactivați serverul DHCP, conectivitatea WiFi a routerului AiMesh va fi afectată.
 Luând în considerare compatibilitatea dintre sistemul AiMesh și dispozitivele dvs., vă sugerăm să utilizați WPA2-Personal. Doriți să treceți la  #AUTHMODE?\n*Dacă întâmpinați probleme de conexiune, treceți la WPA2-Personal sau contactați producătorul pentru mai multe informații.
 Pentru a asigura conexiunea sistemului AiMesh și a dispozitivelor terminale, citiți <a id="wpa3FaqLink">FAQ</a> înainte de a trece la WPA3-Personal.
 Momentan utilizați WPA3-personal. Pentru a crea un sistem AiMesh, metoda dvs. de autentificare va fi schimbată la WPA2/WPA3-personal. Doriți să continuați?
 You can read this <a id='wpa3FaqLink'>FAQ</a> for more information.
+Pentru detalii suplimentare, vizitaţi <a style='font-weight: bolder;text-decoration: underline;' href='' target='_blank'>această întrebare frecventă</a>
 Advanced ASUS AiMesh este o funcție nouă a routerului care permite conectarea mai multor routere ASUS și crearea unei rețele WiFi cu acoperire în toată locuința.
 Aflați mai multe despre ASUS AiMesh
 Găsire nod AiMesh
@@ -1090,6 +1092,9 @@ Balcon
 Sală de ședințe
 Particular
 Garaj
+Primul etaj
+Cameră de jocuri
+Sală de gimnastică
 Sfaturi offline
 Asigurați-vă că nodul dvs. AiMesh este pornit.
 Reporniți nodul AiMesh și încercați din nou.
@@ -1687,6 +1692,8 @@ Importați propriul certificat
 Încărcați un certificat eliberat de o autoritate de certificare aici. Cheia dvs. privată și certificatul SSL sunt necesare.
 Cheie privată
 Cheile private nu poate fi protejate cu parolă.
+Actualizare IPv6
+În cazul în care mediul de rețea al clientului utilizează o adresă de rețea IPv6, activarea acestei caracteristici va rezolva domeniul la o adresă de rețea IPv6 mai întâi la accesarea dispozitivului la distanță.
 Certificat SSL
 Termenii serviciului
 Transfer ASUS DDNS name
@@ -2028,11 +2035,11 @@ Activaţi funcţia firewall pentru a proteja reţeaua locală împotriva atacuri
 <b>Black List Duration (Durată listă neagră):</b> Pe durata programată, clienţii din lista neagră nu vor putea utiliza serviciile de reţea specificate. După expirarea duratei specificate, toţi clienţii din reţeaua LAN vor putea accesa serviciile de reţea specificate<br><b>White List Duration (Durată listă albă):</b> Pe durata programată, clienţii din lista albă vor putea utiliza NUMAI serviciile de reţea specificate. După expirarea duratei specificate, clienţii din lista albă şi orice alţi clienţi din reţea nu vor mai multe accesa Internetul sau orice serviciu bazat pe Internet.
 <b>NOTĂ :</b> Dacă setaţi subreţeaua pentru lista albă, adresele IP din afara subreţelei nu vor putea accesa Internetul sau orice serviciu bazat pe Internet.
 Filtrul de adrese MAC vă permite să acceptaţi sau să respingeţi accesul la Internet pentru dispozitivele care au adresele MAC specificate<p>Puteţi seta filtrul de adrese MAC în modul Accept (Acceptare) sau Reject (Respingere)<p>În modul Reject (Respingere), dispozitivelor din listă li se va interzice accesul la reţea.<p>În modul Accept (Acceptare), numai dispozitivele care se află în listă vor putea accesa reţeaua. Dispozitivele care nu se află în listă nu vor putea accesa reţeaua.
-Un atac de tip \"denial-of-service\" este o încercare explicită de a interzice unor utilizatori legitimi să utilizeze un serviciu sau o resursă dintr-un computer<p>Activarea acestei caracteristici poate proteja routerul împotriva atacurilor de tip DoS, însă va duce la creşterea volumului de lucru al routerului.
+Activarea acestei caracteristici poate proteja routerul împotriva atacurilor de tip DoS (Denial- of-Service), însă va duce la creşterea volumului de lucru al routerului.
 Activare protecţie DoS
 Dezactivarea aplicaţiei firewall va duce la dezactivarea tuturor funcţiilor corelate.
 Activare firewall
-Activare IPv4 Firewall
+Activare IPv4 Reguli de intrare paravan de securitate
 Paravan de securitate IPv4
 Când setaţi 20:21 ca interval de porturi pentru serverul FTP în configuraţia WAN, serverul FTP va intra în conflict cu serverul FTP nativ al dispozitivului RT-AX53U.
 Activarea filtrului de cuvinte cheie
@@ -2140,6 +2147,9 @@ Updated
 Este disponibil un firmware nou.
 Se încarcă nota de lansare, aștepați...
 Nu s-a găsit nota de lansare.
+Resetare
+Alegeți o versiune de firmware
+Selector resetare firmware
 Accelerare pe pentru jocuri
 Accelerare joc
 Accelerare pe trei niveluri pentru jocuri
@@ -2293,7 +2303,7 @@ Internet
 Interval
 Demo introductiv
 Invitaţie
-Interakcija
+Interacţiune
 Viteză Internet
 Acest serviciu este furnizat de Ookla®. Detectează viteza de încărcare și descărcare a routerului pe Internet. Efectuarea acestui test durează circa un minut. Prin utilizarea acestui serviciu, sunteți de acord cu  <a href="https://www.speedtest.net/about/privacy" style="font-family:Lucida Console;text-decoration:underline;color:#7ECAFF;" target="_blank">Politica de confidențialitate Ookla</a>.
 Ookla® și Speedtest® sunt înregistrate federal de Ookla, LLC.
@@ -2878,6 +2888,7 @@ Creare client RADIUS nou
 Tabel grup
 Nume partiţie
 Pentru intervalul de porturi sursă sau destinaţie, puteţi să realizaţi următoarele: a) să introduceţi un anumit port, precum \"95\"; sau b) să introduceţi porturile dintr-un interval, precum \"103:315\", \">100\" sau \"<65535\".
+Port de jocuri
 Maparea porturilor
 Maparea porturilor acceptă interfaţa WAN IPTV pentru anumite porturi din reţeaua LAN. Puteţi selecta portul LAN corespunzător şi apoi face clic pe Aplicare.
 Activare mapare porturi
@@ -3322,6 +3333,7 @@ Ora Atlanticului (Canada)
 La Paz
 Caracas
 Santiago
+Asuncion
 Newfoundland
 Brasilia
 Buenos Aires, Georgetown
@@ -3351,7 +3363,7 @@ Kaliningrad
 Atena
 Ierusalim
 Harare, Pretoria
-Kiev
+Kyiv
 Moscova, St. Petersburg
 Volgograd
 Kuweit, Riad
@@ -3500,7 +3512,7 @@ Asistenţă pentru locaţia de reţea (Samba)
 Publicare DNS pentru clienţi
 Mod autorizare
 Doar autentificare cu nume de utilizator / parolă
-Authorization Mode fixes on TLS
+Authentication Mode fixes on TLS
 Autorizaţie HMAC suplimentară
 Autorizaţie HMAC suplimentară
 Permite Client <-> Client
@@ -3516,8 +3528,8 @@ If your WAN IP address is dynamic, please click <a href="http://router.asus.com/
 Alocare de la DHCP
 Cifru criptare
 Conflict de rutare! <p>Verificați setările de adresă IP ale clientului pe pagina Setări avansate sau verificați tabelul de rutare din jurnalul de sistem.
-Eroare câmp Certification Authentication (Autentificare certificare) / Server certification (Certificare server) / Server Key (Cheie server)! <p>Verificați conținutul pentru Keys (Chei) și Certification (Certificare) pe pagina Setări avansate.
-Eroare câmp de parametri Diffle Hellman! <p>Verificați conținutul pentru Keys (Chei) și Certification (Certificare) pe pagina Setări avansate.
+Eroare câmp Certificate Authenticate (Autentificare certificare) / Server certificate (Certificare server) / Server Key (Cheie server)! <p>Verificați conținutul pentru Keys (Chei) și Certificate (Certificare) pe pagina Setări avansate.
+Eroare câmp de parametri Diffle Hellman! <p>Verificați conținutul pentru Keys (Chei) și Certificate (Certificare) pe pagina Setări avansate.
 Pornirea daemonului de server OpenVPN nu a reușit.  <p>Verificați mediul dispozitivului sau conținutul pe pagina Setări avansate.
 Pentru a utiliza propria cheie, faceţi clic pe linkul galben pentru a modifica setările.
 Consultaţi <a style="font-weight: bolder;text-decoration:underline;" class="hyperlink" href="Main_LogStatus_Content.asp">Jurnal de sistem</a> pentru orice mesaje de eroare legate de OpenVPN.
@@ -4089,7 +4101,7 @@ Dezactivați profilul înainte de a-l șterge.
 Toate excepțiile de la politică configurate pentru un profil VPN vor fi șterse atunci când ștergeți profilul. Sigur doriți să ștergeți profilul?
 Sigur doriți să ștergeți acest profil?
 Ștergerea politicii pentru dispozitivul client în lista de excepții va șterge și legarea adresei IP a dispozitivului client la serverul DHCP. Sigur doriți să ștergeți această opțiune?
-<a id="faq1" href="" target="_blank" style="font-weight:bolder;text-decoration:underline;">Multiple VPN Connection FAQ.</a>
+<a id="faq1" href="" target="_blank" style="font-weight:bolder;text-decoration:underline;">Întrebări frecvente despre funcția VPN Fusion (Fuziune VPN).</a>
 Nu se poate configura ca WAN implicit pentru politica țintă.
 Beta test only
 You can also select [Cancel], the device will automatically start downloading the update during the night time.
@@ -4129,6 +4141,7 @@ GeForce Now
 Selectați GeForce Now pentru a prioritiza dispozitivele de jocuri GeForce Now pentru o experiență de joc mai rapidă și mai bună.
 LED On/Off
 The LED on/off control is used to turn off all LEDs includes Aura light.
+To enable Aura RGB, LED must remain on. Please turn on LED by pressing hardware button on the router for 3 seconds or enable it via web/app interface.
 Eveniment
 Sistemul va detecta următoarele evenimente și va declanșa diferite efecte LED.
 Când activați Game Boost (Accelerare jocuri), veți vedea bara de LED-uri folosind un efect de respiraţie roșu.

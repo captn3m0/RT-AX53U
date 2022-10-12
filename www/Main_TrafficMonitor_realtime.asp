@@ -5,7 +5,7 @@
 <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-<title><#837#> - <#771#> : <#2613#></title>
+<title><#838#> - <#772#> : <#2623#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="tmmenu.css">
@@ -20,7 +20,7 @@
 <script language="JavaScript" type="text/javascript" src="/js/jquery.js"></script>
 <script language="JavaScript" type="text/javascript" src="/js/httpApi.js"></script>
 <script type='text/javascript'>
-var nvram = httpApi.nvramGet(["wan_ifname", "lan_ifname", "wl_ifname", "wan_proto", "web_svg", "rstats_enable", "rstats_colors", "bond_wan", "rc_support", "http_id"])
+var nvram = httpApi.nvramGet(["wan_ifname", "lan_ifname", "wl_ifname", "wan_proto", "web_svg", "rstats_enable", "rstats_colors", "bond_wan", "rc_support", "http_id", "wans_lanport"])
 var cprefix = 'bw_r';
 var updateInt = 2;
 var updateDiv = updateInt;
@@ -109,7 +109,7 @@ else{ // ctf_disable == 1 or ctf_disable is not existed
 document.getElementById("ctfLevelDesc").style.display = "none";
 }
 if(bwdpi_support){
-document.getElementById('content_title').innerHTML = "<#771#>";
+document.getElementById('content_title').innerHTML = "<#772#>";
 }
 document.getElementById('traffic_unit').value = getTrafficUnit();
 }
@@ -164,15 +164,15 @@ initCommon(2, 0, 0, 1);
 <table width="100%" >
 <tr>
 <td class="formfonttitle" align="left">
-<div id="content_title" style="margin-top:5px;"><#373#> - <#771#></div>
+<div id="content_title" style="margin-top:5px;"><#374#> - <#772#></div>
 </td>
 <td>
 <div align="right">
 <select onchange="switchPage(this.options[this.selectedIndex].value)" class="input_option">
-<!--option><#3220#></option-->
-<option value="1" selected><#2613#></option>
-<option value="2"><#2614#></option>
-<option value="3"><#2615#></option>
+<!--option><#3231#></option-->
+<option value="1" selected><#2623#></option>
+<option value="2"><#2624#></option>
+<option value="3"><#2625#></option>
 </select>
 </div>
 </td></tr></table>
@@ -183,22 +183,22 @@ initCommon(2, 0, 0, 1);
 </tr>
 <tr>
 <td height="30" align="left" valign="middle" >
-<div class="formfontcontent"><p class="formfontcontent"><#3300#></p></div>
+<div class="formfontcontent"><p class="formfontcontent"><#3311#></p></div>
 </td>
 </tr>
 <tr>
 <td align="left" valign="middle">
 <table width="95%" border="1" align="left" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="DescTable" style="font-size:12px; border: 1px solid #000000; border-collapse: collapse;">
-<tr><th style="color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px; border-collapse: collapse;" width="16%"></th><th class="tm_title_bg" style="color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px;padding-left: 10px;border-collapse: collapse;" width="26%"><#2291#></th><th class="tm_title_bg" style="color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px;border-collapse: collapse;" width="29%"><#3270#></th><th class="tm_title_bg" style="color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px; border-collapse: collapse;" width="29%"><#3271#></th></tr>
-<tr><th class="tm_title_bg" style="color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px; border-collapse: collapse;"><#3262#></th><td style="color:#FF9000;padding-left: 10px; border-collapse: collapse;"><#3263#></td><td style="color:#3CF;padding-left: 10px;border-collapse: collapse;"><#3264#></td><td style="color:#3CF;padding-left: 10px;border-collapse: collapse;"><#3265#></td></tr>
-<tr><th class="tm_title_bg" style="color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px;border-collapse: collapse;"><#3269#></th><td style="color:#3CF;padding-left: 10px;border-collapse: collapse;"><#3266#></td><td style="color:#FF9000;padding-left: 10px;;border-collapse: collapse;"><#3267#></td><td style="color:#FF9000;padding-left: 10px;border-collapse: collapse;"><#3268#></td></tr>
+<tr><th style="color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px; border-collapse: collapse;" width="16%"></th><th class="tm_title_bg" style="color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px;padding-left: 10px;border-collapse: collapse;" width="26%"><#2301#></th><th class="tm_title_bg" style="color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px;border-collapse: collapse;" width="29%"><#3281#></th><th class="tm_title_bg" style="color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px; border-collapse: collapse;" width="29%"><#3282#></th></tr>
+<tr><th class="tm_title_bg" style="color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px; border-collapse: collapse;"><#3273#></th><td style="color:#FF9000;padding-left: 10px; border-collapse: collapse;"><#3274#></td><td style="color:#3CF;padding-left: 10px;border-collapse: collapse;"><#3275#></td><td style="color:#3CF;padding-left: 10px;border-collapse: collapse;"><#3276#></td></tr>
+<tr><th class="tm_title_bg" style="color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px;border-collapse: collapse;"><#3280#></th><td style="color:#3CF;padding-left: 10px;border-collapse: collapse;"><#3277#></td><td style="color:#FF9000;padding-left: 10px;;border-collapse: collapse;"><#3278#></td><td style="color:#FF9000;padding-left: 10px;border-collapse: collapse;"><#3279#></td></tr>
 </table>
 </td>
 </tr>
 <tr>
 <td>
 <div style="display:flex;align-items: center;margin: 4px 0;">
-<div><#3045#></div>
+<div><#3056#></div>
 <div style="margin-left: 24px;">
 <select class="input_option" id="traffic_unit" onchange="setUnit(this.value);">
 <option value="0">KB</option>
@@ -212,14 +212,14 @@ initCommon(2, 0, 0, 1);
 </tr>
 <tr>
 <td height="30" align="left" valign="middle" >
-<div class="formfontcontent"><p class="formfontcontent"><#3301#></p></div>
+<div class="formfontcontent"><p class="formfontcontent"><#3312#></p></div>
 <div id="ctfLevelDesc" style="display:none" class="formfontcontent">
 <p class="formfontcontent">
-<b><#915#></b> <#3302#>
-<#1630#>
+<b><#916#></b> <#3313#>
+<#1635#>
 </p>
 </div>
-<div class="formfontcontent"><p class="formfontcontent"><a id="faq0" href="" target="_blank" style="font-weight: bolder;text-decoration:underline;"><#771#> FAQ</a></p></div>
+<div class="formfontcontent"><p class="formfontcontent"><a id="faq0" href="" target="_blank" style="font-weight: bolder;text-decoration:underline;"><#772#> FAQ</a></p></div>
 </td>
 </tr>
 <tr>
@@ -241,10 +241,10 @@ initCommon(2, 0, 0, 1);
 <td>
 <table width="730px" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable_NWM" style="margin-top:0px;margin-left:-1px;*margin-left:-10px;margin-left:-12px \9;">
 <tr>
-<th style="text-align:center; width:160px;"><#1666#></th>
-<th style="text-align:center; width:160px;"><#1416#></th>
-<th style="text-align:center; width:160px;"><#2607#></th>
-<th style="text-align:center; width:160px;"><#3272#></th>
+<th style="text-align:center; width:160px;"><#1671#></th>
+<th style="text-align:center; width:160px;"><#1421#></th>
+<th style="text-align:center; width:160px;"><#2617#></th>
+<th style="text-align:center; width:160px;"><#3283#></th>
 </tr>
 <tr>
 <td style="text-align:center;font-weight: bold; background-color:#111;"><div id="rx-current"></div></td>

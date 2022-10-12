@@ -17,11 +17,11 @@ parent.document.form.upload.disabled = true;
 if(upgrade_fw_status == 6){
 parent.confirm_asus({
 title: "Invalid Firmware Upload",
-contentA: "<#273#><br>",
+contentA: "<#274#><br>",
 left_button: "",
 left_button_callback: function(){},
 left_button_args: {},
-right_button: "<#1654#>",
+right_button: "<#1659#>",
 right_button_callback: function(){parent.confirm_cancel();parent.location.reload();},
 right_button_args: {},
 iframe: "",
@@ -32,11 +32,11 @@ note_display_flag: 1
 else{
 parent.confirm_asus({
 title: "Invalid Firmware Upload",
-contentA: "<#269#><br><#2123#><br>",
+contentA: "<#270#><br><#2130#><br>",
 left_button: "",
 left_button_callback: function(){},
 left_button_args: {},
-right_button: "<#1654#>",
+right_button: "<#1659#>",
 right_button_callback: function(){parent.confirm_cancel();parent.location.reload();},
 right_button_args: {},
 iframe: "",

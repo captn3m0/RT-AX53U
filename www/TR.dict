@@ -128,6 +128,7 @@ Bunun yanı sıra, ASUS, ürününüz aracılığıyla IFTTT™ uzaktan kumanda 
 ASUS, gizliliğinizi korumaya ve gizliliğinize saygı göstermeye kendini adar. Ürün bilgilerinizi ASUS ile paylaşmayı istediğiniz zaman etkinleştirmek/devre dışı bırakmak için Advanced Settings (Gelişmiş Ayarlar) > Administration (Yönetim) > Privacy (Gizlilik) kısmını ziyaret edebilirsiniz. ASUS\'un gizliliğinizi nasıl koruduğu konusunda daha fazla bilgi almak için lütfen <a id="eula_url" style="font-weight: bolder;text-decoration:underline;cursor:pointer;" target="_blank">ASUS Gizlilik İlkesi</a> kısmını ziyaret edin.
 16 yaşından büyüğüm.
 Lütfen 16 yaşından büyük olduğunuzu onaylayın.
+ASUS Kullanım Koşulları onaylayın.
 %1$@ ve Uzak bağlantı (ASUS Yönlendirici Uygulaması/Lyra Uygulaması/AiCloud/AiDisk) için:
 Lütfen ürününüzün model adını, aygıt yazılımı sürümünü, Internet durumunu, IP Adresini, MAC Adresini ve DDNS adını da içeren bilgilerinizin ASUS tarafından yukarıdaki işlevler aracılığıyla toplanacağını unutmayın.
 Bilgilerinizi yukarıdaki işlevler aracılığıyla ASUS ile paylaşmayı devre dışı bırakmak isterseniz lütfen aşağıdaki <span style="font-weight: bold;">[(Vazgeç]</span> öğesine tıklayın. Ancak, bilgilerinizi ASUS ile paylaşmaya son verirseniz bu tür özelliklerin/işlevlerin çalışmayabileceğini lütfen unutmayın.
@@ -139,12 +140,12 @@ ASUS Yönlendirici Uygulamasını, Lyra Uygulamasını, AiCloud'ı, AiDisk'i uza
 Vazgeçme prosedürünü Internet bağlantısı olmadan tamamlayamazsınız. Lütfen Internet'e bağlandığınızda vazgeçin.
 Internet durumu kararsız olduğundan vazgeçme prosedürünü tamamlayamıyorsunuz. Lütfen daha sonra tekrar vazgeçin.
 ASUS AiProtection'u kullanarak aşağıdakileri kabul edersiniz:
-AiProtection, Trafik çözümleyici, Uygulama çözümleyici, Uyarlanabilir QoS/Oyun güçlendirme, Web geçmişi kullanarak <a id="eula_url" style="text-decoration:underline;" target="_blank">Trend Micro Son Kullanıcı Lisans Anlaşması</a> koşullarını kabul edersiniz.
-Lütfen bilgilerinizin Trend Micro tarafından AiProtection, Trafik çözümleyici, Uygulama çözümleyici, Uyarlanabilir QoS ve web geçmişi aracılığıyla toplanacağını unutmayın. ASUS\'un Trend Micro ile aranızdaki anlaşmadan veya Trend Micro tarafından sağlanan hizmetin herhangi bir içeriğinden sorumlu olmadığını da onaylar ve kabul edersiniz. ITrend Micro\'nun yukarıdaki bilgilerinizi toplama, işleme ve kullanma yöntemleri konusunda sorularınız olursa, lütfen daha fazla ayrıntı için, Trend Micro tarafından yayımlanan gizlilikle ilgili bildirime başvurun veya Trend Micro ile iletişime geçin.
+AiProtection, Trafik çözümleyici, ebeveyn denetimi( Web ve Uygulama Filtreleri ), Uygulama çözümleyici, Uyarlanabilir QoS/Oyun güçlendirme, Web geçmişi kullanarak <a id="eula_url" style="text-decoration:underline;" target="_blank">Trend Micro Son Kullanıcı Lisans Anlaşması</a> koşullarını kabul edersiniz.
+Lütfen bilgilerinizin Trend Micro tarafından AiProtection, ebeveyn denetimi( Web ve Uygulama Filtreleri ), Trafik çözümleyici, Uygulama çözümleyici, Uyarlanabilir QoS ve web geçmişi aracılığıyla toplanacağını unutmayın. ASUS\'un Trend Micro ile aranızdaki anlaşmadan veya Trend Micro tarafından sağlanan hizmetin herhangi bir içeriğinden sorumlu olmadığını da onaylar ve kabul edersiniz. ITrend Micro\'nun yukarıdaki bilgilerinizi toplama, işleme ve kullanma yöntemleri konusunda sorularınız olursa, lütfen daha fazla ayrıntı için, Trend Micro tarafından yayımlanan gizlilikle ilgili bildirime başvurun veya Trend Micro ile iletişime geçin.
 Bilgilerinizi yukarıdaki işlevler aracılığıyla Trend Micro ile paylaşmayı devre dışı bırakmak isterseniz lütfen şu kısma gidin:  Router web GUI (Yönlendirici web grafiksel kullanıcı arayüzü) > Advanced settings (Gelişmiş ayarlar) > Administration (Yönetim) > Privacy (Gizlilik).
 <a id="tm_eula_url" style="text-decoration:underline;" target="_blank">TrendMicro Privacy Policy</a>
 <a id="tm_disclosure_url" style="text-decoration:underline;" target="_blank">Privacy and Personal Data Collection Disclosure</a>
-AiProtection, Trafik çözümleyici, Uygulama çözümleyici, Uyarlanabilir QoS/Oyun güçlendirme, Web geçmişi için:
+AiProtection, ebeveyn denetimi( Web ve Uygulama Filtreleri ), Trafik çözümleyici, Uygulama çözümleyici, Uyarlanabilir QoS/Oyun güçlendirme, Web geçmişi için:
 Lütfen bilgilerinizin Trend Micro tarafından yukarıdaki işlevler aracılığıyla toplanacağını unutmayın.
 Bilgilerinizi aşağıdaki işlevler aracılığıyla Trend Micro ile paylaşmayı devre dışı bırakmak isterseniz lütfen aşağıdaki <span style="font-weight: bold;">[(Vazgeç]</span> öğesine tıklayın. Ancak, bilgilerinizi Trend Micro ile paylaşmaya son verirseniz bu tür özelliklerin/işlevlerin çalışmayabileceğini lütfen unutmayın.
 Vazgeçmek istediğinizden emin misiniz?
@@ -271,7 +272,7 @@ Donanım yazılımı yükseltme işlemi başarısız. Yanlış görüntü veya h
 Donanım yazılımı yükseltiliyor. Lütfen 3 dakika kadar bekleyin.
 Yazılım güncellemeniz bitti. Bu pencereyi kapatın ve AiMesh yönlendiricinize tekrar erişin.
 Aygıt yazılımı yükseltmesi tamamlandı. Lütfen RT-AX53U maneül olarak yeniden başlatın.
-To comply with regulatory amendments, we have modified our certification rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
+To comply with regulatory amendments, we have modified our certificate rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
 5 kez yanlış parola girdiniz. Oturumunuz kapatılacak.
 2022 ASUSTeK Computer Inc. Tüm hakları saklıdır.
 Yapılandırma parametreleri, ürün yazılımı güncelleme işlemi sırasında ayarlarını koruyacaktır.
@@ -461,7 +462,7 @@ WISP modu
 RT-AX53U, ana yönlendiricinize, erişim noktanıza veya kamusal etkin noktaya kablosuz olarak bağlanır ve Internet bağlantısını kablolu/kablosuz istemcilerinizle paylaşır. Bu modda, NAT, güvenlik duvarı ve DHCP sunucusu varsayılan olarak etkinleştirilir.
 Bir WiFi etkin noktaya bağlanırken, Internet’e erişim yetkiniz olduğundan emin olun.
 Bu işlev devre dışı bırakıldı.
-ebeveyn denetimi
+Ebeveyn denetimi
 Yeni parola
 Parolayı Yeniden Yazın
 Çok Zayıf
@@ -998,13 +999,14 @@ SSID'nizi değiştirirseniz, AiMesh düğümünüzün WiFi bağlantısı etkilen
 WPA Ön Paylaşımlı Anahtarınızı değiştirirseniz, AiMesh düğümünüzün WiFi bağlantısı etkilenecektir.
 Ülke kodunuzu değiştirmek AiMesh sisteminizi etkileyebilir.
 Radyo işlevselliğini devre dışı bırakırsanız, AiMesh yönlendiricinizin WiFi bağlantısı etkilenir.
-SSID'nizi gizlerseniz AiMesh yönlendiricinizin WiFi bağlantısı etkilenir.
+Gizli SSID, Wi-Fi ağınızı güvenli hale getirmeye yardımcı olmaz ve bazı bağlantı sorunlarına yol açabilir.
 SSID'nizi gizlerseniz, WPS işlevi devre dışı bırakılır ve AiMesh yönlendiricinizin WiFi bağlantısı etkilenir.
 DHCP Sunucusunu devre dışı bırakırsanız, AiMesh yönlendiricinizin WiFi bağlantısı etkilenir.
 AiMesh sistemi ve son cihazların uyumu göz önüne alındığında, WPA2-Kişisel kullanmanızı öneriyoruz. #AUTHMODE moduna geçmek istiyor musunuz?\n*Bağlantı sorunları yaşarsanız, lütfen WPA2-Kişisel’e geçin veya daha fazla bilgi almak için üreticiyle/üreticilerle kontrol edin.
 AiMesh sisteminiz ve son cihaz(lar) arasında bağlantıyı sağlamak için WPA3-Kişisel’e geçmeden önce lütfen bu <a id="wpa3FaqLink">SSS</a> kısmını okuyun.
 Şu anda WPA3-kişisel kullanıyorsunuz. Bir AiMesh sistemi oluşturmak için kimlik doğrulama yönteminiz WPA2/WPA3-kişisel olarak değiştirilecektir. İlerlemek istiyor musunuz?
 You can read this <a id='wpa3FaqLink'>FAQ</a> for more information.
+Daha fazla ayrıntı için, lütfen <a style='font-weight: bolder;text-decoration: underline;' href='' target='_blank'>bu SSS</a> adresini ziyaret edin
 Gelişmiş ASUS AiMesh, birden fazla ASUS yönlendiricinin birbirine bağlanmasıyla tüm ev WiFi ağı oluşturmayı sağlayan yenilikçi bir yeni yönlendirici özelliğidir.
 ASUS AiMesh konusunda daha fazla bilgi edinin
 AiMesh düğümü bul
@@ -1090,6 +1092,9 @@ Balkon
 Toplantı Odası
 Özel
 Garaj
+Birinci Kat
+Oyun Odası
+Spor
 Çevrimdışı ipuçları
 AiMesh düğümünüzün açık olduğundan emin olun.
 AiMesh düğümünüzü yeniden başlatıp tekrar deneyin.
@@ -1687,6 +1692,8 @@ Kendi Sertifikanızı İçe Aktarın
 Buraya bir sertifika yetkilisi tarafından verilen bir sertifika yükleyin. Özel anahtarınız ve SSL sertifikanız gereklidir.
 Özel Anahtar
 Özel anahtarlar parola korumalı olamaz.
+IPv6 Güncellemesi
+İstemcinin ağ ortamında IPv6 ağ adresi kullanılıyorsa, bu özelliği etkinleştirmek uzak cihaz erişimi olduğunda bir IPv6 ağ adresine giden etki alanını çözecektir.
 SSL Sertifikası
 Kullanım Şartları Bildirgesi
 Transfer ASUS DDNS name
@@ -2028,11 +2035,11 @@ Yerel alan ağınızı hacker'lerden korumak için güvenlik duvarını etkinle�
 <b>Kara Liste Süresi :</b> Planlanan süre boyunca, Kara Listedeki istemciler belirlenen ağ hizmetlerini kullanamaz. Belirlenen sürenin ardından, LAN'daki tüm istemciler belirlenen ağ hizmetlerine erişim sağlayabilir.<br><b>Beyaz Liste Süresi :</b> Planlanan süre boyunca, Beyaz Listedeki istemciler SADECE belirlenen ağ hizmetlerini kullanabilir. Belirlenen sürenin ardından, Beyaz Listedeki istemciler ve diğer ağ istemcileri internete veya internet hizmetlerine rişim sağlayamayacaklardır.
 <b>NOT :</b> Eğer Beyaz Liste için bir ağ ağ ayarlarsanız, alt ağın dışındaki IP adresleri internete veya herhangi bir internet hizmetine erişim sağlayamayacaklar.
 MAC filtresi özel MAC adresli cihazların ağ erişimini kabul ya da reddetmenizi sağlar.<p>MAC filtresini Kabul Et veya Reddet moduna ayarlayabilirsiniz.<p>Reddetme modunda listedeki cihazların ağa erişimi engellenir.<p>Kabul Et modunda sadece listedeki cihazlar ağa erişebilir. Listede olmayan cihazların ağa erişimi engellenir.
-Bir 'hizmeti engelleme' saldırısı geçerli bir kullanıcının bir hizmet veya bilgisayar kaynağını kullanmasını engellemek için bir dışarıdan gelen teşebbüstür.<p>Bu özelliği etkinleştirmek yönlendiriciyi DoS saldırılarından koruyabilir fakat bu yönlendiricinin iş yükünü artıracaktır.
+Bu özelliği etkinleştirmek yönlendiriciyi DoS (Denial- of-Service) saldırılarından koruyabilir fakat bu yönlendiricinin iş yükünü artıracaktır.
 DoS koruması etkinleştirilsin mi
 Güvenlik duvarını devre dışı bırakmak tüm ilgili fonksiyonları devre dışı bırakır.
 Güvenlik Duvarı Etkinleştirilsin mi
-IPv4 Güvenlik Duvarı etkinleştirilsin mi
+IPv4 Gelen Güvenlik Duvarı Kuralları etkinleştirilsin mi
 IPv4 Güvenlik Duvarı
 WAN kurulumunuz için FTP sunucunuzun bağlantı noktası aralığını 20:21 olarak ayarladığınızda, FTP sunucunuz, RT-AX53U'nun yerel FTP sunucusu ile çakışacaktır.
 Anahtar Kelime Filtesini Etkinleştir
@@ -2140,6 +2147,9 @@ Updated
 Yeni üretici yazılımı mevcuttur.
 Sürüm notu yükleniyor, lütfen bekleyin…
 Sürüm notu bulunamadı.
+Geri Alma
+Bir ürün yazılımı sürümü seçin
+Ürün Yazılımı Geri Alma Seçim Aracı
 Oyun ivmesi
 Oyun Hızlandırma
 Üç seviyeli oyun ivmesi
@@ -2293,7 +2303,7 @@ Internet
 Aralık
 Tanıtım
 Davet
-Взаємодія
+Etkileşim
 İnternet Hızı
 Bu hizmet, Ookla® tarafından sağlanır. Yönlendiricinizden İnternetinize indirme ve karşıya yükleme hızlarını tespit eder. Bu testin tamamlanması yaklaşık bir dakika sürer. Bu hizmeti kullanarak, <a href="https://www.speedtest.net/about/privacy" style="font-family:Lucida Console;text-decoration:underline;color:#7ECAFF;" target="_blank">Ookla’nın Gizlilik Politikasını</a> kabul edersiniz.
 Ookla® ve Speedtest®, Ookla, LLC şirketine ait olarak federal tescillidir.
@@ -2878,6 +2888,7 @@ Yeni bir RADIUS istemcisi oluştur
 Grup Tablosu
 Bölüm Adı
 Kaynak ve hedef bağlantı noktası aralığı için : a) \"95\" gibi belirli bir bağlantı noktası girebilir; veya b) \"103:315\", \">100\", ya da \"<65535\" gibi bir aralık içerisine bağlantı noktalarını girebilirsiniz.
+Oyun portu
 Port Haritalama
 Bağlantı Noktası Eşleştirme belirli LAN bağlantı noktası IPTV WAN arabirimini destekler. İlgili LAN bağlantı noktasını seçip Uygula'ya tıklayın.
 Port Haritalamayı Etkinleştir
@@ -3322,6 +3333,7 @@ Atlantik Zamanı (Kanada)
 La Paz
 Caracas
 Santiago
+Asuncion
 Newfoundland
 Brasilia
 Buenos Aires, Georgetown
@@ -3351,7 +3363,7 @@ Kaliningrad
 Aina
 Kudüs
 Harare, Pretoria
-Kiev
+Kyiv
 Moskova, St. Petersburg
 Volgograd
 Kuveyt, Riyad
@@ -3413,7 +3425,7 @@ Yükleme Önceliği
 Gönderilen Veri/Sn.
 Gönderilen Veri
 iTunes ve UPnP Medya sunucusunu ayarlayın.
-RT-AX53U, UPnP standartlarını desteklemektedir. Etkinleştirebilir ve PS3 veya dijital medya oynatıcı gibi diğer UPnP aygıtlarının USB diskteki multimedya dosyalarına erişmelerine izin verebilirsiniz.
+<a id='upnp_link'>UPnP, iTunes</a>, <a id='ftp_link'>FTP</a> ve <a id='samba_link'>Ağ Bağlantısını (Samba)</a> ayarlayın.
 URL anahtar kelime
 Lütfen USB Uygulamasını kontrol edin
 Disk kontrol ediliyor
@@ -3500,7 +3512,7 @@ Ağ Yerleştirme (Samba) Desteği
 DNS’yi istemcilere tanıt
 Yetkilendirme Modu
 Yalnızca Kullanıcı Adı / Şifre Yetkl.
-Authorization Mode fixes on TLS
+Authentication Mode fixes on TLS
 Ek HMAC yetkilendirme
 Ek HMAC yetkilendirme
 İstemci <-> İstemci İzin Ver
@@ -4089,7 +4101,7 @@ Silmeden önce lütfen profili devre dışı bırakın.
 Bir VPN profili için ayarlanan tüm ilke özel durumları, profil silindiğinde kaldırılacaktır. Profili silmek istediğinizden emin misiniz?
 Bu profili silmek istediğinizden emin misiniz?
 Özel durum listesinde istemcinin ilkesini silmek, DHCP Sunucusunun istemcinin IP ilişkilendirmesini de silecektir. Bunu silmek istediğinizden emin misiniz?
-<a id="faq1" href="" target="_blank" style="font-weight:bolder;text-decoration:underline;">Multiple VPN Connection FAQ.</a>
+<a id="faq1" href="" target="_blank" style="font-weight:bolder;text-decoration:underline;">VPN Fusion SSS.</a>
 Hedef ilke için varsayılan WAN olarak ayarlanamaz.
 Beta test only
 You can also select [Cancel], the device will automatically start downloading the update during the night time.
@@ -4129,6 +4141,7 @@ GeForce Now
 Daha hızlı ve daha iyi bir oyun deneyimi için GeForce Now oyun aygıtlarına öncelik vermek üzere GeForce Now'ı seçin.
 LED On/Off
 The LED on/off control is used to turn off all LEDs includes Aura light.
+To enable Aura RGB, LED must remain on. Please turn on LED by pressing hardware button on the router for 3 seconds or enable it via web/app interface.
 Olay
 Sistem aşağıdaki olayları algılar ve farklı LED efektlerini tetikler.
 Oyun Takviyesini etkinleştirirken, LED çubuğunun kırmızı soluma etkisi kullandığını göreceksiniz.

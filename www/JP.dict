@@ -128,6 +128,7 @@ ASUSでは、お客様の製品からIFTTT™のリモートコントロール�
 ASUSでは、お客様のプライバシー情報の保護を順守し、適切な取り扱いに取り組んでいます。「詳細設定」→「管理」→「プライバシー」から、常にASUS製品情報の共有設定を有効/無効にすることができます。ASUSのプライバシー保護に関する詳細内容については、<a id="eula_url" style="font-weight: bolder;text-decoration:underline;cursor:pointer;" target="_blank">ASUSの個人情報保護方針</a>をご覧ください。
 私は16歳以上です。
 年齢が16歳以上であることをご確認ください。
+ASUS の利用規約を確認ください。
 %1$@ とリモート接続（ASUS Router APP/Lyra APP/AiCloud/AiDisk）:
 製品モデル名、ファームウェアのバージョン、インターネットの状態、IP アドレス、MAC アドレス、DDNS 名を含むお客様情報は上記機能を通じ、ASUS により収集されます。
 上記機能の使用によるASUSとの情報共有を希望しない場合は、下記の<span style="font-weight: bold;">「共有しない」</span>をクリックしてください。ASUSとの情報共有を無効にすることによって、それらの機能が正常に動作しない場合があります。
@@ -139,12 +140,12 @@ LAN 接続下では ASUS Router APP、Lyra APP、AiCloud、AiDisk を使用で�
 インターネットへ接続できないため、「共有しない」に変更できません。インターネットに接続し、「共有しない」を実行してください。
 インターネット接続が不安定のため、「共有しない」に変更できません。しばらくしてから、もう一度実行してください。
 ASUS AiProtection をご利用いただくにあたっては以下にご同意いただく必要があります。
-AiProtection、トラフィックアナライザー、アプリアナライザー、アダプティブ QoS、ゲームブースト、Web 履歴の使用により、<a id="eula_url" style="text-decoration:underline;" target="_blank">Trend Micro の使用許諾契約</a>に同意したものとします。
-お客様の情報は、AiProtection、アプリアナライザー、アプリアプリアナライザー、アダプティブ QoS 、Web履歴を通じ、Trend Micro で収集されます。お客様とTrend Microにおける契約、Trend Micro が提供するサービスの内容について、ASUSでは一切の責任を負わないものとし、それに同意するものとします。Trend Microによる情報収集、処理、使用に関するお客様からのお問い合わせについては、Trend Microによるプライバシー保護に関する規約をご参照いただくか、Trend Micro に直接お問い合わせください。
+AiProtection、ペアレンタルコントロール（Web ＆ アプリケーションフィルター）、トラフィックアナライザー、アプリアナライザー、アダプティブ QoS、ゲームブースト、Web 履歴の使用により、<a id="eula_url" style="text-decoration:underline;" target="_blank">Trend Micro の使用許諾契約</a>に同意したものとします。
+お客様の情報は、AiProtection、ペアレンタルコントロール（Web ＆ アプリケーションフィルター）、アプリアナライザー、アプリアプリアナライザー、アダプティブ QoS 、Web履歴を通じ、Trend Micro で収集されます。お客様とTrend Microにおける契約、Trend Micro が提供するサービスの内容について、ASUSでは一切の責任を負わないものとし、それに同意するものとします。Trend Microによる情報収集、処理、使用に関するお客様からのお問い合わせについては、Trend Microによるプライバシー保護に関する規約をご参照いただくか、Trend Micro に直接お問い合わせください。
 上記の機能を使用したTrend Micro との情報共有を無効にしたい場合は、ルーターWeb GUIから「詳細設定」→「管理」→「プライバシー」で設定を変更してください。
 <a id="tm_eula_url" style="text-decoration:underline;" target="_blank">TrendMicro Privacy Policy</a>
 <a id="tm_disclosure_url" style="text-decoration:underline;" target="_blank">Privacy and Personal Data Collection Disclosure</a>
-AiProtection、トラフィックアナライザー、アプリアナライザー、アダプティブ QoS、ゲームブースト、Web 履歴:
+AiProtection、ペアレンタルコントロール（Web ＆ アプリケーションフィルター）、トラフィックアナライザー、アプリアナライザー、アダプティブ QoS、ゲームブースト、Web 履歴:
 Trend Micro では、上記機能により利用目的の範囲内でお客様情報を収集をします。
 上記機能の使用による Trend Micro との情報共有を希望しない場合は、下記の<span style="font-weight: bold;">「共有しない」</span> をクリックしてください。 Trend Micro との情報共有を無効にすることによって、それらの機能が正常に動作しない場合があります。
 「共有しない」に変更しますか？
@@ -271,7 +272,7 @@ WAN 側 IP アドレスは、外部 IP アドレスではありません。外�
 ファームウェアの更新中です。約3分ほどお待ちください。
 ファームウェアの更新が完了しました。このウィンドウを閉じて、AiMesh ルーターに再度接続してください。
 ファームウェアの更新が完了しました。ルーターを手動で再起動してください。
-To comply with regulatory amendments, we have modified our certification rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
+To comply with regulatory amendments, we have modified our certificate rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
 5回の試行で正しくないパスワードを入力しました。ログアウトされます。
 2022 ASUSTeK Computer Inc. All rights reserved.
 設定パラメーターは、ファームウェア更新中においても設定を維持します。
@@ -998,13 +999,14 @@ SSID を変更すると、メッシュネットワークに影響することを
 WPA 暗号化キーを変更すると、メッシュネットワークに影響することを十分にご理解いただいた上で変更を行なってください。
 国番号を変更すると、AiMesh システムに影響を与える場合があります。
 ワイヤレス機能を無効にすると、メッシュネットワークに影響することを十分にご理解いただいた上で変更を行なってください。
-SSIDを非表示にすると、メッシュネットワークに影響することを十分にご理解いただいた上で変更を行なってください。
+非表示の SSID は、Wi-Fi ネットワークの安全をサポートしません。そして、いくつかの接続問題を引き起こすことがあります。
 SSIDを非表示にすると、WPS機能が無効になり、メッシュネットワークに影響することを十分にご理解いただいた上で変更を行なってください。
 DHCPサーバーを無効にすると、メッシュネットワークに影響することを十分にご理解いただいた上で変更を行なってください。
 AiMeshシステムとエンドデバイスの間の互換性を保つため、WPA2パーソナルの利用をおすすめします。 #AUTHMODE に切り替えますか？\n*接続上の問題が生じた場合は、WPA2パーソナルに切り替え、メーカーに問い合わせて情報収集してください。
 AiMeshシステムとエンドデバイスを確実に接続するためには、WPA3パーソナルに切り替える前んじ<a id="wpa3FaqLink">FAQ</a>をお読みください。
 現在お使いになっているのはWPA3パーソナルです。AiMeshシステムを作るには、認証方法がWPA2/WPA3パーソナルに変更されます。続けますか？
 詳細は <a id='wpa3FaqLink'>こちら</a> の FAQ でご確認ください。
+詳細に関しては、 <a style='font-weight: bolder;text-decoration: underline;' href='' target='_blank'>この FAQ</a>を参照してください。
 革新的な新しい機能 ASUS AiMesh では、複数の AiMesh メインルーターを相互接続し、ご家庭全体に WiFi ネットワークを構築することができます。
 ASUS AiMesh の詳細を確認する
 AiMesh ノードを探す
@@ -1090,6 +1092,9 @@ AiMesh ノードリスト
 会議室
 カスタム
 ガレージ
+1階
+ゲーミング ルーム
+ジム
 オフライン時の確認事項
 AiMesh ノードの電源が入っていることをご確認ください
 もう一度、AiMesh ノードを再起動してからお試しください
@@ -1201,7 +1206,7 @@ AiProtection、トラフィックアナライザー、アプリケーション�
 Web ＆ アプリケーションフィルター
 成人向け
 アダルト、ポルノ、暴力、ギャンブルなどの有害なホームページへのアクセスをブロックすることができます。
-ポルノ
+成人向け/アダルト
 違法行為 / 暴力
 ギャンブル
 インターネット電話
@@ -1687,6 +1692,8 @@ Let’s Encrypt の利用規約に同意します
 証明機関が発行した証明書をここにアップロードします。秘密鍵とSSL証明書が必要です。
 秘密鍵
 秘密鍵は暗号化キーで保護することはできません。
+IPv6 アップデート
+クライアントのネットワーク環境が IPv6 ネットワーク アドレスを使用している場合、この機能を有効化すると、リモート デバイスにアクセスする時に、ドメインが IPv6 ネットワーク アドレスに対して最初に解決されます。
 SSL 証明書
 ご利用条件
 ASUS DDNS 名も移行する
@@ -2032,7 +2039,7 @@ DoS (Denial of Service) 保護機能の有効/無効を設定します。
 DoS 保護を有効にする
 ファイアウォール機能を無効にすると、関連する次の機能も無効になります。（例：WANからのウェブアクセス）
 ファイアウォールを有効にする
-IPv4 ファイアウォールを有効にする
+IPv4 受信ファイアウォール規則有効にする
 IPv4 ファイアウォール
 FTP サーバーのポートレンジを 20:21 に設定した場合、ネイティブの FTP サーバーとの衝突が発生します。
 キーワードフィルターを有効にする
@@ -2140,6 +2147,9 @@ Updated
 新しいファームウェアが利用可能です。
 リリースノートのロード中です。お待ちください...
 リリースノートが見つけかりませんでした。
+ロールバック
+ファームウェア バージョンを選択
+ロールバック セレクター
 ゲームアクセラレーション
 ゲームブースト
 トリプルレベルのゲームアクセラレーション
@@ -2878,6 +2888,7 @@ RADIUS クライアント
 グループテーブル
 パーティション名
 送信元 IP、または宛先 IP のポート範囲の入力は 2 通りの方法があります。a) 特定のポートを（ \"95\"）を入力、b) 特定のレンジ内のポート（\"103:315\", \">100\", \"<65535\"）を入力。
+ゲーミング ポート
 ポートマッピング
 ポートマッピングは特定の LAN ポートで IPTV WAN インタフェースをサポートしています。適切な LAN ポートを選択し「適用」をクリックしてください。
 ポートマッピングを有効にする
@@ -3322,6 +3333,7 @@ NAT アクセラレーターが有効（自動）に設定されている場合�
 ラパス
 カラカス
 サンティアゴ
+アスンシオン
 ニューファンドランド
 ブラジリア
 ブエノスアイレス、ジョージタウン
@@ -3413,7 +3425,7 @@ APモードでは RT-AX53U のインターネット機能は無効になりま�
 送信データ/秒
 送信データ
 iTunes、UPnP サーバーのセットアップを行います。
-RT-AX53U は UPnP 規格に準拠しています。有効にすると、他の UPnP デバイス（PS3 やデジタルメディアプレーヤー）が USB ディスク内のマルチメディアファイルにアクセスできるようになります。
+<a id='upnp_link'>UPnP、iTunes</a>, <a id='ftp_link'>FTP</a> および <a id='samba_link'>ネットワーク場所 (Samba)</a> をセットアップします。
 URL キーワード
 USB アプリケーションをご確認ください。
 ディスクをチェックしています
@@ -3525,7 +3537,7 @@ OpenVPN の詳細設定を行う前に、OpenVPN クライアントソフトウ�
 現在、OpenVPN サーバーの設定を初期化しています。サーバーの設定が完了するまでしばらくお待ちください。
 インタフェース
 認証中
-認証機関
+CA 認証
 Diffie-Hellmanパラメーター
 だけの内容を貼り付け
 の行を含むブロックのみをペーストします。
@@ -4089,7 +4101,7 @@ VPN ポリシーを例外リストに追加することで、クライアント�
 VPN プロファイルに設定されたポリシーの例外は全て、プロファイルが削除されると削除されます。プロファイルを削除してもよろしいですか？
 このプロファイルを削除してもよろしいですか？
 例外リストでクライアントのポリシーを削除すると、DHCP サーバーのクライアントの IP バインディングも削除されます。このクライアントポリシーを削除してもよろしいですか？
-<a id="faq1" href="" target="_blank" style="font-weight:bolder;text-decoration:underline;">Multiple VPN Connection FAQ.</a>
+<a id="faq1" href="" target="_blank" style="font-weight:bolder;text-decoration:underline;">VPN フュージョンに関する FAQ</a>
 ターゲットポリシー用のデフォルト接続としては設定できません。
 Beta test only
 You can also select [Cancel], the device will automatically start downloading the update during the night time.
@@ -4129,6 +4141,7 @@ GeForce Now
 GeForce Now を選択すると、GeForce Now ゲームデバイスの優先化を行うことができます。より快適なゲーム通信をお楽しみいただけます。
 LED On/Off
 The LED on/off control is used to turn off all LEDs includes Aura light.
+To enable Aura RGB, LED must remain on. Please turn on LED by pressing hardware button on the router for 3 seconds or enable it via web/app interface.
 イベント
 システムは、さまざまな LED ステータスを表示を行うための、以下のイベントを検出しました。
 ゲームブーストを有効にすると、LED はゆっくり赤点滅します。

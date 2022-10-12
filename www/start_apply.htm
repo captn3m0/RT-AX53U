@@ -272,10 +272,10 @@ if(smart_connect_nvram == 1){
 wlObj.length = 1;
 if(parent.smart_connect_support){
 if(parent.band5g2_support){
-wlObj[0].band = "<#3129#>";
+wlObj[0].band = "<#3140#>";
 }
 else{
-wlObj[0].band = "<#3128#>";
+wlObj[0].band = "<#3139#>";
 }
 }
 }
@@ -288,10 +288,10 @@ else if(applyParam.smartConnect == 1){
 wlObj.length = 1;
 if(parent.smart_connect_support){
 if(parent.band5g2_support){
-wlObj[0].band = "<#3129#>";
+wlObj[0].band = "<#3140#>";
 }
 else{
-wlObj[0].band = "<#3128#>";
+wlObj[0].band = "<#3139#>";
 }
 }
 }
@@ -393,15 +393,15 @@ wlHintHtml += '<meta content="telephone=no" name="format-detection"><meta name="
 wlHintHtml += '<div id="wlHint">';
 wlHintHtml += '<div class="div_table main_field_gap">';
 wlHintHtml += '<div class="div_tr">';
-wlHintHtml += '<div class="prod_madelName"><div class="title_name"><div class="div_td img_gap"><div class="login_img"></div></div><div class="div_td"><#838#></div></div></div>';
+wlHintHtml += '<div class="prod_madelName"><div class="title_name"><div class="div_td img_gap"><div class="login_img"></div></div><div class="div_td"><#839#></div></div></div>';
 wlHintHtml += '<div id="login_filed">';
-wlHintHtml += "<div class='p1 title_gap'><#217#></div>";
+wlHintHtml += "<div class='p1 title_gap'><#218#></div>";
 for(var i=0; i<wlObj.length; i++){
 wlHintHtml += '<div class="p1 title_gap">'+ wlObj[i].band +'</div>';
 wlHintHtml += '<div class="nologin">';
-wlHintHtml += '<#557#>: <b>';
+wlHintHtml += '<#558#>: <b>';
 wlHintHtml += wlObj[i].ssid + '</b><br>';
-wlHintHtml += '<#422#>: <b>';
+wlHintHtml += '<#423#>: <b>';
 wlHintHtml += (wlObj[i].key == "") ? "Open System" : wlObj[i].key;
 wlHintHtml += '</b></div>';
 }
@@ -436,7 +436,7 @@ if(xhr.responseText.search("Main_Login.asp") !== -1) top.location.href = "/";
 var httpds = xhr.responseXML.getElementsByTagName("httpd");
 if (httpds !== null && httpds[0] !== null) {
 if(parent.parent.document.getElementById("drword")) {
-parent.parent.document.getElementById("drword").innerHTML = "<#218#><br/><br/>";
+parent.parent.document.getElementById("drword").innerHTML = "<#219#><br/><br/>";
 }
 var redirectPage = current_page;
 if(redirectPage.length > 0) {
@@ -654,7 +654,7 @@ document.redirectForm.flag.value = "Client";
 setTimeout("top_delay_redirect('/');", restart_time*1000);
 }
 else if(current_page.indexOf("Advanced_OperationMode_Content.asp") != -1){
-parent.document.getElementById('drword').innerHTML = "<#342#>&nbsp;"+parent.document.form.lan_ipaddr.value+"<#343#><br/>";
+parent.document.getElementById('drword').innerHTML = "<#343#>&nbsp;"+parent.document.form.lan_ipaddr.value+"<#344#><br/>";
 setTimeout("hideLoading() ",20000);
 setTimeout("parent.document.getElementById('Loading').style.display = 'none';",20000);
 setTimeout("parent.dr_advise();",20000);
@@ -662,10 +662,10 @@ setTimeout("redirect()", restart_time*1000);
 }
 else if(current_page.indexOf("Advanced_LAN_Content.asp") != -1){
 if(lan_proto == "dhcp"){
-parent.document.getElementById('drword').innerHTML = "<#365#>.<#344#>";
+parent.document.getElementById('drword').innerHTML = "<#366#>.<#345#>";
 }
 else{
-parent.document.getElementById('drword').innerHTML = "<#342#>&nbsp;"+parent.document.form.lan_ipaddr.value+"<#343#><br/>";
+parent.document.getElementById('drword').innerHTML = "<#343#>&nbsp;"+parent.document.form.lan_ipaddr.value+"<#344#><br/>";
 }
 setTimeout("hideLoading();",20000);
 setTimeout("parent.dr_advise();",20000);

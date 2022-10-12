@@ -55,7 +55,7 @@ var disk_list_array = new Array();
 var usb_fatfs_mod = '<% nvram_get("usb_fatfs_mod"); %>';
 var usb_ntfs_mod = '<% nvram_get("usb_ntfs_mod"); %>';
 var usb_hfs_mod = '<% nvram_get("usb_hfs_mod"); %>';
-disk_list_array = { "info" : ["<#1736#>", "disk.asp"], "health" : ["<#1729#>", "disk_utility.asp"], "format" : ["<#1647#>", "disk_format.asp"]};
+disk_list_array = { "info" : ["<#1743#>", "disk.asp"], "health" : ["<#1736#>", "disk_utility.asp"], "format" : ["<#1652#>", "disk_format.asp"]};
 if(!parent.diskUtility_support) {
 delete disk_list_array.health;
 delete disk_list_array.format;
@@ -133,7 +133,7 @@ document.form.submit();
 <table width="95%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="table1px">
 <tr>
 <td style="padding:5px 10px 0px 15px;">
-<p class="formfonttitle_nwm"><#2724#>:</p>
+<p class="formfonttitle_nwm"><#2734#>:</p>
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px;line-height:20px; color:#FFFFFF;" id="disk_model_name"></p>
 <div style="margin-top:5px;" class="line_horizontal"></div>
 </td>
@@ -142,36 +142,36 @@ document.form.submit();
 <table id="mounted_item1" width="95%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="table1px">
 <tr>
 <td style="padding:5px 10px 0px 15px;">
-<p class="formfonttitle_nwm"><#1415#>:</p>
+<p class="formfonttitle_nwm"><#1420#>:</p>
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px;line-height:20px; color:#FFFFFF;" id="disk_avail_size"></p>
 <div style="margin-top:5px;" class="line_horizontal"></div>
 </td>
 </tr>
 <tr>
 <td style="padding:5px 10px 0px 15px;">
-<p class="formfonttitle_nwm"><#3273#>:</p>
+<p class="formfonttitle_nwm"><#3284#>:</p>
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px;line-height:20px; color:#FFFFFF;" id="disk_total_size"></p>
 <div style="margin-top:5px;" class="line_horizontal"></div>
 </td>
 </tr>
 <tr id="mediaserver_hyperlink">
 <td style="padding:10px 15px 0px 15px;;">
-<p class="formfonttitle_nwm" style="float:left;width:138px;"><#775#>:</p>
-<input type="button" class="button_gen" onclick="goUPnP();" value="<#1511#>" >
+<p class="formfonttitle_nwm" style="float:left;width:138px;"><#776#>:</p>
+<input type="button" class="button_gen" onclick="goUPnP();" value="<#1516#>" >
 <div style="margin-top:5px;" class="line_horizontal"></div>
 </td>
 </tr>
 <tr id="aidisk_hyperlink">
 <td height="50" style="padding:10px 15px 0px 15px;">
-<p class="formfonttitle_nwm" style="float:left;width:138px;"><#988#>:</p>
-<input type="button" class="button_gen" onclick="gotoAidisk();" value="<#1511#>" >
+<p class="formfonttitle_nwm" style="float:left;width:138px;"><#989#>:</p>
+<input type="button" class="button_gen" onclick="gotoAidisk();" value="<#1516#>" >
 <div style="margin-top:5px;" class="line_horizontal"></div>
 </td>
 </tr>
 <tr id="dmLink" style="display:none;">
 <td height="50" style="padding:10px 15px 0px 15px;">
-<p class="formfonttitle_nwm" style="float:left;width:138px;"><#1772#>:</p>
-<input type="button" class="button_gen" onclick="gotoDM();" value="<#1511#>" >
+<p class="formfonttitle_nwm" style="float:left;width:138px;"><#1779#>:</p>
+<input type="button" class="button_gen" onclick="gotoDM();" value="<#1516#>" >
 <div style="margin-top:5px;" class="line_horizontal"></div>
 </td>
 </tr>
@@ -179,9 +179,9 @@ document.form.submit();
 <table width="95%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="table1px">
 <tr>
 <td height="50" style="padding:10px 15px 0px 15px;">
-<p class="formfonttitle_nwm" style="float:left;width:138px; "><#3040#>:</p>
-<input id="show_remove_button" class="button_gen" type="button" class="button" onclick="remove_disk_call();" value="<#1512#>">
-<div id="show_removed_string" style="display:none;"><#3038#></div>
+<p class="formfonttitle_nwm" style="float:left;width:138px; "><#3051#>:</p>
+<input id="show_remove_button" class="button_gen" type="button" class="button" onclick="remove_disk_call();" value="<#1517#>">
+<div id="show_removed_string" style="display:none;"><#3049#></div>
 <div style="margin-top:5px;" class="line_horizontal"></div>
 </td>
 </tr>
@@ -189,7 +189,7 @@ document.form.submit();
 <table width="95%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="table1px" id="reduce_usb3_table" style="display:none">
 <tr>
 <td height="50" style="padding:10px 15px 0px 15px;">
-<p class="formfonttitle_nwm" style="float:left;width:138px; " onmouseover="parent.overHint(24);" onmouseout="parent.nd();"><#3059#></p>
+<p class="formfonttitle_nwm" style="float:left;width:138px; " onmouseover="parent.overHint(24);" onmouseout="parent.nd();"><#3070#></p>
 <form method="post" name="form" action="/start_apply.htm" target="hidden_frame">
 <input type="hidden" name="current_page" value="/">
 <input type="hidden" name="next_page" value="/">
@@ -209,7 +209,7 @@ document.form.submit();
 </tr>
 <tr id="smbv1_hint">
 <td height="50" style="padding:10px 15px 0px 15px;">
-<#915#><br><#3042#>
+<#916#><br><#3053#>
 </td>
 </tr>
 <tr>
@@ -223,7 +223,7 @@ document.form.submit();
 </table>
 <div id="unmounted_refresh" style="padding:5px 0px 5px 25px; display:none">
 <ul style="font-size:11px; font-family:Arial; padding:0px; margin:0px; list-style:outside; line-height:150%;">
-<li><#1752#><a href="/" target="_parent"><#1753#></a><#1754#></li>
+<li><#1759#><a href="/" target="_parent"><#1760#></a><#1761#></li>
 </ul>
 </div>
 <form method="post" name="diskForm" action="">

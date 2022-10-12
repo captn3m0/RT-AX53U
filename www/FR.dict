@@ -128,6 +128,7 @@ De plus, afin d\'activer la fonction de contrôle à distance de IFTTT™ par l\
 ASUS s\'engage à protéger et à respecter la confidentialité de vos données. Rendez-vous dans Paramètres avancés > Administration > Confidentialité pour activer ou désactiver le partage des informations produit avec ASUS à tout moment. Veuillez consulter la <a id="eula_url" style="font-weight: bolder;text-decoration:underline;cursor:pointer;" target="_blank">Politique de confidentialité d\'ASUS</a> pour plus d\'informations sur la manière dont ASUS protège vos données personnelles.
 J\'ai plus de 16 ans.
 Veuillez confirmer que vous avez plus de 16 ans.
+Veuillez confirmer que Conditions d'utilisation ASUS.
 Pour %1$@ et la connexion à distance (ASUS Router APP/Lyra APP/AiCloud/AiDisk):
 Veuillez noter que vos informations, notamment le nom de votre modèle de produit, la version du firmware, le statut internet, l'adresse IP, l'adresse MAC et le nom DDNS, seront collectées par ASUS via les fonctions ci-dessus.
 Si vous souhaitez désactiver le partage de vos informations avec ASUS via les fonctions ci-dessus, cliquez sur <span style="font-weight: bold;">[<Retirer]</span> ci-dessous. Cependant, veuillez noter que de telles fonctionnalités/fonctions peuvent ne pas fonctionner si vous décidez de ne pas partager vos informations avec ASUS.
@@ -139,12 +140,12 @@ Si vous souhaitez ensuite activer les fonctions d'Alexa™ et d'IFTTT™, vous d
 Vous n'êtes pas en mesure de terminer la procédure de retrait sans connexion internet. Veuillez réessayer après vous être connecté à Internet.
 Vous n'êtes pas en mesure de terminer la procédure de retrait car votre connexion internet est instable. Veuillez réessayer ultérieurement.
 En utilisant ASUS AiProtection, vous acceptez la
-En utilisant AiProtection, le dispositif d\'analyse du trafic, l\'analyseur d\'applications, le service QoS adaptatif/Game Boost, l\'historique internet, vous acceptez le <a id="eula_url" style="text-decoration:underline;" target="_blank">Contrat de licence de l\'utilisateur final de Trend Micro</a>.
-Veuillez noter que vos informations seront collectées par Trend Micro via AiProtection, le dispositif d\'analyse du trafic, l\'analyseur d\'applications, le service QoS adaptatif et l\'historique internet. Vous reconnaissez et acceptez également qu\'ASUS n\'est en aucun cas pas tenu responsable de l\'accord entre vous et Trend Micro ni du contenu du service fourni par Trend Micro. Si vous avez des questions sur la manière dont Trend Micro collecte, traite et utilise vos informations ci-dessus, Veuillez vous reporter à la déclaration relative à la confidentialité publiée par Trend Micro ou contacter Trend Micro pour plus de détails.
+En utilisant AiProtection, Contrôle parental( Filtrage de sites et d'applications ), le dispositif d\'analyse du trafic, l\'analyseur d\'applications, le service QoS adaptatif/Game Boost, l\'historique internet, vous acceptez le <a id="eula_url" style="text-decoration:underline;" target="_blank">Contrat de licence de l\'utilisateur final de Trend Micro</a>.
+Veuillez noter que vos informations seront collectées par Trend Micro via AiProtection, Contrôle parental( Filtrage de sites et d'applications ), le dispositif d\'analyse du trafic, l\'analyseur d\'applications, le service QoS adaptatif et l\'historique internet. Vous reconnaissez et acceptez également qu\'ASUS n\'est en aucun cas pas tenu responsable de l\'accord entre vous et Trend Micro ni du contenu du service fourni par Trend Micro. Si vous avez des questions sur la manière dont Trend Micro collecte, traite et utilise vos informations ci-dessus, Veuillez vous reporter à la déclaration relative à la confidentialité publiée par Trend Micro ou contacter Trend Micro pour plus de détails.
 Si vous souhaitez désactiver le partage de vos informations avec Trend Micro via les fonctions ci-dessus, accédez à: Interface utilisateur du routeur Web> Paramètres avancés> Administration> Confidentialité.
 <a id="tm_eula_url" style="text-decoration:underline;" target="_blank">TrendMicro Privacy Policy</a>
 <a id="tm_disclosure_url" style="text-decoration:underline;" target="_blank">Privacy and Personal Data Collection Disclosure</a>
-Pour AiProtection, le dispositif d'analyse du trafic, l'analyseur d'applications, le service QoS adaptatif/Game Boost, l'historique internet:
+Pour AiProtection, Contrôle parental( Filtrage de sites et d'applications ), le dispositif d'analyse du trafic, l'analyseur d'applications, le service QoS adaptatif/Game Boost, l'historique internet:
 Veuillez noter que vos informations seront collectées par Trend Micro via les fonctions ci-dessus.
 Si vous souhaitez désactiver le partage de vos informations avec Trend Micro via les fonctions suivantes, cliquez sur <span style="font-weight: bold;">[<Retirer]</span> ci-dessous. Cependant, veuillez noter que de telles fonctionnalités/fonctions peuvent ne pas fonctionner si vous décidez de ne pas partager vos informations avec Trend Micro.
 Êtes-vous sûr de vouloir vous retirer ?
@@ -271,7 +272,7 @@ Echec de la mise à jour du firmware. Ceci peut provenir d'une image incorrecte 
 La mise à jour du firmware est en cours. Veuillez patienter environ 3 minutes.
 La mise à jour de votre firmware est terminée. Fermez cette fenêtre et accédez à nouveau à votre routeur AiMesh.
 La Mise à jour du microcode est terminée. Veuillez redémarrer manuellement votre RT-AX53U.
-To comply with regulatory amendments, we have modified our certification rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
+To comply with regulatory amendments, we have modified our certificate rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
 Vous avez saisi un mot de passe incorrect à 5 reprises. Vous allez être déconnecté.
 2022 ASUSTeK Computer Inc. Tous droits réservés.
 Les paramètres de configuration conservent leurs réglages pendant le processus de mise à jour du firmware.
@@ -998,13 +999,14 @@ Si vous modifiez votre votre clé pré-partagée WPA, la connectivité WiFi de v
 Si vous modifiez votre SSID, la connectivité WiFi de votre nœud AiMesh sera affectée.
 Modifier votre code pays peut affecter votre système AiMesh.
 Si vous désactivez la fonctionnalité Radio, la connectivité WiFi de votre routeur AiMesh sera affectée.
-Si vous masquez votre SSID, la connectivité WiFi de votre routeur AiMesh sera affectée.
+Le SSID caché ne contribue pas à sécuriser votre réseau Wi-Fi et peut entraîner des problèmes de connexion.
 Si vous masquez votre SSID, la fonction WPS sera désactivée et la connectivité WiFi de votre routeur AiMesh sera affectée.
 Si vous désactivez le serveur DHCP, la connectivité WiFi de votre routeur AiMesh sera affectée.
 Compte tenu de la compatibilité du système AiMesh et des terminaux, nous vous suggérons d'utiliser WPA2-Personal. Voulez-vous passer en #AUTHMODE ?\n*Si vous rencontrez des problèmes de connexion, veuillez passer à WPA2-Personal ou consulter le(s) fabricant(s) pour obtenir plus d'informations.
 Pour assurer la connexion de votre système AiMesh et de vos appareils terminaux, veuillez lire ceci :<a id="wpa3FaqLink">FAQ</a> avant de passer à WPA3-Personal.
 Vous utilisez actuellement WPA3-personal. Pour créer un système AiMesh, votre méthode d'authentification sera modifiée en WPA2/WPA3-personal. Voulez-vous continuer ?
 You can read this <a id='wpa3FaqLink'>FAQ</a> for more information.
+Pour plus de détails, rendez-vous sur <a style='font-weight: bolder;text-decoration: underline;' href='' target='_blank'>cette FAQ</a>
 Advanced ASUS AiMesh est une nouvelle fonctionnalité innovante pour routeur qui connecte plusieurs routeurs ASUS entre eux et crée un réseau WiFi pour toute la maison.
 En savoir plus sur ASUS AiMesh
 Trouver un nœud AiMesh
@@ -1090,6 +1092,9 @@ Balcon
 Salle de réunions
 Personnalisé
 Garage
+Premier étage
+Salle de jeu
+Gymnase
 Astuces hors ligne
 Assurez-vous que votre nœud AiMesh est sous tension.
 Redémarrez votre nœud AiMesh et réessayez.
@@ -1684,9 +1689,11 @@ Certificat HTTPS / SSL
 Certificat gratuit de Let's Encrypt
 J'accepte les conditions de Let's Encrypt
 Importer votre propre certificat
-Téléchargez un certificat émis par une autorité de certification ici. Votre clé privée et votre certificat SSL sont nécessaires.
+Téléchargez un certificat émis par une autorité de certificate ici. Votre clé privée et votre certificat SSL sont nécessaires.
 Clé privée
 Les clés privées ne peuvent pas être protégées par une phrase secrète.
+Mise à jour IPv6
+Si l'environnement réseau du client utilise une adresse réseau IPv6, l'activation de cette fonction permettra de résoudre le domaine vers une adresse réseau IPv6 en premier lieu lors de l'accès à un appareil distant.
 Certificat SSL
 Conditions du service
 Transfer ASUS DDNS name
@@ -2028,11 +2035,11 @@ Activez le pare-feu pour protéger votre réseau local contre les attaques malve
 <b>Liste noire :</b> lors de la période définie, les client faisant parti de la liste noire ne pourront pas utiliser les services réseau spécifiés. Une fois la période écoulée, les clients de cette liste ainsi que tous les autres clients du réseau local pourront accéder à Internet ou à tout autre service nécessitant l'accès à Internet.<br><b>Liste blanche :</b> lors de la période définie, les client faisant parti de la liste blanche ne peut utiliser que les services spécifiés. Une fois la période écoulée, les clients de cette liste ainsi que tous les autres clients du réseau ne pourront pas accéder à Internet ou à tout autre service nécessitant l'accès à Internet.
 <b>REMARQUE :</b> si vous définissez un sous-réseau pour la liste blanche, les adresses IP ne faisant pas parti de ce sous-réseau ne pourront pas accéder à Internet ou à tout autre service nécessitant l'accès à Internet.
 Le filtrage d'adresses MAC permet d'autoriser ou de bloquer l'accès de périphériques réseau en fonction de leur identifiant MAC.<p>Vous pouvez définir le filtrage MAC en mode Accepter ou Rejeter.<p>En mode Bloquer, les dispositifs de la liste ne peuvent pas accéder au réseau.<p>En mode Autoriser, seuls les dispositifs de la liste peuvent accéder au réseau.
-Une attaque de \"Déni de service\" se caractérise par une tentative de déni à des utilisateurs légitimes d'utiliser un service ou une ressource du réseau.<p>L'activation de cette fonction aide à protéger le routeur contre les attaques de déni de service mais a pour effet d'augmenter la charge de travail du routeur.
+L'activation de cette fonction aide à protéger le routeur contre les attaques de DoS (Denial- of-Service) déni de service mais a pour effet d'augmenter la charge de travail du routeur.
 Activer la protection DoS
 La désactivation du pare-feu mettra fin à toutes les fonctions associées.
 Activer le pare-feu
-Activer le IPv4 Pare-feu
+Activer le IPv4 règles de pare-feu entrant
 Pare-feu IPv4
 Si vous utilisez le port 20:21 pour votre serveur FTP, celui-ci entrera en conflit avec le serveur FTP du RT-AX53U.
 Activer le filtrage par mots clés
@@ -2140,6 +2147,9 @@ Updated
 Un nouveau firmware est disponible.
 Chargement de la note de mise à jour ; veuillez patienter...
 Impossible de trouver la note de version.
+Retour en arrière
+Choisissez une version du firmware
+Sélecteur de retour en arrière du firmware
 Accélération de jeu
 Game Boost
 Accélération de jeu triple niveau
@@ -2878,6 +2888,7 @@ Créer un nouveau client RADIUS
 Tableau de groupe
 Nom de la partition
 Pour la gamme de port source ou de destination vous pouvez au choix : a) entrer un port spécifique, tel que \"95\"; ou b) entrer une gamme de port, telle que \"103:315\", \">100\", or \"<65535\".
+Port de jeu
 Mappage de port
 Le Mappage de port supporte l'interface IPTV WAN pour un port spécifique du réseau local. Sélectionnez le port réseau souhaité puis cliquez sur Appliquer.
 Activer le mappage de port
@@ -3322,6 +3333,7 @@ Atlantic Time (Canada)
 La Paz
 Caracas
 Santiago
+Asuncion
 Newfoundland
 Brasilia
 Buenos Aires, Georgetown
@@ -3351,7 +3363,7 @@ Kaliningrad
 Athens
 Jerusalem
 Harare, Pretoria
-Kiev
+Kyiv
 Moscow, St. Petersburg
 Volgograd
 Kuwait, Riyadh
@@ -3413,7 +3425,7 @@ Priorité de transfert
 Données envoyées/Sec
 Données envoyées
 Configurer le serveur iTunes et UPnP médias.
-Le RT-AX53U supporte les standards UPnP. Vous pouvez les activer et permettre aux périphériques UPnP, comme par exemple une playstation 3 ou une lecteur multimédia numérique, d'accéder aux fichiers multimédia contenus dans le disque USB.
+Configurer <a id='upnp_link'>UPnP, iTunes</a>, <a id='ftp_link'>FTP</a> et <a id='samba_link'>Emplacement réseau (Samba)</a>.
 Keyword URL
 Veuillez consulter la page Applications USB.
 Vérification du disque
@@ -3491,8 +3503,8 @@ Comment configurer le client VPN IPSec
 Activer le serveur OpenVPN
 Activer le serveur PPTP VPN
 Exporter le fichier de configuration OpenVPN
-Exporter certification actuelle
-Importer certification initiale
+Exporter certificate actuelle
+Importer certificate initiale
 Le serveur VPN ne prend en charge qu'un maximum de 10 clients.
 10 clients maximum
 Mode
@@ -3500,7 +3512,7 @@ Support de Favoris réseau (Samba)
 Annoncer le DNS aux clients
 Authentification
 Authentification par nom d'utilisateur / mot de passe
-Authorization Mode fixes on TLS
+Authentication Mode fixes on TLS
 Authentification HMAC
 Authentification HMAC supplémentaire
 Autorisation client <-> client
@@ -3509,15 +3521,15 @@ N'autoriser que les clients spécifiés
 Compression
 IP/Routing conflict
 Configuration personnalisée
-Le RT-AX53U génèrera un fichier .ovpn à partir de la clé de l'Autorité de Certification. Vous pouvez fournir le fichier .ovpn ainsi qu'un nom d'utilisateur et mot de passe à tous les clients se connectant au serveur OpenVPN.
+Le RT-AX53U génèrera un fichier .ovpn à partir de la clé de l'Autorité de Certificate. Vous pouvez fournir le fichier .ovpn ainsi qu'un nom d'utilisateur et mot de passe à tous les clients se connectant au serveur OpenVPN.
 Pour modifier les paramètres du serveur OpenVPN, allez dans Paramètres Avancés
 Vous pouvez modifier  les paramètres par défaut du serveur OpenVPN afin de fournir un fichier .ovpn dédié à un type de connexion spécifique.
 If your WAN IP address is dynamic, please click <a href="http://router.asus.com/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
 Allocation DHCP
 Chiffrage
 Routing conflict! <p>Please check the client's IP address settings from the Paramètres avancés page or check the routing table on System log.
-Certification Authentication / Server certification / Server Key field error! <p>Please check the Keys and Certification contents on the Paramètres avancés page.
-Diffle Hellman parameters field error! <p>Please check the Keys and Certification contents on the Paramètres avancés page.
+Certificate Authentication / Server certificate / Server Key field error! <p>Please check the Keys and Certificate contents on the Paramètres avancés page.
+Diffle Hellman parameters field error! <p>Please check the Keys and Certificate contents on the Paramètres avancés page.
 OpenVPN server daemon failed to start. <p>Please check your device environment or contents on the Paramètres avancés page.
 Pour utiliser votre propre clé, cliquez sur le lien jaune et modifier les paramètres.
 Rendez-vous dans l'<a style="font-weight: bolder;text-decoration:underline;" class="hyperlink" href="Main_LogStatus_Content.asp">Historique du système</a> pour consulter les messages d'erreur liés au serveur OpenVPN.
@@ -3525,7 +3537,7 @@ Avant de configurer les paramètres avancés du serveur OpenVPN, veillez à ce q
 Initialisation des paramètres de serveur OpenVPN. Veuillez patienter quelques minutes le temps que le serveur puisse être configuré.
 Type d'interface
 Autorisant
-Autorité de certification
+Autorité de certificate
 Paramètres Diffie-Hellman
 Ne copiez que le contenu du bloc
 (incluant ces deux lignes).
@@ -3601,12 +3613,12 @@ Activer le débogage
 Activer le mode de débogage vous permet de surveiller les journaux détaillés de votre connexion VPN IPSec. Désactivez ce mode et effacez vos journaux de débogage de votre système une fois que vous avez terminé.
 Issue from
 Issue to
-Renouveler la certification
-Un changement de réseau a été détecté, veuillez renouveler votre certification.
-Pour des raisons de sécurité, les certificats sont valables six ans. Vous devez cliquer sur le bouton de renouvellement si le certificat a expiré ou si votre réseau a changé. Veuillez télécharger la nouvelle certification et l'installer dans votre client VPN après avoir cliqué sur le bouton de renouvellement.
+Renouveler la certificate
+Un changement de réseau a été détecté, veuillez renouveler votre certificate.
+Pour des raisons de sécurité, les certificats sont valables six ans. Vous devez cliquer sur le bouton de renouvellement si le certificat a expiré ou si votre réseau a changé. Veuillez télécharger la nouvelle certificate et l'installer dans votre client VPN après avoir cliqué sur le bouton de renouvellement.
 Pour Windows
 Pour mobile
-Mise à jour de la certification réussie, téléchargez la nouvelle certification et installez-la dans votre client VPN.
+Mise à jour de la certificate réussie, téléchargez la nouvelle certificate et installez-la dans votre client VPN.
 Échec de mise à jour, veuillez réessayer.
 Tous vos clients VPN se reconnecteront après avoir cliqué sur Appliquer. Voulez-vous vraiment continuer ?
 Version IKE prise en charge
@@ -4089,7 +4101,7 @@ Veuillez désactiver le profil avant de le supprimer.
 Toutes les exceptions de politique définies pour un profil VPN seront supprimées lors de la suppression du profil en question. Êtes-vous sûr de vouloir supprimer le profil ?
 Êtes-vous sûr de vouloir supprimer ce profil ?
 La suppression de la politique client dans la liste des exceptions supprimera également la liaison d'adresse IP du client avec le serveur DHCP. Êtes-vous sûr de vouloir supprimer ?
-<a id="faq1" href="" target="_blank" style="font-weight:bolder;text-decoration:underline;">Multiple VPN Connection FAQ.</a>
+<a id="faq1" href="" target="_blank" style="font-weight:bolder;text-decoration:underline;">FAQ VPN Fusion.</a>
 Configuration en tant que connexion par défaut pour la politique cible impossible.
 Beta test only
 You can also select [Cancel], the device will automatically start downloading the update during the night time.
@@ -4129,6 +4141,7 @@ GeForce Now
 Sélectionnez GeForce Now pour donner la priorité aux dispositifs de jeu GeForce Now pour une expérience de jeu améliorée et plus rapide.
 LED On/Off
 The LED on/off control is used to turn off all LEDs includes Aura light.
+To enable Aura RGB, LED must remain on. Please turn on LED by pressing hardware button on the router for 3 seconds or enable it via web/app interface.
 Événement
 Le système détecte les événements suivants et déclenche différents effets LED.
 En cas d’activation de Game Boost, vous pouvez voir la barre LED utiliser un effet de respiration rouge.
