@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#838#> - TR-069 Client</title>
+<title><#842#> - TR-069 Client</title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script language="JavaScript" type="text/javascript" src="/state.js"></script>
@@ -46,7 +46,7 @@ function validForm(){
 if (document.form.tr_enable[0].checked &&
 document.form.tr_discovery.value == '0' &&
 document.form.tr_acs_url.value == "") {
-alert("<#316#>");
+alert("<#320#>");
 document.form.tr_acs_url.focus();
 document.form.tr_acs_url.select();
 return false;
@@ -155,7 +155,7 @@ document.getElementById("cert_panel").style.marginLeft = blockmarginLeft+"px";
 </table>
 <div style="margin-top:5px;width:100%;text-align:center;">
 <input class="button_gen" type="button" onclick="cancel_cert_panel();" value="<#199#>">
-<input class="button_gen" type="button" onclick="save_cert();" value="<#1660#>">
+<input class="button_gen" type="button" onclick="save_cert();" value="<#1666#>">
 </div>
 </td>
 </tr>
@@ -197,7 +197,7 @@ document.getElementById("cert_panel").style.marginLeft = blockmarginLeft+"px";
 <tr>
 <td bgcolor="#4D595D" valign="top" >
 <div>&nbsp;</div>
-<div class="formfonttitle"><#406#> - TR-069</div>
+<div class="formfonttitle"><#410#> - TR-069</div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
@@ -228,7 +228,7 @@ document.getElementById("cert_panel").style.marginLeft = blockmarginLeft+"px";
 </td>
 </tr>
 <tr>
-<th><#3468#></th>
+<th><#3494#></th>
 <td>
 <input type="text" maxlength="32" name="tr_username" class="input_15_table" value="<% nvram_get("tr_username"); %>" onKeyPress="return is_string(this,event);" autocorrect="off" autocapitalize="off"/>
 </td>
@@ -247,7 +247,7 @@ document.getElementById("cert_panel").style.marginLeft = blockmarginLeft+"px";
 </tr>
 </thead>
 <tr>
-<th><#3468#></th>
+<th><#3494#></th>
 <td>
 <input type="text" maxlength="32" name="tr_conn_username" class="input_15_table" value="<% nvram_get("tr_conn_username"); %>" onKeyPress="return is_string(this,event);" autocorrect="off" autocapitalize="off"/>
 </td>

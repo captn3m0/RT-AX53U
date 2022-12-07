@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#838#> - <#411#></title>
+<title><#842#> - <#415#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="other.css">
@@ -43,19 +43,19 @@ $("#restoreInit").prop("checked", false);
 }
 }
 function restoreRule(_flag){
-var alert_string = "<#3081#>";
+var alert_string = "<#3107#>";
 if($('#restoreInit').prop("checked") && bwdpi_support)
-alert_string = "<#3088#>";
+alert_string = "<#3114#>";
 if(lan_ipaddr != '<% nvram_default_get("lan_ipaddr"); %>')
-alert_string += "<#3083#>\n\n".replace("192.168.1.1", '<% nvram_default_get("lan_ipaddr"); %>');
-alert_string += "<#3082#>";
+alert_string += "<#3109#>\n\n".replace("192.168.1.1", '<% nvram_default_get("lan_ipaddr"); %>');
+alert_string += "<#3108#>";
 if(confirm(alert_string)){
 document.form.action1.blur();
 if($('#restoreInit').prop("checked") && bwdpi_support)
 document.restoreform.action_mode.value = "restore_erase";
 else
 document.restoreform.action_mode.value = "Restore";
-showtext(document.getElementById("loading_block2"), "<#3055#>");
+showtext(document.getElementById("loading_block2"), "<#3081#>");
 document.getElementById('loading_block3').style.display = "none";
 showLoading();
 document.restoreform.submit();
@@ -84,18 +84,18 @@ function uploadSetting(){
 var file_obj = document.form.file;
 var file_obj_name = file_obj.value.toUpperCase();
 if(file_obj_name == ""){
-alert("<#316#>");
+alert("<#320#>");
 file_obj.focus();
 }
 else if(file_obj_name.length < 6 ||
 file_obj_name.lastIndexOf(".CFG") < 0 ||
 file_obj_name.lastIndexOf(".CFG") != (file_obj_name.length)-4){
-alert("<#3093#>");
+alert("<#3119#>");
 file_obj.focus();
 }
 else{
 disableCheckChangedStatus();
-showtext(document.getElementById("loading_block2"), "<#3079#>");
+showtext(document.getElementById("loading_block2"), "<#3105#>");
 document.getElementById('loading_block3').style.display = "none";
 document.form.submit();
 }
@@ -115,9 +115,9 @@ document.getElementById('loading_block1').style.display = "none";
 document.getElementById('loading_block2').style.display = "none";
 document.getElementById('loading_block3').style.display = "";
 /*if(findasus_support){
-document.getElementById('loading_block3').innerHTML = "<div><#433#></div>";
+document.getElementById('loading_block3').innerHTML = "<div><#437#></div>";
 }else{*/
-document.getElementById('loading_block3').innerHTML = "<div><#366#>.<#345#></div>";
+document.getElementById('loading_block3').innerHTML = "<div><#370#>.<#349#></div>";
 }
 },
 success: function(){
@@ -152,7 +152,7 @@ document.form.file.click();
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center">
 <tr>
 <td>
-<div class="drword" id="drword"><#367#> <#364#>...
+<div class="drword" id="drword"><#371#> <#368#>...
 <br/>
 <br/>
 </div>
@@ -191,24 +191,24 @@ document.form.file.click();
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#406#> - <#411#></div>
+<div class="formfonttitle"><#410#> - <#415#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#3092#></div>
+<div class="formfontdesc"><#3118#></div>
 <table width="100%" border="1" align="center" cellpadding="6" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
 <th width="25%" align="right">
-<a id="factorydefault_hint" class="hintstyle" href="javascript:void(0);" onclick="openHint(19,4)"><#3086#></a>
+<a id="factorydefault_hint" class="hintstyle" href="javascript:void(0);" onclick="openHint(19,4)"><#3112#></a>
 </th>
 <td colspan = "4">
 <div style="float:left;">
-<input class="button_gen" onclick="restoreRule('restore');" type="button" value="<#1664#>" name="action1" />
+<input class="button_gen" onclick="restoreRule('restore');" type="button" value="<#1670#>" name="action1" />
 </div>
 <div id="restoreInit_div">
 <div style="float:left;margin-left:5px;">
 <input type="checkbox" id="restoreInit">
 </div>
 <div style="float:left;width:65%;">
-<span><label for="restoreInit"><#3089#></label></span>
+<span><label for="restoreInit"><#3115#></label></span>
 </div>
 </div>
 <input type="hidden" name="wl_gmode_protection_x" value="<% nvram_get("wl_gmode_protection_x"); %>" />
@@ -216,11 +216,11 @@ document.form.file.click();
 </tr>
 <tr>
 <th align="right" style="border-bottom:none">
-<a class="hintstyle" href="javascript:void(0);" onclick="openHint(19,2)"><#3091#></a>
+<a class="hintstyle" href="javascript:void(0);" onclick="openHint(19,2)"><#3117#></a>
 </th>
 <td>
 <div style="float:left;display:table-cell">
-<input class="button_gen" onclick="saveSetting('Router');" type="button" value="<#3091#>" name="action2" />
+<input class="button_gen" onclick="saveSetting('Router');" type="button" value="<#3117#>" name="action2" />
 </div>
 <div style="display:table-cell">
 <div id="remove_passwd_field" style="display:table-row">
@@ -228,7 +228,7 @@ document.form.file.click();
 <input id="remove_passwd" type="checkbox">
 </div>
 <div style="float:left;width:80%;">
-<span><label for="remove_passwd"><#3096#></span></label>
+<span><label for="remove_passwd"><#3122#></span></label>
 </div>
 </div>
 <div id="transfer_ddns_field" style="display:table-row">
@@ -236,7 +236,7 @@ document.form.file.click();
 <input id="transfer_ddns" type="checkbox">
 </div>
 <div style="float:left;width:80%;">
-<span><label for="transfer_ddns"><#1698#></span></label>
+<span><label for="transfer_ddns"><#1704#></span></label>
 </div>
 </div>
 </div>
@@ -244,14 +244,14 @@ document.form.file.click();
 </tr>
 <tr>
 <th align="right">
-<a class="hintstyle" href="javascript:void(0);" onclick="openHint(19,3)"><#3095#></a>
+<a class="hintstyle" href="javascript:void(0);" onclick="openHint(19,3)"><#3121#></a>
 </th>
 <td colspan = "4">
 <div style="margin-left:-10px;">
 <table>
 <tr>
 <td style="border:0px">
-<input type="button" class="button_gen" onclick="selectSetting();" value="<#1669#>"/>
+<input type="button" class="button_gen" onclick="selectSetting();" value="<#1675#>"/>
 </td>
 <td style="display:none;">
 <input type="file" name="file" class="input" style="color:#FFCC00;"/>

@@ -100,7 +100,7 @@ Najnovejša različica
 Nadrejena dostopna točka je morda izklopljena. Preverite znova.
 Povezave ni bilo mogoče vzpostaviti. Geslo ni pravilno. Kliknite [Znova preglej], da izberete drugo omrežje.
 Brezžična povezava je bila uspešno vzpostavljena.
-Znova zaženite brskalnik. V naslovno vrstico za URL vnesite »http://router.asus.com/«, da odprete stanje povezave ponavljalnika.
+Znova zaženite brskalnik. V naslovno vrstico za URL vnesite »http://ZVDOMAIN_NAMEVZ/«, da odprete stanje povezave ponavljalnika.
 Nastavitve naslova IP so bile uspešno posodobljene. Preusmerjeni boste v spletni grafični uporabniško vmesnik usmerjevalnika RT-AX53U.
 Izberite drugo omrežje
 Spremenite omrežje, s katerim bo usmerjevalnik RT-AX53U vzpostavila povezavo.
@@ -301,6 +301,10 @@ Izberite ta strežnik DNS, da omogočite hiter in zaseben način za brskanje po 
 Izberite ta strežnik DNS, da blokirate zlonamerno vsebino
 Izberite ta strežnik DNS, da blokirate zlonamerno vsebino in vsebino za odrasle
 Seznam DNS-jev
+Blokiranje oglasov
+Družina
+Hiter DNS
+Upoštevanje zasebnosti
 Temu usmerjevalniku omogoča, da pri ponudniku internetnih storitev samodejno pridobi naslov IP strežnika DNS.
 Samodejno vzpostavi povezavo s strežnikom DNS
 Če vaša povezava z omrežjem WAN zahteva statični naslov IP, vnesite naslov IP prehoda v to polje.
@@ -336,9 +340,9 @@ Vnesite vrednost od
 za
 SSID ne sme vsebovati znaka »
 «.
-Ta niz se ne sme začeti s/z:
+Prvi znak ne sme vsebovati:
 Ta niz ne sme vsebovati:
-This string cannot end with:
+Zadnji znak ne sme vsebovati:
 Vnesite pravilen ključ WEP.
 Ključ v predhodni skupni rabi lahko vsebuje največ 64 znakov.
 Naslov IP lokalnega omrežja usmerjevalnika RT-AX53U je
@@ -452,7 +456,7 @@ Prenesite <a href='http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/
 Preverite, ali ste iz priključka WAN izključili omrežni kabel.
 Usmerjevalnik RT-AX53U v načinu ponavljalnika vzpostavi povezavo z obstoječim brezžičnim omrežjem, da poveča pokritost z brezžičnim signalom. V tem načinu so požarni zid, skupna raba naslovov IP in funkcije NAT onemogočeni.
 Naslov IP lokalnega omrežja usmerjevalnika RT-AX53U je morda spremenjen.
-Zaprite to okno in znova obiščite spletno mesto http://router.asus.com.
+Zaprite to okno in znova obiščite spletno mesto http://ZVDOMAIN_NAMEVZ.
 Način repetitorja
 Brezžični usmerjevalnik RT-AX53U v načinu »Hitra pot 2.4 GHz« vzpostavi povezavo z obstoječim 2.4 GHz kanalom omrežja WiFi in poveča pokritost s signalom brezžičnega omrežja samo s 5 GHz kanalom omrežja WiFi.
 Hitra pot 2.4 GHz
@@ -711,7 +715,7 @@ Radio
 oddaljeno
 Znova vpišite novo prijavno geslo
 Uporabite spodnje podatke, da vzpostavite povezavo z omrežjem WiFi.
-Obiščite spletno mesto <a href='http://router.asus.com' target='_blank' style='text-decoration:underline'>router.asus.com</a> in se prijavite napravo.
+Obiščite spletno mesto <a href='http://ZVDOMAIN_NAMEVZ' target='_blank' style='text-decoration:underline'>ZVDOMAIN_NAMEVZ</a> in se prijavite napravo.
 Račun usmerjevalnika
 Ime za prijavo v usmerjevalnik
 Prijavno geslo usmerjevalnika
@@ -838,6 +842,7 @@ Ko priključite usmerjevalnik na modem, kliknite »POJDI«, da zaženete čarovn
 V naslednjem koraku nastavite ime za prijavo in geslo za varnost.
 Brezžični usmerjevalnika RT-AX53U družbe ASUS
 RT-AX53U
+ZVDOMAIN_NAMEVZ
 Konfigurirano
 Ime brezžičnega omrežja
 brezžični router
@@ -927,10 +932,10 @@ Za video ločljivosti 720p priporočamo 15 Mb/s ali hitrejšo povezavo.
 Za pretočni prenos videa v visoki ločljivosti 1080p priporočamo 30 Mb/s ali hitrejšo povezavo.
 Hitrost nalaganja v internet se lahko razlikujejo glede na vašega ponudnika internetnih storitev in druge dejavnike. Če ne veste, kakšno hitrost internetne povezave imate, se obrnite na ponudnika internetnih storitev ali uporabite spletni preskus pasovne širine v računalniku, ki je priključen na usmerjevalnik ASUS.
 Seznam v oblaku
-Do diska v oblaku lahko dostopate na spletnem mestu <a id="cloud_url" style="font-weight: bolder;text-decoration: underline;" href="https://router.asus.com" target="_blank">https://router.asus.com</a>.
+Do diska v oblaku lahko dostopate na spletnem mestu <a id="cloud_url" style="font-weight: bolder;text-decoration: underline;" href="https://ZVDOMAIN_NAMEVZ" target="_blank">https://ZVDOMAIN_NAMEVZ</a>.
 Do diska v oblaku lahko dostopate na tem naslovu URL:
 Če želite spremeniti ime DDNS, kliknite <a style="font-weight: bolder;text-decoration: underline;" href="/Advanced_ASUSDDNS_Content.asp?af=DDNSName" target="_blank">tukaj</a>.
-Do diska v oblaku lahko dostopate na spletnem mestu <a style="font-weight: bolder;text-decoration: underline;" href="https://router.asus.com" target="_blank">https://router.asus.com</a>.
+Do diska v oblaku lahko dostopate na spletnem mestu <a style="font-weight: bolder;text-decoration: underline;" href="https://ZVDOMAIN_NAMEVZ" target="_blank">https://ZVDOMAIN_NAMEVZ</a>.
 Za dostop do diska v oblaku v spletu se prijavite za ASUS DDNS <a style="font-weight: bolder;text-decoration: underline;" href="/Advanced_ASUSDDNS_Content.asp" target="_blank">na tej spletni strani</a>.
 Omogoča dostop do naprav za shranjevanje, ki so priključene na vrata USB, pretakanje iz njih in njihovo skupno rabo prek računalnika ali naprave, ki ima vzpostavljeno povezavo z internetom.
 Če želite ustvariti disk v oblaku, morate v ta usmerjevalnik namestiti napravo za shranjevanje USB in nato <b>vklopiti</b> disk v oblaku.
@@ -1515,6 +1520,7 @@ Onemogočeno
 Omogočeno
 Izvozi
 POJDI
+Pojdi na nastavitev
 Odstrani
 Pošlji
 Nastavitev omrežja WAN
@@ -2243,6 +2249,25 @@ gosti
 Omejitev dostopa
 Le dostop do interneta
 Uporabi isto nastavitev kot
+Poslovno omrežje
+Prilagojeno omrežje
+Nastavite varno in zaščiteno omrežje
+Hitro izdelajte gostujoče omrežje
+Omrežje IoT
+Enostavno ločite omrežje za svoje naprave IoT
+Omrežje za otroke
+Poskrbite, da bodo otroci varno dostopali do interneta
+Gostujoč portal
+Izdelajte gostujoč portal ali Wi-Fi s prijavo prek Facebooka
+Vrsta portala
+Omrežje VPN
+Vzpostavite varno internetno povezavo
+Ta profil VPN je onemogočen. Odprite stran za nastavitev strežnika VPN in ga omogočite.
+Stran za nastavitev strežnika VPN odprete tako, da spodaj kliknete »Pojdi na nastavitev«.
+Te nastavitve ne morete izbrati, če uporabljate profil, ki ga je ustvaril drug uporabnik.
+Domače omrežje
+Dodaj omrežje
+Seznam profilov
 Različica strojne opreme
 Pomoč
 V pomoči najdete nasvete in informacije o uporabi funkcij usmerjevalnika. Kliknite
@@ -2441,7 +2466,7 @@ V tem polju lahko omogočite ali onemogočite nadzornika prenosov.
 V tem polju lahko omogočite skupno rabo prenesenega gradiva z uporabniki v internetu.
 V tem polju lahko omogočite ali onemogočite UPnP.
 Data will not be able to recover once deleted, are you sure you want to clean?
-onflict with LAN IP
+Conflict with LAN IP
 Create New Policy
 Vaš IP-naslov LAN in maska podomrežja sta bila spremenjena. Vaš bazen IP-naslovov RT-AX53U je treba posodobiti. Ali želite samodejno posodobiti svoj bazen IP-naslovov?
 Nova skupina naslovov IP se ne ujema z masko podomrežja. Ali dovolite, da usmerjevalnik RT-AX53U samodejno spremeni skupino naslovov IP?
@@ -2588,7 +2613,7 @@ Največja omejitev:
 Preveri
 The version is up-to-date.
 Konfiguracija lokalnega dostopa
-Download and install SSL certificate on your browser to trust accessing your local domain “router.asus.com” with HTTPS protocol. To export certificate after applying setting.
+Download and install SSL certificate on your browser to trust accessing your local domain “ZVDOMAIN_NAMEVZ” with HTTPS protocol. To export certificate after applying setting.
 Download Certificate
 log
 Naslov IP uporabnika za prijavo:
@@ -2809,6 +2834,7 @@ ni navedeno
 Če želite omogočiti WPS, morate najprej onemogočiti skritje niza SSID.
 Opomba: Novi popravek bo redno posodobljen. Redno posodabljajte vdelano programsko opremo.
 Element obvestila
+Številka odjemalca
 Če storitev ASUS DDNS ne morete uporabljati, obiščite spletno mesto <a href="https://iplookup.asus.com/nslookup.php" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">https://iplookup.asus.com/nslookup.php</a>, da odprete naslov IP interneta za uporabo te storitve.
 OCN Virtual Connect
 OFDMA/802.11ax MU-MIMO
@@ -3524,7 +3550,7 @@ Konfiguracija po meri
 Usmerjevalnik RT-AX53U bo samodejno ustvaril datoteko .ovpn s ključem overitelja digitalnih potrdil. Datoteko .ovpn z uporabniškim imenom in geslom lahko posredujete vsem uporabnikom, ki vzpostavljajo povezavo s strežnikom OpenVPN.
 Če želite spremeniti nastavitve strežnika OpenVPN, obiščite Dodatne nastavitve
 Privzete nastavitve strežnika OpenVPN lahko spremenite tako, da zagotovite datoteko OPVN po meri za določeno vrsto povezave.
-Če je naslov IP vašega omrežja WAN dinamičen, kliknite <a href="http://router.asus.com/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">tukaj</a>, da nastavite DDNS.
+Če je naslov IP vašega omrežja WAN dinamičen, kliknite <a href="http://ZVDOMAIN_NAMEVZ/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">tukaj</a>, da nastavite DDNS.
 Dodeli iz strežnika DHCP
 Šifra šifriranja
 Spor z usmerjanjem. <p>Na strani z dodatnimi nastavitvami si oglejte nastavitve naslova IP odjemalca ali pa si oglejte tabelo za usmerjanje v dnevniku sistema.
@@ -3745,7 +3771,8 @@ Geslo za vzpostavitev povezave s strežnikom RADIUS.
 Skrivnost povezave
 Številka vrat UDP za povezavo s strežnikom RADIUS.
 Vrata strežnika
-WiFi Agile Multiband
+Hitro večpasovno omrežje WiFi
+*Če je omogočeno hitro večpasovno omrežje WiFi, mora biti omogočen tudi standard Protected Management Frames. (izbira Zmožen ali Zahtevan)
 To polje omogoči načine preverjanja pristnosti za brezžične odjemalce.
 Način preverjanja pristnosti
 Če želite zagotoviti najboljši signal brezžičnega omrežja, priporočamo, da kanal usmerjevalnika nastavite na kanal 2. Če želite kanal usmerjevalnika nastaviti na kanal 2, kliknite »V redu«. V nasprotnem primeru kliknite »Prekliči«.
@@ -4106,7 +4133,7 @@ Ni mogoče nastaviti kot privzeto za ciljni pravilnik.
 Beta test only
 You can also select [Cancel], the device will automatically start downloading the update during the night time.
 Če uporabljate kabelski modem ali modem s statičnim naslovom IP, morate poskusiti to:
-Once the new SSID is connected, go back to router.asus.com for more advanced settings.
+Once the new SSID is connected, go back to ZVDOMAIN_NAMEVZ for more advanced settings.
 Disable Web Access from WAN will not allow you to control your router via $Apps$ from Internet. Do you want to continue?
 ASUS ROUTER APP
 Alexa enabled device or IFTTT
@@ -4141,7 +4168,7 @@ GeForce Now
 Izberite možnost GeForce Now, da določite vrstni red pomembnosti igralnih naprav GeForce Now za hitrejše in boljše igralne izkušnje.
 LED On/Off
 The LED on/off control is used to turn off all LEDs includes Aura light.
-To enable Aura RGB, LED must remain on. Please turn on LED by pressing hardware button on the router for 3 seconds or enable it via web/app interface.
+Če želite omogočiti Aura RGB, mora lučka LED svetiti. Lučko LED vklopite tako, da pritisnete strojni gumb na usmerjevalniku in ga pridržite tri sekunde, ali ga omogočite v spletnem/aplikacijskem vmesniku.
 Dogodek
 Sistem bo zaznal naslednje dogodke in sprožil LED-učinke.
 Ko omogočite Game Boost, boste videli, da LED-vrstica uporablja rdeč učinek utripanja.
@@ -4209,7 +4236,7 @@ Za nadaljevanje kliknite tukaj.
 Za dodatne podrobnosti skenirajte kodo QR.
 Ali želite do strani z nastavitvijo še vedno dostopiti prek <span>protokola HTTP</span>?
 Če uporabljate protokol HTTPS, se lahko prikaže opozorilno sporočilo, ki vas lahko obvesti o težavi brskalnika z varnostnim potrdilom.
-Povezava med brskalnikom in stranjo z nastavitvijo usmerjevalnika ASUS (router.asus.com) je kljub temu opozorilnemu sporočilu varna.
+Povezava med brskalnikom in stranjo z nastavitvijo usmerjevalnika ASUS (ZVDOMAIN_NAMEVZ) je kljub temu opozorilnemu sporočilu varna.
 Tega sporočila ne prikaži več
 HTTP je relativno manj zaščiten protokol za spletni dostop. Ali želite do strani z nastavitvijo še vedno dostopiti prek protokola HTTP?
 256,1024-QAM

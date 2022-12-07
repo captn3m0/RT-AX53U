@@ -100,7 +100,7 @@ Versiune mai recentă
 Este posibil ca punctul de acces părinte să fie oprit. Verificaţi din nou.
 Conectare eşuată. Parola nu este corectă. Faceţi clic pe [Rescanare] pentru a selecta altă reţea la care să vă conectaţi.
 S-a stabilit cu succes conexiunea wireless.
-Lansaţi din nou browserul. În bara de adresă URL, introduceţi textul "http://router.asus.com/" pentru a accesa starea de conectare a repetatorului.
+Lansaţi din nou browserul. În bara de adresă URL, introduceţi textul "http://ZVDOMAIN_NAMEVZ/" pentru a accesa starea de conectare a repetatorului.
 S-au actualizat cu succes setările IP. Veţi fi redirecţionat către interfaţa de utilizare web a RT-AX53U.
 Selectare altă reţea
 Schimbaţi reţeaua la care se va conecta dispozitivul RT-AX53U.
@@ -301,6 +301,10 @@ Selectați acest server DNS pentru a avea o modalitate rapidă și confidențial
 Selectați acest server DNS pentru a bloca conținutul rău-intenționat
 Selectați acest server DNS pentru a bloca conținutul rău-intenționat și conținutul pentru adulți
 Listă DNS
+Blocare reclame
+Familie
+DNS rapid
+Respectă confidențialitatea
 Permiteţi acestui router să obţină automat adresa IP de la ISP.
 Conectare automată la serverul DNS
 În cazul în care conexiunea dvs. WAN necesită o adresă IP statică, introduceţi adresa IP a gateway-ului în acest câmp.
@@ -336,9 +340,9 @@ Introduceţi o valoare cuprinsă între
 şi
 SSID nu poate conţine caracterul \"
 \”.
-Acest şir nu poate începe cu:
+Primul caracter nu poate conține:
 Acest şir nu poate conţine:
-This string cannot end with:
+Ultimul caracter nu poate conține:
 Introduceţi cheia WEP corectă.
 Cheia pre-partajată trebuie să aibă mai puţin de 64 de caractere.
 Adresă IP LAN pentru dispozitivul RT-AX53U:
@@ -452,7 +456,7 @@ Descărcaţi <a href='http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wirele
 Verificaţi dacă aţi deconectat cablul de reţea de la portul WAN.
 În modul Repeater (Repetator), dispozitivul RT-AX53U se conectează wireless la o reţea wireless existentă, cu scopul de a extinde aria de acoperire. În acest mod, funcţiile firewall, de partajare IP şi NAT sunt dezactivate.
 Adresa IP LAN a RT-AX53U ar putea fi modificată.
-Închideţi această fereastră şi accesaţi http://router.asus.com din nou.
+Închideţi această fereastră şi accesaţi http://ZVDOMAIN_NAMEVZ din nou.
 Mod Repeater (Repetator)
 În modul Express Way 2.4GHz, dispozitivul wireless RT-AX53U se conectează la un canal WiFi de 2.4 GHz existent şi extinde acoperirea wireless doar cu un canal WiFi de 5 GHz.
 Express Way 2.4GHz
@@ -711,7 +715,7 @@ Radio
 distanţă
 Retastați parola nouă de conectare
 Utilizați informațiile de mai jos pentru a văconecta la rețeaua WiFi.
-Mergeți la <a href='http://router.asus.com' target='_blank' style='text-decoration:underline'>router.asus.com</a> pentru a văconecta la dispozitiv.
+Mergeți la <a href='http://ZVDOMAIN_NAMEVZ' target='_blank' style='text-decoration:underline'>ZVDOMAIN_NAMEVZ</a> pentru a văconecta la dispozitiv.
 Cont router
 Nume conectare router
 Parolă de conectare la router
@@ -838,6 +842,7 @@ Pentru a configura conexiunea WAN offline sau a modifica modul de operare la Acc
 În pasul următor, configurați numele de conectare și parola pentru securitate.
 Router wireless ASUS, model RT-AX53U
 RT-AX53U
+ZVDOMAIN_NAMEVZ
 Configurat
 Nume wireless
 Router wireless
@@ -927,10 +932,10 @@ Pentru vizionarea clipurilor video la calitate 720p se recomandă o conexiune de
 Pentru vizionarea clipurilor video la calitate 1080p se recomandă o conexiune de 30 Mbps sau superioară.
 Vitezele de încărcare pe Internet pot varia în funcţie de ISP-ul dvs. şi de alţi factori. Dacă nu sunteţi sigur care este viteza dvs. la Internet, puteţi contacta ISP-ul sau utilizaţi folosiţi un utilitar online de testare a lăţimii de bandă pe un computer conectat la routerul ASUS.
 Cloud List (Listă cloud)
-Accesaţi discul cloud din <a style="font-weight: bolder;text-decoration: underline;" href="https://router.asus.com" target="_blank">https://router.asus.com</a>.
+Accesaţi discul cloud din <a style="font-weight: bolder;text-decoration: underline;" href="https://ZVDOMAIN_NAMEVZ" target="_blank">https://ZVDOMAIN_NAMEVZ</a>.
 Puteţi accesa discul cloud folosind acest URL:
 Pentru a schimba numele DDNS, faceţi clic <a style="font-weight: bolder;text-decoration: underline;" href="/Advanced_ASUSDDNS_Content.asp?af=DDNSName" target="_blank">aici</a>.
-Accesaţi discul cloud din <a style="font-weight: bolder;text-decoration: underline;" href="https://router.asus.com" target="_blank">https://router.asus.com</a>.
+Accesaţi discul cloud din <a style="font-weight: bolder;text-decoration: underline;" href="https://ZVDOMAIN_NAMEVZ" target="_blank">https://ZVDOMAIN_NAMEVZ</a>.
 Înregistraţi-vă pentru un DDNS ASUS <a style="font-weight: bolder;text-decoration: underline;" href="/Advanced_ASUSDDNS_Content.asp" target="_blank">aici</a> pentru a accesa discul cloud online.
 Permite accesarea şi partajarea dispozitivelor de stocare ataşate la porturile USB, precum şi redarea în flux a conţinutului acestora, prin intermediul unui PC sau dispozitiv conectat la internet.
 Pentru a crea un disc cloud trebuie să instalaţi un dispozitiv de stocare USB în acest router şi apoi să setaţi opţiunea Cloud Disk la <b>ON</b> (Activat).
@@ -1515,6 +1520,7 @@ Dezactivat
 Activat
 Export
 MERGEŢI
+Acces setări
 Eliminare
 Trimite
 setările WAN
@@ -2243,6 +2249,25 @@ invitați
 Limită acces
 Doar acces la internet
 Utilizați aceleași setări ca
+Rețea de afaceri
+Rețea personalizată
+Configurați o rețea sigură și securizată
+Creați rapid o rețea vizitator
+Rețea IoT
+Separați cu ușurință o rețea pentru dispozitivele IoT
+Rețea copii
+Asigurați accesul securizat al copiilor la internet
+Portal vizitator
+Creați un portal vizitator sau Facebook Wifi
+Tip portal
+Rețea VPN
+Stabiliți o conexiune securizată la internet
+Acest profil VPN a fost dezactivat. Accesați pagina de setări a serverului VPN și activați-l.
+Faceți clic pe [ Acces setări ] de mai jos pentru a accesa pagina de setări VPN.
+Această setare nu poate fi selectată în timp ce este utilizată de celălalt prpfil creat.
+Rețea de domiciliu
+Adăugați o rețea
+Listă de profiluri
 Versiune hardware
 Help
 Secţiunea de ajutor vă oferă indicaţii şi informaţii cu privire la utilizarea funcţiilor routerului. Faceţi clic pe.
@@ -2441,7 +2466,7 @@ Acest câmp vă permite să activaţi sau să dezactivaţi Download Master.
 Acest câmp vă permite să partajaţi conţinuturile descărcate cu utilizatorii Internet.
 Acest câmp vă permite să activaţi sau să dezactivaţi UPnP.
 Podatkov po izbrisu ne bo mogoče obnoviti. Ste prepričani, da jih želite izbrisati?
-onflict with LAN IP
+Conflict with LAN IP
 Create New Policy
 Adresa IP LAN și masca de subrețea au fost modificate. Centralizatorul de adrese IP RT-AX53U trebuie actualizat. Doriți să actualizați automat centralizatorul de adrese IP adrese?
 Noua plajă de adrese IP nu corespunde cu masca de subreţea. Doriţi să permiteţi dispozitivului RT-AX53U să modifice automat plaja de adrese IP?
@@ -2588,7 +2613,7 @@ Limită maximă:
 Verificare
 The version is up-to-date.
 Configurarea accesului local
-Download and install SSL certificate on your browser to trust accessing your local domain “router.asus.com” with HTTPS protocol. To export certificate after applying setting.
+Download and install SSL certificate on your browser to trust accessing your local domain “ZVDOMAIN_NAMEVZ” with HTTPS protocol. To export certificate after applying setting.
 Download Certificate
 Jurnal
 IP utilizator conectat:
@@ -2809,6 +2834,7 @@ Pentru a activa WPS, modificaţi metoda de autentificare la WPA2 sau WPA-Auto.
 Dacă doriți să activați WPS, trebuie mai întâi să dezactivați ascunderea SSID.
 Note: New patch will be updated regularly, please keep your firmware stay up to date.
 Element de notificare
+Numărul clientului
 Accesaţi <a href="https://iplookup.asus.com/nslookup.php" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">https://iplookup.asus.com/nslookup.php</a> pentru a căuta o adresă statică pentru utilizare cu serviciul ASUS DDNS.
 OCN Virtual Connect
 OFDMA/802.11ax MU-MIMO
@@ -3524,7 +3550,7 @@ Configuraţie personalizată
 RT-AX53U va genera automat un fişier .ovpn cu cheia autorităţii de certificare. Puteţi furniza fişierul .ovpn cu nume de utilizator şi parolă la toţi utilizatorii care se conectează la serverul OpenVPN.
 Pentru a schimba setările serverului OpenVPN, accesaţi Setări avansate
 Puteţi schimba setările implicite ale serverului OpenVPN pentru a furniza un fişier OPVN personalizat pentru un tip specific de conexiune.
-If your WAN IP address is dynamic, please click <a href="http://router.asus.com/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
+If your WAN IP address is dynamic, please click <a href="http://ZVDOMAIN_NAMEVZ/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
 Alocare de la DHCP
 Cifru criptare
 Conflict de rutare! <p>Verificați setările de adresă IP ale clientului pe pagina Setări avansate sau verificați tabelul de rutare din jurnalul de sistem.
@@ -3746,6 +3772,7 @@ Secret conexiune
 Numărul portului USP pentru conectarea la serverul RADIUS.
 Port server
 WiFi Agile Multiband
+*Dacă funcția WiFi Agile Multiband este activată, opțiunea Protected Management Frames (Cadre de gestionare protejate) trebuie să fie activată. (cu capacitate sau necesar)
 Acest câmp activează metodele de autentificare pentru clienţii wireless.
 Metoda de autentificare
 Pentru a vă asigura că beneficiaţi de cel mai bun semnal wireless, vă recomandăm să setaţi canalul ruterului la Canal 2. Pentru a realiza acest lucru, faceţi clic pe OK. În caz contrar, faceţi clic pe Anulare.
@@ -4106,7 +4133,7 @@ Nu se poate configura ca WAN implicit pentru politica țintă.
 Beta test only
 You can also select [Cancel], the device will automatically start downloading the update during the night time.
 Dacă utilizați un modem cu cablu sau un modem cu o adresă IP statică, asigurați-vă că încercați următoarele:
-Once the new SSID is connected, go back to router.asus.com for more advanced settings.
+Once the new SSID is connected, go back to ZVDOMAIN_NAMEVZ for more advanced settings.
 Disable Web Access from WAN will not allow you to control your router via $Apps$ from Internet. Do you want to continue?
 ASUS ROUTER APP
 Alexa enabled device or IFTTT
@@ -4141,7 +4168,7 @@ GeForce Now
 Selectați GeForce Now pentru a prioritiza dispozitivele de jocuri GeForce Now pentru o experiență de joc mai rapidă și mai bună.
 LED On/Off
 The LED on/off control is used to turn off all LEDs includes Aura light.
-To enable Aura RGB, LED must remain on. Please turn on LED by pressing hardware button on the router for 3 seconds or enable it via web/app interface.
+Pentru a activa Aura RGB, LED-ul trebuie să rămână aprins. Aprindeți LED-ul apăsând pe butonul hardware de pe router timp de 3 secunde sau activați-l utilizând interfața web/mobilă.
 Eveniment
 Sistemul va detecta următoarele evenimente și va declanșa diferite efecte LED.
 Când activați Game Boost (Accelerare jocuri), veți vedea bara de LED-uri folosind un efect de respiraţie roșu.
@@ -4209,7 +4236,7 @@ Faceți clic aici pentru a continua.
 Scanați codul QR pentru mai multe detalii.
 Încă doriți să accesați pagina de setări cu <span>protocolul HTTP</span>?
 Când utilizați protocolul HTTPS, un mesaj de avertizare poate fi afișat de către browserul dvs. pentru a informa asupra eliberării certificatului de securitate.
-Conexiunea dintre browserul dvs. și pagina de setări a routerului ASUS (router.asus.com) rămâne securizată în ciuda acestui mesaj de avertizare.
+Conexiunea dintre browserul dvs. și pagina de setări a routerului ASUS (ZVDOMAIN_NAMEVZ) rămâne securizată în ciuda acestui mesaj de avertizare.
 Nu afișa acest mesaj din nou
 HTTP este un protocol de acces web relativ mai puțin securizat. Încă doriți să accesați pagina de setări cu protocolul HTTP?
 256,1024-QAM

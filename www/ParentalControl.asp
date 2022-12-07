@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
-<title id="web_title"><#838#> - <#464#></title>
+<title id="web_title"><#842#> - <#468#></title>
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
 <link rel="stylesheet" type="text/css" href="ParentalControl.css">
@@ -127,18 +127,18 @@ $("#nat_desc").hide();
 }
 if(bwdpi_support){
 document.getElementById('guest_image').style.background = "url(images/New_ui/TimeLimits.png)";
-document.getElementById('content_title').innerHTML = "<#464#> - <#3256#>";
-document.getElementById('desc_title').innerHTML = "<#2834#>";
-document.getElementById('web_title').innerHTML = "<#838#> - <#3256#>";
-document.getElementById('PC_enable').innerHTML = "<#2832#>";
+document.getElementById('content_title').innerHTML = "<#468#> - <#3282#>";
+document.getElementById('desc_title').innerHTML = "<#2860#>";
+document.getElementById('web_title').innerHTML = "<#842#> - <#3282#>";
+document.getElementById('PC_enable').innerHTML = "<#2858#>";
 }
 if(isSupport("PC_SCHED_V3")){
-$("#desc_title").html("<#2844#>");
+$("#desc_title").html("<#2870#>");
 var $desc_item = $("#desc_item").empty();
-$("<li>").html("<#2845#>").appendTo($desc_item);
-$("<li>").html("<#2836#>").appendTo($desc_item);
-$("<li>").html("<#2846#>").appendTo($desc_item);
-$("<li>").html("<#2847#>").appendTo($desc_item);
+$("<li>").html("<#2871#>").appendTo($desc_item);
+$("<li>").html("<#2862#>").appendTo($desc_item);
+$("<li>").html("<#2872#>").appendTo($desc_item);
+$("<li>").html("<#2873#>").appendTo($desc_item);
 $("#desc_note_item").find("li:eq(0)").remove();
 if($("#nat_desc").css("display") == "none")
 $("#desc_note").hide();
@@ -201,32 +201,32 @@ function gen_mainTable(){
 var code = "";
 var clientListEventData = [];
 code +='<table width="100%" border="1" cellspacing="0" cellpadding="4" align="center" class="FormTable_table" id="mainTable_table">';
-code +='<thead><tr><td colspan="4"><#1616#>&nbsp;(<#2586#>&nbsp;'+MaxRule_parentctrl+')</td></tr></thead>';
-code += '<tr><th width="15%" height="30px" title="<#3060#>">';
+code +='<thead><tr><td colspan="4"><#1622#>&nbsp;(<#2611#>&nbsp;'+MaxRule_parentctrl+')</td></tr></thead>';
+code += '<tr><th width="15%" height="30px" title="<#3086#>">';
 code += '<select id="selAll" class="input_option" onchange="selectAll();">';
-code += '<option value=""><#3060#></option>';
-code += '<option value="0"><#1512#></option>';
-code += '<option value="1"><#1755#></option>';
-code += '<option value="2"><#1434#></option>';
+code += '<option value=""><#3086#></option>';
+code += '<option value="0"><#1517#></option>';
+code += '<option value="1"><#1761#></option>';
+code += '<option value="2"><#1439#></option>';
 code += '</select>';
 code += '</th>';
-code += '<th width="45%"><#1526#> (<#2924#>)</th>';
-code +='<th width="20%"><#2841#></th>';
-code +='<th width="20%"><#2585#></th></tr>';
+code += '<th width="45%"><#1532#> (<#2950#>)</th>';
+code +='<th width="20%"><#2867#></th>';
+code +='<th width="20%"><#2610#></th></tr>';
 code += '<tr><td style="border-bottom:2px solid #000;">';
 code += '<select id="newrule_Enable" class="input_option">';
-code += '<option value="0"><#1512#></option>';
-code += '<option value="1" selected><#1755#></option>';
-code += '<option value="2"><#1434#></option>';
+code += '<option value="0"><#1517#></option>';
+code += '<option value="1" selected><#1761#></option>';
+code += '<option value="2"><#1439#></option>';
 code += '</select>';
 code += '</td>';
 code +='<td style="border-bottom:2px solid #000;"><input type="text" maxlength="17" style="margin-left:0px;width:255px;" class="input_20_table" name="PC_mac" onKeyPress="return validator.isHWAddr(this,event)" onClick="hideClients_Block();" autocorrect="off" autocapitalize="off" placeholder="ex: <% nvram_get("lan_hwaddr"); %>">';
-code +='<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;" onclick="pullLANIPList(this);" title="<#3063#>">';
+code +='<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;" onclick="pullLANIPList(this);" title="<#3089#>">';
 code +='<div id="ClientList_Block_PC" style="margin:0 0 0 32px" class="clientlist_dropdown"></div></td>';
 code +='<td style="border-bottom:2px solid #000;">--</td>';
 code +='<td style="border-bottom:2px solid #000;"><input class="add_btn" type="button" onClick="addRow_main()" value=""></td></tr>';
 if(client_time_sche_json.length == 0)
-code += '<tr><td style="color:#FFCC00;" colspan="4"><#2382#></td></tr>';
+code += '<tr><td style="color:#FFCC00;" colspan="4"><#2407#></td></tr>';
 else{
 var userIconBase64 = "NoIcon";
 var clientName, deviceType, deviceVender;
@@ -250,9 +250,9 @@ deviceVender = "";
 code += '<tr id="'+clientRowID+'">';
 code += '<td>';
 code += '<select class="input_option eachrule" onchange="genEnableArray_main(this);">';
-code += '<option value="0" ' + ((client_time_obj.enable == "0") ? "selected" : "") + '><#1512#></option>';
-code += '<option value="1" ' + ((client_time_obj.enable == "1") ? "selected" : "") + '><#1755#></option>';
-code += '<option value="2" ' + ((client_time_obj.enable == "2")? "selected" : "") + '><#1434#></option>';
+code += '<option value="0" ' + ((client_time_obj.enable == "0") ? "selected" : "") + '><#1517#></option>';
+code += '<option value="1" ' + ((client_time_obj.enable == "1") ? "selected" : "") + '><#1761#></option>';
+code += '<option value="2" ' + ((client_time_obj.enable == "2")? "selected" : "") + '><#1439#></option>';
 code += '</select>';
 code += '</td>';
 code += '<td title="'+clientName+'">';
@@ -367,7 +367,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#348#>";
+document.getElementById("check_mac").innerHTML="<#352#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else if(flag ==2){
@@ -375,7 +375,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#309#>";
+document.getElementById("check_mac").innerHTML="<#313#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else{
@@ -407,7 +407,7 @@ var invalid_char = "";
 if(<% nvram_get("MULTIFILTER_ALL"); %> != "1")
 document.form.MULTIFILTER_ALL.value = 1;
 if(client_time_sche_json.length >= upper){
-alert("<#2454#> " + upper + " <#2455#>");
+alert("<#2479#> " + upper + " <#2480#>");
 return false;
 }
 var all_client_total_rule_num = 2;//add new client, default 2 rules.
@@ -417,14 +417,14 @@ if(client_time_obj.offtime != "")
 all_client_total_rule_num += client_time_obj.offtime.split("<").length;
 });
 if(all_client_total_rule_num > weekScheduleApi.data_max){
-var hint = "<#4164#>".replace("#MAXNUM", weekScheduleApi.data_max);
+var hint = "<#4191#>".replace("#MAXNUM", weekScheduleApi.data_max);
 hint += "\n";
-hint += "<#4165#>";
+hint += "<#4192#>";
 alert(hint);
 return false;
 }
 if(document.form.PC_mac.value == ""){
-alert("<#316#>");
+alert("<#320#>");
 document.form.PC_mac.focus();
 return false;
 }
@@ -432,7 +432,7 @@ var specific_data = client_time_sche_json.filter(function(item, index, array){
 return (item.mac == document.form.PC_mac.value.toUpperCase());
 });
 if(specific_data.length == 1){
-alert("<#2447#>");
+alert("<#2472#>");
 document.form.PC_mac.focus();
 return false;
 }
@@ -491,16 +491,16 @@ specific_data.enable = $(obj).val();
 function show_inner_tab(){
 var code = "";
 if(document.form.current_page.value == "ParentalControl.asp"){
-code += "<span class=\"clicked\"><#3256#></span>";
+code += "<span class=\"clicked\"><#3282#></span>";
 code += '<a href="AiProtection_WebProtector.asp">';
-code += "<span style=\"margin-left:10px\" class=\"click\"><#1205#></span>";
+code += "<span style=\"margin-left:10px\" class=\"click\"><#1210#></span>";
 code += '</a>';
 }
 else{
 code += '<a href="AiProtection_WebProtector.asp">';
-code += "<span class=\"click\"><#3256#></span>";
+code += "<span class=\"click\"><#3282#></span>";
 code += '</a>';
-code += "<span style=\"margin-left:10px\" class=\"clicked\"><#1205#></span>";
+code += "<span style=\"margin-left:10px\" class=\"clicked\"><#1210#></span>";
 }
 document.getElementById('switch_menu').innerHTML = code;
 }
@@ -545,17 +545,17 @@ document.getElementById('switch_menu').innerHTML = code;
 <table width="730px">
 <tr>
 <td align="left">
-<div id="content_title" class="formfonttitle" style="width:400px"><#464#></div>
+<div id="content_title" class="formfonttitle" style="width:400px"><#468#></div>
 </td>
 <td>
 <div id="switch_menu" style="margin:-20px 0px 0px -5px;display:none;">
 <a href="AiProtection_WebProtector.asp">
 <div style="width:168px;height:30px;border-top-left-radius:8px;border-bottom-left-radius:8px;" class="block_filter">
-<table class="block_filter_name_table"><tr><td style="line-height:13px;"><#1205#></td></tr></table>
+<table class="block_filter_name_table"><tr><td style="line-height:13px;"><#1210#></td></tr></table>
 </div>
 </a>
 <div style="width:160px;height:30px;margin:-32px 0px 0px 168px;border-top-right-radius:8px;border-bottom-right-radius:8px;" class="block_filter_pressed">
-<table class="block_filter_name_table_pressed"><tr><td style="line-height:13px;"><#3256#></td></tr></table>
+<table class="block_filter_name_table_pressed"><tr><td style="line-height:13px;"><#3282#></td></tr></table>
 </div>
 </div>
 <td>
@@ -563,10 +563,10 @@ document.getElementById('switch_menu').innerHTML = code;
 </table>
 <div style="margin:0 0 10px 5px;" class="splitLine"></div>
 <div id="block_all_device" style="margin-bottom:6px;display:none;">
-<div style="font-size:14px;margin-left:6px;margin-bottom:6px;"><#2849#></div>
+<div style="font-size:14px;margin-left:6px;margin-bottom:6px;"><#2875#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
-<th><#2848#></th>
+<th><#2874#></th>
 <td>
 <div align="center" class="left" style="width:94px; float:left; cursor:pointer;" id="radio_block_all"></div>
 <div class="iphone_switch_container" style="height:32px; width:74px; position: relative; overflow: hidden">
@@ -606,18 +606,18 @@ showLoading(3);
 </td>
 <td>&nbsp;&nbsp;</td>
 <td style="font-size: 14px;">
-<span id="desc_title"><#2833#></span>
+<span id="desc_title"><#2859#></span>
 <ol id="desc_item">
-<li><#2835#></li>
-<li><#2836#></li>
-<li><#2837#></li>
-<li><#2838#></li>
-<li><#2839#></li>
+<li><#2861#></li>
+<li><#2862#></li>
+<li><#2863#></li>
+<li><#2864#></li>
+<li><#2865#></li>
 </ol>
-<span id="desc_note" class="hint-color"><#916#></span>
+<span id="desc_note" class="hint-color"><#921#></span>
 <ol id="desc_note_item" class="hint-color" style="margin:-5px 0px 3px -18px;*margin-left:18px;">
-<li><#2828#></li>
-<li id="nat_desc"><#2830#></li>
+<li><#2854#></li>
+<li id="nat_desc"><#2856#></li>
 </ol>
 </td>
 </tr>
@@ -625,7 +625,7 @@ showLoading(3);
 </div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable schedule_block_off">
 <tr>
-<th id="PC_enable"><#2831#></th>
+<th id="PC_enable"><#2857#></th>
 <td>
 <div align="center" class="left" style="width:94px; float:left; cursor:pointer;" id="radio_ParentControl_enable"></div>
 <div class="iphone_switch_container" style="height:32px; width:74px; position: relative; overflow: hidden">

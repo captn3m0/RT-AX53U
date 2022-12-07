@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#838#> - <#392#></title>
+<title><#842#> - <#396#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="device-map/device-map.css">
@@ -162,7 +162,7 @@ if(vts_enable_current == "1" && usb_port_conflict_current){
 $("#ftpPortConflict").show();
 var text = httpApi.ftp_port_conflict_check.port_forwarding.hint;
 text += "<br>";
-text += "<a id='ftp_port_conflict_faq' href='" + usb_port_conflict_faq + "' target='_blank' style='text-decoration:underline;color:#FC0;'><#1915#></a>";
+text += "<a id='ftp_port_conflict_faq' href='" + usb_port_conflict_faq + "' target='_blank' style='text-decoration:underline;color:#FC0;'><#1921#></a>";
 $("#ftpPortConflict").html(text);
 }
 }
@@ -192,7 +192,7 @@ httpApi.nvramSet(obj);
 if(_status == "1" && httpApi.ftp_port_conflict_check.usb_ftp.enabled() && httpApi.ftp_port_conflict_check.port_forwarding.use_usb_ftp_port()){
 var hint = httpApi.ftp_port_conflict_check.port_forwarding.hint;
 hint += "\n";
-hint += "<#1915#> : ";
+hint += "<#1921#> : ";
 hint += usb_port_conflict_faq;
 alert(hint);
 }
@@ -202,7 +202,7 @@ document.form.submit();
 function loadAppOptions(){
 var item_name = "";
 free_options(document.form.KnownApps);
-add_option(document.form.KnownApps, "<#721#>", 0, 1);
+add_option(document.form.KnownApps, "<#725#>", 0, 1);
 for(var i = 1; i < wItem.length; i++) {
 item_name = wItem[i][0] + " (" + wItem[i][1] + ")";
 add_option(document.form.KnownApps, item_name, i, 0);
@@ -211,7 +211,7 @@ add_option(document.form.KnownApps, item_name, i, 0);
 function loadGameOptions(){
 var item_name = "";
 free_options(document.form.KnownGames);
-add_option(document.form.KnownGames, "<#721#>", 0, 1);
+add_option(document.form.KnownGames, "<#725#>", 0, 1);
 for(var i = 1; i < wItem2.length; i++) {
 item_name = wItem2[i][0] + " (" + wItem2[i][1] + ")";
 add_option(document.form.KnownGames, item_name, i, 0);
@@ -304,7 +304,7 @@ if(rangere.test(val)){
 if(!validator.eachPort(obj, RegExp.$1, mini, maxi) || !validator.eachPort(obj, RegExp.$2, mini, maxi)){
 return false;
 }else if(parseInt(RegExp.$1) >= parseInt(RegExp.$2)){
-alert("<#331#>");
+alert("<#335#>");
 return false;
 }else
 return true;
@@ -319,12 +319,12 @@ return true;
 function validate_single_range(val, min, max) {
 for(j=0; j<val.length; j++){ //is_number
 if (val.charAt(j)<'0' || val.charAt(j)>'9'){
-alert('<#334#> ' + min + ' <#335#> ' + max);
+alert('<#338#> ' + min + ' <#339#> ' + max);
 return false;
 }
 }
 if(val < min || val > max) { //is_in_range
-alert('<#334#> ' + min + ' <#335#> ' + max);
+alert('<#338#> ' + min + ' <#339#> ' + max);
 return false;
 }else
 return true;
@@ -336,7 +336,7 @@ for(i=0;i<PortSplit.length;i++){
 PortSplit[i] = PortSplit[i].replace(/(^\s*)|(\s*$)/g, ""); // "\space" to ""
 PortSplit[i] = PortSplit[i].replace(/(^0*)/g, ""); // "^0" to ""
 if(PortSplit[i] == "" ||PortSplit[i] == 0){
-alert("<#316#>");
+alert("<#320#>");
 obj.focus();
 obj.select();
 return false;
@@ -371,7 +371,7 @@ return false;
 return true;
 }
 function del_Row(_this){
-if(!confirm("<#4101#>"))
+if(!confirm("<#4128#>"))
 return false;
 var row_idx = $(_this).closest("*[row_tr_idx]").attr( "row_tr_idx" );
 var wan_idx = $(_this).closest("*[wanUnitID]").attr( "wanUnitID" );
@@ -397,7 +397,7 @@ var wan_idx = _tableID.split("_")[2];
 var code = "";
 code += '<table width="100%" cellspacing="0" cellpadding="4" align="center" class="list_table" style="word-break:break-word;">';
 if(_arrayData.length == 0)
-code += '<tr><td style="color:#FFCC00;" colspan="8"><#2382#></td></tr>';
+code += '<tr><td style="color:#FFCC00;" colspan="8"><#2407#></td></tr>';
 else {
 for(var i = 0; i < _arrayData.length; i += 1) {
 var eachValue = _arrayData[i];
@@ -432,25 +432,25 @@ var wan_idx = _tableID.split("_")[2];
 if(support_dual_wan_unit_flag) {
 switch(wan_idx) {
 case "0" :
-wan_title = "<#1853#>&nbsp;";
+wan_title = "<#1859#>&nbsp;";
 break;
 case "1" :
-wan_title = "<#1860#>&nbsp;";
+wan_title = "<#1866#>&nbsp;";
 break;
 }
 }
-html += '<td colspan="8">' + wan_title + '<#2384#>&nbsp;(<#2586#>&nbsp;' + profileMaxNum + ')</td>';
+html += '<td colspan="8">' + wan_title + '<#2409#>&nbsp;(<#2611#>&nbsp;' + profileMaxNum + ')</td>';
 html += '</tr>';
 html += '</thead>';
 html += '<tr>';
-html += '<th width="16%"><#1504#></th>';
-html += '<th width="15%"><#2386#></th>';
-html += '<th width="15%"><#2388#></th>';
-html += '<th width="17%"><#2389#></th>';
-html += '<th width="8%"><#2375#></th>';
-html += '<th width="17%"><#2383#></th>';
-html += '<th width="6%"><#2972#></th>';
-html += '<th width="6%"><#1643#></th>';
+html += '<th width="16%"><#1509#></th>';
+html += '<th width="15%"><#2411#></th>';
+html += '<th width="15%"><#2413#></th>';
+html += '<th width="17%"><#2414#></th>';
+html += '<th width="8%"><#2400#></th>';
+html += '<th width="17%"><#2408#></th>';
+html += '<th width="6%"><#2998#></th>';
+html += '<th width="6%"><#1649#></th>';
 html += '</tr>';
 html += '</table>';
 document.getElementById("vts_rulelist_Table_" + wan_idx + "").innerHTML = html;
@@ -477,8 +477,8 @@ return tmp_value;
 function editProfile(_mode, _this) {
 if(_mode == "new") {
 $('#wans_unit').find('option').remove().end()
-.append("<option value='0'><#1853#></option>")
-.append("<option value='1'><#1860#></option>")
+.append("<option value='0'><#1859#></option>")
+.append("<option value='1'><#1866#></option>")
 .append("<option value='2'>BOTH</option>")
 .val('0');
 var upper = profileMaxNum;
@@ -493,7 +493,7 @@ $("#wans_unit option[value='" + i + "']").remove();
 }
 }
 if(rulelist_length == have_upper_num){
-alert("<#2454#> " + upper + " <#2455#>");
+alert("<#2479#> " + upper + " <#2480#>");
 return false;
 }
 }
@@ -510,7 +510,7 @@ $("#vts_port_x").attr('maxlength','3');
 $("#vts_lport_x").parent().parent().hide();
 }
 else{
-$("#vts_port_x").parent().parent().find('th').html('<#2386#><div class="setup_info_icon" style="display:none;"></div>');
+$("#vts_port_x").parent().parent().find('th').html('<#2411#><div class="setup_info_icon" style="display:none;"></div>');
 if(wan_proto=="v6plus" && s46_ports_check_flag && array_ipv6_s46_ports.length > 1){
 $(".setup_info_icon").show();
 $(".setup_info_icon").click(
@@ -588,7 +588,7 @@ if(add_ruleList_array_temp.sourceIP == currentRuleArrayTemp.sourceIP &&
 add_ruleList_array_temp.externalPort == currentRuleArrayTemp.externalPort &&
 currentRuleArrayTemp.protocol != "OTHER")
 {
-alert("<#2447#>");
+alert("<#2472#>");
 document.getElementById("vts_port_x").focus();
 document.getElementById("vts_port_x").select();
 return false;
@@ -605,14 +605,14 @@ if(add_ruleList_array_temp.sourceIP == currentRuleArrayTemp.sourceIP &&
 add_ruleList_array_temp.externalPort == currentRuleArrayTemp.externalPort &&
 add_ruleList_array_temp.protocol == currentRuleArrayTemp.protocol)
 {
-alert("<#2447#>");
+alert("<#2472#>");
 document.getElementById("vts_port_x").focus();
 document.getElementById("vts_port_x").select();
 return false;
 }
 if(currentRuleArrayTemp.protocol == "BOTH" && add_ruleList_array_temp.protocol != "OTHER") {
 if(add_ruleList_array_temp.sourceIP == currentRuleArrayTemp.sourceIP && add_ruleList_array_temp.externalPort == currentRuleArrayTemp.externalPort) {
-alert("<#2447#>");
+alert("<#2472#>");
 document.getElementById("vts_port_x").focus();
 document.getElementById("vts_port_x").select();
 return false;
@@ -649,7 +649,7 @@ if(document.getElementById("vts_lport_x").value.length > 0
 return false;
 }
 if(document.getElementById("vts_ipaddr_x").value == "") {
-alert("<#316#>");
+alert("<#320#>");
 document.getElementById("vts_ipaddr_x").focus();
 document.getElementById("vts_ipaddr_x").select();
 return false;
@@ -709,11 +709,11 @@ if(!usb_port_conflict_current && usb_port_conflict_mod){//false to true, first t
 $("#ftpPortConflict").show();
 var text = httpApi.ftp_port_conflict_check.port_forwarding.hint;
 text += "<br>";
-text += "<a id='ftp_port_conflict_faq' href='" + usb_port_conflict_faq + "' target='_blank' style='text-decoration:underline;color:#FC0;'><#1915#></a>";
+text += "<a id='ftp_port_conflict_faq' href='" + usb_port_conflict_faq + "' target='_blank' style='text-decoration:underline;color:#FC0;'><#1921#></a>";
 $("#ftpPortConflict").html(text);
 var hint = httpApi.ftp_port_conflict_check.port_forwarding.hint;
 hint += "\n";
-hint += "<#1915#> : ";
+hint += "<#1921#> : ";
 hint += usb_port_conflict_faq;
 alert(hint);
 }
@@ -764,28 +764,28 @@ $("#profile_setting").fadeOut(300);
 <tr>
 <td bgcolor="#4D595D" valign="top" >
 <div>&nbsp;</div>
-<div class="formfonttitle"><#389#> - <#392#></div>
+<div class="formfonttitle"><#393#> - <#396#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
 <div>
 <div id="ftpPortConflict" class="formfontdesc" style="display:none;color:#FFCC00;"></div>
-<div class="formfontdesc"><#2372#></div>
+<div class="formfontdesc"><#2397#></div>
 <ul style="margin-left:-25px; *margin-left:10px;">
-<div class="formfontdesc"><li><#2071#></div>
-<div class="formfontdesc" id="FTP_desc"><li><#2043#></div>
+<div class="formfontdesc"><li><#2077#></div>
+<div class="formfontdesc" id="FTP_desc"><li><#2049#></div>
 </ul>
 </div>
 <div class="formfontdesc" style="margin-top:-10px;">
-<a id="faq" href="" target="_blank" style="font-family:Lucida Console;text-decoration:underline;"><#392#>&nbspFAQ</a>
+<a id="faq" href="" target="_blank" style="font-family:Lucida Console;text-decoration:underline;"><#396#>&nbspFAQ</a>
 </div>
-<div class="formfontdesc" id="lb_note" style="color:#FFCC00; display:none;"><#2574#></div>
+<div class="formfontdesc" id="lb_note" style="color:#FFCC00; display:none;"><#2599#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 <thead>
 <tr>
-<td colspan="4"><#3251#></td>
+<td colspan="4"><#3277#></td>
 </tr>
 </thead>
 <tr>
-<th><#2371#><input type="hidden" name="vts_num_x_0" value="<% nvram_get("vts_num_x"); %>" readonly="1" /></th>
+<th><#2396#><input type="hidden" name="vts_num_x_0" value="<% nvram_get("vts_num_x"); %>" readonly="1" /></th>
 <td>
 <div align="center" class="left" style="width:94px; float:left; cursor:pointer;" id="radio_VTS_enable"></div>
 <script type="text/javascript">
@@ -806,7 +806,7 @@ applyRule(0);
 <div id="vts_rulelist_Table_1" wanUnitID="1"></div>
 <div id="vts_rulelist_Block_1" wanUnitID="1"></div>
 <div class="apply_gen">
-<input class="button_gen" onclick="editProfile('new')" type="button" value="<#3633#>">
+<input class="button_gen" onclick="editProfile('new')" type="button" value="<#3659#>">
 </div>
 </td>
 </tr>
@@ -823,17 +823,17 @@ applyRule(0);
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#3571#></td>
+<td colspan="2"><#3597#></td>
 </tr>
 </thead>
 <tr>
-<th><#2381#></th>
+<th><#2406#></th>
 <td id="vts_rulelist">
 <select name="KnownApps" id="KnownApps" class="input_option" onchange="change_wizard(this, 'KnownApps');"></select>
 </td>
 </tr>
 <tr>
-<th><#2380#></th>
+<th><#2405#></th>
 <td id="VSGameList">
 <select name="KnownGames" id="KnownGames" class="input_option" onchange="change_wizard(this, 'KnownGames');"></select>
 </td>
@@ -843,28 +843,28 @@ applyRule(0);
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#3522#></td>
+<td colspan="2"><#3548#></td>
 </tr>
 </thead>
 <tr id="tr_wan_unit" style="display:none;">
-<th><#1861#></th>
+<th><#1867#></th>
 <td>
 <select id="wans_unit" class="input_option">
-<option value="0"><#1853#></option>
-<option value="1"><#1860#></option>
+<option value="0"><#1859#></option>
+<option value="1"><#1866#></option>
 <option value="2">BOTH</option>
 </select>
 </td>
 </tr>
 <tr>
-<th><#1504#></th>
+<th><#1509#></th>
 <td>
 <input type="text" maxlength="30" class="input_25_table" id="vts_desc_x" onKeyPress="return validator.isString(this, event);" autocomplete="off" autocorrect="off" autocapitalize="off"/>
-<span><#1980#></span>
+<span><#1986#></span>
 </td>
 </tr>
 <tr>
-<th><#2375#></th>
+<th><#2400#></th>
 <td>
 <select id="vts_proto_x" class="input_option">
 <option value="TCP">TCP</option>
@@ -875,52 +875,52 @@ applyRule(0);
 </td>
 </tr>
 <tr>
-<th><#2386#><div class="setup_info_icon" style="display:none;"></div></th>
+<th><#2411#><div class="setup_info_icon" style="display:none;"></div></th>
 <td>
 <input type="text" maxlength="60" class="input_25_table" id="vts_port_x" onKeyPress="return validator.isPortRange(this, event);" autocomplete="off" autocorrect="off" autocapitalize="off"/>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,26);"><#2388#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,26);"><#2413#></a></th>
 <td>
 <input type="text" maxlength="5" class="input_6_table" id="vts_lport_x" onKeyPress="return validator.isNumber(this,event);" autocomplete="off" autocorrect="off" autocapitalize="off"/>
-<span><#1980#></span>
+<span><#1986#></span>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,25);"><#2389#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,25);"><#2414#></a></th>
 <td>
 <input type="text" maxlength="15" class="input_25_table" id="vts_ipaddr_x" align="left" onkeypress="return validator.isIPAddr(this, event);" style="float:left;" onClick="hideClients_Block();" autocomplete="off" autocorrect="off" autocapitalize="off">
-<img id="pull_arrow" class="pull_arrow" height="16px;" src="images/arrow-down.gif" align="right" onclick="pullLANIPList(this);" title="<#3065#>">
+<img id="pull_arrow" class="pull_arrow" height="16px;" src="images/arrow-down.gif" align="right" onclick="pullLANIPList(this);" title="<#3091#>">
 <div id="ClientList_Block" class="clientlist_dropdown" style="margin-left:2px;margin-top:27px;width:238px;"></div>
 </td>
 </tr>
 <tr>
-<th><#2383#></th>
+<th><#2408#></th>
 <td>
 <input type="text" maxlength="18" class="input_25_table" id="vts_target_x" onKeyPress="return validator.isIPAddrPlusNetmask(this, event)" autocomplete="off" autocorrect="off" autocapitalize="off"/>
-<span><#1980#></span>
+<span><#1986#></span>
 </td>
 </tr>
 </table>
 <div style="color:#FC0;margin:10px 0px;">
-* <#2386#>
+* <#2411#>
 <br>
-<#2390#>
+<#2415#>
 <br>
-<#2391#>
+<#2416#>
 <br>
-<#2392#>
+<#2417#>
 <br>
-<#2393#>
+<#2418#>
 <br><br>
-* <#2383#>
+* <#2408#>
 <br>
-<#2394#>
+<#2419#>
 </div>
 <div style="margin-top:15px;text-align:center;">
 <input class="button_gen" type="button" onclick="cancelProfile();" value="<#199#>">
-<input id="saveProfile" class="button_gen" type="button" value="<#1659#>">
+<input id="saveProfile" class="button_gen" type="button" value="<#1665#>">
 </div>
 </div>
 <div id="footer"></div>

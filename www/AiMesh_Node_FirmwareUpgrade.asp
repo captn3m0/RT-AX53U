@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#838#> - <#410#></title>
+<title><#842#> - <#414#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="css/confirm_block.css">
@@ -148,7 +148,7 @@ function submitForm(){
 var check_zip = function(obj) {
 var reg = new RegExp("^.*.(zip|ZIP|rar|RAR|7z|7Z)$", "gi");
 if(reg.test(obj.value)){
-alert("<#2144#>");
+alert("<#2150#>");
 obj.focus();
 obj.select();
 return false;
@@ -165,7 +165,7 @@ dr_advise();
 document.form.submit();
 }
 else{
-alert("<#326#>");
+alert("<#330#>");
 document.form.file.focus();
 }
 }
@@ -185,7 +185,7 @@ document.getElementById("proceeding_img_text").style.marginLeft = "175px";
 setTimeout("LoadingProgress("+seconds+");", 1000);
 }
 else{
-document.getElementById("proceeding_img_text").innerHTML = "<#366#>";
+document.getElementById("proceeding_img_text").innerHTML = "<#370#>";
 y = 0;
 if(location.pathname.indexOf("AiMesh_Node_FirmwareUpgrade") < 0) {
 setTimeout("hideLoadingBar();",1000);
@@ -254,13 +254,13 @@ document.form.file.click();
 <span id="proceeding_img_text"></span>
 <div id="proceeding_img"></div>
 </div>
-<div id="loading_block2" style="margin:5px auto; width:85%;"><#271#><br><#368#></div>
+<div id="loading_block2" style="margin:5px auto; width:85%;"><#271#><br><#372#></div>
 <div id="loading_block3" style="margin:5px auto;width:85%; font-size:12pt;"></div>
 </td>
 </tr>
 <tr id="tr_closeWindow" style="display:none;text-align:center;">
 <td>
-<input type="button" class="button_gen" style="margin-bottom:10px;" onclick="closeWindow()" value="<#1642#>" />
+<input type="button" class="button_gen" style="margin-bottom:10px;" onclick="closeWindow()" value="<#1648#>" />
 </td>
 </tr>
 </table>
@@ -270,7 +270,7 @@ document.form.file.click();
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise AiMesh_fw_loading" align="center" style="height:100px;">
 <tr>
 <td>
-<div class="drword" id="drword" style="">&nbsp;&nbsp;&nbsp;&nbsp;<#367#> <#364#>...</div>
+<div class="drword" id="drword" style="">&nbsp;&nbsp;&nbsp;&nbsp;<#371#> <#368#>...</div>
 </td>
 </tr>
 </table>
@@ -291,9 +291,9 @@ document.form.file.click();
 <div class="icon_logo">
 </div>
 <div class="desc_container">
-<#2134#>
+<#2140#>
 </div>
-<div class="fw_upload_button" onclick="open_AiMesh_node_fw_upgrade()"><#1669#></div>
+<div class="fw_upload_button" onclick="open_AiMesh_node_fw_upgrade()"><#1675#></div>
 <input type="file" name="file" class="input" style="display:none;" onchange='submitForm();'>
 <div>
 </form>

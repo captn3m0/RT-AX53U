@@ -23,7 +23,7 @@ jQuery.fn.showPasswordScore = function(id){
 var postfix = (id == undefined)? "": ("_"+id);
 $("<div>")
 .attr("id", "scorebarBorder"+postfix)
-.attr("title", "<#353#>")
+.attr("title", "<#357#>")
 .addClass("scorebarBorder")
 .appendTo(this.parent());
 $("<div>")
@@ -124,7 +124,7 @@ else{
 var wlArrayRet = [{"title":"2.4 GHz", "ifname":"0", "suffix": ""}];
 if(isSupport("triband")){
 if(isSupport('wifi6e')){
-document.querySelector('label[for="wireless_checkbox"]').innerHTML = '<#669#>';
+document.querySelector('label[for="wireless_checkbox"]').innerHTML = '<#673#>';
 wlArrayRet.push({"title":"5 GHz", "ifname":"1", "suffix": "_5G"});
 wlArrayRet.push({"title":"6 GHz", "ifname":"2", "suffix": "_6G"});
 }
@@ -486,11 +486,11 @@ sSeqSymbol = "- " + parseInt(nSeqSymbol * nMultSeqSymbol);
 }
 /* Determine complexity based on overall score */
 if (nScore > 100) { nScore = 100; } else if (nScore < 0) { nScore = 0; }
-if (nScore >= 0 && nScore < 20) { sComplexity = "<#1270#>"; }
-else if (nScore >= 20 && nScore < 40) { sComplexity = "<#468#>"; }
-else if (nScore >= 40 && nScore < 60) { sComplexity = "<#469#>"; }
-else if (nScore >= 60 && nScore < 80) { sComplexity = "<#470#>"; }
-else if (nScore >= 80 && nScore <= 100) { sComplexity = "<#471#>"; }
+if (nScore >= 0 && nScore < 20) { sComplexity = "<#1275#>"; }
+else if (nScore >= 20 && nScore < 40) { sComplexity = "<#472#>"; }
+else if (nScore >= 40 && nScore < 60) { sComplexity = "<#473#>"; }
+else if (nScore >= 60 && nScore < 80) { sComplexity = "<#474#>"; }
+else if (nScore >= 80 && nScore <= 100) { sComplexity = "<#475#>"; }
 /* Display updated score criteria to client */
 $('#scorebarBorder'+postfix).css("display", "block");
 oScorebar.style.backgroundPosition = parseInt(nScore) + "%";
@@ -508,11 +508,11 @@ httpPassInput.showTextHint("");
 return;
 }
 if(password.length > systemVariable.maxPasswordLen){
-httpPassInput.showTextHint("<#319#>");
+httpPassInput.showTextHint("<#323#>");
 obj.focus();
 }
 else if(password.length > 0 && password.length < 5){
-httpPassInput.showTextHint("<#327#> <#321#>");
+httpPassInput.showTextHint("<#331#> <#325#>");
 obj.focus();
 }
 else{
@@ -526,7 +526,7 @@ if(wepType == "1"){
 if(!(wepKey.length === 5 && validator.string($obj[0])) &&
 !(wepKey.length === 10 && validator.hex($obj[0])))
 {
-$obj.showTextHint("<#341#><#847#>");
+$obj.showTextHint("<#345#><#852#>");
 status = true;
 }
 }
@@ -534,7 +534,7 @@ else if(wepType == "2"){
 if(!(wepKey.length === 13 && validator.string($obj[0])) &&
 !(wepKey.length === 26 && validator.hex($obj[0])))
 {
-$obj.showTextHint("<#341#><#848#>");
+$obj.showTextHint("<#345#><#853#>");
 status = true;
 }
 }
@@ -569,7 +569,7 @@ function hasBlank(objArray){
 $(".hint").remove();
 $.each(objArray, function(idx, $obj){
 if($obj.val() == ""){
-$obj.showTextHint("<#316#>");
+$obj.showTextHint("<#320#>");
 }
 })
 if($(".hint").length > 0) return true;
@@ -579,7 +579,7 @@ if(reserveHints != 1)
 $(".hint").remove();
 $.each(objArray, function(idx, $obj){
 if($obj.val().length > 0 && (isNaN($obj.val()) || $obj.val() < min || $obj.val() > max)){
-$obj.showTextHint('<#334#> ' + min + ' <#335#> ' + max + '.');
+$obj.showTextHint('<#338#> ' + min + ' <#339#> ' + max + '.');
 }
 })
 if($(".hint").length > 0) return true;
@@ -603,21 +603,21 @@ $('#wan_clientid').val("")
 function set_state_info(state){
 switch(state) {
 case "down":
-$("#LED_state").html("<#918#> : Link down (DSL LED Off)<br>");
+$("#LED_state").html("<#923#> : Link down (DSL LED Off)<br>");
 $("#LED_state").show();
 break;
 case "wait":
 case "wait for init":
-$("#LED_state").html("<#918#> : Wait for init (DSL LED Flashing)<br>");
+$("#LED_state").html("<#923#> : Wait for init (DSL LED Flashing)<br>");
 $("#LED_state").show();
 break;
 case "init":
 case "initializing":
-$("#LED_state").html("<#918#> : Initializing (DSL LED Flashing)<br>");
+$("#LED_state").html("<#923#> : Initializing (DSL LED Flashing)<br>");
 $("#LED_state").show();
 break;
 case "up":
-$("#LED_state").html("<#918#> : Link up (DSL LED On)<br>");
+$("#LED_state").html("<#923#> : Link up (DSL LED On)<br>");
 $("#LED_state").show();
 break;
 default:
@@ -787,7 +787,7 @@ wirelessAP["wl" + wl.ifname + "_wpa_psk"] = "";
 var __container = $("<div>").addClass("wirelessBand");
 $("<div>")
 .addClass("inputTitleContainer")
-.append($("<div>").addClass("inputTitle").html(wl.title + " <#558#>"))
+.append($("<div>").addClass("inputTitle").html(wl.title + " <#562#>"))
 .appendTo(__container)
 $("<div>")
 .addClass("inputContainer")
@@ -818,7 +818,7 @@ validator.ssidCheck($("#"+this.id));
 .appendTo(__container)
 $("<div>")
 .addClass("inputTitleContainer")
-.append($("<div>").addClass("inputTitle").html(wl.title + " <#559#>"))
+.append($("<div>").addClass("inputTitle").html(wl.title + " <#563#>"))
 .append($("<div>").addClass("secureInput icon_eye_close").attr({"for":"wireless_key_" + wl.ifname}))
 .appendTo(__container)
 $("<div>")
@@ -870,9 +870,9 @@ systemVariable.ispPortDefinitions = iptvSettings.port_definitions;
 $.each(isp_profiles, function(i, isp_profile) {
 text = isp_profile.profile_name;
 if(text == "none")
-text = "<#843#>";
+text = "<#848#>";
 else if(text == "manual")
-text = "<#371#>";
+text = "<#375#>";
 if(isp_profile.switch_wantag == original_switch_wantag){
 selected = true;
 found = true;
@@ -1606,12 +1606,12 @@ httpApi.log("fwInfo", JSON.stringify(fwInfo), systemVariable.qisSession)
 validator.hostNameString = function(str){
 var testResult = {
 'isError': false,
-'errReason': "<#2458#>"
+'errReason': "<#2483#>"
 }
 var re = new RegExp("^[a-zA-Z0-9][a-zA-Z0-9\-\_]+$","gi");
 testResult.isError = re.test(str) ? false : true;
 if(testResult.isError && str.length < 2)
-testResult.errReason = "<#328#>";
+testResult.errReason = "<#332#>";
 return testResult;
 };
 validator.invalidChar = function(str){
@@ -1621,12 +1621,12 @@ var testResult = {
 }
 if(str.charAt(0) == '"'){
 testResult.isError = true;
-testResult.errReason = '<#338#> ["]';
+testResult.errReason = '<#342#> ["]';
 return testResult;
 }
 else if(str.charAt(str.length - 1) == '"'){
 testResult.isError = true;
-testResult.errReason = '<#340#> ["]';
+testResult.errReason = '<#344#> ["]';
 return testResult;
 }
 else{
@@ -1638,7 +1638,7 @@ invalid_char.push(str.charAt(i));
 }
 if(invalid_char.length != 0){
 testResult.isError = true;
-testResult.errReason = "<#339#> '" + invalid_char.join('') + "' !";
+testResult.errReason = "<#343#> '" + invalid_char.join('') + "' !";
 }
 return testResult;
 }
@@ -1653,7 +1653,7 @@ if( !/[A-Za-z]/.test(str) || !/[0-9]/.test(str) || str.length < 10
 || /([A-Za-z0-9\!\"\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\[\\\]\^\_\`\{\|\}\~])\1/.test(str)
 ){
 testResult.isError = true;
-testResult.errReason = "<#333#>";
+testResult.errReason = "<#337#>";
 }
 var invalid_char = [];
 for(var i = 0; i < str.length; ++i){
@@ -1663,7 +1663,7 @@ invalid_char.push(str.charAt(i));
 }
 if(invalid_char.length != 0){
 testResult.isError = true;
-testResult.errReason = "<#339#> '" + invalid_char.join('') + "' !";
+testResult.errReason = "<#343#> '" + invalid_char.join('') + "' !";
 }
 return testResult;
 };
@@ -1747,7 +1747,7 @@ return status;
 };
 var genPAPList = function(papList, filterBand){
 var Get_Text_PAP_Title = function(){
-var title = "<#537#>";
+var title = "<#541#>";
 if(isSupport("RPMesh"))
 title = "Here are WiFi networks nearby, select one to continue.";/* untranslated */
 if(systemVariable.multiPAP.wlcOrder.length > 0){

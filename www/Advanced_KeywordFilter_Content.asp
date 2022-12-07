@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#838#> - <#404#></title>
+<title><#842#> - <#408#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script language="JavaScript" type="text/javascript" src="/js/jquery.js"></script>
@@ -31,7 +31,7 @@ var keyword_rulelist_row = decodeURIComponent(keyword_rulelist_array).split('<')
 var code = "";
 code +='<table width="100%" border="1" cellspacing="0" cellpadding="4" align="center" class="list_table" id="keyword_rulelist_table">';
 if(keyword_rulelist_row.length == 1)
-code +='<tr><td style="color:#FFCC00;"><#2382#></td>';
+code +='<tr><td style="color:#FFCC00;"><#2407#></td>';
 else{
 for(var i =1; i < keyword_rulelist_row.length; i++){
 code +='<tr id="row'+i+'">';
@@ -62,13 +62,13 @@ document.form.keyword_enable_x[0].checked = true;
 var rule_num = document.getElementById('keyword_rulelist_table').rows.length;
 var item_num = document.getElementById('keyword_rulelist_table').rows[0].cells.length;
 if(rule_num >= upper){
-alert("<#2454#> " + upper + " <#2455#>");
+alert("<#2479#> " + upper + " <#2480#>");
 return false;
 }
 for(i=0; i<rule_num; i++){
 for(j=0; j<item_num-1; j++){ //only 1 value column
 if(obj.value == document.getElementById('keyword_rulelist_table').rows[i].cells[j].innerHTML){
-alert("<#2447#>");
+alert("<#2472#>");
 return;
 }
 }
@@ -91,7 +91,7 @@ if(j != item_num-2)
 tmp_value += ">";
 }
 }
-if(tmp_value == "<"+"<#2382#>" || tmp_value == "<")
+if(tmp_value == "<"+"<#2407#>" || tmp_value == "<")
 tmp_value = "";
 document.form.keyword_rulelist.value = tmp_value;
 showLoading();
@@ -99,7 +99,7 @@ document.form.submit();
 }
 function validForm(obj){
 if(obj.value==""){
-alert("<#316#>");
+alert("<#320#>");
 obj.focus();
 obj.select();
 return false;
@@ -144,33 +144,33 @@ refreshpage();
 <tr>
 <td bgcolor="#4D595D" valign="top" >
 <div>&nbsp;</div>
-<div class="formfonttitle"><#400#> - <#404#></div>
+<div class="formfonttitle"><#404#> - <#408#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#2045#></div>
-<div id="kwf_desc2" class="formfontdesc"><#2046#></div>
+<div class="formfontdesc"><#2051#></div>
+<div id="kwf_desc2" class="formfontdesc"><#2052#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#3251#></td>
+<td colspan="2"><#3277#></td>
 </tr>
 </thead>
 <tr>
-<th><#2044#></th>
+<th><#2050#></th>
 <td>
-<input type="radio" value="1" name="keyword_enable_x" <% nvram_match("keyword_enable_x", "1", "checked"); %>><#1649#>
-<input type="radio" value="0" name="keyword_enable_x" <% nvram_match("keyword_enable_x", "0", "checked"); %>><#1646#>
+<input type="radio" value="1" name="keyword_enable_x" <% nvram_match("keyword_enable_x", "1", "checked"); %>><#1655#>
+<input type="radio" value="0" name="keyword_enable_x" <% nvram_match("keyword_enable_x", "0", "checked"); %>><#1652#>
 </td>
 </tr>
 </table>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table">
 <thead>
 <tr>
-<td colspan="2"><#2047#>&nbsp;(<#2586#>&nbsp;64)</td>
+<td colspan="2"><#2053#>&nbsp;(<#2611#>&nbsp;64)</td>
 </tr>
 </thead>
 <tr>
-<th width="80%"><#2047#></th>
-<th width="20%"><#2585#></th>
+<th width="80%"><#2053#></th>
+<th width="20%"><#2610#></th>
 </tr>
 <tr>
 <td width="80%">

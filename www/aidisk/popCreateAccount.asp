@@ -51,7 +51,7 @@ if(document.getElementById("account").value == "root"
 || document.getElementById("account").value == "guest"
 || document.getElementById("account").value == "anonymous"
 ){
-alert("<#777#>");
+alert("<#781#>");
 document.getElementById("account").focus();
 return false;
 }
@@ -83,7 +83,7 @@ document.getElementById("password").select();
 return false;
 }
 if(document.getElementById("password").value.length > 32){
-showtext(document.getElementById("alert_msg2"),"*<#352#>");
+showtext(document.getElementById("alert_msg2"),"*<#356#>");
 document.getElementById("password").focus();
 document.getElementById("password").select();
 return false;
@@ -97,32 +97,32 @@ return true;
 <table width="90%" class="popTable" border="0" align="center" cellpadding="0" cellspacing="0">
 <thead>
 <tr>
-<td colspan="2"><span style="color:#FFF"><#906#></span><img src="../images/button-close.gif" onClick="parent.hidePop('OverlayMask');"></td>
+<td colspan="2"><span style="color:#FFF"><#911#></span><img src="../images/button-close.gif" onClick="parent.hidePop('OverlayMask');"></td>
 </tr>
 </thead>
 <tbody>
 <tr align="center">
-<td height="25" colspan="2"><#905#></td>
+<td height="25" colspan="2"><#910#></td>
 </tr>
 <tr>
-<th><#956#>: </th>
+<th><#961#>: </th>
 <td>
 <input class="input_15_table" name="account" id="account" type="text" maxlength="32" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><#2271#>: </th>
+<th><#2296#>: </th>
 <td><input type="password" class="input_15_table" name="password" id="password" onKeyPress="return validator.isString(this, event);" maxlength="33" autocorrect="off" autocapitalize="off"></td>
 </tr>
 <tr>
-<th><#1613#>: </th>
+<th><#1619#>: </th>
 <td><input type="password" class="input_15_table" name="confirm_password" id="confirm_password" onKeyPress="return validator.isString(this, event);" maxlength="33" autocorrect="off" autocapitalize="off">
 <br/><span id="alert_msg2" style="color:#FC0;margin-left:8px;"></span>
 </td>
 </tr>
 </tbody>
 <tr>
-<th colspan="2" align="right"><input id="Submit" type="button" class="button_gen" value="<#1637#>"></td> </tr>
+<th colspan="2" align="right"><input id="Submit" type="button" class="button_gen" value="<#1643#>"></td> </tr>
 </table>
 </form>
 </body>

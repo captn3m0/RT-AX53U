@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#838#> - <#3722#></title>
+<title><#842#> - <#3748#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="other.css">
@@ -40,7 +40,7 @@ document.form.submit();
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center">
 <tr>
 <td>
-<div class="drword" id="drword"><#367#> <#364#>...
+<div class="drword" id="drword"><#371#> <#368#>...
 <br/>
 <br/>
 </div>
@@ -80,12 +80,12 @@ document.form.submit();
 <tr>
 <td bgcolor="#4D595D" valign="top" height="360px">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#378#> - <#3722#></div>
+<div class="formfonttitle"><#382#> - <#3748#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#3720#></div>
+<div class="formfontdesc"><#3746#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr id="wl_unit_field" class="rept" style="display:none">
-<th><#2299#></th>
+<th><#2324#></th>
 <td>
 <select name="wl_unit" class="input_option" onChange="change_wl_unit();">
 <option class="content_input_fd" value="0" <% nvram_match("wl_unit", "0","selected"); %>>2.4GHz</option>
@@ -94,7 +94,7 @@ document.form.submit();
 </td>
 </tr>
 <tr>
-<th><a><#3721#></a></th>
+<th><a><#3747#></a></th>
 <td>
 <input type="radio" name="wifipxy_enable_2" class="input" value="1" onclick="enable_wifipxy('1')" <% nvram_match("wlc0_wifipxy", "1", "checked"); %>><#187#>
 <input type="radio" name="wifipxy_enable_2" class="input" value="0" onclick="enable_wifipxy('0')" <% nvram_match("wlc0_wifipxy", "0", "checked"); %>><#186#>

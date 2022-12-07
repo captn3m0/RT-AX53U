@@ -7,7 +7,7 @@
 <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="icon" href="images/favicon.png">
-<title><#838#> - <#2184#></title>
+<title><#842#> - <#2190#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="device-map/device-map.css">
@@ -185,9 +185,9 @@ var vts_rulelist_row = vts_rulelist_array.split('<');
 var code = '';
 var _count = 0;
 code += '<div class="flexbox table-title">';
-code += '<div class="table-content1-width"><div><#1229#></div></div>';
-code += '<div class="table-content2-width"><div><#1529#></div></div>';
-code += '<div class="table-content3-width"><div><#2375#></div></div>';
+code += '<div class="table-content1-width"><div><#1234#></div></div>';
+code += '<div class="table-content2-width"><div><#1535#></div></div>';
+code += '<div class="table-content3-width"><div><#2400#></div></div>';
 code += '<div class="table-content4-width"><div>Actions</div></div>';
 code += '</div>';
 for(i=1; i< vts_rulelist_row.length; i++){
@@ -305,7 +305,7 @@ if(rangere.test(val)){
 if(!validator.eachPort(document.getElementById("new_profile_externalPort"), RegExp.$1, mini, maxi) || !validator.eachPort(document.getElementById("new_profile_externalPort"), RegExp.$2, mini, maxi)){
 return false;
 }else if(parseInt(RegExp.$1) >= parseInt(RegExp.$2)){
-alert("<#331#>");
+alert("<#335#>");
 return false;
 }else
 return true;
@@ -320,12 +320,12 @@ return true;
 function validate_single_range(val, min, max) {
 for(j=0; j<val.length; j++){ //is_number
 if (val.charAt(j)<'0' || val.charAt(j)>'9'){
-alert('<#334#> ' + min + ' <#335#> ' + max);
+alert('<#338#> ' + min + ' <#339#> ' + max);
 return false;
 }
 }
 if(val < min || val > max) { //is_in_range
-alert('<#334#> ' + min + ' <#335#> ' + max);
+alert('<#338#> ' + min + ' <#339#> ' + max);
 return false;
 }else
 return true;
@@ -337,7 +337,7 @@ for(i=0;i<PortSplit.length;i++){
 PortSplit[i] = PortSplit[i].replace(/(^\s*)|(\s*$)/g, ""); // "\space" to ""
 PortSplit[i] = PortSplit[i].replace(/(^0*)/g, ""); // "^0" to ""
 if(PortSplit[i] == "" ||PortSplit[i] == 0){
-alert("<#2453#>");
+alert("<#2478#>");
 obj.focus();
 obj.select();
 return false;
@@ -550,7 +550,7 @@ if(document.getElementById("new_profile_localPort").value.length > 0
 return false;
 }
 if(document.getElementById("new_profile_localIP").value == "") {
-alert("<#316#>");
+alert("<#320#>");
 document.getElementById("new_profile_localIP").focus();
 document.getElementById("new_profile_localIP").select();
 return false;
@@ -620,8 +620,8 @@ genListTable();
 <div class="title-symbol"></div>
 <div class="title-content">OPEN NAT</div>
 </div>
-<div class="description-container"><#2196#></div>
-<div class="description-container" id="v6plus_port_range_note" style="color:#FFCC00;display:none;">* When using v6plus, the number of available assigned ports is limited. Kindly understand that this may result in an interruption of this services and functions.</div> <div class="description-container" style="color:#FFCC00;position:relative;z-index:9;"><#2197#></div>
+<div class="description-container"><#2202#></div>
+<div class="description-container" id="v6plus_port_range_note" style="color:#FFCC00;display:none;">* When using v6plus, the number of available assigned ports is limited. Kindly understand that this may result in an interruption of this services and functions.</div> <div class="description-container" style="color:#FFCC00;position:relative;z-index:9;"><#2203#></div>
 <div class="world-map">
 <div class="map-connection-line"></div>
 <div class="location-indicator location-US3"></div>
@@ -639,7 +639,7 @@ genListTable();
 </div>
 <div class="divide-line"></div>
 <div class="flexbox flex-a-center control-f-container">
-<div class="control-description"><#2371#></div>
+<div class="control-description"><#2396#></div>
 <div class="switch-button-container">
 <label for="PF_switch" >
 <input type="checkbox" id="PF_switch" class="switch-button" onchange="switchPortForward(this);">
@@ -655,17 +655,17 @@ genListTable();
 <div class="border-bar"></div>
 <div class="flexbox title-container">
 <div class="title-symbol"></div>
-<div class="title-content"><#2184#></div>
+<div class="title-content"><#2190#></div>
 </div>
-<div class="description-container"><#2185#></div>
+<div class="description-container"><#2191#></div>
 <div class="button-container button-container-left" onclick="addNewProfile();">
 <div class="button-icon icon-plus"></div>
-<div class="button-text"><#1637#></div>
+<div class="button-text"><#1643#></div>
 </div>
 <div class="divide-line"></div>
 <div id='empty_qiuckAdd' class="flexbox flex-d-column flex-w-wrap game-profile-container"></div>
 <div class="divide-line"></div>
-<div class="right-desc">** <#1294#></div>
+<div class="right-desc">** <#1299#></div>
 </div>
 <div id="addRuleField" class="border-container" style="display:none">
 <div class="border-corner border-corner-top-left"></div>
@@ -682,7 +682,7 @@ genListTable();
 <div>
 <div class="flexbox flex-a-center new-g-profile">
 <div class="new-g-p-step">1</div>
-<div class="new-g-p-s-title"><#2179#></div>
+<div class="new-g-p-s-title"><#2185#></div>
 </div>
 <div id="inner_quickAdd" class="new-g-p-container"></div>
 <div class="divide-line new-p-divide"></div>
@@ -690,7 +690,7 @@ genListTable();
 <div>
 <div class="flexbox flex-a-center new-g-profile">
 <div class="new-g-p-step">2</div>
-<div class="new-g-p-s-title"><#2182#></div>
+<div class="new-g-p-s-title"><#2188#></div>
 </div>
 <div class="flexbox new-p-platform">
 <div id="platformPC_field" class="checkbox-container">
@@ -780,20 +780,20 @@ genListTable();
 <div>
 <div class="flexbox flex-a-center new-g-profile">
 <div class="new-g-p-step">3</div>
-<div class="new-g-p-s-title"><#3097#></div>
+<div class="new-g-p-s-title"><#3123#></div>
 </div>
 <div class="new-p-platform">
 <div id="name_field" class="game-p-s-field">
-<div class="settings-filed-title"><#1504#></div>
+<div class="settings-filed-title"><#1509#></div>
 <input id="new_profile_name" type="text" class="input-container" value="" maxlength="30" onkeypress="return validator.isString(this, event);" autocomplete="off" autocorrect="off" autocapitalize="off" >
 </div>
 <div id="protocol_field" class="game-p-s-field">
-<div class="settings-filed-title"><#2375#></div>
+<div class="settings-filed-title"><#2400#></div>
 <div class="select-container">
 <select name="" id="new_profile_protocol">
 <option value="TCP">TCP</option>
 <option value="UDP">UDP</option>
-<option value="BOTH"><#2818#></option>
+<option value="BOTH"><#2844#></option>
 </select>
 <div class="select-arrow">
 <div></div>
@@ -801,16 +801,16 @@ genListTable();
 </div>
 </div>
 <div id="externalPort_field" class="game-p-s-field">
-<div class="settings-filed-title"><#2386#><div class="setup_info_icon_game" style="display:none;"></div></div>
+<div class="settings-filed-title"><#2411#><div class="setup_info_icon_game" style="display:none;"></div></div>
 <input id="new_profile_externalPort" type="text" class="input-container" value="" maxlength="60" onkeypress="return validator.isPortRange(this, event);" autocomplete="off" autocorrect="off" autocapitalize="off" >
 </div>
 <div id="localPort_field" class="game-p-s-field">
-<div class="settings-filed-title"><#2388#></div>
+<div class="settings-filed-title"><#2413#></div>
 <input id="new_profile_localPort" type="text" class="input-container" style="width:80px;" value="" maxlength="5" onkeypress="return validator.isNumber(this,event);" autocomplete="off" autocorrect="off" autocapitalize="off" >
-<div class="hint"><#1980#></div>
+<div class="hint"><#1986#></div>
 </div>
 <div id="localIP_field" class="game-p-s-field" >
-<div class="settings-filed-title"><#2389#></div>
+<div class="settings-filed-title"><#2414#></div>
 <div style="position: relative">
 <input id="new_profile_localIP" type="text" class="input-container" value="" maxlength="15" onkeypress="return validator.isIPAddr(this, event);" autocomplete="off" autocorrect="off" autocapitalize="off">
 <div class="select-arrow" style="cursor:pointer;z-index: 999;" onclick="pullLANIPList(this);" >
@@ -820,16 +820,16 @@ genListTable();
 </div>
 </div>
 <div id="sourceIP_field" class="game-p-s-field">
-<div class="settings-filed-title"><#2383#></div>
+<div class="settings-filed-title"><#2408#></div>
 <input id="new_profile_sourceIP" type="text" class="input-container" value="" maxlength="15" onkeypress="return validator.isIPAddrPlusNetmask(this, event)" autocomplete="off" autocorrect="off" autocapitalize="off" >
-<div class="hint"><#1980#></div>
+<div class="hint"><#1986#></div>
 </div>
 </div>
 </div>
 <div class="divide-line"></div>
 <div class="button-container button-container-center" onclick="newProfileOK();">
 <div class="button-icon button-icon-check"></div>
-<div class="button-text"><#1659#></div>
+<div class="button-text"><#1665#></div>
 </div>
 </div>
 <div id="listTable" class="border-container" style="display:none">
@@ -838,7 +838,7 @@ genListTable();
 <div class="border-bar"></div>
 <div class="flexbox title-container">
 <div class="title-symbol"></div>
-<div class="title-content"><#2184#></div>
+<div class="title-content"><#2190#></div>
 </div>
 <div class="flexbox flex-j-spaceB control-f-container">
 <div class="button-container " onclick="applyRule();">
@@ -847,23 +847,23 @@ genListTable();
 </div>
 <div class="button-container" onclick="addNewProfile();">
 <div class="button-icon icon-plus"></div>
-<div class="button-text"><#1637#></div>
+<div class="button-text"><#1643#></div>
 </div>
 </div>
 <div class="flexbox flex-a-center flex-j-spaceB new-g-p-t-field ">
-<div class="new-g-p-title"><#2179#></div>
-<div class="new-g-p-rule"><span id="rule_num">2</span> Rules (<#2586#> 32)</div>
+<div class="new-g-p-title"><#2185#></div>
+<div class="new-g-p-rule"><span id="rule_num">2</span> Rules (<#2611#> 32)</div>
 </div>
 <div id="list_content">
 <div class="flexbox table-title">
 <div class="table-content1-width">
-<div><#1229#></div>
+<div><#1234#></div>
 </div>
 <div class="table-content2-width">
-<div><#1529#></div>
+<div><#1535#></div>
 </div>
 <div class="table-content3-width">
-<div><#2375#></div>
+<div><#2400#></div>
 </div>
 <div class="table-content4-width">
 <div>Actions</div>

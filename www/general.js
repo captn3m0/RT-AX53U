@@ -222,7 +222,7 @@ dr_advise();
 document.form.submit();
 }
 else{
-alert("<#326#>");
+alert("<#330#>");
 document.form.file.focus();
 return false;
 }
@@ -423,7 +423,7 @@ var wep_key = new Array(5);
 var valid_WPAPSK = function(o){
 if(o.value.length >= 64){
 o.value = o.value.substring(0, 63);
-alert("<#342#>");
+alert("<#346#>");
 return false;
 }
 return true;
@@ -1277,13 +1277,13 @@ x.selectedIndex = 1;
 x.remove(x.selectedIndex);
 }
 if ((CurrentCh >=1) && (CurrentCh <= 4)){
-x.options[0].text = "<#3782#>";
+x.options[0].text = "<#3809#>";
 x.options[0].value = "lower";
 }
 else if ((CurrentCh >= 5) && (CurrentCh <= 7)){
-x.options[0].text = "<#3782#>";
+x.options[0].text = "<#3809#>";
 x.options[0].value = "lower";
-add_option(document.form.wl_nctrlsb, "<#3783#>", "upper");
+add_option(document.form.wl_nctrlsb, "<#3810#>", "upper");
 if (document.form.wl_nctrlsb_old.value == "upper")
 document.form.wl_nctrlsb.options.selectedIndex=1;
 if(is_high_power && CurrentCh == 5) // for high power model, Jieming added at 2013/08/19
@@ -1292,25 +1292,25 @@ else if(is_high_power && CurrentCh == 7)
 document.form.wl_nctrlsb.remove(0);
 }
 else if ((CurrentCh >= 8) && (CurrentCh <= 9)){
-x.options[0].text = "<#3783#>";
+x.options[0].text = "<#3810#>";
 x.options[0].value = "upper";
 if (option_length >=14){
-add_option(document.form.wl_nctrlsb, "<#3782#>", "lower");
+add_option(document.form.wl_nctrlsb, "<#3809#>", "lower");
 if (document.form.wl_nctrlsb_old.value == "lower")
 document.form.wl_nctrlsb.options.selectedIndex=1;
 }
 }
 else if (CurrentCh == 10){
-x.options[0].text = "<#3783#>";
+x.options[0].text = "<#3810#>";
 x.options[0].value = "upper";
 if (option_length > 14){
-add_option(document.form.wl_nctrlsb, "<#3782#>", "lower");
+add_option(document.form.wl_nctrlsb, "<#3809#>", "lower");
 if (document.form.wl_nctrlsb_old.value == "lower")
 document.form.wl_nctrlsb.options.selectedIndex=1;
 }
 }
 else if (CurrentCh >= 11){
-x.options[0].text = "<#3783#>";
+x.options[0].text = "<#3810#>";
 x.options[0].value = "upper";
 }
 else{
@@ -1367,7 +1367,7 @@ break;
 opts = document.form.wl_auth_mode_x.options;
 if(opts[opts.selectedIndex].text == "WPA-Personal" || opts[opts.selectedIndex].text == "WPA-Enterprise")
 algos = new Array("TKIP");
-else if(opts[opts.selectedIndex].text == "WPA2-Personal" || opts[opts.selectedIndex].text == "<#4195#>" || opts[opts.selectedIndex].text == "WPA3-Personal" || opts[opts.selectedIndex].text == "WPA2/WPA3-Personal" || opts[opts.selectedIndex].text == "WPA2-Enterprise")
+else if(opts[opts.selectedIndex].text == "WPA2-Personal" || opts[opts.selectedIndex].text == "<#4222#>" || opts[opts.selectedIndex].text == "WPA3-Personal" || opts[opts.selectedIndex].text == "WPA2/WPA3-Personal" || opts[opts.selectedIndex].text == "WPA2-Enterprise")
 algos = new Array("AES");
 else
 algos = new Array("AES", "TKIP+AES");
@@ -1409,7 +1409,7 @@ $('#mbo_notice').hide();
 }
 var wl_unit = '<% nvram_get("wl_unit"); %>';
 if(band6g_support && wl_unit == '2'){
-mfp_array = [["<#3865#>", "2"]];
+mfp_array = [["<#3892#>", "2"]];
 free_options(document.form.wl_mfp);
 document.form.wl_mfp.length = mfp_array.length;
 for(i=0; i<mfp_array.length; i++){
@@ -1506,9 +1506,9 @@ var objs = getElementsByName_iefix("span", "key_des");
 var wep_type = document.form.wl_wep_x.value;
 var str = "";
 if(wep_type == "1")
-str = "(<#847#>)";
+str = "(<#852#>)";
 else if(wep_type == "2")
-str = "(<#848#>)";
+str = "(<#853#>)";
 for(var i = 0; i < objs.length; ++i)
 showtext(objs[i], str);
 }
@@ -1579,7 +1579,7 @@ var wl_unit = '<% nvram_get("wl_unit"); %>';
 if(sw_mode == 2){
 if(wpa3_support){
 if(band6g_support && wl_unit == '2'){ // for 6 GHz
-var auth_array = [["<#4195#>", "owe"], ["WPA3-Personal", "sae"]];
+var auth_array = [["<#4222#>", "owe"], ["WPA3-Personal", "sae"]];
 }
 else{
 var auth_array = [["Open System", "open"], ["WPA2-Personal", "psk2"], ["WPA3-Personal", "sae"], ["WPA/WPA2-Personal", "pskpsk2"], ["WPA2/WPA3-Personal", "psk2sae"]];
@@ -1602,7 +1602,7 @@ var auth_array = [["Open System", "open"], ["WPA2-Personal", "psk2"], ["WPA-Auto
 else{
 if(wpa3_support){
 if(band6g_support && wl_unit == '2'){ // for 6 GHz
-var auth_array = [["<#4195#>", "owe"], ["WPA3-Personal", "sae"]];
+var auth_array = [["<#4222#>", "owe"], ["WPA3-Personal", "sae"]];
 }
 else{
 var auth_array = [["Open System", "open"], ["WPA2-Personal", "psk2"], ["WPA3-Personal", "sae"], ["WPA/WPA2-Personal", "pskpsk2"], ["WPA2/WPA3-Personal", "psk2sae"], ["WPA2-Enterprise", "wpa2"], ["WPA/WPA2-Enterprise", "wpawpa2"]];
@@ -1624,7 +1624,7 @@ else{
 if(new_wifi_cert_support){
 if(wpa3_support){
 if(band6g_support && wl_unit == '2'){ // for 6 GHz
-var auth_array = [["<#4195#>", "owe"], ["WPA3-Personal", "sae"]];
+var auth_array = [["<#4222#>", "owe"], ["WPA3-Personal", "sae"]];
 }
 else{
 var auth_array = [["Open System", "open"], ["Shared Key", "shared"], ["WPA2-Personal", "psk2"], ["WPA3-Personal", "sae"], ["WPA/WPA2-Personal", "pskpsk2"], ["WPA2/WPA3-Personal", "psk2sae"], ["WPA2-Enterprise", "wpa2"], ["WPA/WPA2-Enterprise", "wpawpa2"], ["Radius with 802.1x", "radius"]];
@@ -1648,7 +1648,7 @@ var auth_array = [["Open System", "open"], ["Shared Key", "shared"], ["WPA-Perso
 if(_current_page == "Guest_network.asp"){
 if(wpa3_support){
 if(band6g_support && g_unit == '2'){ // for 6 GHz
-var auth_array = [["<#4195#>", "owe"], ["WPA3-Personal", "sae"]];
+var auth_array = [["<#4222#>", "owe"], ["WPA3-Personal", "sae"]];
 if(auth_method_array != 'owe' && auth_method_array != 'sae'){
 auth_method_array = 'owe';
 }
@@ -1686,59 +1686,59 @@ function getDDNSState(ddns_return_code, ddns_hostname, ddns_old_hostname)
 {
 var ddnsStateHint = "";
 if(ddns_return_code.indexOf('-1')!=-1)
-ddnsStateHint = "<#2512#>";
+ddnsStateHint = "<#2537#>";
 else if(ddns_return_code.indexOf('200')!=-1)
-ddnsStateHint = "<#2513#>";
+ddnsStateHint = "<#2538#>";
 else if(ddns_return_code.indexOf('203')!=-1)
-ddnsStateHint = "<#2519#> '"+ddns_hostname+"' <#2521#>";
+ddnsStateHint = "<#2544#> '"+ddns_hostname+"' <#2546#>";
 else if(ddns_return_code.indexOf('220')!=-1)
-ddnsStateHint = "<#2514#>";
+ddnsStateHint = "<#2539#>";
 else if(ddns_return_code.indexOf('230')!=-1)
-ddnsStateHint = "<#2515#>";
+ddnsStateHint = "<#2540#>";
 else if(ddns_return_code.indexOf('233')!=-1)
-ddnsStateHint = "<#2519#> '"+ddns_hostname+"' <#2522#> '"+ddns_old_hostname+"'";
+ddnsStateHint = "<#2544#> '"+ddns_hostname+"' <#2547#> '"+ddns_old_hostname+"'";
 else if(ddns_return_code.indexOf('296')!=-1)
-ddnsStateHint = "<#2516#>";
+ddnsStateHint = "<#2541#>";
 else if(ddns_return_code.indexOf('297')!=-1)
-ddnsStateHint = "<#2517#>";
+ddnsStateHint = "<#2542#>";
 else if(ddns_return_code.indexOf('298')!=-1)
-ddnsStateHint = "<#2518#>";
+ddnsStateHint = "<#2543#>";
 else if(ddns_return_code.indexOf('299')!=-1)
-ddnsStateHint = "<#350#>";
+ddnsStateHint = "<#354#>";
 else if(ddns_return_code.indexOf('390')!=-1)
 ddnsStateHint = "Server Error";
 else if(ddns_return_code.indexOf('401')!=-1)
-ddnsStateHint = "<#2503#>";
+ddnsStateHint = "<#2528#>";
 else if (ddns_return_code.indexOf('402')!=-1)
-ddnsStateHint = "<#2508#>";
+ddnsStateHint = "<#2533#>";
 else if(ddns_return_code.indexOf('407')!=-1)
-ddnsStateHint = "<#2504#>";
+ddnsStateHint = "<#2529#>";
 else if(ddns_return_code == 'Time-out')
-ddnsStateHint = "<#2502#>";
+ddnsStateHint = "<#2527#>";
 else if(ddns_return_code =='unknown_error')
-ddnsStateHint = "<#2512#>";
+ddnsStateHint = "<#2537#>";
 else if(ddns_return_code =='connect_fail')
-ddnsStateHint = "<#546#>";
+ddnsStateHint = "<#550#>";
 else if(ddns_return_code =='no_change')
-ddnsStateHint = "<#2520#>";
+ddnsStateHint = "<#2545#>";
 else if(ddns_return_code =='ddns_query')
-ddnsStateHint = "<#369#>";
+ddnsStateHint = "<#373#>";
 else if(ddns_return_code =='auth_fail')
-ddnsStateHint = "<#540#>";
+ddnsStateHint = "<#544#>";
 else if(ddns_return_code !='')
-ddnsStateHint = "<#2512#>";
+ddnsStateHint = "<#2537#>";
 return ddnsStateHint;
 }
 function get_yadns_modedesc(mode)
 {
 if (mode == 0)
-return "<#3950#>";
+return "<#3977#>";
 else if(mode == 1)
-return "<#3952#>";
+return "<#3979#>";
 else if(mode == 2)
-return "<#3954#>";
+return "<#3981#>";
 else if(mode == -1)
-return "<#1513#>";
+return "<#1518#>";
 return "";
 }
 function gen_switch_menu(_arrayList, _currentItem) {

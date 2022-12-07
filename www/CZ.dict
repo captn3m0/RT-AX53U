@@ -100,7 +100,7 @@ Nejnovější verze
 Nadřízený přístupový bod (AP) je pravděpodobně vypnutý. Zkontrolujte prosím znovu.
 Připojení se nezdařilo. Nesprávné heslo. Klepnutím na tlačítko [Znovu vyhledat] vyberte jinou síť.
 Bezdrátové připojení bylo úspěšně navázáno.
-Znovu spusťte prohlížeč. Do řádku pro adresu URL zadejte "http://router.asus.com/" pro přístup ke stavu připojení opakovače.
+Znovu spusťte prohlížeč. Do řádku pro adresu URL zadejte "http://ZVDOMAIN_NAMEVZ/" pro přístup ke stavu připojení opakovače.
 Nastavení IP byla úspěšně zaktualizována. Budete přesměrování na webové grafické uživatelské rozhraní RT-AX53U.
 Vybrat jinou síť
 Změňte síť, ke které se RT-AX53U připojí.
@@ -301,6 +301,10 @@ Pomocí tohoto serveru DNS zajistíte rychlý a privátní způsob procházení 
 Pomocí tohoto serveru DNS zablokujete škodlivý obsah
 Pomocí tohoto serveru DNS zablokujete škodlivý obsah a obsah pro dospělé
 Seznam DNS
+Blokování reklam
+Rodina
+Rychlý DNS
+Ochrana osobních údajů
 Umožňuje tomuto směrovači automaticky získat adresu IP serveru DNS od ISP.
 Připojit k DNS serveru automaticky
 Pokud vaše připojení WAN vyžaduje statickou adresu IP, zadejte adresu IP brány do tohoto pole.
@@ -336,9 +340,9 @@ Prosím zadejte hodnotu od
 do
 SSID nemůže obsahovat znak \"
 \".
-Tento řetězec nemůže začínat:
+První znak nesmí obsahovat:
 Tento řetězec nemůže obsahovat:
-This string cannot end with:
+Poslední znak nesmí obsahovat:
 Prosím zadejte správný klíč WEP.
 Předsdílený klíč by měl být kratší než 64 znaků!
 Původní nastavení LAN IP RT-AX53U je
@@ -452,7 +456,7 @@ Pro identifikaci IP adresy mediálního mostu si stáhněte utilitu k nalezení 
 Zkontrolujte, zda jste odpojili síťový kabel od portu WAN.
 V režimu regenerativního zesilovače se zařízení RT-AX53U připojuje k existujícímu bezdrátovému signálu a prodlužuje tento signál pro dosažení širšího pokrytí bezdrátové sítě a lepší kvality bezdrátového signálu.
 IP adresa sítě LAN zařízení RT-AX53U se mohla změnit.
-Zavřete toto okno a znovu přistupte k adrese http://router.asus.com.
+Zavřete toto okno a znovu přistupte k adrese http://ZVDOMAIN_NAMEVZ.
 Režim regenerativního zesilovače
 V režimu Express Way 2.4GHz, se RT-AX53U bezdrátově připojí ke stávajícímu kanálu WiFi 2.4GHz a rozšíří se tím bezdrátové pokrytí pouze pomocí kanálu WiFi 5GHz.
 Express Way 2.4GHz
@@ -711,7 +715,7 @@ Rádio
 vzdáleného
 Znovu zadat nové přihlašovací heslo
 Použijte následující údaje pro připojení k síti WiFi.
-Přejděte na <a href='http://router.asus.com' target='_blank' style='text-decoration:underline'>router.asus.com</a> a přihlaste se k zařízení.
+Přejděte na <a href='http://ZVDOMAIN_NAMEVZ' target='_blank' style='text-decoration:underline'>ZVDOMAIN_NAMEVZ</a> a přihlaste se k zařízení.
 Heslo účtu
 Přihlašovací jméno směrovače
 Přihlašovací heslo routeru
@@ -838,6 +842,7 @@ Pokud chcete nastavit  připojení WAN offline nebo změnit provozní režim na 
 V dalším kroku vytvořte přihlašovací jméno a heslo za účelem zabezpečení.
 ASUS Wireless Router RT-AX53U
 RT-AX53U
+ZVDOMAIN_NAMEVZ
 Nakonfigurováno
 Název bezdrátového připojení
 Bezdrátový směrovač
@@ -927,10 +932,10 @@ pro video 720p je doporučena rychlost 15 Mb/s nebo vyšší.
 pro vysílání 1080p HD videa je doporučena rychlost 30 Mb/s nebo vyšší.
 Internetové rychlosti odesílání se mohou lišit v závislosti na vašem ISP a dalších faktorech. Pokud si nejste jisti jakou rychlost Internetu máte k dispozici, můžete kontaktovat vašeho ISP nebo použijte některý test šířky pásma online z počítače připojeného ke směrovači ASUS.
 Seznam cloudů
-Přistupujte k disku cloud z <a id="cloud_url" style="font-weight: bolder;text-decoration: underline;" href="https://router.asus.com" target="_blank">https://router.asus.com</a>.
+Přistupujte k disku cloud z <a id="cloud_url" style="font-weight: bolder;text-decoration: underline;" href="https://ZVDOMAIN_NAMEVZ" target="_blank">https://ZVDOMAIN_NAMEVZ</a>.
 K disku cloud můžete přistupovat prostřednictvím této adresy URL :
 Chcete-li upravit název ddns, klepněte <a style="font-weight: bolder;text-decoration: underline;" href="/Advanced_ASUSDDNS_Content.asp?af=DDNSName" target="_blank">zde</a>.
-Přistupujte k disku cloud z <a style="font-weight: bolder;text-decoration: underline;" href="https://router.asus.com" target="_blank">https://router.asus.com</a>.
+Přistupujte k disku cloud z <a style="font-weight: bolder;text-decoration: underline;" href="https://ZVDOMAIN_NAMEVZ" target="_blank">https://ZVDOMAIN_NAMEVZ</a>.
 <a style="font-weight: bolder;text-decoration: underline;" href="/Advanced_ASUSDDNS_Content.asp" target="_blank">Zde</a> zaregistrujte ASUS DDNS pro přístup k disku cloud online.
 Aktivuje přístup k úložným zařízením připojeným přes USB, streamování a sdílení jejich obsahu prostřednictvím PC nebo zařízení připojeného k internetu.
 Chcete-li vytvořit disk cloud, musíte do tohoto směrovače nainstalovat paměťové zařízení USB a potom ZAPNĚTE disk cloud <b>ON</b>.
@@ -1515,6 +1520,7 @@ Zakázat
 Povolit
 Exportovat
 Přejít
+Přejít na nastavení
 Odpojit
 Poslat
 nastavení WAN
@@ -2243,6 +2249,25 @@ hosté
 Omezení přístupu
 Pouze přístup k internetu
 Použít stejná nastavení jako
+Firemní síť
+Vlastní síť
+Nastavte bezpečnou a zabezpečenou síť
+Vytvořte si rychle hostovanou síť
+Síť IoT
+Vytvořte si snadno samostatnou síť pro zařízení IoT
+Dětská síť
+Zajistěte bezpečný přístup k internetu pro děti
+Hostovaný portál
+Vytvořte hostovaný portál nebo síť Wi-Fi pro Facebook
+Typ portálu
+Síť VPN
+Vytvořte si bezpečné připojení k internetu
+Tento profil VPN je zakázaný. Přejděte na stránku nastavení serveru VPN a aktivujte ho.
+Kliknutím na možnost [ Přejít na nastavení ] níže přejete na stránku nastavení VPN.
+Toto nastavení nelze vybrat, pokud používáte jiný vytvořený profil.
+Domácí síť
+Přidat síť
+Seznam profilů
 Verze hardwaru
 Help
 Nápověda nabízí příručky a informace o využití funkcí routeru. Klikněte na
@@ -2441,7 +2466,7 @@ Toto pole umožňuje povolit nebo zakázat Download Master.
 Toto pole umožňuje sdílet stažené materiály internetovým uživatelům.
 Toto pole umožňuje povolit nebo zakázat UPnP.
 Data nebude možné po odstranění obnovit, opravdu chcete provést vyčištění?
-onflict with LAN IP
+Conflict with LAN IP
 Create New Policy
 Změnila se vaše LAN IP adresa a maska podsítě. Fond IP adres vašeho RT-AX53U je nutno aktualizovat. Chcete zaktualizovat váš fond IP adres automaticky?
 Nový fond adres IP se neshoduje s maskou podsítě. Chcete dovolit zařízení RT-AX53U automaticky změnit fond adres IP?
@@ -2588,7 +2613,7 @@ Max. limit :
 Zkontrolovat
 The version is up-to-date.
 Konfigurace místního přístupu
-Download and install SSL certificate on your browser to trust accessing your local domain “router.asus.com” with HTTPS protocol. To export certificate after applying setting.
+Download and install SSL certificate on your browser to trust accessing your local domain “ZVDOMAIN_NAMEVZ” with HTTPS protocol. To export certificate after applying setting.
 Download Certificate
 Protokol
 Login user IP:
@@ -2809,6 +2834,7 @@ Chcete-li aktivovat WPS, změňte metodu ověření na WPA2 nebo WPA-automaticky
 Pokud chcete povolit funkci WPS, musíte nejdříve zakázat možnost skrytí identifikátoru SSID.
 Note: New patch will be updated regularly, please keep your firmware stay up to date.
 Položka oznámení
+Počet klientů
 Přejděte na <a href="https://iplookup.asus.com/nslookup.php" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">https://iplookup.asus.com/nslookup.php</a> a vyhledejte statickou adresu pro použití službou ASUS DDNS.
 OCN Virtual Connect
 OFDMA/802.11ax MU-MIMO
@@ -3524,7 +3550,7 @@ Vlastní konfigurace
 RT-AX53U automaticky vygeneruje soubor .ovpn klíčem Certifikační autority. Všem uživatelům připojujícím se k serveru OpenVPN nyní můžete poskytnout soubor .ovpn s uživatelským jménem a heslem.
 Chcete-li změnit nastavení serveru OpenVPN, přejděte na Pokročilá Nastavení
 Můžete změnit výchozí nastavení serveru OpenVPN a poskytnout upravený soubor OPVN pro konkrétní typ připojení.
-If your WAN IP address is dynamic, please click <a href="http://router.asus.com/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
+If your WAN IP address is dynamic, please click <a href="http://ZVDOMAIN_NAMEVZ/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
 Přidělit z DHCP
 Šifrovací šifra
 Konflikt směrování! <p>Zkontrolujte nastavení IP adresy klienta na stránce Pokročilá nastavení nebo v tabulce směrování v Protokolu systému.
@@ -3745,7 +3771,8 @@ Heslo pro připojení k serveru RADIUS.
 Skryté připojení
 Číslo portu UDP pro připojení k serveru RADIUS.
 Port serveru
-WiFi Agile Multiband
+Vícepásmové připojení Wi-Fi Agile
+*Pokud je aktivní vícepásmové připojení WiFi Agile, je nutné povolit chráněné rámce pro správu.(Možnost Aktivní nebo Povinné)
 Toto pole povoluje způsob přihlášení pro klienty bezdrátového připojení.
 Způsob přihlášení
 Pro zajištění optimálního bezdrátového signálu doporučujeme nastavit kanál směrovače na Kanál 2. Chcete-li nastavit kanál směrovače na Kanál 2, klepněte na tlačítko OK. V opačném případě klepněte na tlačítko Storno.
@@ -4106,7 +4133,7 @@ Nelze nastavit jako výchozí WAN pro cílovou zásadu.
 Beta test only
 You can also select [Cancel], the device will automatically start downloading the update during the night time.
 Pokud používáte kabelový modem nebo modem se statickou IP adresou, zkuste provést následující:
-Once the new SSID is connected, go back to router.asus.com for more advanced settings.
+Once the new SSID is connected, go back to ZVDOMAIN_NAMEVZ for more advanced settings.
 Disable Web Access from WAN will not allow you to control your router via $Apps$ from Internet. Do you want to continue?
 ASUS ROUTER APP
 Alexa enabled device or IFTTT
@@ -4141,7 +4168,7 @@ GeForce Now
 Výběrem GeForce Now budou upřednostněna zařízení GeForce Now pro zážitek z rychlejšího a lepšího hraní.
 LED On/Off
 The LED on/off control is used to turn off all LEDs includes Aura light.
-To enable Aura RGB, LED must remain on. Please turn on LED by pressing hardware button on the router for 3 seconds or enable it via web/app interface.
+Pro aktivaci Aura RGB musí být LED dioda zapnutá. Zapněte LED stisknutím hardwarového tlačítka na routeru na 3 sekundy nebo ji aktivujte přes rozhraní webu/aplikace.
 Událost
 Systém rozpoznává následující události a aktivuje různé efekty LED.
 Při aktivaci Game Boost se na panelu LED zobrazí červený efekt pulzování.
@@ -4209,7 +4236,7 @@ Pokračujte kliknutím sem.
 Více podrobností získáte naskenováním QR kódu.
 Chcete přesto otevírat stránku nastavení prostřednictvím <span>protokolu HTTP</span>?
 Při používání protokolu HTTPS se může zobrazit výše uvedená zpráva s upozorněním pro ověření identity zařízení podle požadavků prohlížeče.
-Propojení mezi prohlížečem a stránkou nastavení routeru ASUS (router.asus.com) zůstává navzdory této zprávě s upozorněním bezpečné.
+Propojení mezi prohlížečem a stránkou nastavení routeru ASUS (ZVDOMAIN_NAMEVZ) zůstává navzdory této zprávě s upozorněním bezpečné.
 Tuto zprávu již nezobrazovat
 HTTP je méně bezpečný protokol pro přístup k webu. Chcete přesto otevírat stránku nastavení prostřednictvím protokolu HTTP?
 256,1024-QAM

@@ -236,10 +236,10 @@ if(smart_connect_nvram == 1){
 wlObj.length = 1;
 if(parent.smart_connect_support){
 if(parent.band5g2_support){
-wlObj[0].band = "<#3140#>";
+wlObj[0].band = "<#3166#>";
 }
 else{
-wlObj[0].band = "<#3139#>";
+wlObj[0].band = "<#3165#>";
 }
 }
 }
@@ -252,10 +252,10 @@ else if(applyParam.smartConnect == 1){
 wlObj.length = 1;
 if(parent.smart_connect_support){
 if(parent.band5g2_support){
-wlObj[0].band = "<#3140#>";
+wlObj[0].band = "<#3166#>";
 }
 else{
-wlObj[0].band = "<#3139#>";
+wlObj[0].band = "<#3165#>";
 }
 }
 }
@@ -361,16 +361,16 @@ wlHintHtml += '<meta content="telephone=no" name="format-detection"><meta name="
 wlHintHtml += '<div id="wlHint">';
 wlHintHtml += '<div class="div_table main_field_gap">';
 wlHintHtml += '<div class="div_tr">';
-wlHintHtml += '<div class="prod_madelName"><div class="title_name"><div class="div_td img_gap"><div class="login_img"></div></div><div class="div_td"><#839#></div></div></div>';
+wlHintHtml += '<div class="prod_madelName"><div class="title_name"><div class="div_td img_gap"><div class="login_img"></div></div><div class="div_td"><#843#></div></div></div>';
 wlHintHtml += '<div id="login_filed">';
 wlHintHtml += "<div class='p1 title_gap'><#218#></div>";
 if(typeof updateFlag != "undefined") wlHintHtml += "<div class='p1 title_gap yellow'>Firmware upgrade is done.</div>";
 for(var i=0; i<wlObj.length; i++){
 wlHintHtml += '<div class="p1 title_gap">'+ wlObj[i].band +'</div>';
 wlHintHtml += '<div class="nologin">';
-wlHintHtml += '<#558#>: <b>';
+wlHintHtml += '<#562#>: <b>';
 wlHintHtml += wlObj[i].ssid + '</b><br>';
-wlHintHtml += '<#423#>: <b>';
+wlHintHtml += '<#427#>: <b>';
 wlHintHtml += (wlObj[i].key == "") ? "Open System" : wlObj[i].key;
 wlHintHtml += '</b></div>';
 }
@@ -548,9 +548,9 @@ setTimeout("showdr_advise('finish');", (restart_time+1)*1000);
 }
 else if(getflag == "adv_ap_mode"){
 /*if(parent.findasus_support){
-parent.parent.document.getElementById('drword').innerHTML = "<#433#>";
+parent.parent.document.getElementById('drword').innerHTML = "<#437#>";
 }else{*/
-parent.parent.document.getElementById('drword').innerHTML = "<#366#>.<#345#>";
+parent.parent.document.getElementById('drword').innerHTML = "<#370#>.<#349#>";
 setTimeout("parent.parent.hideLoading(); ",15000);
 setTimeout("parent.parent.dr_advise();",15000);
 }

@@ -18,13 +18,13 @@ remoteIP = (remoteIP == '')?'<% nvram_get("lan_gateway_now"); %>';
 var re_status = parent.getConnectingStatus();
 function initial(){
 if(re_status == -1){
-showtext(document.getElementById("Connstatus"), "<#455#>");
+showtext(document.getElementById("Connstatus"), "<#459#>");
 document.getElementById("remoteIP_tr").style.display = "none";
 setTimeout("set_re_status();",6000);
 }
 else
 set_re_status();
-document.getElementById("remoteIP_span").innerHTML = (remoteIP == "")?"<#1395#>":remoteIP;
+document.getElementById("remoteIP_span").innerHTML = (remoteIP == "")?"<#1400#>":remoteIP;
 }
 function set_re_status(){
 re_status = parent.getConnectingStatus();
@@ -33,7 +33,7 @@ showtext(document.getElementById("Connstatus"), "<#189#>");
 document.getElementById("remoteIP_tr").style.display = "";
 }
 else{
-showtext(document.getElementById("Connstatus"), "<#1648#>");
+showtext(document.getElementById("Connstatus"), "<#1654#>");
 document.getElementById("remoteIP_tr").style.display = "none";
 }
 }
@@ -42,16 +42,16 @@ document.getElementById("remoteIP_tr").style.display = "none";
 <body class="statusbody" onload="initial();">
 <table width="95%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="table1px">
 <tr>
-<th width="120"><#484#></th>
+<th width="120"><#488#></th>
 <td width="150"><span id="Connstatus"></span></td>
 </tr>
 <tr id="remoteIP_tr">
-<th><#1396#></th>
+<th><#1401#></th>
 <td><span id="remoteIP_span"></span></td>
 </tr>
 <tr>
-<th><#1397#></th>
-<td><input type="button" class="button_gen" value="<#1516#>" onclick="javascript:parent.location.href='../survey.htm';"></td>
+<th><#1402#></th>
+<td><input type="button" class="button_gen" value="<#1521#>" onclick="javascript:parent.location.href='../survey.htm';"></td>
 </tr>
 </table>
 </body>

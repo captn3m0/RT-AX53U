@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#838#> - <#282#></title>
+<title><#842#> - <#282#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="usp_style.css">
@@ -243,13 +243,13 @@ if(slicesb > 0)
 htmlcode += 'margin-top:20px;';
 htmlcode += '"><tr><th align="left" width="160px">';
 htmlcode += '<table id="GNW_'+GN_band+'G" class="gninfo_th_table" align="left" style="margin:auto;border-collapse:collapse;">';
-htmlcode += '<tr><th align="left" style="height:40px;"><#558#></th></tr>';
+htmlcode += '<tr><th align="left" style="height:40px;"><#562#></th></tr>';
 if(!lyra_hide_support)
-htmlcode += "<tr><th align=\"left\" style=\"height:40px;\"><#3749#></th></tr>";
-htmlcode += '<tr><th align="left" style="height:40px;"><#423#></th></tr>';
-htmlcode += '<tr><th align="left" style="height:40px;"><#2741#></th></tr>';
+htmlcode += "<tr><th align=\"left\" style=\"height:40px;\"><#3776#></th></tr>";
+htmlcode += '<tr><th align="left" style="height:40px;"><#427#></th></tr>';
+htmlcode += '<tr><th align="left" style="height:40px;"><#2766#></th></tr>';
 if(sw_mode != "3"){
-htmlcode += '<tr><th align="left" style="width:20%;height:28px;"><#866#></th></tr>';
+htmlcode += '<tr><th align="left" style="width:20%;height:28px;"><#871#></th></tr>';
 }
 htmlcode += '<tr><th align="left" style="height:40px;"></th></tr>';
 htmlcode += '</table></th>';
@@ -324,7 +324,7 @@ var amazon_wss_if_support = (amazon_wss_support && httpApi.amazon_wss.if_support
 var amazon_wss_status = (amazon_wss_support && httpApi.amazon_wss.getStatue(unit, subunit) == "1") ? true : false;
 htmlcode += '<td style="position:relative;"><table id="GNW_'+GN_band+'G'+i+'" class="gninfo_table" align="center" style="margin:auto;border-collapse:collapse;">';
 if(amazon_wss_if_support && amazon_wss_status){
-htmlcode += '<tr><td align="center"><input type="button" class="button_gen" value="<#1512#>" onclick="remove_amazon_wss('+ unit +','+ subunit +');"></td></tr>';
+htmlcode += '<tr><td align="center"><input type="button" class="button_gen" value="<#1517#>" onclick="remove_amazon_wss('+ unit +','+ subunit +');"></td></tr>';
 }
 else{
 if(gn_array[i][0] == "1"){
@@ -355,20 +355,20 @@ if(show_str.length <= 0)
 show_str = "&nbsp; ";
 htmlcode += '<tr><td align="center" onclick="change_guest_unit('+ unit +','+ subunit +');">'+ show_str +'</td></tr>';
 if(gn_array[i][11] == 0)
-htmlcode += '<tr><td align="center" onclick="change_guest_unit('+ unit +','+ subunit +');"><#2579#></td></tr>';
+htmlcode += '<tr><td align="center" onclick="change_guest_unit('+ unit +','+ subunit +');"><#2604#></td></tr>';
 else{
 var expire_day = Math.floor(gn_array[i][13]/86400);
 var expire_hr = Math.floor((gn_array[i][13]%86400)/3600);
 var expire_min = Math.floor((gn_array[i][13]%3600)/60);
 if(expire_day > 0)
-htmlcode += '<tr><td align="center" onclick="change_guest_unit('+ unit +','+ subunit +');"><b id="expire_day_'+i+'">'+ expire_day + '</b> <#1684#> <b id="expire_hr_'+i+'">'+ expire_hr + '</b> <#2255#> <b id="expire_min_'+i+'">' + expire_min +'</b> <#2632#></td></tr>';
+htmlcode += '<tr><td align="center" onclick="change_guest_unit('+ unit +','+ subunit +');"><b id="expire_day_'+i+'">'+ expire_day + '</b> <#1690#> <b id="expire_hr_'+i+'">'+ expire_hr + '</b> <#2280#> <b id="expire_min_'+i+'">' + expire_min +'</b> <#2657#></td></tr>';
 else if(expire_hr > 0)
-htmlcode += '<tr><td align="center" onclick="change_guest_unit('+ unit +','+ subunit +');"><b id="expire_hr_'+i+'">'+ expire_hr + '</b> <#2255#> <b id="expire_min_'+i+'">' + expire_min +'</b> <#2632#></td></tr>';
+htmlcode += '<tr><td align="center" onclick="change_guest_unit('+ unit +','+ subunit +');"><b id="expire_hr_'+i+'">'+ expire_hr + '</b> <#2280#> <b id="expire_min_'+i+'">' + expire_min +'</b> <#2657#></td></tr>';
 else{
 if(expire_min > 0)
-htmlcode += '<tr><td align="center" onclick="change_guest_unit('+ unit +','+ subunit +');"><b id="expire_min_'+i+'">' + expire_min +'</b> <#2632#></td></tr>';
+htmlcode += '<tr><td align="center" onclick="change_guest_unit('+ unit +','+ subunit +');"><b id="expire_min_'+i+'">' + expire_min +'</b> <#2657#></td></tr>';
 else
-htmlcode += '<tr><td align="center" onclick="change_guest_unit('+ unit +','+ subunit +');"><b id="expire_min_'+i+'">< 1</b> <#2632#></td></tr>';
+htmlcode += '<tr><td align="center" onclick="change_guest_unit('+ unit +','+ subunit +');"><b id="expire_min_'+i+'">< 1</b> <#2657#></td></tr>';
 }
 }
 }
@@ -376,18 +376,18 @@ else {
 htmlcode += '<tfoot><tr rowspan="3"><td align="center"><span style="color:#FFCC00;">Used by ' + captive_portal_used_wl_array["wl" + unit_subunit] + '</span></td></tr></tfoot>';
 }
 }else{
-htmlcode += '<tfoot><tr rowspan="3"><td align="center"><input type="button" class="button_gen" value="<#3809#>" onclick="create_guest_unit('+ unit +','+ subunit +');"></td></tr></tfoot>';
+htmlcode += '<tfoot><tr rowspan="3"><td align="center"><input type="button" class="button_gen" value="<#3836#>" onclick="create_guest_unit('+ unit +','+ subunit +');"></td></tr></tfoot>';
 }
 if(sw_mode != "3"){
 if(gn_array[i][0] == "1" && control_setting_flag && !amazon_wss_if_support){
-var status_Access_Intranet = (gn_array[i][12]=="on")?"<#3809#>":"<#1512#>";
+var status_Access_Intranet = (gn_array[i][12]=="on")?"<#3836#>":"<#1517#>";
 htmlcode += '<tr><td align="center" onclick="change_guest_unit('+ unit +','+ subunit +');">'+ status_Access_Intranet +'</td></tr>';
 }
 }
 if(gn_array[i][0] == "1" && control_setting_flag){
 if(captive_portal_used_wl_array["wl" + unit_subunit] == undefined) {
 htmlcode += '<tr><td align="center" class="gninfo_table_bottom"></td></tr>';
-htmlcode += '<tfoot><tr><td align="center"><input type="button" class="button_gen" value="<#1512#>" onclick="close_guest_unit('+ unit +','+ subunit +');"></td></tr></tfoot>';
+htmlcode += '<tfoot><tr><td align="center"><input type="button" class="button_gen" value="<#1517#>" onclick="close_guest_unit('+ unit +','+ subunit +');"></td></tr></tfoot>';
 }
 else {
 if(captive_portal_used_wl_array["wl" + unit_subunit] != "Facebook WiFi")
@@ -400,15 +400,15 @@ if(amazon_wss_if_support){
 if(amazon_wss_status)
 htmlcode += '<div style="font-size:12px;font-weight:bolder;color:#FC0;position:absolute;text-align:center;width:100%;">Used by <br>Amazon WiFi Simple Setup</div>';/* untranslated */
 else
-htmlcode += '<div style="position:absolute;margin-top:10px;text-align:center;""><input type="button" class="button_gen" style="word-break:break-word;"value="<#3939#>" onclick="enable_amazon_wss('+ unit +','+ subunit +');"></div>';
+htmlcode += '<div style="position:absolute;margin-top:10px;text-align:center;""><input type="button" class="button_gen" style="word-break:break-word;"value="<#3966#>" onclick="enable_amazon_wss('+ unit +','+ subunit +');"></div>';
 }
 if(lyra_hide_support){
 if(i == "0")
-htmlcode += '<div id="smart_home_'+unit+'" style="font-size:12px;font-weight:bolder;color:#FC0;position:absolute;text-align:center;display:none;width:100%;"><#2228#></div>';
+htmlcode += '<div id="smart_home_'+unit+'" style="font-size:12px;font-weight:bolder;color:#FC0;position:absolute;text-align:center;display:none;width:100%;"><#2234#></div>';
 }
 else{
 if(i == (gn_array_length-1))
-htmlcode += '<div id="smart_home_'+unit+'" style="font-size:12px;font-weight:bolder;color:#FC0;position:absolute;text-align:center;display:none;width:100%;"><#2228#></div>';
+htmlcode += '<div id="smart_home_'+unit+'" style="font-size:12px;font-weight:bolder;color:#FC0;position:absolute;text-align:center;display:none;width:100%;"><#2234#></div>';
 }
 htmlcode += '</td>';
 all_gn_status.push({"idx" : unit_subunit, "enable" : (gn_array[i][0] == '1'), "bw_enabled" : (gn_array[i][18] == '1')});
@@ -452,7 +452,7 @@ return false;
 if(gn_array_2g_tmp.length > 0){
 htmlcode += '<table style="margin-left:20px;margin-bottom:25px;" width="95%" align="center" cellpadding="4" cellspacing="0" class="gninfo_head_table" id="gninfo_table_2g">';
 htmlcode += '<tr id="2g_title"><td align="left" style="color:#5AD;font-size:16px; border-bottom:1px dashed #AAA;"><span>2.4 GHz</span>';
-htmlcode += '<span id="2g_radio_hint" style="font-size: 14px;display:none;color:#FC0;margin-left:17px;">* <#2237#> <a style="font-family:Lucida Console;color:#FC0;text-decoration:underline;cursor:pointer;" onclick="_change_wl_unit_status(0);"><#1516#></a></span></td></tr>';
+htmlcode += '<span id="2g_radio_hint" style="font-size: 14px;display:none;color:#FC0;margin-left:17px;">* <#2243#> <a style="font-family:Lucida Console;color:#FC0;text-decoration:underline;cursor:pointer;" onclick="_change_wl_unit_status(0);"><#1521#></a></span></td></tr>';
 while(gn_array_2g_tmp.length > 4){
 htmlcode += '<tr><td>';
 htmlcode += gen_gntable_tr(0, gn_array_2g_tmp.slice(0, 4), band2sb);
@@ -480,7 +480,7 @@ htmlcode5 += '<span>5 GHz-1</span>';
 }
 else
 htmlcode5 += '<span>5 GHz</span>';
-htmlcode5 += '<span id="5g_radio_hint" style="font-size: 14px;display:none;color:#FC0;margin-left:17px;">* <#2237#> <a style="font-family:Lucida Console;color:#FC0;text-decoration:underline;cursor:pointer;" onclick="_change_wl_unit_status(1);"><#1516#></a></span></td></tr>';
+htmlcode5 += '<span id="5g_radio_hint" style="font-size: 14px;display:none;color:#FC0;margin-left:17px;">* <#2243#> <a style="font-family:Lucida Console;color:#FC0;text-decoration:underline;cursor:pointer;" onclick="_change_wl_unit_status(1);"><#1521#></a></span></td></tr>';
 while(gn_array_5g_tmp.length > 4){
 htmlcode5 += '<tr><td >';
 htmlcode5 += gen_gntable_tr(1, gn_array_5g_tmp.slice(0, 4), band5sb);
@@ -503,7 +503,7 @@ htmlcode5_2 += '<tr id="5g_2_title"><td align="left" style="color:#5AD; font-siz
 else{
 htmlcode5_2 += '<tr id="5g_2_title"><td align="left" style="color:#5AD; font-size:16px; border-bottom:1px dashed #AAA;"><span>5 GHz-2</span>';
 }
-htmlcode5_2 += '<span id="5g_2_radio_hint" style="font-size: 14px;display:none;color:#FC0;margin-left:17px;">* <#2237#> <a style="font-family:Lucida Console;color:#FC0;text-decoration:underline;cursor:pointer;" onclick="_change_wl_unit_status(1);"><#1516#></a></span></td></tr>';
+htmlcode5_2 += '<span id="5g_2_radio_hint" style="font-size: 14px;display:none;color:#FC0;margin-left:17px;">* <#2243#> <a style="font-family:Lucida Console;color:#FC0;text-decoration:underline;cursor:pointer;" onclick="_change_wl_unit_status(1);"><#1521#></a></span></td></tr>';
 while(gn_array_5g_2_tmp.length > 4){
 htmlcode5_2 += '<tr><td >';
 htmlcode5_2 += gen_gntable_tr(2, gn_array_5g_2_tmp.slice(0, 4), band5sb_2);
@@ -521,7 +521,7 @@ check_bw_status(gn_array_5g_2_tmp);
 if(wl_info.band60g_support) {
 htmlcode60 += '<table style="margin-left:20px;margin-bottom:25px;" width="95%" align="center" cellpadding="4" cellspacing="0" class="gninfo_head_table" id="gninfo_table_60g">';
 htmlcode60 += '<tr id="60g_title"><td align="left" style="color:#5AD; font-size:16px; border-bottom:1px dashed #AAA;"><span>60 GHz</span></td></tr>';
-htmlcode60 += '<tr><td><span style="font-size: 14px;color:#FC0;"><#1658#></span></td></tr>';
+htmlcode60 += '<tr><td><span style="font-size: 14px;color:#FC0;"><#1664#></span></td></tr>';
 htmlcode60 += '</table>';
 document.getElementById("guest_table60").innerHTML = htmlcode60;
 }
@@ -537,7 +537,7 @@ add_option(o, "mbss_"+arr, arr, 0);
 var reboot_confirm=0;
 function applyRule(){
 var auth_mode = document.form.wl_auth_mode_x.value;
-if(document.form.wl_wpa_psk.value == "<#3738#>")
+if(document.form.wl_wpa_psk.value == "<#3764#>")
 document.form.wl_wpa_psk.value = "";
 if(validForm()){
 updateMacList();
@@ -687,7 +687,7 @@ return false;
 }
 var is_common_string = check_common_string(document.form.wl_wpa_psk.value, "wpa_key");
 if(is_common_string){
-if(!confirm("<#312#>")){
+if(!confirm("<#316#>")){
 document.form.wl_wpa_psk.focus();
 document.form.wl_wpa_psk.select();
 return false;
@@ -701,29 +701,29 @@ return false;
 }
 if(document.form.wl_expire_radio[0].checked){
 if(document.form.wl_expire_day.value==0 && (document.form.wl_expire_hr.value=="" || document.form.wl_expire_hr.value==0) & (document.form.wl_expire_min.value=="" || document.form.wl_expire_min.value==0)){
-alert("<#316#>");
+alert("<#320#>");
 document.form.wl_expire_min.focus();
 return false;
 }
 }
 if(document.form.bw_enabled_x[0].checked){
 if(document.form.wl_bw_dl_x.value == ""){
-alert("<#316#>");
+alert("<#320#>");
 document.form.wl_bw_dl_x.focus();
 return false;
 }
 if(document.form.wl_bw_dl_x.value.split(".").length > 2 || document.form.wl_bw_dl_x.value < 0.1){
-alert("<#2630#> : 0.1 Mb/s");
+alert("<#2655#> : 0.1 Mb/s");
 document.form.wl_bw_dl_x.focus();
 return false;
 }
 if(document.form.wl_bw_ul_x.value == ""){
-alert("<#316#>");
+alert("<#320#>");
 document.form.wl_bw_ul_x.focus();
 return false;
 }
 if(document.form.wl_bw_ul_x.value.split(".").length > 2 || document.form.wl_bw_ul_x.value < 0.1){
-alert("<#2630#> : 0.1 Mb/s");
+alert("<#2655#> : 0.1 Mb/s");
 document.form.wl_bw_ul_x.focus();
 return false;
 }
@@ -923,7 +923,7 @@ if(lyra_hide_support){
 document.form.wl_crypto.value = "aes";
 document.getElementById("wl_auth_mode_tr").style.display = "none";
 document.getElementById("wl_crypt_tr").style.display = "none";
-document.getElementById("psk_title").innerHTML = "<#423#>";
+document.getElementById("psk_title").innerHTML = "<#427#>";
 inputCtrl(document.form.wl_macmode, 0);
 inputCtrl(document.form.wl_lanaccess, 1);
 }
@@ -1010,7 +1010,7 @@ var code = "";
 var clientListEventData = [];
 code +='<table width="80%" border="1" cellspacing="0" cellpadding="4" align="center" class="list_table" id="wl_maclist_x_table">';
 if(Object.keys(manually_maclist_list_array).length == 0)
-code +='<tr><td style="color:#FFCC00;"><#2382#></td></tr>';
+code +='<tr><td style="color:#FFCC00;"><#2407#></td></tr>';
 else{
 var userIconBase64 = "NoIcon";
 var clientName, deviceType, deviceVender;
@@ -1085,11 +1085,11 @@ var rule_num = document.getElementById('wl_maclist_x_table').rows.length;
 var item_num = document.getElementById('wl_maclist_x_table').rows[0].cells.length;
 var mac = obj.value.toUpperCase();
 if(rule_num >= upper){
-alert("<#2454#> " + upper + " <#2455#>");
+alert("<#2479#> " + upper + " <#2480#>");
 return false;
 }
 if(mac==""){
-alert("<#316#>");
+alert("<#320#>");
 obj.focus();
 obj.select();
 return false;
@@ -1101,7 +1101,7 @@ return false;
 for(i=0; i<rule_num; i++){
 for(j=0; j<item_num-1; j++){
 if(manually_maclist_list_array[mac] != null){
-alert("<#2447#>");
+alert("<#2472#>");
 return false;
 }
 }
@@ -1122,7 +1122,7 @@ var tmp_value = "";
 Object.keys(manually_maclist_list_array).forEach(function(key) {
 tmp_value += "<" + key;
 });
-if(tmp_value == "<"+"<#2382#>" || tmp_value == "<")
+if(tmp_value == "<"+"<#2407#>" || tmp_value == "<")
 tmp_value = "";
 document.form.wl_maclist_x.value = tmp_value;
 }
@@ -1137,7 +1137,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#348#>";
+document.getElementById("check_mac").innerHTML="<#352#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else if(flag ==2){
@@ -1145,7 +1145,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#309#>";
+document.getElementById("check_mac").innerHTML="<#313#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else{
@@ -1180,7 +1180,7 @@ if(flag == "1"){
 document.form.bw_enabled_x[0].checked = true;
 var show_hint_content = "";
 if(ctf_disable_orig == '0'){ //brcm NAT Acceleration turned ON
-show_hint_content += "<br><#2231#>";
+show_hint_content += "<br><#2237#>";
 }
 if(QoS_enable_orig == "0"){
 show_hint_content += "<br><#157#>";
@@ -1307,14 +1307,14 @@ applyRule();
 <table cellpadding="4" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center">
 <tr>
 <td>
-<div class="drword" id="drword"><#367#> <#364#>...
+<div class="drword" id="drword"><#371#> <#368#>...
 <br/>
-<div id="disconnect_hint" style="display:none;"><#365#></div>
+<div id="disconnect_hint" style="display:none;"><#369#></div>
 <br/>
 </div>
 <div id="wireless_client_detect" style="margin-left:10px;position:absolute;display:none;width:400px;">
 <img src="images/loading.gif">
-<div style="margin:-55px 0 0 75px;"><#688#></div>
+<div style="margin:-55px 0 0 75px;"><#692#></div>
 </div>
 <div class="drImg"><img src="images/alertImg.png"></div>
 <div style="height:100px; "></div>
@@ -1395,8 +1395,8 @@ applyRule();
 <img id="guest_image" src="/images/New_ui/network_config.png">
 </td>
 <td>
-<div id="gn_desc" class="formfontdesc" style="font-style: italic;font-size: 14px;"><#2236#></div>
-<div id="nat_off_hint" class="formfontdesc" style="color:#FC0;display:none;"><#2747#></div>
+<div id="gn_desc" class="formfontdesc" style="font-style: italic;font-size: 14px;"><#2242#></div>
+<div id="nat_off_hint" class="formfontdesc" style="color:#FC0;display:none;"><#2772#></div>
 </td>
 </tr>
 </table>
@@ -1419,7 +1419,7 @@ applyRule();
 </span>
 </td>
 <td width="30%" style="text-align:center;">
-<input name="button" type="button" class="button_gen" onclick="location.href='/Guest_network_fbwifi.asp'" value="<#1516#>"/>
+<input name="button" type="button" class="button_gen" onclick="location.href='/Guest_network_fbwifi.asp'" value="<#1521#>"/>
 </td>
 </tr>
 </table>
@@ -1428,17 +1428,17 @@ applyRule();
 <table style="margin-left:20px;margin-bottom:25px;" width="95%" align="center" cellpadding="4" cellspacing="0" class="gninfo_head_table">
 <tr>
 <td align="left" style="color:#5AD; font-size:16px; border-bottom:1px dashed #AAA;" colspan="2">
-<span><#3939#></span>
+<span><#3966#></span>
 </td>
 </tr>
 <tr>
 <td>
-<span style="line-height:20px;"><#3940#></span>&nbsp;
-<a id="faq_amazon" style="color:#FC0;text-decoration:underline;cursor:pointer;" href="https://www.amazon.com/gp/help/customer/display.html/?nodeId=GMPKVYDBR223TRPY" target="_blank"><#2576#></a>
+<span style="line-height:20px;"><#3967#></span>&nbsp;
+<a id="faq_amazon" style="color:#FC0;text-decoration:underline;cursor:pointer;" href="https://www.amazon.com/gp/help/customer/display.html/?nodeId=GMPKVYDBR223TRPY" target="_blank"><#2601#></a>
 <br>
-<span><#3941#></span>
+<span><#3968#></span>
 <br>
-<span id="amazon_wss_hint" style="color:#FC0;line-height:20px;"><#2140#>&nbsp;<#3942#></span>
+<span id="amazon_wss_hint" style="color:#FC0;line-height:20px;"><#2146#>&nbsp;<#3969#></span>
 </td>
 </tr>
 <tr>
@@ -1451,7 +1451,7 @@ applyRule();
 </div>
 <table width="80%" border="1" align="center" style="margin-top:10px;display:none" cellpadding="4" cellspacing="0" id="gnset_table" class="FormTable gn_set_table_bg">
 <tr id="wl_unit_field" style="display:none">
-<th><#2299#></th>
+<th><#2324#></th>
 <td>
 <select name="wl_unit" class="input_option" onChange="change_wl_unit();" style="display:none">
 <option id="wl_opt0" class="content_input_fd" value="0" <% nvram_match("wl_unit", "0","selected"); %>>2.4 GHz</option>
@@ -1467,13 +1467,13 @@ applyRule();
 </td>
 </tr>
 <tr id="gn_index_tr">
-<th><#2234#></th>
+<th><#2240#></th>
 <td>
 <p id="wl_vifname"></p>
 </td>
 </tr>
 <tr style="display:none">
-<th><#2232#></th>
+<th><#2238#></th>
 <td>
 <select id="wl_bss_enabled_field" name="wl_bss_enabled" class="input_option">
 <option class="content_input_fd" value="0" <% nvram_match("wl_bss_enabled", "0","selected"); %>><#186#></option>
@@ -1482,20 +1482,20 @@ applyRule();
 </td>
 </tr>
 <tr class="captive_portal_control_class">
-<th><#3832#></th>
+<th><#3859#></th>
 <td>
 <input type="radio" value="1" name="wl_closed" class="content_input_fd" ><#187#>
 <input type="radio" value="0" name="wl_closed" class="content_input_fd" ><#186#>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 1);"><#558#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 1);"><#562#></a></th>
 <td>
 <input type="text" maxlength="32" class="input_32_table" name="wl_ssid" value="<% nvram_get("wl_ssid"); %>" onkeypress="return validator.isString(this, event)" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 4);"><#3871#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 4);"><#3898#></a></th>
 <td>
 <select name="wl_nmode_x" class="input_option" onChange="wireless_mode_change(this);" disabled>
 <option value="0" <% nvram_match("wl_nmode_x", "0","selected"); %>><#153#></option>
@@ -1503,11 +1503,11 @@ applyRule();
 <option value="2" <% nvram_match("wl_nmode_x", "2","selected"); %>>Legacy</option>
 </select>
 <input type="checkbox" name="wl_gmode_check" id="wl_gmode_check" value="" onClick="wl_gmode_protection_check();"> b/g Protection</input>
-<!--span id="wl_nmode_x_hint" style="display:none"><#3917#></span-->
+<!--span id="wl_nmode_x_hint" style="display:none"><#3944#></span-->
 </td>
 </tr>
 <tr id="wl_channel_field">
-<th><a id="wl_channel_select" class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 3);"><#844#></a></th>
+<th><a id="wl_channel_select" class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 3);"><#849#></a></th>
 <td>
 <select name="wl_channel" class="input_option" onChange="insertExtChannelOption();" disabled>
 <% select_channel("WLANConfig11b"); %>
@@ -1515,7 +1515,7 @@ applyRule();
 </td>
 </tr>
 <tr id="wl_bw_field" style="display:none;">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 14);"><#3757#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 14);"><#3784#></a></th>
 <td>
 <select name="wl_bw" class="input_option" onChange="insertExtChannelOption();" disabled>
 <option class="content_input_fd" value="0" <% nvram_match("wl_bw", "0","selected"); %>>20 MHz</option>
@@ -1525,7 +1525,7 @@ applyRule();
 </td>
 </tr>
 <tr id="wl_nctrlsb_field">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 15);"><#3781#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 15);"><#3808#></a></th>
 <td>
 <select name="wl_nctrlsb" class="input_option" disabled>
 <option value="lower" <% nvram_match("wl_nctrlsb", "lower", "selected"); %>>lower</option>
@@ -1534,7 +1534,7 @@ applyRule();
 </td>
 </tr>
 <tr id="wl_auth_mode_tr">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 5);"><#3749#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 5);"><#3776#></a></th>
 <td>
 <select name="wl_auth_mode_x" class="input_option" onChange="authentication_method_change(this);">
 <option value="open" <% nvram_match("wl_auth_mode_x", "open", "selected"); %>>Open System</option>
@@ -1546,11 +1546,11 @@ applyRule();
 <option value="psk2sae" <% nvram_match("wl_auth_mode_x", "psk2sae","selected"); %>>WPA2/WPA3-Personal</option>
 </select>
 <br>
-<span id="wl_nmode_x_hint" style="display:none;"><#3917#></span>
+<span id="wl_nmode_x_hint" style="display:none;"><#3944#></span>
 </td>
 </tr>
 <tr id="wl_crypt_tr">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 6);"><#849#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 6);"><#854#></a></th>
 <td>
 <select name="wl_crypto" class="input_option" onChange="authentication_method_change(this);">
 <option value="aes" <% nvram_match("wl_crypto", "aes", "selected"); %>>AES</option>
@@ -1559,16 +1559,16 @@ applyRule();
 </td>
 </tr>
 <tr>
-<th><a id="psk_title" class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 7);"><#3882#></a></th>
+<th><a id="psk_title" class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 7);"><#3909#></a></th>
 <td>
 <input type="text" name="wl_wpa_psk" maxlength="64" class="input_32_table" value="<% nvram_get("wl_wpa_psk"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 9);"><#3807#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 9);"><#3834#></a></th>
 <td>
 <select name="wl_wep_x" class="input_option" onChange="wep_encryption_change(this);">
-<option value="0" <% nvram_match("wl_wep_x", "0", "selected"); %>><#843#></option>
+<option value="0" <% nvram_match("wl_wep_x", "0", "selected"); %>><#848#></option>
 <option value="1" <% nvram_match("wl_wep_x", "1", "selected"); %>>WEP-64bits</option>
 <option value="2" <% nvram_match("wl_wep_x", "2", "selected"); %>>WEP-128bits</option>
 </select>
@@ -1576,7 +1576,7 @@ applyRule();
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 10);"><#845#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 10);"><#850#></a></th>
 <td>
 <select name="wl_key" class="input_option" onChange="wep_key_index_change(this);">
 <option value="1" <% nvram_match("wl_key", "1","selected"); %>>1</option>
@@ -1587,40 +1587,40 @@ applyRule();
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#3802#></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#3829#></th>
 <td><input type="text" name="wl_key1" id="wl_key1" maxlength="32" class="input_32_table" value="<% nvram_get("wl_key1"); %>" onKeyUp="return change_wlkey(this, 'WLANConfig11b');" autocorrect="off" autocapitalize="off"></td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#3803#></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#3830#></th>
 <td><input type="text" name="wl_key2" id="wl_key2" maxlength="32" class="input_32_table" value="<% nvram_get("wl_key2"); %>" onKeyUp="return change_wlkey(this, 'WLANConfig11b');" autocorrect="off" autocapitalize="off"></td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#3804#></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#3831#></th>
 <td>
 <input type="text" name="wl_key3" id="wl_key3" maxlength="32" class="input_32_table" value="<% nvram_get("wl_key3"); %>" onKeyUp="return change_wlkey(this, 'WLANConfig11b');" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#3805#></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#3832#></th>
 <td>
 <input type="text" name="wl_key4" id="wl_key4" maxlength="32" class="input_32_table" value="<% nvram_get("wl_key4"); %>" onKeyUp="return change_wlkey(this, 'WLANConfig11b');" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 8);"><#3878#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 8);"><#3905#></a></th>
 <td>
 <input type="text" name="wl_phrase_x" maxlength="64" class="input_32_table" value="<% nvram_get("wl_phrase_x"); %>" onKeyUp="return is_wlphrase('WLANConfig11b', 'wl_phrase_x', this);" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr class="captive_portal_control_class">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 25);"><#869#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 25);"><#874#></a></th>
 <td>
 <input type="radio" value="1" name="wl_expire_radio" class="content_input_fd" onClick="">
-<select name="wl_expire_day" class="input_option"></select> <#1684#>
-<input type="text" maxlength="2" name="wl_expire_hr" class="input_3_table" value="" onKeyPress="return validator.isNumber(this,event);" onblur="validator.timeRange(this, 0);" autocorrect="off" autocapitalize="off"> <#2255#>
-<input type="text" maxlength="2" name="wl_expire_min" class="input_3_table" value="" onKeyPress="return validator.isNumber(this,event);" onblur="validator.timeRange(this, 1);" autocorrect="off" autocapitalize="off"> <#2632#>
+<select name="wl_expire_day" class="input_option"></select> <#1690#>
+<input type="text" maxlength="2" name="wl_expire_hr" class="input_3_table" value="" onKeyPress="return validator.isNumber(this,event);" onblur="validator.timeRange(this, 0);" autocorrect="off" autocapitalize="off"> <#2280#>
+<input type="text" maxlength="2" name="wl_expire_min" class="input_3_table" value="" onKeyPress="return validator.isNumber(this,event);" onblur="validator.timeRange(this, 1);" autocorrect="off" autocapitalize="off"> <#2657#>
 <br>
-<input type="radio" value="0" name="wl_expire_radio" class="content_input_fd" onClick=""><#2579#>
+<input type="radio" value="0" name="wl_expire_radio" class="content_input_fd" onClick=""><#2604#>
 </td>
 </tr>
 <tr id="bw_limiter_field" class="captive_portal_control_class">
@@ -1632,38 +1632,38 @@ applyRule();
 </td>
 </tr>
 <tr id="bw_limiter_settings">
-<th><#1428#></th>
+<th><#1433#></th>
 <td>
-<#1785#> <input type="text" id="wl_bw_dl_x" name="wl_bw_dl_x" maxlength="12" onkeypress="return validator.bandwidth_code(this, event);" class="input_12_table" value=""><label style="margin-left:2px;">Mb/s</label>
+<#1791#> <input type="text" id="wl_bw_dl_x" name="wl_bw_dl_x" maxlength="12" onkeypress="return validator.bandwidth_code(this, event);" class="input_12_table" value=""><label style="margin-left:2px;">Mb/s</label>
 <br><br>
-<#3422#> <input type="text" id="wl_bw_ul_x" name="wl_bw_ul_x" maxlength="12" onkeypress="return validator.bandwidth_code(this, event);" class="input_12_table" value=""><label style="margin-left:2px;">Mb/s</label>
+<#3448#> <input type="text" id="wl_bw_ul_x" name="wl_bw_ul_x" maxlength="12" onkeypress="return validator.bandwidth_code(this, event);" class="input_12_table" value=""><label style="margin-left:2px;">Mb/s</label>
 </td>
 </tr>
 <tr class="captive_portal_control_class">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 26);"><#866#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 26);"><#871#></a></th>
 <td>
 <select name="wl_lanaccess" class="input_option">
-<option value="on" <% nvram_match("wl_lanaccess", "on","selected"); %>><#3809#></option>
-<option value="off" <% nvram_match("wl_lanaccess", "off","selected"); %>><#1512#></option>
+<option value="on" <% nvram_match("wl_lanaccess", "on","selected"); %>><#3836#></option>
+<option value="off" <% nvram_match("wl_lanaccess", "off","selected"); %>><#1517#></option>
 </select>
 </td>
 </tr>
 <tr id="aimesh_sync_field" class="captive_portal_control_class">
-<th><#2235#></th>
+<th><#2241#></th>
 <td>
 <select name="wl_sync_node" class="input_option">
-<option class="content_input_fd" value="0" <% nvram_match("wl_sync_node", "0","selected"); %>><#3013#></option>
-<option class="content_input_fd" value="1" <% nvram_match("wl_sync_node", "1","selected"); %>><#1392#></option>
+<option class="content_input_fd" value="0" <% nvram_match("wl_sync_node", "0","selected"); %>><#3039#></option>
+<option class="content_input_fd" value="1" <% nvram_match("wl_sync_node", "1","selected"); %>><#1397#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th><#1865#></th>
+<th><#1871#></th>
 <td>
 <select name="wl_macmode" class="input_option">
-<option class="content_input_fd" value="disabled" <% nvram_match("wl_macmode", "disabled","selected"); %>><#1512#></option>
-<option class="content_input_fd" value="allow" <% nvram_match("wl_macmode", "allow","selected"); %>><#2067#></option>
-<option class="content_input_fd" value="deny" <% nvram_match("wl_macmode", "deny","selected"); %>><#2068#></option>
+<option class="content_input_fd" value="disabled" <% nvram_match("wl_macmode", "disabled","selected"); %>><#1517#></option>
+<option class="content_input_fd" value="allow" <% nvram_match("wl_macmode", "allow","selected"); %>><#2073#></option>
+<option class="content_input_fd" value="deny" <% nvram_match("wl_macmode", "deny","selected"); %>><#2074#></option>
 </select>
 <script>
 document.form.wl_macmode.onchange = function(){
@@ -1677,17 +1677,17 @@ document.getElementById("maclistMain").style.display = (this.value == "disabled"
 <table id="maclistTable" width="80%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table">
 <thead>
 <tr>
-<td colspan="2"><#2066#>&nbsp;(<#2586#>&nbsp;16)</td>
+<td colspan="2"><#2072#>&nbsp;(<#2611#>&nbsp;16)</td>
 </tr>
 </thead>
 <tr>
-<th width="80%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);"><#1526#> (<#2924#>)</th>
-<th width="20%"><#2585#></th>
+<th width="80%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);"><#1532#> (<#2950#>)</th>
+<th width="20%"><#2610#></th>
 </tr>
 <tr>
 <td width="80%">
 <input type="text" maxlength="17" class="input_macaddr_table" name="wl_maclist_x_0" onKeyPress="return validator.isHWAddr(this,event)" onClick="hideClients_Block();" autocorrect="off" autocapitalize="off" placeholder="ex: <% nvram_get("lan_hwaddr"); %>" style="width:255px;">
-<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;display:none;" onclick="pullWLMACList(this);" title="<#3071#>">
+<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;display:none;" onclick="pullWLMACList(this);" title="<#3097#>">
 <div id="WL_MAC_List_Block" class="clientlist_dropdown" style="margin-left:107px;"></div>
 </td>
 <td width="20%">

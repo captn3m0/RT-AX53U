@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#838#> - <#381#></title>
+<title><#842#> - <#385#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <style>
@@ -65,7 +65,7 @@ show_menu();
 regen_band(document.form.wl_unit);
 if(lantiq_support){
 checkWLReady();
-var mode_desc = ["<#3823#>"];
+var mode_desc = ["<#3850#>"];
 var mode_value = ["2"];
 add_options_x2(document.form.wl_mode_x, mode_desc, mode_value, "2");
 }
@@ -94,7 +94,7 @@ document.getElementById("submitBtn").style.display = "none";
 document.getElementById("wds_list_title_field").style.display = "none";
 document.getElementById("wds_list_add_delete_field").style.display = "none";
 document.getElementById("wds_list_add_field").style.display = "none";
-document.getElementById("repeaterModeHint_desc").innerHTML = "<#1658#>";
+document.getElementById("repeaterModeHint_desc").innerHTML = "<#1664#>";
 document.getElementById("repeaterModeHint").style.display = "";
 }
 else{
@@ -127,7 +127,7 @@ var wl_wdslist_row = wl_wdslist_array.split('&#60');
 var code = "";
 code +='<table width="100%" border="1" cellspacing="0" cellpadding="4" align="center" class="list_table" id="wl_wdslist_table">';
 if(wl_wdslist_row.length == 1){
-code +='<tr><td style="color:#FFCC00;"><#2382#></td>';
+code +='<tr><td style="color:#FFCC00;"><#2407#></td>';
 }
 else{
 for(var i = 1; i < wl_wdslist_row.length; i++){
@@ -155,11 +155,11 @@ function addRow(obj, upper){
 var rule_num = document.getElementById('wl_wdslist_table').rows.length;
 var item_num = document.getElementById('wl_wdslist_table').rows[0].cells.length;
 if(rule_num >= upper){
-alert("<#2454#> " + upper + " <#2455#>");
+alert("<#2479#> " + upper + " <#2480#>");
 return false;
 }
 if(obj.value==""){
-alert("<#316#>");
+alert("<#320#>");
 obj.focus();
 obj.select();
 return false;
@@ -171,7 +171,7 @@ return false;
 for(i=0; i<rule_num; i++){
 for(j=0; j<item_num-1; j++){
 if(obj.value.toLowerCase() == document.getElementById('wl_wdslist_table').rows[i].cells[j].innerHTML.toLowerCase()){
-alert("<#2447#>");
+alert("<#2472#>");
 return false;
 }
 }
@@ -197,7 +197,7 @@ if(j != item_num-2)
 tmp_value += ">";
 }
 }
-if(tmp_value == "<"+"<#2382#>" || tmp_value == "<"){
+if(tmp_value == "<"+"<#2407#>" || tmp_value == "<"){
 tmp_value = "";
 }
 document.form.wl_wdslist.value = tmp_value;
@@ -266,7 +266,7 @@ code += wds_aplist[i][1];
 code += ' </div></a>';
 }
 }
-code += '<div style="text-decoration:underline;font-weight:bolder;" onclick="rescan();"><#1397#></div>';
+code += '<div style="text-decoration:underline;font-weight:bolder;" onclick="rescan();"><#1402#></div>';
 }
 else{
 code += '<div style="width:98px"><img height="15px" style="margin-left:5px;margin-top:2px;" src="/images/InternetScan.gif"></div>';
@@ -297,7 +297,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<br><br><#348#>";
+document.getElementById("check_mac").innerHTML="<br><br><#352#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else if(flag == 2){
@@ -305,7 +305,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<br><br><#309#>";
+document.getElementById("check_mac").innerHTML="<br><br><#313#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else{
@@ -387,28 +387,28 @@ $("#lantiq_ready").hide();
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#378#> - <#381#></div>
+<div class="formfonttitle"><#382#> - <#385#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#3762#></div>
-<div class="formfontdesc hint-color"><#916#></div>
+<div class="formfontdesc"><#3789#></div>
+<div class="formfontdesc hint-color"><#921#></div>
 <div class="formfontdesc hint-color" style="margin-left:28px;">
-<#3763#>&nbsp;<#3764#><br><#3098#>
+<#3790#>&nbsp;<#3791#><br><#3124#>
 </div>
-<div class="formfontdesc"><#3765#>
+<div class="formfontdesc"><#3792#>
 <ol>
-<li><#3766#></li>
-<li><#3767#></li>
-<li><#3768#></li>
-<li><#3769#></li>
+<li><#3793#></li>
+<li><#3794#></li>
+<li><#3795#></li>
+<li><#3796#></li>
 </ol>
 </div>
-<div id="wl_bw_hint" class="hint-color" style="font-size:13px;margin-left:28px;"><#3770#></div>
-<div id="wl_ch_hint" class="hint-color" style="font-size:13px;margin-left:28px;"><#3771#></div>
+<div id="wl_bw_hint" class="hint-color" style="font-size:13px;margin-left:28px;"><#3797#></div>
+<div id="wl_ch_hint" class="hint-color" style="font-size:13px;margin-left:28px;"><#3798#></div>
 <div id="lantiq_ready" style="display:none;margin-left:5px;font-size:13px;">Wireless is setting...</div>
 <table id="MainTable1" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#3251#></td>
+<td colspan="2"><#3277#></td>
 </tr>
 </thead>
 <tr id="wl_2g_mac">
@@ -430,31 +430,31 @@ $("#lantiq_ready").hide();
 </td>
 </tr>
 <tr id="wl_unit_field">
-<th><#2299#></th>
+<th><#2324#></th>
 <td>
 <select name="wl_unit" class="input_option" onChange="change_wl_unit();"></select>
 </td>
 </tr>
 <tr id="repeaterModeHint" style="display:none;">
-<td id="repeaterModeHint_desc" colspan="2" class="hint-color" style="height:30px;" align="center"><#463#></td>
+<td id="repeaterModeHint_desc" colspan="2" class="hint-color" style="height:30px;" align="center"><#467#></td>
 </tr>
 <tr id="wds_mode_field">
 <th align="right">
 <a class="hintstyle" href="javascript:void(0);" onClick="openHint(1,1);">
-<#3820#></a>
+<#3847#></a>
 </th>
 <td>
 <select name="wl_mode_x" class="input_option" onChange="change_wireless_bridge(this.value);">
-<option value="0" <% nvram_match("wl_mode_x", "0","selected"); %>><#3821#></option>
-<option value="1" <% nvram_match("wl_mode_x", "1","selected"); %>><#3822#></option>
-<option value="2" <% nvram_match("wl_mode_x", "2","selected"); %>><#3823#></option>
+<option value="0" <% nvram_match("wl_mode_x", "0","selected"); %>><#3848#></option>
+<option value="1" <% nvram_match("wl_mode_x", "1","selected"); %>><#3849#></option>
+<option value="2" <% nvram_match("wl_mode_x", "2","selected"); %>><#3850#></option>
 </select>
 </td>
 </tr>
 <tr id=wds_wdsapply_field>
 <th align="right">
 <a class="hintstyle" href="javascript:void(0);" onClick="openHint(1,3);">
-<#3837#>
+<#3864#>
 </a>
 </th>
 <td>
@@ -466,17 +466,17 @@ $("#lantiq_ready").hide();
 <table id="MainTable2" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable_table">
 <thead>
 <tr id="wds_list_title_field">
-<td colspan="4"><#3790#>&nbsp;(<#2586#>&nbsp;4)</td>
+<td colspan="4"><#3817#>&nbsp;(<#2611#>&nbsp;4)</td>
 </tr>
 </thead>
 <tr id="wds_list_add_delete_field">
-<th width="80%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);"><#3790#></th>
-<th class="edit_table" width="20%"><#2585#></th>
+<th width="80%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);"><#3817#></th>
+<th class="edit_table" width="20%"><#2610#></th>
 </tr>
 <tr id="wds_list_add_field">
 <td width="80%">
 <input type="text" style="margin-left:220px;float:left;" maxlength="17" class="input_macaddr_table" name="wl_wdslist_0" onKeyPress="return validator.isHWAddr(this,event)" autocorrect="off" autocapitalize="off">
-<img style="float:left;" id="pull_arrow" height="14px;" src="/images/arrow-down.gif" onclick="pullLANIPList(this);" title="<#3061#>" onmouseover="over_var=1;" onmouseout="over_var=0;">
+<img style="float:left;" id="pull_arrow" height="14px;" src="/images/arrow-down.gif" onclick="pullLANIPList(this);" title="<#3087#>" onmouseover="over_var=1;" onmouseout="over_var=0;">
 <div id="WDSAPList" class="WDSAPList">
 <div style="width:98px">
 <img height="15px" style="margin-left:5px;margin-top:2px;" src="/images/InternetScan.gif">

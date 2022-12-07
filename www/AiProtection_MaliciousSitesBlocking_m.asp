@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title><#838#> - <#1279#></title>
+<title><#842#> - <#1284#></title>
 <link rel="stylesheet" href="index_style.css">
 <link rel="stylesheet" href="form_style.css">
 <link rel="stylesheet" href="/css/adaptive_mobile.css">
@@ -187,7 +187,7 @@ var code = '';
 var dataLength = (info_bar.length <= 5) ? info_bar.length : 5;
 if(info_bar == ''){
 $('#recountIcon').hide();
-code += '<div class="no-data"><#1204#></div>';
+code += '<div class="no-data"><#1209#></div>';
 }
 else{
 $('#recountIcon').show();
@@ -330,10 +330,10 @@ var code = '';
 if(Object.entries(dataObj) != ''){
 $('#deleteData').show();
 code += '<div class="table-header">';
-code += '<div class="table-cell"><#1755#></div>';
-code += '<div class="table-cell"><#1202#></div>';
-code += '<div class="table-cell"><#1201#></div>';
-code += '<div class="table-cell"><#1200#></div>';
+code += '<div class="table-cell"><#1761#></div>';
+code += '<div class="table-cell"><#1207#></div>';
+code += '<div class="table-cell"><#1206#></div>';
+code += '<div class="table-cell"><#1205#></div>';
 code += '</div>';
 for(i=0; i<Object.keys(dataObj).length; i++){
 var eventID = Object.keys(dataObj)[i];
@@ -347,19 +347,19 @@ code += '<div class="flexbox flex-a-center">';
 code += dataObj[eventID].time[0];
 code += '<div id="'+ eventID +'_arrow" class="arrow-field arrow-right" onclick="showDetailEvent(this, \''+ eventID +'\');"></div>';
 code += '</div></div>';
-code += '<div class="table-cell" data-title="<#1202#>">'+ cat_id_array[cat_id_index].description +'</div>';
+code += '<div class="table-cell" data-title="<#1207#>">'+ cat_id_array[cat_id_index].description +'</div>';
 var _name = dataObj[eventID].source[0];
 if(clientList[_name]){
 _name = clientList[_name].name;
 }
-code += '<div class="table-cell" data-title="<#1201#>">'+ _name +'</div>';
-code += '<div class="table-cell" data-title="<#1200#>">'+ dataObj[eventID].destination[0] +'</div>';
+code += '<div class="table-cell" data-title="<#1206#>">'+ _name +'</div>';
+code += '<div class="table-cell" data-title="<#1205#>">'+ dataObj[eventID].destination[0] +'</div>';
 code += '</div>';
 }
 }
 else{
 $('#deleteData').hide();
-code += '<div class="no-data"><#1204#></div>';
+code += '<div class="no-data"><#1209#></div>';
 }
 $("#detail_info_table").html(code);
 }
@@ -404,7 +404,7 @@ hideConfirm();
 }
 function applyRule(){
 if(ctf_disable == 0 && ctf_fa_mode == 2){
-if(!confirm("<#1634#>")){
+if(!confirm("<#1640#>")){
 return false;
 }
 else{
@@ -455,23 +455,23 @@ function addWhitelist(){
 var _url = $("#newDomain").val();
 $('#domainErrMessage').hide();
 if(_url == ''){
-$('#domainErrMessage').html('<#1194#>');
+$('#domainErrMessage').html('<#1199#>');
 $('#domainErrMessage').show();
 return false;
 }
 if(!validator.domainName_flag(_url) && !validator.ipv4_addr(_url)){
-$('#domainErrMessage').html('<#1197#>');
+$('#domainErrMessage').html('<#1202#>');
 $('#domainErrMessage').show();
 return false;
 }
 if(whitelist.data.length >= 64){
-$('#domainErrMessage').html('<#1196#>');
+$('#domainErrMessage').html('<#1201#>');
 $('#domainErrMessage').show();
 return false;
 }
 for(i=0;i<whitelist.data.length;i++){
 if(_url == whitelist.data[i]){
-$('#domainErrMessage').html('<#1195#>');
+$('#domainErrMessage').html('<#1200#>');
 $('#domainErrMessage').show();
 return false;
 }
@@ -615,7 +615,7 @@ $('#confirmed').unbind('click');
 <div id="TopBanner"></div>
 <div id="hiddenMask" class="popup_bg" style="z-index:999;">
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center"></table>
-<!--[if lte IE 6.5.]><script>alert("<#1354#>");</script><![endif]-->
+<!--[if lte IE 6.5.]><script>alert("<#1359#>");</script><![endif]-->
 </div>
 <div id="confirm_field" class="card-lv1-bg confirm-block" style="display:none;">
 <div class="confirm-title">Erase Database</div>
@@ -641,11 +641,11 @@ $('#confirmed').unbind('click');
 <input type="hidden" name="wrs_protect_enable" value="<% nvram_get("wrs_protect_enable"); %>">
 <div>
 <div class="card-bg">
-<div class="page-title"><#1279#></div>
+<div class="page-title"><#1284#></div>
 <div class="split-Line"></div>
 <div class="description-bar">
-<div class="description-title"><#1707#></div>
-<div class="description"><#1278#></div>
+<div class="description-title"><#1713#></div>
+<div class="description"><#1283#></div>
 </div>
 <div class="tm-logo">
 <img src="images/New_ui/TrendMirco_logo.svg" alt="" class="tm-logo-size">
@@ -654,18 +654,18 @@ $('#confirmed').unbind('click');
 <div class="card-bg category">
 <div class="category-block">
 <div class="flexbox flex-a-center flex-j-spaceB">
-<div class="page-title"><#1198#></div>
+<div class="page-title"><#1203#></div>
 <img id="recountIcon" src="images/New_ui/recount.svg" alt="" class="icon-size24" onclick="showConfirm(this.id);" style="display:none;">
 </div>
 <div class="flexbox flex-a-center card-lv1 card-lv1-bg" >
 <div class="event-title">Since</div>
 <div class="event-time" id="mals_time"></div>
 <div class="event-count" id="mals_count"></div>
-<div class="event-hit"><#1271#></div>
+<div class="event-hit"><#1276#></div>
 </div>
 <div class="card-lv1 card-lv1-bg">
 <div class="flexbox flex-a-center flex-j-spaceB">
-<div class="description"><#1297#></div>
+<div class="description"><#1302#></div>
 <div><img src="images/New_ui/mals.svg" alt="" class="icon-size24"></div>
 </div>
 <div id="vp_bar_table"></div>
@@ -673,10 +673,10 @@ $('#confirmed').unbind('click');
 </div>
 <div class="category-block">
 <div class="flexbox flex-a-center category-title">
-<div class="page-title canvas-title"><#1186#></div>
+<div class="page-title canvas-title"><#1191#></div>
 </div>
 <div class="canvas-bg">
-<div class="chart-title"><#1271#></div>
+<div class="chart-title"><#1276#></div>
 <div class="canvas-chart">
 <canvas id="canvas"></canvas>
 </div>
@@ -685,7 +685,7 @@ $('#confirmed').unbind('click');
 </div>
 <div class="card-bg">
 <div class="flexbox flex-a-center flex-j-spaceB flex-wrap">
-<div class="page-title"><#1203#></div>
+<div class="page-title"><#1208#></div>
 <div>
 <img id="deleteData" src="images/delete.svg" alt="" class="icon-size24" style="display:none" onclick="showConfirm(this.id);">
 </div>

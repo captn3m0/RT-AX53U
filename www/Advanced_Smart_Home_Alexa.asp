@@ -97,11 +97,11 @@ var flag = '<% get_parameter("flag"); %>';
 var realip_state = "";
 var oauth_auth_status = httpApi.nvramGet(["oauth_auth_status"],true).oauth_auth_status;
 var StatusList = {
-"NoInetrnet": "<#1385#>",
-"SvrFail": "<#1382#>",
-"StepAccount": "<#1384#>",
-"EnableRemoteCtrl": "<#1380#>",
-"Success": "<#1377#>"
+"NoInetrnet": "<#1390#>",
+"SvrFail": "<#1387#>",
+"StepAccount": "<#1389#>",
+"EnableRemoteCtrl": "<#1385#>",
+"Success": "<#1382#>"
 }
 var AccLinkStatus = {
 "RemoteStatus":{
@@ -119,16 +119,16 @@ var AccLinkStatus = {
 }
 }
 var Amazon_URLs = [
-{ "Region": "<#1367#>", "WebSite": "https://www.amazon.com.au/ASUS-ROUTER/dp/B07285G1RK" },
-{ "Region": "<#1368#>", "WebSite": "https://www.amazon.ca/ASUS-ROUTER/dp/B07285G1RK" },
-{ "Region": "<#1369#>", "WebSite": "https://www.amazon.fr/ASUS-ROUTER/dp/B07285G1RK" },
-{ "Region": "<#1370#>", "WebSite": "https://www.amazon.de/ASUS-ROUTER/dp/B07285G1RK" },
-{ "Region": "<#1371#>", "WebSite": "https://www.amazon.in/ASUS-ROUTER/dp/B07285G1RK" },
-{ "Region": "<#1372#>", "WebSite": "https://www.amazon.it/ASUS-ROUTER/dp/B07285G1RK" },
-{ "Region": "<#1373#>", "WebSite": "https://www.amazon.co.jp/ASUS-ROUTER/dp/B07285G1RK" },
-{ "Region": "<#1374#>", "WebSite": "https://www.amazon.es/ASUS-ROUTER/dp/B07285G1RK" },
-{ "Region": "<#1375#>", "WebSite": "https://www.amazon.com/ASUS-ROUTER/dp/B07285G1RK" },
-{ "Region": "<#1376#>", "WebSite": "https://www.amazon.co.uk/ASUS-ROUTER/dp/B07285G1RK" }
+{ "Region": "<#1372#>", "WebSite": "https://www.amazon.com.au/ASUS-ROUTER/dp/B07285G1RK" },
+{ "Region": "<#1373#>", "WebSite": "https://www.amazon.ca/ASUS-ROUTER/dp/B07285G1RK" },
+{ "Region": "<#1374#>", "WebSite": "https://www.amazon.fr/ASUS-ROUTER/dp/B07285G1RK" },
+{ "Region": "<#1375#>", "WebSite": "https://www.amazon.de/ASUS-ROUTER/dp/B07285G1RK" },
+{ "Region": "<#1376#>", "WebSite": "https://www.amazon.in/ASUS-ROUTER/dp/B07285G1RK" },
+{ "Region": "<#1377#>", "WebSite": "https://www.amazon.it/ASUS-ROUTER/dp/B07285G1RK" },
+{ "Region": "<#1378#>", "WebSite": "https://www.amazon.co.jp/ASUS-ROUTER/dp/B07285G1RK" },
+{ "Region": "<#1379#>", "WebSite": "https://www.amazon.es/ASUS-ROUTER/dp/B07285G1RK" },
+{ "Region": "<#1380#>", "WebSite": "https://www.amazon.com/ASUS-ROUTER/dp/B07285G1RK" },
+{ "Region": "<#1381#>", "WebSite": "https://www.amazon.co.uk/ASUS-ROUTER/dp/B07285G1RK" }
 ]
 function initial(){
 show_menu();
@@ -137,7 +137,7 @@ create_AmazonRegion_select();
 if(!ifttt_support){
 $(document).attr("title","Alexa");
 document.getElementById("divSwitchMenu").style.display = "none";
-document.getElementById("formfonttitle").innerHTML = "<#1386#>";
+document.getElementById("formfonttitle").innerHTML = "<#1391#>";
 }
 if('<% nvram_get("fw_lw_enable_x"); %>' == '1')
 document.getElementById("network_services_Remind").style.display = "";
@@ -151,9 +151,9 @@ setTimeout("update_acc_link_status();", 1000);
 if(isSupport("amazon_avs")){
 document.getElementById("amazon_avs_div").style.display = "";
 }
-$("#alexa_ex1").html("<#1358#>".replace("ASUS ROUTER", "MY ROUTER"));
-$("#alexa_ex2").html("<#1359#>".replace("ASUS ROUTER", "MY ROUTER"));
-$("#alexa_ex3").html("<#1360#>".replace("ASUS ROUTER", "MY ROUTER"));
+$("#alexa_ex1").html("<#1363#>".replace("ASUS ROUTER", "MY ROUTER"));
+$("#alexa_ex2").html("<#1364#>".replace("ASUS ROUTER", "MY ROUTER"));
+$("#alexa_ex3").html("<#1365#>".replace("ASUS ROUTER", "MY ROUTER"));
 if(oauth_auth_status == "2")
 $("#guideline_2").css("display", "");
 else
@@ -167,12 +167,12 @@ if(Amazon_URLs.length > 0){
 select.length = 0;
 for(var i = 0; i < Amazon_URLs.length; i++){
 text = Amazon_URLs[i].Region;
-if(Amazon_URLs[i].Region == "<#1375#>")
+if(Amazon_URLs[i].Region == "<#1380#>")
 selected = true;
 else
 selected = false;
 if(is_OP_sku) {
-if (Amazon_URLs[i].Region == "<#1367#>")
+if (Amazon_URLs[i].Region == "<#1372#>")
 selected = true;
 else
 selected = false;
@@ -215,7 +215,7 @@ setTimeout("get_real_ip();", 3000);
 }
 }
 function enable_remote_control(){
-if(confirm("<#1381#>")){
+if(confirm("<#1386#>")){
 require(['/require/modules/makeRequest.js'], function(makeRequest){
 makeRequest.start('/enable_remote_control.cgi',hide_remote_control , function(){});
 });
@@ -398,23 +398,23 @@ tag_control();
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div id="formfonttitle" class="formfonttitle">Alexa & IFTTT - <#1386#></div>
-<div id="divSwitchMenu" style="margin-top:-40px;float:right;"><div style="width:150px;height:30px;float:left;border-top-left-radius:8px;border-bottom-left-radius:8px;" class="block_filter_pressed"><div class="tab_font_color" style="text-align:center;padding-top:5px;font-size:14px"><#1386#></div></div><div style="width:110px;height:30px;float:left;border-top-right-radius:8px;border-bottom-right-radius:8px;" class="block_filter"><a href="Advanced_Smart_Home_IFTTT.asp"><div class="block_filter_name">IFTTT</div></a></div></div>
+<div id="formfonttitle" class="formfonttitle">Alexa & IFTTT - <#1391#></div>
+<div id="divSwitchMenu" style="margin-top:-40px;float:right;"><div style="width:150px;height:30px;float:left;border-top-left-radius:8px;border-bottom-left-radius:8px;" class="block_filter_pressed"><div class="tab_font_color" style="text-align:center;padding-top:5px;font-size:14px"><#1391#></div></div><div style="width:110px;height:30px;float:left;border-top-right-radius:8px;border-bottom-right-radius:8px;" class="block_filter"><a href="Advanced_Smart_Home_IFTTT.asp"><div class="block_filter_name">IFTTT</div></a></div></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
 <div class="div_table">
 <div class="div_tr">
 <div class="div_td div_desc" style="width:55%">
-<div style="font-weight:bolder;font-size:16px;padding:20px 40px"><#1355#></div>
+<div style="font-weight:bolder;font-size:16px;padding:20px 40px"><#1360#></div>
 <div style="padding:0px 40px;font-family:Arial, Helvetica, sans-serif;font-size:13px;">
-<span><#1356#></span>
-<p style="font-size:13px;padding-top: 20px;font-style:italic;"><#1357#></p>
-<p id="alexa_ex1" style="font-size:13px;padding-left: 20px;font-style:italic;">“<#1358#>”</p>
-<p id="alexa_ex2" style="font-size:13px;padding-left: 20px;font-style:italic;">“<#1359#>”</p>
-<p id="alexa_ex3" style="font-size:13px;padding-left: 20px;font-style:italic;">“<#1360#>”</p>
-<a id="faq" href="" style="font-family:Arial, Helvetica, sans-serif;font-size:13px;padding-top: 2px;padding-left: 20px;font-style:italic;text-decoration: underline;cursor:pointer;" target="_blank"><#1364#></a>
+<span><#1361#></span>
+<p style="font-size:13px;padding-top: 20px;font-style:italic;"><#1362#></p>
+<p id="alexa_ex1" style="font-size:13px;padding-left: 20px;font-style:italic;">“<#1363#>”</p>
+<p id="alexa_ex2" style="font-size:13px;padding-left: 20px;font-style:italic;">“<#1364#>”</p>
+<p id="alexa_ex3" style="font-size:13px;padding-left: 20px;font-style:italic;">“<#1365#>”</p>
+<a id="faq" href="" style="font-family:Arial, Helvetica, sans-serif;font-size:13px;padding-top: 2px;padding-left: 20px;font-style:italic;text-decoration: underline;cursor:pointer;" target="_blank"><#1369#></a>
 <p id="network_services_Remind" class="hint-color" style="font-size:13px;padding-top: 10px;font-style:italic;font-size:13px;display: none;">WARNING: The current network service filter policy for firewall will be overwritten once you say “Alexa, ask ASUS Router to pause the Internet</p>
 </div>
-<div style="text-align:center;padding-top:35px;font-family:Arial, Helvetica, sans-serif;font-style:italic;font-weight:lighter;font-size:18px;"><#1379#></div>
+<div style="text-align:center;padding-top:35px;font-family:Arial, Helvetica, sans-serif;font-style:italic;font-weight:lighter;font-size:18px;"><#1384#></div>
 <div id="acc_link_status" class="hint-color" style="text-align:center;padding-top:10px;font-size:15px;font-weight:bolder; height:20px;"></div>
 <div class="div_img">
 <table style="width:99%">
@@ -424,10 +424,10 @@ tag_control();
 <div class="title_num">1</div>
 </div>
 <div class="div_td step_div" style="padding-top:0px;">
-<#1366#>
+<#1371#>
 <select class="input_option" id="service_region" name="service_region" style="margin-top: 10px;">
 </select>
-<input class="button_gen" style="margin-top: 10px;" type="button" onclick="window.open(document.form.service_region.value);" value="<#1655#>">
+<input class="button_gen" style="margin-top: 10px;" type="button" onclick="window.open(document.form.service_region.value);" value="<#1661#>">
 </div>
 </div>
 <div class="div_tr">
@@ -435,14 +435,14 @@ tag_control();
 <div class="title_num">2</div>
 </div>
 <div class="div_td step_div">
-<span style="text-decoration:underline; cursor: pointer;" onclick="get_activation_code();"><#1387#></span>
+<span style="text-decoration:underline; cursor: pointer;" onclick="get_activation_code();"><#1392#></span>
 </div>
 </div>
 <div class="div_tr">
 <div class="div_td title_num_div">
 <div class="title_num">3</div>
 </div>
-<div class="div_td step_div"><#1388#></div>
+<div class="div_td step_div"><#1393#></div>
 </div>
 <div id="amazon_avs_div" class="div_tr" style="display: none;">
 <div class="div_td title_num_div">
@@ -484,7 +484,7 @@ Click “Connect with Alexa” and enable Alexa Skill.
 <table style="width:99%">
 <tr>
 <th colspan="2">
-<div style="font-size:14px;padding-bottom:8px;"><#1365#></div>
+<div style="font-size:14px;padding-bottom:8px;"><#1370#></div>
 </th>
 </tr>
 <tr>
@@ -509,7 +509,7 @@ Click “Connect with Alexa” and enable Alexa Skill.
 </td>
 <td>
 <div style="text-align:left;padding:20px 0px 0px 10px;">
-<input class="button_gen" type="button" onclick="close_alert('alert_pin');" value="<#1642#>">
+<input class="button_gen" type="button" onclick="close_alert('alert_pin');" value="<#1648#>">
 </div>
 </td>
 </tr>

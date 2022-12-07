@@ -62,23 +62,23 @@ parent.hidePop("apply");
 function validForm(){
 document.getElementById("new_folder").value = trim(document.getElementById("new_folder").value);
 if(document.getElementById("new_folder").value.length == 0){
-alert("<#2018#>");
+alert("<#2024#>");
 document.getElementById("new_folder").focus();
 return false;
 }
 var re = new RegExp("[^a-zA-Z0-9 _-]+","gi");
 if(re.test(document.getElementById("new_folder").value)){
-alert("<#2019#>");
+alert("<#2025#>");
 document.getElementById("new_folder").focus();
 return false;
 }
 if(parent.checkDuplicateName(document.getElementById("new_folder").value, folderlist)){
-alert("<#2020#>");
+alert("<#2026#>");
 document.getElementById("new_folder").focus();
 return false;
 }
 if(trim(document.getElementById("new_folder").value).length > 12)
-if (!(confirm("<#2017#>")))
+if (!(confirm("<#2023#>")))
 return false;
 return true;
 }
@@ -116,23 +116,23 @@ return folder_name;
 <table width="100%" class="popTable" border="0" align="center" cellpadding="0" cellspacing="0">
 <thead>
 <tr>
-<td colspan="2"><span style="color:#FFF"><#2737#></span><img src="../images/button-close.gif" onClick="parent.hidePop('OverlayMask');"></td>
+<td colspan="2"><span style="color:#FFF"><#2762#></span><img src="../images/button-close.gif" onClick="parent.hidePop('OverlayMask');"></td>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td colspan="2" height="30"><#2736#></td>
+<td colspan="2" height="30"><#2761#></td>
 </tr>
 <tr>
-<th><#2888#>: </th>
+<th><#2914#>: </th>
 <td colspan="3"><span id="selected_Pool"></span></td>
 </tr>
 <tr>
-<th><#2114#>: </th>
+<th><#2120#>: </th>
 <td colspan="3"><span id="selected_Folder"></span></td>
 </tr>
 <tr>
-<th><#2796#>: </th>
+<th><#2821#>: </th>
 <td><input class="input_25_table" type="text" name="new_folder" id="new_folder" onkeypress="return NoSubmit(event)" autocorrect="off" autocapitalize="off"></td>
 </tr>
 <tr>

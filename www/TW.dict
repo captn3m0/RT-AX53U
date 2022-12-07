@@ -100,7 +100,7 @@ Powerline connection with weak signal quality
 Parent-AP 可能已關閉。請確認。
 連線失敗，密碼錯誤，請按「重新掃描」選擇其他基地台。
 無線網路連線成功
-重新開啟瀏覽器。在網址欄中輸入 "http://router.asus.com/" 檢視中繼器連線狀態。
+重新開啟瀏覽器。在網址欄中輸入 "http://ZVDOMAIN_NAMEVZ/" 檢視中繼器連線狀態。
 IP 設定更新成功，即將為您導回設定頁面。
 重新選擇
 變更 RT-AX53U 所連線的無線網路基地台。
@@ -301,6 +301,10 @@ DNS 伺服器2
 選取此 DNS 伺服器可封鎖惡意內容
 選取此 DNS 伺服器可封鎖惡意和成人內容
 DNS 清單
+廣告封鎖
+家庭
+快速 DNS
+尊重隱私
 允許此路由器自動從 ISP 中獲取 DNS 的 IP 位址。
 自動接上 DNS 伺服器
 若您的 WAN 連接需要一個固定的 IP 位址，請在此欄中輸入閘道 IP 位址。
@@ -336,9 +340,9 @@ WPA 金鑰的字首、字尾不能包含空白。
 至
 SSID 不能包含「
 」這個字元。
-本字串無法起自：
+第一個字元不得包含：
 本字串無法包含：
-本字串無法結束自：
+最後一個字元不得包含：
 請輸入正確的 WEP 金鑰。
 WPA 金鑰不得超出 63 個字元！
 區域網路位址已變更為
@@ -452,7 +456,7 @@ RT-AX53U 正處於多媒體橋接器模式。 IP 地址已更改。
 請檢查是否已經從 WAN 移除網路線。
 在中繼模式( Repeater Mode )下，RT-AX53U 可以延伸您使用環境內其他基地台的訊號，以提供無線用戶更好的訊號品質。在此模式下，防火牆、IP 分享以及 NAT 功能是禁用的。
 RT-AX53U 的 LAN  IP 地址可能已更改。
-關閉此視窗並重新訪問 http://router.asus.com
+關閉此視窗並重新訪問 http://ZVDOMAIN_NAMEVZ
 中繼模式
 在 Express Way 2.4GHz 模式下，RT-AX53U 無線路由器將會連線至現有 2.4GHz WiFi 頻道，並且僅可透過 5GHz WiFi 頻道延伸無線網路範圍。
 Express Way 2.4GHz
@@ -711,7 +715,7 @@ ISP 資料設定
 遠端
 再次輸入新的登入密碼
 您可以使用下列資訊連線至 WiFi 網路。
-請至 <a href='http://router.asus.com' target='_blank' style='text-decoration:underline'>router.asus.com</a> 登入裝置。
+請至 <a href='http://ZVDOMAIN_NAMEVZ' target='_blank' style='text-decoration:underline'>ZVDOMAIN_NAMEVZ</a> 登入裝置。
 路由器帳戶
 路由器登入名稱
 路由器登入密碼
@@ -838,6 +842,7 @@ PPPoE 驗證失敗
 下一步，請設定安全的路由器登入名稱和密碼。
 ASUS Wireless Router RT-AX53U
 RT-AX53U
+ZVDOMAIN_NAMEVZ
 配置
 無線網路名稱
 無線路由器
@@ -927,10 +932,10 @@ DSL 連線狀態
 30 Mbps 或更快速的上傳頻寬用於 1080p HD 視訊串流。
 網路上傳速率依據您的網路電信業者與其他因素而定。若要了解您的網路速率，請連絡您的網路電信業者，或由連接到華碩路由器的電腦上進行線上頻寬測試。
 雲端清單
-由 <a id="cloud_url" style="font-weight: bolder;text-decoration: underline;" href="https://router.asus.com" target="_blank">https://router.asus.com</a> 存取雲端資料。
+由 <a id="cloud_url" style="font-weight: bolder;text-decoration: underline;" href="https://ZVDOMAIN_NAMEVZ" target="_blank">https://ZVDOMAIN_NAMEVZ</a> 存取雲端資料。
 您可以透過這個網址存取雲端資料：
 要修改 DDNS 名稱，請點選<a style="font-weight: bolder;text-decoration: underline;" href="/Advanced_ASUSDDNS_Content.asp?af=DDNSName" target="_blank">這裡</a>。
-由 <a style="font-weight: bolder;text-decoration: underline;" href="https://router.asus.com" target="_blank">https://router.asus.com</a> 存取雲端資料。
+由 <a style="font-weight: bolder;text-decoration: underline;" href="https://ZVDOMAIN_NAMEVZ" target="_blank">https://ZVDOMAIN_NAMEVZ</a> 存取雲端資料。
 點擊 <a style="font-weight: bolder;text-decoration: underline;" href="/Advanced_ASUSDDNS_Content.asp" target="_blank">這裡</a> 註冊華碩 DDNS 來線上存取雲端資料。
 開啟透過網際網路分享 USB 已連機的存儲設備。
 要建立雲端資料，您需要在路由器上連接 USB 儲存裝置，接著將雲端資料功能設為開啟 <b>ON</b>。
@@ -1514,6 +1519,7 @@ Trend Micro 為您提供更加穩固進階的安全解決方案。點選<a href=
 未啟用
 已啟用
 匯出
+前往設定
 前往設定
 移除
 發送
@@ -2243,6 +2249,25 @@ AiMesh 上的訪客網路
 存取限定
 僅允許存取網際網路
 使用相同設定
+企業網路
+客製化網路
+架設安全無虞的網路
+快速建立訪客網路
+IoT 網路
+輕鬆分隔 IoT 裝置的網路
+兒童網路
+確保孩童上網安全
+訪客入口網站
+建立訪客入口網站或 Facebook WiFi
+入口網站類型
+VPN 網路
+建立安全的網際網路連線
+此 VPN 設定檔已停用。請進入 VPN 伺服器設定頁面並加以啟用。
+按一下下方的「前往設定」進入VPN 設定頁面。
+由其他建立的設定檔使用時無法選取此設定。
+家庭網路
+新增網路
+設定檔清單
 硬體版本
 Help
 在說明功能中，我們為一些艱澀或進階的功能提供導引與解釋，而這些詞彙會以
@@ -2588,7 +2613,7 @@ DDNS 已開啟，但網域名稱未註冊成功，無法由外部網路以網域
 檢查
 版本已為最新
 本地存取設定
-Download and install SSL certificate on your browser to trust accessing your local domain “router.asus.com” with HTTPS protocol. To export certificate after applying setting.
+Download and install SSL certificate on your browser to trust accessing your local domain “ZVDOMAIN_NAMEVZ” with HTTPS protocol. To export certificate after applying setting.
 憑證下載
 記錄
 已登入的使用者 IP:
@@ -2809,6 +2834,7 @@ To check station's wireless status around AiMesh nodes
 如果您想啟用 WPS，請先停用隱藏 SSID。
 Note: New patch will be updated regularly, please keep your firmware stay up to date.
 提示項目
+用戶端數量
 如果您遇到華碩 DDNS 服務無法使用的問題，請前往 <a href="https://iplookup.asus.com/nslookup.php" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">https://iplookup.asus.com/nslookup.php</a> 網站取得您的實體 IP 位置以進行使用
 OCN Virtual Connect
 OFDMA/802.11ax MU-MIMO
@@ -3524,7 +3550,7 @@ IP / 路由衝突
 RT-AX53U 將自動生成一個帶有憑證金鑰的 .ovpn 檔案。您可以將使用者名稱和密碼伴隨.ovpn 檔案提供給所有連接到 .ovpn 伺服器的使用者。
 要更改 OpenVPN 伺服器設定，請進入進階設定
 您可以變更 OpenVPN 伺服器的預設設定，為特定的連接類型提供一個自訂 .ovpn 檔案。
-若您的 WAN IP 地址為動態 IP，請點擊 <a href="http://router.asus.com/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">這裡</a> 進行 DDNS 設定。
+若您的 WAN IP 地址為動態 IP，請點擊 <a href="http://ZVDOMAIN_NAMEVZ/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">這裡</a> 進行 DDNS 設定。
 從 DHCP 指定
 加密密碼
 路由衝突! <p>請在進階設定頁面查看用戶端 IP 位址設定或在系統日誌中查看路由表。
@@ -3746,6 +3772,7 @@ WiFi connection will be temporarily unavailable during the process.
 欲連接的 RADIUS 伺服器的 UDP 埠號。
 伺服器通訊埠
 WiFi Agile Multiband
+*如果啟用 WiFi Agile Multiband，則必須也啟用 受保護的管理訊框。(支援或必要)
 用來對無線用戶進行驗證的方式。
 授權方式
 為維持最佳的連線品質，建議選取 Channel 2。同意選取 Channel 2，請按「確定」；不同意，請按「取消」。
@@ -4106,7 +4133,7 @@ Free WiFi 可讓您輕鬆建立訪客網路，並推廣您的品牌以及行銷�
 Beta test only
 或是按下[取消]，系統將於夜間自動更新。
 若您使用的是纜線數據機或設定為固定 IP 位址的數據機，請確認您已嘗試下列操作：
-當新的 SSID 重新連接後，您可以回到 http://router.asus.com 進行更多進階的設定。
+當新的 SSID 重新連接後，您可以回到 http://ZVDOMAIN_NAMEVZ 進行更多進階的設定。
 關閉從網際網路設定，您將無法由網際網路透過 $Apps$ 來控制您的路由器。是否繼續？
 ASUS ROUTER APP
 Alexa 語音或 IFTTT
@@ -4141,7 +4168,7 @@ GeForce Now
 選擇 GeForce Now 以優化 GeForce Now 電競裝置，為您提供更快更佳的電競體驗。
 LED On/Off
 The LED on/off control is used to turn off all LEDs includes Aura light.
-To enable Aura RGB, LED must remain on. Please turn on LED by pressing hardware button on the router for 3 seconds or enable it via web/app interface.
+若要啟用 Aura RGB，LED 必須保持亮起。請按住路由器上的硬體按鈕 3 秒來點亮 LED，或透過網頁/應用程式介面加以啟用。
 事件
 系統將會偵測下列事件並觸發不同的 LED 燈效。
 啟用 Game Boost 時，LED 燈帶使用紅色呼吸效果。
@@ -4209,7 +4236,7 @@ HTTPS 是相對安全的 Web 存取通訊協定。我們極力建議您透過 HT
 掃描 QR Code 顯示更多詳情。
 還是想透過 <span>HTTP 通訊協定</span>進入設定頁面嗎？
 使用 HTTPS 通訊協定時，可能會顯示警告訊息，指出安全性憑證由瀏覽器所核發。
-儘管有此警告訊息，您的瀏覽器和 ASUS 路由器設定頁面 (router.asus.com) 之間的連接仍然安全。
+儘管有此警告訊息，您的瀏覽器和 ASUS 路由器設定頁面 (ZVDOMAIN_NAMEVZ) 之間的連接仍然安全。
 不再顯示此訊息
 HTTP 是相對比較不安全的 Web 存取通訊協定。還是想透過 HTTP 通訊協定進入設定頁面嗎？
 256,1024-QAM

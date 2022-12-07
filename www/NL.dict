@@ -57,7 +57,7 @@ Kies een ander knooppunt
 We vonden een router in de buurt
 Verbinding maken met een AiMesh WiFi- netwerk
 Verbinding maken met een ander WiFi netwerk
-Deze band wordt gebruikt als specifieke reserveband. U kunt ‘SSID verbergen’ uitschakelen om verbinding op apparaten toe te staan.
+Deze band wordt gebruikt als specifieke reserveband. U kunt SSID verbergen uitschakelen om verbinding op apparaten toe te staan.
 De verbinding tussen uw knooppunt en uw uplink AiMesh-apparaat is zwak. Plaats uw knooppunt en uplink AiMesh-apparaat dichter bij elkaar.
 Uw AiMesh-knooppunt kan geen verbinding maken met uw uplink AiMesh-apparaat. Controleer of beide apparaten zijn ingeschakeld. Als uw knooppunt nog steeds geen verbinding kan maken, schakelt u de apparaten uit en weer in en plaatst u ze dichter bij elkaar.
 De verbinding tussen uw knooppunt en uw uplink AiMesh-apparaat kan worden verbeterd. Raadpleeg de FAQ om de kwaliteit van uw verbinding te verbeteren.
@@ -100,7 +100,7 @@ Nieuwste versie
 Het bovenliggende AP is mogelijk uitgeschakeld. Controleer opnieuw.
 Verbinding mislukt. Het wachtwoord is niet juist. Klik op [Rescan] (Opnieuw scannen) om een ander netwerk te selecteren.
 De draadloze verbinding is gemaakt.
-Start de browser opnieuw op. Typ "http://router.asus.com/" in de URL-adresbalk om toegang te krijgen tot de verbindingsstatus van de repeater.
+Start de browser opnieuw op. Typ "http://ZVDOMAIN_NAMEVZ/" in de URL-adresbalk om toegang te krijgen tot de verbindingsstatus van de repeater.
 De IP-instellingen zijn bijgewerkt. U wordt omgeleid naar de grafische webinterface van RT-AX53U.
 Een ander netwerk selecteren
 Wijzig het netwerk waarmee RT-AX53U zal verbinden.
@@ -301,6 +301,10 @@ Selecteer deze DNS-server om snel en op een privacygevoelige manier te internett
 Selecteer deze DNS-server om schadelijke inhoud te blokkeren
 Selecteer deze DNS-server om schadelijke inhoud en ‘adult content’ te blokkeren
 DNS-lijst
+Advertenties blokkeren
+Gezin
+Snelle DNS
+Privacy-respecterend
 Staat deze router toe om het DNS IP-adres van de ISP automatisch te verkrijgen.
 Automatisch verbinden met DNS-server
 Als uw WAN-verbinding een statisch IP-adres vereist, voert u het gateway IP-adres in dit veld in.
@@ -336,9 +340,9 @@ Voer een waarde in tussen
 naar
 SSID kan het volgende teken niet bevatten: \"
 \".
-Deze tekenreeks mag niet beginnen met:
+Het eerste teken mag niet bevatten:
 Deze tekenreeks mag het volgende niet bevatten:
-This string cannot end with:
+Het laatste teken mag niet bevatten:
 Voer de correctie WEP-sleutel in.
 De vooraf gedeelde sleutel moet minder dan 64 tekens lang zijn.
 Het LAN-IP van RT-AX53U is
@@ -452,7 +456,7 @@ Download het <a href='http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wirele
 Controleer of u de netwerkkabel van de WAN-poort hebt losgekoppeld.
 In de Repeatermodus maakt de RT-AX53U draadloos verbinding met een bestaand draadloos netwerk om de draadloze dekking uit te breiden. In deze modus worden de firewall, het delen van IP en NAT-functies uitgeschakeld.
 Het LAN-IP-adres van RT-AX53U is mogelijk gewijzigd.
-Sluit dit venster en open http://router.asus.com opnieuw.
+Sluit dit venster en open http://ZVDOMAIN_NAMEVZ opnieuw.
 Repeatermodus
 In de stand Express Way 2.4GHz, maakt de RT-AX53U draadloos met 2.4 GHz verbinding met een bestaand WiFi-kanaal, waarbij de draadloze dekking alleen wordt uitgebreid met een WiFi-kanaal van 5GHz.
 Express Way 2.4GHz
@@ -711,7 +715,7 @@ Radio
 afstandsbediening
 Nieuwe inlogwachtwoord nogmaals invoeren
 Gebruik de onderstaande informatie om te verbinden met het WiFi-netwerk.
-Ga naar <a href='http://router.asus.com' target='_blank' style='text-decoration:underline'>router.asus.com</a> om aan te melden bij het apparaat.
+Ga naar <a href='http://ZVDOMAIN_NAMEVZ' target='_blank' style='text-decoration:underline'>ZVDOMAIN_NAMEVZ</a> om aan te melden bij het apparaat.
 Routeraccount
 Routeraanmeldingsnaam
 Inlogwachtwoord router
@@ -838,6 +842,7 @@ Om de WAN-verbinding offline in te stellen of om de gebruiksmodus te wijzigen na
 Stel in de volgende stap de aanmeldingsnaam en het wachtwoord in voor de beveiliging.
 ASUS draadloze router RT-AX53U
 RT-AX53U
+ZVDOMAIN_NAMEVZ
 Geconfigureerd
 Draadloze naam
 Draadloze router
@@ -927,10 +932,10 @@ U hebt een breedband internetverbinding nodig voor de beste kijk- en luistererva
 30 Mbps of sneller is aanbevolen voor 1080p HD videostreaming.
 De uploadsnelheden via internet kunnen verschillen afhankelijk van uw ISP en andere factoren. Als u niet zeker bent wat uw internetsnelheid is, kunt u contact opnemen met uw ISP of kunt u een online bandbreedtetest gebruiken vanaf een computer die verbonden is met de ASUS-router.
 Cloudlijst
-Ga naar de cloudschijf vanaf <a id="cloud_url" style="font-weight: bolder;text-decoration: underline;" href="https://router.asus.com" target="_blank">https://router.asus.com</a>.
+Ga naar de cloudschijf vanaf <a id="cloud_url" style="font-weight: bolder;text-decoration: underline;" href="https://ZVDOMAIN_NAMEVZ" target="_blank">https://ZVDOMAIN_NAMEVZ</a>.
 U kunt toegang krijgen tot de Cloudschijf via deze URL:
 Klik <a style="font-weight: bolder;text-decoration: underline;" href="/Advanced_ASUSDDNS_Content.asp?af=DDNSName" target="_blank">hier</a> om de ddns-naam te wijzigen.
-Ga naar de cloudschijf vanaf <a style="font-weight: bolder;text-decoration: underline;" href="https://router.asus.com" target="_blank">https://router.asus.com</a>.
+Ga naar de cloudschijf vanaf <a style="font-weight: bolder;text-decoration: underline;" href="https://ZVDOMAIN_NAMEVZ" target="_blank">https://ZVDOMAIN_NAMEVZ</a>.
 Registreer <a style="font-weight: bolder;text-decoration: underline;" href="/Advanced_ASUSDDNS_Content.asp" target="_blank">hier</a> voor een ASUS DDNS om online toegang te krijgen tot de cloudschijf.
 Hierdoor kunnen via USB aangesloten opslagapparaten worden geopend, gestreamd of gedeeld via een met internet verbonden pc of apparaat.
 Om een cloudschijf te maken, moet u een USB-opslagapparaat installeren in deze router en dan Cloudschijf op <b>ON (AAN)</b> zetten.
@@ -1515,6 +1520,7 @@ Uitgeschakeld
 Ingeschakeld
 Exporteren
 START
+Naar instellingen
 Verwijderen
 Verzenden
 WAN-instelling
@@ -2243,6 +2249,25 @@ gasten
 Toegangslimiet
 Alleen internettoegang
 Gebruik dezelfde instellingen als
+Zakelijk netwerk
+Aangepast netwerk
+Veilig en beveiligd netwerk instellen
+Snel een gastnetwerk maken
+IoT-netwerk
+Eenvoudig een netwerk van uw IoT-apparaten scheiden
+Kindernetwerk
+Veiligheid van internettoegang voor kinderen garanderen
+Gastportaal
+Een gastportaal of Facebookwifi maken
+Portaaltype
+VPN-netwerk
+Een beveiligde netwerkverbinding maken
+Dit VPN-profiel is uitgeschakeld. Ga naar de instellingenpagina van de VPN-server en schakel deze in.
+Klik hieronder op [ Naar instellingen ] om naar de pagina VPN-instellingen te gaan.
+Deze instelling kan niet worden geselecteerd wanneer een ander profiel wordt gebruikt.
+Thuisnetwerk
+Een gastennetwerk toevoegen
+Profiellijst
 Hardwareversie
 Help
 Help biedt u richtlijnen en informatie over het gebruik van de routerfuncties. Klik op de
@@ -2441,7 +2466,7 @@ Via dit veld kunt u Download Master in- of uitschakelen.
 Via dit veld kunt u gedownloade materialen delen met internetgebruikers.
 Via dit veld kunt u UPnP in- of uitschakelen.
 Data kan ikke gjenopprettes etter at de er slettet. Er du sikker på at du vil slette?
-onflict with LAN IP
+Conflict with LAN IP
 Create New Policy
 Uw LAN IP-adres en subnetmasker zijn gewijzigd. Uw RT-AX53U IP-pool van adressen moet worden bijgewerkt. Wilt u uw IP-pool van adressen automatisch bijwerken?
 De nieuwe IP-pool komt niet overeen met het subnetmasker. Wilt u RT-AX53U toestaan om de IP-pool automatisch te wijzigen?
@@ -2588,7 +2613,7 @@ Max. limiet:
 Controleren
 The version is up-to-date.
 Configuratie lokale toegang
-Download and install SSL certificate on your browser to trust accessing your local domain “router.asus.com” with HTTPS protocol. To export certificate after applying setting.
+Download and install SSL certificate on your browser to trust accessing your local domain “ZVDOMAIN_NAMEVZ” with HTTPS protocol. To export certificate after applying setting.
 Download Certificate
 Logboek
 Aanmelding gebruikers-IP:
@@ -2809,6 +2834,7 @@ Om WPS in te schakelen, wijzigt u de verificatiemethode naar WPA2 of WPA-Auto.
 U moet eerst het verbergen van de SSID uitschakelen als u WPS wilt inschakelen.
 Opmerking: De nieuwe patch wordt regelmatig bijgewerkt. Houd uw firmware up-to-date.
 Meldingsitem
+Klantnummer
 Als u ASUS DDNS-services niet kunt gebruiken, gaat u naar <a href="https://iplookup.asus.com/nslookup.php" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">https://iplookup.asus.com/nslookup.php</a> om uw internet-IP-adres te gebruiken voor het gebruik van deze service.
 OCN Virtual Connect
 OFDMA/802.11ax MU-MIMO
@@ -3462,7 +3488,7 @@ Sluit uw Android-telefoon aan op de ASUS-router met een USB-kabel.
 Selecteer [Android Phone] (Android-telefoon) als USB-apparaat en klik op [Apply] (Toepassen).
 Schakel USB-tethering handmatig in op uw Android-telefoon.
 TLS uitgeschakeld is niet veilig.
-Anoniem inloggen toestaan is in strijd met de TLS-instellingen.
+Anoniem aanmelden toestaan is in strijd met de TLS-instellingen.
 Bezig met verwijderen van app van het USB-opslagapparaat...
 USB-functie is uitgeschakeld.
 Installeer en gebruik <a href=\"http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Discovery.zip\" target=\"_blank\" style=\"font-family:Lucida Console;text-decoration:underline;color:#FC0;\">Device Discovery Utility (hulpprogramma Apparaatopsporing)</a> om het IP-adres van de draadloze router te detecteren.
@@ -3524,7 +3550,7 @@ Aangepaste configuratie
 RT-AX53U zal automatisch een ovpn-bestand genereren met de sleutel van de certificeringsinstantie. U kunt het ovpn-bestand voorzien van een gebruikersnaam en wachtwoord voor alle gebruikers die verbinding maken met de OpenVPN-server.
 Om de OpenVPN-serverinstellingen te wijzigen, gaat u naar Geavanceerde instellingen
 U kunt de standaardinstellingen van de OpenVPN-server wijzigen om een aangepast OPVN-bestand op te geven voor een specifiek verbindingstype.
-Als uw WAN IP-adres dynamisch is, klikt u <a href="http://router.asus.com/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">hier</a> om de DDNS in te stellen.
+Als uw WAN IP-adres dynamisch is, klikt u <a href="http://ZVDOMAIN_NAMEVZ/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">hier</a> om de DDNS in te stellen.
 Toewijzen vanaf DHCP
 Codeersleutel
 Routingconflict! <p>Controleer de IP-adresinstellingen van de client vanaf de pagina Geavanceerde instellingen of controleer de routingtabel op het systeemlogboek.
@@ -3746,6 +3772,7 @@ Verbindingsgeheim
 Het UDP-poortnummer voor het verbinden met de RADIUS-server.
 Serverpoort
 WiFi Agile Multiband
+*Als de WiFi Agile Multiband is ingeschakeld, moeten de Protected Management Frames zijn ingeschakeld. (Geschikt of vereist)
 Via dit veld worden verificatiemethoden voor draadloze clients ingeschakeld.
 Verificatiemethode
 Om het beste draadloze signaal te garanderen, raden wij u aan het routerkanaal in te stellen op Kanaal 2. Klik op OK om het routerkanaal op Kanaal 2 te zetten. Klik anders op Cancel (Annuleren).
@@ -4106,7 +4133,7 @@ Kan niet worden ingesteld als het standaard WAN voor het doelbeleid.
 Beta test only
 You can also select [Cancel], the device will automatically start downloading the update during the night time.
 Als u een kabelmodem of een modem met een statisch IP-adres gebruikt, moet u het volgende proberen:
-Once the new SSID is connected, go back to router.asus.com for more advanced settings.
+Once the new SSID is connected, go back to ZVDOMAIN_NAMEVZ for more advanced settings.
 Disable Web Access from WAN will not allow you to control your router via $Apps$ from Internet. Do you want to continue?
 ASUS ROUTER APP
 Alexa enabled device or IFTTT
@@ -4141,7 +4168,7 @@ GeForce Now
 Selecteer GeForce Now om GeForce Now-gamingapparaten de prioriteit te geven voor een snellere en betere gamingervaring.
 LED On/Off
 The LED on/off control is used to turn off all LEDs includes Aura light.
-To enable Aura RGB, LED must remain on. Please turn on LED by pressing hardware button on the router for 3 seconds or enable it via web/app interface.
+Om Aura RGB in te schakelen moet LED aanblijven. Schakel LED in door de hardwareknop op de router 3 seconden ingedrukt te houden of schakel hem in via web/app-interface.
 Gebeurtenis
 Het systeem zal de volgende gebeurtenissen detecteren en verschillende LED-effecten activeren.
 Wanneer u Game Boost inschakelt, ziet u dat de LED-balk een rood ademend effect gebruikt.
@@ -4209,7 +4236,7 @@ Klik hier om door te gaan.
 Scan de QR-code voor meer informatie.
 Wilt u nog steeds toegang de instellingenpagina hebben via <span>HTTP-protocol</span>?
 Wanneer u gebruik maakt van HTTPS-protocol, kan een waarschuwingsbericht worden weergegeven om u te informeren over de uitgifte van een beveiligingscertificaat door uw browser.
-De verbinding tussen uw browser en de instellingenpagina van de ASUS-router (router.asus.com) blijft, ondanks dit waarschuwingsbericht, beveiligd.
+De verbinding tussen uw browser en de instellingenpagina van de ASUS-router (ZVDOMAIN_NAMEVZ) blijft, ondanks dit waarschuwingsbericht, beveiligd.
 Toon dit bericht niet nogmaals
 HTTP is een relatief minder beveiligd webtoegangsprotocol. Wilt u nog steeds toegang de instellingenpagina hebben via HTTP-protocol?
 256,1024-QAM

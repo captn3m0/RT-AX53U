@@ -62,7 +62,7 @@ $("#plc_master_hint").unbind("click").click(function(e){
 e = e || event;
 e.stopPropagation();
 popupHint.show_hint();
-var hint = "<#1185#>";
+var hint = "<#1190#>";
 hint += "<br><br>";
 hint += "<a href='" + plc_master_faq_href + "' target='_blank' style='text-decoration:underline;color:#FC0;'>How to choose the best PLC master</a>";/* untranslated */
 popupHint.set_text(hint);
@@ -104,12 +104,12 @@ else{//off to on
 var wifi_backhaul_node_list = check_wifi_backhaul_node();
 if(wifi_backhaul_node_list != ""){
 var hint = "";
-hint += "<#1110#>"
+hint += "<#1115#>"
 hint += "<br><br>";
-var model_list_hint = "* <#1111#><br>#MODELLIST".replace("#MODELLIST", wifi_backhaul_node_list);
+var model_list_hint = "* <#1116#><br>#MODELLIST".replace("#MODELLIST", wifi_backhaul_node_list);
 hint += $("<span>").css("color", "#FC0").html(model_list_hint)[0].outerHTML;
 hint += "<br><br>";
-var $eap_faq = $("<span>").attr("id", "eap_faq").html("* <#1007#>");
+var $eap_faq = $("<span>").attr("id", "eap_faq").html("* <#1012#>");
 $eap_faq.find("#wpa3FaqLink").attr("target", "_blank").css({"color": "#1EA2FF", "text-decoration": "underline"});
 hint += $eap_faq[0].outerHTML;
 popupHint.show_hint();
@@ -144,7 +144,7 @@ var wirelessAP = httpApi.nvramCharToAscii(["wl" + wl.ifname + "_ssid", "wl" + wl
 var __container = $("<div>").addClass("wirelessBand");
 $("<div>")
 .addClass("inputTitleContainer")
-.append($("<div>").addClass("inputTitle").html(wl.title + " <#558#>"))
+.append($("<div>").addClass("inputTitle").html(wl.title + " <#562#>"))
 .appendTo(__container);
 $("<div>")
 .addClass("inputContainer")
@@ -170,7 +170,7 @@ $(".wlInput")[idx*2+1].focus();
 .appendTo(__container);
 $("<div>")
 .addClass("inputTitleContainer")
-.append($("<div>").addClass("inputTitle").html(wl.title + " <#559#>"))
+.append($("<div>").addClass("inputTitle").html(wl.title + " <#563#>"))
 .append(
 $("<div>").addClass("secureInput icon_eye close").attr({"for":"wireless_key_" + wl.ifname}).unbind("click").click(function(){
 var targetObj = $(this);
@@ -225,28 +225,28 @@ return container;
 };
 popupHint.show_hint(10);
 var $hint_bg = $("<div>");
-$hint_bg.append($("<div>").addClass("yellow_text").html("<#1106#>"));
-$hint_bg.append($("<div>").html("<#1107#>"));
+$hint_bg.append($("<div>").addClass("yellow_text").html("<#1111#>"));
+$hint_bg.append($("<div>").html("<#1112#>"));
 $hint_bg.append("<br>");
-$hint_bg.append($("<div>").html("* <#1108#>"));
+$hint_bg.append($("<div>").html("* <#1113#>"));
 $hint_bg.append("<br>");
 var not_support_list = check_not_support_nodes("ethernet_backhaul_mode");
 if(not_support_list != "") {
-var model_list_hint = "* <#1118#><br>#MODELLIST<br><#1123#> <#1124#> ".replace("#MODELLIST", not_support_list);
+var model_list_hint = "* <#1123#><br>#MODELLIST<br><#1128#> <#1129#> ".replace("#MODELLIST", not_support_list);
 $hint_bg.append($("<div>").addClass("yellow_text").html(model_list_hint));
 $hint_bg.append("<br>");
 }
-var $eap_faq = $("<span>").attr("id", "eap_faq").html("* <#1007#>");
+var $eap_faq = $("<span>").attr("id", "eap_faq").html("* <#1012#>");
 $eap_faq.find("#wpa3FaqLink").attr("target", "_blank").css({"color": "#1EA2FF", "text-decoration": "underline"});
 $hint_bg.append($eap_faq);
 $hint_bg.append($("<div>").addClass("divide_line"));
-$hint_bg.append($("<div>").html("<#1109#>"));
+$hint_bg.append($("<div>").html("<#1114#>"));
 $hint_bg.append($("<div>").addClass("height_space"));
 var sc_status = "0";
 if(isSupport("smart_connect")){
 var $sc_switch_bg = $("<div>").addClass("switch_ctl_bg");
 $sc_switch_bg.appendTo($hint_bg);
-$sc_switch_bg.append($("<div>").addClass("title_text").html("<#3142#>"));
+$sc_switch_bg.append($("<div>").addClass("title_text").html("<#3168#>"));
 var $sc_switch = $("<div>").addClass("switch");
 sc_status = httpApi.nvramGet(["smart_connect_x"]).smart_connect_x;
 $sc_switch.addClass(((sc_status == "0") ? "off" : "on"));
@@ -272,15 +272,15 @@ $(".popup_hint_component .sc_item_list_bg").hide();
 var sc_array = [];
 if(wl_info.band2g_support && wl_info.band5g_support && (wl_info.band5g_2_support || wl_info.band6g_support)){
 if(isSupport("wifi6e")){
-sc_array.push({"text":"<#3140#> (2.4 GHz, 5 GHz and 6 GHz)", "value":"1"});
+sc_array.push({"text":"<#3166#> (2.4 GHz, 5 GHz and 6 GHz)", "value":"1"});
 }
 else{
-sc_array.push({"text":"<#3140#> (2.4 GHz, 5 GHz-1 and 5 GHz-2)", "value":"1"});
+sc_array.push({"text":"<#3166#> (2.4 GHz, 5 GHz-1 and 5 GHz-2)", "value":"1"});
 sc_array.push({"text":"5 GHz Smart Connect (5 GHz-1 and 5 GHz-2)", "value":"2"});
 }
 }
 else if(wl_info.band2g_support && wl_info.band5g_support)
-sc_array.push({"text":"<#3139#> (2.4 GHz and 5 GHz)", "value":"1"});
+sc_array.push({"text":"<#3165#> (2.4 GHz and 5 GHz)", "value":"1"});
 var $sc_item_list_bg = $("<div>").addClass("sc_item_list_bg");
 $sc_item_list_bg.appendTo($hint_bg);
 sc_array.forEach(function(item, index, array){
@@ -329,7 +329,7 @@ var hasBlank = function(objArray){
 $wlInputField.find(".fields_hint").remove();
 $.each(objArray, function(idx, $obj){
 if($obj.val() == "")
-$obj.showTextHint("<#316#>");
+$obj.showTextHint("<#320#>");
 })
 if($wlInputField.find(".fields_hint").length > 0) return true;
 };
@@ -370,8 +370,8 @@ if(type == "key" && is_KR_sku){
 if(!validator.psk_KR($obj[0])) return false;
 }
 if(type == "key" && isWeakString($obj.val())){
-if(!confirm("<#312#>")){
-$obj.showTextHint("<#1256#>");
+if(!confirm("<#316#>")){
+$obj.showTextHint("<#1261#>");
 return false;
 }
 }
@@ -453,23 +453,23 @@ var reboot_minutes = Math.ceil(reboot_time / 60);
 var hint = "";
 var not_support_list = check_not_support_nodes("manual_reset_default");
 if(not_support_list == "") {
-hint += "<#1116#><#1128#>";
+hint += "<#1121#><#1133#>";
 hint += "<br>";
-hint += "<#3082#>";
+hint += "<#3108#>";
 }
 else {
-hint += "<#1117#>".replace("#MINUTES", reboot_minutes);
+hint += "<#1122#>".replace("#MINUTES", reboot_minutes);
 hint += "<br>";
-hint += "<#3082#>";
+hint += "<#3108#>";
 hint += "<br><br>";
-var model_list_hint = "* <#1118#> <#1119#> #MODELLIST".replace("#MODELLIST", not_support_list);
+var model_list_hint = "* <#1123#> <#1124#> #MODELLIST".replace("#MODELLIST", not_support_list);
 hint += $("<span>").css("color", "#FC0").html(model_list_hint)[0].outerHTML;
 }
 var lan_ipaddr = httpApi.nvramGet(["lan_ipaddr"]).lan_ipaddr;
 var lan_ipaddr_ori = '<% nvram_default_get("lan_ipaddr"); %>';
 if(lan_ipaddr != lan_ipaddr_ori){
 hint += "<br><br>";
-hint += $("<span>").css("color", "#FC0").html("* <#3083#>".replace("192.168.1.1", lan_ipaddr_ori).replace("\n", '<br>'))[0].outerHTML;
+hint += $("<span>").css("color", "#FC0").html("* <#3109#>".replace("192.168.1.1", lan_ipaddr_ori).replace("\n", '<br>'))[0].outerHTML;
 }
 popupHint.set_text(hint);
 popupHint.set_btn_ok(function(){
@@ -494,13 +494,13 @@ var reboot_minutes = Math.ceil(reboot_time / 60);
 var hint = "";
 var not_support_list = check_not_support_nodes("manual_reboot");
 if(not_support_list == "")
-hint = "<#1114#><#1128#><br><#3082#>";
+hint = "<#1119#><#1133#><br><#3108#>";
 else {
 hint += "Rebooting the router will cause all connected devices to lose the Internet connectivity and it takes around #MINUTES minutes. All devices will be reconnected again while the reboot completed.".replace("#MINUTES", reboot_minutes);/* untranslated */
 hint += "<br>";
-hint += "<#3082#>";
+hint += "<#3108#>";
 hint += "<br><br>";
-var model_list_hint = "* <#1118#> <#1120#> #MODELLIST".replace("#MODELLIST", not_support_list);
+var model_list_hint = "* <#1123#> <#1125#> #MODELLIST".replace("#MODELLIST", not_support_list);
 hint += $("<span>").css("color", "#FC0").html(model_list_hint)[0].outerHTML;
 }
 popupHint.set_text(hint);
@@ -527,7 +527,7 @@ $popupHint.attr({"id":"popup_hint_bg", "onselectstart":"false"});
 $("<div>").addClass("hint_text").appendTo($popupHint);
 var $action_bg = $("<div>").addClass("action_bg").appendTo($popupHint);
 var $action_cancel = $("<input/>").attr({"id":"action_cancel", "type":"button", "value":"<#199#>"}).addClass("button_gen");
-var $action_ok = $("<input/>").attr({"id":"action_ok", "type":"button", "value":"<#1659#>"}).addClass("button_gen");
+var $action_ok = $("<input/>").attr({"id":"action_ok", "type":"button", "value":"<#1665#>"}).addClass("button_gen");
 $action_bg.append($action_cancel).append($action_ok);
 },
 "show_hint" : function(_top){
@@ -615,7 +615,7 @@ $(".system_settings_bg.eap .switch").toggleClass("off on");
 }
 }
 function node_location_translate(_node_info, _isReNode){
-var result = "<#1069#>";
+var result = "<#1074#>";
 var node_location_text = "Home";
 if(_isReNode){
 if("config" in _node_info) {
@@ -652,7 +652,7 @@ $(document).ready(initial_system_settings);
 <div class="system_settings_bg plc_master">
 <div class="system_icon"></div>
 <div class="system_text">
-<span><#1184#></span>
+<span><#1189#></span>
 <div id="plc_master_hint" class="bubble_icon info plc_master"></div>
 </div>
 <div class="select_option_bg"><select id="sel_plc_master"></select></select></div>
@@ -660,33 +660,33 @@ $(document).ready(initial_system_settings);
 <div class="system_settings_bg eap">
 <div class="system_icon"></div>
 <div class="system_text">
-<span><#1105#></span>
+<span><#1110#></span>
 <div id="system_settings_eap_hint" class="bubble_icon info eap hover_pop_hint"></div>
 <div class="hover_pop_hint_bg eap">
-<#1112#>
+<#1117#>
 <br>
-<span style="color:#FC0"><#1106#></span>
-<#1107#>
+<span style="color:#FC0"><#1111#></span>
+<#1112#>
 </div>
 </div>
 <div class="switch"></div>
 </div>
 <div class="system_settings_bg led">
 <div class="system_icon"></div>
-<div class="system_text"><span><#1121#></span></div>
+<div class="system_text"><span><#1126#></span></div>
 <div class="switch"></div>
 </div>
 <div class="system_settings_bg roaming_block">
 <div class="system_icon"></div>
-<div class="system_text"><span><#3725#></span></div>
+<div class="system_text"><span><#3751#></span></div>
 </div>
 <div class="system_settings_bg reset">
 <div class="system_icon"></div>
-<div class="system_text"><span><#1115#></span></div>
+<div class="system_text"><span><#1120#></span></div>
 </div>
 <div class="system_settings_bg reboot">
 <div class="system_icon"></div>
-<div class="system_text"><span><#1113#></span></div>
+<div class="system_text"><span><#1118#></span></div>
 </div>
 <div class="popup_hint_component"></div>
 

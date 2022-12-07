@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title><#838#> - <#1298#></title>
+<title><#842#> - <#1303#></title>
 <link rel="stylesheet" href="index_style.css">
 <link rel="stylesheet" href="form_style.css">
 <link rel="stylesheet" href="/css/adaptive_mobile.css">
@@ -179,7 +179,7 @@ var code = '';
 var dataLength = (info_bar.length <= 5) ? info_bar.length : 5;
 if(info_bar == ''){
 $('#recountIcon').hide();
-code += '<div class="no-data"><#1204#></div>';
+code += '<div class="no-data"><#1209#></div>';
 }
 else{
 $('#recountIcon').show();
@@ -351,12 +351,12 @@ var direct_type = ["", "Device Infected", "External Attacks"];
 function generateDetailTable(dataObj){
 var code = '';
 code += '<div class="table-header">';
-code += '<div class="table-cell"><#1755#></div>';
-code += '<div class="table-cell"><#1239#></div>';
+code += '<div class="table-cell"><#1761#></div>';
+code += '<div class="table-cell"><#1244#></div>';
 code += '<div class="table-cell">Type</div>';
-code += '<div class="table-cell"><#1201#></div>';
-code += '<div class="table-cell"><#1200#></div>';
-code += '<div class="table-cell"><#1202#></div>';
+code += '<div class="table-cell"><#1206#></div>';
+code += '<div class="table-cell"><#1205#></div>';
+code += '<div class="table-cell"><#1207#></div>';
 code += '</div>';
 if(Object.entries(dataObj) != ''){
 $('#deleteData').show();
@@ -368,17 +368,17 @@ code += '<div class="flexbox flex-a-center">';
 code += dataObj[eventID].time[0];
 code += '<div id="'+ eventID +'_arrow" class="arrow-field arrow-right" onclick="showDetailEvent(this, \''+ eventID +'\');"></div>';
 code += '</div></div>';
-code += '<div class="table-cell" data-title="<#1239#>">'+ dataObj[eventID].level +'</div>';
+code += '<div class="table-cell" data-title="<#1244#>">'+ dataObj[eventID].level +'</div>';
 code += '<div class="table-cell" data-title="Type">'+ direct_type[dataObj[eventID].attackType] +'</div>';
-code += '<div class="table-cell" data-title="<#1201#>">'+ dataObj[eventID].source[0] +'</div>';
-code += '<div class="table-cell" data-title="<#1200#>">'+ dataObj[eventID].destination[0] +'</div>';
-code += '<div class="table-cell" data-title="<#1202#>">'+ dataObj[eventID].title +'</div>';
+code += '<div class="table-cell" data-title="<#1206#>">'+ dataObj[eventID].source[0] +'</div>';
+code += '<div class="table-cell" data-title="<#1205#>">'+ dataObj[eventID].destination[0] +'</div>';
+code += '<div class="table-cell" data-title="<#1207#>">'+ dataObj[eventID].title +'</div>';
 code += '</div>';
 }
 }
 else{
 $('#deleteData').hide();
-code += '<div class="no-data"><#2382#></div>';
+code += '<div class="no-data"><#2407#></div>';
 }
 $("#detail_info_table").html(code);
 }
@@ -442,7 +442,7 @@ hideConfirm();
 }
 function applyRule(){
 if(ctf_disable == 0 && ctf_fa_mode == 2){
-if(!confirm("<#1634#>")){
+if(!confirm("<#1640#>")){
 return false;
 }
 else{
@@ -538,7 +538,7 @@ $('#confirmed').unbind('click');
 <div id="Loading" class="popup_bg"></div>
 <div id="hiddenMask" class="popup_bg" style="z-index:999;">
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center"></table>
-<!--[if lte IE 6.5.]><script>alert("<#1354#>");</script><![endif]-->
+<!--[if lte IE 6.5.]><script>alert("<#1359#>");</script><![endif]-->
 </div>
 <div id="confirm_field" class="card-lv1-bg confirm-block" style="display:none;">
 <div class="confirm-title">Erase Database</div>
@@ -586,11 +586,11 @@ $('#confirmed').unbind('click');
 <input type="hidden" name="wrs_protect_enable" value="<% nvram_get("wrs_protect_enable"); %>">
 <div>
 <div class="card-bg">
-<div class="page-title"><#1298#></div>
+<div class="page-title"><#1303#></div>
 <div class="split-Line"></div>
 <div class="description-bar">
-<div class="description-title"><#1707#></div>
-<div class="description"><#1299#></div>
+<div class="description-title"><#1713#></div>
+<div class="description"><#1304#></div>
 </div>
 <div class="tm-logo">
 <img src="images/New_ui/TrendMirco_logo.svg" alt="" class="tm-logo-size">
@@ -599,18 +599,18 @@ $('#confirmed').unbind('click');
 <div class="card-bg category">
 <div class="category-block">
 <div class="flexbox flex-a-center flex-j-spaceB">
-<div class="page-title"><#1198#></div>
+<div class="page-title"><#1203#></div>
 <img id="recountIcon" src="images/New_ui/recount.svg" alt="" class="icon-size24" onclick="recount(this);" style="display:none;">
 </div>
 <div class="flexbox flex-a-center card-lv1 card-lv1-bg" >
 <div class="event-title">Since</div>
 <div class="event-time" id="ips_time"></div>
 <div class="event-count" id="ips_count"></div>
-<div class="event-hit"><#1271#></div>
+<div class="event-hit"><#1276#></div>
 </div>
 <div class="card-lv1 card-lv1-bg">
 <div class="flexbox flex-a-center flex-j-spaceB">
-<div><#1297#></div>
+<div><#1302#></div>
 <div><img src="images/New_ui/mals.svg" alt="" class="icon-size24"></div>
 </div>
 <div id="vp_bar_table"></div>
@@ -618,10 +618,10 @@ $('#confirmed').unbind('click');
 </div>
 <div class="category-block">
 <div class="flexbox flex-a-center category-title">
-<div class="page-title"><#1238#></div>
+<div class="page-title"><#1243#></div>
 </div>
 <div class="canvas-bg">
-<div class="chart-title"><#1271#></div>
+<div class="chart-title"><#1276#></div>
 <div class="canvas-chart">
 <canvas id="canvas"></canvas>
 </div>
@@ -630,7 +630,7 @@ $('#confirmed').unbind('click');
 </div>
 <div class="card-bg">
 <div class="flexbox flex-a-center flex-j-spaceB flex-wrap">
-<div class="page-title"><#1203#></div>
+<div class="page-title"><#1208#></div>
 <div>
 <img id="deleteData" src="images/delete.svg" alt="" class="icon-size24" style="display:none" onclick="showConfirm(this.id);">
 </div>

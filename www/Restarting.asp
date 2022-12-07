@@ -11,7 +11,7 @@
 if(parent.tmo_support)
 var theUrl = "cellspot.router";
 else
-var theUrl = "router.asus.com";
+var theUrl = "<#844#>";
 var reboot_needed_time = <% get_default_reboot_time(); %>;
 var action_mode = '<% get_parameter("action_mode"); %>';
 function redirect(){
@@ -56,7 +56,7 @@ setTimeout("check_httpd();", 1000);
 }
 function redirect1(){
 if(action_mode == "Restore"){
-parent.document.getElementById('drword').innerHTML = "<#3083#><br/>".replace("192.168.1.1", '<% nvram_default_get("lan_ipaddr"); %>');
+parent.document.getElementById('drword').innerHTML = "<#3109#><br/>".replace("192.168.1.1", '<% nvram_default_get("lan_ipaddr"); %>');
 setTimeout("parent.hideLoading()",1000);
 setTimeout("parent.dr_advise();",1000);
 if((!parent.tmo_support && parent.location.hostname.search('router.asus') != -1)

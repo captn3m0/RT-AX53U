@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#838#> - <#386#></title>
+<title><#842#> - <#390#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="other.css">
@@ -122,7 +122,7 @@ txt += '<div style="padding-bottom:3px;height:30px;cursor: pointer;" onclick="no
 if(notification.find_nc_setting_type(ntdb_obj.event_id.trim()) == notification.TYPE_OF_TIPS){
 txt += '<div class="noti_type_select_check"></div>';
 }
-txt += '</div></div><div class="noti_type_word" title="General notification related to new function introduce or application suggestion."><#555#></div></div>';
+txt += '</div></div><div class="noti_type_word" title="General notification related to new function introduce or application suggestion."><#559#></div></div>';
 txt += '<div style="padding-bottom:3px;height:30px;cursor: pointer;" onclick="notification.change_type('+ntdb_obj.event_id+',1,update_setting_type)"><div style="display: table-cell;"><div class="noti_type_select_turnoff">';
 if(notification.find_nc_setting_type(ntdb_obj.event_id.trim()) == notification.TYPE_OF_TURN_OFF){
 txt += '<div class="noti_type_select_check"></div>';
@@ -364,7 +364,7 @@ makeRequest.post('/apply.cgi','nc_setting_conf='+nc_setting_conf_tmp+'&'+nt_acti
 <div class="textarea_ssh_table content_frame" style="width:auto;border solide: 1px #717171;border-radius:4px;height:680px;margin-top:15px;">
 <div style="padding:15px 6px;">
 <div class="noti_message" style="display:table-cell;"></div><div style="font-size:14px;color:#FFFFFF;font-weight:bold;display:table-cell;padding-left:7px;">Event List</div>
-<div style="display:"><div style="font-size:12px;color:#FFFFFF;font-weight:bold;display:table-cell;padding-left:7px;"><#1755#></div><div id="change_data_sort" class="noti_event_down" style="display:table-cell;" onclick="change_data_sort(this);"></div><div style="display:table-cell;padding-left:58px;">Notice Type</div><div id="change_priority_sort" class="noti_event_down" style="display:table-cell;" onclick="change_priority_sort(this)"></div><div style="display:table-cell;padding-left: 30px;">Content</div></div>
+<div style="display:"><div style="font-size:12px;color:#FFFFFF;font-weight:bold;display:table-cell;padding-left:7px;"><#1761#></div><div id="change_data_sort" class="noti_event_down" style="display:table-cell;" onclick="change_data_sort(this);"></div><div style="display:table-cell;padding-left:58px;">Notice Type</div><div id="change_priority_sort" class="noti_event_down" style="display:table-cell;" onclick="change_priority_sort(this)"></div><div style="display:table-cell;padding-left: 30px;">Content</div></div>
 <div style="padding-top:6px"><div style="background-color:#AAAAAA;height:2px;width:95%;margin-left:7px;"></div></div>
 <div id="nt_event_list_content"></div>
 <div style="padding-top:6px;"><div style="background-color:#AAAAAA;height:1px;width:95%;margin-left:7px;"></div></div>

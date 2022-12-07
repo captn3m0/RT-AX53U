@@ -61,7 +61,7 @@ apply.upload = function(){
 var $settingPofile = $("#setting_profile").val();
 var $settingPofile_name = $settingPofile.toUpperCase();
 if($settingPofile_name == ""){
-$("#settingProfileBar").showSelectorHint("<#316#>");
+$("#settingProfileBar").showSelectorHint("<#320#>");
 return false;
 }
 if(
@@ -69,7 +69,7 @@ $settingPofile_name.length < 6 ||
 $settingPofile_name.lastIndexOf(".CFG") < 0 ||
 $settingPofile_name.lastIndexOf(".CFG") != ($settingPofile_name.length)-4)
 {
-$("#settingProfileBar").showSelectorHint("<#3093#>");
+$("#settingProfileBar").showSelectorHint("<#3119#>");
 return false;
 }
 httpApi.uploadFile($("#setting_profile").prop('files')[0]);
@@ -101,7 +101,7 @@ httpUserInput.showTextHint(isValidHostName.errReason);
 return false;
 }
 if(httpUserInput.val() == "root" || httpUserInput.val() == "guest" || httpUserInput.val() == "anonymous"){
-httpUserInput.showTextHint("<#777#>");
+httpUserInput.showTextHint("<#781#>");
 return false;
 }
 /* check password */
@@ -112,7 +112,7 @@ httpPassInput.showTextHint(isValidKRSkuPwd.errReason);
 return false;
 }
 if(httpPassInput.val() == httpUserInput.val()){
-httpPassInput.showTextHint("<#333#>");
+httpPassInput.showTextHint("<#337#>");
 return false;
 }
 }
@@ -121,15 +121,15 @@ httpPassInput.showTextHint("<#269#>");
 return false;
 }
 if(httpPassInput.val() == systemVariable.default_http_passwd){
-httpPassInput.showTextHint("<#488#>");
+httpPassInput.showTextHint("<#492#>");
 return false;
 }
 else if(httpPassInput.val().length < 5){
-httpPassInput.showTextHint("<#327#> <#321#>");
+httpPassInput.showTextHint("<#331#> <#325#>");
 return false;
 }
 else if(httpPassInput.val().length > 32){
-httpPassInput.showTextHint("<#319#>");
+httpPassInput.showTextHint("<#323#>");
 return false;
 }
 var isValidChar = validator.invalidChar(httpPassInput.val())
@@ -138,8 +138,8 @@ httpPassInput.showTextHint(isValidChar.errReason);
 return false;
 }
 if(isWeakString(httpPassInput.val(), "httpd_password")){
-if(!confirm("<#312#>")){
-httpPassInput.showTextHint("<#1256#>");
+if(!confirm("<#316#>")){
+httpPassInput.showTextHint("<#1261#>");
 return false;
 }
 }
@@ -530,7 +530,7 @@ else
 $(".sim_pin_apply").html("<#196#>");
 switch(sim_state){
 case '1':
-$("#sim_desc").html("<#2705#>");
+$("#sim_desc").html("<#2730#>");
 $(".sim_pin_apply").html("<#204#>");
 $("#pin_setting").css("display", "none");
 $("#verify_pincode_status").css("display", "none");
@@ -538,7 +538,7 @@ goTo.Wireless();
 break;
 case '2':
 if(g3err_pin == '1' && pin_remaining_count < 3){
-$("#verify_pincode_status").html("<#2729#>");
+$("#verify_pincode_status").html("<#2754#>");
 $("#verify_pincode_status").css("display", "");
 $("#remaing_num").html(pin_remaining_count);
 if( pin_remaining_count == 0){
@@ -561,17 +561,17 @@ else if(!isPage("simunlock_selection"))
 goTo.loadPage("simunlock_selection", false);
 break;
 case '4':
-$("#verify_pincode_status").html("<#2667#>");
+$("#verify_pincode_status").html("<#2692#>");
 break;
 case '6':
-$("#verify_pincode_status").html("<#2727#>");
+$("#verify_pincode_status").html("<#2752#>");
 break;
 case '-1':
-$("#verify_pincode_status").html("<#2702#>");
+$("#verify_pincode_status").html("<#2727#>");
 break;
 case '-2':
 case '-10':
-$("#verify_pincode_status").html("<#2700#>");
+$("#verify_pincode_status").html("<#2725#>");
 break;
 default:
 break;
@@ -597,7 +597,7 @@ if(httpApi.nvramGet(["usb_modem_act_sim"]).usb_modem_act_sim == "1")
 goTo.Wireless();
 else{
 if($("#sim_pincode").val().search(/^\d{4,8}$/) == -1){
-$("#verify_pincode_status").html("<#2451#>");
+$("#verify_pincode_status").html("<#2476#>");
 $("#verify_pincode_status").css("display", "");
 return false;
 }
@@ -622,9 +622,9 @@ checkSimActResult(1);
 apply.simpuk = function(){
 if($("#new_pincode").val().search(/^\d{4,8}$/) == -1){
 if($("#new_pincode").val().length == 0)
-$("#new_pincode_status").html("<#2673#>");
+$("#new_pincode_status").html("<#2698#>");
 else
-$("#new_pincode_status").html("<#2451#>");
+$("#new_pincode_status").html("<#2476#>");
 $("#new_pincode_status").css("display", "");
 return false;
 }
@@ -891,8 +891,8 @@ if(isSku("KR")){
 if(!validator.psk_KR(document.getElementById("wireless_key_" + band))) return false;
 }
 if(isWeakString($("#wireless_key_" + band).val(), "wpa_key")){
-if(!confirm("<#312#>")){
-$("#wireless_key_" + band).showTextHint("<#1256#>");
+if(!confirm("<#316#>")){
+$("#wireless_key_" + band).showTextHint("<#1261#>");
 return false;
 }
 }
@@ -1078,7 +1078,7 @@ qisPostData["wl"+dwb_info.dwb_band+"_closed"] = "1";
 if(pppoeAuthFail){
 $(".btn_wireless_apply").html("<#196#>");
 $(".btn_login_apply").html("<#196#>");
-$("#wan_pppoe_passwd").showTextHint("<#691#>");
+$("#wan_pppoe_passwd").showTextHint("<#695#>");
 goTo.loadPage("pppoe_setting", true);
 }
 else if(linkInternet && isSupport("fupgrade")){
@@ -1241,26 +1241,26 @@ labelMac = _callBackMac;
 );
 var result_text = "";
 if(get_onboardingstatus.cfg_obresult == "2"){
-result_text += "<#1035#>";
+result_text += "<#1040#>";
 result_text += "<br>";
-result_text += "<#1036#>";
+result_text += "<#1041#>";
 result_text += "<br>";
-result_text += "1. <#1037#>";
+result_text += "1. <#1042#>";
 result_text += "<br>";
-result_text += "2. <#1038#>";
+result_text += "2. <#1043#>";
 result_text += "<br><br>";
 }
 else{
-result_text += "<#1028#>";
+result_text += "<#1033#>";
 result_text += "<ol>";
-result_text += "<li><#1029#></li>";
-result_text += "<li><#1030#></li>";
-result_text += "<li><#1098#></li>";
-result_text += "<li><#1031#></li>";
-result_text += "<li><#1019#></li>";
+result_text += "<li><#1034#></li>";
+result_text += "<li><#1035#></li>";
+result_text += "<li><#1103#></li>";
+result_text += "<li><#1036#></li>";
+result_text += "<li><#1024#></li>";
 result_text += "</ol>";
 }
-result_text += '<#1025#>';
+result_text += '<#1030#>';
 $("#amasonboarding_page").find("#result").html(result_text);
 $("#amasonboarding_page").find("#result").find(".amesh_device_info").html(handle_ui_model_name(_model_name, _ui_model_name) + " (" + labelMac + ")");
 $("#amasonboarding_page").find("#result").show();
@@ -2760,9 +2760,9 @@ systemVariable.papList = [];
 systemVariable.papListAiMesh = [];
 $("#siteSurveyLoading").html(Get_Component_Loading);
 if(isSupport("concurrep"))
-$("#siteSurvey_page").find(".titleSub").html("<#4116#>");
+$("#siteSurvey_page").find(".titleSub").html("<#4143#>");
 else
-$("#siteSurvey_page").find(".titleSub").html("<#3790#>");
+$("#siteSurvey_page").find(".titleSub").html("<#3817#>");
 httpApi.nvramSet({"action_mode": "apply", "rc_service":"restart_wlcscan"}, function(){
 setTimeout(function(){
 var siteSurveyResult = {
@@ -2802,9 +2802,9 @@ goTo.loadPage("amas_option_page", false);
 }
 goTo.papList = function() {
 if(isSupport("RPMesh"))
-$("#papList_page").find(".titleSub").html("<#4116#>");
+$("#papList_page").find(".titleSub").html("<#4143#>");
 else
-$("#papList_page").find(".titleSub").html("<#3790#>");
+$("#papList_page").find(".titleSub").html("<#3817#>");
 genPAPList(systemVariable.papList, systemVariable.multiPAP.wlcOrder);
 goTo.loadPage("papList_page", false);
 };
@@ -3126,7 +3126,7 @@ $("#puk_remaing_num").html(remaing_num);
 goTo.loadPage("simpuk_setting", false);
 };
 goTo.Update = function(){
-var applyBtn = (systemVariable.isNewFw == 2) ? "<#213#>" : "<#1668#>";
+var applyBtn = (systemVariable.isNewFw == 2) ? "<#213#>" : "<#1674#>";
 var abortBtn = (systemVariable.isNewFw == 2) ? "<#212#>" : "<#199#>";
 $("#newVersion").val(systemVariable.newFwVersion);
 $("#desktop_applyBtn_update").html(applyBtn);
@@ -3149,7 +3149,7 @@ if(fwUpgradeInfo.isError){
 if(errCount > 5){
 $("#upgradeBtn").show();
 $(".detectIcon").hide();
-$("#liveUpdateStatus").html("<#310#>"); //<#188#><br/>
+$("#liveUpdateStatus").html("<#314#>"); //<#188#><br/>
 }
 else{
 errCount++;
@@ -3157,7 +3157,7 @@ setTimeout(arguments.callee, 1000);
 }
 }
 else if(fwUpgradeInfo.webs_state_upgrade == "0"){
-$("#liveUpdateStatus").html("<#2131#>...");
+$("#liveUpdateStatus").html("<#2137#>...");
 setTimeout(arguments.callee, 1000);
 }
 else if(fwUpgradeInfo.webs_state_error != "0" && fwUpgradeInfo.webs_state_error != ""){
@@ -3214,11 +3214,11 @@ $(".wlInput").attr({
 "type": "text"
 });
 if(isSwMode("RP"))
-$("#summary_page").find("#stepText2").html("<#451#>");
+$("#summary_page").find("#stepText2").html("<#455#>");
 }
 else{
-$("#summary_page").find("#stepText1").html("<#449#> <#448#>");
-$("#summary_page").find("#stepText2").html("<#451#>");
+$("#summary_page").find("#stepText1").html("<#453#> <#452#>");
+$("#summary_page").find("#stepText2").html("<#455#>");
 }
 if(isSupport("lantiq")){
 /* Make sure BLUECAVE had updated wireless setting. */
@@ -3349,9 +3349,9 @@ goTo.Conncap = function(){
 if(systemVariable.isDefault) $("#cancelBtn").show();
 systemVariable.macAddr = httpApi.nvramGet(["et0macaddr"]).et0macaddr;
 setInterval(function(){
-httpApi.checkCap("http://router.asus.com", function(){
+httpApi.checkCap("http://<#844#>", function(){
 setTimeout(function(){
-if(isPage("amasconncap_page")) window.location.href = "http://router.asus.com/cfg_onboarding.cgi?flag=AMesh&id=" + systemVariable.macAddr.split(":").join("");
+if(isPage("amasconncap_page")) window.location.href = "http://<#844#>/cfg_onboarding.cgi?flag=AMesh&id=" + systemVariable.macAddr.split(":").join("");
 }, 3000);
 $("#loginCapAlert").fadeIn(500);
 });
@@ -3398,7 +3398,7 @@ if(!isSupport("lyra_hide"))
 $("#noWanEth").show();
 }
 if(isSupport("dsl")){
-$('#noWan_desc').html("<#508#>");
+$('#noWan_desc').html("<#512#>");
 $('#desktop_manual_applyBtn').html("<#210#>");
 $('#desktop_manual_applyBtn').on("click", function() { goTo.Wireless(); });
 $('#mobile_manual_applyBtn').html("<#210#>");
@@ -3838,7 +3838,7 @@ systemVariable.authModePostData = {};
 var wl_nband_array = "<% wl_nband_info(); %>".replace(/'/g, '"');
 if(wl_nband_array != "")
 wl_nband_array = JSON.parse(wl_nband_array);
-var re_isAX_model = (systemVariable.onboardingInfo.name.toUpperCase().indexOf("AX") >= 0 || systemVariable.onboardingInfo.name.toUpperCase().indexOf("ZENWIFI_X") >= 0 || systemVariable.onboardingInfo.name.toUpperCase().indexOf("ZENWIFI_E") >= 0);
+var re_isAX_model = (systemVariable.onboardingInfo.name.toUpperCase().indexOf("AX") >= 0 || systemVariable.onboardingInfo.name.toUpperCase().indexOf("ZENWIFI_X") >= 0 || systemVariable.onboardingInfo.name.toUpperCase().indexOf("ZENWIFI_E") >= 0 || systemVariable.onboardingInfo.name.toUpperCase().indexOf("GT6") >= 0);
 var auth_flag = false;
 var wps_flag = false;
 var band6g = 4;
@@ -3892,7 +3892,7 @@ var faq_href = "https://nw-dlcdnet.asus.com/support/forward.html?model=&type=Faq
 if(Object.keys(systemVariable.authModePostData).length){
 if(auth_flag){
 $("#amasonboarding_page").find("#wpa3_hint").attr("style","font-size:1.6em !important;").show();
-var auth_change_str = "* <#916#> <#1006#>".replace("WPA3-personal", current_auth).replace("WPA2/WPA3-personal", changeTo_auth);
+var auth_change_str = "* <#921#> <#1011#>".replace("WPA3-personal", current_auth).replace("WPA2/WPA3-personal", changeTo_auth);
 $("#amasonboarding_page").find("#wpa3_hint #auth_change_str").html(auth_change_str).attr("style","color:#FC0 !important;");
 $("#amasonboarding_page").find("#wpa3_hint #wpa3FaqLink").attr("target", "_blank").attr("style","color:#FC0 !important;");
 $("#amasonboarding_page").find("#wpa3_hint #wpa3FaqLink").attr("href", faq_href);

@@ -7,7 +7,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#838#> - <#416#></title>
+<title><#842#> - <#420#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script type="text/javascript" src="/js/jquery.js"></script>
@@ -48,13 +48,13 @@
 <tr bgcolor="#4D595D">
 <td valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#743#> - <#416#></div>
+<div class="formfonttitle"><#747#> - <#420#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#3010#></div>
+<div class="formfontdesc"><#3036#></div>
 <div style="margin-top:8px">
 <textarea class="textarea_ssh_table" style="width:99%; font-family:'Courier New', Courier, mono; font-size:13px;" cols="63" rows="25" readonly="readonly" wrap=off><% nvram_dump("route.log",""); %></textarea></div>
 <div class="apply_gen">
-<input type="button" onClick="location.reload();" value="<#1662#>" class="button_gen">
+<input type="button" onClick="location.reload();" value="<#1668#>" class="button_gen">
 </div>
 </td>
 </tr>

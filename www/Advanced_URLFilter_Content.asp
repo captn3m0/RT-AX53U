@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#838#> - <#401#></title>
+<title><#842#> - <#405#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script type="text/javascript" src="/js/jquery.js"></script>
@@ -29,7 +29,7 @@ var url_rulelist_row = decodeURIComponent(url_rulelist_array).split('<');
 var code = "";
 code +='<table width="100%" border="1" cellspacing="0" cellpadding="4" align="center" class="list_table" id="url_rulelist_table">';
 if(url_rulelist_row.length == 1)
-code +='<tr><td style="color:#FFCC00;"><#2382#></td>';
+code +='<tr><td style="color:#FFCC00;"><#2407#></td>';
 else{
 for(var i=1; i < url_rulelist_row.length; i++){
 var url_rulelist_col = url_rulelist_row[i].split('>');
@@ -61,13 +61,13 @@ document.form.url_enable_x[0].checked = true;
 var rule_num = document.getElementById('url_rulelist_table').rows.length;
 var item_num = document.getElementById('url_rulelist_table').rows[0].cells.length;
 if(rule_num >= upper){
-alert("<#2454#> " + upper + " <#2455#>");
+alert("<#2479#> " + upper + " <#2480#>");
 return false;
 }
 for(i=0; i<rule_num; i++){
 for(j=0; j<item_num-1; j++){ //only 1 value column
 if(obj.value.toLowerCase() == document.getElementById('url_rulelist_table').rows[i].cells[j].innerHTML.toLowerCase()){
-alert("<#2447#>");
+alert("<#2472#>");
 return false;
 }
 }
@@ -91,7 +91,7 @@ if(j != item_num-2)
 tmp_value += ">";
 }
 }
-if(tmp_value == "<"+"<#2382#>" || tmp_value == "<")
+if(tmp_value == "<"+"<#2407#>" || tmp_value == "<")
 tmp_value = "";
 document.form.url_rulelist.value = tmp_value;
 if(tmo_support){
@@ -102,7 +102,7 @@ document.form.submit();
 }
 function validForm(obj){
 if(obj.value==""){
-alert("<#316#>");
+alert("<#320#>");
 obj.focus();
 obj.select();
 return false;
@@ -147,29 +147,29 @@ refreshpage();
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#400#> - <#401#></div>
+<div class="formfonttitle"><#404#> - <#405#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#2080#></div>
-<!--div class="formfontdesc"><#2046#></div-->
+<div class="formfontdesc"><#2086#></div>
+<!--div class="formfontdesc"><#2052#></div-->
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#3251#></td>
+<td colspan="2"><#3277#></td>
 </tr>
 </thead>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(9,1);"><#2079#></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(9,1);"><#2085#></th>
 <td>
-<input type="radio" value="1" name="url_enable_x" <% nvram_match("url_enable_x", "1", "checked"); %>><#1649#>
-<input type="radio" value="0" name="url_enable_x" <% nvram_match("url_enable_x", "0", "checked"); %>><#1646#>
+<input type="radio" value="1" name="url_enable_x" <% nvram_match("url_enable_x", "1", "checked"); %>><#1655#>
+<input type="radio" value="0" name="url_enable_x" <% nvram_match("url_enable_x", "0", "checked"); %>><#1652#>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(9,3);"><#2053#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(9,3);"><#2059#></a></th>
 <td>
 <select name="url_mode_x" class="input_option" onChange="">
-<option class="content_input_fd" value="0" <% nvram_match( "url_mode_x", "0", "selected"); %>><#1433#></option>
-<option class="content_input_fd" value="1" <% nvram_match( "url_mode_x", "1", "selected"); %>><#3719#></option>
+<option class="content_input_fd" value="0" <% nvram_match( "url_mode_x", "0", "selected"); %>><#1438#></option>
+<option class="content_input_fd" value="1" <% nvram_match( "url_mode_x", "1", "selected"); %>><#3745#></option>
 </select>
 </td>
 </tr>
@@ -177,12 +177,12 @@ refreshpage();
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table">
 <thead>
 <tr>
-<td colspan="2"><#2081#>&nbsp;(<#2586#>&nbsp;64)</td>
+<td colspan="2"><#2087#>&nbsp;(<#2611#>&nbsp;64)</td>
 </tr>
 </thead>
 <tr>
-<th width="80%"><#2081#></th>
-<th width="20%"><#2585#></th>
+<th width="80%"><#2087#></th>
+<th width="20%"><#2610#></th>
 </tr>
 <tr>
 <td width="80%">

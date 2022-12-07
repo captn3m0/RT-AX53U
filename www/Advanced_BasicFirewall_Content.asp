@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#838#> - <#379#></title>
+<title><#842#> - <#383#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script language="JavaScript" type="text/javascript" src="/state.js"></script>
@@ -95,7 +95,7 @@ if(j != item_num-2)
 tmp_value += ">";
 }
 }
-if(tmp_value == "<"+"<#2382#>" || tmp_value == "<")
+if(tmp_value == "<"+"<#2407#>" || tmp_value == "<")
 tmp_value = "";
 document.form.ipv6_fw_rulelist.value = tmp_value;
 rule_num = document.getElementById('ipv4_fw_rulelist_table').rows.length;
@@ -107,7 +107,7 @@ tmp_value += "<";
 tmp_value += document.getElementById('ipv4_fw_rulelist_table').rows[i].cells[2].innerHTML + '>>' + document.getElementById('ipv4_fw_rulelist_table').rows[i].cells[0].innerHTML + '>>>' + document.getElementById('ipv4_fw_rulelist_table').rows[i].cells[1].innerHTML;
 }
 }
-if(tmp_value == "<"+"<#2382#>" || tmp_value == "<"){
+if(tmp_value == "<"+"<#2407#>" || tmp_value == "<"){
 tmp_value = "";
 }
 document.form.filter_wllist.value = tmp_value;
@@ -122,7 +122,7 @@ refreshpage();
 }
 function loadAppOptions(){
 free_options(document.form.KnownApps);
-add_option(document.form.KnownApps, "<#721#>", 0, 1);
+add_option(document.form.KnownApps, "<#725#>", 0, 1);
 for(var i = 1; i < wItem.length; i++){
 add_option(document.form.KnownApps, wItem[i][0], i, 0);
 }
@@ -146,10 +146,10 @@ break;
 }
 function addRow(obj, head){
 if(head == 1)
-ipv6_fw_rulelist_array += "<"
+ipv6_fw_rulelist_array += "%3C";
 else
-ipv6_fw_rulelist_array += ">"
-ipv6_fw_rulelist_array += obj.value;
+ipv6_fw_rulelist_array += "%3E";
+ipv6_fw_rulelist_array += encodeURIComponent(obj.value);
 obj.value = "";
 }
 function validForm(){
@@ -167,13 +167,13 @@ if(!check_multi_range(document.form.ipv6_fw_port_x_0, 1, 65535, true)){
 return false;
 }
 if(document.form.ipv6_fw_lipaddr_x_0.value==""){
-alert("<#316#>");
+alert("<#320#>");
 document.form.ipv6_fw_lipaddr_x_0.focus();
 document.form.ipv6_fw_lipaddr_x_0.select();
 return false;
 }
 if(document.form.ipv6_fw_port_x_0.value==""){
-alert("<#316#>");
+alert("<#320#>");
 document.form.ipv6_fw_port_x_0.focus();
 document.form.ipv6_fw_port_x_0.select();
 return false;
@@ -192,7 +192,7 @@ document.form.ipv6_fw_enable[0].checked = true;
 var rule_num = document.getElementById('ipv6_fw_rulelist_table').rows.length;
 var item_num = document.getElementById('ipv6_fw_rulelist_table').rows[0].cells.length;
 if(rule_num >= upper){
-alert("<#2454#> " + upper + " <#2455#>");
+alert("<#2479#> " + upper + " <#2480#>");
 return;
 }
 addRow(document.form.ipv6_fw_desc_x_0 ,1);
@@ -206,7 +206,7 @@ showipv6_fw_rulelist();
 }
 function addRow_Group_v4(upper){
 if(document.form.ipv4_fw_lipaddr_x_0.value == "") {
-alert("<#316#>");
+alert("<#320#>");
 document.form.ipv4_fw_lipaddr_x_0.focus();
 document.form.ipv4_fw_lipaddr_x_0.select();
 return false;
@@ -217,7 +217,7 @@ if(!check_multi_range_v4(document.form.ipv4_fw_port_x_0, 1, 65535, true)) {retur
 var rule_num = document.getElementById('ipv4_fw_rulelist_table').rows.length;
 var item_num = document.getElementById('ipv4_fw_rulelist_table').rows[0].cells.length;
 if(rule_num >= upper){
-alert("<#2454#> " + upper + " <#2455#>");
+alert("<#2479#> " + upper + " <#2480#>");
 return;
 }
 ipv4_fw_rulelist_array += '<' + document.form.ipv4_fw_proto_x_0.value + '>>' + document.form.ipv4_fw_lipaddr_x_0.value + '>>>' + document.form.ipv4_fw_port_x_0.value;
@@ -232,7 +232,7 @@ if(rangere.test(val)){
 if(!validator.eachPort(document.form.ipv6_fw_port_x_0, RegExp.$1, mini, maxi) || !validator.eachPort(document.form.ipv6_fw_port_x_0, RegExp.$2, mini, maxi)){
 return false;
 }else if(parseInt(RegExp.$1) >= parseInt(RegExp.$2)){
-alert("<#331#>");
+alert("<#335#>");
 return false;
 }else
 return true;
@@ -246,12 +246,12 @@ return true;
 function validate_single_range(val, min, max) {
 for(j=0; j<val.length; j++){ //is_number
 if (val.charAt(j)<'0' || val.charAt(j)>'9'){
-alert('<#334#> ' + min + ' <#335#> ' + max);
+alert('<#338#> ' + min + ' <#339#> ' + max);
 return false;
 }
 }
 if(val < min || val > max) { //is_in_range
-alert('<#334#> ' + min + ' <#335#> ' + max);
+alert('<#338#> ' + min + ' <#339#> ' + max);
 return false;
 }else
 return true;
@@ -264,7 +264,7 @@ for(i=0;i<PortSplit.length;i++){
 PortSplit[i] = PortSplit[i].replace(/(^\s*)|(\s*$)/g, ""); // "\space" to ""
 PortSplit[i] = PortSplit[i].replace(/(^0*)/g, ""); // "^0" to ""
 if(PortSplit[i] == "" ||PortSplit[i] == 0){
-alert("<#2453#>");
+alert("<#2478#>");
 obj.focus();
 obj.select();
 return false;
@@ -334,7 +334,7 @@ var ipv6_fw_rulelist_row = decodeURIComponent(ipv6_fw_rulelist_array).split('<')
 var code = "";
 code +='<table width="100%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="ipv6_fw_rulelist_table">';
 if(ipv6_fw_rulelist_row.length == 1)
-code +='<tr><td style="color:#FFCC00;" colspan="6"><#2382#></td></tr>';
+code +='<tr><td style="color:#FFCC00;" colspan="6"><#2407#></td></tr>';
 else{
 for(var i = 1; i < ipv6_fw_rulelist_row.length; i++){
 overlib_str0[i] ="";
@@ -389,7 +389,7 @@ var ipv4_fw_rulelist_row = decodeURIComponent(ipv4_fw_rulelist_array).split('<')
 var code = "";
 code +='<table width="100%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="ipv4_fw_rulelist_table">';
 if(ipv4_fw_rulelist_row.length == 1){
-code +='<tr><td style="color:#FFCC00;" colspan="6"><#2382#></td></tr>';
+code +='<tr><td style="color:#FFCC00;" colspan="6"><#2407#></td></tr>';
 }
 else{
 for(var i = 1; i < ipv4_fw_rulelist_row.length; i++){
@@ -431,7 +431,7 @@ var rangere=new RegExp("^\s*((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9
 if((rangere.test(obj.value)) || (cidr == 1 && rangere_cidr.test(obj.value))) {;
 return true;
 }else{
-alert(obj.value+" <#330#>");
+alert(obj.value+" <#334#>");
 obj.focus();
 obj.select();
 return false;
@@ -444,7 +444,7 @@ for(i=0;i<PortSplit.length;i++){
 PortSplit[i] = PortSplit[i].replace(/(^\s*)|(\s*$)/g, ""); // "\space" to ""
 PortSplit[i] = PortSplit[i].replace(/(^0*)/g, ""); // "^0" to ""
 if(PortSplit[i] == "" ||PortSplit[i] == 0){
-alert("<#316#>");
+alert("<#320#>");
 obj.focus();
 obj.select();
 return false;
@@ -473,7 +473,7 @@ if(rangere.test(val)){
 if(!validator.eachPort(obj, RegExp.$1, mini, maxi) || !validator.eachPort(obj, RegExp.$2, mini, maxi)){
 return false;
 }else if(parseInt(RegExp.$1) >= parseInt(RegExp.$2)){
-alert("<#331#>");
+alert("<#335#>");
 return false;
 }else
 return true;
@@ -487,12 +487,12 @@ return true;
 function validate_single_range_v4(val, min, max) {
 for(j=0; j<val.length; j++){ //is_number
 if (val.charAt(j)<'0' || val.charAt(j)>'9'){
-alert('<#334#> ' + min + ' <#335#> ' + max);
+alert('<#338#> ' + min + ' <#339#> ' + max);
 return false;
 }
 }
 if(val < min || val > max) { //is_in_range
-alert('<#334#> ' + min + ' <#335#> ' + max);
+alert('<#338#> ' + min + ' <#339#> ' + max);
 return false;
 }else
 return true;
@@ -532,40 +532,40 @@ return true;
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#400#></div>
+<div class="formfonttitle"><#404#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc" style="font-size:14px;font-weight:bold;margin-top:10px;"><#379#></div>
-<div class="formfontdesc"><#2033#></div>
+<div class="formfontdesc" style="font-size:14px;font-weight:bold;margin-top:10px;"><#383#></div>
+<div class="formfontdesc"><#2039#></div>
 <div class="formfontdesc" style="margin-top:-10px;">
 <a id="faq" href="" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">DoS Protection FAQ</a> </div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(8,6);"><#2040#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(8,6);"><#2046#></a></th>
 <td>
 <input type="radio" value="1" name="fw_enable_x" onClick="return change_common_radio(this, 'FirewallConfig', 'fw_enable_x', '1')" <% nvram_match("fw_enable_x", "1", "checked"); %>><#187#>
 <input type="radio" value="0" name="fw_enable_x" onClick="return change_common_radio(this, 'FirewallConfig', 'fw_enable_x', '0')" <% nvram_match("fw_enable_x", "0", "checked"); %>><#186#>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(8,7);"><#2038#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(8,7);"><#2044#></a></th>
 <td>
 <input type="radio" value="1" name="fw_dos_x" class="input" onClick="return change_common_radio(this, 'FirewallConfig', 'fw_dos_x', '1')" <% nvram_match("fw_dos_x", "1", "checked"); %>><#187#>
 <input type="radio" value="0" name="fw_dos_x" class="input" onClick="return change_common_radio(this, 'FirewallConfig', 'fw_dos_x', '0')" <% nvram_match("fw_dos_x", "0", "checked"); %>><#186#>
 </td>
 </tr>
 <tr>
-<th align="right"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(8,1);"><#2083#></a></th>
+<th align="right"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(8,1);"><#2089#></a></th>
 <td>
 <select name="fw_log_x" class="input_option">
-<option value="none" <% nvram_match("fw_log_x", "none","selected"); %>><#843#></option>
-<option value="drop" <% nvram_match("fw_log_x", "drop","selected"); %>><#2820#></option>
-<option value="accept" <% nvram_match("fw_log_x", "accept","selected"); %>><#2817#></option>
-<option value="both" <% nvram_match("fw_log_x", "both","selected"); %>><#2818#></option>
+<option value="none" <% nvram_match("fw_log_x", "none","selected"); %>><#848#></option>
+<option value="drop" <% nvram_match("fw_log_x", "drop","selected"); %>><#2846#></option>
+<option value="accept" <% nvram_match("fw_log_x", "accept","selected"); %>><#2843#></option>
+<option value="both" <% nvram_match("fw_log_x", "both","selected"); %>><#2844#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(8,5);"><#2087#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(8,5);"><#2093#></a></th>
 <td>
 <input type="radio" value="1" name="misc_ping_x" class="input" onClick="return change_common_radio(this, 'FirewallConfig', 'misc_ping_x', '1')" <% nvram_match("misc_ping_x", "1", "checked"); %>><#187#>
 <input type="radio" value="0" name="misc_ping_x" class="input" onClick="return change_common_radio(this, 'FirewallConfig', 'misc_ping_x', '0')" <% nvram_match("misc_ping_x", "0", "checked"); %>><#186#>
@@ -584,13 +584,13 @@ return true;
 <tr id="webdav_http_port_tr" style="display:none;">
 <th width="40%">Cloud Disk Port (HTTP):</th>
 <td>
-<input type="text" name="webdav_http_port" class="input_6_table" maxlength="5" value="<% nvram_get("webdav_http_port"); %>" onKeyPress="return validator.isNumber(this, event);" autocorrect="off" autocapitalize="off">
+<input type="text" name="webdav_http_port" class="input_6_table" maxlength="5" value="<% nvram_get("webdav_http_port"); %>" onkeypress="return validator.isNumber(this, event);" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr id="webdav_https_port_tr" style="display:none;">
 <th width="40%">Cloud Disk Port (HTTPS):</th>
 <td>
-<input type="text" name="webdav_https_port" class="input_6_table" maxlength="5" value="<% nvram_get("webdav_https_port"); %>" onKeyPress="return validator.isNumber(this, event);" autocorrect="off" autocapitalize="off">
+<input type="text" name="webdav_https_port" class="input_6_table" maxlength="5" value="<% nvram_get("webdav_https_port"); %>" onkeypress="return validator.isNumber(this, event);" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 </table>
@@ -598,11 +598,11 @@ return true;
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 <thead>
 <tr>
-<td colspan="4"><#3251#></td>
+<td colspan="4"><#3277#></td>
 </tr>
 </thead>
 <tr>
-<th><#2041#></th>
+<th><#2047#></th>
 <td>
 <input type="radio" value="1" name="fw_wl_enable_x" <% nvram_match("fw_wl_enable_x", "1", "checked"); %>><#187#>
 <input type="radio" value="0" name="fw_wl_enable_x" <% nvram_match("fw_wl_enable_x", "0", "checked"); %>><#186#>
@@ -612,14 +612,14 @@ return true;
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table">
 <thead>
 <tr>
-<td colspan="7"><#2096#>&nbsp;(<#2586#>&nbsp;128)</td>
+<td colspan="7"><#2102#>&nbsp;(<#2611#>&nbsp;128)</td>
 </tr>
 </thead>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,25);"><#2061#></a></th>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,24);"><#2062#></a></th>
-<th><#2375#></th>
-<th><#2585#></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,25);"><#2067#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,24);"><#2068#></a></th>
+<th><#2400#></th>
+<th><#2610#></th>
 </tr>
 <tr>
 <td width="30%">
@@ -640,26 +640,26 @@ return true;
 </tr>
 </table>
 <div id="ipv4_fw_rulelist_Block"></div>
-<div class="formfontdesc" style="font-size:14px;font-weight:bold;margin-top:10px;"><#405#></div>
+<div class="formfontdesc" style="font-size:14px;font-weight:bold;margin-top:10px;"><#409#></div>
 <div>
-<div class="formfontdesc"><#2094#></div>
-<div class="formfontdesc"><#2095#></div>
+<div class="formfontdesc"><#2100#></div>
+<div class="formfontdesc"><#2101#></div>
 </div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 <thead>
 <tr>
-<td colspan="4"><#3251#></td>
+<td colspan="4"><#3277#></td>
 </tr>
 </thead>
 <tr>
-<th><#2093#></th>
+<th><#2099#></th>
 <td>
 <input type="radio" value="1" name="ipv6_fw_enable" <% nvram_match("ipv6_fw_enable", "1", "checked"); %>><#187#>
 <input type="radio" value="0" name="ipv6_fw_enable" <% nvram_match("ipv6_fw_enable", "0", "checked"); %>><#186#>
 </td>
 </tr>
 <tr>
-<th><#2381#></th>
+<th><#2406#></th>
 <td id="ipv6_fw_rulelist">
 <select name="KnownApps" id="KnownApps" class="input_option" onchange="change_wizard(this, 'KnownApps');"></select>
 </td>
@@ -668,20 +668,20 @@ return true;
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table">
 <thead>
 <tr>
-<td colspan="7"><#2096#>&nbsp;(<#2586#>&nbsp;128)</td>
+<td colspan="7"><#2102#>&nbsp;(<#2611#>&nbsp;128)</td>
 </tr>
 </thead>
 <tr>
-<th><#1504#></th>
-<th><#2097#></th>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,25);"><#2373#></a></th>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,24);"><#2062#></a></th>
-<th><#2375#></th>
-<th><#2585#></th>
+<th><#1509#></th>
+<th><#2103#></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,25);"><#2398#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,24);"><#2068#></a></th>
+<th><#2400#></th>
+<th><#2610#></th>
 </tr>
 <tr>
 <td width="15%">
-<input type="text" maxlength="30" class="input_12_table" name="ipv6_fw_desc_x_0" onKeyPress="return is_alphanum(this, event)" autocorrect="off" autocapitalize="off"/>
+<input type="text" maxlength="30" class="input_12_table" name="ipv6_fw_desc_x_0" onkeypress="return validator.isString(this, event)" autocorrect="off" autocapitalize="off"/>
 </td>
 <td width="24%">
 <input type="text" maxlength="45" class="input_18_table" name="ipv6_fw_ripaddr_x_0" align="left" style="float:left;" autocomplete="off" autocorrect="off" autocapitalize="off">

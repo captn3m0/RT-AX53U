@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#838#> - <#3636#></title>
+<title><#842#> - <#3662#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="usp_style.css">
@@ -192,14 +192,14 @@ selectobject.add(option);
 $("#ipsec_vpn_type_faq").html("IPSec Net-to-Net FAQ") /*untranslated*/
 .attr("href", faq_href1);
 }
-$("#ip_conflict_hint").html("<#3521#>: <#3628#>");
+$("#ip_conflict_hint").html("<#3547#>: <#3654#>");
 $("#ip_conflict_hint a").attr("href", faq_href2);
 }
 var add_profile_flag = false;
 function Add_profile(upper){
 var rule_num = document.getElementById("vpnc_clientlist_table").rows.length;
 if(rule_num >= upper){
-alert("<#2454#> " + upper + " <#2455#>");
+alert("<#2479#> " + upper + " <#2480#>");
 return false;
 }
 add_profile_flag = true;
@@ -265,7 +265,7 @@ duplicateCheck.saveToTmpDataArray(server_obj);
 duplicateCheck.saveToTmpDataArray(username_obj);
 duplicateCheck.saveToTmpDataArray(password_obj);
 if(duplicateCheck.isDuplicate()){
-alert("<#2447#>")
+alert("<#2472#>")
 return false;
 }
 var editVPNCRuleArray = new Array();
@@ -437,14 +437,14 @@ valid_server = document.form.vpnc_svr_edit;
 valid_username = document.form.vpnc_account_edit;
 valid_password = document.form.vpnc_pwd_edit;
 if(valid_des.value==""){
-alert("<#316#>");
+alert("<#320#>");
 valid_des.focus();
 return false;
 }else if(!Block_chars(valid_des, ["*", "+", "|", ":", "?", "<", ">", ",", ".", "/", ";", "[", "]", "\\", "=", "\"" ])){
 return false;
 }
 if(valid_server.value==""){
-alert("<#316#>");
+alert("<#320#>");
 valid_server.focus();
 return false;
 }
@@ -463,14 +463,14 @@ return false;
 }
 }
 if(valid_username.value==""){
-alert("<#316#>");
+alert("<#320#>");
 valid_username.focus();
 return false;
 }else if(!Block_chars(valid_username, ["<", ">"])){
 return false;
 }
 if(valid_password.value==""){
-alert("<#316#>");
+alert("<#320#>");
 valid_password.focus();
 return false;
 }else if(!Block_chars(valid_password, ["<", ">"])){
@@ -482,7 +482,7 @@ valid_des = document.vpnclientForm.vpnc_openvpn_des;
 valid_username = document.vpnclientForm.vpnc_openvpn_username;
 valid_password = document.vpnclientForm.vpnc_openvpn_pwd;
 if(valid_des.value == ""){
-alert("<#316#>");
+alert("<#320#>");
 valid_des.focus();
 return false;
 }
@@ -552,7 +552,7 @@ update_unit_option();
 }
 else if(_type == 3){
 if(!control_profile_flag) {
-alert("<#4098#>");
+alert("<#4125#>");
 return true;
 }
 save_flag = "IPSec";
@@ -565,7 +565,7 @@ adjust_panel_block_top("openvpnc_setting_ipsec", 50);
 }
 var set_limit_hint = function(_type, _limitNum, _name) {
 $("#tr_" + _type + "_limit_hint").css("display", "");
-var hint = _name + " : <#2586#> " + _limitNum;
+var hint = _name + " : <#2611#> " + _limitNum;
 $("#openvpnc_setting_" + _type + "").find(".vpnc_limit_hint").html(hint);
 $("#openvpnc_setting_" + _type + "").find("input,button,textarea,select").attr("disabled", true);
 $("#cancelBtn_" + _type + "").attr("disabled", false);
@@ -633,7 +633,7 @@ ipsec_arrayLength = ipsec_profilelist_arraylist.length;
 var code = "";
 code +='<table style="margin-bottom:30px;" width="98%" border="1" align="center" cellpadding="4" cellspacing="0" class="list_table" id="vpnc_clientlist_table">';
 if(vpnc_clientlist_array.length == 0 && ipsec_arrayLength == 0)
-code +='<tr><td style="color:#FC0;" colspan="6"><#2382#></td></tr>';
+code +='<tr><td style="color:#FC0;" colspan="6"><#2407#></td></tr>';
 else{
 for(var i = 0; i < vpnc_clientlist_array.length; i += 1) {
 if(vpnc_clientlist_array[i] != "") {
@@ -679,11 +679,11 @@ code +="<td width='10%'><img title='<#195#>' src='/images/InternetScan.gif'></td
 else if(client_state == 2)
 code +="<td width='10%'><img title='<#189#>' src='/images/checked_parentctrl.png' style='width:25px;'></td>";
 else if(client_errno == 1 || client_errno == 2 || client_errno == 3){
-code +="<td width='10%'><div title='<#3521#>' class='vpnc_ipconflict_icon'></div></td>";
+code +="<td width='10%'><div title='<#3547#>' class='vpnc_ipconflict_icon'></div></td>";
 $("#ip_conflict_hint").show();
 }
 else if(client_errno == 4 || client_errno == 5 || client_errno == 6)
-code +="<td width='10%'><img title='<#540#>' src='/images/button-close2.png' style='width:25px;'></td>";
+code +="<td width='10%'><img title='<#544#>' src='/images/button-close2.png' style='width:25px;'></td>";
 else if(client_errno == 7)
 code +="<td width='10%'><img title='Certification Authentication / Server certification / Server Key field error! \nPlease check the Keys and Certification contents on the Manual Setting.' src='/images/button-close2.png' style='width:25px;'></td>";
 else //Stop connection
@@ -698,9 +698,9 @@ code +="<td width='10%'><img title='<#195#>' src='/images/InternetScan.gif'></td
 else if(vpnc_state_t == 2) // Connected
 code +="<td width='10%'><img title='<#189#>' src='/images/checked_parentctrl.png' style='width:25px;'></td>";
 else if(vpnc_state_t == 4 && vpnc_sbstate_t == 2)
-code +="<td width='10%'><img title='<#540#>' src='/images/button-close2.png' style='width:25px;'></td>";
+code +="<td width='10%'><img title='<#544#>' src='/images/button-close2.png' style='width:25px;'></td>";
 else if(vpnc_state_t == 4 && vpnc_sbstate_t == 7){
-code +="<td width='10%'><div title='<#3521#>' class='vpnc_ipconflict_icon'></div></td>";
+code +="<td width='10%'><div title='<#3547#>' class='vpnc_ipconflict_icon'></div></td>";
 $("#ip_conflict_hint").show();
 }
 else // Stop connection
@@ -722,11 +722,11 @@ code += '<td width="10%"><input class="edit_btn" type="button" onclick="Edit_Row
 if(vpnc_proto == "OpenVPN"){
 if(client_state != 0) { //connecting
 code += '<td width="10%"><input class="remove_btn" type="button" onclick="del_Row(this, \'vpnc_enable\');" value=""/></td>';
-code += '<td width="25%"><input class="button_gen" type="button" onClick="connect_Row(this, \'disconnect\');" id="disonnect_btn" value="<#1644#>" style="padding:0 0.3em 0 0.3em;" >';
+code += '<td width="25%"><input class="button_gen" type="button" onClick="connect_Row(this, \'disconnect\');" id="disonnect_btn" value="<#1650#>" style="padding:0 0.3em 0 0.3em;" >';
 }
 else{ //OpenVPN is not connecting
 code += '<td width="10%"><input class="remove_btn" type="button" onclick="del_Row(this, \'vpnc\');" value=""/></td>';
-code += '<td width="25%"><input class="button_gen" type="button" onClick="connect_Row(this, \'vpnc\');" id="Connect_btn" name="Connect_btn" value="<#1636#>" style="padding:0 0.3em 0 0.3em;" >';
+code += '<td width="25%"><input class="button_gen" type="button" onClick="connect_Row(this, \'vpnc\');" id="Connect_btn" name="Connect_btn" value="<#1642#>" style="padding:0 0.3em 0 0.3em;" >';
 }
 }
 else{
@@ -734,11 +734,11 @@ if( vpnc_proto == document.form.vpnc_proto.value.toUpperCase()
 && vpnc_server == document.form.vpnc_heartbeat_x.value
 && vpnc_username == document.form.vpnc_pppoe_username.value){ // This rule is connecting
 code += '<td width="10%"><input class="remove_btn" type="button" onclick="del_Row(this, \'vpnc_enable\');" value=""/></td>';
-code += '<td width="25%"><input class="button_gen" type="button" onClick="connect_Row(this, \'disconnect\');" id="disonnect_btn" value="<#1644#>" style="padding:0 0.3em 0 0.3em;" >';
+code += '<td width="25%"><input class="button_gen" type="button" onClick="connect_Row(this, \'disconnect\');" id="disonnect_btn" value="<#1650#>" style="padding:0 0.3em 0 0.3em;" >';
 }
 else{ // This rule is not connecting
 code += '<td width="10%"><input class="remove_btn" type="button" onclick="del_Row(this, \'vpnc\');" value=""/></td>';
-code += '<td width="25%"><input class="button_gen" type="button" onClick="connect_Row(this, \'vpnc\');" id="Connect_btn" name="Connect_btn" value="<#1636#>" style="padding:0 0.3em 0 0.3em;" >';
+code += '<td width="25%"><input class="button_gen" type="button" onClick="connect_Row(this, \'vpnc\');" id="Connect_btn" name="Connect_btn" value="<#1642#>" style="padding:0 0.3em 0 0.3em;" >';
 }
 }
 }
@@ -758,7 +758,7 @@ case '1' :
 code +='<td width="10%" title="<#189#>"><img src="/images/checked_parentctrl.png" style="width:25px;"></td>';
 break;
 case '2' :
-code +='<td width="10%" title="<#1617#>"><img src="/images/InternetScan.gif" style="width:25px;"></td>';
+code +='<td width="10%" title="<#1623#>"><img src="/images/InternetScan.gif" style="width:25px;"></td>';
 break;
 case '3' :
 code +='<td width="10%" title="<#191#>"><img src="/images/button-close2.png" style="width:25px;cursor:pointer;"></td>';
@@ -777,10 +777,10 @@ code +='<td width="10%"><input class="edit_btn" onclick="editIPSecProfile(\''+ i
 code +='<td width="10%"><input class="remove_btn" onclick="delIPSecProfile(this);" value=""/></td>';
 code +='<td width="25%">';
 if(ipsec_profilelist_arraylist[i][38] == 0) {
-code += '<input class="button_gen" type="button" onClick="connect_Row_IPSec(this, \''+ipsec_profilelist_arraylist[i][0]+'\', \'active\');" value="<#1636#>">';
+code += '<input class="button_gen" type="button" onClick="connect_Row_IPSec(this, \''+ipsec_profilelist_arraylist[i][0]+'\', \'active\');" value="<#1642#>">';
 }
 else {
-code += '<input class="button_gen" type="button" onClick="connect_Row_IPSec(this, \''+ipsec_profilelist_arraylist[i][0]+'\', \'deactivate\');" value="<#1644#>">';
+code += '<input class="button_gen" type="button" onClick="connect_Row_IPSec(this, \''+ipsec_profilelist_arraylist[i][0]+'\', \'deactivate\');" value="<#1650#>">';
 control_profile_flag = false;
 }
 code +='</td>';
@@ -855,7 +855,7 @@ var ctf_disable = httpApi.nvramGet(["ctf_disable"], true).ctf_disable;
 if(pppoe_flag && ctf_disable == "0") {
 var vpncoppp = httpApi.nvramGet(["vpncoppp"], true).vpncoppp;
 if(vpncoppp == "" || vpncoppp == "0") {
-if(confirm("<#3637#>")) {
+if(confirm("<#3663#>")) {
 document.form.ctf_nonat_force.disabled = false;
 document.form.ctf_nonat_force.value = "1";
 document.form.flag.value = "";
@@ -1088,7 +1088,7 @@ document.form.vpnc_pwd_edit.value = vpnc_userpwd;
 }
 }
 function del_Row(rowdata, flag){
-if(!confirm("<#4101#>"))
+if(!confirm("<#4128#>"))
 return false;
 var idx = rowdata.parentNode.parentNode.rowIndex;
 document.getElementById("vpnc_clientlist_table").deleteRow(idx);
@@ -1119,7 +1119,7 @@ document.vpnclientForm.submit();
 }
 function ImportOvpn(unit){
 if(document.vpnclientForm.file.value == "") {
-alert("<#3093#>");
+alert("<#3119#>");
 return false;
 }
 document.getElementById('importOvpnFile').style.display = "none";
@@ -1143,7 +1143,7 @@ document.getElementById("manualFiled").style.display = "none";
 }
 var vpn_upload_state = "init";
 function ovpnFileChecker(){
-document.getElementById("importOvpnFile").innerHTML = "<#366#>";
+document.getElementById("importOvpnFile").innerHTML = "<#370#>";
 document.getElementById("manualCRList").style.color = "#FFF";
 document.getElementById("manualStatic").style.color = "#FFF";
 document.getElementById("manualKey").style.color = "#FFF";
@@ -1165,7 +1165,7 @@ if(vpn_upload_state == "init"){
 setTimeout("ovpnFileChecker();",1000);
 }
 else if(vpn_upload_state == "err"){
-document.getElementById("importOvpnFile").innerHTML = "<#3093#>";
+document.getElementById("importOvpnFile").innerHTML = "<#3119#>";
 document.getElementById("manualCRList").style.color = "#FC0";
 }
 else{
@@ -1291,7 +1291,7 @@ cancel_Key_panel();
 }
 function startImportCA(unit){
 if(document.openvpnCAForm.file.value == "") {
-alert("<#3093#>");
+alert("<#3119#>");
 return false;
 }
 document.getElementById('importCA').style.display = "";
@@ -1491,7 +1491,7 @@ $('input:checkbox[name=ipsec_pfs_group]').prop("checked", true);
 function editIPSecProfile(mode) {
 add_profile_flag = false;
 if(!control_profile_flag) {
-alert("<#4098#>");
+alert("<#4125#>");
 return true;
 }
 gen_vpnc_tab_list("ipsec");
@@ -1545,10 +1545,10 @@ UpdatePSecProfile(editProfileArray, editProfileExtArray);
 }
 function delIPSecProfile(obj) {
 if(!control_profile_flag) {
-alert("<#4099#>");
+alert("<#4126#>");
 return true;
 }
-if(!confirm("<#4101#>"))
+if(!confirm("<#4128#>"))
 return false;
 var delRowID = obj.parentNode.parentNode.id;
 if(delRowID == "vpnc_row_ipsec_profile_client_1") {
@@ -1740,7 +1740,7 @@ profileName = ipsec_profile_client_5.split(">")[1];
 break;
 }
 if(profileName == document.ipsec_form.ipsec_profilename.value) {
-alert("<#2447#>");
+alert("<#2472#>");
 document.ipsec_form.ipsec_profilename.focus();
 document.ipsec_form.ipsec_profilename.select();
 dup_flag = true;
@@ -1760,14 +1760,14 @@ return false;
 if(getRadioItemCheck(document.ipsec_form.ipsec_remote_gateway_method) == "0") {
 if(!validator.ipv4_addr(document.ipsec_form.ipsec_remote_gateway.value)) {
 document.ipsec_form.ipsec_remote_gateway.focus();
-alert(document.ipsec_form.ipsec_remote_gateway.value + " <#330#>");
+alert(document.ipsec_form.ipsec_remote_gateway.value + " <#334#>");
 return false;
 }
 }
 else if(getRadioItemCheck(document.ipsec_form.ipsec_remote_gateway_method) == "1") {
 if(!validator.domainName_flag(document.ipsec_form.ipsec_remote_gateway.value)) {
 document.ipsec_form.ipsec_remote_gateway.focus();
-alert(document.ipsec_form.ipsec_remote_gateway.value + "<#2450#>");
+alert(document.ipsec_form.ipsec_remote_gateway.value + "<#2475#>");
 return false;
 }
 if(!validator.isEmpty(document.ipsec_form.ipsec_remote_id))
@@ -1787,7 +1787,7 @@ return false;
 }
 var is_common_string = check_common_string(document.ipsec_form.ipsec_preshared_key.value, "wpa_key");
 if(is_common_string){
-if(!confirm("<#312#>")){
+if(!confirm("<#316#>")){
 document.ipsec_form.ipsec_preshared_key.focus();
 document.ipsec_form.ipsec_preshared_key.select();
 return false;
@@ -1860,7 +1860,7 @@ is_ipv4 = (existSubnetObj.value.indexOf(".") != -1) ? true : false;
 if(subnetIP_support_IPv6)
 is_ipv6 = (existSubnetObj.value.indexOf(":") != -1) ? true : false;
 if(!is_ipv4 && !is_ipv6) {
-alert(existSubnetObj.value + "<#330#>");
+alert(existSubnetObj.value + "<#334#>");
 existSubnetObj.focus();
 return false;
 }
@@ -2220,7 +2220,7 @@ $("#ipsec_remote_id_hint").css("display", "none");
 function add_subnet_item(obj, _type) {
 var existSubnetItem = obj.parentNode.getElementsByClassName("input_25_table").length;
 if(existSubnetItem > 3) {
-alert("<#2454#> " + existSubnetItem + " <#2455#>");
+alert("<#2479#> " + existSubnetItem + " <#2480#>");
 }
 else {
 var code = "";
@@ -2343,7 +2343,7 @@ $("#tr_adv_pfs_group").show();
 <div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 <tr>
-<th><#2351#></th>
+<th><#2376#></th>
 <td>
 <input type="text" maxlength="64" name="vpnc_des_edit" value="" class="input_32_table" style="float:left;" autocorrect="off" autocapitalize="off"></input>
 </td>
@@ -2355,28 +2355,28 @@ $("#tr_adv_pfs_group").show();
 </td>
 </tr>
 <tr>
-<th><#3468#></th>
+<th><#3494#></th>
 <td>
 <input type="text" maxlength="64" name="vpnc_account_edit" value="" class="input_32_table" style="float:left;" autocomplete="off" autocorrect="off" autocapitalize="off"></input>
 </td>
 </tr>
 <tr>
-<th><#2271#></th>
+<th><#2296#></th>
 <td>
 <input type="text" maxlength="64" name="vpnc_pwd_edit" value="" class="input_32_table" style="float:left;" autocomplete="off" autocorrect="off" autocapitalize="off"></input>
 </td>
 </tr>
 <tr id="trPPTPOptions">
-<th><#2938#></th>
+<th><#2964#></th>
 <td>
 <select name="selPPTPOption" class="input_option" onchange="pptpOptionChange();">
 <option value="auto"><#153#></option>
-<option value="-mppc"><#2799#></option>
+<option value="-mppc"><#2824#></option>
 <option value="+mppe-40">MPPE 40</option>
 <option value="+mppe-128">MPPE 128</option>
 </select>
 <div id="pptpOptionHint" style="display:none;">
-<span><#486#></span>
+<span><#490#></span>
 </div>
 </td>
 </tr>
@@ -2387,7 +2387,7 @@ $("#tr_adv_pfs_group").show();
 </table>
 <div style="margin-top:5px;padding-bottom:10px;width:100%;text-align:center;">
 <input class="button_gen" type="button" onclick="cancel_add_rule();" id="cancelBtn" value="<#199#>">
-<input class="button_gen" type="button" onclick="addRow_Group(10,save_flag, idx_tmp);" value="<#1659#>">
+<input class="button_gen" type="button" onclick="addRow_Group(10,save_flag, idx_tmp);" value="<#1665#>">
 </div>
 </div>
 <table class="content" align="center" cellpadding="0" cellspacing="0">
@@ -2406,17 +2406,17 @@ $("#tr_adv_pfs_group").show();
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle">VPN - <#3636#></div>
+<div class="formfonttitle">VPN - <#3662#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
 <div class="formfontdesc">
-<#3625#><br>
-<#3626#><br>
-<#3627#><br><br>
-<#3632#>
+<#3651#><br>
+<#3652#><br>
+<#3653#><br><br>
+<#3658#>
 <ol>
-<li><#3633#>
-<li><#3634#>
-<li><#3635#>
+<li><#3659#>
+<li><#3660#>
+<li><#3661#>
 </ol>
 </div>
 <div id="ip_conflict_hint" class="conn_status_hint"></div>
@@ -2431,17 +2431,17 @@ $("#tr_adv_pfs_group").show();
 </tr>
 </thead>
 <tr>
-<th width="10%" style="height:30px;"><#484#></th>
-<th><div><#2351#></div></th>
-<th width="15%"><div><#573#></div></th>
-<th width="10%"><div><#2972#></div></th>
-<th width="10%"><div><#1643#></div></th>
+<th width="10%" style="height:30px;"><#488#></th>
+<th><div><#2376#></div></th>
+<th width="15%"><div><#577#></div></th>
+<th width="10%"><div><#2998#></div></th>
+<th width="10%"><div><#1649#></div></th>
 <th width="25%"><div><#190#></div></th>
 </tr>
 </table>
 <div id="vpnc_clientlist_Block"></div>
 <div class="apply_gen">
-<input class="button_gen" onclick="Add_profile(10)" type="button" value="<#3633#>">
+<input class="button_gen" onclick="Add_profile(10)" type="button" value="<#3659#>">
 </div>
 </td>
 </tr>
@@ -2508,26 +2508,26 @@ $("#tr_adv_pfs_group").show();
 </tr>
 <tr>
 <td>
-<div class="formfonttitle"><#3629#></div>
+<div class="formfonttitle"><#3655#></div>
 <div class="formfontdesc">
-<#3630#>
+<#3656#>
 <br>
-<#3631#>
+<#3657#>
 <br>
 <a id="ipsec_vpn_type_faq" href="" target="_blank" style="text-decoration:underline;color:#FC0;"></a>
 </div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#3571#></td>
+<td colspan="2"><#3597#></td>
 </tr>
 </thead>
 <tr id="tr_SettingsMode">
-<th><#778#></th>
+<th><#782#></th>
 <td>
 <select id="selSwitchMode" onchange="switchSettingsMode(this.options[this.selectedIndex].value)" class="input_option">
-<option value="1" selected><#379#></option>
-<option value="2"><#377#></option>
+<option value="1" selected><#383#></option>
+<option value="2"><#381#></option>
 </select>
 </td>
 </tr>
@@ -2535,53 +2535,53 @@ $("#tr_adv_pfs_group").show();
 <table id="ipsec_basic_settings" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable" style="margin-top:15px;">
 <thead>
 <tr>
-<td colspan="2"><#3251#></td>
+<td colspan="2"><#3277#></td>
 </tr>
 </thead>
 <tr>
-<th><#3572#></th>
+<th><#3598#></th>
 <td>
 <input type="text" class="input_25_table" name="ipsec_profilename" autocomplete="off" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr id="tr_remote_gateway_method">
-<th><#3600#></th>
+<th><#3626#></th>
 <td>
 <input type="radio" name="ipsec_remote_gateway_method" id="ipsec_remote_gateway_ip" class="input" value="0" onchange="changeRemoteGatewayMethod()" checked>
-<label for='ipsec_remote_gateway_ip' id="ipsec_remote_gateway_ip_label"><#3601#></label>
+<label for='ipsec_remote_gateway_ip' id="ipsec_remote_gateway_ip_label"><#3627#></label>
 <input type="radio" name="ipsec_remote_gateway_method" id="ipsec_remote_gateway_ddns" class="input" value="1" onchange="changeRemoteGatewayMethod()">
-<label for='ipsec_remote_gateway_ddns' id="ipsec_remote_gateway_ddns_label"><#2548#></label>
+<label for='ipsec_remote_gateway_ddns' id="ipsec_remote_gateway_ddns_label"><#2573#></label>
 </td>
 </tr>
 <tr id="tr_remote_gateway">
-<th><#3602#></th>
+<th><#3628#></th>
 <td>
 <input type="text" class="input_25_table" name="ipsec_remote_gateway" id="ipsec_remote_gateway" autocomplete="off" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><#3573#></th>
+<th><#3599#></th>
 <td>
 <select name="ipsec_local_public_interface" class="input_option"></select>
 </td>
 </tr>
 <tr id="tr_presharedKey">
-<th><#3574#></th>
+<th><#3600#></th>
 <td>
-<input id="ipsec_preshared_key" name="ipsec_preshared_key" type="password" onBlur="switchType(this, false);" onFocus="switchType(this, true);" class="input_25_table" maxlength="32" placeholder="<#3566#>" autocomplete="off" autocorrect="off" autocapitalize="off">
+<input id="ipsec_preshared_key" name="ipsec_preshared_key" type="password" onBlur="switchType(this, false);" onFocus="switchType(this, true);" class="input_25_table" maxlength="32" placeholder="<#3592#>" autocomplete="off" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr id="tr_adv_local_id">
-<th><#3586#></th>
+<th><#3612#></th>
 <td>
-<input type="text" class="input_25_table" name="ipsec_local_id" placeholder="<#290#>、FQDN、<#1308#> or DN" autocomplete="off" autocorrect="off" autocapitalize="off">
+<input type="text" class="input_25_table" name="ipsec_local_id" placeholder="<#290#>、FQDN、<#1313#> or DN" autocomplete="off" autocorrect="off" autocapitalize="off">
 <span style="color:#FC0">(Optional)</span>
 </td>
 </tr>
 <tr id="tr_adv_remote_id">
-<th><#3587#></th>
+<th><#3613#></th>
 <td>
-<input type="text" class="input_25_table" name="ipsec_remote_id" placeholder="<#290#>、FQDN、<#1308#> or DN" autocomplete="off" autocorrect="off" autocapitalize="off">
+<input type="text" class="input_25_table" name="ipsec_remote_id" placeholder="<#290#>、FQDN、<#1313#> or DN" autocomplete="off" autocorrect="off" autocapitalize="off">
 <span id="ipsec_remote_id_hint" style="color:#FC0">(Optional)</span>
 </td>
 </tr>
@@ -2589,35 +2589,35 @@ $("#tr_adv_pfs_group").show();
 <table id="ipsec_network_settings" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable" style="margin-top:15px;">
 <thead>
 <tr>
-<td id="td_network_title" colspan="2">Network - <#3208#></td>
+<td id="td_network_title" colspan="2">Network - <#3234#></td>
 </tr>
 </thead>
 <tr id="tr_net_local_private_subnet">
-<th><#3588#></th>
+<th><#3614#></th>
 <td id="td_net_local_private_subnet"></td>
 </tr>
 <tr id="tr_net_local_port">
-<th><#3589#></th>
+<th><#3615#></th>
 <td>
 <input type="text" class="input_6_table" name="ipsec_local_port" maxlength="5" value="0" onKeyPress="return validator.isNumber(this,event)" autocomplete="off" autocorrect="off" autocapitalize="off">
 <span style="color:#FC0">(0-65535)</span>
 </td>
 </tr>
 <tr id="tr_net_remote_private_subnet">
-<th><#3591#></th>
+<th><#3617#></th>
 <td id="td_net_remote_private_subnet"></td>
 </tr>
 <tr id="tr_net_remote_port">
-<th><#3592#></th>
+<th><#3618#></th>
 <td>
 <input type="text" class="input_6_table" name="ipsec_remote_port" maxlength="5" value="0" onKeyPress="return validator.isNumber(this,event)" autocomplete="off" autocorrect="off" autocapitalize="off">
 <span style="color:#FC0">(0-65535)</span>
 </td>
 </tr>
 <tr id="tr_net_transport">
-<th><#1799#></th>
+<th><#1805#></th>
 <td>
-<#3593#>
+<#3619#>
 </td>
 </tr>
 </table>
@@ -2625,11 +2625,11 @@ $("#tr_adv_pfs_group").show();
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable" style="margin-top:15px;">
 <thead>
 <tr>
-<td colspan="2">Advanced Settings - <#3576#></td>
+<td colspan="2">Advanced Settings - <#3602#></td>
 </tr>
 </thead>
 <tr id="tr_adv_ike_version">
-<th><#3578#></th>
+<th><#3604#></th>
 <td>
 <input type="radio" name="ipsec_ike" id="ipsec_ike_v1" class="input" value="1" onchange="changeIKEVersion()" checked>
 <label for='ipsec_ike_v1' id="ipsec_ike_v1_label">v1</label>
@@ -2638,14 +2638,14 @@ $("#tr_adv_pfs_group").show();
 </td>
 </tr>
 <tr id="tr_adv_encryption_p1">
-<th><#3594#></th>
+<th><#3620#></th>
 <td>
 <label><input type="checkbox" name="ipsec_encryption_p1" value="2">3DES</label>
 <label><input type="checkbox" name="ipsec_encryption_p1" value="4">AES128</label>
 </td>
 </tr>
 <tr id="tr_adv_hash_p1">
-<th><#3595#></th>
+<th><#3621#></th>
 <td>
 <label><input type="checkbox" name="ipsec_hash_p1" value="2">SHA1</label>
 <label><input type="checkbox" name="ipsec_hash_p1" value="4">SHA256</label>
@@ -2665,68 +2665,68 @@ $("#tr_adv_pfs_group").show();
 </td>
 </tr>
 <tr id="tr_adv_exchange_mode">
-<th><#3579#></th>
+<th><#3605#></th>
 <td>
-<input type="radio" name="ipsec_exchange" class="input" value="1" onchange="changeExchangeMode();"><#1724#>
-<input type="radio" name="ipsec_exchange" class="input" value="0" onchange="changeExchangeMode();" checked><#3580#>
-<div id="exchange_mode_hint" style="color:#FC0;margin:5px 0px;"><#3585#></div>
+<input type="radio" name="ipsec_exchange" class="input" value="1" onchange="changeExchangeMode();"><#1730#>
+<input type="radio" name="ipsec_exchange" class="input" value="0" onchange="changeExchangeMode();" checked><#3606#>
+<div id="exchange_mode_hint" style="color:#FC0;margin:5px 0px;"><#3611#></div>
 </td>
 </tr>
 <tr id="tr_adv_keylife_time_p1">
-<th><#3596#></th>
+<th><#3622#></th>
 <td>
 <input type="text" class="input_6_table" name="ipsec_keylife_p1" maxlength="6" value="86400" onKeyPress="return validator.isNumber(this,event)" autocomplete="off" autocorrect="off" autocapitalize="off">
-<span style="color:#FC0">(120~172800) <#3058#></span>
+<span style="color:#FC0">(120~172800) <#3084#></span>
 </td>
 </tr>
 <tr id="tr_adv_ike_isakmp" style="display:none;">
-<th><#3609#></th>
+<th><#3635#></th>
 <td>
 <input type="text" class="input_6_table" name="ipsec_ike_isakmp" maxlength="3" value="500" autocomplete="off" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr id="tr_adv_ike_isakmp_nat" style="display:none;"s>
-<th><#3610#></th>
+<th><#3636#></th>
 <td>
 <input type="text" class="input_6_table" name="ipsec_ike_isakmp_nat" maxlength="4" value="4500" autocomplete="off" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr id="tr_adv_dead_peer_detection">
-<th><#3582#></th>
+<th><#3608#></th>
 <td>
 <input type="radio" name="ipsec_dead_peer_detection" id="ipsec_dead_peer_detection_dis" class="input" value="0" onchange="changeAdvDeadPeerDetection(this)">
-<label for='ipsec_dead_peer_detection_dis' id="ipsec_dead_peer_detection_dis_label"><#1512#></label>
+<label for='ipsec_dead_peer_detection_dis' id="ipsec_dead_peer_detection_dis_label"><#1517#></label>
 <input type="radio" name="ipsec_dead_peer_detection" id="ipsec_dead_peer_detection_clear" class="input" value="1" onchange="changeAdvDeadPeerDetection(this)">
-<label for='ipsec_dead_peer_detection_clear' id="ipsec_dead_peer_detection_clear_label"><#1641#></label>
+<label for='ipsec_dead_peer_detection_clear' id="ipsec_dead_peer_detection_clear_label"><#1647#></label>
 <input type="radio" name="ipsec_dead_peer_detection" id="ipsec_dead_peer_detection_hold" class="input" value="2" onchange="changeAdvDeadPeerDetection(this)">
-<label for='ipsec_dead_peer_detection_hold' id="ipsec_dead_peer_detection_hold_label"><#3603#></label>
+<label for='ipsec_dead_peer_detection_hold' id="ipsec_dead_peer_detection_hold_label"><#3629#></label>
 <input type="radio" name="ipsec_dead_peer_detection" id="ipsec_dead_peer_detection_restart" class="input" value="3" onchange="changeAdvDeadPeerDetection(this)">
-<label for='ipsec_dead_peer_detection_restart' id="ipsec_dead_peer_detection_restart_label"><#3604#></label>
+<label for='ipsec_dead_peer_detection_restart' id="ipsec_dead_peer_detection_restart_label"><#3630#></label>
 </td>
 </tr>
 <tr id="tr_adv_dpd_interval">
-<th><#3583#></th>
+<th><#3609#></th>
 <td>
 <input type="text" class="input_3_table" name="ipsec_dpd" maxlength="3" value="10" onKeyPress="return validator.isNumber(this,event)" autocomplete="off" autocorrect="off" autocapitalize="off">
-<span style="color:#FC0">(10~900) <#3058#></span>
+<span style="color:#FC0">(10~900) <#3084#></span>
 </td>
 </tr>
 </table>
 <table id="tb_adv_phase2" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable" style="margin-top:15px;">
 <thead>
 <tr>
-<td colspan="2">Advanced Settings - <#3577#></td>
+<td colspan="2">Advanced Settings - <#3603#></td>
 </tr>
 </thead>
 <tr id="tr_adv_encryption_p2">
-<th><#3594#></th>
+<th><#3620#></th>
 <td>
 <label><input type="checkbox" name="ipsec_encryption_p2" value="2">3DES</label>
 <label><input type="checkbox" name="ipsec_encryption_p2" value="4">AES128</label>
 </td>
 </tr>
 <tr id="tr_adv_hash_p2">
-<th><#3595#></th>
+<th><#3621#></th>
 <td>
 <label><input type="checkbox" name="ipsec_hash_p2" value="2">SHA1</label>
 <label><input type="checkbox" name="ipsec_hash_p2" value="4">SHA256</label>
@@ -2734,8 +2734,8 @@ $("#tr_adv_pfs_group").show();
 </tr>
 <tr id="tr_adv_pfs">
 <th>Perfect Forward Secrecy (PFS)</th><td>
-<label><input type="radio" name="ipsec_pfs" class="input" value="1" onchange="changePFS();"><#3809#></label>
-<label><input type="radio" name="ipsec_pfs" class="input" value="0" onchange="changePFS();"><#3810#></label>
+<label><input type="radio" name="ipsec_pfs" class="input" value="1" onchange="changePFS();"><#3836#></label>
+<label><input type="radio" name="ipsec_pfs" class="input" value="0" onchange="changePFS();"><#3837#></label>
 </td>
 </tr>
 <tr id="tr_adv_pfs_group">
@@ -2751,24 +2751,24 @@ $("#tr_adv_pfs_group").show();
 </td>
 </tr>
 <tr id="tr_adv_keylife_time_p2">
-<th><#3597#></th>
+<th><#3623#></th>
 <td>
 <input type="text" class="input_6_table" name="ipsec_keylife_p2" maxlength="6" value="3600" onKeyPress="return validator.isNumber(this,event)" autocomplete="off" autocorrect="off" autocapitalize="off">
-<span style="color:#FC0">(120~172800) <#3058#></span>
+<span style="color:#FC0">(120~172800) <#3084#></span>
 </td>
 </tr>
 <tr id="tr_adv_keyingtries_p2">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(33,1);"><#3598#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(33,1);"><#3624#></a></th>
 <td>
 <input type="text" class="input_6_table" name="ipsec_keyingtries" maxlength="2" value="3" onKeyPress="return validator.isNumber(this,event)" autocomplete="off" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 </table>
-<div style="color:#FC0;margin:10px 0px;"><#3584#></div>
+<div style="color:#FC0;margin:10px 0px;"><#3610#></div>
 </div>
 <div style="margin-top:15px;width:100%;text-align:center;">
 <input id="cancelBtn_ipsec" class="button_gen" type="button" onclick="cancel_ipsec_profile_panel();" value="<#199#>">
-<input class="button_gen" type="button" onclick="save_ipsec_profile_panel();" value="<#1660#>">
+<input class="button_gen" type="button" onclick="save_ipsec_profile_panel();" value="<#1666#>">
 </div>
 </td>
 </tr>
@@ -2812,37 +2812,37 @@ $("#tr_adv_pfs_group").show();
 <div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 <tr>
-<th><#2351#></th>
+<th><#2376#></th>
 <td>
 <input type="text" maxlength="64" name="vpnc_openvpn_des" value="" class="input_32_table" style="float:left;" autocorrect="off" autocapitalize="off"></input>
 </td>
 </tr>
 <tr>
-<th><#3468#> (option)</th>
+<th><#3494#> (option)</th>
 <td>
 <input type="text" maxlength="64" name="vpnc_openvpn_username" value="" class="input_32_table" style="float:left;" autocomplete="off" autocorrect="off" autocapitalize="off"></input>
 </td>
 </tr>
 <tr>
-<th><#2271#> (option)</th>
+<th><#2296#> (option)</th>
 <td>
 <input type="text" maxlength="64" name="vpnc_openvpn_pwd" value="" class="input_32_table" style="float:left;" autocomplete="off" autocorrect="off" autocapitalize="off"></input>
 </td>
 </tr>
 <tr>
-<th><#3562#></th>
+<th><#3588#></th>
 <td>
 <input type="file" name="file" class="input" style="color:#FC0;*color:#000;"><br>
-<input class="button_gen" onclick="ImportOvpn(document.vpnclientForm.vpnc_openvpn_unit_edit.value);" type="button" value="<#1669#>" />
+<input class="button_gen" onclick="ImportOvpn(document.vpnclientForm.vpnc_openvpn_unit_edit.value);" type="button" value="<#1675#>" />
 <img id="loadingicon" style="margin-left:5px;display:none;" src="/images/InternetScan.gif">
-<span id="importOvpnFile" style="display:none;"><#366#></span>
+<span id="importOvpnFile" style="display:none;"><#370#></span>
 </td>
 </tr>
 </table>
 </form>
 <br>
 <div style="color:#FC0;margin-bottom: 10px;">
-<input type="checkbox" id="cbManualImport" class="input" onclick="manualImport(this.checked)"><#3563#>
+<input type="checkbox" id="cbManualImport" class="input" onclick="manualImport(this.checked)"><#3589#>
 </div>
 <form method="post" name="openvpnCAForm" action="vpnupload.cgi" target="hidden_frame" enctype="multipart/form-data">
 <input type="hidden" name="current_page" value="Advanced_VPNClient_Content.asp">
@@ -2858,10 +2858,10 @@ $("#tr_adv_pfs_group").show();
 <input type="hidden" name="vpn_upload_unit" value="1">
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable" id="caFiled" style="display:none">
 <tr>
-<th><#3561#></th>
+<th><#3587#></th>
 <td>
 <input type="file" name="file" class="input" style="color:#FC0;*color:#000;"><br>
-<input id="importCA" class="button_gen" onclick="startImportCA(document.vpnclientForm.vpnc_openvpn_unit_edit.value);" type="button" value="<#1669#>" />
+<input id="importCA" class="button_gen" onclick="startImportCA(document.vpnclientForm.vpnc_openvpn_unit_edit.value);" type="button" value="<#1675#>" />
 <img id="loadingiconCA" style="margin-left:5px;display:none;" src="/images/InternetScan.gif">
 </td>
 </tr>
@@ -2884,7 +2884,7 @@ $("#tr_adv_pfs_group").show();
 <th>Import Cert file</th>
 <td>
 <input type="file" name="file" class="input" style="color:#FC0;*color:#000;"><br>
-<input class="button_gen" onclick="setTimeout('ovpnFileChecker();',2000);document.openvpnCertForm.submit();" type="button" value="<#1669#>" />
+<input class="button_gen" onclick="setTimeout('ovpnFileChecker();',2000);document.openvpnCertForm.submit();" type="button" value="<#1675#>" />
 </td>
 </tr>
 </table>
@@ -2906,7 +2906,7 @@ $("#tr_adv_pfs_group").show();
 <th>Import Key file</th>
 <td>
 <input type="file" name="file" class="input" style="color:#FC0;*color:#000;"><br>
-<input class="button_gen" onclick="setTimeout('ovpnFileChecker();',2000);document.openvpnKeyForm.submit();" type="button" value="<#1669#>" />
+<input class="button_gen" onclick="setTimeout('ovpnFileChecker();',2000);document.openvpnKeyForm.submit();" type="button" value="<#1675#>" />
 </td>
 </tr>
 </table>
@@ -2928,16 +2928,16 @@ $("#tr_adv_pfs_group").show();
 <th>Import Static file</th>
 <td>
 <input type="file" name="file" class="input" style="color:#FC0;*color:#000;"><br>
-<input class="button_gen" onclick="setTimeout('ovpnFileChecker();',2000);document.openvpnStaticForm.submit();" type="button" value="<#1669#>" />
+<input class="button_gen" onclick="setTimeout('ovpnFileChecker();',2000);document.openvpnStaticForm.submit();" type="button" value="<#1675#>" />
 </td>
 </tr>
 </table>
 </form>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable" id="manualFiled" style="display:none">
 <tr>
-<th><#371#></th>
+<th><#375#></th>
 <td>
-<input class="button_gen" onclick="document.getElementById('manualFiled_panel').style.display='';" type="button" value="<#2972#>">
+<input class="button_gen" onclick="document.getElementById('manualFiled_panel').style.display='';" type="button" value="<#2998#>">
 </td>
 </tr>
 </table>
@@ -2984,14 +2984,14 @@ $("#tr_adv_pfs_group").show();
 <table class="QISform_wireless" border=0 align="center" cellpadding="5" cellspacing="0">
 <tr>
 <td>
-<div class="description_down"><#3550#></div>
+<div class="description_down"><#3576#></div>
 </td>
 </tr>
 <tr>
 <td>
 <div style="margin-left:30px; margin-top:10px;">
-<p><#3541#> <span style="color:#FC0;">----- BEGIN xxx ----- </span>/<span style="color:#FC0;"> ----- END xxx -----</span> <#3542#>
-<p><#3543#>
+<p><#3567#> <span style="color:#FC0;">----- BEGIN xxx ----- </span>/<span style="color:#FC0;"> ----- END xxx -----</span> <#3568#>
+<p><#3569#>
 </div>
 <div style="margin:5px;*margin-left:-5px;width: 700px;" class="splitLine"></div>
 </td>
@@ -3035,7 +3035,7 @@ $("#tr_adv_pfs_group").show();
 </table>
 <div style="margin-top:5px;width:100%;text-align:center;">
 <input class="button_gen" type="button" onclick="cancel_Key_panel();" value="<#199#>">
-<input class="button_gen" type="button" onclick="saveManual(document.vpnclientForm.vpnc_openvpn_unit_edit.value);" value="<#1660#>">
+<input class="button_gen" type="button" onclick="saveManual(document.vpnclientForm.vpnc_openvpn_unit_edit.value);" value="<#1666#>">
 </div>
 </td>
 </tr>
@@ -3048,7 +3048,7 @@ $("#tr_adv_pfs_group").show();
 </table>
 <div style="margin-top:5px;padding-bottom:10px;width:100%;text-align:center;">
 <input class="button_gen" type="button" onclick="cancel_add_rule();" id="cancelBtn_openvpn" value="<#199#>">
-<input class="button_gen" onclick='addOpenvpnProfile();' type="button" value="<#1659#>">
+<input class="button_gen" onclick='addOpenvpnProfile();' type="button" value="<#1665#>">
 </div>
 </div>
 <div id="footer"></div>

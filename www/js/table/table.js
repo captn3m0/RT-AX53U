@@ -49,7 +49,7 @@ header: [
 "width" : "40%"
 },
 {
-"title" : "<#1643#>",
+"title" : "<#1649#>",
 "width" : "10%"
 }
 ],
@@ -322,7 +322,7 @@ if(_createRule && _createRuleItem.length != 0) {
 $addRuleHtml = $("<div>");
 $addRuleHtml.addClass("addRuleFrame");
 var _tableNameText = (_tableName == "") ? "Rule List" : _tableName;
-var $addTextHtml = $("<div>").html("" + _tableNameText + " ( <#2586#> " + _createRuleCount + " )").addClass("addRuleText");
+var $addTextHtml = $("<div>").html("" + _tableNameText + " ( <#2611#> " + _createRuleCount + " )").addClass("addRuleText");
 $addTextHtml.appendTo($addRuleHtml);
 var $addIconHtml = $("<div>").addClass("addRule");
 $addIconHtml.appendTo($addRuleHtml);
@@ -332,7 +332,7 @@ if($(".row_tr").children().find(".hint").length != 0) {
 return false;
 }
 if(_dataCount >= _createRuleCount){
-alert("<#2454#> " + _createRuleCount + " <#2455#>");
+alert("<#2479#> " + _createRuleCount + " <#2480#>");
 return;
 }
 $('body').prepend(tableApi.genCreateRule(_createRuleItem));
@@ -390,7 +390,7 @@ $divHtml = $("<div>");
 $divHtml.addClass("createNewRule");
 var $titleHtml = $("<div>");
 $titleHtml.addClass("pureText");
-$titleHtml.html("<#2444#>");/*untranslated*/
+$titleHtml.html("<#2469#>");/*untranslated*/
 $titleHtml.appendTo($divHtml);
 var $closeHtml = $("<div>");
 $closeHtml.addClass("closeIcon");
@@ -446,7 +446,7 @@ $actionButtonCancelHtml.click( tableApi.closeRuleFrame );
 $actionButtonCancelHtml.appendTo($actionButtonFrameHtml);
 var $actionButtonOKHtml = $("<div>");
 $actionButtonOKHtml.addClass("actionButtonOK");
-$actionButtonOKHtml.html("<#1659#>");
+$actionButtonOKHtml.html("<#1665#>");
 $actionButtonOKHtml.click(
 function() {
 var newRuleArray = new Array();
@@ -468,7 +468,7 @@ var validDuplicateFlag = true;
 if(tableApi._attr.hasOwnProperty("ruleDuplicateValidation") && (tableApi._attr.ruleDuplicateValidation != "")) {
 validDuplicateFlag = tableRuleDuplicateValidation[tableApi._attr.ruleDuplicateValidation](newRuleArray, tableApi._attr.data);
 if(!validDuplicateFlag) {
-alert("<#2447#>");
+alert("<#2472#>");
 return false;
 }
 }
@@ -570,7 +570,7 @@ $(this).children('.triangle').addClass("arrowUp");
 $(this).children('.triangle').removeClass("arrowDown");
 $(this).closest(".editFrame").siblings('.table_clientlist_dropdown').css("display", "block");
 $(this).closest(".editFrame").siblings('.table_clientlist_dropdown').css("width", $(this).siblings('.inputText').css("width"));
-$(this).closest(".editFrame").siblings('.table_clientlist_dropdown').children(".clientList_offline_expand").html("<#2815#>");
+$(this).closest(".editFrame").siblings('.table_clientlist_dropdown').children(".clientList_offline_expand").html("<#2841#>");
 $(this).closest(".editFrame").siblings('.table_clientlist_dropdown').children(".clientList_offline").css("display", "none");
 }
 else {
@@ -664,18 +664,18 @@ $onlineClientHtml.appendTo($newItemFrameHtml);
 var $offlineExpandHtml = $('<div>');
 $offlineExpandHtml.addClass("clientList_offline_expand");
 $offlineExpandHtml.appendTo($newItemFrameHtml);
-$offlineExpandHtml.html("<#2815#>");
+$offlineExpandHtml.html("<#2841#>");
 $offlineExpandHtml.click(
 function() {
 event.stopPropagation();
 var display_state = $(this).siblings(".clientList_offline").css("display");
 if(display_state == "none") {
 $(this).siblings(".clientList_offline").slideDown();
-$(this).html("<#2814#>");
+$(this).html("<#2840#>");
 }
 else {
 $(this).siblings(".clientList_offline").slideUp();
-$(this).html("<#2815#>");
+$(this).html("<#2841#>");
 }
 }
 );
@@ -868,7 +868,7 @@ $contentHtml.addClass("data_tr");
 $("<td>")
 .attr("colspan", tableApi._privateAttr.header_item_num)
 .css("color", "#FC0")
-.html("<#2382#>")
+.html("<#2407#>")
 .appendTo($contentHtml);
 contentArray.push($contentHtml);
 }
@@ -1011,7 +1011,7 @@ var currentEditRuleArray = tableValid_getCurrentEditRuleArray($(this), tableApi.
 var filterCurrentEditRuleArray = tableValid_getFilterCurrentEditRuleArray($(this), tableApi._attr.data);
 validDuplicateFlag = tableRuleDuplicateValidation[tableApi._attr.ruleDuplicateValidation](currentEditRuleArray, filterCurrentEditRuleArray);
 if(!validDuplicateFlag) {
-tableApi.showHintMsg($(this), "<#2447#>");
+tableApi.showHintMsg($(this), "<#2472#>");
 return false;
 }
 }
@@ -1080,7 +1080,7 @@ currentEditRuleArray = tableValid_getCurrentEditRuleArray($(this), tableApi._att
 filterCurrentEditRuleArray = tableValid_getFilterCurrentEditRuleArray($(this), tableApi._attr.data);
 validDuplicateFlag = tableRuleDuplicateValidation[tableApi._attr.ruleDuplicateValidation](currentEditRuleArray, filterCurrentEditRuleArray);
 if(!validDuplicateFlag) {
-alert("<#2447#>");
+alert("<#2472#>");
 return false;
 }
 }
@@ -1110,7 +1110,7 @@ $("#" + eleID).parent().prev().html(htmlEnDeCode.htmlEncode(eleValue));
 },
 genDataRawDel : function() {
 if(tableApi._attr.capability.del) {
-var $titleHtml = $("<th>").html("<#1643#>");
+var $titleHtml = $("<th>").html("<#1649#>");
 $titleHtml.attr("width", "10%");
 $("#" + tableApi._attr.container).find(".row_title").append($titleHtml);
 var $dataHtml = $("<td>");

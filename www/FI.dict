@@ -100,7 +100,7 @@ Viimeisin versio
 Päätukiasema voi olla pois päältä. Tarkista uudelleen.
 Yhteyden muodostaminen epäonnistui. Salasana ei ole oikea. Napsauta [Hae uudelleen] valitaksesi toisen verkon.
 Langattoman yhteyden muodostaminen onnistui.
-Käynnistä selain uudelleen. Näppäile URL-osoiteriville "http://router.asus.com/" käyttääksesi toistinyhteystilaa.
+Käynnistä selain uudelleen. Näppäile URL-osoiteriville "http://ZVDOMAIN_NAMEVZ/" käyttääksesi toistinyhteystilaa.
 IP-asetusten päivitys onnistui. Sinut siirretään RT-AX53U:n web-käyttöliittymään.
 Valitse toinen verkko
 Muuta verkko, johon RT-AX53U muodostaa yhteyden.
@@ -301,6 +301,10 @@ Valitse tämä DNS-palvelin, jos haluat nopean ja yksityisen tavan internetissä
 Valitse tämä DNS-palvelin, jos haluat estää haittasisällön
 Valitse tämä DNS-palvelin, jos haluat estää haitta- ja aikuisviihdesisällön
 DNS-luettelo
+Mainostenesto
+Perhe
+Nopea DNS
+Yksityisyyttä kunnioittava
 Sallii tämän reitittimen hakea DNS IP -osoitteita internetpalveluntarjoajalta automaattisesti.
 Yhdistetäänkö DNS-palvelimeen automaattisesti
 Jos WAN-yhteys vaatii staattisen IP-osoitteen, näppäile yhdyskäytävän IP-osoite tähän kenttään.
@@ -336,9 +340,9 @@ Anna arvo välillä
 kohteeseen
 SSID ei voi sisältää merkkiä \"
 \".
-Tämä merkkijono ei voi alkaa:
+Ensimmäinen merkki ei voi sisältää seuraavia:
 Tämä merkkijono ei voi sisältää:
-This string cannot end with:
+Viimeinen merkki ei voi sisältää seuraavia:
 Anna oikea WEP-avain.
 Esijaetun avaimen tulee olla alle 64 merkkiä pitkä.
 RT-AX53U:n LAN IP on
@@ -452,7 +456,7 @@ Lataa <a href='http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Disc
 Tarkista, oletko irrottanut verkkokaapelin WAN-portista.
 Toistintilassa RT-AX53U muodostaa langattomanyhteyden olemassa olevaan langattomaan verkkoon langattoman verkkopeiton laajentamiseksi. Tässä tilassa palomuuri, IP-jakaminen ja NAT-toiminto ovat pois päältä.
 RT-AX53U:in LAN IP -osoitetta on voitu muuttaa.
-Sulje tämä ikkuna ja käytä osoitetta http://router.asus.com uudelleen.
+Sulje tämä ikkuna ja käytä osoitetta http://ZVDOMAIN_NAMEVZ uudelleen.
 Toistintila
 Express Way 2.4 GHz:in tilassa langaton RT-AX53U muodostaa yhteyden olemassa olevaan 2.4 GHz:in WiFi-kanavaan ja laajentaa langatonta peittoa vain 5 GHz:in WiFi-kanavalla.
 Express Way 2.4 GHz
@@ -711,7 +715,7 @@ Radio
 Etä
 Kirjoita uudelleen uusi kirjautumissalasana
 Käytä alla olevia tietoja yhteyden muodostamiseen WiFi-verkkoon.
-Siirry osoitteeseen <a href='http://router.asus.com' target='_blank' style='text-decoration:underline'>router.asus.com</a> kirjautuaksesi sisään laitteeseen.
+Siirry osoitteeseen <a href='http://ZVDOMAIN_NAMEVZ' target='_blank' style='text-decoration:underline'>ZVDOMAIN_NAMEVZ</a> kirjautuaksesi sisään laitteeseen.
 Reitittimen tili
 Reitittimen kirjautumisnimi
 Reitittimen kirjautumissalasana
@@ -838,6 +842,7 @@ Asettaaksesi WAN-yhteyden offline-tilaan tai vaihtaaksesi käyttötilaksi tukias
 Aseta seuraavassa vaiheessa suojausta varten kirjautumisnimi ja salasana.
 ASUS Wireless Router RT-AX53U
 RT-AX53U
+ZVDOMAIN_NAMEVZ
 Määritetty
 Langattoman nimi
 Langaton reititin
@@ -927,10 +932,10 @@ Tarvitset laajakaista-internet-yhteyden parhaiden katsomis- ja kuuntelukokemuste
 30 Mbps tai nopeampi on suositeltava 1080p HD-videovirtauttamiselle.
 Internet-siirtonopeus voi vaihdella internet-palveluntarjoajan ja muiden tekijöiden mukaan. Jollet ole varma, mitä on internet-nopeutesi, voit ottaa yhteyttä internet-palveluntarjoajaasi tai käyttää online-kaistanleveystestiä ASUS-reitittimeen liitetystä tietokoneesta.
 Pilviluettelo
-Käytä pilvilevyä osoitteesta <a id="cloud_url" style="font-weight: bolder;text-decoration: underline;" href="https://router.asus.com" target="_blank">https://router.asus.com</a>.
+Käytä pilvilevyä osoitteesta <a id="cloud_url" style="font-weight: bolder;text-decoration: underline;" href="https://ZVDOMAIN_NAMEVZ" target="_blank">https://ZVDOMAIN_NAMEVZ</a>.
 Voit käyttää pilvilevyä tästä URL-osoitteesta :
 Voit muokata ddns-nimeä napsauttamalla <a style="font-weight: bolder;text-decoration: underline;" href="/Advanced_ASUSDDNS_Content.asp?af=DDNSName" target="_blank">tätä</a>.
-Käytä pilvilevyä osoitteesta <a style="font-weight: bolder;text-decoration: underline;" href="https://router.asus.com" target="_blank">https://router.asus.com</a>.
+Käytä pilvilevyä osoitteesta <a style="font-weight: bolder;text-decoration: underline;" href="https://ZVDOMAIN_NAMEVZ" target="_blank">https://ZVDOMAIN_NAMEVZ</a>.
 Rekisteröi ASUS DDNS <a style="font-weight: bolder;text-decoration: underline;" href="/Advanced_ASUSDDNS_Content.asp" target="_blank">tässä</a> käyttääksesi pilvilevyä verkossa.
 Mahdollistaa USB:llä liitettyjen laitteiden käytön tallennusvälineinä, niiden suoratoiston tai jakamisen PC-tietokoneella tai laitteella, jolla on internet-yhteys.
 Luodaksesi pilvilevyn, sinun on asennettava USB-tallennuslaite tähän reitittimeen ja kytkettävä sitten pilvilevy PÄÄLLE (<b>ON</b>).
@@ -1515,6 +1520,7 @@ Pois käytöstä
 Käytössä
 Vie
 SIIRRY
+Siirry asetuksiin
 Poista
 Lähetä
 WAN-asetuksiin
@@ -2243,6 +2249,25 @@ vieraita
 Käyttöraja
 Vain internet-käyttö
 Käytä samaa asetusta kuin
+Yritysverkko
+Mukautettu verkko
+Luo turvallinen ja suojattu verkko
+Luo nopeasti vierailijaverkko
+IoT-verkko
+Erota helposti verkko IoT-laitteitasi varten
+Lasten verkko
+Varmista internetyhteyden turvallisuus lapsille
+Vierailijaportaali
+Luo vierailijaportaali tai Facebook-Wi-Fi
+Portaalin tyyppi
+VPN-verkko
+Luo suojattu internetyhteys
+Tämä VPN-profiili on pois käytöstä. Siirry VPN-palvelimen asetussivulle ja ota se käyttöön.
+Siirry VPN-asetussivulle napsauttamalla [ Siirry asetuksiin ] alla.
+Tätä asetusta ei voi valita, kun käytetään jonkun muun luomaa profiilia.
+Kotiverkko
+Lisää verkko
+Profiililuettelo
 Laiteohjelmistoversio
 Help
 Saat Ohjeista ohjeita ja tietoja reitittimen toimintojen käyttämisestä. Napsauta
@@ -2441,7 +2466,7 @@ Tämä kenttä antaa ottaa Latausisännän käyttöön tai pois käytöstä.
 Tämä kenttä mahdollista ladatun materiaalin jakamisen internet-käyttäjille.
 Tämä kenttä antaa ottaa UpnP:n käyttöön tai pois käytöstä.
 Tietoja ei voi palauttaa niiden poistamisen jälkeen, haluatko varmasti poistaa tiedot?
-onflict with LAN IP
+Conflict with LAN IP
 Create New Policy
 Lähiverkon IP-osoite ja aliverkon peite ovat muuttuneet. Laitteen RT-AX53U IP-osoitevaranto tulisi päivittää. Haluatko päivittää IP-osoitevarannon automaattisesti?
 Uusi IP-ryhmä ei vastaa uutta aliverkon peitettä. Haluatko sallia RT-AX53U:n muuttaa IP-ryhmää automaattisesti?
@@ -2588,7 +2613,7 @@ Enimmäisraja :
 Tarkista
 The version is up-to-date.
 Paikallisen käytön määritys
-Download and install SSL certificate on your browser to trust accessing your local domain “router.asus.com” with HTTPS protocol. To export certificate after applying setting.
+Download and install SSL certificate on your browser to trust accessing your local domain “ZVDOMAIN_NAMEVZ” with HTTPS protocol. To export certificate after applying setting.
 Download Certificate
 Loki
 Käyttäjän kirjautumis-IP:
@@ -2809,6 +2834,7 @@ Ottaaksesi WPS-toiminnon käyttöön, muuta todennusmenetelmäksi WPA2 tai WPA-A
 Jos haluat ottaa WPS:n käyttöön, sinun on ensin poistettava SSID:n piilottaminen käytöstä.
 Note: New patch will be updated regularly, please keep your firmware stay up to date.
 Ilmoituskohde
+Asiakaslaitteiden määrä
 Siirry osoitteeseen <a href="https://iplookup.asus.com/nslookup.php" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">https://iplookup.asus.com/nslookup.php</a> etsiäksesi staattisen osoitteen ASUS DDNS -palvelun käyttämiseksi.
 OCN Virtual Connect
 OFDMA/802.11ax MU-MIMO
@@ -3524,7 +3550,7 @@ Mukautettu määritys
 RT-AX53U luo automaattisesti .ovpn-tiedoston, jossa on Sertifiointivaltuutusavain. Voit tarjota .ovpn-tiedoston, jossa on käyttäjätunnus ja salasana, kaikille käyttäjille, jotka on yhdistetty OpenVPN-palvelimeen.
 Voit muuttaa OpenVPN-palvelimen asetuksia siirtymällä kohtaan Lisäasetukset
 Voit muuttaa OpenVPN-palvelimen oletusasetuksia tarjotaksesi mukautetun OPVN-tiedoston määrätylle yhteystyypille.
-If your WAN IP address is dynamic, please click <a href="http://router.asus.com/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
+If your WAN IP address is dynamic, please click <a href="http://ZVDOMAIN_NAMEVZ/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
 Varaa DHCP:stä
 Salaus
 Reititys ristiriita! <p>Tarkista asiakkaan IP-osoiteasetukset Lisäasetukset-sivulta tai tarkista reititystaulukko Järjestelmälokista.
@@ -3746,6 +3772,7 @@ Connection Secret (Salasana)
 UDP-porttinumero RADIUS-palvelimeen yhdistämiseen.
 Server Port (Palvelinportti)
 WiFi Agile Multiband
+Jos WiFi Agile Multiband on käytössä, suojatun hallinnan kehykset pitää ottaa käyttöön (yhteensopiva tai pakollinen).
 Tässä kentässä otetaan käyttöön langattomien asiakkaiden autentikointimenetelmät.
 Autentikointi menetelmä
 Varmistaaksesi parhaan langattoman signaalin, on suositeltavaa asettaa reititin kanavalle 2. Aseta reititin kanavalle 2 napsauttamalla OK. Muuten napsauta Peru.
@@ -4106,7 +4133,7 @@ Ei voi asettaa oletus WAN:ksi kohdekäytännön vuoksi.
 Beta test only
 You can also select [Cancel], the device will automatically start downloading the update during the night time.
 Jos käytät kaapelimodeemia tai modeemia, jolla on staattinen IP-osoite, varmista, että kokeilet seuraavaa:
-Once the new SSID is connected, go back to router.asus.com for more advanced settings.
+Once the new SSID is connected, go back to ZVDOMAIN_NAMEVZ for more advanced settings.
 Disable Web Access from WAN will not allow you to control your router via $Apps$ from Internet. Do you want to continue?
 ASUS ROUTER APP
 Alexa enabled device or IFTTT
@@ -4141,7 +4168,7 @@ GeForce Now
 Jos haluat priorisoida GeForce Now -pelilaitteita pelaamisen nopeuttamiseksi ja parantamiseksi, valitse GeForce Now.
 LED On/Off
 The LED on/off control is used to turn off all LEDs includes Aura light.
-To enable Aura RGB, LED must remain on. Please turn on LED by pressing hardware button on the router for 3 seconds or enable it via web/app interface.
+Jotta Aura RGB:n voi ottaa käyttöön, LED-valon pitää palaa. Kytke LED päälle painamalla reitittimen laitteistopainiketta 3 sekuntia tai ota se käyttöön verkko-/sovelluskäyttöliittymän kautta.
 Tapahtuma
 Järjestelmä tunnistaa seuraavat tapahtumat ja käynnistää erilaisia leditehosteita.
 Kun otat Game Boostin käyttöön, näet ledipalkissa punaisen hengitystehosteen.
@@ -4209,7 +4236,7 @@ Jatka napsauttamalla tätä.
 Skannaa QR-koodi, niin saat lisätietoja
 Haluatko edelleen siirtyä asetussivulle <span>HTTP-protokollalla</span>?
 Kun käytetään HTTPS-protokollaa, näyttöön voi tulla varoitusilmoitus, joka ilmoittaa suojausvarmennetta koskevasta ongelmasta selaimessa.
-Selaimen ja ASUS-reitittimen asetussivun (router.asus.com) välinen yhteys pysyy suojattuna huolimatta tästä varoitusilmoituksesta.
+Selaimen ja ASUS-reitittimen asetussivun (ZVDOMAIN_NAMEVZ) välinen yhteys pysyy suojattuna huolimatta tästä varoitusilmoituksesta.
 Älä näytä tätä viestiä uudelleen
 HTTP on suhteellisesti heikommin suojattu verkkoyhteysprotokolla. Haluatko edelleen siirtyä asetussivulle HTTP-protokollalla?
 256,1024-QAM

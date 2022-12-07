@@ -58,7 +58,7 @@ if(document.getElementById("new_account").value == "root"
 || document.getElementById("new_account").value == "guest"
 || document.getElementById("new_account").value == "anonymous"
 ){
-alert("<#777#>");
+alert("<#781#>");
 document.getElementById("new_account").focus();
 return false;
 }
@@ -91,7 +91,7 @@ document.getElementById("new_password").select();
 return false;
 }
 if(document.getElementById("new_password").value.length > 32){
-showtext(document.getElementById("alert_msg2"),"*<#352#>");
+showtext(document.getElementById("alert_msg2"),"*<#356#>");
 document.getElementById("password").focus();
 document.getElementById("password").select();
 return false;
@@ -106,25 +106,25 @@ return true;
 <table width="90%" class="popTable" border="0" align="center" cellpadding="0" cellspacing="0">
 <thead>
 <tr>
-<td colspan="2"><span style="color:#FFF"><#2733#>: </span><span style="color:#FFF" id="selected_account"></span><img src="../images/button-close.gif" onClick="parent.hidePop('OverlayMask');"></td>
+<td colspan="2"><span style="color:#FFF"><#2758#>: </span><span style="color:#FFF" id="selected_account"></span><img src="../images/button-close.gif" onClick="parent.hidePop('OverlayMask');"></td>
 </tr>
 </thead>
 <tbody>
 <tr valign="middle">
-<td height="30" colspan="2" class="hint_word"><#2731#></td>
+<td height="30" colspan="2" class="hint_word"><#2756#></td>
 </tr>
 <tr>
-<th><#956#>: </th>
+<th><#961#>: </th>
 <td>
 <input class="input_15_table" name="new_account" id="new_account" type="text" maxlength="32" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><#2732#>: </th>
+<th><#2757#>: </th>
 <td><input type="password" class="input_15_table" name="new_password" id="new_password" onKeyPress="return validator.isString(this, event);" maxlength="33" autocorrect="off" autocapitalize="off"></td>
 </tr>
 <tr>
-<th><#1613#>: </th>
+<th><#1619#>: </th>
 <td><input type="password" class="input_15_table" name="confirm_password" id="confirm_password" onKeyPress="return validator.isString(this, event);" maxlength="33" autocorrect="off" autocapitalize="off">
 <br/><span id="alert_msg2" style="color:#FC0;margin-left:8px;"></span>
 </td>

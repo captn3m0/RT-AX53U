@@ -22,7 +22,7 @@ show_AMesh_status(0, 1);
 }
 }
 function show_AMesh_status(num, flag) {
-document.getElementById("ameshNumber").innerHTML = "<#1032#>: <span>" + num + "</span>";
+document.getElementById("ameshNumber").innerHTML = "<#1037#>: <span>" + num + "</span>";
 }
 function initial_amesh_obj() {
 if($('link[rel=stylesheet][href~="/device-map/amesh.css"]').length == 1) {
@@ -60,7 +60,7 @@ break;
 }
 }
 if(!support_flag) {
-var confirm_msg = "<#1004#>".replace("#AUTHMODE", auth_text);
+var confirm_msg = "<#1009#>".replace("#AUTHMODE", auth_text);
 support_flag = confirm(confirm_msg);
 }
 return support_flag;
@@ -69,10 +69,10 @@ function AiMesh_confirm_msg(_name, _value) {
 var check_operation_mode = function(_value) {
 switch(parseInt(_value)) {
 case 2 :
-return confirm("<#994#>\n<#991#>");//Repeater
+return confirm("<#999#>\n<#996#>");//Repeater
 break;
 case 4 :
-return confirm("<#995#>\n<#991#>");//Media Bridge
+return confirm("<#1000#>\n<#996#>");//Media Bridge
 break;
 default :
 return true;
@@ -95,34 +95,34 @@ if(total_node_count != "" && current_node_count < total_node_count) {
 if(current_ssid == original_ssid && current_psk == original_psk)
 return true;
 else if(current_ssid != original_ssid && current_psk != original_psk)
-return confirm("<#996#>\n<#991#>");//SSID & WPA key
+return confirm("<#1001#>\n<#996#>");//SSID & WPA key
 else if(current_ssid != original_ssid)
-return confirm("<#997#>\n<#991#>");//SSID
+return confirm("<#1002#>\n<#996#>");//SSID
 else if(current_psk != original_psk)
-return confirm("<#998#>\n<#991#>");/* untranslated */
+return confirm("<#1003#>\n<#996#>");/* untranslated */
 }
 else
 return true;
 };
 var check_wireless_country_code = function() {
-return confirm("<#999#>\n<#991#>");//Country code
+return confirm("<#1004#>\n<#996#>");//Country code
 };
 var feature_value = {
 "Wireless_Radio" : {
 "value" : 1,
-"text" : "<#1000#>\n<#991#>" //Disable Radio
+"text" : "<#1005#>\n<#996#>" //Disable Radio
 },
 "Wireless_Hide" : {
 "value" : 0,
-"text" : "<#1001#>\n<#991#>" //Hide SSID
+"text" : "<#1006#>\n<#996#>" //Hide SSID
 },
 "Wireless_Hide_WPS" : {
 "value" : 0,
-"text" : "<#1002#>\n<#991#>" //Hide SSID
+"text" : "<#1007#>\n<#996#>" //Hide SSID
 },
 "DHCP_Server" : {
 "value" : 1,
-"text" : "<#1003#>\n<#991#>" //Disable DHCP
+"text" : "<#1008#>\n<#996#>" //Disable DHCP
 }
 };
 var confirm_flag = true;

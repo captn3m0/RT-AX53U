@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#838#> - <#1891#></title>
+<title><#842#> - <#1897#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="usp_style.css">
@@ -254,7 +254,7 @@ var runner_disable_orig = '<% nvram_get("runner_disable"); %>';
 var qos_xobw_orig = parseInt(httpApi.nvramGet(["qos_xobw"], true).qos_xobw); //shapping UL speed /PrimaryWAN
 var qos_xobw1_orig = parseInt(httpApi.nvramGet(["qos_xobw1"], true).qos_xobw1); //shapping UL speed /SecondaryWAN
 var bwdpi_app_rulelist = "<% nvram_get("bwdpi_app_rulelist"); %>".replace(/&#60/g, "<");
-var category_title = ["", "<#886#>", "<#898#>", "<#890#>", "<#900#>","<#885#>", "<#892#>", "<#902#>"];
+var category_title = ["", "<#891#>", "<#903#>", "<#895#>", "<#905#>","<#890#>", "<#897#>", "<#907#>"];
 var cat_id_array = [[9,20], [8], [4], [0,5,6,15,17], [13,24], [1,3,14], [7,10,11,21,23], [4,13]];
 var ctf_disable = '<% nvram_get("ctf_disable"); %>';
 var ctf_disable_force = '<% nvram_get("ctf_disable_force "); %>';
@@ -272,10 +272,10 @@ document.getElementById('download_tr').style.display = "";
 if(mtwancfg_support){
 document.getElementById('wan_1_tr').style.display = "";
 if(dualwan_primary_display=="Ethernet LAN"){
-$("#dualwan_primary_title").html("<#1853#> - "+dualwan_primary_display+" (LAN Port "+wans_lanport_orig+")");
+$("#dualwan_primary_title").html("<#1859#> - "+dualwan_primary_display+" (LAN Port "+wans_lanport_orig+")");
 }
 else{
-$("#dualwan_primary_title").html("<#1853#> - "+dualwan_primary_display);
+$("#dualwan_primary_title").html("<#1859#> - "+dualwan_primary_display);
 }
 if(dw_secondary == "none"){
 document.getElementById('wan_2_tr').style.display = "none";
@@ -284,10 +284,10 @@ document.getElementById('download2_tr').style.display = "none";
 }else{
 document.getElementById('wan_2_tr').style.display = "";
 if(dualwan_secondary_display=="Ethernet LAN"){
-$("#dualwan_secondary_title").html("<#1860#> - "+dualwan_secondary_display+" (LAN Port "+wans_lanport_orig+")");
+$("#dualwan_secondary_title").html("<#1866#> - "+dualwan_secondary_display+" (LAN Port "+wans_lanport_orig+")");
 }
 else{
-$("#dualwan_secondary_title").html("<#1860#> - "+dualwan_secondary_display);
+$("#dualwan_secondary_title").html("<#1866#> - "+dualwan_secondary_display);
 }
 document.getElementById('upload2_tr').style.display = "";
 document.getElementById('download2_tr').style.display = "";
@@ -387,11 +387,11 @@ show_settings("NonAdaptive");
 }
 }
 if(adaptiveqos_support){
-document.getElementById('content_title').innerHTML = "<#2626#> - <#894#>";
+document.getElementById('content_title').innerHTML = "<#2651#> - <#899#>";
 if(document.form.qos_enable.value == "1"){
 if(qos_type == 0){ //Traditional Type
-add_option(document.getElementById("settingSelection"), '<#2982#>', 3, 0);
-add_option(document.getElementById("settingSelection"), '<#2981#>', 4, 0);
+add_option(document.getElementById("settingSelection"), '<#3008#>', 3, 0);
+add_option(document.getElementById("settingSelection"), '<#3007#>', 4, 0);
 }
 else{ //Adaptive Type or else
 document.getElementById('settingSelection').style.display = "none";
@@ -403,13 +403,13 @@ document.getElementById('settingSelection').style.display = "none";
 }
 else{
 if(qos_type == 0){ //Traditional Type
-add_option(document.getElementById("settingSelection"), '<#2982#>', 3, 0);
-add_option(document.getElementById("settingSelection"), '<#2981#>', 4, 0);
+add_option(document.getElementById("settingSelection"), '<#3008#>', 3, 0);
+add_option(document.getElementById("settingSelection"), '<#3007#>', 4, 0);
 }
 else{ //Bandwidth Limiter
 document.getElementById('settingSelection').style.display = "none";
 }
-document.getElementById('content_title').innerHTML = "<#374#> - <#2626#>";
+document.getElementById('content_title').innerHTML = "<#378#> - <#2651#>";
 document.getElementById('function_int_desc').style.display = "none";
 }
 /* MODELDEP */
@@ -435,8 +435,8 @@ document.getElementById("GeForceNow_item").style.display = "";
 if((isFirefox || isOpera) && document.getElementById("FormTitle"))
 document.getElementById("FormTitle").className = "FormTitle";
 if(!adaptiveqos_support){
-$('#qos_desc').html('<#1899#>');
-$('label[for="trad_type"]').html('<#1907#>')
+$('#qos_desc').html('<#1905#>');
+$('label[for="trad_type"]').html('<#1913#>')
 $('#bandwidth_setting_tr').hide();
 }
 }
@@ -567,7 +567,7 @@ return false;
 }
 if(qos_type != 2){ //not Bandwidth Limiter
 if( ((qos_type == 1 && document.form.bw_setting_name[1].checked == true ) || qos_type == 0 || qos_type == 3) && (document.form.obw.value.length == 0 || document.form.obw.value == 0)){ // To check field is 0 && Traditional QoS
-alert("<#2979#>");
+alert("<#3005#>");
 error_obw++;
 }
 else if( ((qos_type == 1 && document.form.bw_setting_name[1].checked == true ) || qos_type == 0 || qos_type == 3) && !validator.rangeFloat(document.form.obw, 0, 9999999999, "")){
@@ -599,7 +599,7 @@ document.form.obw.value = "1000";
 return false;
 }
 if( ((qos_type == 1 && document.form.bw_setting_name[1].checked == true ) || qos_type == 0 || qos_type == 3) && (document.form.ibw.value.length == 0 || document.form.ibw.value == 0)){ // To check field is 0 && Traditional QoS
-alert("<#2979#>");
+alert("<#3005#>");
 error_ibw++;
 }
 else if( ((qos_type == 1 && document.form.bw_setting_name[1].checked == true ) || qos_type == 0 || qos_type == 3) && !validator.rangeFloat(document.form.ibw, 0, 9999999999, "")){
@@ -628,7 +628,7 @@ document.form.ibw.value = 0;
 }
 if(qos_xobw_orig > 0){
 if((qos_xobw_orig/1024).toFixed(2) < parseFloat(document.form.obw.value)){
-alert("<#3486#> "+ (qos_xobw_orig/1024).toFixed(2));
+alert("<#3512#> "+ (qos_xobw_orig/1024).toFixed(2));
 document.form.obw.focus();
 document.form.obw.select();
 return false;
@@ -640,7 +640,7 @@ document.form.qos_obw.value = document.form.obw.value*1024;
 document.form.qos_ibw.value = document.form.ibw.value*1024;
 if(mtwancfg_support && wans_flag == "1") {
 if( ((qos_type == 1 && document.form.bw_setting_name[1].checked == true ) || qos_type == 0 || qos_type == 3) && (document.form.obw1.value.length == 0 || document.form.obw1.value == 0)){ // To check field is 0 && Traditional QoS
-alert("<#2979#>");
+alert("<#3005#>");
 error_obw1++;
 }
 else if( ((qos_type == 1 && document.form.bw_setting_name[1].checked == true ) || qos_type == 0 || qos_type == 3) && !validator.rangeFloat(document.form.obw1, 0, 9999999999, "")){
@@ -662,7 +662,7 @@ document.form.obw1.value = "1000";
 return false;
 }
 if( ((qos_type == 1 && document.form.bw_setting_name[1].checked == true ) || qos_type == 0 || qos_type == 3) && (document.form.ibw1.value.length == 0 || document.form.ibw1.value == 0)){ // To check field is 0 && Traditional QoS
-alert("<#2979#>");
+alert("<#3005#>");
 error_ibw1++;
 }
 else if( ((qos_type == 1 && document.form.bw_setting_name[1].checked == true ) || qos_type == 0 || qos_type == 3) && !validator.rangeFloat(document.form.ibw1, 0, 9999999999, "")){
@@ -686,7 +686,7 @@ document.form.ibw1.value = 0;
 }
 if(qos_xobw1_orig > 0){
 if((qos_xobw1_orig/1024).toFixed(2) < parseFloat(document.form.obw1.value)){
-alert("<#3486#> "+(qos_xobw1_orig/1024).toFixed(2));
+alert("<#3512#> "+(qos_xobw1_orig/1024).toFixed(2));
 document.form.obw1.focus();
 document.form.obw1.select();
 return false;
@@ -725,14 +725,14 @@ document.form.bwdpi_app_rulelist.value = bwdpi_app_rulelist;
 }
 }
 else{
-alert("<#897#>");
+alert("<#902#>");
 return false;
 }
 }
 }
 else{ //Bandwidth Limiter
 if(document.form.PC_devicename.value != ""){
-alert("<#311#>");
+alert("<#315#>");
 return false;
 }
 document.form.qos_bw_rulelist.disabled = false;
@@ -888,11 +888,11 @@ document.form.qos_type.value = value;
 if(value != 2){
 var alert_hint = "";
 if(GN_with_BandwidthLimeter)
-alert_hint += "<#2230#>";
+alert_hint += "<#2236#>";
 if(GN_with_Amazon_WSS_enabled){
 if(alert_hint != "")
 alert_hint += "\n";
-alert_hint += "<#2229#>";
+alert_hint += "<#2235#>";
 }
 if(alert_hint != "")
 alert(alert_hint);
@@ -1165,47 +1165,47 @@ var max_priority = 0;
 if(qos_bw_rulelist != "")
 max_priority = qos_bw_rulelist_row.length;
 if(qos_bw_rulelist_row.length >= length){
-alert("<#2454#> " + length + " <#2455#>");
+alert("<#2479#> " + length + " <#2480#>");
 return false;
 }
 if(!validator.string(document.form.PC_devicename))
 return false;
 if(document.form.PC_devicename.value == ""){
-alert("<#316#>");
+alert("<#320#>");
 document.form.PC_devicename.focus();
 return false;
 }
 if(PC_mac != "" && PC_name == document.form.PC_devicename.value){
 if(qos_bw_rulelist.search(PC_mac+">") > -1 && PC_mac != ""){ //check same target
-alert("<#2447#>");
+alert("<#2472#>");
 document.form.PC_devicename.focus();
 return false;
 }
 }
 else{
 if(qos_bw_rulelist.search(document.form.PC_devicename.value+">") > -1){
-alert("<#2447#>");
+alert("<#2472#>");
 document.form.PC_devicename.focus();
 return false;
 }
 }
 if(document.getElementById("download_rate").value == ""){
-alert("<#316#>");
+alert("<#320#>");
 document.getElementById("download_rate").focus();
 return false;
 }
 else if(isNaN(document.getElementById("download_rate").value) || document.getElementById("download_rate").value < 0.1){
-alert("<#2630#> : 0.1 Mb/s");
+alert("<#2655#> : 0.1 Mb/s");
 document.getElementById("download_rate").focus();
 return false;
 }
 if(document.getElementById("upload_rate").value == ""){
-alert("<#316#>");
+alert("<#320#>");
 document.getElementById("upload_rate").focus();
 return false;
 }
 else if(isNaN(document.getElementById("upload_rate").value) || document.getElementById("upload_rate").value < 0.1){
-alert("<#2630#> : 0.1 Mb/s");
+alert("<#2655#> : 0.1 Mb/s");
 document.getElementById("upload_rate").focus();
 return false;
 }
@@ -1213,7 +1213,7 @@ for(var i = 0; i < document.form.PC_devicename.value.length; ++i){
 if(document.form.PC_devicename.value.charAt(i) == '<' || document.form.PC_devicename.value.charAt(i) == '>'){
 invalid_char += document.form.PC_devicename.value.charAt(i);
 document.form.PC_devicename.focus();
-alert("<#339#> ' "+invalid_char + " '");
+alert("<#343#> ' "+invalid_char + " '");
 return false;
 }
 }
@@ -1222,7 +1222,7 @@ if(PC_mac == "" || (PC_mac != "" && PC_name != document.form.PC_devicename.value
 if(document.form.PC_devicename.value.split(":").length == 6) { //mac
 if(!validator.mac_addr(document.form.PC_devicename.value)) {
 document.form.PC_devicename.focus();
-alert("<#348#>");
+alert("<#352#>");
 return false;
 }
 }
@@ -1230,14 +1230,14 @@ else if(document.form.PC_devicename.value.split(".").length == 4) { //ip
 if(!validator.ipv4_addr(document.form.PC_devicename.value)) { //single ip
 if(!validator.ipv4_addr_range(document.form.PC_devicename.value)) { //ip range
 document.form.PC_devicename.focus();
-alert(document.form.PC_devicename.value + " <#330#>");
+alert(document.form.PC_devicename.value + " <#334#>");
 return false;
 }
 }
 }
 else {
 document.form.PC_devicename.focus();
-alert(document.form.PC_devicename.value + " <#2608#>");
+alert(document.form.PC_devicename.value + " <#2633#>");
 return false;
 }
 }
@@ -1275,25 +1275,25 @@ var code = "";
 code += '<table width="100%" border="1" cellspacing="0" cellpadding="4" align="center" class="FormTable_table" id="mainTable_table">';
 code += '<thead><tr>';
 if(pm_support)
-code += '<td colspan="5"><#2881#>&nbsp;(<#2586#>&nbsp;32)</td>';
+code += '<td colspan="5"><#2907#>&nbsp;(<#2611#>&nbsp;32)</td>';
 else
-code += '<td colspan="5"><#1616#>&nbsp;(<#2586#>&nbsp;32)</td>';
+code += '<td colspan="5"><#1622#>&nbsp;(<#2611#>&nbsp;32)</td>';
 code += '</tr></thead>';
 code += '<tbody>';
 code += '<tr>';
-code += '<th style="width:60px" height="30px" title="<#3060#>">';
+code += '<th style="width:60px" height="30px" title="<#3086#>">';
 if(select_all_checked == 1)
-code += '<div><div id="selAll" class="all_enable" style="margin: auto;width:40px;" onclick="enable_check(this);"><#1390#></div></div>';
+code += '<div><div id="selAll" class="all_enable" style="margin: auto;width:40px;" onclick="enable_check(this);"><#1395#></div></div>';
 else
-code += '<div><div id="selAll" class="all_disable" style="margin: auto;width:40px;" onclick="enable_check(this);"><#1390#></div></div>';
+code += '<div><div id="selAll" class="all_disable" style="margin: auto;width:40px;" onclick="enable_check(this);"><#1395#></div></div>';
 code += '</th>';
 if(pm_support)
-code += '<th style="width:330px" title="Target can be a group name, IP or IP range(ex:192.168.1.5-10)"><#2791#></th>';
+code += '<th style="width:330px" title="Target can be a group name, IP or IP range(ex:192.168.1.5-10)"><#2816#></th>';
 else
-code += '<th style="width:330px"><#2791#></th>';
-code += '<th style="width:130px"><#1785#></th>';
-code += '<th style="width:130px"><#3422#></th>';
-code += '<th style="width:90px"><#2585#></th>';
+code += '<th style="width:330px"><#2816#></th>';
+code += '<th style="width:130px"><#1791#></th>';
+code += '<th style="width:130px"><#3448#></th>';
+code += '<th style="width:90px"><#2610#></th>';
 code += '</tr>';
 code += '<tr id="main_element">';
 code += '<td style="background:#2F3A3E"><div id="enable_button" class="check" style="width:22px;height:22px;margin:0 auto;display:none"><div style="width:16px;height:16px;margin: 3px auto" class="icon_check"></div></div>-</td>';
@@ -1301,8 +1301,8 @@ code += '<td style="border-bottom:2px solid #000;">';
 if(pm_support)
 code += '<input type="text" style="margin-left:10px;float:left;width:255px;" class="input_20_table" name="PC_devicename" onkeyup="device_filter(this);check_field();" placeholder="Please select the Device Group Name" autocorrect="off" autocapitalize="off" autocomplete="off" disabled>';/*untranslated*/
 else
-code += '<input type="text" style="margin-left:10px;float:left;width:255px;" class="input_20_table" name="PC_devicename" onkeyup="device_filter(this);check_field();" placeholder="<#1189#>" autocorrect="off" autocapitalize="off" autocomplete="off">';
-code += '<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" onclick="pullLANIPList(this);" title="<#3063#>">';
+code += '<input type="text" style="margin-left:10px;float:left;width:255px;" class="input_20_table" name="PC_devicename" onkeyup="device_filter(this);check_field();" placeholder="<#1194#>" autocorrect="off" autocapitalize="off" autocomplete="off">';
+code += '<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" onclick="pullLANIPList(this);" title="<#3089#>">';
 code += '<div id="ClientList_Block_PC" class="clientlist_dropdown" style="margin-top:25px;margin-left:10px;"></div>';
 code += '</td>';
 code += '<td style="border-bottom:2px solid #000;text-align:right;"><input type="text" id="download_rate" class="input_6_table" maxlength="6" onkeypress="return validator.bandwidth_code(this, event);" onkeyup="check_field();"><span style="margin: 0 5px;color:#FFF;">Mb/s</span></td>';
@@ -1310,7 +1310,7 @@ code += '<td style="border-bottom:2px solid #000;text-align:right;"><input type=
 code += '<td style="border-bottom:2px solid #000;"><div id="add_delete" class="add_disable" style="margin:0 auto" onclick="addRow_main(this, 32)"></div></td>';
 code += '</tr>';
 if(qos_bw_rulelist == ""){
-code += '<tr><td style="color:#FFCC00;" colspan="10"><#2382#></td></tr>';
+code += '<tr><td style="color:#FFCC00;" colspan="10"><#2407#></td></tr>';
 }
 else{
 for(k=0;k< qos_bw_rulelist_row.length;k++){
@@ -1451,7 +1451,7 @@ hideClients_Block();
 <div id="Loading" class="popup_bg"></div>
 <div id="hiddenMask" class="popup_bg" style="z-index:999;">
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center"></table>
-<!--[if lte IE 6.5.]><script>alert("<#1354#>");</script><![endif]-->
+<!--[if lte IE 6.5.]><script>alert("<#1359#>");</script><![endif]-->
 </div>
 <iframe name="hidden_frame" id="hidden_frame" width="0" height="0" frameborder="0"></iframe>
 <table id="main_table" class="content" align="center" cellpadding="0" cellspacing="0">
@@ -1477,11 +1477,11 @@ hideClients_Block();
 <input type="hidden" name="firmver" value="<% nvram_get("firmver"); %>">
 <input type="hidden" name="bwdpi_app_rulelist_edit" value="<% nvram_get("bwdpi_app_rulelist"); %>">
 <tr>
-<div class="description_down"><#893#></div>
+<div class="description_down"><#898#></div>
 </tr>
 <tr>
 <div style="margin-left:30px; margin-top:10px;">
-<div class="formfontdesc" style="line-height:20px;font-size:14px;"><#895#></div>
+<div class="formfontdesc" style="line-height:20px;font-size:14px;"><#900#></div>
 </div>
 <div style="margin:5px;*margin-left:-5px;width: 730px; height: 2px;" class="splitLine"></div>
 </tr>
@@ -1494,7 +1494,7 @@ hideClients_Block();
 <table id="category_table" width="100%">
 <tr>
 <td colspan="2">
-<div class="priority priority_highest"><#2253#></div>
+<div class="priority priority_highest"><#2278#></div>
 </td>
 </tr>
 <tr>
@@ -1504,7 +1504,7 @@ hideClients_Block();
 </tr>
 <tr>
 <td colspan="2">
-<div class="priority priority_lowest"><#2598#></div>
+<div class="priority priority_lowest"><#2623#></div>
 </td>
 </tr>
 </table>
@@ -1514,7 +1514,7 @@ hideClients_Block();
 </table>
 <div style="margin-bottom:10px;width:100%;text-align:center;">
 <input class="button_gen" id="btn_cancel_priority" type="button" onclick="cancel_priority_panel();" value="<#199#>">
-<input class="button_gen" type="button" onclick="save_priority();" value="<#1660#>">
+<input class="button_gen" type="button" onclick="save_priority();" value="<#1666#>">
 </div>
 </td>
 </tr>
@@ -1556,7 +1556,7 @@ hideClients_Block();
 <td align="right" >
 <div>
 <select id="settingSelection" onchange="switchPage(this.options[this.selectedIndex].value)" class="input_option">
-<option value="1"><#894#></option>
+<option value="1"><#899#></option>
 </select>
 </div>
 </td>
@@ -1580,13 +1580,13 @@ hideClients_Block();
 <td>&nbsp&nbsp</td>
 <td style="font-size: 14px;">
 <div id="function_desc" class="formfontdesc" style="line-height:20px;">
-<#1894#>
+<#1900#>
 <ul>
-<li id="function_int_desc"><#1895#></li>
-<li id="qos_desc"><#1898#></li>
-<li><#1896#></li>
+<li id="function_int_desc"><#1901#></li>
+<li id="qos_desc"><#1904#></li>
+<li><#1902#></li>
 </ul>
-<#1897#>
+<#1903#>
 </div>
 <div class="formfontdesc">
 <a id="faq" href="" target="_blank" style="text-decoration:underline;">QoS FAQ</a>
@@ -1601,14 +1601,14 @@ hideClients_Block();
 <td valign="top">
 <table style="margin-left:3px;" width="95%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr id="GeForce_upnp" style="display: none;">
-<th><#2220#></th>
+<th><#2226#></th>
 <td colspan="2">
 <input type="radio" name="nvgfn_enable" class="input" value="1" <% nvram_match("nvgfn_enable", "1", "checked"); %>><#187#>
 <input type="radio" name="nvgfn_enable" class="input" value="0" <% nvram_match("nvgfn_enable", "0", "checked"); %>><#186#>
 </td>
 </tr>
 <tr>
-<th><#1874#></th>
+<th><#1880#></th>
 <td colspan="2">
 <div class="left" style="width:94px; float:left; cursor:pointer;" id="radio_qos_enable"></div>
 <script type="text/javascript">
@@ -1641,11 +1641,11 @@ document.getElementById('bandwidth_setting_tr').style.display = "none";
 document.getElementById('list_table').style.display = "none";
 var alert_hint = "";
 if(GN_with_BandwidthLimeter)
-alert_hint += "<#2230#>";
+alert_hint += "<#2236#>";
 if(GN_with_Amazon_WSS_enabled){
 if(alert_hint != "")
 alert_hint += "\n";
-alert_hint += "<#2229#>";
+alert_hint += "<#2235#>";
 }
 if(alert_hint != "")
 alert(alert_hint);
@@ -1656,30 +1656,30 @@ show_settings("NonAdaptive");
 }
 );
 </script>
-<div id="qos_enable_hint" style="color:#FC0;margin:5px 0px 0px 100px;display:none"><#1902#></div>
+<div id="qos_enable_hint" style="color:#FC0;margin:5px 0px 0px 100px;display:none"><#1908#></div>
 </td>
 </tr>
 <tr id="qos_type_tr" style="display:none">
-<th><#2980#></th>
+<th><#3006#></th>
 <td colspan="3">
-<input id="int_type" name="qos_type_radio" value="1" onClick="change_qos_type(this.value);" style="display:none;" type="radio" <% nvram_match("qos_type", "1","checked"); %>><a id="int_type_link" class="hintstyle" style="display:none;" href="javascript:void(0);" onClick="openHint(20, 5);"><label for="int_type"><#893#></label></a>
-<input id="trad_type" name="qos_type_radio" value="0" onClick="change_qos_type(this.value);" type="radio" <% nvram_match("qos_type", "0","checked"); %>><a class="hintstyle" href="javascript:void(0);" onClick="openHint(20, 6);"><label for="trad_type"><#1905#></label></a>
+<input id="int_type" name="qos_type_radio" value="1" onClick="change_qos_type(this.value);" style="display:none;" type="radio" <% nvram_match("qos_type", "1","checked"); %>><a id="int_type_link" class="hintstyle" style="display:none;" href="javascript:void(0);" onClick="openHint(20, 5);"><label for="int_type"><#898#></label></a>
+<input id="trad_type" name="qos_type_radio" value="0" onClick="change_qos_type(this.value);" type="radio" <% nvram_match("qos_type", "0","checked"); %>><a class="hintstyle" href="javascript:void(0);" onClick="openHint(20, 6);"><label for="trad_type"><#1911#></label></a>
 <input id="bw_limit_type" name="qos_type_radio" value="2" onClick="change_qos_type(this.value);" type="radio" <% nvram_match("qos_type", "2","checked"); %>><a class="hintstyle" href="javascript:void(0);" onClick="openHint(20, 7)"><label for="bw_limit_type"><#155#></label></a>
 <span id="GeForceNow_item" style="display: none;"><input id="GeForce_type" name="qos_type_radio" value="3" onClick="change_qos_type(this.value);" type="radio" <% nvram_match("qos_type", "3","checked"); %>><a class="hintstyle" href="javascript:void(0);"><label for="GeForce_type">GeForce NOW QoS</label></a></span>
 </td>
 </tr>
 <tr id="bandwidth_setting_tr" style="display:none">
-<th><#1428#></th>
+<th><#1433#></th>
 <td colspan="2">
 <input id="auto" name="bw_setting_name" onClick="bandwidth_setting();" type="radio"><label for="auto"><#154#></label>
-<input id="manu" name="bw_setting_name" onClick="bandwidth_setting();" type="radio"><label for="manu"><#371#></label>
+<input id="manu" name="bw_setting_name" onClick="bandwidth_setting();" type="radio"><label for="manu"><#375#></label>
 </td>
 </tr>
 <tr id="wan_1_tr" style="display:none">
 <th colspan=3 id="dualwan_primary_title"></th>
 </tr>
 <tr id="upload_tr">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(20, 2);"><#3422#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(20, 2);"><#3448#></a></th>
 <td>
 <input type="text" maxlength="10" id="obw" name="obw" onKeyPress="return validator.isNumberFloat(this,event);" class="input_15_table" value="" autocorrect="off" autocapitalize="off">
 <label style="margin-left:5px;">Mb/s</label>
@@ -1687,13 +1687,13 @@ show_settings("NonAdaptive");
 <td rowspan="2" style="width:250px;">
 <div>
 <ul style="padding:0 10px;margin:5px 0;">
-<li><#1892#></li>
+<li><#1898#></li>
 </ul>
 </div>
 </td>
 </tr>
 <tr id="download_tr">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(20, 2);"><#1785#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(20, 2);"><#1791#></a></th>
 <td>
 <input type="text" maxlength="10" id="ibw" name="ibw" onKeyPress="return validator.isNumberFloat(this,event);" class="input_15_table" value="" autocorrect="off" autocapitalize="off">
 <label style="margin-left:5px;">Mb/s</label>
@@ -1703,7 +1703,7 @@ show_settings("NonAdaptive");
 <th colspan=3 id="dualwan_secondary_title"></th>
 </tr>
 <tr id="upload2_tr" style="display:none">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(20, 2);"><#3422#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(20, 2);"><#3448#></a></th>
 <td>
 <input type="text" maxlength="10" id="obw1" name="obw1" onKeyPress="return validator.isNumberFloat(this,event);" class="input_15_table" value="" autocorrect="off" autocapitalize="off">
 <label style="margin-left:5px;">Mb/s</label>
@@ -1711,13 +1711,13 @@ show_settings("NonAdaptive");
 <td rowspan="2" style="width:250px;">
 <div>
 <ul style="padding:0 10px;margin:5px 0;">
-<li><#1892#></li>
+<li><#1898#></li>
 </ul>
 </div>
 </td>
 </tr>
 <tr id="download2_tr" style="display:none">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(20, 2);"><#1785#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(20, 2);"><#1791#></a></th>
 <td>
 <input type="text" maxlength="10" id="ibw1" name="ibw1" onKeyPress="return validator.isNumberFloat(this,event);" class="input_15_table" value="" autocorrect="off" autocapitalize="off">
 <label style="margin-left:5px;">Mb/s</label>
@@ -1730,7 +1730,7 @@ show_settings("NonAdaptive");
 <table id="quick_setup_desc" width="98%" border="0" style="margin-top:5px;margin-left:5px;display:none;">
 <tr>
 <td height="30" align="left" valign="top" bgcolor="#4D595D">
-<div class="formfontdesc" style="line-height:20px;font-size:14px;"><#896#></div>
+<div class="formfontdesc" style="line-height:20px;font-size:14px;"><#901#></div>
 </td>
 </tr>
 </table>
@@ -1740,37 +1740,37 @@ show_settings("NonAdaptive");
 <div style="display:flex;height:132px;">
 <div id="Game" onclick="clickEvent(this);" onmouseover="overHint(86);" onmouseout="nd();"></div>
 </div>
-<div class="Quick_Setup_title"><#1229#></div>
+<div class="Quick_Setup_title"><#1234#></div>
 </div>
 <div style="width: 120px;height:174px;">
 <div style="display:flex;height:132px;">
 <div id="Media" onclick="clickEvent(this);" onmouseover="overHint(87);" onmouseout="nd();"></div>
 </div>
-<div class="Quick_Setup_title"><#1230#></div>
+<div class="Quick_Setup_title"><#1235#></div>
 </div>
 <div style="width: 120px;height:174px;">
 <div style="display:flex;height:132px;">
 <div id="Web" onclick="clickEvent(this);" onmouseover="overHint(88);" onmouseout="nd();"></div>
 </div>
-<div class="Quick_Setup_title"><#900#></div>
+<div class="Quick_Setup_title"><#905#></div>
 </div>
 <div style="width: 120px;height:174px;">
 <div style="display:flex;height:132px;">
 <div id="eLearning" onclick="clickEvent(this);" onmouseover="overHint(104);" onmouseout="nd();"></div>
 </div>
-<div class="Quick_Setup_title"><#902#></div>
+<div class="Quick_Setup_title"><#907#></div>
 </div>
 <div style="width: 120px;height:174px;">
 <div style="display:flex;height:132px;">
 <div id="videoConference" onclick="clickEvent(this);" onmouseover="overHint(103);" onmouseout="nd();"></div>
 </div>
-<div class="Quick_Setup_title"><#890#></div>
+<div class="Quick_Setup_title"><#895#></div>
 </div>
 <div style="width: 120px;height:174px;">
 <div style="display:flex;height:132px;">
 <div id="Customize" onclick="clickEvent(this);set_priority('on');" onmouseover="overHint(85);" onmouseout="nd();"></div>
 </div>
-<div class="Quick_Setup_title"><#1675#></div>
+<div class="Quick_Setup_title"><#1681#></div>
 </div>
 </div>
 </div>

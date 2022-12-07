@@ -102,7 +102,7 @@ position:absolute; z-index:101; font-size:11px; color:#000000; margin-left:175px
 <script language="JavaScript" type="text/javascript" src="/js/jquery.js"></script>
 <script>
 var rescan = 0;
-var DEVICE_TYPE = ["", "<#1712#>", "<#1713#>", "<#1714#>", "<#1715#>", "<#1716#>", "<#1717#>", "Printer", "TV Game Console"];
+var DEVICE_TYPE = ["", "<#1718#>", "<#1719#>", "<#1720#>", "<#1721#>", "<#1722#>", "<#1723#>", "Printer", "TV Game Console"];
 var thisDevice;
 (function(){
 var thisDeviceObj = {
@@ -186,7 +186,7 @@ setTimeout("_showNextItem(listFlag);", 1);
 }
 else{
 var HTMLCode = '<table width="100%" border="1" cellspacing="0" cellpadding="4" align="center" class="list_table" id="client_list_table">';
-HTMLCode += '<tr><td style="color:#FFCC00;font-size:12px; border-collapse: collapse;border:1;" colspan="4"><span style="line-height:25px;"><#1708#></span>&nbsp;<img style="margin-top:10px;" src="/images/InternetScan.gif"></td></tr>';
+HTMLCode += '<tr><td style="color:#FFCC00;font-size:12px; border-collapse: collapse;border:1;" colspan="4"><span style="line-height:25px;"><#1714#></span>&nbsp;<img style="margin-top:10px;" src="/images/InternetScan.gif"></td></tr>';
 HTMLCode += '</table>';
 document.getElementById("client_list_Block").innerHTML = HTMLCode;
 }
@@ -224,13 +224,13 @@ if(startNum == 1){
 document.getElementById("leftBtn").style.visibility = "hidden";
 }else{
 document.getElementById("leftBtn").style.visibility = "";
-document.getElementById("leftBtn").title = "<#2947#>";
+document.getElementById("leftBtn").title = "<#2973#>";
 }
 if(endNum == client_list_row.length){
 document.getElementById("rightBtn").style.visibility = "hidden";
 }else{
 document.getElementById("rightBtn").style.visibility = "";
-document.getElementById("rightBtn").title = "<#2798#>";
+document.getElementById("rightBtn").title = "<#2823#>";
 }
 }
 function showNextItem(act){
@@ -258,7 +258,7 @@ function showclient_list(list){
 var code = "";
 networkmap_scanning = 0;
 if(list)
-document.getElementById("isblockdesc").innerHTML = "<#1517#>";
+document.getElementById("isblockdesc").innerHTML = "<#1523#>";
 code +='<table width="100%" align="center" id="client_list_table"><tr><td>';
 for(var i = 1; i < client_list_row.length; i++){
 var client_list_col = client_list_row[i].split('>');
@@ -282,7 +282,7 @@ else if(j == 4){
 code += '<td width="30%" class="border2"><div class="findname">' + client_list_col[5] +'</div></td>';
 }
 else if(j == 5){
-code += '<td width="6%" class="border4"><div border="0px"><a title="<#3065#>" target="_blank" href="http://'+ client_list_col[2] +'"><img src="../images/arrow-right.png" width="32px" hight="20px" style="border:0px"></a></div></td>';
+code += '<td width="6%" class="border4"><div border="0px"><a title="<#3091#>" target="_blank" href="http://'+ client_list_col[2] +'"><img src="../images/arrow-right.png" width="32px" hight="20px" style="border:0px"></a></div></td>';
 }
 else
 code += '';
@@ -295,7 +295,7 @@ document.getElementById("client_list_Block").style.display = "none";
 if(direct_dut == 1)
 location.href = '/';
 if(document.getElementById('client_list_table').innerHTML == "<tbody></tbody>"){
-code ='<tr><td style="color:#FFCC00;" colspan="4"><#2382#></td></tr>'
+code ='<tr><td style="color:#FFCC00;" colspan="4"><#2407#></td></tr>'
 document.getElementById("client_list_Block").innerHTML = code;
 }
 }
@@ -314,7 +314,7 @@ document.getElementById("proceeding_img_text1").style.marginLeft = "100px";
 setTimeout("LoadingProgress1("+seconds+");", 1000);
 }
 else{
-document.getElementById("proceeding_img_text1").innerHTML = "<#366#>";
+document.getElementById("proceeding_img_text1").innerHTML = "<#370#>";
 y = 0;
 location.href = "find_device.asp?flag=scan_finish";
 }
@@ -345,7 +345,7 @@ document.form.submit();
 <body class="Levelfind" onload="load_body();" class="bg">
 <noscript>
 <div class="popup_bg" style="visibility:visible; z-index:999;">
-<div style="margin:200px auto; width:300px; background-color:#006699; color:#FFFFFF; line-height:150%; border:3px solid #FFF; padding:5px;"><#427#></p></div>
+<div style="margin:200px auto; width:300px; background-color:#006699; color:#FFFFFF; line-height:150%; border:3px solid #FFF; padding:5px;"><#431#></p></div>
 </div>
 </noscript>
 <iframe name="hidden_frame" id="hidden_frame" width="0" height="0" frameborder="0"></iframe>
@@ -362,13 +362,13 @@ document.form.submit();
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center">
 <tr>
 <td>
-<div class="drword" id="drword"><#367#> <#364#>...
+<div class="drword" id="drword"><#371#> <#368#>...
 <br/>
 <br/>
 </div>
 <div id="wireless_client_detect" style="margin-left:10px;position:absolute;display:none;width:400px;">
 <img src="images/loading.gif">
-<div style="margin:-55px 0 0 75px;"><#688#></div>
+<div style="margin:-55px 0 0 75px;"><#692#></div>
 </div>
 <div class="drImg"><img src="images/alertImg.png"></div>
 <div style="height:100px; "></div>
@@ -417,7 +417,7 @@ document.form.submit();
 <tr><td>
 <div style="text-align: center;">
 <img height="25px" id="leftBtn" onclick="showNextItem(0);" style="visibility:hidden;cursor:pointer;" src="/images/arrow-left.png">
-<input type="button" id="refresh_list" class="button_gen" onclick="networkmap_update();" value="<#1662#>">
+<input type="button" id="refresh_list" class="button_gen" onclick="networkmap_update();" value="<#1668#>">
 <img height="25px" id="rightBtn" onclick="showNextItem(1);" style="visibility:hidden;cursor:pointer;" src="/images/arrow-right.png">
 </div>
 </td></tr>

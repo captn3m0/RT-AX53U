@@ -27,7 +27,7 @@ var wan_unit = '<% get_parameter("wan_unit"); %>';
 if(tmo_support)
 var theUrl = "cellspot.router";
 else
-var theUrl = "router.asus.com";
+var theUrl = "<#844#>";
 var htmlEnDeCode = (function() {
 var charToEntityRegex,
 entityToCharRegex,
@@ -272,10 +272,10 @@ if(smart_connect_nvram == 1){
 wlObj.length = 1;
 if(parent.smart_connect_support){
 if(parent.band5g2_support){
-wlObj[0].band = "<#3140#>";
+wlObj[0].band = "<#3166#>";
 }
 else{
-wlObj[0].band = "<#3139#>";
+wlObj[0].band = "<#3165#>";
 }
 }
 }
@@ -288,10 +288,10 @@ else if(applyParam.smartConnect == 1){
 wlObj.length = 1;
 if(parent.smart_connect_support){
 if(parent.band5g2_support){
-wlObj[0].band = "<#3140#>";
+wlObj[0].band = "<#3166#>";
 }
 else{
-wlObj[0].band = "<#3139#>";
+wlObj[0].band = "<#3165#>";
 }
 }
 }
@@ -393,15 +393,15 @@ wlHintHtml += '<meta content="telephone=no" name="format-detection"><meta name="
 wlHintHtml += '<div id="wlHint">';
 wlHintHtml += '<div class="div_table main_field_gap">';
 wlHintHtml += '<div class="div_tr">';
-wlHintHtml += '<div class="prod_madelName"><div class="title_name"><div class="div_td img_gap"><div class="login_img"></div></div><div class="div_td"><#839#></div></div></div>';
+wlHintHtml += '<div class="prod_madelName"><div class="title_name"><div class="div_td img_gap"><div class="login_img"></div></div><div class="div_td"><#843#></div></div></div>';
 wlHintHtml += '<div id="login_filed">';
 wlHintHtml += "<div class='p1 title_gap'><#218#></div>";
 for(var i=0; i<wlObj.length; i++){
 wlHintHtml += '<div class="p1 title_gap">'+ wlObj[i].band +'</div>';
 wlHintHtml += '<div class="nologin">';
-wlHintHtml += '<#558#>: <b>';
+wlHintHtml += '<#562#>: <b>';
 wlHintHtml += wlObj[i].ssid + '</b><br>';
-wlHintHtml += '<#423#>: <b>';
+wlHintHtml += '<#427#>: <b>';
 wlHintHtml += (wlObj[i].key == "") ? "Open System" : wlObj[i].key;
 wlHintHtml += '</b></div>';
 }
@@ -654,7 +654,7 @@ document.redirectForm.flag.value = "Client";
 setTimeout("top_delay_redirect('/');", restart_time*1000);
 }
 else if(current_page.indexOf("Advanced_OperationMode_Content.asp") != -1){
-parent.document.getElementById('drword').innerHTML = "<#343#>&nbsp;"+parent.document.form.lan_ipaddr.value+"<#344#><br/>";
+parent.document.getElementById('drword').innerHTML = "<#347#>&nbsp;"+parent.document.form.lan_ipaddr.value+"<#348#><br/>";
 setTimeout("hideLoading() ",20000);
 setTimeout("parent.document.getElementById('Loading').style.display = 'none';",20000);
 setTimeout("parent.dr_advise();",20000);
@@ -662,10 +662,10 @@ setTimeout("redirect()", restart_time*1000);
 }
 else if(current_page.indexOf("Advanced_LAN_Content.asp") != -1){
 if(lan_proto == "dhcp"){
-parent.document.getElementById('drword').innerHTML = "<#366#>.<#345#>";
+parent.document.getElementById('drword').innerHTML = "<#370#>.<#349#>";
 }
 else{
-parent.document.getElementById('drword').innerHTML = "<#343#>&nbsp;"+parent.document.form.lan_ipaddr.value+"<#344#><br/>";
+parent.document.getElementById('drword').innerHTML = "<#347#>&nbsp;"+parent.document.form.lan_ipaddr.value+"<#348#><br/>";
 }
 setTimeout("hideLoading();",20000);
 setTimeout("parent.dr_advise();",20000);

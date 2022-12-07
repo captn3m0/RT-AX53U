@@ -235,7 +235,7 @@ var $content_bg = $("<div>");
 var $edit_offtime_title = $("<div>");
 $edit_offtime_title.appendTo($content_bg);
 $edit_offtime_title.addClass("edit_offtime_title");
-$edit_offtime_title.html("<#4167#>");
+$edit_offtime_title.html("<#4194#>");
 var $close_btn = $("<div>");
 $close_btn.appendTo($content_bg);
 $close_btn.addClass("close_btn");
@@ -262,12 +262,12 @@ var $time_setting_title = $("<div>");
 $time_setting_title.appendTo($edit_time_setting_bg);
 $time_setting_title.addClass("time_setting_title");
 if(_type == "start")
-$time_setting_title.html("<span><#4160#></span>");
+$time_setting_title.html("<span><#4187#></span>");
 else
-$time_setting_title.html("<span><#4161#></span>");
+$time_setting_title.html("<span><#4188#></span>");
 var get_time_setting_component = function(_type, _unit){
 var time_unit_parm = {
-"text":{"hour":"<#2255#>", "minute":"<#2632#>"},
+"text":{"hour":"<#2280#>", "minute":"<#2657#>"},
 "interval":{"hour":1, "minute":15},
 "end_time":{"hour":24, "minute":59},
 }
@@ -303,11 +303,11 @@ _$this.siblings(".valid_hint").html(_hint).show();
 _$this.siblings(".custom_select").addClass("focus");
 };
 if(value.length == 0){
-show_valid_hint("<#316#>", $(this));
+show_valid_hint("<#320#>", $(this));
 return false;
 }
 if(isNaN(value) || (_unit == "hour" && (parseInt(value) > 24)) || (_unit == "minute" && (parseInt(value) > 59)) ){
-show_valid_hint("<#2076#>", $(this));
+show_valid_hint("<#2082#>", $(this));
 return false;
 }
 $(this).parents(".edit_hour_minute_bg").find(".custom_input").attr("disabled", false);
@@ -407,11 +407,11 @@ $(this).parents(".edit_hour_minute_bg").find(".custom_select").removeClass("deac
 var $all_day_text = $("<div>");
 $all_day_text.appendTo($all_day_bg);
 $all_day_text.addClass("all_day_text");
-$all_day_text.html("<#4159#>");
+$all_day_text.html("<#4186#>");
 $edit_hour_minute_bg.append($("<div>").addClass("horizontal_line"));
 var $routine_schedule_title = $("<div>");
 $routine_schedule_title.appendTo($edit_hour_minute_bg);
-$routine_schedule_title.html("<#4173#>");
+$routine_schedule_title.html("<#4200#>");
 if(_editMode == "edit" && _sche_type != "PC")
 $routine_schedule_title.hide();
 var $routine_schedule_bg = $("<div>");
@@ -451,7 +451,7 @@ $routine_schedule_bg.hide().children("div").unbind("click");
 $edit_done_btn = $("<div>");
 $edit_hour_minute_bg.append($edit_done_btn);
 $edit_done_btn.addClass("button_gen edit_done_btn");
-$edit_done_btn.html("<#1650#>");
+$edit_done_btn.html("<#1656#>");
 $edit_done_btn.unbind("click");
 $edit_done_btn.click(function(e){
 e = e || event;
@@ -484,9 +484,9 @@ current_data_num += weekday_obj.length;
 });
 if(current_data_num + click_weekday_list.length > weekScheduleApi.data_max){
 popupHint.init();
-var hint = "<#4164#>".replace("#MAXNUM", weekScheduleApi.data_max);
+var hint = "<#4191#>".replace("#MAXNUM", weekScheduleApi.data_max);
 hint += "<br>";
-hint += "<#4165#>";
+hint += "<#4192#>";
 popupHint.set_text(hint);
 popupHint.set_btn_ok();
 popupHint.hide_btn("cancel");
@@ -593,7 +593,7 @@ $(this).parents(".popup_edit_weekSchedule").fadeOut();
 }
 else{
 popupHint.init();
-popupHint.set_text("<#4177#> <#4178#>");
+popupHint.set_text("<#4204#> <#4205#>");
 popupHint.set_btn_ok();
 popupHint.hide_btn("cancel");
 }
@@ -605,7 +605,7 @@ var $content_bg = $("<div>");
 var $edit_offtime_title = $("<div>");
 $edit_offtime_title.appendTo($content_bg);
 $edit_offtime_title.addClass("edit_offtime_title");
-$edit_offtime_title.html("<#4167#>");
+$edit_offtime_title.html("<#4194#>");
 var $close_btn = $("<div>");
 $close_btn.appendTo($content_bg);
 $close_btn.addClass("close_btn");
@@ -703,7 +703,7 @@ $add_new_offtime.appendTo($content_bg);
 $add_new_offtime.addClass("add_new_offtime");
 $("<span>")
 .appendTo($add_new_offtime)
-.html("<#4176#>")
+.html("<#4203#>")
 .appendTo($add_new_offtime)
 .unbind("click")
 .click(function(e){
@@ -731,10 +731,10 @@ if(_len == undefined) _len = 2;
 return ("0".repeat(_len) + _num).slice(-_len);
 },
 "get_offtime_schedule_text" : function(){
-return $("<div>").addClass("offtime_schedule_text").html("<#4167#>");
+return $("<div>").addClass("offtime_schedule_text").html("<#4194#>");
 },
 "get_offtime_schedule_dis_text" : function(){
-return $("<div>").addClass("offtime_schedule_text dis").html("<#1513#> <#4167#>");
+return $("<div>").addClass("offtime_schedule_text dis").html("<#1518#> <#4194#>");
 },
 "get_action_btn" : function(){
 var $action_btn_bg = $("<div>");
@@ -742,14 +742,14 @@ $action_btn_bg.addClass("action_btn_bg");
 var $clear_all_btn = $("<div>");
 $clear_all_btn.appendTo($action_btn_bg);
 $clear_all_btn.addClass("button_gen left_btn");
-$clear_all_btn.html("<#4162#>");
+$clear_all_btn.html("<#4189#>");
 $clear_all_btn.unbind("click");
 $clear_all_btn.click(function(e){
 e = e || event;
 e.stopPropagation();
 $("#popup_edit_weekSchedule").hide();
 popupHint.init();
-popupHint.set_text("<#4163#>");
+popupHint.set_text("<#4190#>");
 popupHint.set_btn_ok(function(){
 weekScheduleApi.init_data("");
 $("#" + weekScheduleApi.obj_id + "").find(".offtime_bg").remove();
@@ -875,7 +875,7 @@ return $demarcation_line;
 },
 "PC_get_header_bg" : function(){
 var $header_bg = $("<div>").addClass("offtime_schedule_header");
-var $title = $("<div>").addClass("title").html("<#4167#>");
+var $title = $("<div>").addClass("title").html("<#4194#>");
 $title.appendTo($header_bg);
 var $add_icon = $("<div>").addClass("btn_icon_bg add_icon gridview_mode");
 $add_icon.appendTo($header_bg);
@@ -890,9 +890,9 @@ current_data_num += weekScheduleApi.PC_data[key].length;
 var total_client_rule_num = weekScheduleApi.PC_other_client_rule_num + current_data_num;
 if(total_client_rule_num + 1 > weekScheduleApi.data_max){
 popupHint.init();
-var hint = "<#4164#>".replace("#MAXNUM", weekScheduleApi.data_max);
+var hint = "<#4191#>".replace("#MAXNUM", weekScheduleApi.data_max);
 hint += "<br>";
-hint += "<#4165#>";
+hint += "<#4192#>";
 popupHint.set_text(hint);
 popupHint.set_btn_ok();
 popupHint.hide_btn("cancel");
@@ -1046,7 +1046,7 @@ return $action_btn_bg;
 "PC_get_no_data_component" : function(){
 var $no_data_bg = $("<div>").addClass("no_data_bg ");
 $no_data_bg.append($("<div>").addClass("no_data_icon"));
-$no_data_bg.append($("<div>").addClass("no_data_text").html("<#2382#>"));
+$no_data_bg.append($("<div>").addClass("no_data_text").html("<#2407#>"));
 return $no_data_bg;
 },
 "PC_get_week_title" : function(_weekNum){
@@ -1081,11 +1081,11 @@ $grid_period_title.addClass("grid_period_title");
 var display_title = "";
 if(week_group == "Other")
 display_title = value.title
-.replace("MON", "<#1678#>").replace("TUE", "<#1682#>").replace("WED", "<#1683#>")
-.replace("THU", "<#1681#>").replace("FRI", "<#1677#>").replace("SAT", "<#1679#>")
-.replace("SUN", "<#1680#>");
+.replace("MON", "<#1684#>").replace("TUE", "<#1688#>").replace("WED", "<#1689#>")
+.replace("THU", "<#1687#>").replace("FRI", "<#1683#>").replace("SAT", "<#1685#>")
+.replace("SUN", "<#1686#>");
 else
-display_title = week_group.replace("Daily", "<#4181#>").replace("Weekdays", "<#4180#>").replace("Weekend", "<#4179#>");
+display_title = week_group.replace("Daily", "<#4208#>").replace("Weekdays", "<#4207#>").replace("Weekend", "<#4206#>");
 $grid_period_title.html(display_title);
 var $grid_period_content = $("<div>");
 $grid_period_content.appendTo($grid_period_bg);
@@ -1118,7 +1118,7 @@ $period_text_bg.appendTo($grid_period_content);
 $period_text_bg.addClass("period_text_bg");
 var $start_time = $("<div>");
 $start_time.addClass("start_time");
-$start_time.attr("title", "<#4160#>");
+$start_time.attr("title", "<#4187#>");
 $start_time.appendTo($period_text_bg);
 $start_time.html(weekScheduleApi.add_left_pad(PC_offtime_obj.start_hour, 2) + ":" + weekScheduleApi.add_left_pad(PC_offtime_obj.start_min, 2));
 var $dash = $("<div>");
@@ -1126,7 +1126,7 @@ $dash.addClass("dash");
 $dash.appendTo($period_text_bg);
 var $end_time = $("<div>");
 $end_time.addClass("end_time");
-$end_time.attr("title", "<#4161#>");
+$end_time.attr("title", "<#4188#>");
 $end_time.appendTo($period_text_bg);
 $end_time.html(weekScheduleApi.add_left_pad(PC_offtime_obj.end_hour, 2) + ":" + weekScheduleApi.add_left_pad(PC_offtime_obj.end_min, 2));
 var $period_switch = $("<div>");
@@ -1266,7 +1266,7 @@ $popupHint.attr({"id":"popup_hint_bg", "onselectstart":"false"});
 $("<div>").addClass("hint_text").appendTo($popupHint);
 var $action_bg = $("<div>").addClass("action_bg").appendTo($popupHint);
 var $action_cancel = $("<input/>").attr({"id":"action_cancel", "type":"button", "value":"<#199#>"}).addClass("button_gen");
-var $action_ok = $("<input/>").attr({"id":"action_ok", "type":"button", "value":"<#1659#>"}).addClass("button_gen");
+var $action_ok = $("<input/>").attr({"id":"action_ok", "type":"button", "value":"<#1665#>"}).addClass("button_gen");
 $action_bg.append($action_cancel).append($action_ok);
 $("<div>").addClass("popup_hint_component mask_bg").appendTo($("body"));
 }

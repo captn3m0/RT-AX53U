@@ -100,7 +100,7 @@ Najnowszą wersje
 Może być wyłączony nadrzędny AP. Sprawdź ponownie.
 Połączenie nie powiodło się. Hasło nie jest poprawne. Kliknij przycisk [Skanuj ponownie], aby wybrać inną sieć.
 Powiodło się ustanowienie połączenia bezprzewodowego.
-Uruchom ponownie przeglądarkę. Na pasku adresu URL, wprowadź "http://router.asus.com/" w celu uzyskania dostępu do stanu połączenia repeatera.
+Uruchom ponownie przeglądarkę. Na pasku adresu URL, wprowadź "http://ZVDOMAIN_NAMEVZ/" w celu uzyskania dostępu do stanu połączenia repeatera.
 Powiodła się aktualizacja ustawień IP. Nastąpi przekierowanie do interfejsu GUI web RT-AX53U.
 Wybierz inną sieć
 Zmień sieć z którą połączony zostanie RT-AX53U.
@@ -301,6 +301,10 @@ Wybierz ten serwer DNS, aby zapewnić sobie szybkie i prywatne przeglądanie str
 Wybierz ten serwer DNS, aby blokować szkodliwe treści
 Wybierz ten serwer DNS, aby blokować treści szkodliwe i przeznaczone dla dorosłych
 Lista DNS
+Reklamy
+Rodzina
+Szybki DNS
+Poszanowanie prywatności
 Umożliwia automatyczne uzyskiwanie przez ten router adresu IP DNS od dostawcy usługi połączenia z Interenetem.
 Połączyć z serwerem DNS automatycznie
 Jeśli połączenie WAN wymaga statycznego adresu IP, w tym polu należy wprowadzić adres IP bramy.
@@ -336,9 +340,9 @@ Podaj wartość pomiędzy
 do
 SSID nie może zawierać znaku \"
 \".
-Wpis nie może zaczynać się na:
+Pierwszym znakiem nie może być:
 Wpis nie może zawierać:
-This string cannot end with:
+Ostatnim znakiem nie może być:
 Podaj poprawny klucz WEP.
 Klucz powinien być krótszy niż 64 znaki!
 Domyślny adres LAN IP to
@@ -452,7 +456,7 @@ Pobierz <a href='http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Di
 Sprawdź, czy kabel sieciowy został odłączony od portu WAN.
 W trybie powtarzacza, RT-AX53U podłącza się do istniejącego sygnału bezprzewodowego i zwiększa zasięg sygnału umożliwiając zwiększenie zasięgu sieci bezprzewodowej oraz uzyskanie wyższej jakości sygnału bezprzewodowego.
 Mógł zostać zmieniony adres IP LAN RT-AX53U.
-Zamknij to okno i ponownie przejdź do http://router.asus.com.
+Zamknij to okno i ponownie przejdź do http://ZVDOMAIN_NAMEVZ.
 Tryb powtarzacza
 W trybie Express Way 2.4 GHz router RT-AX53U łączy się bezprzewodowo z istniejącym kanałem WiFi 2.4 GHz i rozszerza zasięg połączenia bezprzewodowego tylko o kanał WiFi 5 GHz.
 Express Way 2.4 GHz
@@ -711,7 +715,7 @@ Radio
 Zdalny
 Wpisz ponownie nowe hasło logowania
 Skorzystaj z poniższych informacji, aby nawiązaćpołączenie z sieciąWiFi.
-Przejdźdo witryny <a href='http://router.asus.com' target='_blank' style='text-decoration:underline'>router.asus.com</a> w celu zalogowania sięna urządzeniu.
+Przejdźdo witryny <a href='http://ZVDOMAIN_NAMEVZ' target='_blank' style='text-decoration:underline'>ZVDOMAIN_NAMEVZ</a> w celu zalogowania sięna urządzeniu.
 Konto na routerze
 Nazwa logowania do routera
 Hasło logowania na routerze
@@ -838,6 +842,7 @@ Aby skonfigurować połączenie sieci WAN w trybie offline lub zmienić tryb pra
 W kolejnym kroku ustaw zabezpieczenie w postaci nazwy logowania i hasła.
 ASUS Wireless Router RT-AX53U
 RT-AX53U
+ZVDOMAIN_NAMEVZ
 Skonfigurowane
 Nazwa Wireless
 Tryb routera bezprzewodowego
@@ -927,10 +932,10 @@ Do video 720p zalecane jest połączenie 15 Mbps lub szybsze.
 Do strumieni video 1080p HD zalecane jest połączenie 30 Mbps lub szybsze.
 Szybkości przesyłania w Internecie zależą od ISP i innych czynników. Przy braku pewności co do szybkości Internetu należy się skontaktować z ISP lub użyć testu przepustowości online z komputera podłączonego do routera ASUS.
 Cloud List (Lista chmury)
-Uzyskaj dostęp do dysku chmury z <a id="cloud_url" style="font-weight: bolder;text-decoration: underline;" href="https://router.asus.com" target="_blank">https://router.asus.com</a>.
+Uzyskaj dostęp do dysku chmury z <a id="cloud_url" style="font-weight: bolder;text-decoration: underline;" href="https://ZVDOMAIN_NAMEVZ" target="_blank">https://ZVDOMAIN_NAMEVZ</a>.
 Dostęp do dysku chmury można uzyskać przez ten URL :
 Aby zmodyfikować nazwę ddns, kliknij <a style="font-weight: bolder;text-decoration: underline;" href="/Advanced_ASUSDDNS_Content.asp?af=DDNSName" target="_blank">tutaj</a>.
-Uzyskaj dostęp do dysku chmury z <a style="font-weight: bolder;text-decoration: underline;" href="https://router.asus.com" target="_blank">https://router.asus.com</a>.
+Uzyskaj dostęp do dysku chmury z <a style="font-weight: bolder;text-decoration: underline;" href="https://ZVDOMAIN_NAMEVZ" target="_blank">https://ZVDOMAIN_NAMEVZ</a>.
 Zarejestruj DDNS ASUS <a style="font-weight: bolder;text-decoration: underline;" href="/Advanced_ASUSDDNS_Content.asp" target="_blank">tutaj</a> w celu dostępu do dysku chmury online.
 Włącza dostęp, transmisję strumieniową lub udostępnianie przez podłączony do Internetu komputer lub urządzenie dla podłączonych urządzeń pamięci USB.
 Aby utworzyć dysk chmury należy zainstalować w tym routerze urządzenie pamięci USB, a następnie włączyć dysk chmury <b>ON</b>.
@@ -1515,6 +1520,7 @@ Wyłączony
 Włączony
 Eksportuj
 GO
+Idź do menu Ustawienia
 Usuń
 Wysłać
 ustawienia WAN
@@ -2243,6 +2249,25 @@ goście
 Ograniczenie dostępu
 Tylko dostęp do internetu
 Użyj tych samych ustawień co
+Sieć firmowa
+Sieć niestandardowa
+Skonfiguruj bezpieczną sieć
+Szybko zbuduj sieć dla gości
+Sieć IoT
+Łatwo odseparuj sieć dla swoich urządzeń IoT
+Sieć dzieci
+Zapewnij dziecku bezpieczny dostęp do Internetu
+Portal dla gości
+Zbuduj portal dla gości lub sieć Wi-Fi do Facebooka
+Typ portalu
+Sieć VPN
+Nawiązuj bezpieczne połączenia internetowe
+Ten profil VPN jest wyłączony. Przejdź do strony ustawień serwera VPN i włącz go.
+Kliknij [ Idź do menu Ustawienia ] poniżej, aby wyświetlić stronę ustawień VPN.
+Tego ustawienia nie można wybrać, gdy jest używane przez inny profil.
+Sieć domowa
+Dodaj sieć
+Lista profili
 Wersja sprzętu
 Help
 Pomoc poprowadzi Cię przez podręcznik i informację na temat używania funkcji routera. Kliknij
@@ -2441,7 +2466,7 @@ To pole pozwala na włączenie lub wyłączenie funkcji Download Master.
 To pole pozwala na współdzielenie pobranych z Internetu plików!
 To pole pozwala na włączenie lub wyłączenie UPnP'a.
 После удаления восстановить данные будет невозможно. Вы действительно хотите удалить данные?
-onflict with LAN IP
+Conflict with LAN IP
 Create New Policy
 Adres IP i maska podsieci sieci LAN zostały zmienione. Należy zaktualizować pulę adresów IP urządzenia RT-AX53U. Czy chcesz automatycznie aktualizować pulę adresów IP?
 Nowa pula IP nie pasuje do maski podsieci. Czy chcesz zezwolić RT-AX53U na automatyczną zmianę puli IP?
@@ -2588,7 +2613,7 @@ Maks. ilość :
 Sprawdź
 The version is up-to-date.
 Konfiguracja dostępu lokalnego
-Download and install SSL certificate on your browser to trust accessing your local domain “router.asus.com” with HTTPS protocol. To export certificate after applying setting.
+Download and install SSL certificate on your browser to trust accessing your local domain “ZVDOMAIN_NAMEVZ” with HTTPS protocol. To export certificate after applying setting.
 Download Certificate
 Dziennik
 Login user IP:
@@ -2809,6 +2834,7 @@ Aby włączyćWPS, zmieńmetodęuwierzytelniania na WPA2 lub WPA-Auto
 Jeśli chcesz włączyć funkcję WPS, najpierw wyłącz opcję ukrywania SSID.
 Note: New patch will be updated regularly, please keep your firmware stay up to date.
 Element powiadomienia
+Liczba klientów
 Przejdź do <a href="https://iplookup.asus.com/nslookup.php" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">https://iplookup.asus.com/nslookup.php</a>, aby wyszukać statyczny adres, do wykorzystania dla usługi ASUS DDNS.
 OCN Virtual Connect
 OFDMA/802.11ax MU-MIMO
@@ -3524,7 +3550,7 @@ Konfiguracja niestandardowa
 RT-AX53U automatycznie generuje plik .ovpn z kluczem certyfikatu uwierzytelnienia. Można dostarczyć plik .ovpn z nazwą użytkownika i hasłem dla wszystkich użytkowników połączonych z serwerem OpenVPN.
 Aby zmienić ustawienia serwera OpenVPN, przejdź do Ustawienia Zaawansowane
 Aby udostępnić własny plik OPVN dla określenia określonego typu połączenia, można zmienić domyślne ustawienia serwera OpenVPN.
-If your WAN IP address is dynamic, please click <a href="http://router.asus.com/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
+If your WAN IP address is dynamic, please click <a href="http://ZVDOMAIN_NAMEVZ/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
 Przydziel z serwera DHCP
 Szyfrowanie
 Konflikt dotyczący routingu! <p>Sprawdź ustawienia adresu IP klienta na stronie Ustawienia Zaawansowane lub sprawdź tabelę routingu w dzienniku systemu.
@@ -3745,7 +3771,8 @@ Hasło dostępu do serwera RADIUS.
 Hasło dostępu
 Port UDP serwera RADIUS wykorzystywany do autentykacji.
 Port serwera
-WiFi Agile Multiband
+Wielopasmowa sieć WiFi Agile
+*Jeśli Wielopasmowa sieć WiFi Agile jest włączona, opcja Chronione ramki zarządzania musi być włączona. (Możliwe lub Wymagane)
 Pozwala na wybranie określonego typu autentykacji.
 Tryb autentykacji połączenia bezprzewodowego
 Aby zapewnić najlepszy sygnał połączenia bezprzewodowego, zalecamy ustawienie kanału routera na Kanał 2. Aby ustawić router na kanał 2, kliknij OK. W przeciwnym razie, kliknij Anuluj.
@@ -4106,7 +4133,7 @@ Nie można ustawić, jako domyślnej sieci WAN dla docelowych zasad.
 Beta test only
 You can also select [Cancel], the device will automatically start downloading the update during the night time.
 W przypadku korzystania z modemu kablowego lub modemu o statycznym adresie IP należy wykonać następujące czynności:
-Once the new SSID is connected, go back to router.asus.com for more advanced settings.
+Once the new SSID is connected, go back to ZVDOMAIN_NAMEVZ for more advanced settings.
 Disable Web Access from WAN will not allow you to control your router via $Apps$ from Internet. Do you want to continue?
 ASUS ROUTER APP
 Alexa enabled device or IFTTT
@@ -4141,7 +4168,7 @@ GeForce Now
 Wybierz GeForce Now, aby nadać priorytet urządzeniom obsługującym usługę gamingową GeForce Now i zapewnić większą szybkość oraz wyższą jakość podczas grania w gry.
 LED On/Off
 The LED on/off control is used to turn off all LEDs includes Aura light.
-To enable Aura RGB, LED must remain on. Please turn on LED by pressing hardware button on the router for 3 seconds or enable it via web/app interface.
+Aby włączyć efekt Aura RGB, dioda LED musi pozostać włączona. Włącz diodę LED, naciskając przycisk sprzętowy na routerze przez 3 sekundy lub za pomocą interfejsu w przeglądarce.
 Zdarzenie
 System będzie wykrywał poniższe zdarzenia i uaktywniał różne efekty LED.
 Po włączeniu funkcji Game Boost (Przyspieszenie gier) pasek LED będzie świecił czerwonym oddychającym światłem.
@@ -4209,7 +4236,7 @@ Kliknij tutaj, aby kontynuować.
 Zeskanuj kod QR, aby poznać więcej szczegółów.
 Nadal chcesz uzyskać dostęp do strony ustawień przy użyciu <span>protokołu HTTP</span>?
 Podczas korzystania z protokołu HTTPS może być wyświetlane ostrzeżenie informujące o problemie certyfikatu bezpieczeństwa w przeglądarce.
-Połączenie między przeglądarką i stroną ustawień routera ASUS (router.asus.com) pozostaje bezpieczne, bez względu na ten komunikat.
+Połączenie między przeglądarką i stroną ustawień routera ASUS (ZVDOMAIN_NAMEVZ) pozostaje bezpieczne, bez względu na ten komunikat.
 Nie wyświetlaj tego komunikatu ponownie
 HTTP to mniej bezpieczny protokół dostępu do sieci web. Nadal chcesz uzyskać dostęp do strony ustawień przy użyciu protokołu HTTP?
 256,1024-QAM

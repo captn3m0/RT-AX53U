@@ -100,7 +100,7 @@ En son sürüm
 Ana AP kapanabilir. Lütfen kontrol edin tekrar.
 Bağlantı başarısız. Parola doğru değil. Lütfen başka bir ağ seçmek için [Yeniden tara] üzerine tıklayın.
 Kablosuz bağlantı başarılı bir şekilde kuruldu.
-Tarayıcıyı yeniden başlatın. URL adres çubuğunda, "http://router.asus.com/" adresine girişi yaparak yineleyici bağlantı durumuna erişin.
+Tarayıcıyı yeniden başlatın. URL adres çubuğunda, "http://ZVDOMAIN_NAMEVZ/" adresine girişi yaparak yineleyici bağlantı durumuna erişin.
 IP ayarları başarıyla güncellendi. RT-AX53U'nun web GUI'sine yeniden yönlendirileceksiniz.
 Başka bir ağ seçin
 RT-AX53U&#39;n bağlanacağı ağı değiştirin.
@@ -301,6 +301,10 @@ Yetişkin içerikleri bulunan tüm web sitelerine erişimi engellemek ve tarayı
 Zararlı içerikleri engellemek için bu DNS sunucusunu seçin
 Zararlı içerikleri ve yetişkin içeriklerini engellemek için bu DNS sunucusunu seçin
 DNS Listesi
+Reklam Engelleme
+Aile
+Hızlı DNS
+Gizliliğe saygı duyar
 Bu yönlendiricinin ISP'den otomatik olarak DNS IP adresi almasını sağlar.
 DNS Sunucusuna otomatik bağlansın mı
 Eğer WAN bağlantınız sabit bir IP adresi gerektirirse, bu alandaki ağ geçidi IP adresini girin.
@@ -336,9 +340,9 @@ Lütfen
 arasında bir değer girin.
 SSID karakteri içeremez [
 ].
-Bu dize ile başlatılamaz:
+İlk karakter şunu içeremez:
 Bu dizede bulunamaz:
-This string cannot end with:
+Son karakter şunu içeremez:
 Lütfen doğru WEP anahtarını girin.
 Ön paylaşımlı anahtar 64 karakterden az olmalıdır.
 RT-AX53U varsayılan Yerel Ağ IP&#39;si
@@ -452,7 +456,7 @@ Medya köprüsü IP adresini belirlemek için lütfen <a href='http://dlcdnet.as
 Ağ kablosunu WAN bağlantı noktasından çıkarıp çıkarmadığınızı kontrol edin.
 Yineleyici modunda RT-AX53U mevcut bir kablosuz sinyale bağlanır ve daha geniş bir kablosuz kapsama alanına ve daha iyi kablosuz sinyal kalitesine sahip olmak için bu sinyali genişletir.
 RT-AX53U aygıtının LAN IP adresi değiştirilmiş olabilir.
-Bu pencereyi kapatıp http://router.asus.com adresine tekrar erişin.
+Bu pencereyi kapatıp http://ZVDOMAIN_NAMEVZ adresine tekrar erişin.
 Yineleyici modu
 Hızlı Yol 2.4 GHz modunda, RT-AX53U kablosuz var olan bir 2.4 GHz WiFi kanalına bağlanır ve kablosuz kapsamını yalnızca bir 5 GHz WiFi kanalıyla uzatır.
 Hızlı Yol 2.4 GHz
@@ -711,7 +715,7 @@ Radyo
 Uzak
 Yeni oturum açma parolasını yeniden girin
 WiFi ağına bağlanmak için aşağıdaki bilgileri kullanın.
-Aygıtta oturum açmak için <a href='http://router.asus.com' target='_blank' style='text-decoration:underline'>router.asus.com</a> adresine gidin.
+Aygıtta oturum açmak için <a href='http://ZVDOMAIN_NAMEVZ' target='_blank' style='text-decoration:underline'>ZVDOMAIN_NAMEVZ</a> adresine gidin.
 Yönlendirici Hesabı
 Yönlendirici Oturum Açma adı
 Yönlendirici Oturum Açma Parolası
@@ -838,6 +842,7 @@ WAN bağlantısını çevrimdışı ayarlamak veya çalışma modunu Erişim Nok
 Sonraki adımda, güvenlik için oturum açma adını ve şifreyi ayarlayın.
 ASUS Wireless Router RT-AX53U
 RT-AX53U
+ZVDOMAIN_NAMEVZ
 Yapılandırılmış
 Kablosuz adı
 Kablosuz Yönlendirici
@@ -927,10 +932,10 @@ SD video için 5 Mbps veya daha hızlısı önerilir.
 1080p HD video akışı için 30 Mbps veya daha hızlısı önerilir.
 İnternet yükleme hızları ISP’nize ve diğer faktörlere bağlı olarak farklılık gösterebilir. İnternet hızınızın ne olduğundan emin değilseniz, you ISP’niz ile temasa geçebilir veya ASUS Yönlendiricisine bağlı bir bilgisayardan çevrimiçi bant genişliği testini kullanabilirsiniz.
 Bulut Listesi
-Bulut diskine <a id="cloud_url" style="font-weight: bolder;text-decoration: underline;" href="https://router.asus.com" target="_blank">https://router.asus.com</a> adresinden giriş yapın.
+Bulut diskine <a id="cloud_url" style="font-weight: bolder;text-decoration: underline;" href="https://ZVDOMAIN_NAMEVZ" target="_blank">https://ZVDOMAIN_NAMEVZ</a> adresinden giriş yapın.
 Bulut diskine bu URL\'den giriş yapabilirsiniz :
 ddns adını değiştirmek için, lütfen <a style="font-weight: bolder;text-decoration: underline;" href="/Advanced_ASUSDDNS_Content.asp?af=DDNSName" target="_blank">buraya</a> tıklayın.
-Bulut diskine <a style="font-weight: bolder;text-decoration: underline;" href="https://router.asus.com" target="_blank">https://router.asus.com</a> adresinden giriş yapın.
+Bulut diskine <a style="font-weight: bolder;text-decoration: underline;" href="https://ZVDOMAIN_NAMEVZ" target="_blank">https://ZVDOMAIN_NAMEVZ</a> adresinden giriş yapın.
 Çevrimiçi bulut diskine giriş yapmak için bir ASUS DDNS\'ye <a style="font-weight: bolder;text-decoration: underline;" href="/Advanced_ASUSDDNS_Content.asp" target="_blank">buradan</a> kaydolun.
 USB ile takılı depolama aygıtlarına, Internet bağlantılı bir bilgisayar ya da aygıt aracılığıyla erişilmesini, akış yapılmasını veya paylaşımda bulunulmasını etkinleştirir.
 Bir bulut diski oluşturmak için, bu yönlendiriciye bir USB depolama aygıtı kurmanız, ardından Bulut Diski AÇIK (<b>ON</b>) konuma getirmeniz gerekir.
@@ -1515,6 +1520,7 @@ Devredışı
 Etkin
 Dış Aktar
 GİT
+Ayarlara Git
 Kaldır
 Gönder
 WAN ayarına
@@ -2243,6 +2249,25 @@ misafir
 Erişim sınırı
 Yalnızca Internet erişimi
 Aynı ayarları kullan:
+İş Ağı
+Özel Ağ
+Emniyetli ve güvenli ağ kurun
+Hızlı bir şekilde konuk ağı oluşturun
+IoT Ağı
+IoT cihazlarınız için bir ağı kolayca ayırın
+Çocuk Ağı
+Çocuklar için internet erişimini güvenli hale getirin
+Konuk Portalı
+Bir konuk portalı veya Facebook WiFi oluşturun
+Portal Türü
+VPN Ağı
+Daha güvenli bir internet bağlantısı kurun
+Bu VPN profili devre dışı bırakıldı. Lütfen VPN Sunucusu ayar sayfasına gidin ve etkinleştirin.
+VPN ayar sayfasına gitmek için aşağıdaki [ Ayarlara Git ] öğesine tıklayın.
+Bu ayar, oluşturulan diğer profil tarafından kullanılırken seçilemez.
+Ev Ağı
+Ağ ekle
+Profil Listesi
 Donanım sürümü
 Help
 Yardım, yönlendirici işlevlerini kullanmayla ilgili size rehberlik ve bilgi sağlar. Yardım almak
@@ -2441,7 +2466,7 @@ Bu alanda Download Master'ı etkinleştirebilir veya devre dışı bırakabilirs
 Bu alan karşıdan yüklenen malzemeleri Internet kullanıcılarıyla paylaşmanızı sağlar.
 Bu alanda UPnP'yi etkinleştirebilir veya devre dışı bırakabilirsiniz.
 Після видалення дані неможливо відновити. Ви справді хочете очистити?
-onflict with LAN IP
+Conflict with LAN IP
 Create New Policy
 LAN IP adresiniz ve alt ağ maskeniz değiştirildi. RT-AX53U IP adres havuzunuz güncellenmelidir. IP adres havuzunuzu otomatik olarak güncellemek ister misiniz?
 Yeni IP Havuzu altağ maskesi ile eşleşmiyor. RT-AX53U'nun IP havuzunu otomatik olarak değiştirmesini istiyor musunuz?
@@ -2588,7 +2613,7 @@ Maks Sınır :
 Kontrol
 The version is up-to-date.
 Yerel Erişim Yapılandırması
-Download and install SSL certificate on your browser to trust accessing your local domain “router.asus.com” with HTTPS protocol. To export certificate after applying setting.
+Download and install SSL certificate on your browser to trust accessing your local domain “ZVDOMAIN_NAMEVZ” with HTTPS protocol. To export certificate after applying setting.
 Download Certificate
 Günlük
 Oturum açma kullanıcı IP'si:
@@ -2809,6 +2834,7 @@ WPS özelliğini etkinleştirmek için, kimlik doğrulama yöntemini WPA2 veya W
 WPS’i etkinleştirmek istiyorsanız, ilk olarak SSID gizlemeyi devre dışı bırakmalısınız.
 Note: New patch will be updated regularly, please keep your firmware stay up to date.
 Bildirim Öğesi
+İstemci sayısı
 ASUS DDNS hizmetini kullanmak amacıyla bir statik adres aramak için <a href="https//iplookup.asus.com/nslookup.php" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">https://iplookup.asus.com/nslookup.php</a> adresine gidin.
 OCN Virtual Connect
 OFDMA/802.11ax MU-MIMO
@@ -3524,7 +3550,7 @@ IP/Yönlendirme çakışması
 RT-AX53U, Sertifika Yetkisi anahtarıyla bir .ovpn dosyasını otomatik olarak oluşturacaktır. .ovpn dosyasını, OpenVPN sunucusuna bağlanan tüm kullanıcılara bir kullanıcı adı ve şifresiyle sağlayabilirsiniz.
 OpenVPN sunucu ayarlarını değiştirmek için şuraya gidin Gelişmiş Ayar
 Belirli bir bağlantı türü için özel bir OPVN dosyası sağlamak amacıyla OpenVPN sunucusunun varsayılan ayarlarını değiştirebilirsiniz.
-If your WAN IP address is dynamic, please click <a href="http://router.asus.com/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
+If your WAN IP address is dynamic, please click <a href="http://ZVDOMAIN_NAMEVZ/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
 DHCP’den ayır
 Şifreleme anahtarı
 Yönlendirme çakışması! <p>Lütfen Gelişmiş Ayar sayfasından istemcinin IP adresi ayarlarını veya System (Sistem) günlüğünde yönlendirme tablosunu kontrol edin.
@@ -3745,7 +3771,8 @@ RADIUS sunucusuna bağlanma parolası.
 Bağlantı Gizliliği
 RADIUS sunucusu bağlantısı için UDP bağlantı noktası numarası.
 Sunucu Bağlantı Noktası
-WiFi Agile Multiband
+WiFi Agile Çoklu Bant
+*WiFi Agile Çoklu Bant etkinleştirilirse Korumalı Yönetim Çerçeveleri etkinleştirilmelidir (Uyumlu veya Gerekli)
 Bu alanda, kablosuz istemcilerin kimlik doğrulama yöntemleri etkinleştirilir.
 Kimlik Doğrulama Yöntemi
 En iyi kablosuz sinyalini sağlamak için, yönlendiricinizi Kanal 2’ye ayarlamanızı öneririz. Yönlendiriciyi Kanal 2’ye ayarlamak için lütfen Tamam düğmesine tıklayın. Aksi halde lütfen İptal Et düğmesine tıklayın.
@@ -4106,7 +4133,7 @@ Hedef ilke için varsayılan WAN olarak ayarlanamaz.
 Beta test only
 You can also select [Cancel], the device will automatically start downloading the update during the night time.
 Kablo modem veya statik IP adresli bir modem kullanıyorsanız, aşağıdakileri denediğinizden emin olun:
-Once the new SSID is connected, go back to router.asus.com for more advanced settings.
+Once the new SSID is connected, go back to ZVDOMAIN_NAMEVZ for more advanced settings.
 Disable Web Access from WAN will not allow you to control your router via $Apps$ from Internet. Do you want to continue?
 ASUS ROUTER APP
 Alexa enabled device or IFTTT
@@ -4141,7 +4168,7 @@ GeForce Now
 Daha hızlı ve daha iyi bir oyun deneyimi için GeForce Now oyun aygıtlarına öncelik vermek üzere GeForce Now'ı seçin.
 LED On/Off
 The LED on/off control is used to turn off all LEDs includes Aura light.
-To enable Aura RGB, LED must remain on. Please turn on LED by pressing hardware button on the router for 3 seconds or enable it via web/app interface.
+Aura RGB’yi etkinleştirmek için LED açık kalmalıdır. Lütfen yönlendiricideki donanım düğmesine 3 saniye basarak LED’i açın veya web/uygulama arayüzünden etkinleştirin.
 Olay
 Sistem aşağıdaki olayları algılar ve farklı LED efektlerini tetikler.
 Oyun Takviyesini etkinleştirirken, LED çubuğunun kırmızı soluma etkisi kullandığını göreceksiniz.
@@ -4209,7 +4236,7 @@ Devam etmek için buraya tıklayın.
 Daha fazla detay için kare kodu taratın.
 Hala <span>HTTP protokolü</span> ile ayar sayfasına erişmek istiyor musunuz?
 HTTPS protokolünü kullanırken, tarayıcınız güvenlik sertifikası sorununu bildirmek üzere bir uyarı mesajı görüntüleyebilir.
-Tarayıcınız ve ASUS yönlendirici ayar sayfası (router.asus.com) arasındaki bağlantı, bu uyarı mesajına rağmen güvenli kalır.
+Tarayıcınız ve ASUS yönlendirici ayar sayfası (ZVDOMAIN_NAMEVZ) arasındaki bağlantı, bu uyarı mesajına rağmen güvenli kalır.
 Bu mesajı tekrar gösterme
 HTTP, nispeten daha az güvenli bir web erişim protokolüdür. Hala HTTP protokolü ile ayar sayfasına erişmek istiyor musunuz?
 256,1024-QAM

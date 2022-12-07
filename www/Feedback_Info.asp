@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="/images/favicon.png">
 <link rel="icon" href="/images/favicon.png">
-<title><#838#> - <#2621#></title>
+<title><#842#> - <#2646#></title>
 <link rel="stylesheet" type="text/css" href="/index_style.css">
 <link rel="stylesheet" type="text/css" href="/form_style.css">
 <link rel="stylesheet" type="text/css" href="/other.css">
@@ -126,7 +126,7 @@ desc += "DSL Firmware Version: <% nvram_get("dsllog_fwver"); %>\n";
 desc += "DSL Driver Version: <% nvram_get("dsllog_drvver"); %>\n\n";
 desc += "PIN Code: <% nvram_get("secret_code"); %>\n";
 desc += "MAC Address: <% nvram_get("lan_hwaddr"); %>\n\n";
-desc += "<#1941#>: <% nvram_get("dslx_diag_duration"); %>\n";
+desc += "<#1947#>: <% nvram_get("dslx_diag_duration"); %>\n";
 desc += "DSL connection: <% nvram_get("fb_availability"); %>\n";
 document.uiForm.fb_send_debug_log_content.value = desc;
 }
@@ -208,29 +208,29 @@ font-family: Arial, Helvetica, sans-serif;
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#406#> - <#2621#></div>
+<div class="formfonttitle"><#410#> - <#2646#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
 <div id="fb_success_dsl_0" style="display:none;">
 <br>
 <br>
-<div class="feedback_info_0"><#1989#></div>
+<div class="feedback_info_0"><#1995#></div>
 <br>
 </div>
 <div id="fb_success_router_0" style="display:none;">
 <br>
 <br>
-<div class="feedback_info_0"><#1989#></div>
+<div class="feedback_info_0"><#1995#></div>
 <br>
 </div>
 <div id="fb_fail_dsl" style="display:none;" class="feedback_info_1">
-<#1958#>
+<#1964#>
 <br><br>
-<#1959#> : ( <a href="mailto:broadband_feedback@asus.com?Subject=<%nvram_get("productid");%>" target="_top" style="color:#FFCC00;">broadband_feedback@asus.com </a>) <#1960#>
+<#1965#> : ( <a href="mailto:broadband_feedback@asus.com?Subject=<%nvram_get("productid");%>" target="_top" style="color:#FFCC00;">broadband_feedback@asus.com </a>) <#1966#>
 <br>
-<#1961#> :
+<#1967#> :
 <br>
 <ul>
-<li id="dbg_dsl_file" style="display:none;"><span onClick="get_split_feedback(1);" style="text-decoration: underline; color:#FFCC00; cursor:pointer;"><#1946#></span></li>
+<li id="dbg_dsl_file" style="display:none;"><span onClick="get_split_feedback(1);" style="text-decoration: underline; color:#FFCC00; cursor:pointer;"><#1952#></span></li>
 <li id="dbg_dsl_seg_a" style="display:none;"><span onClick="get_split_feedback('a');" style="text-decoration: underline; color:#FFCC00; cursor:pointer;">get_split_feedback_a</span></li>
 <li id="dbg_dsl_seg_b" style="display:none;"><span onClick="get_split_feedback('b');" style="text-decoration: underline; color:#FFCC00; cursor:pointer;">get_split_feedback_b</span></li>
 <li id="dbg_dsl_seg_c" style="display:none;"><span onClick="get_split_feedback('c');" style="text-decoration: underline; color:#FFCC00; cursor:pointer;">get_split_feedback_c</span></li>
@@ -238,14 +238,14 @@ font-family: Arial, Helvetica, sans-serif;
 </ul>
 </div>
 <div id="fb_fail_router" style="display:none;" class="feedback_info_1">
-<#1958#>
+<#1964#>
 <br><br>
-<#1959#> : ( <a href="mailto:router_feedback@asus.com?Subject=<%nvram_get("productid");%>" target="_top" style="color:#FFCC00;">router_feedback@asus.com </a>) <#1960#>
+<#1965#> : ( <a href="mailto:router_feedback@asus.com?Subject=<%nvram_get("productid");%>" target="_top" style="color:#FFCC00;">router_feedback@asus.com </a>) <#1966#>
 <br>
-<#1961#> :
+<#1967#> :
 <br>
 <ul>
-<li id="dbg_rt_file" style="display:none;"><span onClick="get_split_feedback(1);" style="text-decoration: underline; color:#FFCC00; cursor:pointer;"><#1946#></span></li>
+<li id="dbg_rt_file" style="display:none;"><span onClick="get_split_feedback(1);" style="text-decoration: underline; color:#FFCC00; cursor:pointer;"><#1952#></span></li>
 <li id="dbg_rt_seg_a" style="display:none;"><span onClick="get_split_feedback('a');" style="text-decoration: underline; color:#FFCC00; cursor:pointer;">get_split_feedback_a</span></li>
 <li id="dbg_rt_seg_b" style="display:none;"><span onClick="get_split_feedback('b');" style="text-decoration: underline; color:#FFCC00; cursor:pointer;">get_split_feedback_b</span></li>
 <li id="dbg_rt_seg_c" style="display:none;"><span onClick="get_split_feedback('c');" style="text-decoration: underline; color:#FFCC00; cursor:pointer;">get_split_feedback_c</span></li>
@@ -258,13 +258,13 @@ font-family: Arial, Helvetica, sans-serif;
 </div>
 <div id="fb_success_dsl_1" style="display:none;">
 <br>
-<div class="feedback_info_1">We are working hard to improve the firmware of <#839#> and your feedback is very important to us. We will use your feedbacks and comments to strive to improve your ASUS experience.</div>
+<div class="feedback_info_1">We are working hard to improve the firmware of <#843#> and your feedback is very important to us. We will use your feedbacks and comments to strive to improve your ASUS experience.</div>
 <br>
 </div>
 <div id="fb_success_router_1" style="display:none;">
 <br>
 <div class="feedback_info_1">
-<#1988#>
+<#1994#>
 </div>
 <br>
 <br>
@@ -282,7 +282,7 @@ font-family: Arial, Helvetica, sans-serif;
 </div>
 <div id="fb_deny" style="display:none;">
 </div> <div class="apply_gen">
-<input class="button_gen" onclick="redirect();" type="button" value="<#366#>"/>
+<input class="button_gen" onclick="redirect();" type="button" value="<#370#>"/>
 </div>
 </td>
 </tr>

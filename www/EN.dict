@@ -100,7 +100,7 @@ The latest version
 The Parent-AP might be turned off. Please check again.
 Connection failed. Password is not correct. Please click [Rescan] to select another network.
 Successfully established the wireless connection.
-Relaunch the browser. In the URL address bar, key in "http://router.asus.com/" to access the repeater connection status.
+Relaunch the browser. In the URL address bar, key in "http://ZVDOMAIN_NAMEVZ/" to access the repeater connection status.
 Successfully updated the IP settings. You will be redirected to RT-AX53U\'s web GUI.
 Select another network
 Change the network that RT-AX53U will connect to.
@@ -301,6 +301,10 @@ Select this DNS server to have a fast and private way to browse the internet
 Select this DNS server to block malicious content
 Select this DNS server to block malicious and adult content
 DNS List
+Ad Block
+Family
+Fast DNS
+Privacy-respecting
 Allows this router to get the DNS IP address from the ISP automatically.
 Connect to DNS Server automatically
 If your WAN connection requires a static IP address, key in the gateway IP address in this field.
@@ -336,9 +340,9 @@ Please enter a value between
 to
 SSID cannot contain the character \"
 \".
-This string cannot start with:
+The first character cannot contain:
 This string cannot contain:
-This string cannot end with:
+The last character cannot contain:
 Please enter the correct WEP key.
 Pre-shared key should be less than 64 characters!
 The LAN IP of RT-AX53U is
@@ -452,7 +456,7 @@ Please download the <a href='http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release
 Please check if you have unplugged the network cable from the WAN port.
 In Repeater mode, RT-AX53U wirelessly connects to an existing wireless network to extend the wireless coverage. In this mode, the firewall, IP sharing, and NAT functions are disabled.
 The LAN IP address of RT-AX53U may have changed.
-Close this window and access http://router.asus.com again.
+Close this window and access http://ZVDOMAIN_NAMEVZ again.
 Repeater mode
 In Express Way 2.4GHz mode, the RT-AX53U wireless connects to an existing 2.4GHz WiFi channel and extends the wireless coverage by a 5GHz WiFi channel only.
 Express Way 2.4GHz
@@ -711,7 +715,7 @@ Radio
 remote
 Retype new login password
 Login details for your WiFi networks are shown below.
-Go to <a href='http://router.asus.com' target='_blank' style='text-decoration:underline'>router.asus.com</a> to access the router’s main login screen.
+Go to <a href='http://ZVDOMAIN_NAMEVZ' target='_blank' style='text-decoration:underline'>ZVDOMAIN_NAMEVZ</a> to access the router’s main login screen.
 Router Account
 Router Login Name
 Router Login Password
@@ -838,6 +842,7 @@ To set up the WAN connection offline or change the operation mode to Access Poin
 In the next step, set up the login name and password for security.
 ASUS Wireless Router RT-AX53U
 RT-AX53U
+ZVDOMAIN_NAMEVZ
 Configured
 Wireless name
 Wireless router
@@ -927,10 +932,10 @@ You need a broadband Internet connection for the best viewing and listening expe
 30 Mbps or faster is recommended for 1080p HD video streaming.
 Internet upload speeds may vary depending on your ISP and other factors. If you are not sure what your Internet speed is, you can contact your ISP, or use an online bandwidth test from a computer connected to the ASUS Router.
 Cloud List
-Access the Cloud Disk from <a id="cloud_url" style="font-weight: bolder;text-decoration: underline;" href="https://router.asus.com" target="_blank">https://router.asus.com</a>.
+Access the Cloud Disk from <a id="cloud_url" style="font-weight: bolder;text-decoration: underline;" href="https://ZVDOMAIN_NAMEVZ" target="_blank">https://ZVDOMAIN_NAMEVZ</a>.
 You can access the Cloud Disk via this URL :
 To modify the ddns name, please click <a style="font-weight: bolder;text-decoration: underline;" href="/Advanced_ASUSDDNS_Content.asp?af=DDNSName" target="_blank">here</a>.
-Access the Cloud Disk from <a style="font-weight: bolder;text-decoration: underline;" href="https://router.asus.com" target="_blank">https://router.asus.com</a>.
+Access the Cloud Disk from <a style="font-weight: bolder;text-decoration: underline;" href="https://ZVDOMAIN_NAMEVZ" target="_blank">https://ZVDOMAIN_NAMEVZ</a>.
 Register for an ASUS DDNS <a style="font-weight: bolder;text-decoration: underline;" href="/Advanced_ASUSDDNS_Content.asp" target="_blank">here</a> to access the Cloud Disk online.
 Enables USB-attached storage devices to be accessed, streamed or shared through an Internet-connected PC or device.
 To create a Cloud Disk, you need to install a USB storage device into this router, then turn Cloud Disk <b>ON</b>.
@@ -1351,7 +1356,7 @@ System error: Cannot allocate the memory!
 System error: Cannot read out the disk's data!
 System error: The disk is busy!
 System Error.
-There should not be any space in the first and last character.
+There should not be any space in the first and last character
 RT-AX53U  detected that you are using IE6. Please Try Google Chrome, IE7 or higher for the best browsing experience.
 Control ASUS Router via Amazon Alexa Skill
 Control your ASUS Router with simple voice commands using Amazon Alexa ASUS Router skill. After binding with Amazon account, you can ask ASUS Router to perform various tasks with no need to log into your ASUS Router app or the web user interface. For example:
@@ -1515,6 +1520,7 @@ Disabled
 Enabled
 Export
 GO
+Go Setting
 Remove
 Send
 WAN setting
@@ -2243,6 +2249,25 @@ guests
 Access limit
 Internet access only
 Use the same settings as
+Business Network
+Customized Network
+Set up safe and secure network
+Quickly build a guest network
+IoT Network
+Easily separate a network for your IoT devices
+Kid's Network
+Ensure Internet access safety for kid
+Guest Portal
+Build a guest portal or Facebook WiFi
+Portal Type
+VPN Network
+Establish a secure internet connection
+This VPN profile is disabled. Please go to VPN Server setting page and enable it.
+Click [ Go Setting ] below to VPN setting Page.
+This setting cannot be selected while using by the other created profile.
+Home Network
+Add a Network
+Profile List
 Hardware Version
 Help
 Help provides you with guidelines and information about using the router's functions. Click the
@@ -2441,7 +2466,7 @@ This field allows you to enable or disable Download Master.
 This field allows you to share downloaded materials to Internet users.
 This field allows you to enable or disable UPnP.
 Data will not be able to recover once deleted, are you sure you want to clean?
-onflict with LAN IP
+Conflict with LAN IP
 Create New Policy
 Your LAN IP address and subnet mask have been changed. Your RT-AX53U IP Pool of addresses should be updated. Would you like to update your IP Pool of addresses automatically?
 The new IP Pool does not match the subnet mask. Would you like to allow RT-AX53U to change the IP pool automatically?
@@ -2588,7 +2613,7 @@ Max Limit :
 Check
 The version is up-to-date.
 Local Access Config
-Download and install SSL certificate on your browser to trust accessing your local domain “router.asus.com” with HTTPS protocol. To export certificate after applying setting.
+Download and install SSL certificate on your browser to trust accessing your local domain “ZVDOMAIN_NAMEVZ” with HTTPS protocol. To export certificate after applying setting.
 Download Certificate
 Log
 Login user IP:
@@ -2809,6 +2834,7 @@ To enable WPS, change the authentication method to WPA2 or WPA-Auto.
 If you want to enable WPS, you need to disable hiding SSID first.
 Note: New patch will be updated regularly, please keep your firmware stay up to date.
 Notification Item
+Number of client
 If you cannot use ASUS DDNS services, please go to <a href="https://iplookup.asus.com/nslookup.php" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">https://iplookup.asus.com/nslookup.php</a> to reach your internet IP address to use this service.
 OCN Virtual Connect
 OFDMA/802.11ax MU-MIMO
@@ -3524,7 +3550,7 @@ Custom Configuration
 RT-AX53U will automatically generate a .ovpn file with the Certificate Authority key. You can provide the .ovpn file with a username and password to all users connecting to the OpenVPN server.
 To change OpenVPN server settings, go to Advanced Settings
 You can change the default settings of the OpenVPN server to provide a custom OPVN file for a specific connection type.
-If your WAN IP address is dynamic, please click <a href="http://router.asus.com/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
+If your WAN IP address is dynamic, please click <a href="http://ZVDOMAIN_NAMEVZ/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
 Allocate from DHCP
 Encryption cipher
 Routing conflict! <p>Please check the client's IP address settings from the Advanced Settings page or check the routing table on System log.
@@ -3746,6 +3772,7 @@ Connection Secret
 The UDP port number for connection to the RADIUS server.
 Server Port
 WiFi Agile Multiband
+*If the WiFi Agile Multiband is enabled, the Protected Management Frames will must be enabled.(Capable or Required)
 This field enables the authentication methods for wireless clients.
 Authentication Method
 To ensure the best wireless signal, we suggest that you set the router channel to Channel 2. To set the router channel to Channel 2, please click OK. Otherwise, please click Cancel.
@@ -4106,7 +4133,7 @@ Cannot be set as default WAN for the target policy.
 Beta test only
 You can also select [Cancel], the device will automatically start downloading the update during the night time.
 If you are using a cable modem or a modem with a static IP address, ensure that you try the following:
-Once the new SSID is connected, go back to router.asus.com for more advanced settings.
+Once the new SSID is connected, go back to ZVDOMAIN_NAMEVZ for more advanced settings.
 Disable Web Access from WAN will not allow you to control your router via $Apps$ from Internet. Do you want to continue?
 ASUS ROUTER APP
 Alexa enabled device or IFTTT
@@ -4209,7 +4236,7 @@ Click here to continue.
 Scan the QR code for more details.
 Still wish to access setting page with <span>HTTP protocol</span>?
 When using HTTPS protocol, a warning message may display to inform the security certificate issue by your browser.
-The connection between your browser and the ASUS router setting page (router.asus.com) remains secure despite this warning message.
+The connection between your browser and the ASUS router setting page (ZVDOMAIN_NAMEVZ) remains secure despite this warning message.
 Do not show this message again
 HTTP is a relatively less secure web access protocol. Still want to access setting page with HTTP protocol?
 256,1024-QAM

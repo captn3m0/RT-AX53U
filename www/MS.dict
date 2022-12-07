@@ -100,7 +100,7 @@ Versi yang terkini
 AP-Induk mungkin dimatikan. Sila periksa sekali lagi.
 Sambungan gagal. Kata laluan salah. Sila klik [Imbas Semula] untuk memilih rangkaian lain.
 Berjaya mewujudkan sambungan wayarles.
-Lancar semula penyemak imbas. Dalam bar alamat URL, masukkan "http://router.asus.com/" untuk mengakses pengulang status sambungan.
+Lancar semula penyemak imbas. Dalam bar alamat URL, masukkan "http://ZVDOMAIN_NAMEVZ/" untuk mengakses pengulang status sambungan.
 Berjaya mengemas kini seting IP. Anda akan diubah hala ke GUI web RT-AX53U.
 Pilih rangkaian lain
 Mengubah jaringan RT-AX53U yang akan terhubung.
@@ -301,6 +301,10 @@ Pilih pelayan DNS ini untuk mendapatkan cara cepat dan peribadi untuk melayari I
 Pilih pelayan DNS ini untuk menyekat kandungan berniat jahat
 Pilih pelayan DNS ini untuk menyekat kandungan berniat jahat dan dewasa
 Senarai DNS
+Sekat Iklan
+Keluarga
+Fast DNS
+Privacy-respecting
 Benarkan penghala ini untuk mendapatkan alamat IP DNS daripada ISP secara automatik.
 Menyambung kepada Pelayan DNS secara automatik
 Jika sambungan WAN anda memerlukan alamat IP statik, masukkan alamat IP get laluan dalam medan ini.
@@ -336,9 +340,9 @@ Sila masukkan nilai antara
 hingga.
 SSID tidak boleh mengandungi aksara \"
 \".
-Rentetan ini tidak boleh bermula dengan:
+Aksara pertama tidak boleh mengandungi:
 Rentetan ini tidak boleh mengandungi:
-This string cannot end with:
+The last character cannot contain:
 Sila masukkan kekunci WEP yang betul.
 Kekunci yang dipra-kongsi harus kurang daripada 64 aksara!
 IP LAN lalai bagi RT-AX53U adalah
@@ -452,7 +456,7 @@ Sila muat turun <a href='http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wir
 Sila semak jika anda telah cabut palam kabel sambungan daripada port WAN.
 Dalam mod Pengulang, RT-AX53U nirkabel terhubung ke jaringan nirkabel yang ada untuk memperluas jangkauan nirkabel. Dalam mode ini, firewall, IP sharing dan NAT functions di nonaktifkan.
 Alamat IP LAN bagi RT-AX53U mungkin telah ditukar.
-Tutup tetingkap ini dan akses http://router.asus.com sekali lagi.
+Tutup tetingkap ini dan akses http://ZVDOMAIN_NAMEVZ sekali lagi.
 Mod Pengulang
 Dalam mod Cara Ekspres 2.4GHz, RT-AX53U wayarles menyambung ke saluran WiFi 2.4GHz sedia ada dan meluaskan liputan wayarles melalui saluran WiFi 5GHz sahaja.
 Cara Ekspres 2.4GHz
@@ -711,7 +715,7 @@ Radio
 Jauh
 Taip semula kata laluan log masuk baharu
 Gunakan maklumat di bawah untuk menyambung ke rangkaian WiFi.
-Pergi ke <a href='http://router.asus.com' target='_blank' style='text-decoration:underline'>router.asus.com</a> untuk log masuk ke peranti.
+Pergi ke <a href='http://ZVDOMAIN_NAMEVZ' target='_blank' style='text-decoration:underline'>ZVDOMAIN_NAMEVZ</a> untuk log masuk ke peranti.
 Akaun Penghala
 Nama Log masuk Penghala
 Kata Laluan Log Masuk Penghala
@@ -838,6 +842,7 @@ Untuk menetapkan sambungan WAN luar talian atau mengubah mod operasi kepada Titi
 Dalam langkah seterusnya, tetapkan nama dan kata laluan log masuk untuk keselamatan.
 ASUS Wireless Router RT-AX53U
 RT-AX53U
+ZVDOMAIN_NAMEVZ
 Dikonfigurasikan
 Nama wayarles
 Penghala Wayales
@@ -927,10 +932,10 @@ Anda memerlukan sambungan Internet jalur lebar untuk pengalaman menonton dan men
 30 Mbps atau lebih laju adalah disyorkan untuk penstriman video HD 1080p.
 Kelajuan muat naik Internet mungkin berlainan bergantung kepada ISP anda atau faktor lain. Jika anda tidak pasti apakah kelajuan Internet anda, anda boleh menghubungi ISP anda atau menggunakan ujian lebar jalur dalam talian daripada komputer yang disambungkan ke Penghala ASUS.
 Senarai Awan
-Akses cakera awan daripada <a id="cloud_url" style="font-weight: bolder;text-decoration: underline;" href="https://router.asus.com" target="_blank">https://router.asus.com</a>.
+Akses cakera awan daripada <a id="cloud_url" style="font-weight: bolder;text-decoration: underline;" href="https://ZVDOMAIN_NAMEVZ" target="_blank">https://ZVDOMAIN_NAMEVZ</a>.
 Anda boleh mengakses cakera awan melalui URL ini :
 Untuk mengubah suai nama ddns, sila klik <a style="font-weight: bolder;text-decoration: underline;" href="/Advanced_ASUSDDNS_Content.asp?af=DDNSName" target="_blank">di sini</a>.
-Akses cakera awan daripada <a style="font-weight: bolder;text-decoration: underline;" href="https://router.asus.com" target="_blank">https://router.asus.com</a>.
+Akses cakera awan daripada <a style="font-weight: bolder;text-decoration: underline;" href="https://ZVDOMAIN_NAMEVZ" target="_blank">https://ZVDOMAIN_NAMEVZ</a>.
 Daftar untuk ASUS DDNS <a style="font-weight: bolder;text-decoration: underline;" href="/Advanced_ASUSDDNS_Content.asp" target="_blank">di sini</a> untuk mengakses cakera awan dalam talian.
 Mendayakan peranti storan yang dilekapkan USB untuk diakses, distrim atau dikongsikan melalui PC atau peranti yang bersambung dengan Internet.
 Untuk mencipta cakera awan, anda perlu memasang peranti storan USB ke dalam penghala ini, kemudian HIDUPKAN (<b>ON</b>) Cakera Awan.
@@ -1351,7 +1356,7 @@ Ralat sistem: Tidak dapat memperuntukkan memori!
 Ralat sistem: Tidak dapat membaca data cakera!
 Ralat sistem: Cakera sedang sibuk!
 Ralat Sistem.
-Tidak seharusnya terdapat sebarang ruang di antara aksara pertama dan terakhir.
+Seharusnya tidak ada ruang dalam aksara pertama dan terakhir.
 RT-AX53U mengesan bahawa anda menggunakan IE6. Sila Cuba Google Chrome, IE7 atau yang lebih baru untuk pengalaman menyemak imbas yang terbaik.
 Kawal Penghala ASUS melalui Amazon Alexa Skill
 Kawal Penghala ASUS anda dengan perintah suara ringkas menggunakan kemahiran Amazon Alexa dan Penghala ASUS. Apabila berpasangan dengan Amazon Alexa, anda boleh meminta Penghala ASUS melakukan pelbagai tugas tanpa perlu melog masuk ke aplikasi Penghala ASUS anda atau antara muka pengguna web. Contohnya:
@@ -1515,6 +1520,7 @@ Dinyahdayakan
 Didayakan
 Eksport
 PERGI
+Go Setting
 Keluar
 Menghantar
 tetapan WAN
@@ -2243,6 +2249,25 @@ tetamu
 Had akses
 Akses Internet sahaja
 Gunakan tetapan sama seperti
+Business Network
+Customized Network
+Set up safe and secure network
+Quickly build a guest network
+IoT Network
+Easily separate a network for your IoT devices
+Kid's Network
+Ensure Internet access safety for kid
+Guest Portal
+Build a guest portal or Facebook WiFi
+Portal Type
+VPN Network
+Establish a secure internet connection
+This VPN profile is disabled. Please go to VPN Server setting page and enable it.
+Click [ Go Setting ] below to VPN setting Page.
+This setting cannot be selected while using by the other created profile.
+Home Network
+Add a Network
+Profile List
 Versi perkakasan
 Help
 Bantuan memberikan anda panduan dan maklumat mengenai menggunakan fungsi penghala. Klik
@@ -2441,7 +2466,7 @@ Medan ini membenarkan anda mendayakan atau menyahdayakan Muat Turun Utama.
 Medan ini membenarkan anda berkongsi bahan yang dimuat turun kepada pengguna Internet.
 Medan ini membenarkan anda mendayakan atau menyahdayakan UPnP.
 Verwijderde gegevens kunnen niet meer worden hersteld. Weet u zeker dat u ze wilt wissen?
-onflict with LAN IP
+Conflict with LAN IP
 Create New Policy
 Alamat IP dan tapisan subrangkaian LAN anda telah berubah. Kumpulan alamat IP RT-AX53U anda hendaklah dikemas kini. Adakah anda mahu mengemas kini Kumpulan alamat IP anda secara automatik?
 IP Pool baru tidak sepadan dengan subnet mask. Adakah anda mahu membenarkan RT-AX53U untuk menukar IP pool secara automatik?
@@ -2588,7 +2613,7 @@ Had Maks. :
 Periksa
 The version is up-to-date.
 Konfigurasi Akses Setempat
-Download and install SSL certificate on your browser to trust accessing your local domain “router.asus.com” with HTTPS protocol. To export certificate after applying setting.
+Download and install SSL certificate on your browser to trust accessing your local domain “ZVDOMAIN_NAMEVZ” with HTTPS protocol. To export certificate after applying setting.
 Download Certificate
 Log
 Log masuk pengguna IP:
@@ -2809,6 +2834,7 @@ Untuk mendayakan WPS, ubah kaedah pengesahan kepada WPA2 atau WPA-Auto.
 Jika anda ingin mendayakan WPS, anda perlu mematikan SSID terlebih dahulu.
 Note: New patch will be updated regularly, please keep your firmware stay up to date.
 Item Pemberitahuan
+Number of client
 Pergi ke <a href="https://iplookup.asus.com/nslookup.php" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">https://iplookup.asus.com/nslookup.php</a> untuk mencari alamat statik bagi digunakan untuk perkhidmatan DDNS ASUS.
 OCN Virtual Connect
 OFDMA/802.11ax MU-MIMO
@@ -3524,7 +3550,7 @@ Suaikan Konfigurasi
 RT-AX53U akan secara automatik menjana fail .ovpn dengan kekunci Kebenaran Pensijilan. Anda boleh memberikan fail .ovpn dengan nama pengguna dan kata laluan kepada semua pengguna yang menyambung kepada pelayan OpenVPN.
 Untuk menukar tetapan pelayan OpenVPN, pergi ke Seting Lanjutan
 Anda boleh menukar tetapan lalai pelayan OpenVPN untuk memberikan fail OPVN tersuai untuk jenis sambungan khusus.
-If your WAN IP address is dynamic, please click <a href="http://router.asus.com/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
+If your WAN IP address is dynamic, please click <a href="http://ZVDOMAIN_NAMEVZ/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
 Peruntukkan daripada DHCP
 Sifer penyulitan
 Konflik penghalaan! <p>Sila semak tetapan alamat IP klien daripada laman Seting Lanjutan atau semak jadual penghalaan pada log Sistem.
@@ -3746,6 +3772,7 @@ Rahsia Sambungan
 Nombor port UDP untuk sambungan ke pelayan RADIUS.
 Port Pelayan
 WiFi Agile Multiband
+*If the WiFi Agile Multiband is enabled, the Protected Management Frames will must be enabled.(Capable or Required)
 Medan ini mendayakan kaedah pengesahan untuk klien wayarles.
 Kaedah Pengesahan
 Untuk memastikan isyarat wayarles terbaik, kami mencadangkan anda menetapkan saluran penghala ke Saluran 2. Untuk menetapkan saluran penghala ke Saluran 2, sila klik OK. Jika tidak, sila klik Batalkan.
@@ -4106,7 +4133,7 @@ Tidak boleh ditetapkan sebagai WAN lalai untuk dasar sasaran.
 Beta test only
 You can also select [Cancel], the device will automatically start downloading the update during the night time.
 Jika anda menggunakan modem kabel atau modem dengan alamat IP statik, pastikan bahawa anda mencuba perkara berikut:
-Once the new SSID is connected, go back to router.asus.com for more advanced settings.
+Once the new SSID is connected, go back to ZVDOMAIN_NAMEVZ for more advanced settings.
 Disable Web Access from WAN will not allow you to control your router via $Apps$ from Internet. Do you want to continue?
 ASUS ROUTER APP
 Alexa enabled device or IFTTT
@@ -4209,7 +4236,7 @@ Klik di sini untuk meneruskan.
 Imbas kod QR untuk maklumat lebih lanjut.
 Masih mahu mengakses halaman tetapan dengan <span>protokol HTTP</span>?
 Semasa menggunakan protokol HTTPS, mesej amaran mungkin dipaparkan untuk memaklumkan sijil keselamatan yang dikeluarkan oleh pelayar anda.
-Sambungan antara pelayar anda dan halaman tetapan penghala ASUS (router.asus.com) kekal selamat walaupun terdapat mesej amaran ini.
+Sambungan antara pelayar anda dan halaman tetapan penghala ASUS (ZVDOMAIN_NAMEVZ) kekal selamat walaupun terdapat mesej amaran ini.
 Jangan tunjukkan mesej ini lagi
 HTTP ialah protokol akses web yang kurang selamat. Masih mahu mengakses halaman tetapan dengan protokol HTTP?
 256,1024-QAM

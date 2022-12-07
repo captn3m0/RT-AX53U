@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#838#> - <#1298#></title>
+<title><#842#> - <#1303#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script type="text/javascript" src="/state.js"></script>
@@ -161,7 +161,7 @@ success: function(response){
 var code = ""
 ips_count = event_count.vp_n;
 code += ips_count;
-code += '<span style="font-size: 16px;padding-left: 5px;"><#1271#></span>';
+code += '<span style="font-size: 16px;padding-left: 5px;"><#1276#></span>';
 $("#vp_count").html(code);
 }
 });
@@ -229,7 +229,7 @@ code += '</div>';
 code += '</div>';
 }
 if(code == ''){
-code += '<div style="font-size:16px;text-align:center;margin-top:70px;color:#FC0"><#1204#></div>';
+code += '<div style="font-size:16px;text-align:center;margin-top:70px;color:#FC0"><#1209#></div>';
 }
 $("#vp_bar_table").html(code);
 }
@@ -376,15 +376,15 @@ var direct_type = ["", "Device Infected", "External Attacks"];
 function generateDetailTable(data_array){
 var code = '';
 code += '<div style="font-size:14px;font-weight:bold;border-bottom: 1px solid #797979">';
-code += '<div style="display:table-cell;width:70px;padding-right:5px;"><#1755#></div>';
-code += '<div style="display:table-cell;width:50px;padding-right:5px;"><#1239#></div>';
+code += '<div style="display:table-cell;width:70px;padding-right:5px;"><#1761#></div>';
+code += '<div style="display:table-cell;width:50px;padding-right:5px;"><#1244#></div>';
 code += '<div style="display:table-cell;width:100px;padding-right:5px;">Type</div>';
-code += '<div style="display:table-cell;width:100px;padding-right:5px;"><#1201#></div>';
-code += '<div style="display:table-cell;width:130px;padding-right:5px;"><#1200#></div>';
-code += '<div style="display:table-cell;width:180px;padding-right:5px;"><#1202#></div>';
+code += '<div style="display:table-cell;width:100px;padding-right:5px;"><#1206#></div>';
+code += '<div style="display:table-cell;width:130px;padding-right:5px;"><#1205#></div>';
+code += '<div style="display:table-cell;width:180px;padding-right:5px;"><#1207#></div>';
 code += '</div>';
 if(data_array == ""){
-code += '<div style="text-align:center;font-size:16px;color:#FC0;margin-top:90px;"><#2382#></div>';
+code += '<div style="text-align:center;font-size:16px;color:#FC0;margin-top:90px;"><#2407#></div>';
 }
 else{
 for(i=0; i<data_array.length; i++){
@@ -409,7 +409,7 @@ code += '<div style="display:table-cell;width:50px;height:30px;vertical-align:mi
 code += '<div style="display:table-cell;width:100px;height:30px;vertical-align:middle;padding-right:5px;">'+ direct_type[data_array[i][6]] +'</div>';
 code += '<div style="display:table-cell;width:100px;height:30px;vertical-align:middle;padding-right:5px;">'+ data_array[i][3] +'</div>';
 code += '<div style="display:table-cell;width:130px;height:30px;vertical-align:middle;padding-right:5px;">'+ data_array[i][4] +'</div>';
-code += '<div style="display:table-cell;width:180px;height:30px;vertical-align:middle;padding-right:5px;text-decoration:underline;cursor:pointer" title="<#1311#>" onclick="threatQuery(\''+ data_array[i][7] +'\', \'' + data_array[i][5].split(" ").slice(0,3).join("+") + '\')">'+ data_array[i][5] + '</div>';
+code += '<div style="display:table-cell;width:180px;height:30px;vertical-align:middle;padding-right:5px;text-decoration:underline;cursor:pointer" title="<#1316#>" onclick="threatQuery(\''+ data_array[i][7] +'\', \'' + data_array[i][5].split(" ").slice(0,3).join("+") + '\')">'+ data_array[i][5] + '</div>';
 code += '</div>';
 }
 }
@@ -478,7 +478,7 @@ applyRule();
 var reboot_confirm=0;
 function applyRule(){
 if(ctf_disable == 0 && ctf_fa_mode == 2){
-if(!confirm("<#1634#>")){
+if(!confirm("<#1640#>")){
 return false;
 }
 else{
@@ -527,7 +527,7 @@ document.form.wrs_vp_t.value = timestamp.toString().substring(0, 10);
 applyRule();
 }
 function showEraseConfirm(){
-$('#model_name').html("<#839#>");
+$('#model_name').html("<#843#>");
 cal_panel_block("erase_confirm", 0.25);
 $('#erase_confirm').fadeIn(300);
 }
@@ -567,15 +567,15 @@ return true;
 <div id="Loading" class="popup_bg"></div>
 <div id="erase_confirm" class="confirm">
 <div style="margin: 16px 24px;font-size:24px;"><span id="model_name"></span> : </div>
-<div style="margin: 16px 24px;font-size:16px;"><#1199#></div>
+<div style="margin: 16px 24px;font-size:16px;"><#1204#></div>
 <div style="display:flex;justify-content: flex-end;margin: 36px 24px;">
 <div class="confirm-button" onclick="hideConfirm();"><#199#></div>
-<div class="confirm-button" onclick="eraseDatabase();"><#1659#></div>
+<div class="confirm-button" onclick="eraseDatabase();"><#1665#></div>
 </div>
 </div>
 <div id="hiddenMask" class="popup_bg" style="z-index:999;">
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center"></table>
-<!--[if lte IE 6.5.]><script>alert("<#1354#>");</script><![endif]-->
+<!--[if lte IE 6.5.]><script>alert("<#1359#>");</script><![endif]-->
 </div>
 <iframe name="hidden_frame" id="hidden_frame" width="0" height="0" frameborder="0"></iframe>
 <form method="post" name="form" action="/start_apply.htm" target="hidden_frame">
@@ -634,7 +634,7 @@ return true;
 <table width="730px">
 <tr>
 <td align="left">
-<span class="formfonttitle"><#1282#> - <#1298#></span>
+<span class="formfonttitle"><#1287#> - <#1303#></span>
 </td>
 </tr>
 </table>
@@ -644,7 +644,7 @@ return true;
 <table width="700px" style="margin-left:25px;">
 <tr>
 <td style="font-size:14px;">
-<div><#1299#></div>
+<div><#1304#></div>
 </td>
 </tr>
 </table>
@@ -654,8 +654,8 @@ return true;
 <div style="display:table-cell;width:370px;height:350px;">
 <div style="display:table-row">
 <!--div style="display:inline-block;padding: 5px 0"><input id="mali_checkbox" type="checkbox" onclick="mali_check();"></div>
-<div style="display:inline-block;font-size:14px;vertical-align:bottom;padding: 5px 0" title="<#1241#>"><#1279#></div-->
-<div style="font-size:16px;margin:0 0 5px 5px;text-align:center"><#1198#></div>
+<div style="display:inline-block;font-size:14px;vertical-align:bottom;padding: 5px 0" title="<#1246#>"><#1284#></div-->
+<div style="font-size:16px;margin:0 0 5px 5px;text-align:center"><#1203#></div>
 </div>
 <div id="vulner_table" style="background-color:#444f53;width:350px;height:340px;border-radius: 10px;display:table-cell;position:relative;">
 <div id="bar_shade" style="position:absolute;width:330px;height:330px;background-color:#505050;opacity:0.6;margin:5px;display:none"></div>
@@ -672,17 +672,17 @@ return true;
 </div>
 </div>
 <div style="height:240px;margin-top:0px;">
-<div style="text-align:center;font-size:16px;"><#1297#></div>
+<div style="text-align:center;font-size:16px;"><#1302#></div>
 <div id="vp_bar_table" style="height:235px;margin: 0 10px;border-radius:10px;overflow:auto"></div>
 </div>
 </div>
 </div>
 <div style="display:table-cell;width:370px;height:350px;padding-left:10px;">
-<div style="font-size:16px;margin:0 0 5px 5px;text-align:center;"><#1238#></div>
+<div style="font-size:16px;margin:0 0 5px 5px;text-align:center;"><#1243#></div>
 <div style="background-color:#444f53;width:350px;height:340px;border-radius: 10px;display:table-cell;padding-left:10px;position:relative">
 <div id="chart_shade" style="position:absolute;width:350px;height:330px;background-color:#505050;opacity:0.6;margin:5px 0 5px -5px;display:none"></div>
 <div>
-<div style="display:inline-block;margin:5px 10px"><#1271#></div>
+<div style="display:inline-block;margin:5px 10px"><#1276#></div>
 <div style="display:inline-block;margin:5px 10px">
 <div style="display:inline-block"><div style="width:10px;height:10px;border-radius:50%;background:#ED1C24"></div></div>
 <div style="display:inline-block">High</div>
@@ -706,10 +706,10 @@ return true;
 </div>
 <div style="margin: 0 24px;">
 <div style="display:flex;justify-content: space-between;align-content: center;">
-<div style="text-align:center;font-size:16px;"><#1203#></div>
+<div style="text-align:center;font-size:16px;"><#1208#></div>
 <div style="display: flex;">
-<div style="margin: 0 8px;"><div id="save_icon" class="icon-container icon-save" title="<#1660#>" onclick="download(csvContent, 'IntrusionPreventionSystem.csv', 'data:text/csv;charset=utf-8');"></div></div>
-<div style="margin: 0 8px;"><div id="delete_icon" class="icon-container icon-delete" onclick="showEraseConfirm();" title="<#1643#>"></div></div>
+<div style="margin: 0 8px;"><div id="save_icon" class="icon-container icon-save" title="<#1666#>" onclick="download(csvContent, 'IntrusionPreventionSystem.csv', 'data:text/csv;charset=utf-8');"></div></div>
+<div style="margin: 0 8px;"><div id="delete_icon" class="icon-container icon-delete" onclick="showEraseConfirm();" title="<#1649#>"></div></div>
 </div>
 </div>
 </div>
@@ -717,12 +717,12 @@ return true;
 <div id="info_shade" style="position:absolute;width:710px;height:490px;background-color:#505050;opacity:0.6;margin:5px;display:none"></div>
 <div id="detail_info_table" style="padding: 10px 15px;">
 <div style="font-size:14px;font-weight:bold;border-bottom: 1px solid #797979">
-<div style="display:table-cell;width:70px;padding-right:5px;"><#1755#></div>
-<div style="display:table-cell;width:50px;padding-right:5px;"><#1239#></div>
+<div style="display:table-cell;width:70px;padding-right:5px;"><#1761#></div>
+<div style="display:table-cell;width:50px;padding-right:5px;"><#1244#></div>
 <div style="display:table-cell;width:100px;padding-right:5px;">Type</div>
-<div style="display:table-cell;width:100px;padding-right:5px;"><#1201#></div>
-<div style="display:table-cell;width:130px;padding-right:5px;"><#1200#></div>
-<div style="display:table-cell;width:180px;padding-right:5px;"><#1202#></div>
+<div style="display:table-cell;width:100px;padding-right:5px;"><#1206#></div>
+<div style="display:table-cell;width:130px;padding-right:5px;"><#1205#></div>
+<div style="display:table-cell;width:180px;padding-right:5px;"><#1207#></div>
 </div>
 </div>
 </div>

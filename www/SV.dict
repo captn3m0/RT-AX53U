@@ -100,7 +100,7 @@ Den senaste versionen
 Moder-AP kan vara avstängd. Kontrollera igen.
 Anslutning misslyckades. Lösenordet är inte korrekt. Klicka på [Skanna] för att välja ett annat nätverk.
 Trådlös anslutning har etablerats.
-Startar om webbläsaren. I URL adressfältet skriv in "http://router.asus.com/" för åtkomst till repeterarens anslutningsstatus.
+Startar om webbläsaren. I URL adressfältet skriv in "http://ZVDOMAIN_NAMEVZ/" för åtkomst till repeterarens anslutningsstatus.
 IP-inställningarna uppdaterade. Du kommer att vidarebefordras till RT-AX53U\'s webbgränssnitt.
 Välj ett annat nätverk
 Byt det nätverk som RT-AX53U ska ansluta till.
@@ -301,6 +301,10 @@ Välj den här DNS-servern för att få ett snabbt och integritetsskyddat sätt 
 Välj den här DNS-servern för att blockera skadligt innehåll
 Välj den här DNS-servern för att blockera skadligt innehåll och innehåll som är skadligt för barn
 DNS-lista
+Annonsblockering
+Familj
+Snabb DNS
+Respekterar integritet
 Låter den här routern automatiskt hämta DNS-IP-adressen från internetleverantören.
 Ansluta till DNS-servern automatiskt
 Om WAN-anslutningen kräver en statisk IP-adress, ange nätbryggans IP-adress i detta fält.
@@ -336,9 +340,9 @@ Ange ett värde mellan
 och
 SSID kan inte innehålla tecknet \"
 \".
-Den här strängen kan inte börja med:
+Det första tecknet kan inte vara:
 Den här strängen kan inte innehålla:
-This string cannot end with:
+Det sista tecknet kan inte vara:
 Ange korrekt WEP-nyckel.
 Den fördelade nyckeln måste vara kortare än 64 tecken!
 LAN IP för RT-AX53U är
@@ -452,7 +456,7 @@ Hämta <a href='http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Dis
 Markera om du vill dra ur nätverkskabeln från WAN-porten.
 I Repeterarläget ansluter RT-AX53U trådlöst till ett befintligt trådlöst nätverk för att utöka den trådlösa nätverkstäckningen. I detta läge är brandväggen, IP-delning och NAT-funktionerna avaktiverade.
 LAN-IP-adressen för RT-AX53U kan ha ändrats.
-Stäng fönstret och öppna http://router.asus.com igen.
+Stäng fönstret och öppna http://ZVDOMAIN_NAMEVZ igen.
 Repeterarläge
 I läget Express Way 2.4 GHz ansluter RT-AX53U trådlöst till en befintlig 2.4 GHz WiFi-kanal och förlänger täckningen med en 5 GHz WiFi-kanal enbart.
 Express Way 2.4 GHz
@@ -711,7 +715,7 @@ Radio
 Fjärr
 Skriv in nytt inloggningslösenord
 Använd informationen nedan för att ansluta till WiFi-nätverket.
-Gå till <a href='http://router.asus.com' target='_blank' style='text-decoration:underline'>router.asus.com</a> för att logga in på enheten.
+Gå till <a href='http://ZVDOMAIN_NAMEVZ' target='_blank' style='text-decoration:underline'>ZVDOMAIN_NAMEVZ</a> för att logga in på enheten.
 Routerkonto
 Routerinloggningsnamn
 Routerinloggningslösenord
@@ -838,6 +842,7 @@ För att konfigurera WAN-anslutning i offlineläge eller för att ändra driftsl
 I nästa steg, ställ in inloggningsnamn och lösenord för extra säkerhet.
 ASUS Wireless Router RT-AX53U
 RT-AX53U
+ZVDOMAIN_NAMEVZ
 Konfigurerad
 Trådlöst namn
 Trådlös router
@@ -927,10 +932,10 @@ Du behöver en bredbandsanslutning för internet för bästa visnings- och lyssn
 30 Mbps eller snabbare rekommenderas för 1080p HD videoströmning.
 Internetuppladdningshastigheten kan variera beroende på din internetleverantör och andra faktorer. Om du är osäker på vilken internethastighet du har kan du kontakta din internetleverantör eller använda bandbreddstest online från en datorn ansluten till ASUS routern.
 Molnlista
-Kom åt molndisken från <a id="cloud_url" style="font-weight: bolder;text-decoration: underline;" href="https://router.asus.com" target="_blank">https://router.asus.com</a>.
+Kom åt molndisken från <a id="cloud_url" style="font-weight: bolder;text-decoration: underline;" href="https://ZVDOMAIN_NAMEVZ" target="_blank">https://ZVDOMAIN_NAMEVZ</a>.
 Du kan komma åt molndisken via denna URL :
 För att modifiera ddns-namnet klicka <a style="font-weight: bolder;text-decoration: underline;" href="/Advanced_ASUSDDNS_Content.asp?af=DDNSName" target="_blank">här</a>.
-Kom åt molndisken från <a style="font-weight: bolder;text-decoration: underline;" href="https://router.asus.com" target="_blank">https://router.asus.com</a>.
+Kom åt molndisken från <a style="font-weight: bolder;text-decoration: underline;" href="https://ZVDOMAIN_NAMEVZ" target="_blank">https://ZVDOMAIN_NAMEVZ</a>.
 Registrera för en ASUS DDNS <a style="font-weight: bolder;text-decoration: underline;" href="/Advanced_ASUSDDNS_Content.asp" target="_blank">här</a> för åtkomst till molndisken online.
 Aktiverar USB-anslutna lagringsenheter som ska nås, strömmas eller delas genom en Internet-ansluten dator eller enhet.
 För att skapa en molndisk behöver du installera en USB-lagringsenhet i denna router, sedan slå PÅ (<b>ON</b>) molndisken.
@@ -1515,6 +1520,7 @@ Inaktiverad
 Aktiverad
 Exportera
 GÅ
+Gå till Inställning
 Ta bort
 Skicka
 WAN-inställning
@@ -2243,6 +2249,25 @@ gäster
 Åtkomstgräns
 Internetåtkomst enbart
 Använd samma inställningar som
+Affärsnätverk
+Anpassat nätverk
+Konfigurera ett säkert nätverk
+Bygg ett gästnätverk snabbt
+IoT-nätverk
+Separera enkelt ett nätverk för dina IoT-enheter
+Barns nätverk
+Säkerställ internetåtkomstsäkerhet för barn
+Gästportal
+Bygg ett Wi-Fi för gästportal eller Facebook
+Portaltyp
+VPN-nätverk
+Upprätta en säker internetanslutning
+Den här VPN-profilen är avaktiverad. Gå till sidan för inställning av VPN-server och aktivera det.
+Klicka på [ Gå till inställning ] nedan för att komma till sidan VPN-inställning.
+Den här inställningen kan inte väljas när den andra skapade profilen används.
+Hemnätverk
+Lägg till ett nätverk
+Profillista
 Hårdvaruversion
 Help
 Hjälpen ger dig riktlinjer och information om hur man använder routerns funktioner. Klicka på
@@ -2441,7 +2466,7 @@ Detta fält låter dig aktivera eller inaktivera nedladdningshanteraren.
 Detta fält möjliggör delning av nedladdat material med Internetanvändare.
 Detta fält låter dig aktivera eller inaktivera UPnP.
 คุณจะไม่สามารถกู้คืนข้อมูลได้ หลังจากที่ลบไปแล้ว คุณแน่ใจหรือว่าคุณต้องการล้างข้อมูล?
-onflict with LAN IP
+Conflict with LAN IP
 Create New Policy
 Din lokala IP-adress och delnätsmask har ändrats. Din pool med RT-AX53U-IP-adresser behöver uppdateras. Vill du uppdatera poolen med IP-adresser automatiskt?
 Den nya IP Pool matchar inte subnetmasken. Vill du tillåta att RT-AX53U ändrar IP pool automatiskt?
@@ -2588,7 +2613,7 @@ Maxgräns :
 Kontrollera
 The version is up-to-date.
 Lokal åtkomstkonfiguration
-Download and install SSL certificate on your browser to trust accessing your local domain “router.asus.com” with HTTPS protocol. To export certificate after applying setting.
+Download and install SSL certificate on your browser to trust accessing your local domain “ZVDOMAIN_NAMEVZ” with HTTPS protocol. To export certificate after applying setting.
 Download Certificate
 Logg
 IP för inloggad användare:
@@ -2809,6 +2834,7 @@ För att aktivera WPS, ändra verifieringsmetod till WPA2 eller WPA-Auto.
 Om du vill aktivera WPS måste du först avaktivera dolt SSID.
 Note: New patch will be updated regularly, please keep your firmware stay up to date.
 Aviseringsobjekt
+Antal klienter
 Gå till <a href="https://iplookup.asus.com/nslookup.php" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">https://iplookup.asus.com/nslookup.php</a>för att söka efter en statisk adress att använda till din ASUS DDNS-tjänst.
 OCN Virtual Connect
 OFDMA/802.11ax MU-MIMO
@@ -3524,7 +3550,7 @@ Anpassad konfiguration
 RT-AX53U genererar automatiskt en .ovpn-fil med certifikatutfärdarens nyckel. Du kan tillhandahålla .ovpn-filen med ett användarnamn och lösenord till alla användare som ansluter till OpenVPN-servern.
 För att ändra OpenVPN-serverns inställningar, gå till Avancerade inställningar
 Du kan ändra standardinställningarna för OpenVPN-servern för att tillhandahålla en OPVN-fil för en specifik anslutningstyp.
-If your WAN IP address is dynamic, please click <a href="http://router.asus.com/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
+If your WAN IP address is dynamic, please click <a href="http://ZVDOMAIN_NAMEVZ/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
 Tilldela från DHCP
 Krypteringschiffer
 Routning konflikt! <p>Kontrollera klientens IP-adressinställningar i sidan för Avancerade inställningar eller kontrollera routningstabellen i systemloggen.
@@ -3746,6 +3772,7 @@ Hemlig anslutning
 UDP-portnummer för anslutning till RADIUS-servern.
 Server-port
 WiFi Agile Multiband
+*Om WiFi Agile Multiband är aktiverat så måste Protected Management Frames vara aktiverat. (kapabla eller obligatoriska)
 Detta fält aktiverar verifieringsmetoderrna för trådlösa klienter.
 Verifieringsmetod
 För att få bästa trådlösa signal föreslår vi att du ställer in routerkanalen på Kanal 2. Klicka på OK för att ställa in routerkanalen på Kanal 2. I annat fall klicka på Avbryt.
@@ -4106,7 +4133,7 @@ Kan inte ställas in som standard-WAN för målprincipen.
 Beta test only
 You can also select [Cancel], the device will automatically start downloading the update during the night time.
 Prova med följande om du använder kabelmodem med en statisk IP-adress:
-Once the new SSID is connected, go back to router.asus.com for more advanced settings.
+Once the new SSID is connected, go back to ZVDOMAIN_NAMEVZ for more advanced settings.
 Disable Web Access from WAN will not allow you to control your router via $Apps$ from Internet. Do you want to continue?
 ASUS ROUTER APP
 Alexa enabled device or IFTTT
@@ -4141,7 +4168,7 @@ GeForce Now
 Välj GeForce Now om du vill prioritera GeForce Now-spelenheter och få en snabbare och bättre spelupplevelse.
 LED On/Off
 The LED on/off control is used to turn off all LEDs includes Aura light.
-To enable Aura RGB, LED must remain on. Please turn on LED by pressing hardware button on the router for 3 seconds or enable it via web/app interface.
+För att Aura RGB ska kunna aktiveras måste LED-lampan vara tänd. Slå på LED-lampan genom att trycka på hårdvaruknappen på routern i 3 sekunder eller aktivera den via webb-/appgränssnittet.
 Händelse
 Systemet registrerar dessa händelser och aktiverar olika LED-effekter.
 När du aktiverar Game Boost visas en LED-stapel med en röd ”andnings”-effekt.
@@ -4209,7 +4236,7 @@ Klicka här för att fortsätta.
 Skanna QR-koden för att få mer information.
 Vill du fortfarande gå till sidan med ett <span>HTTP-protokoll</span>?
 När HTTPS-protokoll används så kan det visas ett varningsmeddelande som det ovan, som innebär säkerhetsinformation om säkerhetscertifikat för att verifiera enhetens identitet, eftersom webbläsaren kräver det.
-Anslutningen mellan din webbläsare och ASUS-routerns inställningssida (router.asus.com) är fortsatt säker trots detta meddelande.
+Anslutningen mellan din webbläsare och ASUS-routerns inställningssida (ZVDOMAIN_NAMEVZ) är fortsatt säker trots detta meddelande.
 Visa inte det här meddelandet igen
 HTTP är ett förhållandevis mindre säkert webbåtkomstprotokoll. Vill du fortfarande gå till sidan med ett HTTP-protokoll?
 256,1024-QAM

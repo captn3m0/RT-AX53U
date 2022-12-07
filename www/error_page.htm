@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <link rel="icon" href="images/favicon.png">
-<title><#838#> - <#258#></title>
+<title><#842#> - <#258#></title>
 <script type="text/JavaScript" src="/js/jquery.js"></script>
 <style>
 body{
@@ -264,16 +264,16 @@ function initial(){
 var is_logined = [<% is_logined_hook(); %>][0];
 var html_code = '';
 var url_flag = "";
-var html_code_notlogin = "<ul><li><#818#></li></ul>";
+var html_code_notlogin = "<ul><li><#822#></li></ul>";
 var showtext = function(obj, str){if(obj)obj.innerHTML=str;}
 if(odm_support){
 $('.model_img').attr('class', 'mode_img_COD');
 }
 if(casenum == 1){
-$("#page_title").html("<#805#>");
+$("#page_title").html("<#809#>");
 html_code += "<ul>";
-html_code += "<li><#785#></li>";
-html_code += "<li><#786#></li>";
+html_code += "<li><#789#></li>";
+html_code += "<li><#790#></li>";
 html_code += "</ul>";
 $("#wanLink").click(function(){
 detect_general();
@@ -286,8 +286,8 @@ else if(casenum == 2){
 html_code += "<ul>";
 html_code += "<li>";
 if(wansbstate == 2 || wanauxstate == 3){ //Authentication Failed
-$("#page_title").html("<#788#>");
-html_code += "<div><#787#></div>";
+$("#page_title").html("<#792#>");
+html_code += "<div><#791#></div>";
 $("#wanLink").click(function(){
 });
 }
@@ -298,7 +298,7 @@ else if(wansbstate == 10){ //Terminal due to lack of activity
 else{ //Connecting
 $("#animation_field").show();
 detect_ppp_connect();
-$("#page_title").html("<#817#>");
+$("#page_title").html("<#821#>");
 $("#reason_title").hide();
 $("#reason_field").hide();
 $("#suggest_title").hide();
@@ -308,7 +308,7 @@ $("#back_btn").show();
 $("#wanLink").click(function(){
 history.go(-1);
 });
-$("#wanLink").html("<#2947#>");
+$("#wanLink").html("<#2973#>");
 }
 html_code += "</li>";
 html_code += "</ul>";
@@ -318,24 +318,24 @@ $("#reason_field").hide();
 $("#suggestion").hide();
 }
 else if(casenum == 3){
-$("#page_title").html("<#546#>");
+$("#page_title").html("<#550#>");
 html_code += "<ul>";
-html_code += "<li><#790#></li>";
-html_code += "<li><#830#></li>";
+html_code += "<li><#794#></li>";
+html_code += "<li><#834#></li>";
 html_code += "</ul>";
 $("#wanLink").click(function(){
 detect_general();
 });
-$("#wanLink").html("<#789#>");
+$("#wanLink").html("<#793#>");
 $("#wanLink").hide();
 $("#reason_title").hide();
 $("#reason_field").hide();
 $("#suggestion").hide();
 }
 else if(casenum == 4){
-showtext($("#failReason1")[0], "<#810#>");
+showtext($("#failReason1")[0], "<#814#>");
 html_code += "<ul>";
-html_code += "<li><#831#></li>";
+html_code += "<li><#835#></li>";
 html_code += "</ul>";
 $("#wanLink").click(function(){
 detect_general();
@@ -343,18 +343,18 @@ detect_general();
 }
 else if(casenum == 5){
 if(wanstate == 5){
-$("#page_title").html("<#794#>");
+$("#page_title").html("<#798#>");
 }
 else{
-$("#page_title").html("<#795#>");
+$("#page_title").html("<#799#>");
 }
 html_code += '<ul>';
 if(wanstate == 5){
-html_code += "<li><#791#></li>";
+html_code += "<li><#795#></li>";
 }
 else{
-html_code += "<li><#792#></li>";
-html_code += "<li><#793#></li>";
+html_code += "<li><#796#></li>";
+html_code += "<li><#797#></li>";
 }
 html_code += '</ul>';
 if(wanstate == 5){
@@ -372,11 +372,11 @@ $("#reason_field").hide();
 $("#suggestion").hide();
 }
 else if(casenum.search("6") !== -1){
-$("#page_title").html("<#813#>");
+$("#page_title").html("<#817#>");
 html_code += "<ul>";
-html_code += "<li><#796#>";
+html_code += "<li><#800#>";
 html_code += "<span style='font-weight:bolder'>"+ new_lan_ip +"</span></li>";
-html_code += "<li><#797#></li>";
+html_code += "<li><#801#></li>";
 html_code += "</ul>";
 $("#wanLink").html("<#204#>");
 $("#wanLink").click(function(){
@@ -387,15 +387,15 @@ $("#reason_field").hide();
 $("#suggestion").hide();
 }
 else if(casenum == 8){
-$("#page_title").html("<#800#>");
+$("#page_title").html("<#804#>");
 if(!is_logined){
 html_code = html_code_notlogin;
 $("#wanLink").hide();
 }
 else{
 html_code += "<ul>";
-html_code += "<li><#798#></li>";
-html_code += "<li><#799#></li>";
+html_code += "<li><#802#></li>";
+html_code += "<li><#803#></li>";
 html_code += "</ul>";
 if(sw_mode == "2"){
 if(wlc_express == '1')
@@ -417,10 +417,10 @@ $("#reason_field").hide();
 $("#suggestion").hide();
 }
 else if(casenum == 9) {
-$("#page_title").html("<#800#>");
+$("#page_title").html("<#804#>");
 html_code += "<ul>";
-html_code += "<li><#801#></li>";
-html_code += "<li><#802#></li>";
+html_code += "<li><#805#></li>";
+html_code += "<li><#806#></li>";
 html_code += "</ul>";
 $("#wanLink").hide();
 $("#reason_title").hide();
@@ -528,17 +528,17 @@ setTimeout(detect_ppp_connect, 1000);
 <div class="div_td img_gap">
 <div class="login_img"></div>
 </div>
-<div id="page_title" class="div_td title_text"><#804#></div>
+<div id="page_title" class="div_td title_text"><#808#></div>
 </div>
-<div class="prod_madelName"><#839#></div>
-<div id="reason_title" class="p1 title_gap"><#803#></div>
+<div class="prod_madelName"><#843#></div>
+<div id="reason_title" class="p1 title_gap"><#807#></div>
 <div id="reason_field">
 <div class="p1 title_gap"></div>
 <div class="nologin">
 <div id="failReason1"></div>
 </div>
 </div>
-<div id="suggest_title" class="p1 title_gap"><#823#></div>
+<div id="suggest_title" class="p1 title_gap"><#827#></div>
 <div>
 <div class="p1 title_gap"></div>
 <div class="nologin">
@@ -562,14 +562,14 @@ setTimeout(detect_ppp_connect, 1000);
 <div id="suggestion">
 <ul>
 <li>
-<span><#821#></span>
+<span><#825#></span>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div>
-<div id="wanLink" class='button'><#1516#></div>
+<div id="wanLink" class='button'><#1521#></div>
 <div id="submitBtn" class='button button_background' style="display:none"></div>
 </div>
 </body>
