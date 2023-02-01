@@ -65,7 +65,7 @@ show_menu();
 regen_band(document.form.wl_unit);
 if(lantiq_support){
 checkWLReady();
-var mode_desc = ["<#3850#>"];
+var mode_desc = ["<#3854#>"];
 var mode_value = ["2"];
 add_options_x2(document.form.wl_mode_x, mode_desc, mode_value, "2");
 }
@@ -389,21 +389,21 @@ $("#lantiq_ready").hide();
 <div>&nbsp;</div>
 <div class="formfonttitle"><#382#> - <#385#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#3789#></div>
+<div class="formfontdesc"><#3793#></div>
 <div class="formfontdesc hint-color"><#921#></div>
 <div class="formfontdesc hint-color" style="margin-left:28px;">
-<#3790#>&nbsp;<#3791#><br><#3124#>
+<#3794#>&nbsp;<#3795#><br><#3124#>
 </div>
-<div class="formfontdesc"><#3792#>
+<div class="formfontdesc"><#3796#>
 <ol>
-<li><#3793#></li>
-<li><#3794#></li>
-<li><#3795#></li>
-<li><#3796#></li>
+<li><#3797#></li>
+<li><#3798#></li>
+<li><#3799#></li>
+<li><#3800#></li>
 </ol>
 </div>
-<div id="wl_bw_hint" class="hint-color" style="font-size:13px;margin-left:28px;"><#3797#></div>
-<div id="wl_ch_hint" class="hint-color" style="font-size:13px;margin-left:28px;"><#3798#></div>
+<div id="wl_bw_hint" class="hint-color" style="font-size:13px;margin-left:28px;"><#3801#></div>
+<div id="wl_ch_hint" class="hint-color" style="font-size:13px;margin-left:28px;"><#3802#></div>
 <div id="lantiq_ready" style="display:none;margin-left:5px;font-size:13px;">Wireless is setting...</div>
 <table id="MainTable1" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
@@ -441,20 +441,20 @@ $("#lantiq_ready").hide();
 <tr id="wds_mode_field">
 <th align="right">
 <a class="hintstyle" href="javascript:void(0);" onClick="openHint(1,1);">
-<#3847#></a>
+<#3851#></a>
 </th>
 <td>
 <select name="wl_mode_x" class="input_option" onChange="change_wireless_bridge(this.value);">
-<option value="0" <% nvram_match("wl_mode_x", "0","selected"); %>><#3848#></option>
-<option value="1" <% nvram_match("wl_mode_x", "1","selected"); %>><#3849#></option>
-<option value="2" <% nvram_match("wl_mode_x", "2","selected"); %>><#3850#></option>
+<option value="0" <% nvram_match("wl_mode_x", "0","selected"); %>><#3852#></option>
+<option value="1" <% nvram_match("wl_mode_x", "1","selected"); %>><#3853#></option>
+<option value="2" <% nvram_match("wl_mode_x", "2","selected"); %>><#3854#></option>
 </select>
 </td>
 </tr>
 <tr id=wds_wdsapply_field>
 <th align="right">
 <a class="hintstyle" href="javascript:void(0);" onClick="openHint(1,3);">
-<#3864#>
+<#3868#>
 </a>
 </th>
 <td>
@@ -466,11 +466,11 @@ $("#lantiq_ready").hide();
 <table id="MainTable2" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable_table">
 <thead>
 <tr id="wds_list_title_field">
-<td colspan="4"><#3817#>&nbsp;(<#2611#>&nbsp;4)</td>
+<td colspan="4"><#3821#>&nbsp;(<#2611#>&nbsp;4)</td>
 </tr>
 </thead>
 <tr id="wds_list_add_delete_field">
-<th width="80%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);"><#3817#></th>
+<th width="80%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);"><#3821#></th>
 <th class="edit_table" width="20%"><#2610#></th>
 </tr>
 <tr id="wds_list_add_field">

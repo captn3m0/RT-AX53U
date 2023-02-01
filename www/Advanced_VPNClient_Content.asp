@@ -552,7 +552,7 @@ update_unit_option();
 }
 else if(_type == 3){
 if(!control_profile_flag) {
-alert("<#4125#>");
+alert("<#4129#>");
 return true;
 }
 save_flag = "IPSec";
@@ -1088,7 +1088,7 @@ document.form.vpnc_pwd_edit.value = vpnc_userpwd;
 }
 }
 function del_Row(rowdata, flag){
-if(!confirm("<#4128#>"))
+if(!confirm("<#4132#>"))
 return false;
 var idx = rowdata.parentNode.parentNode.rowIndex;
 document.getElementById("vpnc_clientlist_table").deleteRow(idx);
@@ -1491,7 +1491,7 @@ $('input:checkbox[name=ipsec_pfs_group]').prop("checked", true);
 function editIPSecProfile(mode) {
 add_profile_flag = false;
 if(!control_profile_flag) {
-alert("<#4125#>");
+alert("<#4129#>");
 return true;
 }
 gen_vpnc_tab_list("ipsec");
@@ -1545,10 +1545,10 @@ UpdatePSecProfile(editProfileArray, editProfileExtArray);
 }
 function delIPSecProfile(obj) {
 if(!control_profile_flag) {
-alert("<#4126#>");
+alert("<#4130#>");
 return true;
 }
-if(!confirm("<#4128#>"))
+if(!confirm("<#4132#>"))
 return false;
 var delRowID = obj.parentNode.parentNode.id;
 if(delRowID == "vpnc_row_ipsec_profile_client_1") {
@@ -2734,8 +2734,8 @@ $("#tr_adv_pfs_group").show();
 </tr>
 <tr id="tr_adv_pfs">
 <th>Perfect Forward Secrecy (PFS)</th><td>
-<label><input type="radio" name="ipsec_pfs" class="input" value="1" onchange="changePFS();"><#3836#></label>
-<label><input type="radio" name="ipsec_pfs" class="input" value="0" onchange="changePFS();"><#3837#></label>
+<label><input type="radio" name="ipsec_pfs" class="input" value="1" onchange="changePFS();"><#3840#></label>
+<label><input type="radio" name="ipsec_pfs" class="input" value="0" onchange="changePFS();"><#3841#></label>
 </td>
 </tr>
 <tr id="tr_adv_pfs_group">

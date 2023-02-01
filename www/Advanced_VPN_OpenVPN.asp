@@ -1618,9 +1618,9 @@ document.form.submit();
 <th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(32,18);"><#3546#></a></th>
 <td>
 <select name="vpn_server_comp" class="input_option">
-<option value="-1" <% nvram_match("vpn_server_comp","-1","selected"); %> ><#3837#></option>
+<option value="-1" <% nvram_match("vpn_server_comp","-1","selected"); %> ><#3841#></option>
 <option value="no" <% nvram_match("vpn_server_comp","no","selected"); %> ><#848#></option>
-<option value="yes" <% nvram_match("vpn_server_comp","yes","selected"); %> ><#3836#></option>
+<option value="yes" <% nvram_match("vpn_server_comp","yes","selected"); %> ><#3840#></option>
 <option value="adaptive" <% nvram_match("vpn_server_comp","adaptive","selected"); %> ><#880#></option>
 <option value="lz4" <% nvram_match("vpn_server_comp","lz4","selected"); %> >LZ4</option>
 </select>
@@ -1670,7 +1670,7 @@ document.form.submit();
 <th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(32,10);"><#3542#></a></th>
 <td>
 <select name="vpn_server_hmac" class="input_option">
-<option value="-1" <% nvram_match("vpn_server_hmac","-1","selected"); %> ><#3837#></option>
+<option value="-1" <% nvram_match("vpn_server_hmac","-1","selected"); %> ><#3841#></option>
 <option value="2" <% nvram_match("vpn_server_hmac","2","selected"); %> >Bi-directional</option>
 <option value="0" <% nvram_match("vpn_server_hmac","0","selected"); %> >Incoming (0)</option>
 <option value="1" <% nvram_match("vpn_server_hmac","1","selected"); %> >Incoming (1)</option>
@@ -1710,7 +1710,7 @@ document.form.submit();
 <th><#3580#></th>
 <td>
 <input type="text" maxlength="4" class="input_6_table" name="vpn_server_poll" onKeyPress="return validator.isNumber(this,event);" value="<% nvram_get("vpn_server_poll"); %>" autocorrect="off" autocapitalize="off"> <#2657#>
-<span style="color:#FC0">(<#3987#>)</span>
+<span style="color:#FC0">(<#3991#>)</span>
 </td>
 </tr-->
 <tr id="server_plan">

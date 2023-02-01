@@ -274,7 +274,7 @@ Laiteohjelmistopäivityksesi on valmis. Sulje tämä ikkuna ja käytä AiMesh-re
 Laiteohjelmistopäivitys on valmis. Käynnistä RT-AX53U manuaalisesti uudelleen.
 To comply with regulatory amendments, we have modified our certificate rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
 Olet antanut väärän salasanan viidellä yrityskerralla. Sinut kirjataan ulos.
-2022 ASUSTeK Computer Inc. Kaikki oikeudet pidätetään.
+2023 ASUSTeK Computer Inc. Kaikki oikeudet pidätetään.
 Jotta määritysparametri voi olla mukana sekä vanhassa että uudessa laiteohjelmistossa, sen asetus säilytetään päivitysprosessin ajan.
 Laiteohjelmistoversio:
 * Kesäaika on käytössä tällä aikavyöhykkeellä.
@@ -1418,7 +1418,7 @@ Vaihda nyt
 Päivitä nyt
 Luo salasana nyt
 Älä näytä tätä viestiä uudestaan
-ASUS-palvelunumero /Tapaus# tai CRS-tunnus
+ASUS-palvelunumero /Tapaus#
 Todennettu
 Todentamaton
 Valtuutetut avaimet
@@ -1921,7 +1921,7 @@ System Temperature
 Yksityiskohtaiset selitykset ovat käytettävissä <a id="network_detect_faq" href="" target="_blank" style="margin-left:5px; text-decoration: underline;">ASUS-tukisivuston Usein kysyttyä</a>-osassa, joka auttaa sinua käyttämään tätä toimintoa tehokkaasti.
 Etsi Usein kysyttyjä kysymyksiä
 3G/4G-loki
-Täytä tähän sarakkeeseen ASUS-palvelunumerosi tai -tapausnumerosi, jonka olet saanut ASUS-puhelinpalvelukeskukselta, tai CRS (asiakastapausten tuki) -tunnuksesi, jonka olet saanut ASUS-asiakaspalvelulta (Amazon-sivusto). Jos et muista palvelunumeroasi, tarkista sähköpostitilisi ja etsi, oletko saanut sähköpostia, jonka lähettäjä on ASUS Technical Service (ASUSin tekninen palvelu).<br>Tähän sarakkeeseen voi kirjoittaa vain yhden englanninkielisen kirjaimen, 8–11-numeroisen tapausnumeron ja väliviivan (-) sekä toisen 4-numeroisen tapausnumeron (esimerkiksi E1234567890-1234). CRS-tunnuksen tapauksessa voit antaa vain 5-numeroisen tunnuksen (esimerkiksi 10688).
+Täytä tähän sarakkeeseen ASUS-palvelunumerosi tai -tapausnumerosi, jonka olet saanut ASUS-puhelinpalvelukeskukselta. Jos et muista palvelunumeroasi, tarkista sähköpostitilisi ja etsi, oletko saanut sähköpostia, jonka lähettäjä on ASUS Technical Service (ASUSin tekninen palvelu).<br>Tähän sarakkeeseen voi kirjoittaa vain yhden englanninkielisen kirjaimen, 8–11-numeroisen tapausnumeron ja väliviivan (-) sekä toisen 4-numeroisen tapausnumeron (esimerkiksi E1234567890-1234).
 Uudelleenkäynnistyksen ajoitus on tällä hetkellä käytössä, tarkista ajoitustoiminnon asetukset.
 Langaton ajoitustoiminto on tällä hetkellä käytössä, tarkista ajoitustoiminnon asetukset.
 2,4 GHz tai 5 GHz tai 5 GHz-1 tai 5 GHz-2 (tai 2,4 GHz ja 5GHz-2 jne.) tai kaikki kaistat ovat parhaillaan poissa käytöstä, tarkista Wi-Fi-radioasetukset.
@@ -3775,6 +3775,10 @@ WiFi Agile Multiband
 Jos WiFi Agile Multiband on käytössä, suojatun hallinnan kehykset pitää ottaa käyttöön (yhteensopiva tai pakollinen).
 Tässä kentässä otetaan käyttöön langattomien asiakkaiden autentikointimenetelmät.
 Autentikointi menetelmä
+WPA3 on uusi sukupolven salausteknologia, joka parantaa merkittävästi yhteyden turvallisuutta, mutta joillakin vanhemmilla laitteilla voi olla yhteensopimattomuuksia ja niitä ei ehkä pysty liittämään verkkoon, jos WPA3-tila on valittu.
+WPA3 on uusi sukupolven salausteknologia, joka parantaa merkittävästi yhteyden turvallisuutta, mutta joillakin vanhemmilla laitteilla voi olla yhteensopimattomuuksia ja niitä ei ehkä pysty liittämään verkkoon, jos WPA3/WPA2-tila on valittu.
+WPA2 ei tarjoa parasta verkkoturvallisuutta, valitse tämä vaihtoehto vain, jos sinulla on vanhempia laitteita, jotka eivät pysty liittymään WPA3/WPA2-tilaan.
+WPA on vanhentunut turvatekniikka. Valitse tämä vaihtoehto vain, jos WPA2-tila ei toimi sinulle.
 Varmistaaksesi parhaan langattoman signaalin, on suositeltavaa asettaa reititin kanavalle 2. Aseta reititin kanavalle 2 napsauttamalla OK. Muuten napsauta Peru.
 Paikallisista säädöksistä johtuen Kanava 1 ei pysty tarjoamaan parasta langatonta kattavuutta. Jos haluat jatkaa Kanava 1:n käyttöä, napsauta OK. Muuten napsauta Peru.
 Varmistaaksesi parhaan langattoman signaalin, on suositeltavaa asettaa reititin kanavalle 10. Aseta reititin kanavalle 10 napsauttamalla OK. Muuten napsauta Peru.

@@ -75,7 +75,7 @@ var html = "";
 switch(_supportType) {
 case "central_led" :
 html += "<div style='margin-top:10px;'>";
-html += "<div class='aimesh_node_setting_info_title'><#4142#></div>";
+html += "<div class='aimesh_node_setting_info_title'><#4146#></div>";
 html += "<div class='aimesh_node_setting_info_content'>";
 html += "<div id='led_slider' class='led_slider'></div>";
 html += "<div id='led_text'></div>";
@@ -86,7 +86,7 @@ break;
 case "lp55xx_led" :
 case "ctrl_led" :
 html += "<div style='margin-top:10px;'>";
-html += "<div class='aimesh_node_setting_info_title'><#4168#></div>";
+html += "<div class='aimesh_node_setting_info_title'><#4172#></div>";
 html += "<div class='aimesh_node_setting_info_content'>";
 html += "<div align='center' style='float:left;cursor:pointer;' id='led_radio'></div>";
 html += "</div>";
@@ -2218,7 +2218,7 @@ nodeClientHtml += "<div class='clientIcon_no_hover " + icon_type + " aimesh_node
 nodeClientHtml += "</td>";
 var client_name = (nodeClientObj.nickName == "") ? nodeClientObj.name : nodeClientObj.nickName;
 nodeClientHtml += "<td width='" + aimesh_node_client_info_width[1] + ";'style='word-wrap:break-word; word-break:break-all;'>" + client_name + "</td>";
-var nodeIP = (nodeClientObj.ip == "offline") ? "<#4141#>" : nodeClientObj.ip;
+var nodeIP = (nodeClientObj.ip == "offline") ? "<#4145#>" : nodeClientObj.ip;
 nodeClientHtml += "<td width='" + aimesh_node_client_info_width[2] + "'>" + nodeIP + "</td>";
 var rssi = 0;
 if(nodeClientObj.isWL == "0")
@@ -2282,7 +2282,7 @@ component.text = "<#3307#>";
 component.icon = "<div class='radioIcon radio_wired'></div>";
 }
 else if(real_port_type.type == "plc"){
-component.text = "<#4217#>";
+component.text = "<#4221#>";
 component.icon = "<div class='radioIcon radio_plc'></div>";
 }
 }

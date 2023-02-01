@@ -1141,11 +1141,11 @@ function create_mr_select(val)
 {
 var select = document.form.mr_enable_x;
 if(improxy_support){
-add_option(select, "<#3836#> IGMP", "1", 0);
-add_option(select, "<#3836#> IGMP & MLD", "3", 0);
+add_option(select, "<#3840#> IGMP", "1", 0);
+add_option(select, "<#3840#> IGMP & MLD", "3", 0);
 }
 else
-add_option(select, "<#3836#>", "1", 0);
+add_option(select, "<#3840#>", "1", 0);
 select.value = val;
 if(select.selectedIndex < 0)
 select.selectedIndex = 0;
@@ -1571,7 +1571,7 @@ PRIO&nbsp;<input type="text" name="switch_wan2prio" class="input_3_table" maxlen
 <th><#3040#></th>
 <td>
 <select name="dr_enable_x" class="input_option">
-<option value="0" <% nvram_match("dr_enable_x", "0","selected"); %> ><#3837#></option>
+<option value="0" <% nvram_match("dr_enable_x", "0","selected"); %> ><#3841#></option>
 <option value="1" <% nvram_match("dr_enable_x", "1","selected"); %> >Microsoft</option>
 <option value="2" <% nvram_match("dr_enable_x", "2","selected"); %> >RFC3442</option>
 <option value="3" <% nvram_match("dr_enable_x", "3","selected"); %> >RFC3442 & Microsoft</option>
@@ -1590,12 +1590,12 @@ PRIO&nbsp;<input type="text" name="switch_wan2prio" class="input_3_table" maxlen
 <th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,11);"><#3049#></a></th>
 <td>
 <select id="mr_enable_x" name="mr_enable_x" class="input_option" onChange="change_mr_enable(this.value);">
-<option value="0" <% nvram_match("mr_enable_x", "0","selected"); %> ><#3837#></option>
-<!-- <option value="1" <% nvram_match("mr_enable_x", "1","selected"); %> ><#3836#></option> -->
+<option value="0" <% nvram_match("mr_enable_x", "0","selected"); %> ><#3841#></option>
+<!-- <option value="1" <% nvram_match("mr_enable_x", "1","selected"); %> ><#3840#></option> -->
 </select>
 <span id="mr_hint" style="display:none;">( <#3050#> )</span>
 <div id="mr_disable" style="display:none;">
-<span style="color:#FFF;"><#3837#></span>
+<span style="color:#FFF;"><#3841#></span>
 <span style="margin-left: 5px;"><#3051#></span>
 </div>
 </td>
@@ -1623,17 +1623,17 @@ PRIO&nbsp;<input type="text" name="switch_wan2prio" class="input_3_table" maxlen
 <th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,16);">Enable Fast Leave</a></th>
 <td>
 <select name="mr_qleave_x" class="input_option">
-<option value="0" <% nvram_match("mr_qleave_x", "0","selected"); %> ><#3837#></option>
-<option value="1" <% nvram_match("mr_qleave_x", "1","selected"); %> ><#3836#></option>
+<option value="0" <% nvram_match("mr_qleave_x", "0","selected"); %> ><#3841#></option>
+<option value="1" <% nvram_match("mr_qleave_x", "1","selected"); %> ><#3840#></option>
 </select>
 </td>
 </tr>
 <tr id="enable_eff_multicast_forward" style="display:none;">
-<th><#3872#></th>
+<th><#3876#></th>
 <td>
 <select name="emf_enable" class="input_option">
-<option value="0" <% nvram_match("emf_enable", "0","selected"); %> ><#3837#></option>
-<option value="1" <% nvram_match("emf_enable", "1","selected"); %> ><#3836#></option>
+<option value="0" <% nvram_match("emf_enable", "0","selected"); %> ><#3841#></option>
+<option value="1" <% nvram_match("emf_enable", "1","selected"); %> ><#3840#></option>
 </select>
 </td>
 </tr>

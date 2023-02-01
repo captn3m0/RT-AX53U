@@ -913,7 +913,7 @@ banner_code +='<tbody><tr>\n';
 if(radio_all_disabled && !radioHintIgnored){
 banner_code += '<div style="padding: 2px 8px;margin: 0 0 2px 230px;width:735px;display:flex;justify-content:space-between;" class="radio_hint top_banner_hint">';
 banner_code += '<div style="background-image: url(\'images/New_ui/exclamationmark.svg\');width:16px;height:16px;background-size: 100%;background-repeat:no-repeat;cursor: pointer"></div>';
-banner_code += '<div style="font-size: 14px;margin-left:12px;"><#4227#></div>';
+banner_code += '<div style="font-size: 14px;margin-left:12px;"><#4231#></div>';
 banner_code += '<div style="background-image: url(\'images/New_ui/arrow_right.svg\');width:16px;height:16px;background-size: 60%;background-repeat:no-repeat;cursor: pointer;margin-left: auto" onclick="radio_hint();"></div>';
 banner_code += '</div>';
 }
@@ -3689,15 +3689,15 @@ $("#loadingBlock").css({"visibility": "hidden"});
 var obj = $('.banner1');
 var code = '<div class="eula_panel_container border-container" style="display:block;position:absolute;width:450px;height:280px;background-color: rgba(0,0,0,.9);padding: 24px 36px;font-family:Roboto;">';
 code += '<div style="font-size: 16px;font-weight: bold;margin: 12px 0;">Your WiFi radio is currently disabled</div>';
-code += '<div style="margin: 24px 0;"><#4228#></div>';
-var _str = '<#4229#>';
-var _str1 = '<#4230#>';
+code += '<div style="margin: 24px 0;"><#4232#></div>';
+var _str = '<#4233#>';
+var _str1 = '<#4234#>';
 var _temp = _str.replace('%1$@', 'WiFi radio').replace('%2$@', _str1);
 code += '<div style="margin: 24px 0;">'+ _temp +'</div>';
-code += '<div style="margin: 32px 0;"><input id="radio_hint_checkbox" type="checkbox"><#4231#></div>';
+code += '<div style="margin: 32px 0;"><input id="radio_hint_checkbox" type="checkbox"><#4235#></div>';
 code += '<div style="display:flex;justify-content:flex-end;margin:28px 0;">';
 code += '<div id="cancelBtn" class="button-container button-container-sm" style="margin: 0 12px;" onclick="radio_disagree();"><div class="button-icon icon-cancel"></div><div class="button-text"><#199#></div></div>';
-code += '<div id="applyBtn" class="button-container button-container-sm" style="margin: 0 12px;" onclick="radio_agree();"><div class="button-icon button-icon-check"></div><div class="button-text"><#4230#></div></div>';
+code += '<div id="applyBtn" class="button-container button-container-sm" style="margin: 0 12px;" onclick="radio_agree();"><div class="button-icon button-icon-check"></div><div class="button-text"><#4234#></div></div>';
 code += '</div></div>';
 obj.html(code);
 }
@@ -3750,7 +3750,7 @@ code += '<div style="font-size: 16px;font-weight: bold;margin: 12px 0;"><#2876#>
 code += '<div style="margin: 18px 0;"><#2877#></div>';
 code += '<div style="margin: 18px 0;"><#2878#></div>';
 if(_flag == "1")
-code += '<div style="margin: 18px 0;"><input id="radio_hint_checkbox" type="checkbox"><#4231#></div>';
+code += '<div style="margin: 18px 0;"><input id="radio_hint_checkbox" type="checkbox"><#4235#></div>';
 code += '<div style="display:flex;justify-content:flex-end;margin-top:28px;">';
 code += '<div id="cancelBtn" class="button-container button-container-sm" style="margin: 0 12px;"><div class="button-icon icon-cancel"></div><div class="button-text"><#199#></div></div>';
 code += '<div id="applyBtn" class="button-container button-container-sm" style="margin: 0 12px;"><div class="button-icon button-icon-check"></div><div class="button-text"><#1517#></div></div>';

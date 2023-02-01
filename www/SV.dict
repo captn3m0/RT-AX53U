@@ -274,7 +274,7 @@ Din fasta programvara har uppdaterats. Stäng det här fönstret och logga in i 
 Uppgradering av fast program är klart. Starta om RT-AX53U manuellt.
 To comply with regulatory amendments, we have modified our certificate rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
 Du har angett ett felaktigt lösenord 5 gånger. Du blir utloggad.
-2022 ASUSTeK Computer Inc. Alla rättigheter förbehållna.
+2023 ASUSTeK Computer Inc. Alla rättigheter förbehållna.
 Om en konfigurationsparameter finns i både den nya och den gamla versionen kommer dess inställning att behållas under uppgraderingen.
 Fast programvaruversion:
 * Sommartid aktiveras i denna tidszon.
@@ -1418,7 +1418,7 @@ Nätverksplatsen (Samba) riskerades och därför har [ Tillåt gästinloggning ]
 Uppdatera nu
 Ändra nu
 Visa inte detta meddelande igen
-ASUS Service / Ärendenummer eller CRS ID
+ASUS Service / Ärendenummer
 Autentiserad
 Inte autentiserad
 Auktoriserade nycklar
@@ -1921,7 +1921,7 @@ System Temperature
 Detaljerade förklaringar finns på <a id="network_detect_faq" href="" target="_blank" style="margin-left:5px; text-decoration: underline;"> ASUS supportwebbplats Vanliga frågor</a>, som kanske kan hjälpa dig att använda denna funktion effektivt.
 Hitta Vanliga frågor
 3G/4G-logg
-Fyll i den här kolumnen med ditt ASUS-servicenummer eller ärendenummer som du fått av teletjänstcentralen hos ASUS eller CRS-ID (Customer Review Support) som ASUS-kundtjänst gett dig (på Amazons webbplats). Om du inte minns ditt servicenummer så ber vi dig söka i din e-post efter ett e-postmeddelande från ASUS tekniska service.<br>Den här kolumnen accepterar bara en bokstav ur det engelska alfabetet med efterföljande 8–11 siffror för ärendenummer, följt av ett bindestreck och därefter 4 siffror (exempelvis: E1234567890-1234). Eller ett CRS-ID som har 5 siffror (exempelvis 10688).
+Fyll i den här kolumnen med ditt ASUS-servicenummer eller ärendenummer som du fått av teletjänstcentralen hos ASUS. Om du inte minns ditt servicenummer så ber vi dig söka i din e-post efter ett e-postmeddelande från ASUS tekniska service.<br>Den här kolumnen accepterar bara en bokstav ur det engelska alfabetet med efterföljande 8–11 siffror för ärendenummer, följt av ett bindestreck och därefter 4 siffror (exempelvis: E1234567890-1234).
 Omstart av schemaläggaren är för närvarande aktiverad. Kontrollera schemaläggningsinställning.
 Trådlös schemaläggare är avaktiverad för närvarande, kontrollera schemaläggningsinställning.
 2,4GHz eller 5GHz eller 5GHz-1 eller 5GHz-2 (eller 2,4GHz och 5GHz-2 och så vidare) eller alla band som för närvarande är avaktiverade. Kontrollera Wi-Fi-radioinställningen.
@@ -3775,6 +3775,10 @@ WiFi Agile Multiband
 *Om WiFi Agile Multiband är aktiverat så måste Protected Management Frames vara aktiverat. (kapabla eller obligatoriska)
 Detta fält aktiverar verifieringsmetoderrna för trådlösa klienter.
 Verifieringsmetod
+WPA3 är en ny generation krypteringsteknik som stärker säkerheten för anslutningen, men vissa gamla enheter kan vara inkompatibla och kan inte ansluta till nätverket om WPA3-läge väljs.
+WPA3 är en ny generation krypteringsteknik som stärker säkerheten för anslutningen, men vissa gamla enheter kan vara inkompatibla och kan inte ansluta till nätverket om WPA3/WPA2-läge väljs.
+WPA2 ger inte den bästa nätverkssäkerheten, välj endast detta alternativ om du har äldre enheter som inte kan ansluta till WPA3/WPA2-läge.
+WPA är en föråldrad säkerhetsteknik. Välj endast detta alternativ om WPA2-läge inte fungerar för dig.
 För att få bästa trådlösa signal föreslår vi att du ställer in routerkanalen på Kanal 2. Klicka på OK för att ställa in routerkanalen på Kanal 2. I annat fall klicka på Avbryt.
 På grund av lokala lagar kan Kanal 1 inte erbjuda bästa trådlösa täckning. Klicka på OK om du vill fortsätta att använda Kanal 1. I annat fall klicka på Avbryt.
 För att få bästa trådlösa signal föreslår vi att du ställer in routerkanalen på Kanal 10. Klicka på OK för att ställa in routerkanalen på Kanal 10. I annat fall klicka på Avbryt.

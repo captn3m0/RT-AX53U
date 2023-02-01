@@ -274,7 +274,7 @@ Fastvareoppdateringen er ferdig. Lukk dette vinduet og gå til AiMesh-ruteren ig
 Fastvareoppgraderingen er ferdig. Start RT-AX53U på nytt manuelt.
 To comply with regulatory amendments, we have modified our certificate rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
 Du har skrevet inn feil passord fem ganger. Du blir logget ut.
-2022 ASUSTeK Computer Inc. Alle rettigheter forbeholdt.
+2023 ASUSTeK Computer Inc. Alle rettigheter forbeholdt.
 Når det gjelder konfigurasjonsparametere som finnes i både den gamle og den nye fastvaren, beholdes innstillingen under oppgraderingen.
 Fastvareversjon:
 * Sommertid er aktivert i denne tidssonen.
@@ -1418,7 +1418,7 @@ Endre nå
 Oppdatere nå
 Endre nå
 Vis ikke denne beskjeden igjen
-ASUS Service / Saksnummer eller CRS ID
+ASUS Service / Saksnummer
 Godkjent
 Ikke godkjent
 Godkjente nøkler
@@ -1921,7 +1921,7 @@ System Temperature
 Du finner en detaljert forklaring under <a id="network_detect_faq" href="" target="_blank" style="margin-left:5px; text-decoration: underline;">Vanlige spørsmål på ASUS-støtteområdet</a> som kan hjelpe deg med å bruke denne funksjonen effektivt.
 Finn vanlige spørsmål
 3G/4G-logg
-Fyll ut denne kolonnen med ASUS-støttenummeret eller saksnummeret du har fått fra ASUS-callsenteret, eller CRS-ID-en (Customer Review Support) du har fått fra ASUS-kundestøtten (på Amazon-nettstedet). Hvis du ikke husker saksnummeret, kan du se etter en e-post fra ASUS' tekniske støtte i innboksen din.<br>Denne kolonnen kan bare inneholde én engelsk bokstav og et saksnummer på 8–11 sifre etterfulgt av en bindestrek (-) og et andre saksnummer på 4 sifre (f.eks. E1234567890-1234). Eller 5 sifre når det gjelder CRS-ID (f.eks. 10688).
+Fyll ut denne kolonnen med ASUS-støttenummeret eller saksnummeret du har fått fra ASUS-callsenteret. Hvis du ikke husker saksnummeret, kan du se etter en e-post fra ASUS' tekniske støtte i innboksen din.<br>Denne kolonnen kan bare inneholde én engelsk bokstav og et saksnummer på 8–11 sifre etterfulgt av en bindestrek (-) og et andre saksnummer på 4 sifre (f.eks. E1234567890-1234).
 Tidsplan for omstart er for øyeblikket aktivert. Kontroller innstillingen for tidsplan.
 Tidsplan for trådløs er for øyeblikket aktivert. Kontroller innstillingen for tidsplan.
 2,4 GHz eller 5 GHz eller 5 GHz-1 eller 5 GHz-2 (eller 2,4 GHz og 5 GHz-2 og så videre) eller alle bånd er for øyeblikket deaktivert. Kontroller Wi-Fi-radioinnstillingen.
@@ -3775,6 +3775,10 @@ WiFi Agile Multiband
 Hvis WiFi Agile Multiband er aktivert, må Protected Management Frames aktiveres. (Funksjonsdyktig eller obligatorisk)
 Dette feltet aktiverer godkjenningsmetodene for trådløse klienter.
 Godkjennings metode
+WPA3 er en ny generasjon krypteringsteknologi, som sterkt forbedrer tilkoblingssikkerheten, men noen gamle enheter kan være inkompatible og kan ikke koble seg til nettverket hvis WPA3-modus er valgt.
+WPA3 er en ny generasjon krypteringsteknologi, som sterkt forbedrer tilkoblingssikkerheten, men noen gamle enheter kan være inkompatible og kan ikke koble seg til nettverket hvis WPA3/WPA2-modus er valgt.
+WPA2 gir ikke den beste nettverkssikkerheten, velg bare denne alternativet hvis du har eldre enheter som ikke kan koble seg til WPA3/WPA2-modus.
+WPA er en utdatert sikkerhetsteknologi. Velg bare denne alternativet hvis WPA2-modus ikke fungerer for deg.
 For å sikre best trådløst signal foreslår vi at du setter ruterens kanal til kanal 2. For å sette ruterens kanal til kanal 2 klikker du OK. Hvis ikke, klikker du Avbryt.
 På grunn av lokale bestemmelser kan Kanal 1 gir ikke den beste trådløse dekningen. Hvis du ønsker å fortsette å bruke Kanal 1, klikker du OK. Hvis ikke, klikker du Avbryt.
 For å sikre best trådløst signal foreslår vi at du setter ruterens kanal til kanal 10. For å sette ruterens kanal til kanal 10 klikker du OK. Hvis ikke, klikker du Avbryt.

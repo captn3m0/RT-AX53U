@@ -274,7 +274,7 @@ La actualización de firmware ha finalizado. Cierre esta ventana y vuelva a acce
 Actualización de firmware finalizada. Reinicie RT-AX53U manualmente.
 To comply with regulatory amendments, we have modified our certificate rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
 Ha introducido una contraseña incorrecta 5 veces. Se cerrará su sesión.
-2022 ASUSTeK Computer Inc. Reservados todos los derechos.
+2023 ASUSTeK Computer Inc. Reservados todos los derechos.
 Los parámetros de configuración mantendrán sus ajustes durante el proceso de actualización del firmware.
 Versión de firmware:
 * El horario de verano está habilitado en esta zona horaria.
@@ -1418,7 +1418,7 @@ Cambiar ahora
 Actualizar ahora
 Establecer ahora
 No volver a mostrar este mensaje
-ASUS Número de servicio / de caso o CRS ID
+ASUS Número de servicio / de caso
 Autenticado
 No autenticado
 Claves autorizadas
@@ -1921,7 +1921,7 @@ System Temperature
 En la sección de <a id="network_detect_faq" href="" target="_blank" style="margin-left:5px; text-decoration: underline;">preguntas más frecuentes del sitio de soporte técnico de ASUS</a> encontrará explicaciones detalladas que pueden ayudarle a utilizar esta función de forma eficaz.
 Buscar preguntas más frecuentes
 Registro 3G/4G
-Rellene esta columna con su número de servicio ASUS o número de caso proporcionado por el Centro de llamadas de ASUS o con el Id del CRS (Customer Review Support) proporcionado por el servicio de atención al cliente de ASUS (en el sitio de Amazon). Si no recuerda su número de servicio, busque en su correo electrónico un mensaje del Servicio Técnico de ASUS.<br>Esta columna solo acepta una letra latina con un número de caso de 8 a 11 dígitos y - (guion) segundo número de caso de 4 dígitos (por ejemplo: E1234567890-1234). O bien, para ID de CRS, 5 dígitos (como 10688).
+Rellene esta columna con su número de servicio ASUS o número de caso proporcionado por el Centro de llamadas de ASUS. Si no recuerda su número de servicio, busque en su correo electrónico un mensaje del Servicio Técnico de ASUS.<br>Esta columna solo acepta una letra latina con un número de caso de 8 a 11 dígitos y - (guion) segundo número de caso de 4 dígitos (por ejemplo: E1234567890-1234).
 Programador de reinicio actualmente habilitado; verifique la configuración del programador.
 Programador inalámbrico actualmente habilitado; verifique la configuración del programador.
 2,4GHz o 5GHz o 5GHz-1 o 5GHz-2 (o 2,4GHz y 5GHz-2 y así sucesivamente) o Todas las bandas están actualmente deshabilitadas, verifique la configuración de radio WiFi.
@@ -3775,6 +3775,10 @@ WiFi Agile Multiband
 *Si se habilita WiFi Agile Multiband, se habilitarán los cuadros de gestión protegida.(Capaz o Requerido)
 Este campo habilita los métodos de autenticación para clientes inalámbricos.
 Método de autenticación
+WPA3 es una nueva tecnología de cifrado de generación que mejora en gran medida la seguridad de la conexión, pero algunos dispositivos antiguos pueden ser incompatibles y no pueden conectarse a la red si se selecciona el modo WPA3.
+WPA3 es una nueva tecnología de cifrado de generación que mejora en gran medida la seguridad de la conexión, pero algunos dispositivos antiguos pueden ser incompatibles y no pueden conectarse a la red si se selecciona el modo WPA3/WPA2.
+WPA2 no ofrece la mejor seguridad de red, seleccione esta opción solo si tiene dispositivos más antiguos que no pueden conectarse al modo WPA3/WPA2.
+WPA es una tecnología de seguridad obsoleta. Seleccione esta opción solo si el modo WPA2 no funciona para usted.
 Para garantizar la mejor señal inalámbrica, le recomendamos que establezca el canal del enrutador en Canal 2. Para establecer el canal del enrutador en Canal 2, haga clic en Aceptar. De lo contrario, haga clic en Cancelar.
 Debido a normativas legales, el Canal 1 no puede proporcionar la mejor cobertura inalámbrica. Si desea seguir utilizando el Canal 1, haga clic en Aceptar. De lo contrario, haga clic en Cancelar.
 Para garantizar la mejor señal inalámbrica, le recomendamos que establezca el canal del enrutador en Canal 10. Para establecer el canal del enrutador en Canal 10, haga clic en Aceptar. De lo contrario, haga clic en Cancelar.

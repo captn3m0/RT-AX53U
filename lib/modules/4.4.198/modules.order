@@ -76,7 +76,6 @@ kernel/net/netfilter/nf_nat_sip.ko
 kernel/net/netfilter/xt_DSCP.ko
 kernel/net/netfilter/xt_HL.ko
 kernel/net/netfilter/xt_NFQUEUE.ko
-kernel/net/netfilter/xt_REDIRECT.ko
 kernel/net/netfilter/xt_dscp.ko
 kernel/net/netfilter/xt_hashlimit.ko
 kernel/net/netfilter/xt_hl.ko

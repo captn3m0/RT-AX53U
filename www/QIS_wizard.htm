@@ -138,6 +138,7 @@ systemVariable.CoBrand = initNvram.CoBrand;
 systemVariable.forceChangePw = (httpApi.hookGet("check_pw") == '1') ? true : false;
 systemVariable.linkLnternet = httpApi.isConnected();
 systemVariable.maxPasswordLen = getSupportNum("MaxLen_http_passwd");
+systemVariable.keepDefpsk = (systemVariable.productid == "RT-AX53U" && isSupport("defpsk") && isSku("JP")) ? true : false;
 httpApi.log("tcode", systemVariable.territoryCode, systemVariable.qisSession)
 if(isSupport("2p5G_LWAN"))
 systemVariable.originWansExtwan = httpApi.nvramGet(["wans_extwan"]).wans_extwan;
@@ -502,7 +503,7 @@ $('#selected_lang').html("<#869#>");
 </div>
 <div class="table_td">
 <div class="pageDesc">
-<div><#4134#></div>
+<div><#4138#></div>
 <div><#568#></div>
 </div>
 <div id="resetModemContainer">
@@ -1875,11 +1876,11 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div class="titleMain"><#2326#></div>
-<div class="titleSub"><#3817#></div>
+<div class="titleSub"><#3821#></div>
 </div>
 <div class="table_td">
 <div id="siteSurvey_search">
-<div class="pageDesc"><#4144#></div>
+<div class="pageDesc"><#4148#></div>
 <div id="siteSurveyLoading" class="selectorTopContainer"></div>
 </div>
 <div id="siteSurvey_fail">
@@ -1910,7 +1911,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div class="titleMain"><#2326#></div>
-<div class="titleSub"><#3817#></div>
+<div class="titleSub"><#3821#></div>
 </div>
 <div class="table_td">
 <div class="pageDesc"><#541#></div>
@@ -2039,7 +2040,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <option value="psk2" selected>WPA2-Personal</option>
 </select>
 <div class="inputTitle hint_yellow" id="manual_pap_setup-nmode_hint">
-<#3944#>
+<#3948#>
 </div>
 </div>
 </div>
@@ -2056,7 +2057,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div class="manual_pap_setup" id="manual_pap_setup-wep">
 <div class="inputTitleContainer">
-<div class="inputTitle"><#3834#></div>
+<div class="inputTitle"><#3838#></div>
 </div>
 <div class="inputContainer">
 <select id="wlc_wep_manual" class="optionInput">
@@ -2122,7 +2123,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <label for="wireless_checkbox" class="labelInput"><#672#></label>
 <input type="checkbox" id="wireless_checkbox" data-mini="true"/>
 </div>
-<div id="wifi6e_legacy_hint" class="hint_yellow" style="padding:30px;margin-top:6px;display:none"><#4224#> <#4225#></div>
+<div id="wifi6e_legacy_hint" class="hint_yellow" style="padding:30px;margin-top:6px;display:none"><#4228#> <#4229#></div>
 <div class="labelContainer" id="syncSSID" style="display:none;">
 <label for="wireless_sync_checkbox" class="labelInput"><#629#></label>
 <input type="checkbox" id="wireless_sync_checkbox" data-mini="true"/>
@@ -2156,7 +2157,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div class="table_td">
 <div class="pageDesc"><#259#></div>
-<!--div class="pageDesc forceUpgrade"><#4133#></div-->
+<!--div class="pageDesc forceUpgrade"><#4137#></div-->
 <div>
 <div>
 <div class="inputTitleContainer">
@@ -2278,9 +2279,9 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div class="pageDesc">
 <div class="descSteps">Step 2</div>
-<div id="stepText2"><#4135#></div>
+<div id="stepText2"><#4139#></div>
 </div>
-<div id="wifi6e_legacy_hint_summary" class="hint_yellow" style="display:none">*Note: <#4226#></div>
+<div id="wifi6e_legacy_hint_summary" class="hint_yellow" style="display:none">*Note: <#4230#></div>
 <div id="finishButton" style="display:none">
 <div class="footer_desktop">
 <div class="desktop_applyBtn" onclick="goTo.leaveQIS();"><#691#></div>
@@ -2364,7 +2365,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div class="titleMain"><#2326#></div>
-<div class="titleSub"><#4143#></div>
+<div class="titleSub"><#4147#></div>
 </div>
 <div class="table_td">
 <div class="pageDesc"><#56#> :</div>
@@ -2410,11 +2411,11 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div class="titleMain"><#2326#></div>
-<div class="titleSub"><#3970#></div>
+<div class="titleSub"><#3974#></div>
 </div>
 <div class="table_td">
-<div class="pageDesc"><#3971#></div>
-<div class="pageDesc"><#3984#></div>
+<div class="pageDesc"><#3975#></div>
+<div class="pageDesc"><#3988#></div>
 <div class="selectorTopContainer">
 <div class="selectorContainer routerSupport">
 <div class="selectorContainerDiv">
@@ -2429,7 +2430,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <div class="selectorContainer routerSupport">
 <div class="selectorContainerDiv">
 <div class="selectBar" onclick="apply.yadnsSafe();">
-<#187#>. <#3983#>
+<#187#>. <#3987#>
 </div>
 <div class="narrowContainer">
 <div class="icon_arrow_right" style="width:20px;height:32px;"></div>

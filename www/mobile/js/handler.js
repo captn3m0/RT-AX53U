@@ -2760,9 +2760,9 @@ systemVariable.papList = [];
 systemVariable.papListAiMesh = [];
 $("#siteSurveyLoading").html(Get_Component_Loading);
 if(isSupport("concurrep"))
-$("#siteSurvey_page").find(".titleSub").html("<#4143#>");
+$("#siteSurvey_page").find(".titleSub").html("<#4147#>");
 else
-$("#siteSurvey_page").find(".titleSub").html("<#3817#>");
+$("#siteSurvey_page").find(".titleSub").html("<#3821#>");
 httpApi.nvramSet({"action_mode": "apply", "rc_service":"restart_wlcscan"}, function(){
 setTimeout(function(){
 var siteSurveyResult = {
@@ -2802,9 +2802,9 @@ goTo.loadPage("amas_option_page", false);
 }
 goTo.papList = function() {
 if(isSupport("RPMesh"))
-$("#papList_page").find(".titleSub").html("<#4143#>");
+$("#papList_page").find(".titleSub").html("<#4147#>");
 else
-$("#papList_page").find(".titleSub").html("<#3817#>");
+$("#papList_page").find(".titleSub").html("<#3821#>");
 genPAPList(systemVariable.papList, systemVariable.multiPAP.wlcOrder);
 goTo.loadPage("papList_page", false);
 };

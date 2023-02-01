@@ -274,7 +274,7 @@ Uw firmware-update is voltooid. Sluit dit venster en start uw AiMesh-router opni
 De firmware-upgrade is voltooid. Start RT-AX53U handmatig op.
 Om te voldoen aan de regelgevende wijzigingen, hebben we onze certificeringsregel gewijzigd om een betere firmwarekwaliteit te garanderen. Deze versie is niet compatibel met alle eerder uitgegeven ASUS-firmware en niet-gecertificeerde firmware van derden. Raadpleeg onze officiële websites voor de gecertificeerde firmware.
 U hebt 5 keer een onjuist wachtwoord ingevoerd. U wordt afgemeld.
-2022 ASUSTeK Computer Inc. Alle rechten voorbehouden.
+2023 ASUSTeK Computer Inc. Alle rechten voorbehouden.
 Configuratieparameters zullen hun instellingen behouden tijdens het firmware-updateproces.
 Firmwareversie:
 * De zomertijd is ingeschakeld in deze tijdzone.
@@ -1418,7 +1418,7 @@ Nu wijzigen
 Nu bijwerken
 Nu maken
 Dit bericht niet meer weergeven
-ASUS-service / zaaknummer of CRS ID
+ASUS-service / zaaknummer
 Geverifieerd
 Niet geverifieerd
 Gemachtigde codes
@@ -1921,7 +1921,7 @@ System Temperature
 Gedetailleerde uitleg vindt u onder <a id="network_detect_faq" href="" target="_blank" style="margin-left:5px; text-decoration: underline;">de veelgestelde vragen van de ASUS-ondersteuning</a>. Dit kan u helpen deze functie doeltreffend uit te voeren.
 Veelgestelde vragen zoeken
 3G/4G log
-Vermeld in deze kolom uw ASUS-servicenummer of het casusnummer dat het ASUS-callcenter heeft verstrekt of het CRS-ID dat de ASUS-klantenservice bezorgde (op de website van Amazon). Raadpleeg uw e-mail en zoek de e-mail van de technische dienst van ASUS als u zich uw servicenummer niet meer kunt herinneren.<br>In deze kolom mogen slechts één Engelse letter met nummer 8~11 en - (koppelteken) tweede 4-cijferig nummer staan (bijvoorbeeld: E1234567890-1234). Voor het CRS-ID zijn 5 cijfers toegestaan (zoals 10688).
+Vermeld in deze kolom uw ASUS-servicenummer of het casusnummer dat het ASUS-callcenter. Raadpleeg uw e-mail en zoek de e-mail van de technische dienst van ASUS als u zich uw servicenummer niet meer kunt herinneren.<br>In deze kolom mogen slechts één Engelse letter met nummer 8~11 en - (koppelteken) tweede 4-cijferig nummer staan (bijvoorbeeld: E1234567890-1234).
 Scheduler Reboot is momenteel ingeschakeld. Controleer de instelling van de Scheduler.
 Wireless Scheduler is momenteel ingeschakeld. Controleer de instelling van de Scheduler.
 2,4 GHz of 5 GHz of 5 GHz-1 of 5 GHz-2 (of 2,4 GHz en 5 GHz-2 etc.) of alle bandbreedtes zijn momenteel uitgeschakeld. Controleer de WiFi-radio-instelling.
@@ -3775,6 +3775,10 @@ WiFi Agile Multiband
 *Als de WiFi Agile Multiband is ingeschakeld, moeten de Protected Management Frames zijn ingeschakeld. (Geschikt of vereist)
 Via dit veld worden verificatiemethoden voor draadloze clients ingeschakeld.
 Verificatiemethode
+WPA3 is een nieuwe generatie encryptietechnologie, die de verbindingsbeveiliging sterk verbetert, maar sommige oude apparaten kunnen mogelijk niet compatibel zijn en kunnen niet verbinden met het netwerk als WPA3-modus geselecteerd is.
+WPA3 is een nieuwe generatie encryptietechnologie, die de verbindingsbeveiliging sterk verbetert, maar sommige oude apparaten kunnen mogelijk niet compatibel zijn en kunnen niet verbinden met het netwerk als WPA3/WPA2-modus geselecteerd is.
+WPA2 biedt niet de beste netwerkbeveiliging, selecteer deze optie alleen als u oudere apparaten heeft die niet in staat zijn om verbinding te maken met WPA3/WPA2-modus.
+WPA is een verouderde beveiligingstechnologie. Selecteer deze optie alleen als WPA2-modus niet werkt voor u.
 Om het beste draadloze signaal te garanderen, raden wij u aan het routerkanaal in te stellen op Kanaal 2. Klik op OK om het routerkanaal op Kanaal 2 te zetten. Klik anders op Cancel (Annuleren).
 Vanwege lokale voorschriften kan Kanaal 1 niet de beste draadloze dekking bieden. Als u Kanaal 1 wilt blijven gebruiken, klikt u op OK. Klik anders op Cancel (Annuleren).
 Om het beste draadloze signaal te garanderen, raden wij u aan het routerkanaal in te stellen op Kanaal 10. Klik op OK om het routerkanaal op Kanaal 10 te zetten. Klik anders op Cancel (Annuleren).

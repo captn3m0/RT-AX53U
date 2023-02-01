@@ -205,10 +205,10 @@ change_nat(<% nvram_get("wan_nat_x"); %>);
 if(yadns_support){
 if(yadns_enable != 0 && yadns_mode != -1){
 document.getElementById("yadns_hint").style.display = "";
-document.getElementById("yadns_hint").innerHTML = "<span><#3985#></span>";
+document.getElementById("yadns_hint").innerHTML = "<span><#3989#></span>";
 if(dnspriv_support){
 document.getElementById("yadns_hint_dnspriv").style.display = "";
-document.getElementById("yadns_hint_dnspriv").innerHTML = "<span><#3985#></span>";
+document.getElementById("yadns_hint_dnspriv").innerHTML = "<span><#3989#></span>";
 }
 }
 }
@@ -242,7 +242,7 @@ add_options_x2(document.form.wanports_bond_menu, desc, val, orig_wanports_bond);
 else if(based_modelid == "TUF-AX4200" || based_modelid == "TUF-AX6000") {
 var desc = [ "LAN 1", "LAN 2", "LAN 3", "LAN 4" ];
 var val = [ "0 1", "0 2", "0 3", "0 4" ];
-if (based_modelid == "TUF-AX4200" && "<% nvram_get("HwId"); %>" == "B") {
+if ((based_modelid == "TUF-AX4200" && "<% nvram_get("HwId"); %>" == "B") || based_modelid == "TUF-AX6000") {
 desc.push("2.5G LAN");
 val.push("0 5");
 }
@@ -397,14 +397,17 @@ if(wans_dualwan_NAME == "WAN2")
 document.form.wan_unit.options[i] = new Option("10G base-T", i);
 else if(wans_dualwan_NAME == "SFP+")
 document.form.wan_unit.options[i] = new Option("10G SFP+", i);
-} else if (based_modelid == "TUF-AX4200") {
+} else if (based_modelid == "TUF-AX4200" || based_modelid == "TUF-AX6000") {
 if (wans_dualwan_NAME == "WAN")
 document.form.wan_unit.options[i] = new Option("2.5G WAN", i);
 }
 }
 document.form.wan_unit.selectedIndex = '<% nvram_get("wan_unit"); %>';
 if(wans_dualwan.search(" ") < 0 || wans_dualwan.split(" ")[1] == 'none' || !dualWAN_support)
+{
 document.getElementById("WANscap").style.display = "none";
+document.form.wan_unit.value = 0; //avoid wan_unit=1 case
+}
 }
 var reboot_confirm=0;
 function applyRule(){
@@ -1723,7 +1726,7 @@ location.href = "/";
 <table id="dot1q_setting" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead><tr><td colspan="2">802.1Q</td></tr></thead>
 <tr>
-<th><#3836#></th>
+<th><#3840#></th>
 <td>
 <input type="radio" name="ewan_dot1q" class="input" value="1" onclick="change_dsl_dhcp_enable();" <% nvram_match("ewan_dot1q", "1", "checked"); %>><#187#>
 <input type="radio" name="ewan_dot1q" class="input" value="0" onclick="change_dsl_dhcp_enable();" <% nvram_match("ewan_dot1q", "0", "checked"); %>><#186#>
@@ -1745,7 +1748,7 @@ location.href = "/";
 <table id="wan_dot1q_setting" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead><tr><td colspan="2">802.1Q</td></tr></thead>
 <tr>
-<th><#3836#></th>
+<th><#3840#></th>
 <td>
 <input type="radio" name="wan_dot1q" class="input" value="1" onclick="return change_common_radio(this, 'IPConnection', 'wan_dot1q', 1);" <% nvram_match("wan_dot1q", "1", "checked"); %>><#187#>
 <input type="radio" name="wan_dot1q" class="input" value="0" onclick="return change_common_radio(this, 'IPConnection', 'wan_dot1q', 0);" <% nvram_match("wan_dot1q", "0", "checked"); %>><#186#>
@@ -2095,7 +2098,7 @@ location.href = "/";
 <select name="wan_dhcp_qry" class="input_option">
 <option value="0" <% nvram_match(" wan_dhcp_qry", "0","selected"); %>><#1732#></option>
 <option value="1" <% nvram_match(" wan_dhcp_qry", "1","selected"); %>><#1730#></option>
-<option value="2" <% nvram_match(" wan_dhcp_qry", "2","selected"); %>><#4061#></option>
+<option value="2" <% nvram_match(" wan_dhcp_qry", "2","selected"); %>><#4065#></option>
 </select>
 </td>
 </tr>

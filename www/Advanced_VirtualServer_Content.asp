@@ -371,7 +371,7 @@ return false;
 return true;
 }
 function del_Row(_this){
-if(!confirm("<#4128#>"))
+if(!confirm("<#4132#>"))
 return false;
 var row_idx = $(_this).closest("*[row_tr_idx]").attr( "row_tr_idx" );
 var wan_idx = $(_this).closest("*[wanUnitID]").attr( "wanUnitID" );

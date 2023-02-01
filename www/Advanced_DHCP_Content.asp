@@ -110,7 +110,7 @@ document.getElementById("VPN_conflict_span").innerHTML = "<#3521#>"+pptpd_client
 if(yadns_support){
 if(yadns_enable != 0 && yadns_mode != -1){
 document.getElementById("yadns_hint").style.display = "";
-document.getElementById("yadns_hint").innerHTML = "<span><#3985#></span>";
+document.getElementById("yadns_hint").innerHTML = "<span><#3989#></span>";
 }
 }
 document.form.sip_server.disabled = true;
@@ -209,7 +209,7 @@ return false;
 }
 });
 if(policy_flag){
-if(!confirm("Remove the client's IP binding will also delete the client's policy in the exception list of <#4108#>. Are you sure you want to delete?"))/*untranslated*/
+if(!confirm("Remove the client's IP binding will also delete the client's policy in the exception list of <#4112#>. Are you sure you want to delete?"))/*untranslated*/
 return false;
 }
 }

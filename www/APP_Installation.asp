@@ -631,9 +631,9 @@ htmlcode += '<div style="margin-top:10px;">\n';
 if(apps_array[i][3] == "yes"){ //installed
 htmlcode += '<span class="app_action" onclick="apps_form(\'remove\',\''+ apps_array[i][0] +'\',\'\');">Uninstall</span>\n'; /* untranslated */
 if(apps_array[i][4] == "yes") //enable
-htmlcode += '<span class="app_action" onclick="apps_form(\'enable\',\''+ apps_array[i][0] +'\',\'no\');"><#3837#></span>\n';
+htmlcode += '<span class="app_action" onclick="apps_form(\'enable\',\''+ apps_array[i][0] +'\',\'no\');"><#3841#></span>\n';
 else
-htmlcode += '<span class="app_action" onclick="apps_form(\'enable\',\''+ apps_array[i][0] +'\',\'yes\');"><#3836#></span>\n';
+htmlcode += '<span class="app_action" onclick="apps_form(\'enable\',\''+ apps_array[i][0] +'\',\'yes\');"><#3840#></span>\n';
 if(sw_mode == 3 || link_internet == "2")
 htmlcode += '<span class="app_action" onclick="apps_form(\'update\',\''+ apps_array[i][0] +'\',\'\');">Check update</span>\n'; /* untranslated */
 if(apps_array[i][0] == "downloadmaster"){

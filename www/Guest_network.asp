@@ -376,11 +376,11 @@ else {
 htmlcode += '<tfoot><tr rowspan="3"><td align="center"><span style="color:#FFCC00;">Used by ' + captive_portal_used_wl_array["wl" + unit_subunit] + '</span></td></tr></tfoot>';
 }
 }else{
-htmlcode += '<tfoot><tr rowspan="3"><td align="center"><input type="button" class="button_gen" value="<#3836#>" onclick="create_guest_unit('+ unit +','+ subunit +');"></td></tr></tfoot>';
+htmlcode += '<tfoot><tr rowspan="3"><td align="center"><input type="button" class="button_gen" value="<#3840#>" onclick="create_guest_unit('+ unit +','+ subunit +');"></td></tr></tfoot>';
 }
 if(sw_mode != "3"){
 if(gn_array[i][0] == "1" && control_setting_flag && !amazon_wss_if_support){
-var status_Access_Intranet = (gn_array[i][12]=="on")?"<#3836#>":"<#1517#>";
+var status_Access_Intranet = (gn_array[i][12]=="on")?"<#3840#>":"<#1517#>";
 htmlcode += '<tr><td align="center" onclick="change_guest_unit('+ unit +','+ subunit +');">'+ status_Access_Intranet +'</td></tr>';
 }
 }
@@ -400,7 +400,7 @@ if(amazon_wss_if_support){
 if(amazon_wss_status)
 htmlcode += '<div style="font-size:12px;font-weight:bolder;color:#FC0;position:absolute;text-align:center;width:100%;">Used by <br>Amazon WiFi Simple Setup</div>';/* untranslated */
 else
-htmlcode += '<div style="position:absolute;margin-top:10px;text-align:center;""><input type="button" class="button_gen" style="word-break:break-word;"value="<#3966#>" onclick="enable_amazon_wss('+ unit +','+ subunit +');"></div>';
+htmlcode += '<div style="position:absolute;margin-top:10px;text-align:center;""><input type="button" class="button_gen" style="word-break:break-word;"value="<#3970#>" onclick="enable_amazon_wss('+ unit +','+ subunit +');"></div>';
 }
 if(lyra_hide_support){
 if(i == "0")
@@ -1428,17 +1428,17 @@ applyRule();
 <table style="margin-left:20px;margin-bottom:25px;" width="95%" align="center" cellpadding="4" cellspacing="0" class="gninfo_head_table">
 <tr>
 <td align="left" style="color:#5AD; font-size:16px; border-bottom:1px dashed #AAA;" colspan="2">
-<span><#3966#></span>
+<span><#3970#></span>
 </td>
 </tr>
 <tr>
 <td>
-<span style="line-height:20px;"><#3967#></span>&nbsp;
+<span style="line-height:20px;"><#3971#></span>&nbsp;
 <a id="faq_amazon" style="color:#FC0;text-decoration:underline;cursor:pointer;" href="https://www.amazon.com/gp/help/customer/display.html/?nodeId=GMPKVYDBR223TRPY" target="_blank"><#2601#></a>
 <br>
-<span><#3968#></span>
+<span><#3972#></span>
 <br>
-<span id="amazon_wss_hint" style="color:#FC0;line-height:20px;"><#2146#>&nbsp;<#3969#></span>
+<span id="amazon_wss_hint" style="color:#FC0;line-height:20px;"><#2146#>&nbsp;<#3973#></span>
 </td>
 </tr>
 <tr>
@@ -1482,7 +1482,7 @@ applyRule();
 </td>
 </tr>
 <tr class="captive_portal_control_class">
-<th><#3859#></th>
+<th><#3863#></th>
 <td>
 <input type="radio" value="1" name="wl_closed" class="content_input_fd" ><#187#>
 <input type="radio" value="0" name="wl_closed" class="content_input_fd" ><#186#>
@@ -1495,7 +1495,7 @@ applyRule();
 </td>
 </tr>
 <tr style="display:none">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 4);"><#3898#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 4);"><#3902#></a></th>
 <td>
 <select name="wl_nmode_x" class="input_option" onChange="wireless_mode_change(this);" disabled>
 <option value="0" <% nvram_match("wl_nmode_x", "0","selected"); %>><#153#></option>
@@ -1503,7 +1503,7 @@ applyRule();
 <option value="2" <% nvram_match("wl_nmode_x", "2","selected"); %>>Legacy</option>
 </select>
 <input type="checkbox" name="wl_gmode_check" id="wl_gmode_check" value="" onClick="wl_gmode_protection_check();"> b/g Protection</input>
-<!--span id="wl_nmode_x_hint" style="display:none"><#3944#></span-->
+<!--span id="wl_nmode_x_hint" style="display:none"><#3948#></span-->
 </td>
 </tr>
 <tr id="wl_channel_field">
@@ -1515,7 +1515,7 @@ applyRule();
 </td>
 </tr>
 <tr id="wl_bw_field" style="display:none;">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 14);"><#3784#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 14);"><#3788#></a></th>
 <td>
 <select name="wl_bw" class="input_option" onChange="insertExtChannelOption();" disabled>
 <option class="content_input_fd" value="0" <% nvram_match("wl_bw", "0","selected"); %>>20 MHz</option>
@@ -1525,7 +1525,7 @@ applyRule();
 </td>
 </tr>
 <tr id="wl_nctrlsb_field">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 15);"><#3808#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 15);"><#3812#></a></th>
 <td>
 <select name="wl_nctrlsb" class="input_option" disabled>
 <option value="lower" <% nvram_match("wl_nctrlsb", "lower", "selected"); %>>lower</option>
@@ -1546,7 +1546,7 @@ applyRule();
 <option value="psk2sae" <% nvram_match("wl_auth_mode_x", "psk2sae","selected"); %>>WPA2/WPA3-Personal</option>
 </select>
 <br>
-<span id="wl_nmode_x_hint" style="display:none;"><#3944#></span>
+<span id="wl_nmode_x_hint" style="display:none;"><#3948#></span>
 </td>
 </tr>
 <tr id="wl_crypt_tr">
@@ -1559,13 +1559,13 @@ applyRule();
 </td>
 </tr>
 <tr>
-<th><a id="psk_title" class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 7);"><#3909#></a></th>
+<th><a id="psk_title" class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 7);"><#3913#></a></th>
 <td>
 <input type="text" name="wl_wpa_psk" maxlength="64" class="input_32_table" value="<% nvram_get("wl_wpa_psk"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 9);"><#3834#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 9);"><#3838#></a></th>
 <td>
 <select name="wl_wep_x" class="input_option" onChange="wep_encryption_change(this);">
 <option value="0" <% nvram_match("wl_wep_x", "0", "selected"); %>><#848#></option>
@@ -1587,27 +1587,27 @@ applyRule();
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#3829#></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#3833#></th>
 <td><input type="text" name="wl_key1" id="wl_key1" maxlength="32" class="input_32_table" value="<% nvram_get("wl_key1"); %>" onKeyUp="return change_wlkey(this, 'WLANConfig11b');" autocorrect="off" autocapitalize="off"></td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#3830#></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#3834#></th>
 <td><input type="text" name="wl_key2" id="wl_key2" maxlength="32" class="input_32_table" value="<% nvram_get("wl_key2"); %>" onKeyUp="return change_wlkey(this, 'WLANConfig11b');" autocorrect="off" autocapitalize="off"></td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#3831#></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#3835#></th>
 <td>
 <input type="text" name="wl_key3" id="wl_key3" maxlength="32" class="input_32_table" value="<% nvram_get("wl_key3"); %>" onKeyUp="return change_wlkey(this, 'WLANConfig11b');" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#3832#></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#3836#></th>
 <td>
 <input type="text" name="wl_key4" id="wl_key4" maxlength="32" class="input_32_table" value="<% nvram_get("wl_key4"); %>" onKeyUp="return change_wlkey(this, 'WLANConfig11b');" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 8);"><#3905#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 8);"><#3909#></a></th>
 <td>
 <input type="text" name="wl_phrase_x" maxlength="64" class="input_32_table" value="<% nvram_get("wl_phrase_x"); %>" onKeyUp="return is_wlphrase('WLANConfig11b', 'wl_phrase_x', this);" autocorrect="off" autocapitalize="off">
 </td>
@@ -1643,7 +1643,7 @@ applyRule();
 <th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 26);"><#871#></a></th>
 <td>
 <select name="wl_lanaccess" class="input_option">
-<option value="on" <% nvram_match("wl_lanaccess", "on","selected"); %>><#3836#></option>
+<option value="on" <% nvram_match("wl_lanaccess", "on","selected"); %>><#3840#></option>
 <option value="off" <% nvram_match("wl_lanaccess", "off","selected"); %>><#1517#></option>
 </select>
 </td>

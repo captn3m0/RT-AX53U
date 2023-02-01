@@ -112,7 +112,7 @@ $("#Link_to_ParentalCtrl").attr("href", "ParentalControl.asp");
 <div class="app_desc" style="height:60px;">
 <li id="item_time_scheduling"><#3282#></li>
 <li id="item_filter"><#1210#></li>
-<li id="item_yandex" style="display:none;"><#3970#></li>
+<li id="item_yandex" style="display:none;"><#3974#></li>
 </div>
 </td>
 </tr>

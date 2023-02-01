@@ -898,7 +898,7 @@ return true;
 </tr>
 <tr style="display:none;" id="yadns_ctrl">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#3970#></p>
+<p class="formfonttitle_nwm"><#3974#></p>
 <a href="/YandexDNS.asp" target="_parent">
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px;line-height:20px;" id="yadns_mode"></p>
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px;line-height:20px;" id="yadns_DNS1"></p>

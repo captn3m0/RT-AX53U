@@ -322,8 +322,8 @@ document.getElementById("lacp_desc").style.display = "none";
 <th><#2499#></th>
 <td>
 <select name="jumbo_frame_enable" class="input_option">
-<option class="content_input_fd" value="0" <% nvram_match("jumbo_frame_enable", "0","selected"); %>><#3837#></option>
-<option class="content_input_fd" value="1" <% nvram_match("jumbo_frame_enable", "1","selected"); %>><#3836#></option>
+<option class="content_input_fd" value="0" <% nvram_match("jumbo_frame_enable", "0","selected"); %>><#3841#></option>
+<option class="content_input_fd" value="1" <% nvram_match("jumbo_frame_enable", "1","selected"); %>><#3840#></option>
 </select>
 </td>
 </tr>
@@ -331,7 +331,7 @@ document.getElementById("lacp_desc").style.display = "none";
 <th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(29,2);"><#2767#></a></th>
 <td>
 <select name="ctf_disable_force" class="input_option" disabled>
-<option class="content_input_fd" value="1" <% nvram_match("ctf_disable_force", "1","selected"); %>><#3837#></option>
+<option class="content_input_fd" value="1" <% nvram_match("ctf_disable_force", "1","selected"); %>><#3841#></option>
 <option class="content_input_fd" value="0" <% nvram_match("ctf_disable_force", "0","selected"); %>><#153#></option>
 </select>
 &nbsp
@@ -342,8 +342,8 @@ document.getElementById("lacp_desc").style.display = "none";
 <th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(29,2);"><#2767#></a></th>
 <td>
 <select name="qca_sfe" class="input_option" disabled>
-<option class="content_input_fd" value="0" <% nvram_match("qca_sfe", "0","selected"); %>><#3837#></option>
-<option class="content_input_fd" value="1" <% nvram_match("qca_sfe", "1","selected"); %>><#3836#></option>
+<option class="content_input_fd" value="0" <% nvram_match("qca_sfe", "0","selected"); %>><#3841#></option>
+<option class="content_input_fd" value="1" <% nvram_match("qca_sfe", "1","selected"); %>><#3840#></option>
 </select>
 &nbsp
 <span id="natAccelDesc"></span>
@@ -353,7 +353,7 @@ document.getElementById("lacp_desc").style.display = "none";
 <th><#2767#></th>
 <td>
 <select name="hwnat" class="input_option" disabled>
-<option class="content_input_fd" value="0" <% nvram_match("hwnat", "0","selected"); %>><#3837#></option>
+<option class="content_input_fd" value="0" <% nvram_match("hwnat", "0","selected"); %>><#3841#></option>
 <option class="content_input_fd" value="1" <% nvram_match("hwnat", "1","selected"); %>><#153#></option>
 </select>
 &nbsp
@@ -422,8 +422,8 @@ document.getElementById("lacp_desc").style.display = "none";
 <th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(29,1);"><#2778#></a></th>
 <td>
 <select name="lacp_enabled" class="input_option" onchange="check_bonding_policy(this);" disabled>
-<option class="content_input_fd" value="0" <% nvram_match("lacp_enabled", "0","selected"); %>><#3837#></option>
-<option class="content_input_fd" value="1" <% nvram_match("lacp_enabled", "1","selected"); %>><#3836#></option>
+<option class="content_input_fd" value="0" <% nvram_match("lacp_enabled", "0","selected"); %>><#3841#></option>
+<option class="content_input_fd" value="1" <% nvram_match("lacp_enabled", "1","selected"); %>><#3840#></option>
 </select>
 <div id="lacp_desc" style="display:none"><span id="lacp_note"><#2781#></span><div>
 </td>

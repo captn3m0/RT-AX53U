@@ -755,23 +755,23 @@ $.get("/update_wlanlog.cgi");
 var retData = {
 "GAME_BOOST": {
 "value": 3,
-"text": "<#4147#>",
-"desc": "<#4163#>"
+"text": "<#4151#>",
+"desc": "<#4167#>"
 },
 "ACS_DFS": {
 "value": 1,
-"text": "<#3804#>",
-"desc": "<#4165#>"
+"text": "<#3808#>",
+"desc": "<#4169#>"
 },
 "LED": {
 "value": 0,
-"text": "<#4168#>",
-"desc": "<#4169#>"
+"text": "<#4172#>",
+"desc": "<#4173#>"
 },
 "AURA_RGB": {
 "value": 2,
-"text": "<#4148#>",
-"desc": "<#4149#>"
+"text": "<#4152#>",
+"desc": "<#4153#>"
 }
 };
 var productid = httpApi.nvramGet(["productid"]).productid;
@@ -780,13 +780,13 @@ delete retData.LED;
 delete retData.AURA_RGB;
 retData.AURA_SHUFFLE = {
 "value": 4,
-"text": "<#4150#>",
-"desc": "<#4151#>"
+"text": "<#4154#>",
+"desc": "<#4155#>"
 }
 retData.GEFORCE_NOW = {
 "value": 5,
-"text": "<#4166#>",
-"desc": "<#4167#>"
+"text": "<#4170#>",
+"desc": "<#4171#>"
 }
 }
 var sw_mode = (window.hasOwnProperty("qisPostData") && qisPostData.hasOwnProperty("sw_mode")) ? qisPostData.sw_mode : httpApi.nvramGet(["sw_mode"]).sw_mode;

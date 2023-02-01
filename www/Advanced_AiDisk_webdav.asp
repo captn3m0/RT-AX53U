@@ -103,8 +103,8 @@ document.form.submit();
 <th width="40%">WebDav to Samba</th>
 <td>
 <select name="enable_webdav" class="input_option" onChange="hideAll(this.value);">
-<option value="0" <% nvram_match("enable_webdav", "0","selected"); %> ><#3837#></option>
-<option value="1" <% nvram_match("enable_webdav", "1","selected"); %> ><#3836#></option>
+<option value="0" <% nvram_match("enable_webdav", "0","selected"); %> ><#3841#></option>
+<option value="1" <% nvram_match("enable_webdav", "1","selected"); %> ><#3840#></option>
 </select>
 </td>
 </tr>

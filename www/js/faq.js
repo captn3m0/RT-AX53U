@@ -161,7 +161,7 @@
 },
 "vpnFusion": {
 "index": "vpnFusion",
-"name": "<#4108#>",
+"name": "<#4112#>",
 "link": "Advanced_VPNClient_Content.asp",
 "menu": "VPN",
 "mode": ["RT"],
@@ -169,7 +169,7 @@
 },
 "instantGuard": {
 "index": "instantGuard",
-"name": "<#4108#>",
+"name": "<#4112#>",
 "link": "Advanced_Instant_Guard.asp",
 "menu": "VPN",
 "mode": ["RT"],
@@ -209,7 +209,7 @@
 },
 "auraRGB": {
 "index": "auraRGB",
-"name": "<#4148#>",
+"name": "<#4152#>",
 "link": "index.asp",
 "menu": "<#380#>",
 "mode": ["RT", "AP", "MB", "RE"],
@@ -233,7 +233,7 @@
 },
 "wirelessHideSSID": {
 "index": "wirelessHideSSID",
-"name": "<#3859#>",
+"name": "<#3863#>",
 "link": "Advanced_Wireless_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -249,7 +249,7 @@
 },
 "channelBandwidth": {
 "index": "channelBandwidth",
-"name": "<#3784#>",
+"name": "<#3788#>",
 "link": "Advanced_Wireless_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -281,7 +281,7 @@
 },
 "wpaKey": {
 "index": "wpaKey",
-"name": "<#3909#>",
+"name": "<#3913#>",
 "link": "Advanced_Wireless_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -289,7 +289,7 @@
 },
 "protectedManagementFrames": {
 "index": "protectedManagementFrames",
-"name": "<#3890#>",
+"name": "<#3894#>",
 "link": "Advanced_Wireless_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -297,7 +297,7 @@
 },
 "gtkInterval": {
 "index": "gtkInterval",
-"name": "<#3920#>",
+"name": "<#3924#>",
 "link": "Advanced_Wireless_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -345,7 +345,7 @@
 },
 "wirelessRadio": {
 "index": "wirelessRadio",
-"name": "<#3911#>",
+"name": "<#3915#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -353,7 +353,7 @@
 },
 "wirelessScheduler": {
 "index": "wirelessScheduler",
-"name": "<#3926#>",
+"name": "<#3930#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -361,7 +361,7 @@
 },
 "apIsolate": {
 "index": "apIsolate",
-"name": "<#3887#>",
+"name": "<#3891#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -377,7 +377,7 @@
 },
 "igmpSnooping": {
 "index": "igmpSnooping",
-"name": "<#3883#>",
+"name": "<#3887#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -385,7 +385,7 @@
 },
 "multicastRate": {
 "index": "multicastRate",
-"name": "<#3814#>",
+"name": "<#3818#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -401,7 +401,7 @@
 },
 "rtsThreshold": {
 "index": "rtsThreshold",
-"name": "<#3924#>",
+"name": "<#3928#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -409,7 +409,7 @@
 },
 "dtimInterval": {
 "index": "dtimInterval",
-"name": "<#3871#>",
+"name": "<#3875#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -417,7 +417,7 @@
 },
 "beaconInterval": {
 "index": "beaconInterval",
-"name": "<#3857#>",
+"name": "<#3861#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -425,7 +425,7 @@
 },
 "txBurting": {
 "index": "txBurting",
-"name": "<#3929#>",
+"name": "<#3933#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -433,7 +433,7 @@
 },
 "wmm": {
 "index": "wmm",
-"name": "<#3932#>",
+"name": "<#3936#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -441,7 +441,7 @@
 },
 "wmmNoAck": {
 "index": "wmmNoAck",
-"name": "<#3903#>",
+"name": "<#3907#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -449,7 +449,7 @@
 },
 "wmmApsd": {
 "index": "wmmApsd",
-"name": "<#3852#>",
+"name": "<#3856#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -457,7 +457,7 @@
 },
 "optAmpduAggregation": {
 "index": "optAmpduAggregation",
-"name": "<#3844#>",
+"name": "<#3848#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -465,7 +465,7 @@
 },
 "optAmpduAggregation": {
 "index": "optAmpduAggregation",
-"name": "<#3844#>",
+"name": "<#3848#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -473,7 +473,7 @@
 },
 "airtimeFairness": {
 "index": "airtimeFairness",
-"name": "<#3853#>",
+"name": "<#3857#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -481,7 +481,7 @@
 },
 "muMimo": {
 "index": "muMimo",
-"name": "<#3815#>",
+"name": "<#3819#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -497,7 +497,7 @@
 },
 "explicitBeamforming": {
 "index": "explicitBeamforming",
-"name": "<#3875#>",
+"name": "<#3879#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -505,7 +505,7 @@
 },
 "implicitBeamforming": {
 "index": "implicitBeamforming",
-"name": "<#3930#>",
+"name": "<#3934#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -513,7 +513,7 @@
 },
 "txPower": {
 "index": "txPower",
-"name": "<#3821#>",
+"name": "<#3825#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -937,7 +937,7 @@
 },
 "idleTimeout": {
 "index": "idleTimeout",
-"name": "<#4070#>",
+"name": "<#4074#>",
 "link": "Advanced_System_Content.asp",
 "menu": "<#410#>",
 "mode": ["RT", "AP", "MB", "RE"],

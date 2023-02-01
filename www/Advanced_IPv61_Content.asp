@@ -62,7 +62,7 @@ showInputfield(ipv61_proto_orig);
 if(yadns_support){
 if(yadns_enable != 0 && yadns_mode != -1){
 document.getElementById("yadns_hint").style.display = "";
-document.getElementById("yadns_hint").innerHTML = "<span><#3985#></span>";
+document.getElementById("yadns_hint").innerHTML = "<span><#3989#></span>";
 }
 }
 document.form.wan_selection.selectedIndex = parseInt(ipv6_unit);
@@ -933,13 +933,13 @@ document.form.wan_selection.selectedIndex = parseInt(ipv6_unit);
 </tr>
 <tr style="display:none;"><th>DHCP-PD</th>
 <td>
-<input type="radio" name="ipv61_dhcp_pd" class="input" value="1" onclick="showInputfield2('ipv61_dhcp_pd', this.value);" <% nvram_match("ipv61_dhcp_pd", "1","checked"); %>><#3836#>
+<input type="radio" name="ipv61_dhcp_pd" class="input" value="1" onclick="showInputfield2('ipv61_dhcp_pd', this.value);" <% nvram_match("ipv61_dhcp_pd", "1","checked"); %>><#3840#>
 <input type="radio" name="ipv61_dhcp_pd" class="input" value="0" onclick="showInputfield2('ipv61_dhcp_pd', this.value);" <% nvram_match("ipv61_dhcp_pd", "0","checked"); %>><#1517#>
 </td>
 </tr>
 <tr style="display:none;"><th><#2430#></th>
 <td>
-<input type="radio" name="_ipv61_accept_defrtr" class="input" value="1" <% nvram_match("ipv61_accept_defrtr", "1","checked"); %>><#3836#>
+<input type="radio" name="_ipv61_accept_defrtr" class="input" value="1" <% nvram_match("ipv61_accept_defrtr", "1","checked"); %>><#3840#>
 <input type="radio" name="_ipv61_accept_defrtr" class="input" value="0" <% nvram_match("ipv61_accept_defrtr", "0","checked"); %>><#1517#>
 </td>
 </tr>
@@ -958,7 +958,7 @@ document.form.wan_selection.selectedIndex = parseInt(ipv6_unit);
 <tr style="display:none;">
 <th><#2426#></th>
 <td>
-<input type="radio" name="ipv61_6rd_dhcp" class="input" value="1" onclick="showInputfield2('ipv61_6rd_dhcp', this.value);" <% nvram_match("ipv61_6rd_dhcp", "1","checked"); %>><#3836#>
+<input type="radio" name="ipv61_6rd_dhcp" class="input" value="1" onclick="showInputfield2('ipv61_6rd_dhcp', this.value);" <% nvram_match("ipv61_6rd_dhcp", "1","checked"); %>><#3840#>
 <input type="radio" name="ipv61_6rd_dhcp" class="input" value="0" onclick="showInputfield2('ipv61_6rd_dhcp', this.value);" <% nvram_match("ipv61_6rd_dhcp", "0","checked"); %>><#1517#>
 </td>
 </tr>
@@ -1119,7 +1119,7 @@ document.form.wan_selection.selectedIndex = parseInt(ipv6_unit);
 <tr style="display:none;">
 <th><#308#></th>
 <td>
-<input type="radio" name="ipv61_dnsenable" class="input" value="1" onclick="showInputfield2('ipv61_dnsenable', this.value);" <% nvram_match("ipv61_dnsenable", "1","checked"); %>><#3836#>
+<input type="radio" name="ipv61_dnsenable" class="input" value="1" onclick="showInputfield2('ipv61_dnsenable', this.value);" <% nvram_match("ipv61_dnsenable", "1","checked"); %>><#3840#>
 <input type="radio" name="ipv61_dnsenable" class="input" value="0" onclick="showInputfield2('ipv61_dnsenable', this.value);" <% nvram_match("ipv61_dnsenable", "0","checked"); %>><#1517#>
 <div id="yadns_hint" style="display:none;"></div>
 </td>
@@ -1152,7 +1152,7 @@ document.form.wan_selection.selectedIndex = parseInt(ipv6_unit);
 <tr>
 <th><#1876#></th>
 <td>
-<input type="radio" name="_ipv61_radvd" class="input" value="1" <% nvram_match("ipv61_radvd", "1","checked"); %>><#3836#>
+<input type="radio" name="_ipv61_radvd" class="input" value="1" <% nvram_match("ipv61_radvd", "1","checked"); %>><#3840#>
 <input type="radio" name="_ipv61_radvd" class="input" value="0" <% nvram_match("ipv61_radvd", "0","checked"); %>><#1517#>
 </td>
 </tr>

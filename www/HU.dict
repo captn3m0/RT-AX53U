@@ -274,7 +274,7 @@ A firmware frissítés befejeződött. Zárja be ezt az ablakot és lépjen be �
 A firmware frissítése sikeresen megtörtént. Kérjük, indítsa újra manuálisan a RT-AX53U-t.
 To comply with regulatory amendments, we have modified our certificate rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
 5 alkalommal is helytelen jelszót adott meg. A rendszer kijelentkezteti.
-2022 ASUSTeK Computer Inc. Minden jog fenntartva.
+2023 ASUSTeK Computer Inc. Minden jog fenntartva.
 A konfigurációs paraméterek beállításai a firmware-frissítési folyamat során megmaradnak.
 Firmware verzió:
 * Ebben az időzónában a nyári időszámítás engedélyezett.
@@ -1418,7 +1418,7 @@ Változtatás most
 Frissítés most
 Létrehozás most
 Ne jelenjen meg többé ez az üzenet
-ASUS szolgáltatás / ügyszám vagy CRS azonosító
+ASUS szolgáltatás / ügyszám
 Azonosítva
 Nincs azonosítva.
 Engedélyezett kulcsok
@@ -1921,7 +1921,7 @@ System Temperature
 Részletes magyarázat elérhető az <a id="network_detect_faq" href="" target="_blank" style="margin-left:5px; text-decoration: underline;">ASUS Támogatás oldal GYIK</a> részlegén, amely segíthet a funkció hatékony használatában.
 GYIK keresése
 3G/4G napló
-Kérjük, írja be ebbe az oszlopba az ASUS szervizszámát vagy esetszámát, amelyet az ASUS Ügyfélszolgálattól kapott, illetve a CRS (Ügyféltámogatás) azonosítót, amelyet az ASUS Ügyféltámogatásától kapott (az Amazon oldalán). Ha nem emlékszik a szervizszámra, nézze meg az e-mailjeit, és keresse meg az ASUS Technical Service feladótól érkezett e-mailt. <br>Ebbe az oszlopba az angol ábécé egy betűje, a 8-11 számjegyű esetszám - (kötőjel) 4 számjegyű második esetszám írható be (például: E1234567890-1234). CRS-azonosító esetén a formátum 5 számjegyből áll (például 10688).
+Kérjük, írja be ebbe az oszlopba az ASUS szervizszámát vagy esetszámát, amelyet az ASUS Ügyfélszolgálattól kapott. Ha nem emlékszik a szervizszámra, nézze meg az e-mailjeit, és keresse meg az ASUS Technical Service feladótól érkezett e-mailt. <br>Ebbe az oszlopba az angol ábécé egy betűje, a 8-11 számjegyű esetszám - (kötőjel) 4 számjegyű második esetszám írható be (például: E1234567890-1234).
 Jelenleg engedélyezve van az ütemező újraindítása, ellenőrizze az ütemező beállítását.
 Jelenleg engedélyezve van a vezeték nélküli ütemező, ellenőrizze az ütemező beállítását.
 2,4 GHz, 5 GHz, 5GHz-1 vagy 5GHz-2 (vagy 2,4 GHz és 5 Ghz-2 és így tovább) vagy az Összes sáv jelenleg le van tiltva, ellenőrizze a WiFi rádióbeállítást.
@@ -3775,6 +3775,10 @@ WiFi Agile Multiband
 *Ha a WiFi Agile Multiband engedélyezve van, a Protected Management Framesnek engedélyezve kell lennie. (Lehetséges vagy szükséges).
 Ez a mező lehetővé teszi a hitelesítési eljárások használatát vezeték nélküli kliensek esetében.
 Hitelesítési eljárás
+WPA3 egy új generációs titkosítási technológia, amely jelentősen javítja a kapcsolat biztonságát, de néhány régebbi eszköz nem kompatibilis lehet, és nem tud csatlakozni a hálózathoz, ha a WPA3 mód kiválasztása.
+WPA3 egy új generációs titkosítási technológia, amely jelentősen javítja a kapcsolat biztonságát, de néhány régebbi eszköz nem kompatibilis lehet, és nem tud csatlakozni a hálózathoz, ha a WPA3/WPA2 mód kiválasztása.
+A WPA2 nem biztosítja a legjobb hálózati biztonságot, csak akkor válassza ezt az opciót, ha régebbi eszközei nem tudnak csatlakozni a WPA3/WPA2 módhoz.
+A WPA egy elavult biztonsági technológia. Csak akkor válassza ezt az opciót, ha a WPA2 mód nem működik Önnek.
 A legjobb vezeték nélküli jelátvitel érdekében javasoljuk a router csatornájának átállítását a 2. csatornára. A router csatornájának 2. csatornára történő átállításához kattintson az OK gombra. Ellenkező esetben kattintson a Mégsem gombra.
 A helyi szabályozások miatt az 1. csatorna nem biztosíthatja a legjobb vezeték nélküli lefedettséget. Ha továbbra is az 1. csatornát kívánja használni , kattintson az OK gombra. Ellenkező esetben kattintson a Mégsem gombra.
 A legjobb vezeték nélküli jelátvitel érdekében javasoljuk a router csatornájának átállítását a 10. csatornára. A router csatornájának 10. csatornára történő átállításához kattintson az OK gombra. Ellenkező esetben kattintson a Mégsem gombra.

@@ -274,7 +274,7 @@ Sua atualização de firmware foi concluída. Fechar esta janela e acessar o seu
 Atualização do firmware está feita. Reinicie o RT-AX53U manualmente.
 Para cumprir com emendas regulatórias, nós modificamos nossas regras de certificação para garantir  uma melhor qualidade de firmware. Esta versão não é compatível com todas as versões anteriores de firmware Asus e firmware de terceiros não homologados. Por favor verifique nossas páginas oficiais para o firmware certificado.
 Você digitou uma senha incorreta 5 vezes. Você será desconectado.
-ASUSTeK Computer Inc. 2022. Todos os direitos reservados.
+ASUSTeK Computer Inc. 2023. Todos os direitos reservados.
 Os parâmetros de configuração irão manter suas configurações durante o processo de atualização de firmware.
 Versão do firmware:
 * Horário de verão é ativado neste fuso horário.
@@ -1418,7 +1418,7 @@ Altere agora
 Atualize agora
 Criar senha agora
 Não mostre essa mensagem novamente
-Serviço ASUS No./Case# ou CRS ID
+Serviço ASUS No./Case#
 Autenticado
 Não Autenticado
 Chaves Autorizadas
@@ -1921,7 +1921,7 @@ System Temperature
 Explicações detalhadas estão disponíveis no <a id="network_detect_faq" href="" target="_blank" style="margin-left:5px; text-decoration: underline;">FAQ do Site de Suporte ASUS</a>, que pode ajudá-lo a usar esta função efetivamente.
 Encontre FAQs
 Log 3G/4G
-Preencha esta coluna com o seu número de atendimento ao cliente ASUS ou protocolo fornecido pelo ASUS Call Center, ou a ID do CRS (Customer Review Support, suporte a avaliações dos clientes) fornecida pelo ASUS Customer Support (no site da Amazon). Se você não se lembra do seu número de serviço, verifique seu e-mail e procure um e-mail do Serviço Técnico ASUS.<br>Esta coluna aceita apenas uma letra em inglês com o número do incidente de 8 ~ 11 dígitos e - (hífen) segundo número do incidente de 4 dígitos (por exemplo: E1234567890-1234). Ou para CRS ID, 5 dígitos (por exemplo 10688).
+Preencha esta coluna com o seu número de atendimento ao cliente ASUS ou protocolo fornecido pelo ASUS Call Center. Se você não se lembra do seu número de serviço, verifique seu e-mail e procure um e-mail do Serviço Técnico ASUS.<br>Esta coluna aceita apenas uma letra em inglês com o número do incidente de 8 ~ 11 dígitos e - (hífen) segundo número do incidente de 4 dígitos (por exemplo: E1234567890-1234).
 Reinicie o programador atualmente habilitado, verifique a configuração do programador.
 Programador sem fio habilitado no momento, verifique a configuração do programador.
 2,4 GHz, 5 Ghz, 5 GHz-1 ou 5 GHz-2 (ou 2,4 GHz e 5 GHz-2 e assim por diante) ou todas as bandas estão atualmente desabilitadas, verifique a configuração de rádio Wi-Fi.
@@ -3775,6 +3775,10 @@ WiFi Agile Multiband
 *Se o WiFi Agile Multiband estiver ativado, os Quadros de Gerenciamento Protegidos deverão ser ativados (Compatível ou Obrigatório)
 Este campo ativa o método de autenticação para os clientes sem fio.
 Método de autenticação
+WPA3 é uma nova tecnologia de criptografia de geração, que aumenta muito a segurança da conexão, mas alguns dispositivos antigos podem ser incompatíveis e podem não ser capazes de se conectar à rede se o modo WPA3 for selecionado.
+WPA3 é uma nova tecnologia de criptografia de geração, que aumenta muito a segurança da conexão, mas alguns dispositivos antigos podem ser incompatíveis e podem não ser capazes de se conectar à rede se o modo WPA3/WPA2 for selecionado.
+WPA2 não fornece a melhor segurança de rede, selecione apenas esta opção se você tiver dispositivos mais antigos que não conseguem se conectar ao modo WPA3/WPA2.
+WPA é uma tecnologia de segurança obsoleta. Selecione apenas esta opção se o modo WPA2 não funcionar para você.
 Para garantir o melhor sinal de rede sem fios, sugerimos que você configure o roteador ao Canal 2. Para configurar o roteador ao Canal 2, por favor clique em OK . Do contrário, clique em Cancelar.
 Devido aos regulamentos locais, o Canal 1 não pode fornecer a melhor cobertura de rede sem fio. Se você deseja continuar usando o Canal 1, por favor clique em OK . Do contrário, clique em Cancelar.
 Para garantir o melhor sinal de rede sem fios, sugerimos que você configure o roteador ao Canal 10. Para configurar o roteador ao Canal 10, por favor clique em OK . Do contrário, clique em Cancelar.

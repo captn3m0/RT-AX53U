@@ -417,9 +417,9 @@ if(client_time_obj.offtime != "")
 all_client_total_rule_num += client_time_obj.offtime.split("<").length;
 });
 if(all_client_total_rule_num > weekScheduleApi.data_max){
-var hint = "<#4191#>".replace("#MAXNUM", weekScheduleApi.data_max);
+var hint = "<#4195#>".replace("#MAXNUM", weekScheduleApi.data_max);
 hint += "\n";
-hint += "<#4192#>";
+hint += "<#4196#>";
 alert(hint);
 return false;
 }

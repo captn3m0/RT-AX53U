@@ -170,7 +170,7 @@ code += '<td width="'+wid[1]+'%">'+ cp_netmask +'</td>';
 code += '<td width="'+wid[2]+'%">'+ ip_range[0] +'</td>';
 code += '<td width="'+wid[3]+'%">'+ ip_range[1] +'</td>';
 code += '<td width="'+wid[4]+'%">'+ cp_lease +'</td>';
-code += '<td colspan = "2">'+'<#4014#>'+'</td>';
+code += '<td colspan = "2">'+'<#4018#>'+'</td>';
 code += '</tr>';
 }
 /* Show subnet information of Free WIFI */
@@ -481,7 +481,7 @@ return false;
 if(captivePortal_support){
 var ipConflict_cp = checkIPConflict("", lanIPAddr, lanNetMask, cp_gateway, cp_netmask);
 if(ipConflict_cp.state) {
-alertMsg("<#4014#>", ipConflict_cp.ipAddr, ipConflict_cp.netLegalRangeStart, ipConflict_cp.netLegalRangeEnd);
+alertMsg("<#4018#>", ipConflict_cp.ipAddr, ipConflict_cp.netLegalRangeStart, ipConflict_cp.netLegalRangeEnd);
 return false;
 }
 }

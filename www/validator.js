@@ -837,7 +837,7 @@ var urlregex = new RegExp("^([a-zA-Z0-9\.\-]+(\:[a-zA-Z0-9\.&amp;%\$\-]+)*@)*((2
 if(urlregex.test(value)){
 return true;
 }
-alert("It is invalid URL."); /*untranslated*/
+alert("<#2486#>");
 return false;
 },
 inet_network: function(ip_str){

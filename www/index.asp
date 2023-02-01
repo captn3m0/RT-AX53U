@@ -534,7 +534,7 @@ clickEvent(document.getElementById("iconRouter"));
 }
 function showMapWANStatus(flag){
 if(sw_mode == "3"){
-showtext(document.getElementById("NM_connect_status"), "<div style='margin-top:10px;'><#3847#></div>");
+showtext(document.getElementById("NM_connect_status"), "<div style='margin-top:10px;'><#3851#></div>");
 }
 else if(sw_mode == "2"){
 showtext(document.getElementById("NM_connect_title"), "<div style='margin-top:10px;'><#742#>:</div><br>");

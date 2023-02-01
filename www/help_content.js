@@ -1,21 +1,21 @@
 ﻿var productid = '<#843#>';
 helpcontent[0] = new Array("",
-"<#3818#>",
-"<#3858#>",
-"<#3781#>",
-"<#3893#>",
+"<#3822#>",
+"<#3862#>",
+"<#3785#>",
+"<#3897#>",
 "<#3775#>",
-"<#3838#>",
+"<#3842#>",
+"<#3912#>",
 "<#3908#>",
-"<#3904#>",
-"<#3833#>",
-"<#3828#>",
-"<#3919#><#2473#>", //11
+"<#3837#>",
+"<#3832#>",
+"<#3923#><#2473#>", //11
 "<#852#>",
 "<#853#>",
-"<#3783#><br/><#3835#>",
-"<#3807#>",
-"<#3820#>",
+"<#3787#><br/><#3839#>",
+"<#3811#>",
+"<#3824#>",
 "",
 "WEP-64bits: <#852#><br/>WEP-128bits: <#853#>",
 "<#852#><br/><#853#>",
@@ -31,52 +31,52 @@ helpcontent[0] = new Array("",
 if ("<% nvram_get("wl2_band"); %>".length == 0)
 helpcontent[0][27] = "Smart Connect is the feature which could automatically steer clients to the most appropriate band (2.4GHz and 5GHz)."; /*untranslated*/
 helpcontent[1] = new Array("",
-"<#3846#>",
-"<#3781#>",
-"<#3863#>",
-"<#3894#>",
-"<#3895#>",
-"<#3896#>",
-"<#3897#>");
+"<#3850#>",
+"<#3785#>",
+"<#3867#>",
+"<#3898#>",
+"<#3899#>",
+"<#3900#>",
+"<#3901#>");
 helpcontent[2] = new Array("",
 "<#3767#>",
 "<#3771#>",
 "<#3769#>");
 helpcontent[3] = new Array("",
-"<#3910#>",
-"<#3912#><p><a href='/Main_LogStatus_Content.asp' target='_blank'><#280#><#1521#></a></p>",
-"<#3914#><p><a href='/Main_LogStatus_Content.asp' target='_blank'><#280#><#1521#></a></p>",
-"<#3870#>",
-"<#3886#>",
-"<#3787#>",
-"<#3813#>",
-"<#3785#>",
-"<#3877#>",
-"<#3923#>",
-"<#3869#>",
-"<#3856#>",
-"<#3928#>",
-"<#3931#>",
-"<#3902#>",
+"<#3914#>",
+"<#3916#><p><a href='/Main_LogStatus_Content.asp' target='_blank'><#280#><#1521#></a></p>",
+"<#3918#><p><a href='/Main_LogStatus_Content.asp' target='_blank'><#280#><#1521#></a></p>",
+"<#3874#>",
+"<#3890#>",
+"<#3791#>",
+"<#3817#>",
+"<#3789#>",
+"<#3881#>",
+"<#3927#>",
+"<#3873#>",
+"<#3860#>",
+"<#3932#>",
+"<#3935#>",
 "<#3906#>",
-"<#3851#>",
-"<#3867#>",
-"[n Only]: <#3880#>",
-"<#3949#>",
-"<#3873#>", //21
-"<#3882#>",
-"<#3925#>",
-"<#3876#> (It's also called [Explicit Beamforming].)", /* untranslated */
-"<#3885#> (It's also called [Implicit Beamforming].)", /* untranslated */
-"<#3845#>",
-"<#3843#>",
-"<#4242#> <#3855#>",
-"<#3917#>",
-"<#3074#>",
-"<#3922#>", //31
-"<#3854#>",
+"<#3910#>",
 "<#3855#>",
-"<#3861#>"
+"<#3871#>",
+"[n Only]: <#3884#>",
+"<#3953#>",
+"<#3877#>", //21
+"<#3886#>",
+"<#3929#>",
+"<#3880#> (It's also called [Explicit Beamforming].)", /* untranslated */
+"<#3889#> (It's also called [Implicit Beamforming].)", /* untranslated */
+"<#3849#>",
+"<#3847#>",
+"<#4246#> <#3859#>",
+"<#3921#>",
+"<#3074#>",
+"<#3926#>", //31
+"<#3858#>",
+"<#3859#>",
+"<#3865#>"
 );
 helpcontent[4] = new Array("",
 "<#351#>",
@@ -196,11 +196,11 @@ helpcontent[12] = new Array("",
 "<#2977#>",
 "<#2979#>");
 helpcontent[13] = new Array("",
-"<#3933#>",
-"<#3939#>",
-"<#3941#>",
-"<#3865#>",
-"<#3937#>");
+"<#3937#>",
+"<#3943#>",
+"<#3945#>",
+"<#3869#>",
+"<#3941#>");
 helpcontent[14] = new Array("",
 "<#3453#>",
 "");
@@ -306,9 +306,9 @@ helpcontent[26] = new Array("",
 "<#1856#>",
 "<#1830#>");
 helpcontent[27] = new Array("",
-"<#3977#>: <#3978#><br>" +
-"<#3979#>: <#3980#><br>" +
-"<#3981#>: <#3982#>");
+"<#3981#>: <#3982#><br>" +
+"<#3983#>: <#3984#><br>" +
+"<#3985#>: <#3986#>");
 if('<% nvram_default_get("lan_ipaddr"); %>' != "192.168.1.1"){
 helpcontent[4][1] = "<#351#>".replace("192.168.1.1", '<% nvram_default_get("lan_ipaddr"); %>');
 helpcontent[24][5] = "<#351#>".replace("192.168.1.1", '<% nvram_default_get("lan_ipaddr"); %>');
@@ -328,7 +328,7 @@ helpcontent[31] = new Array("",
 "Enter a whitelist URL, also known as walled garden.\nNote: Guest user can fetch the whitelist web content under the domain name without any authentication."/*untranslated*/
 );
 helpcontent[32] = new Array("",
-"<#4124#>",
+"<#4128#>",
 "Enable this option allows VPN clients to access the subnet of your LAN",/*untranslated*/
 "Enable this option allows VPN clients use the Internet from your router instead of the one at their location.",/*untranslated*/
 "Virtual network device type. TUN devices encapsulate IPv4 or IPv6 (OSI Layer 3) while TAP devices encapsulate Ethernet 802.3 (OSI Layer 2).",/*untranslated*/

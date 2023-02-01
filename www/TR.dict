@@ -274,7 +274,7 @@ Yazılım güncellemeniz bitti. Bu pencereyi kapatın ve AiMesh yönlendiriciniz
 Aygıt yazılımı yükseltmesi tamamlandı. Lütfen RT-AX53U maneül olarak yeniden başlatın.
 To comply with regulatory amendments, we have modified our certificate rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
 5 kez yanlış parola girdiniz. Oturumunuz kapatılacak.
-2022 ASUSTeK Computer Inc. Tüm hakları saklıdır.
+2023 ASUSTeK Computer Inc. Tüm hakları saklıdır.
 Yapılandırma parametreleri, ürün yazılımı güncelleme işlemi sırasında ayarlarını koruyacaktır.
 Donanım Yazılımı Sürümü:
 * Bu saat diliminde yaz saati uygulaması etkin.
@@ -1418,7 +1418,7 @@ Ağ Konumu (Samba) tehlike altında olduğundan [ Misafir oturumuna izin ver ] a
 Şimdi güncelle
 Şimdi Oluştur
 Bu mesajı bir daha gösterme
-ASUS Servis numarası / Dava numarası veya CRS Kimliği
+ASUS Servis numarası / Dava numarası
 Kimliği doğrulandı
 Kimliği doğrulanmadı
 Yetkili Anahtar
@@ -1921,7 +1921,7 @@ System Temperature
 Ayrıntılı açıklamalar <a id="network_detect_faq" href="" target="_blank" style="margin-left:5px; text-decoration: underline;">ASUS Destek Sitesi SSS</a> kısmında bulunmaktadır ve böylece bu işlevi etkin bir şekilde kullanmanıza yardımcı olabilir.
 SSS bul
 3G/4G Günlük
-Lütfen bu sütunu ASUS Çağrı Merkezi tarafından verilen ASUS hizmet numaranızla veya vaka numaranızla ya da ASUS Müşteri Hizmetleri (Amazon sitesinde) tarafından verilen CRS (Müşteri İnceleme Desteği) Kimliği ile doldurun. Hizmet numaranızı hatırlamıyorsanız, lütfen e-postanızı kontrol edin ve ASUS Teknik Hizmet departmanından gelen e-postayı arayın.<br>Bu sütunda yalnızca bir 8-11 haneli vaka numarasıyla İngilizce harf ve - (kısa çizgi) ile 4 haneli ikinci vaka numarası kabul edilecektir (örneğin: E1234567890-1234). Alternatif olarak, CRS Kimliği için, 5 hane (10688 gibi).
+Lütfen bu sütunu ASUS Çağrı Merkezi tarafından verilen ASUS hizmet numaranızla veya vaka numaranızla. Hizmet numaranızı hatırlamıyorsanız, lütfen e-postanızı kontrol edin ve ASUS Teknik Hizmet departmanından gelen e-postayı arayın.<br>Bu sütunda yalnızca bir 8-11 haneli vaka numarasıyla İngilizce harf ve - (kısa çizgi) ile 4 haneli ikinci vaka numarası kabul edilecektir (örneğin: E1234567890-1234). Alternatif olarak.
 Yeniden Başlatma Planlayıcısı şu anda etkin, lütfen planlayıcı ayarını kontrol edin.
 Kablosuz Planlayıcı şu anda etkin, lütfen planlayıcı ayarını kontrol edin.
 2.4 GHz veya 5 GHz ya da 5 GHz-1 veya 5 GHz-2 (ya da 2.4 GHz ve 5 GHz-2 ve üzeri) veya Tüm bantlar şu anda devre dışı, lütfen WiFi radyo ayarını kontrol edin.
@@ -3775,6 +3775,10 @@ WiFi Agile Çoklu Bant
 *WiFi Agile Çoklu Bant etkinleştirilirse Korumalı Yönetim Çerçeveleri etkinleştirilmelidir (Uyumlu veya Gerekli)
 Bu alanda, kablosuz istemcilerin kimlik doğrulama yöntemleri etkinleştirilir.
 Kimlik Doğrulama Yöntemi
+WPA3, bağlantı güvenliğini büyük ölçüde artıran yeni nesil bir şifreleme teknolojisidir, ancak bazı eski cihazlar uyumsuz olabilir ve WPA3 modu seçilirse ağa bağlanamayabilirler.
+WPA3/WPA2 modu seçilirse, WPA3, bağlantı güvenliğini büyük ölçüde artıran yeni nesil bir şifreleme teknolojisidir, ancak bazı eski cihazlar uyumsuz olabilir ve ağa bağlanamayabilirler.
+WPA2 en iyi ağ güvenliğini sağlamaz, yalnızca WPA3/WPA2 moduna bağlanamayan eski cihazlarınız varsa bu seçeneği seçin.
+WPA eski bir güvenlik teknolojisidir. Sadece WPA2 modu size işe yaramıyorsa bu seçeneği seçin.
 En iyi kablosuz sinyalini sağlamak için, yönlendiricinizi Kanal 2’ye ayarlamanızı öneririz. Yönlendiriciyi Kanal 2’ye ayarlamak için lütfen Tamam düğmesine tıklayın. Aksi halde lütfen İptal Et düğmesine tıklayın.
 Yerel yönetmeliklerden dolayı, Kanal 1 en iyi kablosuz kapsamayı sağlayamaz. Kanal 1’i kullanmaya devam etmek isterseniz lütfen Tamam düğmesine tıklayın. Aksi halde lütfen İptal Et düğmesine tıklayın.
 En iyi kablosuz sinyalini sağlamak için, yönlendiricinizi Kanal 10’ye ayarlamanızı öneririz. Yönlendiriciyi Kanal 10’ye ayarlamak için lütfen Tamam düğmesine tıklayın. Aksi halde lütfen İptal Et düğmesine tıklayın.

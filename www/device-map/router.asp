@@ -306,7 +306,7 @@ code += '</div>';
 }
 if(_authMode != 'owe' && _authMode != 'openowe'){
 code += '<div class="info-block">';
-code += '<div class="info-title"><#3954#></div>';
+code += '<div class="info-title"><#3958#></div>';
 code += '<div><input type="text" class="input-size-25" id="wl'+ unit +'_wpa_psk" oninput="updateVariable(this.id, value, false)"></div>';
 code += '</div>';
 }
@@ -314,7 +314,7 @@ code += '</div>';
 else if(_authMode == 'shared' || (_authMode == 'open' && nmode_x == '2')){
 if(_authMode == 'shared' || (_authMode == 'open' && wepEncryption != '0')){
 code += '<div class="info-block">';
-code += '<div class="info-title"><#3834#></div>';
+code += '<div class="info-title"><#3838#></div>';
 code += '<div><select id="wl'+ unit +'_wep_x" class="input_option" onchange="updateVariable(this.id, value)"></select></div>';
 code += '</div>';
 code += '<div class="info-block">';
@@ -415,7 +415,7 @@ var authObj = {
 'wifiNewCertNoWPA3': [['Open System', 'open'], ['Shared Key', 'shared'], ['WPA2-Personal', 'psk2'], ['WPA-Auto-Personal', 'pskpsk2'], ['WPA2-Enterprise', 'wpa2'], ['WPA-Auto-Enterprise', 'wpawpa2'], ['Radius with 802.1x', 'radius']],
 'normalWithWPA3': [['Open System', 'open'], ['WPA2-Personal', 'psk2'], ['WPA3-Personal', 'sae'], ['WPA/WPA2-Personal', 'pskpsk2'], ['WPA2/WPA3-Personal', 'psk2sae'], ['WPA2-Enterprise', 'wpa2'], ['WPA/WPA2-Enterprise', 'wpawpa2']],
 'normalWithoutWPA3': [['Open System', 'open'], ['WPA2-Personal', 'psk2'], ['WPA-Auto-Personal', 'pskpsk2'], ['WPA2-Enterprise', 'wpa2'], ['WPA-Auto-Enterprise', 'wpawpa2']],
-'6G': [['<#4222#>', 'owe'], ['WPA3-Personal', 'sae']],
+'6G': [['<#4226#>', 'owe'], ['WPA3-Personal', 'sae']],
 'normalWithWPA3OWE': [['Open System', 'open'], ['Enhanced OPEN Transition', 'openowe'], ['WPA2-Personal', 'psk2'], ['WPA3-Personal', 'sae'], ['WPA/WPA2-Personal', 'pskpsk2'], ['WPA2/WPA3-Personal', 'psk2sae'], ['WPA2-Enterprise', 'wpa2'], ['WPA/WPA2-Enterprise', 'wpawpa2']]
 }
 if(sw_mode == '2' || (system.modelName == 'RT-AC87U' && unit == '1')){

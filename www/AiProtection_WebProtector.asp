@@ -310,7 +310,7 @@ code += '<th width="40%"><#1221#></th>';
 code += '<th width="10%"><#2610#></th>';
 code += '</tr>';
 code += '<tr id="main_element">';
-code += '<td style="border-bottom:2px solid #000;" title="<#3836#>/<#1517#>">';
+code += '<td style="border-bottom:2px solid #000;" title="<#3840#>/<#1517#>">';
 code += '<input type="checkbox" checked="">';
 code += '</td>';
 code += '<td style="border-bottom:2px solid #000;">';
@@ -380,7 +380,7 @@ deviceType = 0;
 deviceVender = "";
 }
 code += '<tr>';
-code += '<td title="<#3836#>/<#1517#>">';
+code += '<td title="<#3840#>/<#1517#>">';
 if(apps_filter_col[0] == 1)
 code += '<input type="checkbox" checked>';
 else

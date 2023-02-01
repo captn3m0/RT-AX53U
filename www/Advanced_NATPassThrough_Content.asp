@@ -126,7 +126,7 @@ document.form.submit();
 <td>
 <select name="fw_pt_pptp" class="input_option">
 <option class="content_input_fd" value="0" <% nvram_match("fw_pt_pptp", "0","selected"); %>><#1517#></option>
-<option class="content_input_fd" value="1"<% nvram_match("fw_pt_pptp", "1","selected"); %>><#3836#></option>
+<option class="content_input_fd" value="1"<% nvram_match("fw_pt_pptp", "1","selected"); %>><#3840#></option>
 </select>
 </td>
 </tr>
@@ -135,7 +135,7 @@ document.form.submit();
 <td>
 <select name="fw_pt_l2tp" class="input_option">
 <option class="content_input_fd" value="0" <% nvram_match("fw_pt_l2tp", "0","selected"); %>><#1517#></option>
-<option class="content_input_fd" value="1"<% nvram_match("fw_pt_l2tp", "1","selected"); %>><#3836#></option>
+<option class="content_input_fd" value="1"<% nvram_match("fw_pt_l2tp", "1","selected"); %>><#3840#></option>
 </select>
 </td>
 </tr>
@@ -144,7 +144,7 @@ document.form.submit();
 <td>
 <select name="fw_pt_ipsec" class="input_option">
 <option class="content_input_fd" value="0" <% nvram_match("fw_pt_ipsec", "0","selected"); %>><#1517#></option>
-<option class="content_input_fd" value="1"<% nvram_match("fw_pt_ipsec", "1","selected"); %>><#3836#></option>
+<option class="content_input_fd" value="1"<% nvram_match("fw_pt_ipsec", "1","selected"); %>><#3840#></option>
 </select>
 </td>
 </tr>
@@ -153,7 +153,7 @@ document.form.submit();
 <td>
 <select name="fw_pt_rtsp" class="input_option">
 <option class="content_input_fd" value="0" <% nvram_match("fw_pt_rtsp", "0","selected"); %>><#1517#></option>
-<option class="content_input_fd" value="1"<% nvram_match("fw_pt_rtsp", "1","selected"); %>><#3836#></option>
+<option class="content_input_fd" value="1"<% nvram_match("fw_pt_rtsp", "1","selected"); %>><#3840#></option>
 </select>
 </td>
 </tr>
@@ -162,7 +162,7 @@ document.form.submit();
 <td>
 <select name="fw_pt_h323" class="input_option">
 <option class="content_input_fd" value="0" <% nvram_match("fw_pt_h323", "0","selected"); %>><#1517#></option>
-<option class="content_input_fd" value="1"<% nvram_match("fw_pt_h323", "1","selected"); %>><#3836#></option>
+<option class="content_input_fd" value="1"<% nvram_match("fw_pt_h323", "1","selected"); %>><#3840#></option>
 </select>
 </td>
 </tr>
@@ -171,7 +171,7 @@ document.form.submit();
 <td>
 <select name="fw_pt_sip" class="input_option" OnChange="update_sip_alg_mode_option();">
 <option class="content_input_fd" value="0" <% nvram_match("fw_pt_sip", "0","selected"); %>><#1517#></option>
-<option class="content_input_fd" value="1"<% nvram_match("fw_pt_sip", "1","selected"); %>><#3836#></option>
+<option class="content_input_fd" value="1"<% nvram_match("fw_pt_sip", "1","selected"); %>><#3840#></option>
 </select>
 </td>
 </tr>
@@ -189,7 +189,7 @@ document.form.submit();
 <td>
 <select name="fw_pt_pppoerelay" class="input_option" onChange="update_pppoerelay_option();">
 <option class="content_input_fd" value="0" <% nvram_match("fw_pt_pppoerelay", "0","selected"); %>><#1517#></option>
-<option class="content_input_fd" value="1"<% nvram_match("fw_pt_pppoerelay", "1","selected"); %>><#3836#></option>
+<option class="content_input_fd" value="1"<% nvram_match("fw_pt_pppoerelay", "1","selected"); %>><#3840#></option>
 </select>
 </td>
 </tr>

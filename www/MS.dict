@@ -274,7 +274,7 @@ Kemas kini perisian tegar anda telah selesai. Tutup tetingkap ini dan akses peng
 Naik taraf perisian tegar selesai. Sila but semula RT-AX53U secara manual.
 To comply with regulatory amendments, we have modified our certificate rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
 Anda telah memasukkan kata laluan yang salah sebanyak 5 percubaan. Anda akan dilog keluar.
-2022 ASUSTeK Computer Inc. Semua hak cipta terpelihara.
+2023 ASUSTeK Computer Inc. Semua hak cipta terpelihara.
 Parameter konfigurasi akan mengekalkan tetapannya semasa proses kemas kini perisian tegar.
 Versi Perisian Tegar:
 * Masa jimat-siang didayakan dalam zon masa ini.
@@ -1418,7 +1418,7 @@ Tukar sekarang
 Kemas kini sekarang
 Buat sekarang
 Jangan tunjuk mesej ini lagi
-Nombor Perkhidmatan / Kes ASUS atau ID CRS
+Nombor Perkhidmatan / Kes ASUS
 Disahkan
 Tidak Disahkan
 Kekunci Dibenarkan
@@ -1921,7 +1921,7 @@ System Temperature
 Penerangan terperinci boleh didapati di <a id="network_detect_faq" href="" target="_blank" style="margin-left:5px; text-decoration: underline;">Soalan Lazim Laman Sokongan ASUS</a>, yang boleh membantu anda menggunakan fungsi ini dengan berkesan.
 Cari Soalan Kerap Ditanya
 Log 3G/4G
-Sila isi lajur ini dengan nombor perkhidmatan ASUS atau nombor kes yang diberikan oleh Pusat Panggilan ASUS atau ID CRS (Sokongan Semakan Pelanggan) yang diberikan oleh Sokongan Pelanggan ASUS (di laman Amazon). Jika anda tidak ingat nombor perkhidmatan anda, sila semak e-mel anda dan cari e-mel daripada Perkhidmatan Teknikal ASUS. <br>Lajur ini hanya menerima satu huruf Inggeris dengan nombor kes 8~11 digit dan - (sempang) nombor kes kedua 4 digit (sebagai contoh: E1234567890-1234). Atau untuk ID CRS, 5 digit (seperti 10688).
+Sila isi lajur ini dengan nombor perkhidmatan ASUS atau nombor kes yang diberikan oleh Pusat Panggilan ASUS. Jika anda tidak ingat nombor perkhidmatan anda, sila semak e-mel anda dan cari e-mel daripada Perkhidmatan Teknikal ASUS. <br>Lajur ini hanya menerima satu huruf Inggeris dengan nombor kes 8~11 digit dan - (sempang) nombor kes kedua 4 digit (sebagai contoh: E1234567890-1234).
 Penjadual But Semula didayakan pada masa ini, sila semak tetapan penjadual.
 Penjadual Wayarles didayakan pada masa ini, sila semak tetapan penjadual.
 2.4GHz atau 5GHz atau 5GHz-1 atau 5GHz-2 (atau 2.4GHz dan 5GHz-2 dan sebagainya) atau Semua jalur dinyahdayakan pada masa ini, sila semak tetapan radio WiFi.
@@ -3775,6 +3775,10 @@ WiFi Agile Multiband
 *If the WiFi Agile Multiband is enabled, the Protected Management Frames will must be enabled.(Capable or Required)
 Medan ini mendayakan kaedah pengesahan untuk klien wayarles.
 Kaedah Pengesahan
+WPA3 is a new generation encryption technology, which greatly enhances connection security, but some old devices may be incompatible and may not be capable of connecting to the network if WPA3 mode is selected.
+WPA3 is a new generation encryption technology, which greatly enhances connection security, but some old devices may be incompatible and may not be capable of connecting to the network if WPA3/WPA2 mode is selected.
+WPA2 does not provide the best network security, only select this option if you have older devices that are not able to connect to WPA3/WPA2 mode.
+WPA is an obsolete security technology. Only select this option if WPA2 mode does not work for you.
 Untuk memastikan isyarat wayarles terbaik, kami mencadangkan anda menetapkan saluran penghala ke Saluran 2. Untuk menetapkan saluran penghala ke Saluran 2, sila klik OK. Jika tidak, sila klik Batalkan.
 Disebabkan oleh peraturan tempatan, Saluran 1 tidak boleh memberikan liputan wayarles terbaik. Jika anda ingin terus menggunakan Saluran 1, sila klik OK. Jika tidak, sila klik Batalkan.
 Untuk memastikan isyarat wayarles terbaik, kami mencadangkan anda menetapkan saluran penghala ke Saluran 10. Untuk menetapkan saluran penghala ke Saluran 10, sila klik OK. Jika tidak, sila klik Batalkan.

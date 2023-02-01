@@ -971,9 +971,9 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 <th><#3608#></th>
 <td>
 <input type="radio" name="ipsec_dead_peer_detection" id="ipsec_dead_peer_detection_en" class="input" value="1" onchange="changeAdvDeadPeerDetection(this)" checked>
-<label for='ipsec_dead_peer_detection_en' id="ipsec_dead_peer_detection_en_label"><#3836#></label>
+<label for='ipsec_dead_peer_detection_en' id="ipsec_dead_peer_detection_en_label"><#3840#></label>
 <input type="radio" name="ipsec_dead_peer_detection" id="ipsec_dead_peer_detection_dis" class="input" value="0" onchange="changeAdvDeadPeerDetection(this)">
-<label for='ipsec_dead_peer_detection_dis' id="ipsec_dead_peer_detection_dis_label"><#3837#></label>
+<label for='ipsec_dead_peer_detection_dis' id="ipsec_dead_peer_detection_dis_label"><#3841#></label>
 </td>
 </tr>
 <tr id="tr_adv_dpd_interval">

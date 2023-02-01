@@ -755,8 +755,8 @@ switchAccount(PROTOCOL);
 <th><#969#></th>
 <td>
 <select name="usb_fs_ntfs_sparse" class="input_option">
-<option class="content_input_fd" value="0" <% nvram_match("usb_fs_ntfs_sparse", "0","selected"); %>><#3837#></option>
-<option class="content_input_fd" value="1" <% nvram_match("usb_fs_ntfs_sparse", "1","selected"); %>><#3836#></option>
+<option class="content_input_fd" value="0" <% nvram_match("usb_fs_ntfs_sparse", "0","selected"); %>><#3841#></option>
+<option class="content_input_fd" value="1" <% nvram_match("usb_fs_ntfs_sparse", "1","selected"); %>><#3840#></option>
 </select>
 </td>
 </tr>

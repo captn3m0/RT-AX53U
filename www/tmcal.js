@@ -319,9 +319,9 @@ t = "USB Modem";
 }
 else if(wans_dualwan_array[0] == "wan"){
 t = "WAN";
-if (based_modelid == "TUF-AX4200")
+if (based_modelid == "TUF-AX4200" || based_modelid == "TUF-AX6000")
 t = "2.5G WAN";
-if (based_modelid == "GT-AXY16000" || based_modelid == "RT-AX89U" || based_modelid == "TUF-AX4200") {
+if (based_modelid == "GT-AXY16000" || based_modelid == "RT-AX89U" || based_modelid == "TUF-AX4200" || based_modelid == "TUF-AX6000") {
 if (nvram.bond_wan == '1' && nvram.rc_support.indexOf("wanbonding") != -1)
 t = "Bond";
 }
@@ -334,7 +334,7 @@ t = "WAN2";
 }
 else if(wans_dualwan_array[0] == "lan") {
 t = "LAN Port " + nvram.wans_lanport;
-if (based_modelid == "TUF-AX4200") {
+if (based_modelid == "TUF-AX4200" || based_modelid == "TUF-AX6000") {
 if (nvram.wans_lanport == '5')
 t = "2.5G LAN";
 }
@@ -357,9 +357,9 @@ t = "USB Modem";
 }
 else if(wans_dualwan_array[1] == "wan"){
 t = "WAN";
-if (based_modelid == "TUF-AX4200")
+if (based_modelid == "TUF-AX4200" || based_modelid == "TUF-AX6000")
 t = "2.5G WAN";
-if (based_modelid == "GT-AXY16000" || based_modelid == "RT-AX89U" || based_modelid == "TUF-AX4200") {
+if (based_modelid == "GT-AXY16000" || based_modelid == "RT-AX89U" || based_modelid == "TUF-AX4200" || based_modelid == "TUF-AX6000") {
 if (nvram.bond_wan == '1' && nvram.rc_support.indexOf("wanbonding") != -1)
 t = "Bond";
 }
@@ -372,7 +372,7 @@ t = "WAN2";
 }
 else if(wans_dualwan_array[1] == "lan") {
 t = "LAN Port " + nvram.wans_lanport;
-if (based_modelid == "TUF-AX4200") {
+if (based_modelid == "TUF-AX4200" || based_modelid == "TUF-AX6000") {
 if (nvram.wans_lanport == '5')
 t = "2.5G LAN";
 }

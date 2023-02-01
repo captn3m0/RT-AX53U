@@ -274,7 +274,7 @@ La mise à jour de votre firmware est terminée. Fermez cette fenêtre et accéd
 La Mise à jour du microcode est terminée. Veuillez redémarrer manuellement votre RT-AX53U.
 To comply with regulatory amendments, we have modified our certificate rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
 Vous avez saisi un mot de passe incorrect à 5 reprises. Vous allez être déconnecté.
-2022 ASUSTeK Computer Inc. Tous droits réservés.
+2023 ASUSTeK Computer Inc. Tous droits réservés.
 Les paramètres de configuration conservent leurs réglages pendant le processus de mise à jour du firmware.
 Version du firmware:
 * L'heure d'été est activée pour ce fuseau horaire.
@@ -1418,7 +1418,7 @@ Changer maintenant
 Mettre à jour maintenant
 Créez maintenant
 Ne plus afficher ce message
-Numéro de service / de cas ASUS ou ID CRS
+Numéro de service / de cas ASUS
 Authentifié
 Non authentifié
 Clés autorisées
@@ -1921,7 +1921,7 @@ System Temperature
 Des explications détaillées sont disponibles dans la <a id="network_detect_faq" href="" target="_blank" style="margin-left:5px; text-decoration: underline;">FAQ du site de support d'ASUS</a>, pour vous aider à utiliser efficacement cette fonction.
 Foire aux questions
 Journal 3G / 4G
-Veuillez remplir cette colonne avec votre numéro de service ASUS ou le numéro de dossier fourni par le centre d’appel ASUS ou l’ID CRS (Customer Review Support) fourni par le support client ASUS (sur le site Amazon). Si vous ne vous souvenez pas de votre numéro de service, veuillez vérifier votre e-mail et rechercher un e-mail du service technique ASUS.<br>Cette colonne n’accepte qu’une lettre anglaise avec un numéro de casse de 8~11 chiffres et - (trait d’union) deuxième numéro de casse de 4 chiffres (par exemple : E1234567890-1234). Ou pour l’ID CRS, 5 chiffres (tel que 10688).
+Veuillez remplir cette colonne avec votre numéro de service ASUS ou le numéro de dossier fourni par le centre d’appel ASUS. Si vous ne vous souvenez pas de votre numéro de service, veuillez vérifier votre e-mail et rechercher un e-mail du service technique ASUS.<br>Cette colonne n’accepte qu’une lettre anglaise avec un numéro de casse de 8~11 chiffres et - (trait d’union) deuxième numéro de casse de 4 chiffres (par exemple : E1234567890-1234).
 Le planificateur de redémarrage est actuellement activé ; veuillez vérifier les paramètres du planificateur.
 Le programmateur sans fil est actuellement activé, veuillez vérifier les paramètres du programmateur.
 2,4 GHz ou 5 GHz ou 5 GHz-1 ou 5 GHz-2(ou 2,4 GHz et 5 GHz-2 et ainsi de suite) ou Toutes les bandes sont actuellement désactivées ; veuillez vérifier les réglages de la radio Wi-Fi.
@@ -3775,6 +3775,10 @@ WiFi Agile Multiband
 *Si le WiFi Agile Multiband est activé, les trames de gestion protégées doivent être activées (compatible ou requis).
 Ce champ permet d'activer les méthodes d'authentification pour les clients sans fil.
 Méthode d&#39;authentification
+WPA3 est une technologie de cryptage de nouvelle génération qui améliore considérablement la sécurité de la connexion, mais certains anciens appareils peuvent être incompatibles et ne pas être en mesure de se connecter au réseau si le mode WPA3 est sélectionné.
+WPA3 est une technologie de cryptage de nouvelle génération qui améliore considérablement la sécurité de la connexion, mais certains anciens appareils peuvent être incompatibles et ne pas être en mesure de se connecter au réseau si le mode WPA3/WPA2 est sélectionné.
+WPA2 ne fournit pas la meilleure sécurité du réseau, sélectionnez cette option uniquement si vous avez des appareils plus anciens qui ne peuvent pas se connecter au mode WPA3/WPA2.
+WPA est une technologie de sécurité obsolète. Sélectionnez cette option uniquement si le mode WPA2 ne fonctionne pas pour vous.
 Pour optimiser la réception du signal sans fil, il est recommandé de configurer le routeur sur le canal 2. Pour ce faire, cliquez sur OK. Sinon, cliquez sur Annuler.
 En raison de certaines réglementations locales, le canal 1 ne peut pas fournir la meilleure couverture sans fil. Si vous souhaitez tout de même continuer à utiliser ce canal, cliquez sur OK. Sinon, cliquez sur Annuler.
 Pour optimiser la réception du signal sans fil, il est recommandé de configurer le routeur sur le canal 10. Pour ce faire, cliquez sur OK. Sinon, cliquez sur Annuler.

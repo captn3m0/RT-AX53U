@@ -286,7 +286,7 @@ if(ipsec_server_enable=='1'){
 items += "<li><a href='/Advanced_VPN_IPSec.asp' target='_blank' style='text-decoration:underline;cursor:pointer;'>IP Sec</a></li>";
 }
 if(ipsec_ig_enable=='1'){
-items += "<li><a href='/Advanced_Instant_Guard.asp' target='_blank' style='text-decoration:underline;cursor:pointer;'><#4215#></a></li>";
+items += "<li><a href='/Advanced_Instant_Guard.asp' target='_blank' style='text-decoration:underline;cursor:pointer;'><#4219#></a></li>";
 }
 break;
 default :
@@ -604,8 +604,8 @@ else if(is_TW_sku && autodet_state == 2 && autodet_auxstate == 6 && !is_CHT_pppo
 if(is_TW_sku && autodet_state == 2 && autodet_auxstate == 6 && wan_proto != "pppoe"){
 notification.pppoe_tw = 1;
 notification.array[15] = 'noti_pppoe_tw';
-notification.desc[15] = '<#3988#>';
-notification.action_desc[15] = '<#3989#>';
+notification.desc[15] = '<#3992#>';
+notification.action_desc[15] = '<#3993#>';
 notification.clickCallBack[15] = "location.href = 'Advanced_WAN_Content.asp?af=wan_proto'";
 }
 if( notification.acpw || notification.upgrade || notification.wifi_2g || notification.wifi_5g || notification.wifi_5g2 || notification.ftp || notification.samba || notification.loss_sync || notification.experience_FB || notification.notif_hint || notification.send_debug_log || notification.mobile_traffic || notification.sim_record || notification.pppoe_tw || notification.pppoe_tw_static || notification.ie_legacy || notification.s46_ports){

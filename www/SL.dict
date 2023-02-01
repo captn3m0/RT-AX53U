@@ -274,7 +274,7 @@ Posodobitev vdelane programske opreme je končana. Zaprite to okno in ponovno do
 Nadgradnja vdelane programske opreme je končana. Ročno znova zaženite RT-AX53U.
 Zaradi skladnosti s spremembami predpisov smo svoja pravila za overitev spremenili tako, da zagotavljajo boljšo kakovost vdelane programske opreme. Ta različica ni združljiva z vso že izdano vdelano programsko opremo družbe ASUS in neoverjeno vdelano programsko opremo drugih izdelovalcev. Na naših uradnih spletnih mestih poiščite overjeno vdelano programsko opremo.
 Petkrat ste vnesli napačno geslo. Odjavljeni boste.
-2022 ASUSTeK Computer Inc. Vse pravice pridržane.
+2023 ASUSTeK Computer Inc. Vse pravice pridržane.
 Konfiguracijski parametri bodo ohranili svoje nastavitve med postopkom posodobitve vdelane programske opreme.
 Različica vdelane programske opreme:
 * Za ta časovni pas je omogočen prehod na poletni čas.
@@ -1418,7 +1418,7 @@ Spremeni zdaj
 Posodobi zdaj
 Ustvari zdaj
 Tega sporočila ne kaži več
-Številka storitve / številka primera ASUS ali CRS ID
+Številka storitve / številka primera ASUS
 Preverjena pristnost
 Brez preverjene pristnosti
 Pooblaščeni ključi
@@ -1921,7 +1921,7 @@ System Temperature
 Podrobna pojasnila so na voljo na <a id="network_detect_faq" href="" target="_blank" style="margin-left:5px; text-decoration: underline;">Pogosto zastavljena vprašanja ne spletnem mestu za podporo družbe ASUS</a>, ki vam lahko pomagajo učinkovito uporabljati to funkcijo.
 Poišči pogosta vprašanja
 Dnevnik 3G/4G
-V ta stolpec vnesite servisno številko ASUS, številko primera, ki ste jo dobili pri klicnem centru ASUS, ali ID CRS (podpora za pregled stranke), ki ga dobite pri podpori za stranke ASUS (na spletnem mestu Amazon). Če se ne spomnite servisne številke, preglejte e-pošto in poiščite sporočilo, ki ste ga prejeli od tehnične službe ASUS.<br>V ta stolpec lahko vnesete samo eno angleško črko s številko primera, ki vsebuje od 8 do 11 števk in - (vezaj), ki mu sledi druga številka primera, ki vsebuje 4 števke (na primer: E1234567890-1234). Za ID CRS je to 5 števk (na primer 10688).
+V ta stolpec vnesite servisno številko ASUS, številko primera, ki ste jo dobili pri klicnem centru ASUS. Če se ne spomnite servisne številke, preglejte e-pošto in poiščite sporočilo, ki ste ga prejeli od tehnične službe ASUS.<br>V ta stolpec lahko vnesete samo eno angleško črko s številko primera, ki vsebuje od 8 do 11 števk in - (vezaj), ki mu sledi druga številka primera, ki vsebuje 4 števke (na primer: E1234567890-1234).
 Načrtovalnik vnovičnega zagona je trenutno omogočen. Preverite nastavitev načrtovalnika.
 Načrtovalnik brezžičnega omrežja je trenutno omogočen. Preverite nastavitev načrtovalnika.
 Možnosti 2,4 GHz ali 5 GHz ali 5 GHz-1 ali 5 GHz-2 (ali 2,4 GHz in 5 GHz-2 itd.) ali »Vsi pasovi« so trenutno onemogočene. Preverite nastavitev radia WiFi.
@@ -3775,6 +3775,10 @@ Hitro večpasovno omrežje WiFi
 *Če je omogočeno hitro večpasovno omrežje WiFi, mora biti omogočen tudi standard Protected Management Frames. (izbira Zmožen ali Zahtevan)
 To polje omogoči načine preverjanja pristnosti za brezžične odjemalce.
 Način preverjanja pristnosti
+WPA3 je nova generacija tehnologije za šifriranje, ki močno izboljša varnost povezave, vendar nekateri stari napravi morda niso združljivi in morda ne bodo zmožni povezovanja z omrežjem, če je izbran način WPA3.
+WPA3 je nova generacija tehnologije za šifriranje, ki močno izboljša varnost povezave, vendar nekateri stari napravi morda niso združljivi in morda ne bodo zmožni povezovanja z omrežjem, če je izbran način WPA3/WPA2.
+WPA2 ne zagotavlja najboljše varnosti omrežja, izberite to možnost samo, če imate starejše naprave, ki ne morejo povezovati z načinom WPA3/WPA2.
+WPA je zastarela tehnologija varnosti. Izberite to možnost samo, če način WPA2 ne deluje za vas.
 Če želite zagotoviti najboljši signal brezžičnega omrežja, priporočamo, da kanal usmerjevalnika nastavite na kanal 2. Če želite kanal usmerjevalnika nastaviti na kanal 2, kliknite »V redu«. V nasprotnem primeru kliknite »Prekliči«.
 Kanal 1 zaradi lokalnih predpisov ne zagotavlja najboljše pokritosti z brezžičnim signalom. Če želite še naprej uporabljati kanal 1, kliknite »V redu«. V nasprotnem primeru kliknite »Prekliči«.
 Če želite zagotoviti najboljši signal brezžičnega omrežja, priporočamo, da kanal usmerjevalnika nastavite na kanal 10. Če želite kanal usmerjevalnika nastaviti na kanal 10, kliknite »V redu«. V nasprotnem primeru kliknite »Prekliči«.

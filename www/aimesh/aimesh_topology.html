@@ -1282,7 +1282,7 @@ else if(isSwMode("ap")){
 var connect_proto_array = {"dhcp":"<#167#>", "static": "<#168#>", "pppoe": "PPPoE","pptp": "PPTP","l2tp": "L2TP"};
 var connect_info = new connect_attr();
 connect_info.status = "connect";
-connect_info.status_title = "<#3847#>";
+connect_info.status_title = "<#3851#>";
 connect_info.ip = httpApi.nvramGet(["lan_ipaddr"], true).lan_ipaddr;
 connect_info.ip_title = "<#2500#>";
 var lan_proto = httpApi.nvramGet(["lan_proto"], true).lan_proto;
@@ -1319,7 +1319,7 @@ result.type_text = "<#3668#>";
 }
 else if(real_port_type.type == "plc"){
 result.type = "plc";
-result.type_text = "<#4217#>";
+result.type_text = "<#4221#>";
 }
 _quality_info = _node_info.wired_port;
 if(_re_online == "1"){
@@ -1559,7 +1559,7 @@ backhaul_parm.mac = lastPapObj.mac;
 backhaul_parm.band = "wired";
 backhaul_parm.sta_mac = _node_info.mac;
 if(_signal_quality.type == "plc"){
-backhaul_parm.band_text = "<#4217#>";
+backhaul_parm.band_text = "<#4221#>";
 backhaul_parm.band = "plc";
 }
 }
@@ -2028,7 +2028,7 @@ var conn_priority_hint_array = {
 },
 "plc": {
 "title":"<#1055#>",
-"desc":"<#1061#> <#1062#>".replace(/#CONNTYPE/g, "<#4217#>"),
+"desc":"<#1061#> <#1062#>".replace(/#CONNTYPE/g, "<#4221#>"),
 "support":false
 }
 };
@@ -4059,7 +4059,7 @@ $(document).ready(initial_AiMesh);
 </div>
 </div>
 <div id="uplink_type_mode_bg">
-<span class="uplink_type_mode_title"><#4218#></span>
+<span class="uplink_type_mode_title"><#4222#></span>
 <br>
 <span id="uplink_type_mode" class="uplink_type_title"></span>
 </div>
@@ -4094,7 +4094,7 @@ $(document).ready(initial_AiMesh);
 </div>
 </div>
 <div class="manage_slider_led horizontal_line manage_function_item">
-<div class="manage_common_title manage_common_separate_bg left"><#4142#></div>
+<div class="manage_common_title manage_common_separate_bg left"><#4146#></div>
 <div class="manage_common_separate_bg right">
 <div id='led_slider' class='led_slider'></div>
 </div>
@@ -4125,14 +4125,14 @@ $(document).ready(initial_AiMesh);
 <div class="manage_common_title"><#2778#><span id="lacp_icon" class="bubble_icon info"></span></div>
 <div>
 <select id="lacp_select" class="dropdown_select">
-<option value="1"><#3836#></option>
-<option value="0"><#3837#></option>
+<option value="1"><#3840#></option>
+<option value="0"><#3841#></option>
 </select>
 </div>
 </div>
 <div class="manage_switch_wifi horizontal_line manage_function_item sub_item_bg">
 <div>
-<div class="manage_common_title manage_common_separate_bg left"><#3911#></div>
+<div class="manage_common_title manage_common_separate_bg left"><#3915#></div>
 <div class="manage_common_separate_bg right">
 <div id="switch_wifi" class="arrow_icon down"></div>
 </div>

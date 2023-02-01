@@ -192,10 +192,10 @@ var value = ["1", "2", "3"];
 add_options_x2(document.form.wans_lanport1, name, value, <% nvram_get("wans_lanport"); %>);
 add_options_x2(document.form.wans_lanport2, name, value, <% nvram_get("wans_lanport"); %>);
 }
-if (based_modelid == "TUF-AX4200") {
+if (based_modelid == "TUF-AX4200" || based_modelid == "TUF-AX6000") {
 var desc = [ "LAN Port 1", "LAN Port 2", "LAN Port 3", "LAN Port 4" ];
 var value = [ "1", "2", "3", "4" ];
-if (based_modelid == "TUF-AX4200" && "<% nvram_get("HwId"); %>" == "B") {
+if ((based_modelid == "TUF-AX4200" && "<% nvram_get("HwId"); %>" == "B") || based_modelid == "TUF-AX6000") {
 desc.push("2.5G LAN");
 value.push("5");
 }
@@ -611,7 +611,7 @@ if(wanscapName == "WAN2")
 wanscapName = "10G base-T";
 else if(wanscapName == "SFP+")
 wanscapName = "10G SFP+";
-} else if (based_modelid == "TUF-AX4200") {
+} else if (based_modelid == "TUF-AX4200" || based_modelid == "TUF-AX6000") {
 if (wanscapName == "WAN")
 wanscapName = "2.5G WAN";
 }
@@ -1397,8 +1397,8 @@ document.getElementById("wandog_fb_count_tr").style.display = (this.checked == t
 <th><#3208#></th>
 <td>
 <select name="wans_standby" id="wans_standby" class="input_option" onchange="hotstandby_act(this.value);">
-<option value="1" <% nvram_match("wans_standby", "1", "selected"); %>><#3836#></option>
-<option value="0" <% nvram_match("wans_standby", "0", "selected"); %>><#3837#></option>
+<option value="1" <% nvram_match("wans_standby", "1", "selected"); %>><#3840#></option>
+<option value="0" <% nvram_match("wans_standby", "0", "selected"); %>><#3841#></option>
 </select>
 </td>
 </tr>

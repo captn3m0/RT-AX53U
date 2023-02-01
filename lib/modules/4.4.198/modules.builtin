@@ -163,6 +163,7 @@ kernel/net/netfilter/xt_nat.ko
 kernel/net/netfilter/xt_CLASSIFY.ko
 kernel/net/netfilter/xt_IMQ.ko
 kernel/net/netfilter/xt_LOG.ko
+kernel/net/netfilter/xt_REDIRECT.ko
 kernel/net/netfilter/xt_TCPMSS.ko
 kernel/net/netfilter/xt_connbytes.ko
 kernel/net/netfilter/xt_connlimit.ko

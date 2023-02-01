@@ -274,7 +274,7 @@ Actualizarea firmware-ului dvs. a fost terminată. Închideți această fereastr
 Componenta firmware a fost actualizată cu succes. Reporniţi manual dispozitivul RT-AX53U.
 To comply with regulatory amendments, we have modified our certificate rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
 Ați introdus o parolă incorectă de 5 ori. Veți fi deconectat.
-2022 ASUSTeK Computer Inc. Toate drepturile rezervate.
+2023 ASUSTeK Computer Inc. Toate drepturile rezervate.
 Parametrii de configurare își vor păstra setările în timpul procesului de actualizare a firmware-ului.
 Versiune firmware:
 * Ora de vară este activată în acest fus orar.
@@ -1418,7 +1418,7 @@ Schimba acum
 Actualizeaza acum
 Creati acum
 Nu mai arata acest mesaj din nou
-ASUS Număr serviciu / Număr caz sau CRS ID
+ASUS Număr serviciu / Număr caz
 Autentificat
 Neautentificat
 Chei autorizate
@@ -1921,7 +1921,7 @@ System Temperature
 Explicații detaliate sunt disponibile pe <a id="network_detect_faq" href="" target="_blank" style="margin-left:5px; text-decoration: underline;">Site-ul de asistență ASUS, Întrebări frecvente</a>, care vă poate ajuta să utilizați această funcție în mod eficient.
 Găsiţi răspunsuri la întrebările frecvente
 Jurnal 3G/4G
-Completați în această coloană cu numărul dvs. de service ASUS sau numărul de caz oferit de Centrul de asistență ASUS sau ID-ul CRS (Customer Review Support) furnizat de Asistență clienți ASUS (pe site-ul Amazon). Dacă nu vă amintiți numărul dvs. de service, verificați-vă mesajele e-mail și căutați un e-mail de la Serviciul Tehnic ASUS.<br>Această coloană acceptă doar o literă cu între 8 și 11 cifre numărul de caz și - (cratima) 4 cifre al doilea număr de caz (de exemplu: E1234567890-1234). Sau pentru ID CRS, 5 cifre (cum ar fi 10688).
+Completați în această coloană cu numărul dvs. de service ASUS sau numărul de caz oferit de Centrul de asistență ASUS. Dacă nu vă amintiți numărul dvs. de service, verificați-vă mesajele e-mail și căutați un e-mail de la Serviciul Tehnic ASUS.<br>Această coloană acceptă doar o literă cu între 8 și 11 cifre numărul de caz și - (cratima) 4 cifre al doilea număr de caz (de exemplu: E1234567890-1234).
 Planificatorul de repornire activat momentan. Verificați setările planificatorului.
 Planificatorul wireless activat momentan. Verificați setările planificatorului.
 2.4GHz sau 5GHz sau 5GHz-1 sau 5GHz-2(sau 2.4GHz și 5GHz-2 s.a.m.d.) sau Toate benzile momentan dezactivate. Verificați setările radio WiFi.
@@ -3775,6 +3775,10 @@ WiFi Agile Multiband
 *Dacă funcția WiFi Agile Multiband este activată, opțiunea Protected Management Frames (Cadre de gestionare protejate) trebuie să fie activată. (cu capacitate sau necesar)
 Acest câmp activează metodele de autentificare pentru clienţii wireless.
 Metoda de autentificare
+WPA3 este o tehnologie de criptare a noii generații, care îmbunătățește semnificativ securitatea conexiunii, dar unele dispozitive vechi pot fi incompatibile și pot fi incapabile să se conecteze la rețea dacă este selectat modul WPA3.
+WPA3 este o tehnologie de criptare a noii generații, care îmbunătățește semnificativ securitatea conexiunii, dar unele dispozitive vechi pot fi incompatibile și pot fi incapabile să se conecteze la rețea dacă este selectat modul WPA3/WPA2.
+WPA2 nu oferă cea mai bună securitate a rețelei, selectați această opțiune doar dacă aveți dispozitive mai vechi care nu sunt capabile să se conecteze la modul WPA3/WPA2.
+WPA este o tehnologie de securitate depășită. Selectați această opțiune doar dacă modul WPA2 nu funcționează pentru dvs.
 Pentru a vă asigura că beneficiaţi de cel mai bun semnal wireless, vă recomandăm să setaţi canalul ruterului la Canal 2. Pentru a realiza acest lucru, faceţi clic pe OK. În caz contrar, faceţi clic pe Anulare.
 Ca urmare a reglementărilor locale, opţiunea Canal 1 nu poate asigura o acoperire optimă a semnalului wireless. Dacă doriţi să utilizaţi în continuare opţiunea Canal 1, faceţi clic pe OK. În caz contrar, faceţi clic pe Anulare.
 Pentru a vă asigura că beneficiaţi de cel mai bun semnal wireless, vă recomandăm să setaţi canalul ruterului la Canal 10. Pentru a realiza acest lucru, faceţi clic pe OK. În caz contrar, faceţi clic pe Anulare.

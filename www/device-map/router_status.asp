@@ -86,7 +86,7 @@ variable = Object.assign(variable, nvram);
 function genElement(){
 var code = '';
 if(system.INTELplatform){
-code += '<div class="info-title"><#4142#></div>';
+code += '<div class="info-title"><#4146#></div>';
 code += '<div class="display-flex flex-a-center led-container">';
 code += '<div id="slider"></div>';
 code += '<div id="color_pad"></div>';
@@ -127,8 +127,8 @@ var yadns_enable = variable.yadns_enable_x;
 var yadns_mode = variable.yadns_mode;
 var yadns_clients = variable.yadns_clients;
 var mode = (yadns_enable != '0') ? yadns_mode : 4;
-var modeDesc = ['<#3977#>', '<#3979#>', '<#3981#>', '', '<#1518#>'];
-code += '<div class="division-block"><#3970#></div>';
+var modeDesc = ['<#3981#>', '<#3983#>', '<#3985#>', '', '<#1518#>'];
+code += '<div class="division-block"><#3974#></div>';
 code += '<div class="info-block"><div class="info-content">' + modeDesc[mode] +'</div></div>';
 for(var i=0; i<3; i++){
 if(yadns_enable != 0 && i != mode && yadns_clients[i]){
@@ -413,7 +413,7 @@ setTimeout("get_ethernet_ports();", 3000);
 }
 function get_plc_ports() {
 if(based_modelid == "PL-AX56_XP4"){
-var code = '<div class="division-block"><#4217#></div>';
+var code = '<div class="division-block"><#4221#></div>';
 code += '<div>';
 code += '<div class="display-flex flex-a-center table-header">';
 code += '<div class="port-block-width table-content"><#731#></div>';

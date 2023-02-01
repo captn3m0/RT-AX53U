@@ -85,7 +85,7 @@ document.form.submit();
 <tr id="printer_button" style="display:none;">
 <td style="padding:5px 10px 5px 15px;">
 <p class="formfonttitle_nwm" id="monoP" style="width:138px;"><#2981#></p>
-<input id="monoBtn" type="button" class="button_gen" value="<#3836#>" onclick="cleanTask();">
+<input id="monoBtn" type="button" class="button_gen" value="<#3840#>" onclick="cleanTask();">
 <p id="monoDesc" style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;"><% nvram_get("mfp_ip_monopoly"); %></p>
 <div style="margin-top:5px;" class="line_horizontal"></div>
 </td>

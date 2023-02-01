@@ -69,7 +69,7 @@ document.getElementById("ipv6_only_tr").style.display = "none";
 if(yadns_support){
 if(yadns_enable != 0 && yadns_mode != -1){
 document.getElementById("yadns_hint").style.display = "";
-document.getElementById("yadns_hint").innerHTML = "<span><#3985#></span>";
+document.getElementById("yadns_hint").innerHTML = "<span><#3989#></span>";
 }
 }
 if(!wans_flag){
@@ -1009,7 +1009,7 @@ document.form.wan_selection.selectedIndex = parseInt(ipv6_unit);
 <tr id="ipv6_only_tr" style="display: none;">
 <th>IPv6 Only</th>
 <td>
-<input type="radio" name="ipv6_only" class="ipv6_only" value="1" <% nvram_match("ipv6_only", "1","checked"); %> disabled><#3836#>
+<input type="radio" name="ipv6_only" class="ipv6_only" value="1" <% nvram_match("ipv6_only", "1","checked"); %> disabled><#3840#>
 <input type="radio" name="ipv6_only" class="ipv6_only" value="0" <% nvram_match("ipv6_only", "0","checked"); %> disabled><#1517#>
 </td>
 </tr>
@@ -1024,13 +1024,13 @@ document.form.wan_selection.selectedIndex = parseInt(ipv6_unit);
 </tr>
 <tr style="display:none;"><th>DHCP-PD</th>
 <td>
-<input type="radio" name="ipv6_dhcp_pd" class="input" value="1" onclick="showInputfield2('ipv6_dhcp_pd', this.value);" <% nvram_match("ipv6_dhcp_pd", "1","checked"); %>><#3836#>
+<input type="radio" name="ipv6_dhcp_pd" class="input" value="1" onclick="showInputfield2('ipv6_dhcp_pd', this.value);" <% nvram_match("ipv6_dhcp_pd", "1","checked"); %>><#3840#>
 <input type="radio" name="ipv6_dhcp_pd" class="input" value="0" onclick="showInputfield2('ipv6_dhcp_pd', this.value);" <% nvram_match("ipv6_dhcp_pd", "0","checked"); %>><#1517#>
 </td>
 </tr>
 <tr style="display:none;"><th><#2430#></th>
 <td>
-<input type="radio" name="_ipv6_accept_defrtr" class="input" value="1" <% nvram_match("ipv6_accept_defrtr", "1","checked"); %>><#3836#>
+<input type="radio" name="_ipv6_accept_defrtr" class="input" value="1" <% nvram_match("ipv6_accept_defrtr", "1","checked"); %>><#3840#>
 <input type="radio" name="_ipv6_accept_defrtr" class="input" value="0" <% nvram_match("ipv6_accept_defrtr", "0","checked"); %>><#1517#>
 </td>
 </tr>
@@ -1049,7 +1049,7 @@ document.form.wan_selection.selectedIndex = parseInt(ipv6_unit);
 <tr style="display:none;">
 <th><#2426#></th>
 <td>
-<input type="radio" name="ipv6_6rd_dhcp" class="input" value="1" onclick="showInputfield2('ipv6_6rd_dhcp', this.value);" <% nvram_match("ipv6_6rd_dhcp", "1","checked"); %>><#3836#>
+<input type="radio" name="ipv6_6rd_dhcp" class="input" value="1" onclick="showInputfield2('ipv6_6rd_dhcp', this.value);" <% nvram_match("ipv6_6rd_dhcp", "1","checked"); %>><#3840#>
 <input type="radio" name="ipv6_6rd_dhcp" class="input" value="0" onclick="showInputfield2('ipv6_6rd_dhcp', this.value);" <% nvram_match("ipv6_6rd_dhcp", "0","checked"); %>><#1517#>
 </td>
 </tr>
@@ -1210,7 +1210,7 @@ document.form.wan_selection.selectedIndex = parseInt(ipv6_unit);
 <tr style="display:none;">
 <th><#308#></th>
 <td>
-<input type="radio" name="ipv6_dnsenable" class="input" value="1" onclick="showInputfield2('ipv6_dnsenable', this.value);" <% nvram_match("ipv6_dnsenable", "1","checked"); %>><#3836#>
+<input type="radio" name="ipv6_dnsenable" class="input" value="1" onclick="showInputfield2('ipv6_dnsenable', this.value);" <% nvram_match("ipv6_dnsenable", "1","checked"); %>><#3840#>
 <input type="radio" name="ipv6_dnsenable" class="input" value="0" onclick="showInputfield2('ipv6_dnsenable', this.value);" <% nvram_match("ipv6_dnsenable", "0","checked"); %>><#1517#>
 <span id="ipv6plus_hint" style="display:none;"><br>It is recommended to enable this setting while WAN connection type is <#2444#>.</span><div id="yadns_hint" style="display:none;"></div>
 </td>
@@ -1243,7 +1243,7 @@ document.form.wan_selection.selectedIndex = parseInt(ipv6_unit);
 <tr>
 <th><#1876#></th>
 <td>
-<input type="radio" name="_ipv6_radvd" class="input" value="1" <% nvram_match("ipv6_radvd", "1","checked"); %>><#3836#>
+<input type="radio" name="_ipv6_radvd" class="input" value="1" <% nvram_match("ipv6_radvd", "1","checked"); %>><#3840#>
 <input type="radio" name="_ipv6_radvd" class="input" value="0" <% nvram_match("ipv6_radvd", "0","checked"); %>><#1517#>
 </td>
 </tr>

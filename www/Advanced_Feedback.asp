@@ -283,7 +283,7 @@ url_group.push(["GUI"]);//false value
 desclist.push(["<#414#>","FW update"]);
 url_group.push(["FirmwareUpgrade"]);
 if(isSupport("Instant_Guard")){
-desclist.push(["<#4215#>","Instant Guard"]); //30
+desclist.push(["<#4219#>","Instant Guard"]); //30
 url_group.push(["Instant_Guard"]);
 }
 }
@@ -565,8 +565,7 @@ return false;
 document.form.fb_contact_type.value = (document.form.fb_contact_type.value=="No_selected")?"":document.form.fb_contact_type.value;
 }
 if(document.form.fb_pdesc.value == "tech_ASUS"){
-var re_asus = new RegExp(/^[A-Za-z][A-Za-z0-9\-]+$/i);
-var re_crs = new RegExp("^[0-9]{5}","gi");
+var re_asus = new RegExp(/^[A-Za-z0-9\-]{8,}$/i);
 var re_valid = 0;
 document.form.fb_tech_account.disabled = "";
 document.form.fb_tech_account.value = "";
@@ -579,10 +578,7 @@ if(document.form.fb_serviceno.value != ""){
 if(!re_asus.test(document.form.fb_serviceno.value)){
 re_valid++;
 }
-if(document.form.fb_serviceno.value.length != 5 || !re_crs.test(document.form.fb_serviceno.value)){
-re_valid++;
-}
-if(re_valid == 2){
+if(re_valid > 0){
 alert("<#333#>");
 document.form.fb_serviceno.focus();
 return false;
@@ -1304,7 +1300,7 @@ setTimeout("redirect()", 1000);
 <tr style="display:none;">
 <th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(34,2);"><#1420#></a></th>
 <td>
-<input type="text" name="fb_serviceno" maxlength="32" class="input_20_table" value="" autocorrect="off" autocapitalize="off">
+<input type="text" name="fb_serviceno" maxlength="32" class="input_20_table" placeholder="E1234567890-1234" value="" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none;">

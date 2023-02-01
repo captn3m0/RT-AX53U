@@ -147,7 +147,7 @@ parent.initialAccount();
 <td colspan="3" valign="top" align="left" class="">
 <div style="width:660px; line-height:180%;">
 <ul>
-<li><#3986#>
+<li><#3990#>
 <span id="dummyShareStr"></span>
 </li>
 <span id="haveDDNS">

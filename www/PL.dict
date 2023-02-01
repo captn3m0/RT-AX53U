@@ -274,7 +274,7 @@ Aktualizacja oprogramowania sprzętowego została zakończona. Zamknij to okno i
 Aktualizacja firmware została wykonana. Uruchom ponownie RT-AX53U ręcznie.
 To comply with regulatory amendments, we have modified our certificate rule to ensure better firmware quality. This version is not compatible with all previously released ASUS firmware and uncertified third party firmware. Please check our official websites for the certified firmware.
 5 razy podano niepoprawne hasło. Nastąpi wylogowanie.
-2022 ASUSTeK Computer Inc. Wszystkie prawa zastrzeżone.
+2023 ASUSTeK Computer Inc. Wszystkie prawa zastrzeżone.
 Parametry konfiguracji będą utrzymają swoje ustawienia podczas aktualizacji firmware.
 Wersja firmware:
 * W tej strefie czasowej jest uruchomiony “czas letni”.
@@ -1418,7 +1418,7 @@ Zmień teraz
 Aktualizuj teraz
 Utwórz teraz
 Nie pokazuj więcej tej informacji
-Numer usługi / sprawy ASUS lub CRS ID
+Numer usługi / sprawy ASUS
 Uwierzytelniono
 Nie uwierzytelniono
 Autoryzowane klucze
@@ -1921,7 +1921,7 @@ Temperatury Systemu
 Szczegółowe wyjaśnienia dostępne są na stronie często zadawanych pytań <a id="network_detect_faq" href="" target="_blank" style="margin-left:5px; text-decoration: underline;">portalu ASUS Support</a>, i mogą one pomóc w skutecznym skorzystaniu z tej funkcji.
 Znajdź FAQ
 3G/4G Log (Dziennik 3G/4G)
-W tej kolumnie podaj numer serwisowy ASUS lub numer zgłoszenia otrzymany z telecentrum ASUS Call Center bądź identyfikator CRS (Customer Review Support) podany przez dział obsługi klienta ASUS (w serwisie Amazon). Jeśli nie pamiętasz numeru serwisowego, wyszukaj w wiadomościach e-mail wiadomość od „ASUS Technical Service” (serwisu technicznego ASUS).<br>W tej kolumnie można wpisać tylko jedną literę alfabetu łacińskiego i numer zgłoszenia 8–11 cyfr oraz łącznik (-) i 4 cyfry z numeru drugiego zgłoszenia (na przykład: E1234567890-1234). albo pięciocyfrowy identyfikator CRS (na przykład 10688).
+W tej kolumnie podaj numer serwisowy ASUS lub numer zgłoszenia otrzymany z telecentrum ASUS Call Center. Jeśli nie pamiętasz numeru serwisowego, wyszukaj w wiadomościach e-mail wiadomość od „ASUS Technical Service” (serwisu technicznego ASUS).<br>W tej kolumnie można wpisać tylko jedną literę alfabetu łacińskiego i numer zgłoszenia 8–11 cyfr oraz łącznik (-) i 4 cyfry z numeru drugiego zgłoszenia (na przykład: E1234567890-1234).
 Planowanie ponownego uruchomienia jest obecnie włączone, sprawdź ustawienie planowania.
 Planowanie sieci bezprzewodowej jest obecnie włączone, sprawdź ustawienie planowania.
 2,4 GHz lub 5 GHz, lub 5 GHz-1, lub 5 GHz-2 (lub 2,4 GHz i 5 GHz-2 itd.), lub wszystkie pasma są obecnie wyłączone, sprawdź ustawienia WiFi.
@@ -3775,6 +3775,10 @@ Wielopasmowa sieć WiFi Agile
 *Jeśli Wielopasmowa sieć WiFi Agile jest włączona, opcja Chronione ramki zarządzania musi być włączona. (Możliwe lub Wymagane)
 Pozwala na wybranie określonego typu autentykacji.
 Tryb autentykacji połączenia bezprzewodowego
+WPA3 to nowa generacja technologii szyfrowania, która znacznie zwiększa bezpieczeństwo połączenia, ale niektóre starsze urządzenia mogą być niekompatybilne i nie mogą połączyć się z siecią, jeśli wybrano tryb WPA3.
+WPA3 to nowa generacja technologii szyfrowania, która znacznie zwiększa bezpieczeństwo połączenia, ale niektóre starsze urządzenia mogą być niekompatybilne i nie mogą połączyć się z siecią, jeśli wybrano tryb WPA3/WPA2.
+WPA2 nie zapewnia najlepszego bezpieczeństwa sieci, wybierz tę opcję tylko wtedy, gdy starsze urządzenia nie mogą połączyć się z trybem WPA3/WPA2.
+WPA to przestarzała technologia zabezpieczeń. Wybierz tę opcję tylko wtedy, gdy tryb WPA2 nie działa dla Ciebie.
 Aby zapewnić najlepszy sygnał połączenia bezprzewodowego, zalecamy ustawienie kanału routera na Kanał 2. Aby ustawić router na kanał 2, kliknij OK. W przeciwnym razie, kliknij Anuluj.
 Z powodu lokalnych przepisów, Kanał 1 nie zapewnia najlepszego zasięgu połączenia bezprzewodowego. Aby dalej używać Kanał 1, kliknij OK. W przeciwnym razie, kliknij Anuluj.
 Aby zapewnić najlepszy sygnał połączenia bezprzewodowego, zalecamy ustawienie kanału routera na Kanał 10. Aby ustawić router na kanał 10, kliknij OK. W przeciwnym razie, kliknij Anuluj.

@@ -56,7 +56,7 @@ index: "menu_GuestNetwork",
 tab: [
 {url: "Guest_network.asp", tabName: "<#282#>"},
 {url: "Captive_Portal.asp", tabName: "Free WiFi"},
-{url: "Captive_Portal_Advanced.asp", tabName: "<#4014#>"},
+{url: "Captive_Portal_Advanced.asp", tabName: "<#4018#>"},
 {url: "Guest_network_fbwifi.asp", tabName: "Facebook WiFi"},
 {url: "NULL", tabName: "__INHERIT__"}
 ]
@@ -80,7 +80,7 @@ index: "menu_ParentalControl",
 tab: [
 {url: "AiProtection_WebProtector.asp", tabName: "<#1210#>"},
 {url: "ParentalControl.asp", tabName: "<#3282#>"},
-{url: "YandexDNS.asp", tabName: "<#3970#>"},
+{url: "YandexDNS.asp", tabName: "<#3974#>"},
 {url: "NULL", tabName: "__INHERIT__"}
 ]
 },
@@ -234,9 +234,9 @@ tab: [
 {url: "Advanced_VPN_PPTP.asp", tabName: "<#170#>"},
 {url: "Advanced_VPN_OpenVPN.asp", tabName: "__INHERIT__"},
 {url: "Advanced_VPN_IPSec.asp", tabName: "__INHERIT__"},
-{url: "Advanced_VPNClient_Content.asp", tabName: (vpn_fusion_support) ? "<#4108#>" : "<#3662#>"},
+{url: "Advanced_VPNClient_Content.asp", tabName: (vpn_fusion_support) ? "<#4112#>" : "<#3662#>"},
 {url: "Advanced_TOR_Content.asp", tabName: "TOR"},
-{url: "Advanced_Instant_Guard.asp", tabName: "<#4215#>"},
+{url: "Advanced_Instant_Guard.asp", tabName: "<#4219#>"},
 {url: "Advanced_WireguardServer_Content.asp", tabName: "WireGuard Server"},/*untranslated*/
 {url: "NULL", tabName: "__INHERIT__"}
 ]
@@ -267,7 +267,7 @@ tab: [
 {url: "Advanced_SNMP_Content.asp", tabName: "SNMP"},
 {url: "Advanced_TR069_Content.asp", tabName: "TR-069"},
 {url: "Advanced_Notification_Content.asp", tabName: "Notification"},
-{url: "Advanced_Privacy.asp", tabName: "<#4139#>"},
+{url: "Advanced_Privacy.asp", tabName: "<#4143#>"},
 {url: "NULL", tabName: "__INHERIT__"}
 ]
 },

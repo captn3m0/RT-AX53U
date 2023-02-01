@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#842#> - <#4215#></title>
+<title><#842#> - <#4219#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="other.css">
@@ -202,9 +202,9 @@ tableApi.genTableAPI(tableStruct);
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#4215#></div>
+<div class="formfonttitle"><#4219#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#4216#></div>
+<div class="formfontdesc"><#4220#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
@@ -212,7 +212,7 @@ tableApi.genTableAPI(tableStruct);
 </tr>
 </thead>
 <tr>
-<th><#4215#></th>
+<th><#4219#></th>
 <td>
 <div align="center" class="left" style="float:left;cursor:pointer;" id="radio_IG_enable"></div>
 <div class="iphone_switch_container" style="height:32px; width:74px; position: relative; overflow: hidden;"></div>

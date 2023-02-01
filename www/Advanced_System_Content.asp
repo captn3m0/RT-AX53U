@@ -1104,10 +1104,10 @@ hide_https_lanport(document.form.http_enable.value);
 }
 else{
 var effectApps = [];
-if(app_support) effectApps.push("<#4137#>");
-if(alexa_support) effectApps.push("<#4138#>");
+if(app_support) effectApps.push("<#4141#>");
+if(alexa_support) effectApps.push("<#4142#>");
 var original_misc_http_x = httpApi.nvramGet(["misc_http_x"]).misc_http_x;
-var RemoteAccessHint = "<#4136#>".replace("$Apps$", effectApps.join(", "));
+var RemoteAccessHint = "<#4140#>".replace("$Apps$", effectApps.join(", "));
 if(original_misc_http_x == '1' && effectApps.length != 0){
 if(!confirm(RemoteAccessHint)){
 document.form.misc_http_x[0].checked = true;
@@ -1553,7 +1553,7 @@ postData.cur_passwd = $("#http_passwd_cur").val();
 postData.new_username = $("#http_username_new").val();
 change_result = httpApi.chpass(postData);
 if(change_result == "401"){
-showtext(document.getElementById("pwd_msg"), "<#4232#>");
+showtext(document.getElementById("pwd_msg"), "<#4236#>");
 $("#http_passwd_cur").focus();
 $("#http_passwd_cur").select();
 }
@@ -1649,7 +1649,7 @@ postData.cur_passwd = $("#http_passwd_cur").val();
 postData.new_passwd = $("#http_passwd_new").val();
 change_result = httpApi.chpass(postData);
 if(change_result == "401"){
-showtext(document.getElementById("pwd_msg"), "<#4232#>");
+showtext(document.getElementById("pwd_msg"), "<#4236#>");
 $("#http_passwd_cur").focus();
 $("#http_passwd_cur").select();
 }
@@ -1993,7 +1993,7 @@ add_option(document.form.dst_end_h, dst_hour[i], i, 0);
 <th><#745#></th>
 <td>
 <input type="text" class="input_3_table" maxlength="3" name="http_autologout" value='<% nvram_get("http_autologout"); %>' onKeyPress="return validator.isNumber(this,event);" autocorrect="off" autocapitalize="off"> <#2657#>
-<span>(<#3987#>)</span>
+<span>(<#3991#>)</span>
 </td>
 </tr>
 <tr id="nat_redirect_enable_tr">
@@ -2004,13 +2004,13 @@ add_option(document.form.dst_end_h, dst_hour[i], i, 0);
 </td>
 </tr>
 <tr id="btn_ez_radiotoggle_tr" style="display: none;">
-<th><#3957#></th>
+<th><#3961#></th>
 <td>
 <label for="turn_WPS" id="btn_ez_WPS">
-<input type="radio" name="btn_ez_radiotoggle" id="turn_WPS" class="input" value="0"><#3956#>
+<input type="radio" name="btn_ez_radiotoggle" id="turn_WPS" class="input" value="0"><#3960#>
 </label>
 <label for="turn_WiFi" id="btn_ez_WiFi" style="display:none;">
-<input type="radio" name="btn_ez_radiotoggle" id="turn_WiFi" class="input" value="1"><#3958#>
+<input type="radio" name="btn_ez_radiotoggle" id="turn_WiFi" class="input" value="1"><#3962#>
 </label>
 <label for="turn_LED" id="btn_ez_LED" style="display:none;">
 <input type="radio" name="btn_ez_radiotoggle" id="turn_LED" class="input" value="0"><#2603#>
@@ -2118,17 +2118,17 @@ add_option(document.form.dst_end_h, dst_hour[i], i, 0);
 </td>
 </tr>
 <tr id="plc_sleep_tr" style="display:none;">
-<th align="right"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(11,12);"><#4219#></a></th>
+<th align="right"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(11,12);"><#4223#></a></th>
 <td>
 <input type="radio" name="plc_sleep_enabled" value="1" <% nvram_match_x("","plc_sleep_enabled","1", "checked"); %> ><#187#>
 <input type="radio" name="plc_sleep_enabled" value="0" <% nvram_match_x("","plc_sleep_enabled","0", "checked"); %> ><#186#>
 </td>
 </tr>
 <tr>
-<th width="40%"><#4070#></th>
+<th width="40%"><#4074#></th>
 <td>
 <input type="text" class="input_3_table" maxlength="3" name="shell_timeout_x" value="" onKeyPress="return validator.isNumber(this,event);" autocorrect="off" autocapitalize="off"> <#2657#>
-<span>(<#3987#>)</span>
+<span>(<#3991#>)</span>
 </td>
 </tr>
 </table>

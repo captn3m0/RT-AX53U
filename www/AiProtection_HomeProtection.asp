@@ -967,7 +967,7 @@ $(".shadow").css("display", "none");
 </td>
 </tr>
 <tr>
-<th><#3959#> -</th>
+<th><#3963#> -</th>
 <td>
 <div id="wps_status"></div>
 </td>
