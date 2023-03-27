@@ -984,6 +984,7 @@ $(".repeaterSupport").toggle(isSupport("repeater"));
 $(".pstaSupport").toggle(isSupport("psta"));
 $(".dualbandSupport").toggle(isSupport("dualband") || isSupport("triband") || isSupport("quadband"));
 $(".v6plus").toggle(isSupport("s46"));
+$(".ocnvc").toggle(isSupport("s46") && isSupport("ocnvc"));
 $(".vpnClient").toggle(isSupport("VPNCLIENT"));
 $(".iptv").toggle(isSupport("IPTV"));
 $(".defaultSupport").toggle(systemVariable.isDefault);
@@ -1606,7 +1607,7 @@ httpApi.log("fwInfo", JSON.stringify(fwInfo), systemVariable.qisSession)
 validator.hostNameString = function(str){
 var testResult = {
 'isError': false,
-'errReason': "<#2483#>"
+'errReason': "<#2487#>"
 }
 var re = new RegExp("^[a-zA-Z0-9][a-zA-Z0-9\-\_]+$","gi");
 testResult.isError = re.test(str) ? false : true;

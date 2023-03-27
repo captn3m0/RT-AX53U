@@ -82,6 +82,7 @@ var faq_href = "https://nw-dlcdnet.asus.com/support/forward.html?model=&type=Faq
 var le_sbstate_t = '<% nvram_get("le_sbstate_t"); %>';
 var le_auxstate_t = '<% nvram_get("le_auxstate_t"); %>';
 var le_re_ddns = '<% nvram_get("le_re_ddns"); %>';
+var asusddns_token_state = httpApi.nvramGet(["asusddns_token_state"], true).asusddns_token_state;
 function init(){
 show_menu();
 document.getElementById("faq").href=faq_href;
@@ -185,10 +186,30 @@ submitForm();
 }
 }
 function force_update() {
-var r = confirm("<#2549#>");
+var r = confirm("<#2553#>");
 if(r == false)
 return false
 submitForm();
+}
+function show_deregister_btn(){
+$("#deregister_btn").css("display", "inline");
+if(asusddns_token_state == "1"){
+$("#deregister_btn").click(function(){
+alert("The host name has been bound to the login account of the router app, please delete/deregister it from the router app.");//untranslated
+});
+}
+else{
+$("#deregister_btn").click(function(){
+if(orig_le_enable != "0"){
+var confirm_msg = "Your certification will be removed! You will be automatically logged out for the renewal. Please log in again for further configuration.";//untranslated
+if(!confirm(confirm_msg)){
+return false;
+}
+}
+showLoading();
+asuscomm_deregister();
+});
+}
 }
 function ddns_load_body(){
 if(ddns_enable_x == 1){
@@ -213,7 +234,7 @@ document.getElementById("ddns_hostname_x").value = ddns_hostname_x_t;
 else
 document.getElementById("ddns_hostname_x").value = "<#152#>";
 }
-showhide("ddns_ipcheck_tr", 1);
+show_ipv6update_setting();
 change_ddns_setting(document.form.ddns_server_x.value);
 if(letsencrypt_support){
 show_cert_settings(1);
@@ -236,7 +257,6 @@ inputCtrl(document.form.ddns_passwd_x, 0);
 document.form.ddns_wildcard_x[0].disabled= 1;
 document.form.ddns_wildcard_x[1].disabled= 1;
 showhide("wildcard_field",0);
-showhide("ddns_ipcheck_tr", 0);
 if(letsencrypt_support)
 show_cert_settings(0);
 }
@@ -254,17 +274,9 @@ if((ddns_return_code.indexOf('200')!=-1 || ddns_return_code.indexOf('220')!=-1 |
 showhide("wan_ip_hide2", 0);
 if(ddns_server_x == "WWW.ASUS.COM"){
 showhide("wan_ip_hide3", 1);
-document.getElementById("ddns_status").innerHTML = "<#728#>";
-if(inadyn)
-$("#deregister_btn").css("display", "inline");
 }
 }
 else{
-if(ddns_server_x == "WWW.ASUS.COM"){
-document.getElementById("ddns_status").innerHTML = "<#729#>";
-if(ddnsStatus != "")
-$("#ddns_status_detail").css("display", "inline");
-}
 if((ddns_return_code == "ddns_query" || ddns_return_code_chk == "Time-out" || ddns_return_code_chk == "connect_fail" || ddns_return_code_chk.indexOf('-1') != -1) && le_re_ddns != "1")
 checkDDNSReturnCode_noRefresh();
 }
@@ -300,7 +312,7 @@ function validForm(){
 if(document.form.ddns_enable_x[0].checked){ //ddns enable
 if(document.form.ddns_server_x.selectedIndex == 0){ //WWW.ASUS.COM
 if(document.form.DDNSName.value == ""){
-alert("<#2532#>");
+alert("<#2536#>");
 document.form.DDNSName.focus();
 document.form.DDNSName.select();
 return false;
@@ -325,7 +337,7 @@ return true;
 }
 }else{
 if(document.form.ddns_server_x.value != "WWW.ORAY.COM" && document.form.ddns_hostname_x.value == ""){
-alert("<#2532#>");
+alert("<#2536#>");
 document.form.ddns_hostname_x.focus();
 document.form.ddns_hostname_x.select();
 return false;
@@ -349,7 +361,7 @@ return false;
 return false;
 }
 if(document.form.ddns_regular_period.value < 30){
-alert("<#2882#> : 30");
+alert("<#2886#> : 30");
 document.form.ddns_regular_period.focus();
 document.form.ddns_regular_period.select();
 return false;
@@ -399,7 +411,7 @@ if(ddns_server_x == "WWW.ASUS.COM"){
 showhide("wan_ip_hide3", 1);
 document.getElementById("ddns_status").innerHTML = "<#728#>";
 if(inadyn)
-$("#deregister_btn").css("display", "inline");
+show_deregister_btn();
 }
 }
 else{
@@ -421,7 +433,7 @@ return false;
 }
 var unvalid_start=new RegExp("^[0-9].*", "gi");
 if(unvalid_start.test(s) ){
-show_alert_block("<#2542#>");
+show_alert_block("<#2546#>");
 return false;
 }
 if (!validator.string(o)){
@@ -432,12 +444,12 @@ c = s.charCodeAt(i);
 if (c==46){
 dot++;
 if(dot>0){
-show_alert_block("<#2542#>");
+show_alert_block("<#2546#>");
 return false;
 }
 }
 if (!validator.hostNameChar(c)){
-show_alert_block("<#2531#> '" + s.charAt(i) +"' !");
+show_alert_block("<#2535#> '" + s.charAt(i) +"' !");
 return false;
 }
 }
@@ -493,7 +505,7 @@ if(ddns_enable_x == "1" && ddns_server_x_t == "WWW.ASUS.COM" &&
 (ddns_return_code_chk.indexOf('200')!=-1 || ddns_return_code_chk.indexOf('220')!=-1 || ddns_return_code_chk == 'register,230')){
 document.getElementById("ddns_status").innerHTML = "<#728#>";
 if(inadyn)
-$("#deregister_btn").css("display", "inline");
+show_deregister_btn();
 }
 else
 document.getElementById("ddns_status").innerHTML = "<#729#>";
@@ -518,7 +530,7 @@ document.form.ddns_hostname_x.parentNode.style.display = "";
 document.form.DDNSName.parentNode.style.display = "none";
 inputCtrl(document.form.ddns_username_x, 1);
 inputCtrl(document.form.ddns_passwd_x, 1);
-if(v == "WWW.TUNNELBROKER.NET" || v == "WWW.SELFHOST.DE" || v == "DOMAINS.GOOGLE.COM")
+if(v == "WWW.TUNNELBROKER.NET" || v == "DNS.HE.NET" || v == "WWW.SELFHOST.DE" || v == "DOMAINS.GOOGLE.COM")
 var disable_wild = 1;
 else
 var disable_wild = 0;
@@ -574,7 +586,7 @@ document.getElementById("cert_details").style.display = "none";
 break;
 case "1":
 document.getElementById("cert_desc").style.display = "";
-document.getElementById("le_desc").innerHTML = "<#2569#>";
+document.getElementById("le_desc").innerHTML = "<#2573#>";
 html_code = '<div style="margin-top:5px;"><input type="checkbox" name="letsEncryptTerm_check" checked>';
 html_code += "<#1695#>";
 html_code += '<a href="https://letsencrypt.org/documents/LE-SA-v1.2-November-15-2017.pdf" target="_blank" style="margin-left: 5px; color:#FFF; text-decoration: underline;">Term of Service</a>'
@@ -614,9 +626,9 @@ function show_cert_details(){
 if(httpd_cert_info.issueTo != "" && httpd_cert_info.issueBy != "" && httpd_cert_info.expire != ""){
 if(orig_le_enable == "1" && le_state == "0"){
 if(httpd_cert_info.issueBy.indexOf("Let's Encrypt") == -1)
-document.getElementById("cert_status").innerHTML = "<#3564#>";
+document.getElementById("cert_status").innerHTML = "<#3570#>";
 else
-document.getElementById("cert_status").innerHTML = "<#3447#>";
+document.getElementById("cert_status").innerHTML = "<#3453#>";
 setTimeout("get_cert_info();", 1000);
 }
 else{
@@ -633,7 +645,7 @@ $("#cert_status").text(ddnsHint);
 $("#cert_status").css("color", "#FFCC00")
 }
 else{
-document.getElementById("cert_status").innerHTML = "<#3564#>";
+document.getElementById("cert_status").innerHTML = "<#3570#>";
 setTimeout("get_cert_info();", 1000);
 }
 }
@@ -681,6 +693,17 @@ check_unregister_result();
 }
 });
 }
+function clean_ddns(){
+$.ajax({
+url: "/clean_ddns.cgi",
+success: function( response ) {
+setTimeout(function(){
+alert("<#2538#>");
+refreshpage();
+}, 2000);
+}
+});
+}
 var max_retry_count = 6;
 var retry_count = 0;
 function check_unregister_result(){
@@ -700,12 +723,11 @@ timeout = 1;
 }
 if(timeout || return_status != ""){
 if(return_status == "200"){
-alert("<#2534#>");
-refreshpage();
+clean_ddns();
 }
 else{
 hideLoading();
-alert("<#2536#>");
+alert("<#2540#>");
 deregister_fail = 1;
 retry_count = 0;
 }
@@ -746,36 +768,27 @@ retry_count = 0;
 <div>&nbsp;</div>
 <div class="formfonttitle"><#393#> - <#398#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#2551#></div>
-<div class="formfontdesc" style="margin-top:-8px;"><#2837#></div>
-<div class="formfontdesc" id="wan_ip_hide2" style="color:#FFCC00; display:none;"><#2552#></div>
-<div class="formfontdesc" id="wan_ip_hide3" style="color:#FFCC00; display:none;"><#2553#></div>
-<div class="formfontdesc" id="lb_note" style="color:#FFCC00; display:none;"><#2597#></div>
+<div class="formfontdesc"><#2555#></div>
+<div class="formfontdesc" style="margin-top:-8px;"><#2841#></div>
+<div class="formfontdesc" id="wan_ip_hide2" style="color:#FFCC00; display:none;"><#2556#></div>
+<div class="formfontdesc" id="wan_ip_hide3" style="color:#FFCC00; display:none;"><#2557#></div>
+<div class="formfontdesc" id="lb_note" style="color:#FFCC00; display:none;"><#2601#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <input type="hidden" name="wl_gmode_protection_x" value="<% nvram_get("wl_gmode_protection_x"); %>">
 <tr>
-<th><#2550#></th>
+<th><#2554#></th>
 <td>
 <input type="radio" value="1" name="ddns_enable_x" onClick="change_cert_method();show_cert_details();return change_common_radio(this, 'LANHostConfig', 'ddns_enable_x', '1')" <% nvram_match("ddns_enable_x", "1", "checked"); %>><#187#>
 <input type="radio" value="0" name="ddns_enable_x" onClick="return change_common_radio(this, 'LANHostConfig', 'ddns_enable_x', '0')" <% nvram_match("ddns_enable_x", "0", "checked"); %>><#186#>
 </td>
 </tr>
 <tr>
-<th id="ddns_wan_unit_th"><#3670#></th>
+<th id="ddns_wan_unit_th"><#3676#></th>
 <td id="ddns_wan_unit_td">
 <select name="ddns_wan_unit" class="input_option">
 <option class="content_input_fd" value="-1" <% nvram_match("ddns_wan_unit", "-1","selected"); %>><#153#></option>
 <option class="content_input_fd" value="0" <% nvram_match("ddns_wan_unit", "0","selected"); %>><#1859#></option>
 <option class="content_input_fd" value="1"<% nvram_match("ddns_wan_unit", "1","selected"); %>><#1866#></option>
-</select>
-</td>
-</tr>
-<tr id="ddns_ipcheck_tr">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,17);">Method to retrieve WAN IP</a></th>
-<td>
-<select name="ddns_realip_x" class="input_option">
-<option class="content_input_fd" value="0" <% nvram_match("ddns_realip_x", "0","selected"); %>><#2412#></option>
-<option class="content_input_fd" value="1" <% nvram_match("ddns_realip_x", "1","selected"); %>><#2410#></option>
 </select>
 </td>
 </tr>
@@ -787,7 +800,7 @@ retry_count = 0;
 </td>
 </tr>
 <tr>
-<th><#2560#></th>
+<th><#2564#></th>
 <td>
 <select name="ddns_server_x"class="input_option" onchange="change_ddns_setting(this.value); change_cert_method();">
 <option value="WWW.ASUS.COM" <% nvram_match("ddns_server_x", "WWW.ASUS.COM","selected"); %>>WWW.ASUS.COM</option>
@@ -798,17 +811,18 @@ retry_count = 0;
 <option value="WWW.SELFHOST.DE" <% nvram_match("ddns_server_x", "WWW.SELFHOST.DE","selected"); %>>WWW.SELFHOST.DE</option>
 <option value="WWW.ZONEEDIT.COM" <% nvram_match("ddns_server_x", "WWW.ZONEEDIT.COM","selected"); %>>WWW.ZONEEDIT.COM</option>
 <option value="WWW.DNSOMATIC.COM" <% nvram_match("ddns_server_x", "WWW.DNSOMATIC.COM","selected"); %>>WWW.DNSOMATIC.COM</option>
+<option value="DNS.HE.NET" <% nvram_match("ddns_server_x", "DNS.HE.NET","selected"); %>>HE.NET</option>
 <option value="WWW.TUNNELBROKER.NET" <% nvram_match("ddns_server_x", "WWW.TUNNELBROKER.NET","selected"); %>>WWW.TUNNELBROKER.NET</option>
 <option value="WWW.NO-IP.COM" <% nvram_match("ddns_server_x", "WWW.NO-IP.COM","selected"); %>>WWW.NO-IP.COM</option>
 <option value="WWW.ORAY.COM" <% nvram_match("ddns_server_x", "WWW.ORAY.COM","selected"); %>>WWW.ORAY.COM(花生壳)</option>
 </select>
-<input id="deregister_btn" class="button_gen" style="display: none; margin-left: 5px;" type="button" value="Deregister" onclick="showLoading();asuscomm_deregister();"/>
-<a id="link" href="javascript:openLink('x_DDNSServer')" style=" margin-left:5px; text-decoration: underline;"><#2561#></a>
+<input id="deregister_btn" class="button_gen" style="display: none; margin-left: 5px;" type="button" value="Deregister"/>
+<a id="link" href="javascript:openLink('x_DDNSServer')" style=" margin-left:5px; text-decoration: underline;"><#2565#></a>
 <a id="linkToHome" href="javascript:openLink('x_DDNSServer')" style=" margin-left:5px; text-decoration: underline;"><#1691#></a>
 </td>
 </tr>
 <tr id="ddns_hostname_tr">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,13);"><#2557#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,13);"><#2561#></a></th>
 <td>
 <div id="ddnsname_input" style="display:none;">
 <input type="text" maxlength="63" class="input_25_table" name="ddns_hostname_x" id="ddns_hostname_x" value="<% nvram_get("ddns_hostname_x"); %>" onKeyPress="return validator.isString(this, event)" autocorrect="off" autocapitalize="off">
@@ -822,19 +836,19 @@ retry_count = 0;
 </td>
 </tr>
 <tr id="ddns_hostname_info_tr" style="display:none;">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,13);"><#2557#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,13);"><#2561#></a></th>
 <td id="ddns_hostname_x_value"><% nvram_get("ddns_hostname_x"); %></td>
 </tr>
 <tr>
-<th><#2566#></th>
+<th><#2570#></th>
 <td><input type="text" maxlength="32" class="input_25_table" name="ddns_username_x" value="<% nvram_get("ddns_username_x"); %>" onKeyPress="return validator.isString(this, event)" autocomplete="off" autocorrect="off" autocapitalize="off"></td>
 </tr>
 <tr>
-<th><#2559#></th>
+<th><#2563#></th>
 <td><input type="password" maxlength="64" class="input_25_table" name="ddns_passwd_x" value="<% nvram_get("ddns_passwd_x"); %>" autocomplete="off" autocorrect="off" autocapitalize="off"></td>
 </tr>
 <tr id="wildcard_field">
-<th><#2568#></th>
+<th><#2572#></th>
 <td>
 <input type="radio" value="1" name="ddns_wildcard_x" onClick="return change_common_radio(this, 'LANHostConfig', 'ddns_wildcard_x', '1')" <% nvram_match("ddns_wildcard_x", "1", "checked"); %>><#187#>
 <input type="radio" value="0" name="ddns_wildcard_x" onClick="return change_common_radio(this, 'LANHostConfig', 'ddns_wildcard_x', '0')" <% nvram_match("ddns_wildcard_x", "0", "checked"); %>><#186#>
@@ -850,14 +864,14 @@ retry_count = 0;
 <tr style="display:none;">
 <th><#1706#></th>
 <td>
-<input type="text" maxlength="5" class="input_6_table" name="ddns_regular_period" value="<% nvram_get("ddns_regular_period"); %>" autocorrect="off" autocapitalize="off"> <#2657#>
+<input type="text" maxlength="5" class="input_6_table" name="ddns_regular_period" value="<% nvram_get("ddns_regular_period"); %>" autocorrect="off" autocapitalize="off"> <#2661#>
 </td>
 </tr>
 <tr style="display:none;">
-<th><#2564#></th>
+<th><#2568#></th>
 <td>
 <input type="hidden" maxlength="15" class="button_gen" size="12" name="" value="<% nvram_get("DDNSStatus"); %>">
-<input type="submit" maxlength="15" class="button_gen" onclick="showLoading();return onSubmitApply('ddnsclient');" size="12" name="LANHostConfig_x_DDNSStatus_button" value="<#2562#>" /></td>
+<input type="submit" maxlength="15" class="button_gen" onclick="showLoading();return onSubmitApply('ddnsclient');" size="12" name="LANHostConfig_x_DDNSStatus_button" value="<#2566#>" /></td>
 </tr>
 <tr id="ddns_status_tr" style="display:none;">
 <th>DDNS Status</th>
@@ -887,22 +901,22 @@ retry_count = 0;
 </td>
 </tr>
 <tr id="cert_details" style="display:none;">
-<th><#3570#></th>
+<th><#3576#></th>
 <td>
 <div style="display: flex;">
 <div class="cert_status_title"><#731#> :</div>
 <div id="cert_status" class="cert_status_val"></div>
 </div>
 <div style="display: flex;">
-<div class="cert_status_title"><#3573#> :</div>
+<div class="cert_status_title"><#3579#> :</div>
 <div id="issueTo" class="cert_status_val"></div>
 </div>
 <div style="display: flex;">
-<div class="cert_status_title"><#3572#> :</div>
+<div class="cert_status_title"><#3578#> :</div>
 <div id="issueBy" class="cert_status_val"></div>
 </div>
 <div style="display: flex;">
-<div class="cert_status_title"><#3571#> :</div>
+<div class="cert_status_title"><#3577#> :</div>
 <div id="expireOn" class="cert_status_val"></div>
 </div>
 <div>

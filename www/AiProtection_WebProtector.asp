@@ -215,7 +215,7 @@ var apps_filter_row = apps_filter.split("<");
 var apps_filter_col = "";
 var upper = MaxRule_bwdpi_wrs>0?MaxRule_bwdpi_wrs:16;
 if(apps_filter.split("<").length >= upper){
-alert("<#2479#> " + upper + " <#2480#>");
+alert("<#2483#> " + upper + " <#2484#>");
 document.form.PC_devicename.focus();
 document.form.PC_devicename.select();
 return false;
@@ -242,7 +242,7 @@ for(var i=0;i<apps_filter_row.length;i++){
 if(apps_filter_row[i] != "") {
 apps_filter_col = apps_filter_row[i].split(">");
 if(apps_filter_col[1].toUpperCase() == document.form.PC_devicename.value.toUpperCase()){
-alert("<#2472#>");
+alert("<#2476#>");
 document.form.PC_devicename.value = "";
 return false;
 }
@@ -298,24 +298,24 @@ var code = "";
 var clientListEventData = [];
 code += '<table width="100%" border="1" cellspacing="0" cellpadding="4" align="center" class="FormTable_table" id="mainTable_table">';
 code += '<thead><tr>';
-code += '<td colspan="5"><#1622#>&nbsp;(<#2611#>&nbsp;'+MaxRule_bwdpi_wrs+')</td>';
+code += '<td colspan="5"><#1622#>&nbsp;(<#2615#>&nbsp;'+MaxRule_bwdpi_wrs+')</td>';
 code += '</tr></thead>';
 code += '<tbody>';
 code += '<tr>';
-code += '<th width="5%" height="30px" title="<#3086#>">';
+code += '<th width="5%" height="30px" title="<#3090#>">';
 code += '<input id="selAll" type="checkbox" onclick="selectAll(this, 0);" value="">';
 code += '</th>';
-code += '<th width="40%"><#1532#> (<#2950#>)</th>';
+code += '<th width="40%"><#1532#> (<#2954#>)</th>';
 code += '<th width="40%"><#1221#></th>';
-code += '<th width="10%"><#2610#></th>';
+code += '<th width="10%"><#2614#></th>';
 code += '</tr>';
 code += '<tr id="main_element">';
-code += '<td style="border-bottom:2px solid #000;" title="<#3840#>/<#1517#>">';
+code += '<td style="border-bottom:2px solid #000;" title="<#3846#>/<#1517#>">';
 code += '<input type="checkbox" checked="">';
 code += '</td>';
 code += '<td style="border-bottom:2px solid #000;">';
 code += '<input type="text" maxlength="17" style="margin-left:10px;float:left;width:255px;" class="input_20_table" name="PC_devicename" onkeypress="return validator.isHWAddr(this,event)" onclick="hideClients_Block();" placeholder="ex: <% nvram_get("lan_hwaddr"); %>" autocorrect="off" autocapitalize="off">';
-code += '<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" onclick="pullLANIPList(this);" title="<#3089#>">';
+code += '<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" onclick="pullLANIPList(this);" title="<#3093#>">';
 code += '<div id="ClientList_Block_PC" class="clientlist_dropdown" style="margin-top:25px;margin-left:10px;"></div>';
 code += '</td>';
 code += '<td style="border-bottom:2px solid #000;text-align:left;">';
@@ -335,7 +335,7 @@ code += '</td>';
 code += '<td style="border-bottom:2px solid #000;"><input class="add_btn" type="button" onclick="addRow_main(this)" value=""></td>';
 code += '</tr>';
 if(apps_filter == ""){
-code += '<tr><td style="color:#FFCC00;" colspan="10"><#2407#></td></tr>';
+code += '<tr><td style="color:#FFCC00;" colspan="10"><#2410#></td></tr>';
 }
 else{
 for(var k=0;k< apps_filter_row.length;k++){
@@ -380,7 +380,7 @@ deviceType = 0;
 deviceVender = "";
 }
 code += '<tr>';
-code += '<td title="<#3840#>/<#1517#>">';
+code += '<td title="<#3846#>/<#1517#>">';
 if(apps_filter_col[0] == 1)
 code += '<input type="checkbox" checked>';
 else
@@ -777,7 +777,7 @@ applyRule();
 </div>
 <a href="ParentalControl.asp">
 <div style="width:160px;height:30px;margin:-32px 0px 0px 168px;border-top-right-radius:8px;border-bottom-right-radius:8px;" class="block_filter">
-<table class="block_filter_name_table"><tr><td style="line-height:13px;"><#3282#></td></tr></table>
+<table class="block_filter_name_table"><tr><td style="line-height:13px;"><#3288#></td></tr></table>
 </div>
 </a>
 </div>

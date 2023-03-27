@@ -158,13 +158,13 @@ document.getElementById('dmz1_ip_tr').style.display = "none";
 </div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
 <div class="formfontdesc">
-<#2386#>
+<#2389#>
 <br/>
 <br/>
-<#2384#>:
+<#2387#>:
 <ul>
-<li><#2382#></li>
-<li><#2383#></li>
+<li><#2385#></li>
+<li><#2386#></li>
 <script>
 document.getElementById("addVtsRule_ftp").onclick = function(){
 /* untranslated */
@@ -178,7 +178,7 @@ location.href = "/Advanced_VirtualServer_Content.asp?af=KnownApps&item=ftp";
 <div class="formfontdesc" style="margin-top:-10px;">
 <a id="faq" href="" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">DMZ FAQ</a>
 </div>
-<div class="formfontdesc" id="lb_note" style="color:#FFCC00; display:none;"><#2598#></div>
+<div class="formfontdesc" id="lb_note" style="color:#FFCC00; display:none;"><#2602#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
 <th><#1870#></th>
@@ -191,7 +191,7 @@ location.href = "/Advanced_VirtualServer_Content.asp?af=KnownApps&item=ftp";
 <th colspan=2><#1859#></th>
 </tr>
 <tr id="dmz_ip_tr">
-<th><#2385#></th>
+<th><#2388#></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="dmz_ip" value="<% nvram_get("dmz_ip"); %>" onkeypress="return validator.isIPAddr(this, event)" autocorrect="off" autocapitalize="off"/>
 </td>
@@ -200,7 +200,7 @@ location.href = "/Advanced_VirtualServer_Content.asp?af=KnownApps&item=ftp";
 <th colspan=2><#1866#></th>
 </tr>
 <tr id="dmz1_ip_tr">
-<th><#2385#></th>
+<th><#2388#></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="dmz1_ip" value="<% nvram_get("dmz1_ip"); %>" onkeypress="return validator.isIPAddr(this, event)" autocorrect="off" autocapitalize="off"/>
 </td>

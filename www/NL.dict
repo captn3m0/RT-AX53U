@@ -2266,8 +2266,11 @@ Dit VPN-profiel is uitgeschakeld. Ga naar de instellingenpagina van de VPN-serve
 Klik hieronder op [ Naar instellingen ] om naar de pagina VPN-instellingen te gaan.
 Deze instelling kan niet worden geselecteerd wanneer een ander profiel wordt gebruikt.
 Thuisnetwerk
+Er is nu geen VPN-profiel. Klik hieronder op [Naar instellingen] om naar de pagina VPN-instellingen te gaan.
 Een gastennetwerk toevoegen
 Profiellijst
+Kies een gedefinieerd netwerk
+Wifi-planning
 Hardwareversie
 Help
 Help biedt u richtlijnen en informatie over het gebruik van de routerfuncties. Klik op de
@@ -2442,6 +2445,7 @@ LAN IPv6-adres
 LAN IPv6-prefix
 IPv6 LAN-instelling
 Native
+OCN Virtual Connect
 v6plus
 IPv6-prefixlengte
 IPv4 Anycast Relay
@@ -3280,6 +3284,8 @@ LAN
 Diversen
 Telecommunicatiestandaarden
 WAN-interface beëindigen
+Gepland
+Eenmalige toegang
 Tijdplanning
 Time Machine
 Hoe Apple Time Machine gebruiken?
@@ -3347,10 +3353,10 @@ Alaska
 Pacific Time (V.S., Canada)
 Mountain Time (V.S., Canada)
 Arizona
-Chihuahua, Mazatlan
+Mazatlan
 Saskatchewan
 Guadalajara, Mexico-Stad
-Monterrey
+Monterrey, Chihuahua
 Central Time (V.S., Canada)
 Eastern Time (V.S., Canada)
 Indiana (Oost)

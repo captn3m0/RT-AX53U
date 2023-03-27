@@ -2266,8 +2266,11 @@ Questo profilo VPN è disattivato. Accedere alla pagina Impostazioni server VPN 
 Fare clic su [ Vai alle impostazioni ] in basso nella pagina delle impostazioni VPN.
 Questa impostazione non può essere selezionata durante l'utilizzo da parte dell'altro profilo creato.
 Rete domestica
+Nessun profilo VPN. Fare clic su [Vai alle impostazioni] in basso per accedere alla pagina delle impostazioni VPN e creare.
 Aggiungi rete
 Elenco profili
+Scegliere una rete definita
+Pianificazione WiFi
 Versione hardware
 Aiuto
 Guida fornisce le linee guida e le informazioni su come usare le funzioni del router. Fare clic
@@ -2442,6 +2445,7 @@ Indirizzo IPv6 LAN
 Prefisso LAN IPv6
 Impostazione LAN IPv6
 Native
+OCN Virtual Connect
 v6plus
 Lunghezza prefisso IPv6
 Relay anycast IPv4
@@ -3280,6 +3284,8 @@ LAN
 Varie
 Telecommunications Standards
 Termina interfaccia WAN
+Pianificato
+Accesso unico
 Pianificazione temporale
 Time Machine
 Come usare Apple Time Machine?
@@ -3347,10 +3353,10 @@ Alaska
 Pacifico (USA e Canada)
 Fuso occidentale (USA e Canada)
 Arizona
-Chihuahua, Mazatlan
+Mazatlan
 Saskatchewan
 Guadalajara, Città del Messico
-Monterrey
+Monterrey, Chihuahua
 America centrale
 Fuso orientale (USA e Canada)
 Indiana (Oriente)

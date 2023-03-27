@@ -92,7 +92,7 @@ var filterCurrentEditRuleArray = autofw_rulelist_array;
 validDuplicateFlag = tableRuleDuplicateValidation[tableApi._attr.ruleDuplicateValidation](currentEditRuleArray, filterCurrentEditRuleArray);
 if(!validDuplicateFlag) {
 document.form.TriggerKnownApps.selectedIndex = 0;
-alert("<#2472#>");
+alert("<#2476#>");
 return false;
 }
 autofw_rulelist_array.push(currentEditRuleArray);
@@ -108,7 +108,7 @@ function showautofw_rulelist(){
 var tableStruct = {
 data: autofw_rulelist_array,
 container: "tableContainer",
-title: "<#2392#>",
+title: "<#2395#>",
 capability: {
 add: true,
 del: true,
@@ -116,23 +116,23 @@ clickEdit: true
 },
 header: [
 {
-"title" : "<#2376#>",
+"title" : "<#2379#>",
 "width" : "26%"
 },
 {
-"title" : "<#2379#>",
+"title" : "<#2382#>",
 "width" : "22%"
 },
 {
-"title" : "<#2400#>",
+"title" : "<#2403#>",
 "width" : "10%"
 },
 {
-"title" : "<#2378#>",
+"title" : "<#2381#>",
 "width" : "22%"
 },
 {
-"title" : "<#2400#>",
+"title" : "<#2403#>",
 "width" : "10%"
 }
 ],
@@ -140,31 +140,31 @@ createPanel: {
 inputs : [
 {
 "editMode" : "text",
-"title" : "<#2376#>",
+"title" : "<#2379#>",
 "maxlength" : "18",
 "valueMust" : false,
 "validator" : "description"
 },
 {
 "editMode" : "text",
-"title" : "<#2379#>",
+"title" : "<#2382#>",
 "maxlength" : "11",
 "validator" : "portRange"
 },
 {
 "editMode" : "select",
-"title" : "<#2400#>",
+"title" : "<#2403#>",
 "option" : {"TCP" : "TCP", "UDP" : "UDP"}
 },
 {
 "editMode" : "text",
-"title" : "<#2378#><div class=\"setup_info_icon\" style=\"display:none;margin-left:185px;\"></div>",
+"title" : "<#2381#><div class=\"setup_info_icon\" style=\"display:none;margin-left:185px;\"></div>",
 "maxlength" : "11",
 "validator" : "portRangeS46"
 },
 {
 "editMode" : "select",
-"title" : "<#2400#>",
+"title" : "<#2403#>",
 "option" : {"TCP" : "TCP", "UDP" : "UDP"}
 },
 ],
@@ -221,7 +221,7 @@ function trigger_validate_duplicate(o, v, l, off){
 for(var i = 0; i < o.length; i++)
 {
 if(entry_cmp(o[i][1].toLowerCase(), v.toLowerCase(), l) == 0){
-alert("<#2472#>");
+alert("<#2476#>");
 return false;
 }
 }
@@ -264,26 +264,26 @@ return true;
 <div>&nbsp;</div>
 <div class="formfonttitle"><#393#> - <#395#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#2391#></div>
+<div class="formfontdesc"><#2394#></div>
 <div class="formfontdesc" style="margin-top:-10px;">
 <a id="faq" href="" target="_blank" style="font-family:Lucida Console;text-decoration:underline;"><#395#>&nbspFAQ</a>
 </div>
-<div class="formfontdesc" id="lb_note" style="color:#FFCC00; display:none;"><#2600#></div>
+<div class="formfontdesc" id="lb_note" style="color:#FFCC00; display:none;"><#2604#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 <thead>
 <tr>
-<td colspan="6"><#3277#></td>
+<td colspan="6"><#3281#></td>
 </tr>
 </thead>
 <tr>
-<th colspan="2"><#2377#></th>
+<th colspan="2"><#2380#></th>
 <td colspan="4">
 <input type="radio" value="1" name="autofw_enable_x" class="content_input_fd" onClick="return change_common_radio(this, 'IPConnection', 'autofw_enable_x', '1')" <% nvram_match("autofw_enable_x", "1", "checked"); %>><#187#>
 <input type="radio" value="0" name="autofw_enable_x" class="content_input_fd" onClick="return change_common_radio(this, 'IPConnection', 'autofw_enable_x', '0')" <% nvram_match("autofw_enable_x", "0", "checked"); %>><#186#>
 </td>
 </tr>
 <tr>
-<th colspan="2"align="right" id="autofw_rulelist"><#2394#></th>
+<th colspan="2"align="right" id="autofw_rulelist"><#2397#></th>
 <td colspan="4">
 <select name="TriggerKnownApps" class="input_option" onChange="change_wizard(this);">
 <option value="User Defined"><#725#></option>

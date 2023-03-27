@@ -83,7 +83,7 @@ var code = "";
 var clientListEventData = [];
 code += '<table width="100%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="wl_maclist_x_table">';
 if(Object.keys(manually_maclist_list_array).length == 0)
-code += '<tr><td style="color:#FFCC00;"><#2407#></td></tr>';
+code += '<tr><td style="color:#FFCC00;"><#2410#></td></tr>';
 else{
 var userIconBase64 = "NoIcon";
 var clientName, deviceType, deviceVender;
@@ -174,7 +174,7 @@ return false;
 for(i=0; i<rule_num; i++){
 for(j=0; j<item_num-1; j++){
 if(manually_maclist_list_array[mac] != null){
-alert("<#2472#>");
+alert("<#2476#>");
 return false;
 }
 }
@@ -251,7 +251,7 @@ Object.keys(manually_maclist_list_array).forEach(function(key) {
 key = key.toUpperCase();
 tmp_value += "<" + key;
 });
-if(tmp_value == "<"+"<#2407#>" || tmp_value == "<")
+if(tmp_value == "<"+"<#2410#>" || tmp_value == "<")
 tmp_value = "";
 if(document.form.enable_mac[1].checked)
 document.form.wl_macmode.value = "disabled";
@@ -418,11 +418,11 @@ show_wl_maclist_x();
 <table id="MainTable1" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#3277#></td>
+<td colspan="2"><#3281#></td>
 </tr>
 </thead>
 <tr id="wl_unit_field">
-<th><#2324#></th>
+<th><#2327#></th>
 <td>
 <select name="wl_unit" class="input_option" onChange="change_wl_unit();">
 <option class="content_input_fd" value="0" <% nvram_match("wl_unit", "0","selected"); %>>2.4GHz</option>
@@ -456,17 +456,17 @@ show_wl_maclist_x();
 <table id="MainTable2" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table">
 <thead>
 <tr>
-<td colspan="2"><#2072#>&nbsp;(<#2611#>&nbsp;64)</td>
+<td colspan="2"><#2072#>&nbsp;(<#2615#>&nbsp;64)</td>
 </tr>
 </thead>
 <tr>
-<th width="80%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);"><#1532#> (<#2950#>)</th>
-<th width="20%"><#2610#></th>
+<th width="80%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);"><#1532#> (<#2954#>)</th>
+<th width="20%"><#2614#></th>
 </tr>
 <tr>
 <td width="80%">
 <input type="text" maxlength="17" class="input_macaddr_table" name="wl_maclist_x_0" onKeyPress="return validator.isHWAddr(this,event)" onClick="hideClients_Block();" autocorrect="off" autocapitalize="off" placeholder="ex: <% nvram_get("lan_hwaddr"); %>" style="width:255px;">
-<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;" onclick="pullWLMACList(this);" title="<#3097#>">
+<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;" onclick="pullWLMACList(this);" title="<#3101#>">
 <div id="WL_MAC_List_Block" class="clientlist_dropdown" style="margin-left:167px;"></div>
 </td>
 <td width="20%">

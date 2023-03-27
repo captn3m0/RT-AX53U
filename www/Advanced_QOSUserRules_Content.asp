@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#842#> - <#2651#></title>
+<title><#842#> - <#2655#></title>
 <link rel="stylesheet" type="text/css" href="/index_style.css">
 <link rel="stylesheet" type="text/css" href="/form_style.css">
 <link rel="stylesheet" type="text/css" href="device-map/device-map.css">
@@ -40,7 +40,7 @@ function initial(){
 show_menu();
 document.getElementById("faq").href=faq_href;
 if(bwdpi_support){
-document.getElementById('content_title').innerHTML = "<#2651#> - <#1911#>";
+document.getElementById('content_title').innerHTML = "<#2655#> - <#1911#>";
 }
 else{
 document.getElementById('content_title').innerHTML = "<#378#> - QoS";
@@ -77,7 +77,7 @@ if(j != item_num-2)
 tmp_value += ">";
 }
 }
-if(tmp_value == "<"+"<#2407#>" || tmp_value == "<")
+if(tmp_value == "<"+"<#2410#>" || tmp_value == "<")
 tmp_value = "";
 document.form.qos_rulelist.value = tmp_value;
 }
@@ -120,7 +120,7 @@ return false;
 }
 else {
 document.form.qos_ip_x_0.focus();
-alert(document.form.qos_ip_x_0.value + " <#2633#>");
+alert(document.form.qos_ip_x_0.value + " <#2637#>");
 return false;
 }
 }
@@ -132,7 +132,7 @@ return false;
 if((document.form.qos_max_transferred_x_0.value.length > 0)
 && (parseInt(document.form.qos_max_transferred_x_0.value) < parseInt(document.form.qos_min_transferred_x_0.value))){
 document.form.qos_max_transferred_x_0.focus();
-alert("<#3511#> "+document.form.qos_min_transferred_x_0.value);
+alert("<#3517#> "+document.form.qos_min_transferred_x_0.value);
 return false;
 }
 return true;
@@ -142,7 +142,7 @@ if(validForm()){
 var rule_num = document.getElementById('qos_rulelist_table').rows.length;
 var item_num = document.getElementById('qos_rulelist_table').rows[0].cells.length;
 if(rule_num >= upper){
-alert("<#2479#> " + upper + " <#2480#>");
+alert("<#2483#> " + upper + " <#2484#>");
 return;
 }
 conv_to_transf();
@@ -155,7 +155,7 @@ if(document.form.qos_ip_x_0.value == document.getElementById('qos_rulelist_table
 if(document.form.qos_proto_x_0.value == document.getElementById('qos_rulelist_table').rows[i].cells[3].innerHTML
 || document.form.qos_proto_x_0.value == 'any'
 || document.getElementById('qos_rulelist_table').rows[i].cells[3].innerHTML == 'any'){
-alert("<#2472#>");
+alert("<#2476#>");
 parse_port="";
 document.form.qos_port_x_0.value =="";
 document.form.qos_ip_x_0.focus();
@@ -164,7 +164,7 @@ return;
 }else if(document.form.qos_proto_x_0.value == document.getElementById('qos_rulelist_table').rows[i].cells[3].innerHTML
 || (document.form.qos_proto_x_0.value == 'tcp/udp' && (document.getElementById('qos_rulelist_table').rows[i].cells[3].innerHTML == 'tcp' || document.getElementById('qos_rulelist_table').rows[i].cells[3].innerHTML == 'udp'))
 || (document.getElementById('qos_rulelist_table').rows[i].cells[3].innerHTML == 'tcp/udp' && (document.form.qos_proto_x_0.value == 'tcp' || document.form.qos_proto_x_0.value == 'udp'))){
-alert("<#2472#>");
+alert("<#2476#>");
 parse_port="";
 document.form.qos_port_x_0.value =="";
 document.form.qos_ip_x_0.focus();
@@ -179,7 +179,7 @@ if(document.form.qos_ip_x_0.value == document.getElementById('qos_rulelist_table
 if(document.form.qos_proto_x_0.value == document.getElementById('qos_rulelist_table').rows[i].cells[3].innerHTML
 || document.form.qos_proto_x_0.value == 'any'
 || document.getElementById('qos_rulelist_table').rows[i].cells[3].innerHTML == 'any'){
-alert("<#2472#>");
+alert("<#2476#>");
 parse_port="";
 document.form.qos_port_x_0.value =="";
 document.form.qos_ip_x_0.focus();
@@ -188,7 +188,7 @@ return;
 }else if(document.form.qos_proto_x_0.value == document.getElementById('qos_rulelist_table').rows[i].cells[3].innerHTML
 || (document.form.qos_proto_x_0.value == 'tcp/udp' && (document.getElementById('qos_rulelist_table').rows[i].cells[3].innerHTML == 'tcp' || document.getElementById('qos_rulelist_table').rows[i].cells[3].innerHTML == 'udp'))
 || (document.getElementById('qos_rulelist_table').rows[i].cells[3].innerHTML == 'tcp/udp' && (document.form.qos_proto_x_0.value == 'tcp' || document.form.qos_proto_x_0.value == 'udp'))){
-alert("<#2472#>");
+alert("<#2476#>");
 parse_port="";
 document.form.qos_port_x_0.value =="";
 document.form.qos_ip_x_0.focus();
@@ -241,7 +241,7 @@ qos_rulelist_row = decodeURIComponent(qos_rulelist_array).split('<');
 var code = "";
 code +='<table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="list_table" id="qos_rulelist_table">';
 if(qos_rulelist_row.length == 1) // no exist "<"
-code +='<tr><td style="color:#FFCC00;" colspan="10"><#2407#></td></tr>';
+code +='<tr><td style="color:#FFCC00;" colspan="10"><#2410#></td></tr>';
 else{
 for(var i = 1; i < qos_rulelist_row.length; i++){
 overlib_str0[i] ="";
@@ -269,25 +269,25 @@ code +='<td width="'+wid[j]+'%">'+ qos_rulelist_col[j] +'</td>';
 }else if(j==5){
 code += '<td width="'+wid[j]+'%"><select class="input_option" style="width:85px;">';
 if(qos_rulelist_col[5] =="0")
-code += '<option value="0" selected><#2278#></option>';
+code += '<option value="0" selected><#2281#></option>';
 else
-code += '<option value="0"><#2278#></option>';
+code += '<option value="0"><#2281#></option>';
 if(qos_rulelist_col[5] =="1")
-code += '<option value="1" selected><#2277#></option>';
+code += '<option value="1" selected><#2280#></option>';
 else
-code += '<option value="1"><#2277#></option>';
+code += '<option value="1"><#2280#></option>';
 if(qos_rulelist_col[5] =="2")
-code += '<option value="2" selected><#2644#></option>';
+code += '<option value="2" selected><#2648#></option>';
 else
-code += '<option value="2"><#2644#></option>';
+code += '<option value="2"><#2648#></option>';
 if(qos_rulelist_col[5] =="3")
-code += '<option value="3" selected><#2622#></option>';
+code += '<option value="3" selected><#2626#></option>';
 else
-code += '<option value="3"><#2622#></option>';
+code += '<option value="3"><#2626#></option>';
 if(qos_rulelist_col[5] =="4")
-code += '<option value="4" selected><#2623#></option>';
+code += '<option value="4" selected><#2627#></option>';
 else
-code += '<option value="4"><#2623#></option>';
+code += '<option value="4"><#2627#></option>';
 code += '</select></td>';
 }
 }
@@ -451,15 +451,15 @@ else if(rule_proto[j] == "ANY")
 document.form.qos_proto_x_0.options[3].selected = 1;
 else
 document.form.qos_proto_x_0.options[0].selected = 1;
-if(rule_prio[j] == "<#2278#>")
+if(rule_prio[j] == "<#2281#>")
 document.form.qos_prio_x_0.options[0].selected = 1;
-else if(rule_prio[j] == "<#2277#>")
+else if(rule_prio[j] == "<#2280#>")
 document.form.qos_prio_x_0.options[1].selected = 1;
-else if(rule_prio[j] == "<#2644#>")
+else if(rule_prio[j] == "<#2648#>")
 document.form.qos_prio_x_0.options[2].selected = 1;
-else if(rule_prio[j] == "<#2622#>")
+else if(rule_prio[j] == "<#2626#>")
 document.form.qos_prio_x_0.options[3].selected = 1;
-else if(rule_prio[j] == "<#2623#>")
+else if(rule_prio[j] == "<#2627#>")
 document.form.qos_prio_x_0.options[4].selected = 1;
 else
 document.form.qos_prio_x_0.options[2].selected = 1;
@@ -641,10 +641,10 @@ document.form.qos_port_x_0.disabled = false;
 <td align="right" >
 <div style="margin-top:5px;">
 <select onchange="switchPage(this.options[this.selectedIndex].value)" class="input_option">
-<!--option><#3257#></option-->
+<!--option><#3261#></option-->
 <option value="1"><#899#></option>
-<option value="2" selected><#3008#></option>
-<option value="3"><#3007#></option>
+<option value="2" selected><#3012#></option>
+<option value="3"><#3011#></option>
 </select>
 </div>
 </td>
@@ -659,8 +659,8 @@ document.form.qos_port_x_0.disabled = false;
 <td>
 <div id="is_qos_enable_desc" class="formfontdesc" style="font-style: italic;font-size: 14px;color:#FFCC00;">
 <ul>
-<li><#3500#></li>
-<li><#3501#></li>
+<li><#3506#></li>
+<li><#3507#></li>
 </ul>
 </div>
 <div class="formfontdesc"><a id="faq" href="" style="text-decoration:underline;" target="_blank">QoS FAQ</a></div>
@@ -672,7 +672,7 @@ document.form.qos_port_x_0.disabled = false;
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table" style="margin-top:8px">
 <thead>
 <tr>
-<td colspan="4" id="TriggerList" style="border-right:none;"><#1508#>&nbsp;(<#2611#>&nbsp;32)</td>
+<td colspan="4" id="TriggerList" style="border-right:none;"><#1508#>&nbsp;(<#2615#>&nbsp;32)</td>
 <td colspan="3" id="TriggerList" style="border-left:none;">
 <div style="margin-top:0px;display:none" align="right">
 <select id='qos_default_sel' name='qos_default_sel' class="input_option" onchange="change_wizard(this);"></select>
@@ -684,20 +684,20 @@ document.form.qos_port_x_0.disabled = false;
 <th><#1509#></th>
 <th><a href="javascript:void(0);" onClick="openHint(18,6);"><div class="table_text"><#1510#></div></a></th>
 <th><a href="javascript:void(0);" onClick="openHint(18,4);"><div class="table_text"><#1511#></div></a></th>
-<th><div class="table_text"><#2400#></div></th>
-<th><a href="javascript:void(0);" onClick="openHint(18,5);"><div class="table_text"><div class="table_text"><#3498#></div></a></th>
+<th><div class="table_text"><#2403#></div></th>
+<th><a href="javascript:void(0);" onClick="openHint(18,5);"><div class="table_text"><div class="table_text"><#3504#></div></a></th>
 <th><#1512#></th>
-<th><#2610#></th>
+<th><#2614#></th>
 </tr>
 <tr>
 <td width="20%">
 <input type="text" maxlength="32" class="input_12_table" style="float:left;width:105px;" placeholder="<#725#>" name="qos_service_name_x_0" onKeyPress="return validator.isString(this, event)" autocorrect="off" autocapitalize="off">
-<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" onclick="pullQoSList(this);" title="<#3094#>">
+<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" onclick="pullQoSList(this);" title="<#3098#>">
 <div id="QoSList_Block" class="QoSList_Block" onclick="hideClients_Block()"></div>
 </td>
 <td width="20%">
 <input type="text" maxlength="17" class="input_15_table" name="qos_ip_x_0" style="width:100px;float:left" autocorrect="off" autocapitalize="off">
-<img id="pull_arrow_mac" class="pull_arrow"height="14px;" src="/images/arrow-down.gif" onclick="pullLANIPList(this);" title="<#3089#>">
+<img id="pull_arrow_mac" class="pull_arrow"height="14px;" src="/images/arrow-down.gif" onclick="pullLANIPList(this);" title="<#3093#>">
 <div id="ClientList_Block_PC" class="clientlist_dropdown" style="margin-left:2px;margin-top: 25px;"></div>
 </td>
 <td width="10%"><input type="text" maxlength="32" class="input_6_table" name="qos_port_x_0" onKeyPress="return validator.isPortRange(this, event)" autocorrect="off" autocapitalize="off"></td>
@@ -715,11 +715,11 @@ document.form.qos_port_x_0.disabled = false;
 <input type="hidden" name="qos_transferred_x_0" value="">
 </td>
 <td width="15%">
-<select name='qos_prio_x_0' class="input_option" style="width:87px;"> <option value='0'><#2278#></option>
-<option value='1' selected><#2277#></option>
-<option value='2'><#2644#></option>
-<option value='3'><#2622#></option>
-<option value='4'><#2623#></option>
+<select name='qos_prio_x_0' class="input_option" style="width:87px;"> <option value='0'><#2281#></option>
+<option value='1' selected><#2280#></option>
+<option value='2'><#2648#></option>
+<option value='3'><#2626#></option>
+<option value='4'><#2627#></option>
 </select>
 </td>
 <td width="6%">

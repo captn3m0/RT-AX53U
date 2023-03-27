@@ -127,9 +127,9 @@ var hndwr_status = '<% nvram_get("hndwr"); %>';
 }
 var webs_update_enable_orig = httpApi.nvramGet(["webs_update_enable"],1).webs_update_enable;
 var webs_update_time_orig = httpApi.nvramGet(["webs_update_time"],1).webs_update_time;
-var update_time_hour_orig = webs_update_time_orig.split(":")[0].replace(/^0+/, '');
+var update_time_hour_orig = webs_update_time_orig.split(":")[0].replace(/^0/, '');
 update_time_hour_orig = (update_time_hour_orig=="")? "2":update_time_hour_orig;
-var update_time_min_orig = (webs_update_time_orig.split(":").length==2)? webs_update_time_orig.split(":")[1].replace(/^0+/, ''):"";
+var update_time_min_orig = (webs_update_time_orig.split(":").length==2)? webs_update_time_orig.split(":")[1].replace(/^0/, ''):"";
 update_time_min_orig = (update_time_min_orig=="")? "0":update_time_min_orig;
 var amesh_offline_flag = false;
 var interval_update_AiMesh_fw_status;
@@ -297,12 +297,12 @@ html += "<tr id='update_div' style='display:none;'>";
 html += "<th><#995#></th>";
 html += "<td>";
 html += '<div>';
-html += '<input type="button" id="update" name="update" class="button_gen" onclick="show_offline_msg(true);" value="<#2612#>" />';
+html += '<input type="button" id="update" name="update" class="button_gen" onclick="show_offline_msg(true);" value="<#2616#>" />';
 html += '<div><input type="button" id="amas_update" class="button_gen" style="margin:-33px 0px 0px 200px;display:none;" onclick="cfgsync_firmware_upgrade();" value="<#1674#>"/><div>';
 html += '</div>';
 html += '<div id="check_beta_div"><input type="checkbox" name="check_beta" id="amas_beta" onclick="change_beta_path()" value="" <% nvram_match("webs_update_beta", "1", "checked"); %>/><#2134#></div>'; // Untranslated
 html += '<div id="linkpage_div" class="button_helplink" style="margin-left:200px;margin-top:-38px;display:none;">';
-html += '<a id="linkpage" target="_blank"><div style="padding-top:5px;"><#2612#></div></a>';
+html += '<a id="linkpage" target="_blank"><div style="padding-top:5px;"><#2616#></div></a>';
 html += '</div>';
 html += '<div id="check_states">';
 html += '<span id="update_states"></span>';
@@ -568,7 +568,7 @@ if(dead < 30)
 setTimeout("detect_firmware();", 1000);
 else{
 document.getElementById('update_scan').style.display="none";
-document.getElementById('update_states').innerHTML="<#2323#>&nbsp;<#2145#>";
+document.getElementById('update_states').innerHTML="<#2326#>&nbsp;<#2145#>";
 document.getElementById("faq_link2").href=faq_href2;
 document.getElementById('update').disabled = false;
 }
@@ -581,7 +581,7 @@ setTimeout("detect_firmware();", 1000);
 else{ // got fw info
 if(cfg_check == "2" || cfg_check == "3"){
 document.getElementById('update_scan').style.display="none";
-document.getElementById('update_states').innerHTML="<#2323#>&nbsp;<#2145#>";
+document.getElementById('update_states').innerHTML="<#2326#>&nbsp;<#2145#>";
 document.getElementById("faq_link2").href=faq_href2;
 document.getElementById('update').disabled = false;
 }
@@ -605,7 +605,7 @@ setTimeout("detect_firmware();", 1000);
 else{ // got fw info
 if(webs_state_error == "1"){ //1:wget fail
 document.getElementById('update_scan').style.display="none";
-document.getElementById('update_states').innerHTML="<#2323#>&nbsp;<#2145#>";
+document.getElementById('update_states').innerHTML="<#2326#>&nbsp;<#2145#>";
 document.getElementById("faq_link2").href=faq_href2;
 document.getElementById('update').disabled = false;
 }
@@ -923,7 +923,7 @@ function sig_version_check(){
 document.getElementById("sig_check").disabled = true;
 $("#sig_status").show();
 document.sig_update.submit();
-$("#sig_status").html("<#3145#>");
+$("#sig_status").html("<#3149#>");
 document.getElementById("sig_update_scan").style.display = "";
 setTimeout("sig_check_status();", 8000);
 }
@@ -947,13 +947,13 @@ success: function(){
 --sig_chk_count;
 $("#sig_status").show();
 if(sig_state_flag == 0 && sig_state_error == 0 && sig_state_update == 1){ // no need upgrade
-$("#sig_status").html("<#3146#>");
+$("#sig_status").html("<#3150#>");
 document.getElementById("sig_update_scan").style.display = "none";
 document.getElementById("sig_check").disabled = false;
 }
 else{
 if(sig_state_error != 0){ // update error
-$("#sig_status").html("<#3147#>");
+$("#sig_status").html("<#3151#>");
 document.getElementById("sig_update_scan").style.display = "none";
 document.getElementById("sig_check").disabled = false;
 }
@@ -968,7 +968,7 @@ document.getElementById("sig_update_scan").style.display = "none";
 document.getElementById("sig_check").disabled = false;
 }
 else{
-$("#sig_status").html("<#3148#>");
+$("#sig_status").html("<#3152#>");
 setTimeout("sig_check_status();", 1000);
 }
 }
@@ -993,7 +993,7 @@ else{
 document.getElementById("sig_update_date").innerHTML = "";
 document.getElementById("sig_update_scan").style.display = "none";
 document.getElementById("sig_check").disabled = false;
-$("#sig_status").html("<#3149#>");
+$("#sig_status").html("<#3153#>");
 $("#sig_ver_word").html(sig_ver);
 }
 }
@@ -1448,9 +1448,9 @@ if(upgrade_status.mobile_upgrade_md5 != "1" && upgrade_status.mobile_upgrade_nam
 setTimeout(get_mobile_fw_upgrade_status, 1000);
 else{
 if(upgrade_status.mobile_upgrade_md5 == "1" || upgrade_status.mobile_upgrade_name == "1")
-alert("<#2687#>");
+alert("<#2691#>");
 else if(upgrade_status.mobile_upgrade_now == "1")
-alert("<#2686#>");
+alert("<#2690#>");
 else if(upgrade_status.mobile_upgrade_status == "3")
 alert("<#194#>");
 }
@@ -1585,11 +1585,11 @@ save_update_enable('off');
 <td><% nvram_get("dsllog_drvver"); %></td>
 </tr>
 <tr id="sig_ver_field" style="display:none;">
-<th><#3150#></th>
+<th><#3154#></th>
 <td >
 <div style="height:33px;margin-top:5px;"><span id="sig_ver_word" style="color:#FFFFFF;"></span><span id="sig_update_date"></span></div>
 <div style="margin-left:200px;margin-top:-38px;">
-<input type="button" id="sig_check" name="sig_check" class="button_gen" onclick="sig_version_check();" value="<#2612#>">
+<input type="button" id="sig_check" name="sig_check" class="button_gen" onclick="sig_version_check();" value="<#2616#>">
 </div>
 <div>
 <span id="sig_status" style="display:none"></span>
@@ -1602,11 +1602,11 @@ save_update_enable('off');
 <td>
 <div id="FWString" style="height:33px;margin-top:5px;"></div>
 <div id="update_div" style="margin-left:200px;margin-top:-38px;display:none;">
-<input type="button" id="update" name="update" class="button_gen" onclick="detect_update();" value="<#2612#>" />
+<input type="button" id="update" name="update" class="button_gen" onclick="detect_update();" value="<#2616#>" />
 </div>
 <div id="check_beta_div"><input type="checkbox" name="check_beta" id="path_beta" onclick="change_beta_path()" value="" <% nvram_match("webs_update_beta", "1", "checked"); %>/><#2134#></div>
 <div id="linkpage_div" class="button_helplink" style="margin-left:200px;margin-top:-38px;display:none;">
-<a id="linkpage" target="_blank"><div style="padding-top:5px;"><#2612#></div></a>
+<a id="linkpage" target="_blank"><div style="padding-top:5px;"><#2616#></div></a>
 </div>
 <div id="check_states">
 <span id="update_states"></span>
@@ -1637,12 +1637,12 @@ save_update_enable('off');
 <table id="modem_fw_upgrade" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable" style="display: none;">
 <thead>
 <tr>
-<td colspan="2"><#2688#></td>
+<td colspan="2"><#2692#></td>
 </tr>
 </thead>
-<tr><th><#2760#></th><td><div id="usb_modem_act_swver"><% nvram_get("usb_modem_act_swver"); %></div></td></tr>
+<tr><th><#2764#></th><td><div id="usb_modem_act_swver"><% nvram_get("usb_modem_act_swver"); %></div></td></tr>
 <tr>
-<th><#2822#></th>
+<th><#2826#></th>
 <td>
 <input type="file" name="file" class="input" style="color:#FFCC00;*color:#000;width: 194px;">
 <input type="button" name="upload" class="button_gen" onclick="upgrade_modem_fw()" value="<#1675#>" />

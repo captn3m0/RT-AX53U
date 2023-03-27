@@ -1495,7 +1495,7 @@ buf.push('<li><a style="margin-right: 3px;" href="javascript:tabSelect(\'' + arg
 else if(arguments[i][0].indexOf("WIRED") != -1){
 if(wired_tabs.length > 1){
 if(!wired_tab){
-buf.push('<li><a style="margin-right: 3px;" href="#" id="wired_tabs"><#3307#></a>');
+buf.push('<li><a style="margin-right: 3px;" href="#" id="wired_tabs"><#3313#></a>');
 buf.push('<ul>');
 for(var j = 0; j < wired_tabs.length; j++){
 buf.push('<li><a href="javascript:tabSelect(\'' + wired_tabs[j][0] +'\')" id="' + wired_tabs[j][0] + '">' + wired_tabs[j][1] + '</a></li>');

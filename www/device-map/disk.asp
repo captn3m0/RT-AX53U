@@ -133,7 +133,7 @@ document.form.submit();
 <table width="95%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="table1px">
 <tr>
 <td style="padding:5px 10px 0px 15px;">
-<p class="formfonttitle_nwm"><#2759#>:</p>
+<p class="formfonttitle_nwm"><#2763#>:</p>
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px;line-height:20px; color:#FFFFFF;" id="disk_model_name"></p>
 <div style="margin-top:5px;" class="line_horizontal"></div>
 </td>
@@ -149,7 +149,7 @@ document.form.submit();
 </tr>
 <tr>
 <td style="padding:5px 10px 0px 15px;">
-<p class="formfonttitle_nwm"><#3310#>:</p>
+<p class="formfonttitle_nwm"><#3316#>:</p>
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px;line-height:20px; color:#FFFFFF;" id="disk_total_size"></p>
 <div style="margin-top:5px;" class="line_horizontal"></div>
 </td>
@@ -179,9 +179,9 @@ document.form.submit();
 <table width="95%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="table1px">
 <tr>
 <td height="50" style="padding:10px 15px 0px 15px;">
-<p class="formfonttitle_nwm" style="float:left;width:138px; "><#3077#>:</p>
+<p class="formfonttitle_nwm" style="float:left;width:138px; "><#3081#>:</p>
 <input id="show_remove_button" class="button_gen" type="button" class="button" onclick="remove_disk_call();" value="<#1523#>">
-<div id="show_removed_string" style="display:none;"><#3075#></div>
+<div id="show_removed_string" style="display:none;"><#3079#></div>
 <div style="margin-top:5px;" class="line_horizontal"></div>
 </td>
 </tr>
@@ -189,7 +189,7 @@ document.form.submit();
 <table width="95%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="table1px" id="reduce_usb3_table" style="display:none">
 <tr>
 <td height="50" style="padding:10px 15px 0px 15px;">
-<p class="formfonttitle_nwm" style="float:left;width:138px; " onmouseover="parent.overHint(24);" onmouseout="parent.nd();"><#3096#></p>
+<p class="formfonttitle_nwm" style="float:left;width:138px; " onmouseover="parent.overHint(24);" onmouseout="parent.nd();"><#3100#></p>
 <form method="post" name="form" action="/start_apply.htm" target="hidden_frame">
 <input type="hidden" name="current_page" value="/">
 <input type="hidden" name="next_page" value="/">
@@ -209,7 +209,7 @@ document.form.submit();
 </tr>
 <tr id="smbv1_hint">
 <td height="50" style="padding:10px 15px 0px 15px;">
-<#921#><br><#3079#>
+<#921#><br><#3083#>
 </td>
 </tr>
 <tr>

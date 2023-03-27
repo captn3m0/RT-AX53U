@@ -36,7 +36,7 @@ var yadns_mode = '<% nvram_get("yadns_mode"); %>';
 var ipv6_unit = '<% nvram_get("ipv6_unit"); %>';
 var ipv6_service_opt = new Array( new Array("<#1517#>", "disabled"),
 new Array("Native", "dhcp6"),
-new Array("<#2447#>", "other"),
+new Array("<#2451#>", "other"),
 new Array("Tunnel 6to4", "6to4"),
 new Array("Tunnel 6in4", "6in4"),
 new Array("Tunnel 6rd", "6rd")
@@ -62,7 +62,7 @@ showInputfield(ipv61_proto_orig);
 if(yadns_support){
 if(yadns_enable != 0 && yadns_mode != -1){
 document.getElementById("yadns_hint").style.display = "";
-document.getElementById("yadns_hint").innerHTML = "<span><#3989#></span>";
+document.getElementById("yadns_hint").innerHTML = "<span><#3995#></span>";
 }
 }
 document.form.wan_selection.selectedIndex = parseInt(ipv6_unit);
@@ -623,7 +623,7 @@ return false;
 if(!validIPv6_dhcp(document.form.ipv61_dhcp_end_end))
 return false;
 if(parseInt("0x"+document.form.ipv61_dhcp_start_start.value) > parseInt("0x"+document.form.ipv61_dhcp_end_end.value)){
-alert("<#3511#> "+document.form.ipv61_dhcp_start_start.value);
+alert("<#3517#> "+document.form.ipv61_dhcp_start_start.value);
 document.form.ipv61_dhcp_end_end.focus();
 document.form.ipv61_dhcp_end_end.select();
 return false;
@@ -648,7 +648,7 @@ return false;
 if(!validIPv6_dhcp(document.form.ipv61_dhcp_end_end))
 return false;
 if(parseInt("0x"+document.form.ipv61_dhcp_start_start.value) > parseInt("0x"+document.form.ipv61_dhcp_end_end.value)){
-alert("<#3511#> "+document.form.ipv61_dhcp_start_start.value);
+alert("<#3517#> "+document.form.ipv61_dhcp_start_start.value);
 document.form.ipv61_dhcp_end_end.focus();
 document.form.ipv61_dhcp_end_end.select();
 return false;
@@ -890,18 +890,18 @@ document.form.wan_selection.selectedIndex = parseInt(ipv6_unit);
 <div>&nbsp;</div>
 <div class="formfonttitle">IPv6</div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#2508#></div>
+<div class="formfontdesc"><#2512#></div>
 <div class="formfontdesc" style="margin-top:-10px;">
 <a id="faq" href="" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">IPv6 FAQ</a>
 </div>
 <table id="basic_config" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#3277#></td>
+<td colspan="2"><#3281#></td>
 </tr>
 </thead>
 <tr>
-<th><#2456#></th>
+<th><#2460#></th>
 <td>
 <select name="wan_selection" class="input_option" onchange="changeWANUnit(this);">
 </select>
@@ -912,106 +912,106 @@ document.form.wan_selection.selectedIndex = parseInt(ipv6_unit);
 <td>
 <select id="ipv61_service" name="ipv61_service" class="input_option" onchange="showInputfield(this.value);">
 <option value="disabled" <% nvram_match("ipv61_service", "disabled", "selected"); %>><#1517#></option>
-<option value="dhcp6" <% nvram_match("ipv61_service", "dhcp6", "selected"); %>><#2443#></option>
-<option value="other" <% nvram_match("ipv61_service", "other", "selected"); %>><#2447#></option>
-<option value="ipv6pt" <% nvram_match("ipv61_service", "ipv6pt", "selected"); %>><#2434#></option>
-<option value="flets" <% nvram_match("ipv61_service", "flets", "selected"); %>><#2433#></option>
-<option value="6to4" <% nvram_match("ipv61_service", "6to4", "selected"); %>><#2450#></option>
-<option value="6in4" <% nvram_match("ipv61_service", "6in4", "selected"); %>><#2449#></option>
-<option value="6rd" <% nvram_match("ipv61_service", "6rd", "selected"); %>><#2451#></option>
+<option value="dhcp6" <% nvram_match("ipv61_service", "dhcp6", "selected"); %>><#2446#></option>
+<option value="other" <% nvram_match("ipv61_service", "other", "selected"); %>><#2451#></option>
+<option value="ipv6pt" <% nvram_match("ipv61_service", "ipv6pt", "selected"); %>><#2437#></option>
+<option value="flets" <% nvram_match("ipv61_service", "flets", "selected"); %>><#2436#></option>
+<option value="6to4" <% nvram_match("ipv61_service", "6to4", "selected"); %>><#2454#></option>
+<option value="6in4" <% nvram_match("ipv61_service", "6in4", "selected"); %>><#2453#></option>
+<option value="6rd" <% nvram_match("ipv61_service", "6rd", "selected"); %>><#2455#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th><#3670#></th>
+<th><#3676#></th>
 <td>
 <select name="ipv61_ifdev_select" class="input_option" onchange="showInputfield2('ipv61_ifdev', this.value);">
 <option class="content_input_fd" value="ppp" <% nvram_match("ipv61_ifdev", "ppp","selected"); %>>PPP</option>
-<option class="content_input_fd" value="eth" <% nvram_match("ipv61_ifdev", "eth","selected"); %>><#3668#></option>
+<option class="content_input_fd" value="eth" <% nvram_match("ipv61_ifdev", "eth","selected"); %>><#3674#></option>
 </select>
 </td>
 </tr>
 <tr style="display:none;"><th>DHCP-PD</th>
 <td>
-<input type="radio" name="ipv61_dhcp_pd" class="input" value="1" onclick="showInputfield2('ipv61_dhcp_pd', this.value);" <% nvram_match("ipv61_dhcp_pd", "1","checked"); %>><#3840#>
+<input type="radio" name="ipv61_dhcp_pd" class="input" value="1" onclick="showInputfield2('ipv61_dhcp_pd', this.value);" <% nvram_match("ipv61_dhcp_pd", "1","checked"); %>><#3846#>
 <input type="radio" name="ipv61_dhcp_pd" class="input" value="0" onclick="showInputfield2('ipv61_dhcp_pd', this.value);" <% nvram_match("ipv61_dhcp_pd", "0","checked"); %>><#1517#>
 </td>
 </tr>
-<tr style="display:none;"><th><#2430#></th>
+<tr style="display:none;"><th><#2433#></th>
 <td>
-<input type="radio" name="_ipv61_accept_defrtr" class="input" value="1" <% nvram_match("ipv61_accept_defrtr", "1","checked"); %>><#3840#>
+<input type="radio" name="_ipv61_accept_defrtr" class="input" value="1" <% nvram_match("ipv61_accept_defrtr", "1","checked"); %>><#3846#>
 <input type="radio" name="_ipv61_accept_defrtr" class="input" value="0" <% nvram_match("ipv61_accept_defrtr", "0","checked"); %>><#1517#>
 </td>
 </tr>
 <tr style="display:none;">
-<th><#2448#></th>
+<th><#2452#></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="ipv61_tun_v4end" value="<% nvram_get("ipv61_tun_v4end"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none;">
-<th><#2446#></th>
+<th><#2450#></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="ipv61_relay" value='<% nvram_get("ipv61_relay"); %>' autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none;">
-<th><#2426#></th>
+<th><#2429#></th>
 <td>
-<input type="radio" name="ipv61_6rd_dhcp" class="input" value="1" onclick="showInputfield2('ipv61_6rd_dhcp', this.value);" <% nvram_match("ipv61_6rd_dhcp", "1","checked"); %>><#3840#>
+<input type="radio" name="ipv61_6rd_dhcp" class="input" value="1" onclick="showInputfield2('ipv61_6rd_dhcp', this.value);" <% nvram_match("ipv61_6rd_dhcp", "1","checked"); %>><#3846#>
 <input type="radio" name="ipv61_6rd_dhcp" class="input" value="0" onclick="showInputfield2('ipv61_6rd_dhcp', this.value);" <% nvram_match("ipv61_6rd_dhcp", "0","checked"); %>><#1517#>
 </td>
 </tr>
 <tr style="display:none;">
-<th><#2428#></th>
+<th><#2431#></th>
 <td>
 <input type="text" maxlength="39" class="input_32_table" name="ipv61_6rd_prefix" value='<% nvram_get("ipv61_6rd_prefix"); %>' autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none;">
-<th><#2445#></th>
+<th><#2449#></th>
 <td>
 <input type="text" maxlength="3" class="input_3_table" name="ipv61_6rd_prefixlen" value="<% nvram_get("ipv61_6rd_prefixlen"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none;">
-<th><#2429#></th>
+<th><#2432#></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="ipv61_6rd_router" value='<% nvram_get("ipv61_6rd_router"); %>' autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none;">
-<th><#2427#></th>
+<th><#2430#></th>
 <td>
 <input type="text" maxlength="2" class="input_3_table" name="ipv61_6rd_ip4size" value='<% nvram_get("ipv61_6rd_ip4size"); %>' autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none;">
-<th><#2432#></th>
+<th><#2435#></th>
 <td>
 <input type="text" maxlength="39" class="input_32_table" name="ipv61_tun_addr" value='<% nvram_get("ipv61_tun_addr"); %>' autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none;">
-<th><#2445#></th>
+<th><#2449#></th>
 <td>
 <input type="text" maxlength="3" class="input_3_table" name="ipv61_tun_addrlen" value="<% nvram_get("ipv61_tun_addrlen"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none;">
-<th><#2435#></th>
+<th><#2438#></th>
 <td>
 <input type="text" maxlength="39" class="input_32_table" name="ipv61_tun_peer" value='<% nvram_get("ipv61_tun_peer"); %>' autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none;">
-<th><#3340#></th>
+<th><#3346#></th>
 <td>
 <input type="text" maxlength="4" class="input_6_table" name="ipv61_tun_mtu" value='<% nvram_get("ipv61_tun_mtu"); %>' autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none;">
-<th><#3341#></th>
+<th><#3347#></th>
 <td>
 <input type="text" maxlength="3" class="input_6_table" name="ipv61_tun_ttl" value='<% nvram_get("ipv61_tun_ttl"); %>' autocorrect="off" autocapitalize="off">
 </td>
@@ -1020,23 +1020,23 @@ document.form.wan_selection.selectedIndex = parseInt(ipv6_unit);
 <table id="ipv61_wan_setting" style="margin-top:8px;" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#2455#></td>
+<td colspan="2"><#2459#></td>
 </tr>
 </thead>
 <tr>
-<th><#2452#></th>
+<th><#2456#></th>
 <td>
 <input type="text" maxlength="39" class="input_32_table" name="ipv61_ipaddr" value='<% nvram_get("ipv61_ipaddr"); %>' autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><#2454#></th>
+<th><#2458#></th>
 <td>
 <input type="text" maxlength="3" class="input_3_table" name="ipv61_prefix_len_wan" value="<% nvram_get("ipv61_prefix_len_wan"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><#2453#></th>
+<th><#2457#></th>
 <td>
 <input type="text" maxlength="39" class="input_32_table" name="ipv61_gateway" value='<% nvram_get("ipv61_gateway"); %>' autocorrect="off" autocapitalize="off">
 </td>
@@ -1045,66 +1045,66 @@ document.form.wan_selection.selectedIndex = parseInt(ipv6_unit);
 <table id="ipv61_lan_setting" style="margin-top:8px;" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#2442#></td>
+<td colspan="2"><#2445#></td>
 </tr>
 </thead>
 <tr style="display:none;">
-<th><#2440#></th> <td>
+<th><#2443#></th> <td>
 <input type="text" maxlength="39" class="input_32_table" name="ipv61_rtr_addr" value='<% nvram_get("ipv61_rtr_addr"); %>' onBlur="if(document.form.ipv61_autoconf_type[1].checked){showInputfield2('ipv61_autoconf_type', '1');}else{showInputfield2('ipv61_autoconf_type', '0');}" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr id="ipv61_ipaddr_r">
-<th><#2440#></th> <td>
+<th><#2443#></th> <td>
 <div id="ipv61_ipaddr_span" name="ipv61_ipaddr_span" style="color:#FFFFFF;margin-left:8px;"></div>
 </td>
 </tr>
 <tr>
-<th><#2972#></th>
+<th><#2976#></th>
 <td>
 <input type="text" maxlength="3" class="input_3_table" name="ipv61_prefix_length" value="<% nvram_get("ipv61_prefix_length"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr id="ipv61_prefix_length_r">
-<th><#2972#></th>
+<th><#2976#></th>
 <td>
 <div id="ipv61_prefix_length_span" name="ipv61_prefix_length_span" style="color:#FFFFFF;margin-left:8px;"></div>
 </td>
 </tr>
 <tr>
-<th><#2441#></th>
+<th><#2444#></th>
 <td>
 <input type="text" maxlength="39" class="input_32_table" name="ipv61_prefix" value='<% nvram_get("ipv61_prefix"); %>' autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr id="ipv61_prefix_r">
-<th><#2441#></th>
+<th><#2444#></th>
 <td>
 <div id="ipv61_prefix_span" name="ipv61_prefix_span" style="color:#FFFFFF;margin-left:8px;"></div>
 </td>
 </tr>
 <tr>
-<th><#2431#></th>
+<th><#2434#></th>
 <td>
 <input type="radio" name="ipv61_autoconf_type" class="input" value="0" onclick="showInputfield2('ipv61_autoconf_type', '0');" <% nvram_match("ipv61_autoconf_type", "0","checked"); %>>Stateless
 <input type="radio" name="ipv61_autoconf_type" class="input" value="1" onclick="showInputfield2('ipv61_autoconf_type', '1');" <% nvram_match("ipv61_autoconf_type", "1","checked"); %>>Stateful
 </td>
 </tr>
 <tr>
-<th><#2526#></th> <td>
+<th><#2530#></th> <td>
 <input type="text" maxlength="19" class="input_20_table" name="ipv61_prefix_span_for_start" style="color:#BBBBBB" readonly autocorrect="off" autocapitalize="off">
 ::
 <input type="text" maxlength="4" class="input_6_table" name="ipv61_dhcp_start_start" autocorrect="off" autocapitalize="off" >
 </td>
 </tr>
 <tr>
-<th><#2524#></th> <td>
+<th><#2528#></th> <td>
 <input type="text" maxlength="19" class="input_20_table" name="ipv61_prefix_span_for_end" style="color:#BBBBBB" readonly autocorrect="off" autocapitalize="off">
 ::
 <input type="text" maxlength="4" class="input_6_table" name="ipv61_dhcp_end_end" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><#2516#></th>
+<th><#2520#></th>
 <td>
 <input type="text" maxlength="6" class="input_6_table" name="ipv61_dhcp_lifetime" value='<% nvram_get("ipv61_dhcp_lifetime"); %>' onkeypress="return validator.isNumber(this,event)" autocorrect="off" autocapitalize="off">
 </td>
@@ -1113,31 +1113,31 @@ document.form.wan_selection.selectedIndex = parseInt(ipv6_unit);
 <table id="ipv61_dns_setting" style="margin-top:8px;" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#2437#></td>
+<td colspan="2"><#2440#></td>
 </tr>
 </thead>
 <tr style="display:none;">
 <th><#308#></th>
 <td>
-<input type="radio" name="ipv61_dnsenable" class="input" value="1" onclick="showInputfield2('ipv61_dnsenable', this.value);" <% nvram_match("ipv61_dnsenable", "1","checked"); %>><#3840#>
+<input type="radio" name="ipv61_dnsenable" class="input" value="1" onclick="showInputfield2('ipv61_dnsenable', this.value);" <% nvram_match("ipv61_dnsenable", "1","checked"); %>><#3846#>
 <input type="radio" name="ipv61_dnsenable" class="input" value="0" onclick="showInputfield2('ipv61_dnsenable', this.value);" <% nvram_match("ipv61_dnsenable", "0","checked"); %>><#1517#>
 <div id="yadns_hint" style="display:none;"></div>
 </td>
 </tr>
 <tr style="display:none;">
-<th><#2436#> 1</th>
+<th><#2439#> 1</th>
 <td>
 <input type="text" maxlength="39" class="input_32_table" name="ipv61_dns1" value='<% nvram_get("ipv61_dns1"); %>' autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none;">
-<th><#2436#> 2</th>
+<th><#2439#> 2</th>
 <td>
 <input type="text" maxlength="39" class="input_32_table" name="ipv61_dns2" value='<% nvram_get("ipv61_dns2"); %>' autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none;">
-<th><#2436#> 3</th>
+<th><#2439#> 3</th>
 <td>
 <input type="text" maxlength="39" class="input_32_table" name="ipv61_dns3" value='<% nvram_get("ipv61_dns3"); %>' autocorrect="off" autocapitalize="off">
 </td>
@@ -1146,13 +1146,13 @@ document.form.wan_selection.selectedIndex = parseInt(ipv6_unit);
 <table id="auto_config" style="margin-top:8px;display:none;" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#2431#></td>
+<td colspan="2"><#2434#></td>
 </tr>
 </thead>
 <tr>
 <th><#1876#></th>
 <td>
-<input type="radio" name="_ipv61_radvd" class="input" value="1" <% nvram_match("ipv61_radvd", "1","checked"); %>><#3840#>
+<input type="radio" name="_ipv61_radvd" class="input" value="1" <% nvram_match("ipv61_radvd", "1","checked"); %>><#3846#>
 <input type="radio" name="_ipv61_radvd" class="input" value="0" <% nvram_match("ipv61_radvd", "0","checked"); %>><#1517#>
 </td>
 </tr>

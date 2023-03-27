@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#842#> - <#4219#></title>
+<title><#842#> - <#4225#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="other.css">
@@ -50,7 +50,7 @@ header: [
 "width" : "20%"
 },
 {
-"title" : "<#3220#>",
+"title" : "<#3224#>",
 "width" : "20%"
 },
 {
@@ -116,7 +116,7 @@ $("textarea#textarea").html(ipsec_log);
 }
 function set_ig_config(_status){
 if(_status == "0"){
-var confirmFlag = confirm("Turn off feature will make all Instant Guard clients disconnect. You can turn on the feature again by clicking connection button on Instant Guard app.\n<#3108#>");/*untranslated*/
+var confirmFlag = confirm("Turn off feature will make all Instant Guard clients disconnect. You can turn on the feature again by clicking connection button on Instant Guard app.\n<#3112#>");/*untranslated*/
 if(!confirmFlag){
 $('#radio_IG_enable').find('.iphone_switch').animate({backgroundPosition: 0}, "slow");
 curState = "1";
@@ -202,17 +202,17 @@ tableApi.genTableAPI(tableStruct);
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#4219#></div>
+<div class="formfonttitle"><#4225#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#4220#></div>
+<div class="formfontdesc"><#4226#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#3277#></td>
+<td colspan="2"><#3281#></td>
 </tr>
 </thead>
 <tr>
-<th><#4219#></th>
+<th><#4225#></th>
 <td>
 <div align="center" class="left" style="float:left;cursor:pointer;" id="radio_IG_enable"></div>
 <div class="iphone_switch_container" style="height:32px; width:74px; position: relative; overflow: hidden;"></div>
@@ -234,7 +234,7 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 </td>
 </tr>
 <tr>
-<th><#3768#></th>
+<th><#3774#></th>
 <td id="ig_server_address">-</td>
 </tr>
 <tr>

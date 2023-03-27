@@ -48,7 +48,7 @@ return'<#343#>" '+ invalid_char +'" !';
 if(_value) {
 for(var i = 0; i < keywordArray.length; i++) {
 if( _value.indexOf(keywordArray[i]) >= 0) {
-return keywordArray + " <#2474#>";
+return keywordArray + " <#2478#>";
 }
 }
 }
@@ -183,7 +183,7 @@ var PortRange = _value;
 var rangere = new RegExp("^([0-9]{1,5})\:([0-9]{1,5})$", "gi");
 if(rangere.test(PortRange)) {
 if(parseInt(RegExp.$1) >= parseInt(RegExp.$2)) {
-hintMsg = _value + " <#2485#>";
+hintMsg = _value + " <#2489#>";
 }
 else{
 if(!eachPort(RegExp.$1, mini, maxi) || !eachPort(RegExp.$2, mini, maxi)) {
@@ -260,7 +260,7 @@ var PortRange = _value;
 var rangere = new RegExp("^([0-9]{1,5})\:([0-9]{1,5})$", "gi");
 if(rangere.test(PortRange)) {
 if(parseInt(RegExp.$1) >= parseInt(RegExp.$2)) {
-hintMsg = _value + " <#2485#>";
+hintMsg = _value + " <#2489#>";
 }
 else{
 if(!eachPort(RegExp.$1, mini, maxi) || !eachPort(RegExp.$2, mini, maxi)) {
@@ -278,7 +278,7 @@ else
 hintMsg = HINTPASS;
 }
 }
-if(wan_proto=="v6plus" && s46_ports_check_flag && array_ipv6_s46_ports.length > 1 && hintMsg == HINTPASS){
+if((wan_proto == "v6plus" || wan_proto == "ocnvc") && s46_ports_check_flag && array_ipv6_s46_ports.length > 1 && hintMsg == HINTPASS){
 var PortSplit = PortRange.split(/,|:/);
 var res=false;
 var res_result=0;
@@ -290,7 +290,7 @@ if(res)
 res_result++;
 }
 if(res_result != PortSplit.length){
-confirmMsg ="The following port related settings may not work properly since the port is not available in current v6plus usable port range. Do you want to continue?";
+confirmMsg = port_confirm;
 }
 else{
 confirmMsg = CONFIRMPASS;

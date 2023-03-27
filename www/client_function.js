@@ -583,9 +583,9 @@ code += '</td>';
 code += '</tr>';
 if(adv_setting) {
 var block_internet_hint = "Enable this button to block this device to access internet.";/* untranslated */
-var time_scheduling_hint = "<#2860#>";
+var time_scheduling_hint = "<#2864#>";
 var ip_binding_hint = "Enable this button to bind specific IP with MAC Address of this device.";/* untranslated */
-var internetTimeScheduling_title = (bwdpi_support) ? "<#3282#>" : "<#468#>";
+var internetTimeScheduling_title = (bwdpi_support) ? "<#3288#>" : "<#468#>";
 code += '<tr>';
 code += '<td colspan="3">';
 code += '<div class="clientList_line"></div>';
@@ -601,7 +601,7 @@ code += '<div style="width:65%;float:left;line-height:33px;">';
 code += "<span onmouseover='return overlib(\"" + htmlEnDeCode.htmlEncode(time_scheduling_hint) + "\");' onmouseout='return nd();'>" + internetTimeScheduling_title + "</span>";
 code += '</div>';
 code += '<div align="center" class="left" style="cursor:pointer;float:right;" id="card_radio_TimeScheduling_enable"></div>';
-code += '<div id="card_internetTimeScheduling" class="internetTimeEdit" style="float:right;margin-right:10px;" title="<#3282#>"></div>';
+code += '<div id="card_internetTimeScheduling" class="internetTimeEdit" style="float:right;margin-right:10px;" title="<#3288#>"></div>';
 code += '</div>';
 code += '<div class="clientList_line"></div>';
 code += '<div style="height:33px;width:100%;margin:5px 0;">';
@@ -684,7 +684,7 @@ var connectModeTip = "";
 var clientIconHtml = "";
 if(clientInfo.isWL == "0") {
 rssi_t = "wired";
-connectModeTip = "<#3307#>";
+connectModeTip = "<#3313#>";
 }
 else {
 rssi_t = client_convRSSI(clientInfo.rssi);
@@ -942,7 +942,7 @@ card_client_variable.userUploadFlag = true;
 return false;
 }
 else {
-alert("<#3119#>");
+alert("<#3123#>");
 return false;
 }
 }
@@ -998,7 +998,7 @@ else
 return false;
 };
 if (!checkImageExtension($obj.val()))
-alert("<#3119#>");
+alert("<#3123#>");
 else {
 var fileReader = new FileReader();
 fileReader.onload = function (fileReader) {
@@ -1071,7 +1071,7 @@ var existMac = key;
 var existIP = card_client_variable.manual_dhcp_list[existMac].ip;
 if(existIP == $('#edit_client_block #card_client_ipaddr_field').val()) {
 if(existMac != $('#edit_client_block #card_client_macaddr_field').val()) {
-alert("<#2472#>");
+alert("<#2476#>");
 ip_obj.value = $('#edit_client_block #card_client_ipaddr_field_orig').val();
 ip_obj.focus();
 retFlag = 0;
@@ -1419,11 +1419,11 @@ divObj.className = "usericons_content";
 var code = "";
 code += '<table width="95%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table" style="margin-top:15px;">';
 code += '<thead><tr>';
-code += '<td colspan="4">Client upload icon&nbsp;(<#2611#>&nbsp;100)</td>'; /*untranslated*/
+code += '<td colspan="4">Client upload icon&nbsp;(<#2615#>&nbsp;100)</td>'; /*untranslated*/
 code += '</tr></thead>';
 code += '<tr>';
-code += '<th width="45%"><#2868#></th>';
-code += '<th width="30%"><#2866#></th>';
+code += '<th width="45%"><#2872#></th>';
+code += '<th width="30%"><#2870#></th>';
 code += '<th width="15%"><#1533#></th>';
 code += '<th width="10%"><#1649#></th>';
 code += '</tr>';
@@ -1454,7 +1454,7 @@ var clientIcon = "";
 var custom_usericon_length = custom_usericon_row.length;
 code +='<table width="95%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="cardUploadIcons_table">';
 if(custom_usericon_length == 1) {
-code +='<tr><td style="color:#FFCC00;" colspan="4"><#2407#></td></tr>';
+code +='<tr><td style="color:#FFCC00;" colspan="4"><#2410#></td></tr>';
 document.getElementById('edit_uploadicons_block').style.height = "170px";
 }
 else {
@@ -1490,7 +1490,7 @@ document.getElementById('edit_uploadicons_block').style.height = (61 * (trCount 
 if(trCount == 0) {
 var code = "";
 code +='<table width="95%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="cardUploadIcons_table">';
-code +='<tr><td style="color:#FFCC00;" colspan="4"><#2407#></td></tr>';
+code +='<tr><td style="color:#FFCC00;" colspan="4"><#2410#></td></tr>';
 code +='</table>';
 document.getElementById('edit_uploadicons_block').style.height = "170px";
 document.getElementById("card_usericons_block").innerHTML = code;
@@ -2106,7 +2106,7 @@ drawSwitchModeHtml += "<div class='block_filter_pressed clientlist_All'>";
 drawSwitchModeHtml += "<div class='block_filter_name' style='color:#93A9B1;'><#1395#></div>";
 drawSwitchModeHtml += "</div>";
 drawSwitchModeHtml += "<div class='block_filter clientlist_ByInterface' style='cursor:pointer'>";
-drawSwitchModeHtml += "<div class='block_filter_name' onclick='changeClientListViewMode();'><#3670#></div>";
+drawSwitchModeHtml += "<div class='block_filter_name' onclick='changeClientListViewMode();'><#3676#></div>";
 drawSwitchModeHtml += "</div>";
 }
 else {
@@ -2114,7 +2114,7 @@ drawSwitchModeHtml += "<div class='block_filter clientlist_All' style='cursor:po
 drawSwitchModeHtml += "<div class='block_filter_name' onclick='changeClientListViewMode();'><#1395#></div>";
 drawSwitchModeHtml += "</div>";
 drawSwitchModeHtml += "<div class='block_filter_pressed clientlist_ByInterface'>";
-drawSwitchModeHtml += "<div class='block_filter_name' style='color:#93A9B1;'><#3670#></div>";
+drawSwitchModeHtml += "<div class='block_filter_name' style='color:#93A9B1;'><#3676#></div>";
 drawSwitchModeHtml += "</div>";
 }
 drawSwitchModeHtml += "</div>";
@@ -2131,13 +2131,13 @@ code += "<thead><tr height='28px'><td id='td_all_list_title' colspan='" + wl_col
 code += "<a id='all_expander'class='clientlist_expander' onclick='showHideContent(\"clientlist_all_list_Block\", this);'>[ <#1544#> ]</a>";
 code += "</td></tr></thead>";
 code += "<tr id='tr_all_title' height='40px'>";
-code += "<th class='IE8HACK' width=" + obj_width[0] + "><#2326#></th>";
+code += "<th class='IE8HACK' width=" + obj_width[0] + "><#2329#></th>";
 code += "<th class='IE8HACK' width=" + obj_width[1] + "><#1533#></th>";
-code += "<th width=" + obj_width[2] + " onclick='sorter.addBorder(this);sorter.doSorter(2, \"str\", \"all_list\");' style='cursor:pointer;'><#2868#></th>";
-code += "<th width=" + obj_width[3] + " onclick='sorter.addBorder(this);sorter.doSorter(3, \"num\", \"all_list\");' style='cursor:pointer;'><#3520#></th>";
-code += "<th width=" + obj_width[4] + " onclick='sorter.addBorder(this);sorter.doSorter(4, \"str\", \"all_list\");' style='cursor:pointer;'><#2866#></th>";
+code += "<th width=" + obj_width[2] + " onclick='sorter.addBorder(this);sorter.doSorter(2, \"str\", \"all_list\");' style='cursor:pointer;'><#2872#></th>";
+code += "<th width=" + obj_width[3] + " onclick='sorter.addBorder(this);sorter.doSorter(3, \"num\", \"all_list\");' style='cursor:pointer;'><#3526#></th>";
+code += "<th width=" + obj_width[4] + " onclick='sorter.addBorder(this);sorter.doSorter(4, \"str\", \"all_list\");' style='cursor:pointer;'><#2870#></th>";
 if(!(isSwMode('mb') || isSwMode('ew')))
-code += "<th width=" + obj_width[5] + " onclick='sorter.addBorder(this);sorter.doSorter(5, \"num\", \"all_list\");' style='cursor:pointer;'><#3670#></th>";
+code += "<th width=" + obj_width[5] + " onclick='sorter.addBorder(this);sorter.doSorter(5, \"num\", \"all_list\");' style='cursor:pointer;'><#3676#></th>";
 if(stainfo_support && !(isSwMode('mb') || isSwMode('ew'))) {
 code += "<th width=" + obj_width[6] + " onclick='sorter.addBorder(this);sorter.doSorter(6, \"num\", \"all_list\");' style='cursor:pointer;' title='The transmission rates of your wireless device'>Tx Rate (Mbps)</th>";/*untranslated*/
 code += "<th width=" + obj_width[7] + " onclick='sorter.addBorder(this);sorter.doSorter(7, \"num\", \"all_list\");' style='cursor:pointer;' title='The receive rates of your wireless device'>Rx Rate (Mbps)</th>";/*untranslated*/
@@ -2149,17 +2149,17 @@ code += "<div id='clientlist_all_list_Block'></div>";
 break;
 case "ByInterface" :
 code += "<table width='100%' border='1' align='center' cellpadding='0' cellspacing='0' class='FormTable_table' style='margin-top:15px;'>";
-code += "<thead><tr height='28px'><td colspan='" + wl_colspan + "'><#3307#>";
+code += "<thead><tr height='28px'><td colspan='" + wl_colspan + "'><#3313#>";
 code += "<a id='wired_expander' class='clientlist_expander' onclick='showHideContent(\"clientlist_wired_list_Block\", this);'>[ <#1544#> ]</a>";
 code += "</td></tr></thead>";
 code += "<tr id='tr_wired_title' height='40px'>";
-code += "<th class='IE8HACK' width=" + obj_width[0] + "><#2326#></th>";
+code += "<th class='IE8HACK' width=" + obj_width[0] + "><#2329#></th>";
 code += "<th class='IE8HACK' width=" + obj_width[1] + "><#1533#></th>";
-code += "<th width=" + obj_width[2] + " onclick='sorter.addBorder(this);sorter.doSorter(2, \"str\", \"wired_list\");' style='cursor:pointer;'><#2868#></th>";
-code += "<th width=" + obj_width[3] + " onclick='sorter.addBorder(this);sorter.doSorter(3, \"num\", \"wired_list\");' style='cursor:pointer;'><#3520#></th>";
-code += "<th width=" + obj_width[4] + " onclick='sorter.addBorder(this);sorter.doSorter(4, \"str\", \"wired_list\");' style='cursor:pointer;'><#2866#></th>";
+code += "<th width=" + obj_width[2] + " onclick='sorter.addBorder(this);sorter.doSorter(2, \"str\", \"wired_list\");' style='cursor:pointer;'><#2872#></th>";
+code += "<th width=" + obj_width[3] + " onclick='sorter.addBorder(this);sorter.doSorter(3, \"num\", \"wired_list\");' style='cursor:pointer;'><#3526#></th>";
+code += "<th width=" + obj_width[4] + " onclick='sorter.addBorder(this);sorter.doSorter(4, \"str\", \"wired_list\");' style='cursor:pointer;'><#2870#></th>";
 if(!(isSwMode('mb') || isSwMode('ew')))
-code += "<th width=" + obj_width[5] + " ><#3670#></th>";
+code += "<th width=" + obj_width[5] + " ><#3676#></th>";
 if(stainfo_support && !(isSwMode('mb') || isSwMode('ew'))) {
 code += "<th width=" + obj_width[6] + " title='The transmission rates of your wireless device'>Tx Rate (Mbps)</th>";/*untranslated*/
 code += "<th width=" + obj_width[7] + " title='The receive rates of your wireless device'>Rx Rate (Mbps)</th>";/*untranslated*/
@@ -2176,13 +2176,13 @@ code += "<thead><tr height='23px'><td colspan='" + wl_colspan + "'>" + wl_nband_
 code += "<a id='wl" + wl_map[wl_nband_title[i]] + "_expander' class='clientlist_expander' onclick='showHideContent(\"clientlist_wl" + wl_map[wl_nband_title[i]] + "_list_Block\", this);'>[ <#1544#> ]</a>";
 code += "</td></tr></thead>";
 code += "<tr id='tr_wl" + wl_map[wl_nband_title[i]] + "_title' height='40px'>";
-code += "<th class='IE8HACK' width=" + obj_width[0] + "><#2326#></th>";
+code += "<th class='IE8HACK' width=" + obj_width[0] + "><#2329#></th>";
 code += "<th class='IE8HACK' width=" + obj_width[1] + "><#1533#></th>";
-code += "<th width=" + obj_width[2] + " onclick='sorter.addBorder(this);sorter.doSorter(2, \"str\", \"wl"+wl_map[wl_nband_title[i]]+"_list\");' style='cursor:pointer;'><#2868#></th>";
-code += "<th width=" + obj_width[3] + " onclick='sorter.addBorder(this);sorter.doSorter(3, \"num\", \"wl"+wl_map[wl_nband_title[i]]+"_list\");' style='cursor:pointer;'><#3520#></th>";
-code += "<th width=" + obj_width[4] + " onclick='sorter.addBorder(this);sorter.doSorter(4, \"str\", \"wl"+wl_map[wl_nband_title[i]]+"_list\");' style='cursor:pointer;'><#2866#></th>";
+code += "<th width=" + obj_width[2] + " onclick='sorter.addBorder(this);sorter.doSorter(2, \"str\", \"wl"+wl_map[wl_nband_title[i]]+"_list\");' style='cursor:pointer;'><#2872#></th>";
+code += "<th width=" + obj_width[3] + " onclick='sorter.addBorder(this);sorter.doSorter(3, \"num\", \"wl"+wl_map[wl_nband_title[i]]+"_list\");' style='cursor:pointer;'><#3526#></th>";
+code += "<th width=" + obj_width[4] + " onclick='sorter.addBorder(this);sorter.doSorter(4, \"str\", \"wl"+wl_map[wl_nband_title[i]]+"_list\");' style='cursor:pointer;'><#2870#></th>";
 if(!(isSwMode('mb') || isSwMode('ew')))
-code += "<th width=" + obj_width[5] + " onclick='sorter.addBorder(this);sorter.doSorter(5, \"num\", \"wl"+wl_map[wl_nband_title[i]]+"_list\");' style='cursor:pointer;'><#3670#></th>";
+code += "<th width=" + obj_width[5] + " onclick='sorter.addBorder(this);sorter.doSorter(5, \"num\", \"wl"+wl_map[wl_nband_title[i]]+"_list\");' style='cursor:pointer;'><#3676#></th>";
 if(stainfo_support && !(isSwMode('mb') || isSwMode('ew'))) {
 code += "<th width=" + obj_width[6] + " onclick='sorter.addBorder(this);sorter.doSorter(6, \"num\", \"wl"+wl_map[wl_nband_title[i]]+"_list\");' style='cursor:pointer;' title='The transmission rates of your wireless device'>Tx Rate (Mbps)</th>";/*untranslated*/
 code += "<th width=" + obj_width[7] + " onclick='sorter.addBorder(this);sorter.doSorter(7, \"num\", \"wl"+wl_map[wl_nband_title[i]]+"_list\");' style='cursor:pointer;' title='The receive rates of your wireless device'>Rx Rate (Mbps)</th>";/*untranslated*/
@@ -2199,13 +2199,13 @@ code += "<thead><tr height='23px'><td colspan='" + wl_colspan + "'><#282#> - " +
 code += "<a id='gn" + i + "_expander' class='clientlist_expander' onclick='showHideContent(\"clientlist_gn" + i + "_list_Block\", this);'>[ <#1544#> ]</a>";
 code += "</td></tr></thead>";
 code += "<tr id='tr_gn" + i + "_title' height='40px'>";
-code += "<th class='IE8HACK' width=" + obj_width[0] + "><#2326#></th>";
+code += "<th class='IE8HACK' width=" + obj_width[0] + "><#2329#></th>";
 code += "<th class='IE8HACK' width=" + obj_width[1] + "><#1533#></th>";
-code += "<th width=" + obj_width[2] + " onclick='sorter.addBorder(this);sorter.doSorter(2, \"str\", \"gn"+i+"_list\");' style='cursor:pointer;'><#2868#></th>";
-code += "<th width=" + obj_width[3] + " onclick='sorter.addBorder(this);sorter.doSorter(3, \"num\", \"gn"+i+"_list\");' style='cursor:pointer;'><#3520#></th>";
-code += "<th width=" + obj_width[4] + " onclick='sorter.addBorder(this);sorter.doSorter(4, \"str\", \"gn"+i+"_list\");' style='cursor:pointer;'><#2866#></th>";
+code += "<th width=" + obj_width[2] + " onclick='sorter.addBorder(this);sorter.doSorter(2, \"str\", \"gn"+i+"_list\");' style='cursor:pointer;'><#2872#></th>";
+code += "<th width=" + obj_width[3] + " onclick='sorter.addBorder(this);sorter.doSorter(3, \"num\", \"gn"+i+"_list\");' style='cursor:pointer;'><#3526#></th>";
+code += "<th width=" + obj_width[4] + " onclick='sorter.addBorder(this);sorter.doSorter(4, \"str\", \"gn"+i+"_list\");' style='cursor:pointer;'><#2870#></th>";
 if(!(isSwMode('mb') || isSwMode('ew')))
-code += "<th width=" + obj_width[5] + " onclick='sorter.addBorder(this);sorter.doSorter(5, \"num\", \"gn"+i+"_list\");' style='cursor:pointer;'><#3670#></th>";
+code += "<th width=" + obj_width[5] + " onclick='sorter.addBorder(this);sorter.doSorter(5, \"num\", \"gn"+i+"_list\");' style='cursor:pointer;'><#3676#></th>";
 if(stainfo_support && !(isSwMode('mb') || isSwMode('ew'))) {
 code += "<th width=" + obj_width[6] + " onclick='sorter.addBorder(this);sorter.doSorter(6, \"num\", \"gn"+i+"_list\");' style='cursor:pointer;' title='The transmission rates of your wireless device'>Tx Rate (Mbps)</th>";/*untranslated*/
 code += "<th width=" + obj_width[7] + " onclick='sorter.addBorder(this);sorter.doSorter(7, \"num\", \"gn"+i+"_list\");' style='cursor:pointer;' title='The receive rates of your wireless device'>Rx Rate (Mbps)</th>";/*untranslated*/
@@ -2341,7 +2341,7 @@ var clientListCode = "";
 var listView_userIconBase64 = "NoIcon";
 clientListCode += "<table width='100%' cellspacing='0' cellpadding='0' align='center' class='list_table' id='tb_" + objID + "'>";
 if(sortArray.length == 0) {
-clientListCode += "<tr id='tr_" + objID + "'><td style='color:#FFCC00;' colspan='" + wl_colspan + "'><#2407#></td></tr>";
+clientListCode += "<tr id='tr_" + objID + "'><td style='color:#FFCC00;' colspan='" + wl_colspan + "'><#2410#></td></tr>";
 }
 else {
 clientlist_sort = new Array();
@@ -2702,12 +2702,12 @@ var display_state = document.getElementById(_controlObj).style.display;
 if(display_state == "none") {
 slideFlag = true;
 slideDown(_controlObj, 100);
-document.getElementById(_obj).innerText = "<#2840#>";
+document.getElementById(_obj).innerText = "<#2844#>";
 }
 else {
 slideFlag = true;
 slideUp(_controlObj, 100);
-document.getElementById(_obj).innerText = "<#2841#>";
+document.getElementById(_obj).innerText = "<#2845#>";
 }
 }
 }
@@ -2736,7 +2736,7 @@ return false;
 }
 var htmlCode = "";
 htmlCode += "<div id='" + _containerID + "_clientlist_online'></div>";
-htmlCode += "<div id='" + _containerID + "_clientlist_dropdown_expand' class='clientlist_dropdown_expand' onclick='expand_hide_Client(\"" + _containerID + "_clientlist_dropdown_expand\", \"" + _containerID + "_clientlist_offline\");' onmouseover='over_var=1;' onmouseout='over_var=0;'><#2841#></div>";
+htmlCode += "<div id='" + _containerID + "_clientlist_dropdown_expand' class='clientlist_dropdown_expand' onclick='expand_hide_Client(\"" + _containerID + "_clientlist_dropdown_expand\", \"" + _containerID + "_clientlist_offline\");' onmouseover='over_var=1;' onmouseout='over_var=0;'><#2845#></div>";
 htmlCode += "<div id='" + _containerID + "_clientlist_offline'></div>";
 document.getElementById(_containerID).innerHTML = htmlCode;
 var param = _callBackFunParam.split(">");
@@ -2845,7 +2845,7 @@ removeElement(document.getElementById("" + _containerID + "_clientlist_offline")
 }
 }
 else {
-if(document.getElementById("" + _containerID + "_clientlist_dropdown_expand").innerText == "<#2841#>") {
+if(document.getElementById("" + _containerID + "_clientlist_dropdown_expand").innerText == "<#2845#>") {
 document.getElementById("" + _containerID + "_clientlist_offline").style.display = "none";
 }
 else {
@@ -3427,7 +3427,7 @@ _paramObj.select_icon_callBack($(this));
 if((_paramObj.source == "local") && isSupport("usericon") && !isSupport("sfp4m")) {
 $upload_category = $("<div>").addClass("custom_icon_category upload");
 $upload_category.appendTo($container);
-$upload_category.append($("<div>").addClass("category_title").html("<#2849#>"));
+$upload_category.append($("<div>").addClass("category_title").html("<#2853#>"));
 var $upload_icon = $("<div>").addClass("client_upload_div").html("+");
 var $input_file = $("<input/>").attr({"type":"file", "title":"Upload client icon"}).addClass("client_upload_file");/* untranslated */
 $input_file.appendTo($upload_icon);

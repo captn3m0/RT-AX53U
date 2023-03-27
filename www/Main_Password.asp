@@ -391,7 +391,7 @@ else{
 if(obj.value.length < 2)
 showError("<#332#>");
 else
-showError("<#2483#>");
+showError("<#2487#>");
 obj.value = "";
 obj.focus();
 obj.select();
@@ -517,7 +517,7 @@ $("#error_status_field").html(str);
 <tr>
 <td>
 <div class="main_content">
-<div class="title_name"><#2880#></div>
+<div class="title_name"><#2884#></div>
 <div class="sub_title_name">
 <div>
 <#591#>

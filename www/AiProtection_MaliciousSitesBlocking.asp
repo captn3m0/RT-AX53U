@@ -382,7 +382,7 @@ code += '<div style="display:table-cell;width:200px;padding-right:5px;"><#1205#>
 code += '<div style="display:table-cell;width:50px;padding-right:5px;"></div>';
 code += '</div>';
 if(dataObj == ""){
-code += '<div style="text-align:center;font-size:16px;color:#FC0;margin-top:90px;"><#2407#></div>';
+code += '<div style="text-align:center;font-size:16px;color:#FC0;margin-top:90px;"><#2410#></div>';
 }
 else{
 for(i=0; i<Object.keys(dataObj).length; i++){
@@ -768,7 +768,7 @@ $('#query_list').hide();
 </div>
 <div id="whitelistField" style="position: absolute;width:600px;height:650px;background-color: rgba(47,62,68,1);margin:-350px 0 0 35px;z-index:30;padding: 32px 24px 24px 24px;display:none;">
 <div style="display:flex;justify-content: space-between;align-items: center;">
-<div style="font-size: 24px;"><#3745#></div>
+<div style="font-size: 24px;"><#3751#></div>
 <div onclick="hideWhitelistField();"><img src="images/New_ui/icon_close.svg" alt="" style="width:32px;height:32px;cursor:pointer;"></div>
 </div>
 <div style="color: #CCCCCC;font-size: 16px;margin: 12px 0 24px 0;"><#1285#></div>
@@ -785,8 +785,8 @@ $('#query_list').hide();
 </div>
 <div style="width:100%;" class="line_horizontal"></div>
 <div style="margin-top:24px;">
-<span style="font-size: 24px;padding-right:12px;"><#3745#></span>
-<span style="font-size: 14px;"><#2805#>: <b id="list_count">0</b> (<#2611#>&nbsp;64)</span>
+<span style="font-size: 24px;padding-right:12px;"><#3751#></span>
+<span style="font-size: 14px;"><#2809#>: <b id="list_count">0</b> (<#2615#>&nbsp;64)</span>
 </div>
 <div id="whitelistTable" style="overflow: auto;height:420px;"></div>
 </div>

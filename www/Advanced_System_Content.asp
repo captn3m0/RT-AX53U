@@ -273,7 +273,7 @@ document.form.misc_httpport_x.disabled = true;
 document.getElementById("nat_redirect_enable_tr").style.display = "none";
 }
 else{
-if(wan_proto=="v6plus" && s46_ports_check_flag && array_ipv6_s46_ports.length > 1){
+if((wan_proto == "v6plus" || wan_proto == "ocnvc") && s46_ports_check_flag && array_ipv6_s46_ports.length > 1){
 $(".setup_info_icon.https").show();
 $(".setup_info_icon.https").click(
 function() {
@@ -296,7 +296,7 @@ hideport(document.form.misc_http_x[0].checked);
 }
 if(ssh_support){
 check_sshd_enable('<% nvram_get("sshd_enable"); %>');
-if(wan_proto=="v6plus" && s46_ports_check_flag && array_ipv6_s46_ports.length > 1){
+if((wan_proto == "v6plus" || wan_proto == "ocnvc") && s46_ports_check_flag && array_ipv6_s46_ports.length > 1){
 $(".setup_info_icon.ssh").show();
 $(".setup_info_icon.ssh").click(
 function() {
@@ -348,8 +348,15 @@ document.form.pwrsave_mode[1].disabled = false;
 }
 else{
 document.getElementById("pwrsave_tr").style.display = "none";
-document.form.pwrsave_mode[0].disabled = false;
-document.form.pwrsave_mode[1].disabled = false;
+document.form.pwrsave_mode[0].disabled = true;
+document.form.pwrsave_mode[1].disabled = true;
+}
+if (pagecache_ratio_support) {
+document.getElementById("pagecache_ratio_tr").style.display = "";
+document.form.pagecache_ratio.disabled = false;
+} else {
+document.getElementById("pagecache_ratio_tr").style.display = "none";
+document.form.pagecache_ratio.disabled = true;
 }
 if(hdspindown_support) {
 $("#hdd_spindown_table").css("display", "");
@@ -538,6 +545,8 @@ document.form.action_wait.value = 210;
 }
 if(pwrsave_support)
 action_script_tmp += "pwrsave;";
+if(pagecache_ratio_support)
+action_script_tmp += "pagecache_ratio;";
 if(needReboot){
 action_script_tmp = "reboot";
 document.form.action_wait.value = httpApi.hookGet("get_default_reboot_time");
@@ -584,9 +593,9 @@ alert(isPortConflict(document.form.sshd_port.value, "ssh"));
 document.form.sshd_port.focus();
 return false;
 }
-if(wan_proto=="v6plus" && s46_ports_check_flag && array_ipv6_s46_ports.length > 1 && document.form.sshd_enable.value == 1){
+if((wan_proto == "v6plus" || wan_proto == "ocnvc") && s46_ports_check_flag && array_ipv6_s46_ports.length > 1 && document.form.sshd_enable.value == 1){
 if (!validator.range_s46_ports(document.form.sshd_port, "none")){
-if(!confirm("The following port related settings may not work properly since the port is not available in current v6plus usable port range. Do you want to continue?")){
+if(!confirm(port_confirm)){
 document.form.sshd_port.focus();
 return false;
 }
@@ -608,9 +617,9 @@ return false;
 if (HTTPS_support && !document.form.misc_httpsport_x.disabled){
 if (!validator.range(document.form.misc_httpsport_x, 1024, 65535))
 return false;
-if (wan_proto=="v6plus" && s46_ports_check_flag && array_ipv6_s46_ports.length > 1){
+if ((wan_proto == "v6plus" || wan_proto == "ocnvc") && s46_ports_check_flag && array_ipv6_s46_ports.length > 1){
 if (!validator.range_s46_ports(document.form.misc_httpsport_x, "none")){
-if(!confirm("The following port related settings may not work properly since the port is not available in current v6plus usable port range. Do you want to continue?")){
+if(!confirm(port_confirm)){
 document.form.misc_httpsport_x.focus();
 return false;
 }
@@ -623,7 +632,7 @@ document.form.misc_httpport_x.value = '<% nvram_get("misc_httpport_x"); %>';
 document.form.misc_httpsport_x.value = '<% nvram_get("misc_httpsport_x"); %>';
 }
 if(document.form.sshd_port.value == document.form.https_lanport.value){
-alert("<#3203#>");
+alert("<#3207#>");
 $("#sshd_port").addClass("highlight");
 $("#port_conflict_sshdport").show();
 $("#https_lanport_input").addClass("highlight");
@@ -654,13 +663,19 @@ document.form.https_lanport.select();
 return false;
 }
 else if(document.form.misc_httpsport_x.value == document.form.misc_httpport_x.value && HTTPS_support){
-alert("<#2305#>");
+alert("<#2308#>");
 document.form.misc_httpsport_x.focus();
 document.form.misc_httpsport_x.select();
 return false;
 }
 else if(!validator.rangeAllowZero(document.form.http_autologout, 10, 999, '<% nvram_get("http_autologout"); %>'))
 return false;
+if (pagecache_ratio_support) {
+if (parseInt(document.form.pagecache_ratio.value) < 5)
+document.form.pagecache_ratio.value = "5";
+else if (parseInt(document.form.pagecache_ratio.value) > 90)
+document.form.pagecache_ratio.value = "90";
+}
 if(reboot_schedule_support){
 if(!document.form.reboot_date_x_Sun.checked && !document.form.reboot_date_x_Mon.checked &&
 !document.form.reboot_date_x_Tue.checked && !document.form.reboot_date_x_Wed.checked &&
@@ -681,7 +696,7 @@ WebUI_selected++;
 }
 }
 if(WebUI_selected <= 0){
-alert("<#2462#> <#751#>");
+alert("<#2466#> <#751#>");
 document.form.http_client_ip_x_0.focus();
 return false;
 }
@@ -702,7 +717,7 @@ StrIndex = today.toString().indexOf("+");
 if(StrIndex > 0){
 if(timezone != today.toString().substring(StrIndex, StrIndex+5)){
 document.getElementById("timezone_hint").style.display = "block";
-document.getElementById("timezone_hint").innerHTML = "* <#2584#>";
+document.getElementById("timezone_hint").innerHTML = "* <#2588#>";
 }
 else
 return;
@@ -711,107 +726,107 @@ else
 return;
 }
 var timezones = [
-["UTC12", "(GMT-12:00) <#3342#>"],
-["UTC11", "(GMT-11:00) <#3343#>"],
-["UTC10", "(GMT-10:00) <#3344#>"],
-["NAST9DST", "(GMT-09:00) <#3345#>"],
-["PST8DST", "(GMT-08:00) <#3346#>"],
-["MST7DST_1", "(GMT-07:00) <#3347#>"],
-["MST7_2", "(GMT-07:00) <#3348#>"],
-["MST7DST_3", "(GMT-07:00) <#3349#>"],
-["CST6_2", "(GMT-06:00) <#3350#>"],
-["CST6_3", "(GMT-06:00) <#3351#>"], //CST6DST_3
-["CST6_3_1", "(GMT-06:00) <#3352#>"], //CST6DST_3_1
-["UTC6DST", "(GMT-06:00) <#3353#>"],
-["EST5DST", "(GMT-05:00) <#3354#>"],
-["UTC5_1", "(GMT-05:00) <#3355#>"],
-["UTC5_2", "(GMT-05:00) <#3356#>"],
-["AST4DST", "(GMT-04:00) <#3357#>"],
-["UTC4_1", "(GMT-04:00) <#3358#>"],
-["UTC4_2", "(GMT-04:00) <#3359#>"],
-["UTC4DST_2", "(GMT-04:00) <#3360#>"],
-["UTC4DST_3", "(GMT-04:00) <#3361#>"],
-["NST3.30DST", "(GMT-03:30) <#3362#>"],
-["EBST3", "(GMT-03:00) <#3363#>"], //EBST3DST_1
-["UTC3", "(GMT-03:00) <#3364#>"],
-["EBST3DST_2", "(GMT-03:00) <#3365#>"],
-["UTC2", "(GMT-02:00) <#3366#>"],
-["UTC2DST", "(GMT-02:00) <#3442#>"],
-["EUT1DST", "(GMT-01:00) <#3367#>"],
-["UTC1", "(GMT-01:00) <#3368#>"],
-["GMT0", "(GMT) <#3369#>"],
-["GMT0DST_1", "(GMT) <#3370#>"],
-["GMT0DST_2", "(GMT) <#3371#>"],
-["GMT0_2", "(GMT) <#3372#>"],
-["UTC-1DST_1", "(GMT+01:00) <#3373#>"],
-["UTC-1DST_1_1","(GMT+01:00) <#3374#>"],
-["UTC-1DST_1_2", "(GMT+01:00) <#3375#>"],
-["UTC-1DST_2", "(GMT+01:00) <#3376#>"],
-["MET-1DST", "(GMT+01:00) <#3377#>"],
-["MET-1DST_1", "(GMT+01:00) <#3379#>"],
-["MEZ-1DST", "(GMT+01:00) <#3380#>"],
-["MEZ-1DST_1", "(GMT+01:00) <#3381#>"],
-["UTC-1_3", "(GMT+01:00) <#3382#>"],
-["UTC-2DST", "(GMT+02:00) <#3383#>"],
-["UTC-2DST_3", "(GMT+02:00) <#3378#>"],
-["EST-2", "(GMT+02:00) <#3384#>"],
-["UTC-2DST_4", "(GMT+02:00) <#3385#>"],
-["UTC-2DST_2", "(GMT+02:00) <#3388#>"],
-["IST-2DST", "(GMT+02:00) <#3389#>"],
-["EET-2DST", "(GMT+02:00) <#3391#>"],
-["UTC-2_1", "(GMT+02:00) <#3387#>"],
-["SAST-2", "(GMT+02:00) <#3390#>"],
-["UTC-3_1", "(GMT+03:00) <#3394#>"],
-["UTC-3_2", "(GMT+03:00) <#3395#>"],
-["UTC-3_3", "(GMT+03:00) <#3386#>"],
-["UTC-3_4", "(GMT+03:00) <#3392#>"],
-["UTC-3_5", "(GMT+03:00) <#3393#>"], //UTC-4_7
-["IST-3", "(GMT+03:00) <#3396#>"],
-["UTC-3_6", "(GMT+03:00) <#3397#>"],
-["UTC-3.30DST", "(GMT+03:30) <#3398#>"],
-["UTC-4_1", "(GMT+04:00) <#3399#>"],
-["UTC-4_5", "(GMT+04:00) <#3401#>"],
-["UTC-4_4", "(GMT+04:00) <#3400#>"],
-["UTC-4_6", "(GMT+04:00) <#3402#>"],
-["UTC-4.30", "(GMT+04:30) <#3403#>"],
-["UTC-5", "(GMT+05:00) <#3405#>"],
-["UTC-5_1", "(GMT+05:00) <#3404#>"],
-["UTC-5.30_2", "(GMT+05:30) <#3406#>"],
-["UTC-5.30_1", "(GMT+05:30) <#3407#>"],
-["UTC-5.30", "(GMT+05:30) <#3410#>"],
-["UTC-5.45", "(GMT+05:45) <#3408#>"],
-["RFT-6", "(GMT+06:00) <#3411#>"],
-["UTC-6", "(GMT+06:00) <#3409#>"],
-["UTC-6.30", "(GMT+06:30) <#3412#>"],
-["UTC-7", "(GMT+07:00) <#3413#>"],
-["UTC-7_2", "(GMT+07:00) <#3415#>"],
-["UTC-7_3", "(GMT+07:00) <#3414#>"], //UTC-6_2
-["CST-8", "(GMT+08:00) <#3416#>"],
-["CST-8_1", "(GMT+08:00) <#3417#>"],
-["SST-8", "(GMT+08:00) <#3418#>"],
-["CCT-8", "(GMT+08:00) <#3419#>"],
-["WAS-8", "(GMT+08:00) <#3420#>"],
-["UTC-8", "(GMT+08:00) <#3421#>"],
-["UTC-8_1", "(GMT+08:00) <#3422#>"],
-["UTC-9_1", "(GMT+09:00) <#3423#>"],
-["UTC-9_3", "(GMT+09:00) <#3425#>"],
-["JST", "(GMT+09:00) <#3424#>"],
-["CST-9.30", "(GMT+09:30) <#3426#>"],
-["UTC-9.30DST", "(GMT+09:30) <#3427#>"],
-["UTC-10DST_1", "(GMT+10:00) <#3428#>"],
-["UTC-10_2", "(GMT+10:00) <#3429#>"],
-["UTC-10_4", "(GMT+10:00) <#3431#>"],
-["TST-10TDT", "(GMT+10:00) <#3430#>"],
-["UTC-10_6", "(GMT+10:00) <#3432#>"],
-["UTC-11", "(GMT+11:00) <#3433#>"],
-["UTC-11_1", "(GMT+11:00) <#3434#>"],
-["UTC-11_3", "(GMT+11:00) <#3441#>"],
-["UTC-11_4", "(GMT+11:00) <#3436#>"],
-["UTC-12", "(GMT+12:00) <#3435#>"],
-["UTC-12_3", "(GMT+12:00) <#3437#>"], //UTC-12DST
-["UTC-12_2", "(GMT+12:00) <#3440#>"],
-["NZST-12DST", "(GMT+12:00) <#3438#>"],
-["UTC-13", "(GMT+13:00) <#3439#>"]];
+["UTC12", "(GMT-12:00) <#3348#>"],
+["UTC11", "(GMT-11:00) <#3349#>"],
+["UTC10", "(GMT-10:00) <#3350#>"],
+["NAST9DST", "(GMT-09:00) <#3351#>"],
+["PST8DST", "(GMT-08:00) <#3352#>"],
+["MST7DST_1", "(GMT-07:00) <#3353#>"],
+["MST7_2", "(GMT-07:00) <#3354#>"],
+["MST7_3", "(GMT-07:00) <#3355#>"], //MST7DST_3
+["CST6_2", "(GMT-06:00) <#3356#>"],
+["CST6_3", "(GMT-06:00) <#3357#>"], //CST6DST_3
+["CST6_3_1", "(GMT-06:00) <#3358#>"], //CST6DST_3_1
+["UTC6DST", "(GMT-06:00) <#3359#>"],
+["EST5DST", "(GMT-05:00) <#3360#>"],
+["UTC5_1", "(GMT-05:00) <#3361#>"],
+["UTC5_2", "(GMT-05:00) <#3362#>"],
+["AST4DST", "(GMT-04:00) <#3363#>"],
+["UTC4_1", "(GMT-04:00) <#3364#>"],
+["UTC4_2", "(GMT-04:00) <#3365#>"],
+["UTC4DST_2", "(GMT-04:00) <#3366#>"],
+["UTC4DST_3", "(GMT-04:00) <#3367#>"],
+["NST3.30DST", "(GMT-03:30) <#3368#>"],
+["EBST3", "(GMT-03:00) <#3369#>"], //EBST3DST_1
+["UTC3", "(GMT-03:00) <#3370#>"],
+["UTC2_1", "(GMT-02:00) <#3371#>"], //EBST3DST_2
+["UTC2", "(GMT-02:00) <#3372#>"],
+["UTC2DST", "(GMT-02:00) <#3448#>"],
+["EUT1DST", "(GMT-01:00) <#3373#>"],
+["UTC1", "(GMT-01:00) <#3374#>"],
+["GMT0", "(GMT) <#3375#>"],
+["GMT0DST_1", "(GMT) <#3376#>"],
+["GMT0DST_2", "(GMT) <#3377#>"],
+["GMT0_2", "(GMT) <#3378#>"],
+["UTC-1DST_1", "(GMT+01:00) <#3379#>"],
+["UTC-1DST_1_1","(GMT+01:00) <#3380#>"],
+["UTC-1DST_1_2", "(GMT+01:00) <#3381#>"],
+["UTC-1DST_2", "(GMT+01:00) <#3382#>"],
+["MET-1DST", "(GMT+01:00) <#3383#>"],
+["MET-1DST_1", "(GMT+01:00) <#3385#>"],
+["MEZ-1DST", "(GMT+01:00) <#3386#>"],
+["MEZ-1DST_1", "(GMT+01:00) <#3387#>"],
+["UTC-1_3", "(GMT+01:00) <#3388#>"],
+["UTC-2DST", "(GMT+02:00) <#3389#>"],
+["UTC-2DST_3", "(GMT+02:00) <#3384#>"],
+["EST-2", "(GMT+02:00) <#3390#>"],
+["UTC-2DST_4", "(GMT+02:00) <#3391#>"],
+["UTC-2DST_2", "(GMT+02:00) <#3394#>"],
+["IST-2DST", "(GMT+02:00) <#3395#>"],
+["EET-2DST", "(GMT+02:00) <#3397#>"],
+["UTC-2_1", "(GMT+02:00) <#3393#>"],
+["SAST-2", "(GMT+02:00) <#3396#>"],
+["UTC-3_1", "(GMT+03:00) <#3400#>"],
+["UTC-3_2", "(GMT+03:00) <#3401#>"],
+["UTC-3_3", "(GMT+03:00) <#3392#>"],
+["UTC-3_4", "(GMT+03:00) <#3398#>"],
+["UTC-3_5", "(GMT+03:00) <#3399#>"], //UTC-4_7
+["IST-3", "(GMT+03:00) <#3402#>"],
+["UTC-3_6", "(GMT+03:00) <#3403#>"],
+["UTC-3.30", "(GMT+03:30) <#3404#>"], //UTC-3.30DST
+["UTC-4_1", "(GMT+04:00) <#3405#>"],
+["UTC-4_5", "(GMT+04:00) <#3407#>"],
+["UTC-4_4", "(GMT+04:00) <#3406#>"],
+["UTC-4_6", "(GMT+04:00) <#3408#>"],
+["UTC-4.30", "(GMT+04:30) <#3409#>"],
+["UTC-5", "(GMT+05:00) <#3411#>"],
+["UTC-5_1", "(GMT+05:00) <#3410#>"],
+["UTC-5.30_2", "(GMT+05:30) <#3412#>"],
+["UTC-5.30_1", "(GMT+05:30) <#3413#>"],
+["UTC-5.30", "(GMT+05:30) <#3416#>"],
+["UTC-5.45", "(GMT+05:45) <#3414#>"],
+["RFT-6", "(GMT+06:00) <#3417#>"],
+["UTC-6", "(GMT+06:00) <#3415#>"],
+["UTC-6.30", "(GMT+06:30) <#3418#>"],
+["UTC-7", "(GMT+07:00) <#3419#>"],
+["UTC-7_2", "(GMT+07:00) <#3421#>"],
+["UTC-7_3", "(GMT+07:00) <#3420#>"], //UTC-6_2
+["CST-8", "(GMT+08:00) <#3422#>"],
+["CST-8_1", "(GMT+08:00) <#3423#>"],
+["SST-8", "(GMT+08:00) <#3424#>"],
+["CCT-8", "(GMT+08:00) <#3425#>"],
+["WAS-8", "(GMT+08:00) <#3426#>"],
+["UTC-8", "(GMT+08:00) <#3427#>"],
+["UTC-8_1", "(GMT+08:00) <#3428#>"],
+["UTC-9_1", "(GMT+09:00) <#3429#>"],
+["UTC-9_3", "(GMT+09:00) <#3431#>"],
+["JST", "(GMT+09:00) <#3430#>"],
+["CST-9.30", "(GMT+09:30) <#3432#>"],
+["UTC-9.30DST", "(GMT+09:30) <#3433#>"],
+["UTC-10DST_1", "(GMT+10:00) <#3434#>"],
+["UTC-10_2", "(GMT+10:00) <#3435#>"],
+["UTC-10_4", "(GMT+10:00) <#3437#>"],
+["TST-10TDT", "(GMT+10:00) <#3436#>"],
+["UTC-10_6", "(GMT+10:00) <#3438#>"],
+["UTC-11", "(GMT+11:00) <#3439#>"],
+["UTC-11_1", "(GMT+11:00) <#3440#>"],
+["UTC-11_3", "(GMT+11:00) <#3447#>"],
+["UTC-11_4", "(GMT+11:00) <#3442#>"],
+["UTC-12", "(GMT+12:00) <#3441#>"],
+["UTC-12_3", "(GMT+12:00) <#3443#>"], //UTC-12DST
+["UTC-12_2", "(GMT+12:00) <#3446#>"],
+["NZST-12DST", "(GMT+12:00) <#3444#>"],
+["UTC-13", "(GMT+13:00) <#3445#>"]];
 function load_timezones(){
 free_options(document.form.time_zone_select);
 for(var i = 0; i < timezones.length; i++){
@@ -897,7 +912,7 @@ var https_lanport_num = "<% nvram_get("https_lanport"); %>";
 document.getElementById("https_lanport").style.display = (_value == "0") ? "none" : "";
 document.form.https_lanport.disabled = (_value == "0") ? true : false;
 document.form.https_lanport.value = "<% nvram_get("https_lanport"); %>";
-document.getElementById("https_access_page").innerHTML = "<#2304#> ";
+document.getElementById("https_access_page").innerHTML = "<#2307#> ";
 document.getElementById("https_access_page").innerHTML += "<a href=\"https://"+theUrl+":"+https_lanport_num+"\" target=\"_blank\" style=\"color:#FC0;text-decoration: underline; font-family:Lucida Console;\">http<span>s</span>://"+theUrl+"<span>:"+https_lanport_num+"</span></a>";
 document.getElementById("https_access_page").style.display = (_value == "0") ? "none" : "";
 }
@@ -925,7 +940,7 @@ function show_http_clientlist(){
 var code = "";
 code +='<table width="100%" border="1" cellspacing="0" cellpadding="4" align="center" class="list_table" id="http_clientlist_table">';
 if(restrict_rulelist_array.length == 0) {
-code +='<tr><td style="color:#FFCC00;"><#2407#></td></tr>';
+code +='<tr><td style="color:#FFCC00;"><#2410#></td></tr>';
 }
 else {
 var transformNumToText = function(restrict_type) {
@@ -999,7 +1014,7 @@ if('<% nvram_get("http_client"); %>' != "1")
 document.form.http_client_radio[0].checked = true;
 var rule_num = restrict_rulelist_array.length;
 if(rule_num >= upper){
-alert("<#2479#> " + upper + " <#2480#>");
+alert("<#2483#> " + upper + " <#2484#>");
 return false;
 }
 if(obj.value == ""){
@@ -1017,7 +1032,7 @@ if(this.checked)
 access_type_value += parseInt($(this).val());
 });
 if(access_type_value == 0) {
-alert("<#2462#>");
+alert("<#2466#>");
 return false;
 }
 else{
@@ -1035,7 +1050,7 @@ var restrict_rulelist_array_tmp = restrict_rulelist_array[i].slice();
 restrict_rulelist_array_tmp.splice(0, 1);
 restrict_rulelist_array_tmp.splice(1, 1);
 if(newRuleArray_tmp.toString() == restrict_rulelist_array_tmp.toString()) { //compare IP
-alert("<#2472#>");
+alert("<#2476#>");
 return false;
 }
 }
@@ -1104,10 +1119,10 @@ hide_https_lanport(document.form.http_enable.value);
 }
 else{
 var effectApps = [];
-if(app_support) effectApps.push("<#4141#>");
-if(alexa_support) effectApps.push("<#4142#>");
+if(app_support) effectApps.push("<#4147#>");
+if(alexa_support) effectApps.push("<#4148#>");
 var original_misc_http_x = httpApi.nvramGet(["misc_http_x"]).misc_http_x;
-var RemoteAccessHint = "<#4140#>".replace("$Apps$", effectApps.join(", "));
+var RemoteAccessHint = "<#4146#>".replace("$Apps$", effectApps.join(", "));
 if(original_misc_http_x == '1' && effectApps.length != 0){
 if(!confirm(RemoteAccessHint)){
 document.form.misc_http_x[0].checked = true;
@@ -1134,7 +1149,7 @@ hide_https_lanport(document.form.http_enable.value);
 function change_url(num, flag){
 if(flag == 'https_lan'){
 var https_lanport_num_new = num;
-document.getElementById("https_access_page").innerHTML = "<#2304#> ";
+document.getElementById("https_access_page").innerHTML = "<#2307#> ";
 document.getElementById("https_access_page").innerHTML += "<a href=\"https://"+theUrl+":"+https_lanport_num_new+"\" target=\"_blank\" style=\"color:#FC0;text-decoration: underline; font-family:Lucida Console;\">http<span>s</span>://"+theUrl+"<span>:"+https_lanport_num_new+"</span></a>";
 }
 else if(flag == 'https_wan'){
@@ -1145,7 +1160,7 @@ if(check_ddns_status() && ddns_server_x != "WWW.DNSOMATIC.COM")
 host_addr = ddns_hostname_x_t;
 else
 host_addr = wan_ipaddr;
-document.getElementById("wan_access_url").innerHTML = "<#2304#> ";
+document.getElementById("wan_access_url").innerHTML = "<#2307#> ";
 document.getElementById("wan_access_url").innerHTML += "<a href=\"https://"+host_addr+":"+https_wanport+"\" target=\"_blank\" style=\"color:#FC0;text-decoration: underline; font-family:Lucida Console;\">http<span>s</span>://"+host_addr+"<span>:"+https_wanport+"</span></a>";
 }
 }
@@ -1466,7 +1481,7 @@ change_username();
 };
 }
 else{
-$("#chpass_title").html("<#2880#>");
+$("#chpass_title").html("<#2884#>");
 $("#name_input_title").css("display", "none");
 $("#name_input").css("display", "none");
 $("#pwd_input_title").css("display", "");
@@ -1553,7 +1568,7 @@ postData.cur_passwd = $("#http_passwd_cur").val();
 postData.new_username = $("#http_username_new").val();
 change_result = httpApi.chpass(postData);
 if(change_result == "401"){
-showtext(document.getElementById("pwd_msg"), "<#4236#>");
+showtext(document.getElementById("pwd_msg"), "<#4242#>");
 $("#http_passwd_cur").focus();
 $("#http_passwd_cur").select();
 }
@@ -1649,7 +1664,7 @@ postData.cur_passwd = $("#http_passwd_cur").val();
 postData.new_passwd = $("#http_passwd_new").val();
 change_result = httpApi.chpass(postData);
 if(change_result == "401"){
-showtext(document.getElementById("pwd_msg"), "<#4236#>");
+showtext(document.getElementById("pwd_msg"), "<#4242#>");
 $("#http_passwd_cur").focus();
 $("#http_passwd_cur").select();
 }
@@ -1804,7 +1819,7 @@ showtext(document.getElementById("new_pwd_msg"),"");
 <div>&nbsp;</div>
 <div class="formfonttitle"><#410#> - <#413#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#3276#></div>
+<div class="formfontdesc"><#3280#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
@@ -1836,11 +1851,11 @@ showtext(document.getElementById("new_pwd_msg"),"");
 <table id="hdd_spindown_table" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable" style="margin-top:8px;display:none;">
 <thead>
 <tr>
-<td colspan="2"><#3483#></td>
+<td colspan="2"><#3489#></td>
 </tr>
 </thead>
 <tr>
-<th width="40%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(11,11)"><#3474#></a></th>
+<th width="40%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(11,11)"><#3480#></a></th>
 <td>
 <select name="usb_idle_enable" class="input_option" onchange="change_hddSpinDown(this.value);" disabled>
 <option value="0" <% nvram_match("usb_idle_enable", "0", "selected"); %>><#186#></option>
@@ -1849,14 +1864,14 @@ showtext(document.getElementById("new_pwd_msg"),"");
 </td>
 </tr>
 <tr id="usb_idle_timeout_tr">
-<th width="40%"><#3297#></th>
+<th width="40%"><#3303#></th>
 <td>
-<input type="text" class="input_6_table" maxlength="4" name="usb_idle_timeout" onKeyPress="return validator.isNumber(this,event);" value='<% nvram_get("usb_idle_timeout"); %>' autocorrect="off" autocapitalize="off" disabled><#3084#>
-<span>(<#3113#> : 60) </span>
+<input type="text" class="input_6_table" maxlength="4" name="usb_idle_timeout" onKeyPress="return validator.isNumber(this,event);" value='<% nvram_get("usb_idle_timeout"); %>' autocorrect="off" autocapitalize="off" disabled><#3088#>
+<span>(<#3117#> : 60) </span>
 </td>
 </tr>
 <tr id="reduce_usb3_tr" style="display:none">
-<th width="40%"><a class="hintstyle" href="javascript:void(0);" onclick="openHint(3, 29)"><#3096#></a></th>
+<th width="40%"><a class="hintstyle" href="javascript:void(0);" onclick="openHint(3, 29)"><#3100#></a></th>
 <td>
 <select class="input_option" name="usb_usb3" onchange="enableUsbMode(this.value);">
 <option value="0" <% nvram_match("usb_usb3", "0", "selected"); %>>USB 2.0</option>
@@ -1882,11 +1897,11 @@ needReboot = (nvram.usb_usb3 != v);
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable" style="margin-top:8px;">
 <thead>
 <tr>
-<td colspan="2"><#3277#></td>
+<td colspan="2"><#3281#></td>
 </tr>
 </thead>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(11,2)"><#2585#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(11,2)"><#2589#></a></th>
 <td>
 <select name="time_zone_select" class="input_option" onchange="select_time_zone();"></select>
 <div>
@@ -1895,14 +1910,14 @@ needReboot = (nvram.usb_usb3 != v);
 </td>
 </tr>
 <tr id="dst_changes_start" style="display:none;">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(11,7)"><#2586#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(11,7)"><#2590#></a></th>
 <td>
 <div id="dst_start" style="color:white;display:none;">
 <div>
-<select name="dst_start_m" class="input_option"></select>&nbsp;<#2763#> &nbsp;
+<select name="dst_start_m" class="input_option"></select>&nbsp;<#2767#> &nbsp;
 <select name="dst_start_w" class="input_option"></select>&nbsp;
 <select name="dst_start_d" class="input_option"></select>&nbsp;<#1763#> & <#1690#> &nbsp;
-<select name="dst_start_h" class="input_option"></select>&nbsp;<#2280#> &nbsp;
+<select name="dst_start_h" class="input_option"></select>&nbsp;<#2283#> &nbsp;
 <script>
 for(var i = 1; i < dst_month.length; i++){
 add_option(document.form.dst_start_m, dst_month[i], i, 0);
@@ -1922,14 +1937,14 @@ add_option(document.form.dst_start_h, dst_hour[i], i, 0);
 </td>
 </tr>
 <tr id="dst_changes_end" style="display:none;">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(11,8)"><#2588#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(11,8)"><#2592#></a></th>
 <td>
 <div id="dst_end" style="color:white;display:none;">
 <div>
-<select name="dst_end_m" class="input_option"></select>&nbsp;<#2763#> &nbsp;
+<select name="dst_end_m" class="input_option"></select>&nbsp;<#2767#> &nbsp;
 <select name="dst_end_w" class="input_option"></select>&nbsp;
 <select name="dst_end_d" class="input_option"></select>&nbsp;<#1763#> & <#1690#> &nbsp;
-<select name="dst_end_h" class="input_option"></select>&nbsp;<#2280#> &nbsp;
+<select name="dst_end_h" class="input_option"></select>&nbsp;<#2283#> &nbsp;
 <script>
 for(var i = 1; i < dst_month.length; i++){
 add_option(document.form.dst_end_m, dst_month[i], i, 0);
@@ -1949,13 +1964,13 @@ add_option(document.form.dst_end_h, dst_hour[i], i, 0);
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(11,3)"><#2577#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(11,3)"><#2581#></a></th>
 <td>
 <input type="text" maxlength="256" class="input_32_table" name="ntp_server0" value="<% nvram_get("ntp_server0"); %>" onKeyPress="return validator.isString(this, event);" autocorrect="off" autocapitalize="off">
-<img id="ntp_pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;display:none;" onclick="pullNTPList(this);" title="<#2577#>" onmouseover="over_var=1;" onmouseout="over_var=0;">
+<img id="ntp_pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;display:none;" onclick="pullNTPList(this);" title="<#2581#>" onmouseover="over_var=1;" onmouseout="over_var=0;">
 <div id="NTPList_Block_PC" class="NTPList_Block_PC"></div>
 <br>
-<a href="javascript:openLink('x_NTPServer1')" name="x_NTPServer1_link" style=" margin-left:5px; text-decoration: underline;"><#2578#></a>
+<a href="javascript:openLink('x_NTPServer1')" name="x_NTPServer1_link" style=" margin-left:5px; text-decoration: underline;"><#2582#></a>
 <div id="svc_hint_div" style="display:none;">
 <span style="color:#FFCC00;"><#281#></span>
 <a id="ntp_faq" href="" target="_blank" style="margin-left:5px; color: #FFCC00; text-decoration: underline;">FAQ</a>
@@ -1963,37 +1978,37 @@ add_option(document.form.dst_end_h, dst_hour[i], i, 0);
 </td>
 </tr>
 <tr id="network_monitor_tr">
-<th><#2797#></th>
+<th><#2801#></th>
 <td>
 <input type="checkbox" name="dns_probe_chk" value="" <% nvram_match("dns_probe", "1", "checked"); %> onClick="appendMonitorOption(this);"><div style="display: inline-block; vertical-align: middle; margin-bottom: 2px;" ><#1787#></div>
-<input type="checkbox" name="wandog_enable_chk" value="" <% nvram_match("wandog_enable", "1", "checked"); %> onClick="appendMonitorOption(this);"><div style="display: inline-block; vertical-align: middle; margin-bottom: 2px;"><#2892#></div>
+<input type="checkbox" name="wandog_enable_chk" value="" <% nvram_match("wandog_enable", "1", "checked"); %> onClick="appendMonitorOption(this);"><div style="display: inline-block; vertical-align: middle; margin-bottom: 2px;"><#2896#></div>
 </td>
 </tr>
 <tr id="probe_host_tr" style="display: none;">
-<th><#3017#></th>
+<th><#3021#></th>
 <td>
 <input type="text" class="input_32_table" name="dns_probe_host" maxlength="255" autocorrect="off" autocapitalize="off" value="<% nvram_get("dns_probe_host"); %>">
 </td>
 </tr>
 <tr id="probe_content_tr" style="display: none;">
-<th><#3018#></th>
+<th><#3022#></th>
 <td>
 <input type="text" class="input_32_table" name="dns_probe_content" maxlength="1024" autocorrect="off" autocapitalize="off" value="<% nvram_get("dns_probe_content"); %>">
 </td>
 </tr>
 <tr id="ping_tr" style="display: none;">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(26,2);"><#2893#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(26,2);"><#2897#></a></th>
 <td>
 <input type="text" class="input_32_table" name="wandog_target" maxlength="100" value="<% nvram_get("wandog_target"); %>" placeholder="ex: www.google.com" autocorrect="off" autocapitalize="off">
-<img id="ping_pull_arrow" class="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullPingTargetList(this);" title="<#3093#>">
+<img id="ping_pull_arrow" class="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullPingTargetList(this);" title="<#3097#>">
 <div id="TargetList_Block_PC" name="TargetList_Block_PC" class="clientlist_dropdown" style="margin-left: 2px; width: 348px;display: none;"></div>
 </td>
 </tr>
 <tr>
 <th><#745#></th>
 <td>
-<input type="text" class="input_3_table" maxlength="3" name="http_autologout" value='<% nvram_get("http_autologout"); %>' onKeyPress="return validator.isNumber(this,event);" autocorrect="off" autocapitalize="off"> <#2657#>
-<span>(<#3991#>)</span>
+<input type="text" class="input_3_table" maxlength="3" name="http_autologout" value='<% nvram_get("http_autologout"); %>' onKeyPress="return validator.isNumber(this,event);" autocorrect="off" autocapitalize="off"> <#2661#>
+<span>(<#3997#>)</span>
 </td>
 </tr>
 <tr id="nat_redirect_enable_tr">
@@ -2004,27 +2019,33 @@ add_option(document.form.dst_end_h, dst_hour[i], i, 0);
 </td>
 </tr>
 <tr id="btn_ez_radiotoggle_tr" style="display: none;">
-<th><#3961#></th>
+<th><#3967#></th>
 <td>
 <label for="turn_WPS" id="btn_ez_WPS">
-<input type="radio" name="btn_ez_radiotoggle" id="turn_WPS" class="input" value="0"><#3960#>
+<input type="radio" name="btn_ez_radiotoggle" id="turn_WPS" class="input" value="0"><#3966#>
 </label>
 <label for="turn_WiFi" id="btn_ez_WiFi" style="display:none;">
-<input type="radio" name="btn_ez_radiotoggle" id="turn_WiFi" class="input" value="1"><#3962#>
+<input type="radio" name="btn_ez_radiotoggle" id="turn_WiFi" class="input" value="1"><#3968#>
 </label>
 <label for="turn_LED" id="btn_ez_LED" style="display:none;">
-<input type="radio" name="btn_ez_radiotoggle" id="turn_LED" class="input" value="0"><#2603#>
+<input type="radio" name="btn_ez_radiotoggle" id="turn_LED" class="input" value="0"><#2607#>
 </label>
 </td>
 </tr>
 <tr id="pwrsave_tr">
-<th align="right"><#3476#></th>
+<th align="right"><#3482#></th>
 <td>
 <select name="pwrsave_mode" class="input_option">
-<option value="0" <% nvram_match("pwrsave_mode", "0","selected"); %> ><#3477#></option>
+<option value="0" <% nvram_match("pwrsave_mode", "0","selected"); %> ><#3483#></option>
 <option value="1" <% nvram_match("pwrsave_mode", "1","selected"); %> ><#153#></option>
-<option value="2" <% nvram_match("pwrsave_mode", "2","selected"); %> ><#3478#></option>
+<option value="2" <% nvram_match("pwrsave_mode", "2","selected"); %> ><#3484#></option>
 </select>
+</td>
+</tr>
+<tr id="pagecache_ratio_tr" style="display:none;">
+<th align="right"><a class="hintstyle" href="javascript:void(0);" onClick="overlib('Lower page cache ratio, poor NAS performance.');" onmouseout="nd();">Maximum page cache ratio</th>
+<td>
+<input type="text" class="input_3_table" maxlength="3" name="pagecache_ratio" value='<% nvram_get("pagecache_ratio"); %>' onblur="return validator.numberRange(this, 5, 90);" autocorrect="off" autocapitalize="off"> %
 </td>
 </tr>
 <tr id="reboot_schedule_enable_tr">
@@ -2035,7 +2056,7 @@ add_option(document.form.dst_end_h, dst_hour[i], i, 0);
 </td>
 </tr>
 <tr id="reboot_schedule_date_tr">
-<th><#3010#></th>
+<th><#3014#></th>
 <td>
 <input type="checkbox" name="reboot_date_x_Sun" class="input" onclick="check_Timefield_checkbox();"><#1686#>
 <input type="checkbox" name="reboot_date_x_Mon" class="input" onclick="check_Timefield_checkbox();"><#1684#>
@@ -2047,7 +2068,7 @@ add_option(document.form.dst_end_h, dst_hour[i], i, 0);
 </td>
 </tr>
 <tr id="reboot_schedule_time_tr">
-<th><#3011#></th>
+<th><#3015#></th>
 <td>
 <input type="text" maxlength="2" class="input_3_table" name="reboot_time_x_hour" onKeyPress="return validator.isNumber(this,event);" onblur="validator.timeRange(this, 0);" autocorrect="off" autocapitalize="off"> :
 <input type="text" maxlength="2" class="input_3_table" name="reboot_time_x_min" onKeyPress="return validator.isNumber(this,event);" onblur="validator.timeRange(this, 1);" autocorrect="off" autocapitalize="off">
@@ -2082,7 +2103,7 @@ add_option(document.form.dst_end_h, dst_hour[i], i, 0);
 <td>
 <input type="radio" name="telnetd_enable" value="1" onchange="telnet_enable(this.value);" <% nvram_match_x("LANHostConfig", "telnetd_enable", "1", "checked"); %>><#187#>
 <input type="radio" name="telnetd_enable" value="0" onchange="telnet_enable(this.value);" <% nvram_match_x("LANHostConfig", "telnetd_enable", "0", "checked"); %>><#186#>
-<div style="color: #FFCC00;display:none;" id="SSH_Port_Suggestion2">* <#3206#></div>
+<div style="color: #FFCC00;display:none;" id="SSH_Port_Suggestion2">* <#3210#></div>
 </td>
 </tr>
 <tr id="sshd_enable_tr">
@@ -2096,12 +2117,12 @@ add_option(document.form.dst_end_h, dst_hour[i], i, 0);
 </td>
 </tr>
 <tr id="sshd_port_tr">
-<th width="40%"><#2921#><div class="setup_info_icon ssh" style="display:none;"></div></th>
+<th width="40%"><#2925#><div class="setup_info_icon ssh" style="display:none;"></div></th>
 <td>
 <input type="text" class="input_6_table" maxlength="5" id="sshd_port" name="sshd_port" onKeyPress="return validator.isNumber(this,event);" autocorrect="off" autocapitalize="off" value='<% nvram_get("sshd_port"); %>' onkeydown="reset_portconflict_hint();">
 <span id="port_conflict_sshdport" style="color: #e68282; display: none;">Port Conflict</span>
-<div style="color: #FFCC00;">* <#3204#></div>
-<div style="color: #FFCC00;display:none;" id="SSH_Port_Suggestion1">* <#3205#></div>
+<div style="color: #FFCC00;">* <#3208#></div>
+<div style="color: #FFCC00;display:none;" id="SSH_Port_Suggestion1">* <#3209#></div>
 </td>
 </tr>
 <tr id="sshd_password_tr">
@@ -2118,28 +2139,28 @@ add_option(document.form.dst_end_h, dst_hour[i], i, 0);
 </td>
 </tr>
 <tr id="plc_sleep_tr" style="display:none;">
-<th align="right"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(11,12);"><#4223#></a></th>
+<th align="right"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(11,12);"><#4229#></a></th>
 <td>
 <input type="radio" name="plc_sleep_enabled" value="1" <% nvram_match_x("","plc_sleep_enabled","1", "checked"); %> ><#187#>
 <input type="radio" name="plc_sleep_enabled" value="0" <% nvram_match_x("","plc_sleep_enabled","0", "checked"); %> ><#186#>
 </td>
 </tr>
 <tr>
-<th width="40%"><#4074#></th>
+<th width="40%"><#4080#></th>
 <td>
-<input type="text" class="input_3_table" maxlength="3" name="shell_timeout_x" value="" onKeyPress="return validator.isNumber(this,event);" autocorrect="off" autocapitalize="off"> <#2657#>
-<span>(<#3991#>)</span>
+<input type="text" class="input_3_table" maxlength="3" name="shell_timeout_x" value="" onKeyPress="return validator.isNumber(this,event);" autocorrect="off" autocapitalize="off"> <#2661#>
+<span>(<#3997#>)</span>
 </td>
 </tr>
 </table>
 <table id ="http_auth_table" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable" style="margin-top:8px;">
 <thead>
 <tr>
-<td colspan="2"><#2614#></td>
+<td colspan="2"><#2618#></td>
 </tr>
 </thead>
 <tr id="https_tr">
-<th><#3776#></th>
+<th><#3782#></th>
 <td>
 <select id="http_enable" name="http_enable" class="input_option" onchange="hide_https_lanport(this.value);check_wan_access(this.value);">
 <option value="0" <% nvram_match("http_enable", "0", "selected"); %>>HTTP</option>
@@ -2151,7 +2172,7 @@ add_option(document.form.dst_end_h, dst_hour[i], i, 0);
 <script>
 var http_enable_default = httpApi.nvramDefaultGet(["http_enable"]).http_enable;
 if(in_territory_code("AA") || in_territory_code("SG") && http_enable_default == "2"){
-document.getElementById("http_enable").options[2].text = "<#3113#>";
+document.getElementById("http_enable").options[2].text = "<#3117#>";
 }
 </script>
 <tr id="https_lanport">
@@ -2164,18 +2185,18 @@ document.getElementById("http_enable").options[2].text = "<#3113#>";
 </td>
 </tr>
 <tr id="https_download_cert" style="display: none;">
-<th><#2616#></th>
+<th><#2620#></th>
 <td>
 <input id="download_cert_btn" class="button_gen" onclick="save_cert_key();" type="button" value="<#1520#>" />
 <input id="clear_cert_btn" class="button_gen" style="margin-left:10px" onclick="clear_cert_key();" type="button" value="<#206#>" />
-<span id="download_cert_desc"><#2615#></span><a id="creat_cert_link" href="" style="font-family:Lucida Console;text-decoration:underline;color:#FFCC00; margin-left: 5px;" target="_blank">FAQ</a>
+<span id="download_cert_desc"><#2619#></span><a id="creat_cert_link" href="" style="font-family:Lucida Console;text-decoration:underline;color:#FFCC00; margin-left: 5px;" target="_blank">FAQ</a>
 </td>
 </tr>
 </table>
 <table id="accessfromwan_settings" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable" style="margin-top:8px;">
 <thead>
 <tr>
-<td colspan="2"><#3015#></td>
+<td colspan="2"><#3019#></td>
 </tr>
 </thead>
 <tr>
@@ -2186,7 +2207,7 @@ document.getElementById("http_enable").options[2].text = "<#3113#>";
 <span class="formfontdesc" id="WAN_access_hint" style="color:#FFCC00; display:none;"><#2096#>
 <a id="faq" href="" target="_blank" style="margin-left: 5px; color:#FFCC00; text-decoration: underline;">FAQ</a>
 </span>
-<div class="formfontdesc" id="NSlookup_help_for_WAN_access" style="color:#FFCC00; display:none;"><#2837#></div>
+<div class="formfontdesc" id="NSlookup_help_for_WAN_access" style="color:#FFCC00; display:none;"><#2841#></div>
 </td>
 </tr>
 <tr id="accessfromwan_port">
@@ -2211,20 +2232,20 @@ document.getElementById("http_enable").options[2].text = "<#3113#>";
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table" id="http_client_table">
 <thead>
 <tr>
-<td colspan="4"><#750#>&nbsp;(<#2611#>&nbsp;4)</td>
+<td colspan="4"><#750#>&nbsp;(<#2615#>&nbsp;4)</td>
 </tr>
 </thead>
 <tr>
 <th width="10%"><div id="selAll" class="all_disable" style="margin: auto;width:40px;" onclick="control_all_rule_status(this);"><#1395#></div></th>
-<th width="40%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(6,1);"><#3056#></a></th>
+<th width="40%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(6,1);"><#3060#></a></th>
 <th width="40%"><#876#></th>
-<th width="10%"><#2610#></th>
+<th width="10%"><#2614#></th>
 </tr>
 <tr>
 <td width="10%">-</td>
 <td width="40%">
 <input type="text" class="input_25_table" maxlength="18" name="http_client_ip_x_0" onKeyPress="" onClick="hideClients_Block();" autocorrect="off" autocapitalize="off">
-<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#3089#>">
+<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#3093#>">
 <div id="ClientList_Block_PC" class="clientlist_dropdown" style="margin-left:27px;width:235px;"></div>
 </td>
 <td width="40%">

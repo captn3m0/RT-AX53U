@@ -176,7 +176,7 @@ var loop_count = 0;
 httpApi.updateClientList();
 setTimeout(function(){
 if(loop_count >= 60) {
-$("#sortable").html("<div style='text-align:center;color:#FFCC00'><#2407#></div>");
+$("#sortable").html("<div style='text-align:center;color:#FFCC00'><#2410#></div>");
 return false;
 }
 if(totalClientNum.online != 0)
@@ -1473,11 +1473,11 @@ return value;
 <table width="100%">
 <tr>
 <td class="formfonttitle" align="left">
-<div><#2651#> - <#1432#></div>
+<div><#2655#> - <#1432#></div>
 </td>
 <td >
 <div style="display:flex;align-items: center;">
-<div style="font-size: 14px;margin-right:8px;"><#3214#></div>
+<div style="font-size: 14px;margin-right:8px;"><#3218#></div>
 <div>
 <select class="input_option" id="traffic_unit" onchange="setUnit(this.value);">
 <option value="100">100 Mbps</option>
@@ -1527,7 +1527,7 @@ switch_control(0);
 <table style="width:99%;">
 <tr>
 <td id="upload_unit" style="width:50%;">
-<div style="margin:-10px 0 5px 70px;font-size:16px;text-align:center;"><#3448#></div>
+<div style="margin:-10px 0 5px 70px;font-size:16px;text-align:center;"><#3454#></div>
 <div style="position:absolute;margin:12px 0px 0px 112px;font-size:16px;display:none;"></div>
 <div style="position:absolute;margin:-8px 0px 0px 222px;font-size:16px;display:none;"></div>
 <div style="position:absolute;margin:50px 0px 0px 300px;font-size:16px;display:none;"></div>
@@ -1560,7 +1560,7 @@ switch_control(0);
 <tr>
 <td colspan="2">
 <div style="display:flex;align-items: center;justify-content: flex-end;margin-right:8px;">
-<div style="font-size:14px;margin-right:8px;"><#3082#></div>
+<div style="font-size:14px;margin-right:8px;"><#3086#></div>
 <div>
 <select class="input_option" id="scale_unit" onchange="setScale(this.value);">
 <option value="0">Kb</option>
@@ -1576,7 +1576,7 @@ switch_control(0);
 <div style="cursor:pointer;width:113px;border-radius:10px;text-align:center;box-shadow:0px 2px black;" onclick="show_clients()">
 <table>
 <tr>
-<td><div class="qos_tab" style="width:110px;border-radius:10px;"><#3144#></div></td>
+<td><div class="qos_tab" style="width:110px;border-radius:10px;"><#3148#></div></td>
 </tr>
 </table>
 </div>
@@ -1590,7 +1590,7 @@ switch_control(0);
 <table>
 <tr>
 <td style="width:25px;"><div style="width:12px;height:12px;border-radius:10px;background-color:#F01F09;margin-left:5px;"></div></td>
-<td><#2278#></td>
+<td><#2281#></td>
 </tr>
 </table>
 </div>
@@ -1600,7 +1600,7 @@ switch_control(0);
 <table>
 <tr>
 <td style="width:25px;"><div style="width:12px;height:12px;border-radius:10px;background-color:#F08C09;margin-left:5px;"></div></td>
-<td><#2277#></td>
+<td><#2280#></td>
 </tr>
 </table>
 </div>
@@ -1610,7 +1610,7 @@ switch_control(0);
 <table>
 <tr>
 <td style="width:25px;"><div style="width:12px;height:12px;border-radius:10px;background-color:#F3DD09;margin-left:5px;"></div></td>
-<td><#2644#></td>
+<td><#2648#></td>
 </tr>
 </table>
 </div>
@@ -1620,7 +1620,7 @@ switch_control(0);
 <table>
 <tr>
 <td style="width:25px;"><div style="width:12px;height:12px;border-radius:10px;background-color:#7A797A;margin-left:5px;"></div></td>
-<td><#3113#></td>
+<td><#3117#></td>
 </tr>
 </table>
 </div>
@@ -1630,7 +1630,7 @@ switch_control(0);
 <table>
 <tr>
 <td style="width:25px;"><div style="width:12px;height:12px;border-radius:10px;background-color:#58CCED;margin-left:5px;"></div></td>
-<td><#2623#></td>
+<td><#2627#></td>
 </tr>
 </table>
 </div>

@@ -96,7 +96,7 @@ GenContent();
 <div>&nbsp;</div>
 <div class="formfonttitle"><#747#> - <#418#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#3957#></div>
+<div class="formfontdesc"><#3963#></div>
 <div style="margin-top:8px">
 <textarea id="wl_log" cols="63" rows="30" class="textarea_ssh_table" style="width:99%;font-family:'Courier New', Courier, mono; font-size:13px;" readonly="readonly" wrap="off"></textarea>
 </div>

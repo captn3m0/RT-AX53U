@@ -83,18 +83,34 @@ break;
 }
 var get_s46_hgw_case = '<% nvram_get("s46_hgw_case"); %>'; //topology 2,3,6
 var s46_ports_check_flag = (get_s46_hgw_case=='3' || get_s46_hgw_case=='6')? true:false; //true for topology 3||6
-var check_ipv6_s46_ports_hook = (Softwire46_support && wan_proto=="v6plus")? '<%chk_s46_port_range();%>':'0';
+var check_ipv6_s46_ports_hook = (Softwire46_support && (wan_proto=="v6plus" || wan_proto=="ocnvc"))? '<%chk_s46_port_range();%>':'0';
 var check_ipv6_s46_ports = "0";
 if(check_ipv6_s46_ports_hook != "" && check_ipv6_s46_ports_hook != "0"){
 check_ipv6_s46_ports = JSON.parse(check_ipv6_s46_ports_hook);
 }
-var get_ipv6_s46_ports = (Softwire46_support && wan_proto=="v6plus")? '<%nvram_get("ipv6_s46_ports");%>':'0';
+var get_ipv6_s46_ports = (Softwire46_support && (wan_proto=="v6plus" || wan_proto=="ocnvc"))? '<%nvram_get("ipv6_s46_ports");%>':'0';
 var array_ipv6_s46_ports = new Array("");
 if(get_ipv6_s46_ports!="0" && get_ipv6_s46_ports!=""){
 array_ipv6_s46_ports = get_ipv6_s46_ports.split(" ");
 }
 var ipsec_server_enable = '<% nvram_get("ipsec_server_enable"); %>'; //higher priority
 var ipsec_ig_enable = '<% nvram_get("ipsec_ig_enable"); %>';
+var port_confirm = "<#*** not_found_dict : IPv6_plus_port_confirm***#>";
+var port_range_hint = "Since you are currently using %1$@ connection, please make sure your external port settings are within the following port range: "; /* Untranslated */
+var port_mismatch_notice = "<#*** not_found_dict : IPv6_plus_notify0***#>";
+var port_mismatch_list = "<#*** not_found_dict : IPv6_plus_notify1***#>";
+if(wan_proto=="v6plus"){
+port_confirm = port_confirm.replace("%0$@", "<#2448#>");
+port_range_hint = port_range_hint.replace("%1$@", "<#2448#>");
+port_mismatch_notice = port_mismatch_notice.replace("%2$@", "<#2448#>");
+port_mismatch_list = port_mismatch_list.replace("%3$@", "<#2448#>");
+}
+if(wan_proto=="ocnvc"){
+port_confirm = port_confirm.replace("%0$@", "<#2447#>");
+port_range_hint = port_range_hint.replace("%1$@", "<#2447#>");
+port_mismatch_notice = port_mismatch_notice.replace("%2$@", "<#2447#>");
+port_mismatch_list = port_mismatch_list.replace("%3$@", "<#2447#>");
+}
 function pop_s46_ports(p, flag){
 var isMobile = function() {
 if( navigator.userAgent.match(/iPhone/i) ||
@@ -149,7 +165,11 @@ divObj.setAttribute("id","s46_ports_content");
 divObj.className = "s46_ports";
 divObj.style.zIndex = "300";
 divObj.style.margin = margin_set;
-divObj.innerHTML = "<div style='float:right;'><img src='/images/button-close.gif' style='width:30px;cursor:pointer' onclick='close_s46_ports();'></div>Since you are currently using v6plus connection, please make sure your external port settings are within the following port range:<br><br>"+get_ipv6_s46_ports+"<br>";
+divObj.innerHTML = "<div style='float:right;'><img src='/images/button-close.gif' style='width:30px;cursor:pointer' onclick='close_s46_ports();'></div>";
+divObj.innerHTML += port_range_hint;
+divObj.innerHTML += "<br><br>"+get_ipv6_s46_ports+"<br>";
+divObj.innerHTML += port_range_hint;
+divObj.innerHTML += "<br><br>"+get_ipv6_s46_ports+"<br>";
 document.body.prepend(divObj);
 if(flag=="pf")
 adjust_panel_block_top("s46_ports_content", -70);
@@ -178,7 +198,9 @@ return false;
 }
 };
 var conflict_links = gen_conflict_links();
-var confilct_content = "<div style='float:right;'><img src='/images/button-close.gif' style='width:30px;cursor:pointer;margin:-28px -28px 0 0;' onclick='close_s46_ports_conflict();'></div>Port mismatch issue may occur under the special port range of v6plus. It will not affect your internet but the following port related settings. If you would like to use them, please refer to usable port range in <a target='_self' style='text-decoration:underline;' href='Main_IPV6Status_Content.asp'>IPv6 Log</a>, and alter the port number of these features to matching range.<br><br>"+conflict_links;
+var confilct_content = "<div style='float:right;'><img src='/images/button-close.gif' style='width:30px;cursor:pointer;margin:-28px -28px 0 0;' onclick='close_s46_ports_conflict();'></div>";
+confilct_content += port_mismatch_list;
+confilct_content += "<br><br>"+conflict_links;
 /* Untranslated */
 var left_tuned=0;
 var top_tuned=130;
@@ -273,7 +295,7 @@ case "https" :
 items += "<li><a href='/Advanced_System_Content.asp' target='_blank' style='text-decoration:underline;cursor:pointer;'><#2098#></a></li>";
 break;
 case "ssh" :
-items += "<li><a href='/Advanced_System_Content.asp' target='_blank' style='text-decoration:underline;cursor:pointer;'><#2921#></a></li>";
+items += "<li><a href='/Advanced_System_Content.asp' target='_blank' style='text-decoration:underline;cursor:pointer;'><#2925#></a></li>";
 break;
 case "openvpn" :
 items += "<li><a href='/Advanced_VPN_OpenVPN.asp' target='_blank' style='text-decoration:underline;cursor:pointer;'>OpenVPN</a></li>";
@@ -286,7 +308,7 @@ if(ipsec_server_enable=='1'){
 items += "<li><a href='/Advanced_VPN_IPSec.asp' target='_blank' style='text-decoration:underline;cursor:pointer;'>IP Sec</a></li>";
 }
 if(ipsec_ig_enable=='1'){
-items += "<li><a href='/Advanced_Instant_Guard.asp' target='_blank' style='text-decoration:underline;cursor:pointer;'><#4219#></a></li>";
+items += "<li><a href='/Advanced_Instant_Guard.asp' target='_blank' style='text-decoration:underline;cursor:pointer;'><#4225#></a></li>";
 }
 break;
 default :
@@ -402,7 +424,7 @@ var data_usage = tx_bytes + rx_bytes;
 if(gobi_support && (usb_index != -1) && (notification.sim_state != "") && (modem_bytes_data_limit > 0) && (data_usage >= modem_bytes_data_limit)){
 notification.array[12] = 'noti_mobile_traffic';
 notification.mobile_traffic = 1;
-notification.desc[12] = "<#2684#>";
+notification.desc[12] = "<#2688#>";
 notification.action_desc[12] = "<#1416#>";
 notification.clickCallBack[12] = "setTrafficLimit();";
 }
@@ -413,7 +435,7 @@ notification.mobile_traffic = 0;
 if(gobi_support && (usb_index != -1) && (sim_state != "") && (modem_sim_order == -1)){
 notification.array[13] = 'noti_sim_record';
 notification.sim_record = 1;
-notification.desc[13] = "<#2711#>";
+notification.desc[13] = "<#2715#>";
 notification.action_desc[13] = "Delete now";
 notification.clickCallBack[13] = "upated_sim_record();";
 }
@@ -583,13 +605,13 @@ notification.action_desc[16] = "";
 notification.clickCallBack[16] = "";
 }
 }
-if(Softwire46_support && wan_proto=="v6plus"){
+if(Softwire46_support && (wan_proto == "v6plus" || wan_proto == "ocnvc")){
 var exist_conflict = exist_v6plus_conflict();
 if(check_ipv6_s46_ports != "0" && exist_conflict>0){
 notification.s46_ports = 1;
 notification.array[20] = 'noti_s46_ports';
-notification.desc[20] = 'Port related settings may encounter mismatch issue in current v6plus port range.'; /* Untranslated */
-notification.action_desc[20] = "Detail";
+notification.desc[20] = port_mismatch_notice;
+notification.action_desc[20] = "Detail"; /* Untranslated */
 notification.clickCallBack[20] = "setTimeout('pop_s46_ports_conflict()', 100);"
 }
 }
@@ -604,8 +626,8 @@ else if(is_TW_sku && autodet_state == 2 && autodet_auxstate == 6 && !is_CHT_pppo
 if(is_TW_sku && autodet_state == 2 && autodet_auxstate == 6 && wan_proto != "pppoe"){
 notification.pppoe_tw = 1;
 notification.array[15] = 'noti_pppoe_tw';
-notification.desc[15] = '<#3992#>';
-notification.action_desc[15] = '<#3993#>';
+notification.desc[15] = '<#3998#>';
+notification.action_desc[15] = '<#3999#>';
 notification.clickCallBack[15] = "location.href = 'Advanced_WAN_Content.asp?af=wan_proto'";
 }
 if( notification.acpw || notification.upgrade || notification.wifi_2g || notification.wifi_5g || notification.wifi_5g2 || notification.ftp || notification.samba || notification.loss_sync || notification.experience_FB || notification.notif_hint || notification.send_debug_log || notification.mobile_traffic || notification.sim_record || notification.pppoe_tw || notification.pppoe_tw_static || notification.ie_legacy || notification.s46_ports){

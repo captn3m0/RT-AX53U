@@ -189,7 +189,7 @@ var rssi_t = 0;
 var connectModeTip = "";
 if(clientObj.isWL == "0") {
 rssi_t = "wired";
-connectModeTip = "<#3307#>";
+connectModeTip = "<#3313#>";
 }
 else {
 rssi_t = client_convRSSI(clientObj.rssi);
@@ -249,7 +249,7 @@ if(clientHtmlTd == ''){
 if(networkmap_fullscan == 2)
 clientHtmlTd = '<div style="color:#FC0;height:30px;text-align:center;margin-top:15px"><#1714#><img src="/images/InternetScan.gif"></div>';
 else
-clientHtmlTd = '<div style="color:#FC0;height:30px;text-align:center;margin-top:15px"><#2407#></div>';
+clientHtmlTd = '<div style="color:#FC0;height:30px;text-align:center;margin-top:15px"><#2410#></div>';
 }
 clientHtml += clientHtmlTd;
 clientHtml += '</td></tr></tbody></table>';
@@ -262,7 +262,7 @@ document.getElementById("tabWiredNum").innerHTML = totalClientNum.wired;
 if(document.getElementById("tabWired").offsetWidth > 150 ||
 (document.getElementById("tabOnline").offsetWidth+document.getElementById("tabWired").offsetWidth+document.getElementById("tabWireless").offsetWidth) > 300){
 var wired_span = document.getElementById("tabWiredSpan").innerHTML;
-var Modified_wired_term = wired_span.replace("<#3307#>", "<#3668#>");
+var Modified_wired_term = wired_span.replace("<#3313#>", "<#3674#>");
 document.getElementById("tabWiredSpan").innerHTML = Modified_wired_term;
 }
 }
@@ -272,7 +272,7 @@ document.getElementById("tabWirelessNum").innerHTML = totalClientNum.wireless;
 if(document.getElementById("tabWireless").offsetWidth > 150 ||
 (document.getElementById("tabOnline").offsetWidth+document.getElementById("tabWired").offsetWidth+document.getElementById("tabWireless").offsetWidth) > 300){
 var wireless_span = document.getElementById("tabWirelessSpan").innerHTML;
-var Modified_wireless_term = wireless_span.replace("<#3308#>", "WiFi");
+var Modified_wireless_term = wireless_span.replace("<#3314#>", "WiFi");
 document.getElementById("tabWirelessSpan").innerHTML = Modified_wireless_term;
 }
 }
@@ -333,7 +333,7 @@ overlibStr += "<p><#1716#></p>YES";
 if(client.isITunes)
 overlibStr += "<p><#1715#></p>YES";
 if(client.isWL > 0){
-overlibStr += "<p><#3765#>:</p>" + isWL_map[client.isWL]["text"].replace("G", " GHz") + " (" + client.rssi + " dBm)";
+overlibStr += "<p><#3771#>:</p>" + isWL_map[client.isWL]["text"].replace("G", " GHz") + " (" + client.rssi + " dBm)";
 if(stainfo_support) {
 overlibStr += "<p>Tx Rate:</p>" + ((client.curTx != "") ? client.curTx : "-");
 overlibStr += "<p>Rx Rate:</p>" + ((client.curRx != "") ? client.curRx : "-");
@@ -346,7 +346,7 @@ function oui_query_full_vendor(mac){
 if(clientList[mac].vendor != "") {
 setTimeout(function(){
 var overlibStrTmp = retOverLibStr(clientList[mac]);
-overlibStrTmp += "<p><span>.....................................</span></p><p style='margin-top:5px'><#2638#> :</p>";
+overlibStrTmp += "<p><span>.....................................</span></p><p style='margin-top:5px'><#2642#> :</p>";
 overlibStrTmp += clientList[mac].vendor;
 return overlib(overlibStrTmp);
 }, 1);
@@ -359,7 +359,7 @@ $.getJSON("https://nw-dlcdnet.asus.com/plugin/js/ouiDB.json", function(data){
 if(data != "" && data[queryStr] != undefined){
 if(overlib.isOut) return nd();
 var vendor_name = data[queryStr].trim();
-overlibStrTmp += "<p><span>.....................................</span></p><p style='margin-top:5px'><#2638#> :</p>";
+overlibStrTmp += "<p><span>.....................................</span></p><p style='margin-top:5px'><#2642#> :</p>";
 overlibStrTmp += vendor_name;
 return overlib(overlibStrTmp);
 }
@@ -423,7 +423,7 @@ document.getElementById('tabCustom').className = 'tab_NW';
 <td>
 <div id="tabWired" class="tab_NW" align="center" style="display:none">
 <span id="tabWiredSpan">
-<#3307#>&nbsp;(<b style="font-size:10px;" id="tabWiredNum">0</b>)
+<#3313#>&nbsp;(<b style="font-size:10px;" id="tabWiredNum">0</b>)
 </span>
 </div>
 <script>
@@ -440,7 +440,7 @@ document.getElementById('tabCustom').className = 'tab_NW';
 <td>
 <div id="tabWireless" class="tab_NW" align="center" style="display:none;position:relative;min-width:85px;">
 <span id="tabWirelessSpan">
-<#3308#>&nbsp;(<b style="font-size:10px;" id="tabWirelessNum">0</b>)
+<#3314#>&nbsp;(<b style="font-size:10px;" id="tabWirelessNum">0</b>)
 </span>
 <nav class="nav" style="position:absolute;" id="select_wlclient_band"></nav>
 </div>

@@ -2266,8 +2266,11 @@ This VPN profile is disabled. Please go to VPN Server setting page and enable it
 Click [ Go Setting ] below to VPN setting Page.
 This setting cannot be selected while using by the other created profile.
 Home Network
+There is no VPN profile now. Click [Go Setting] below to VPN setting page and create.
 Add a Network
 Profile List
+Choose a defined network
+WiFi Scheduling
 Hardware Version
 Help
 Help provides you with guidelines and information about using the router's functions. Click the
@@ -2442,6 +2445,7 @@ LAN IPv6 Address
 LAN IPv6 Prefix
 IPv6 LAN Setting
 Native
+OCN Virtual Connect
 v6plus
 IPv6 Prefix Length
 IPv4 Anycast Relay
@@ -3280,6 +3284,8 @@ LAN
 Miscellaneous
 Telecommunications Standards
 Terminate WAN Interface
+Scheduled
+One Time Access
 Time Scheduling
 Time Machine
 How to use Apple Time Machine?
@@ -3347,10 +3353,10 @@ Alaska
 Pacific Time (US, Canada)
 Mountain Time (US, Canada)
 Arizona
-Chihuahua, Mazatlan
+Mazatlan
 Saskatchewan
 Guadalajara, Mexico City
-Monterrey
+Monterrey, Chihuahua
 Central Time (US, Canada)
 Eastern Time (US, Canada)
 Indiana (East)

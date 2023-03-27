@@ -387,11 +387,11 @@ show_settings("NonAdaptive");
 }
 }
 if(adaptiveqos_support){
-document.getElementById('content_title').innerHTML = "<#2651#> - <#899#>";
+document.getElementById('content_title').innerHTML = "<#2655#> - <#899#>";
 if(document.form.qos_enable.value == "1"){
 if(qos_type == 0){ //Traditional Type
-add_option(document.getElementById("settingSelection"), '<#3008#>', 3, 0);
-add_option(document.getElementById("settingSelection"), '<#3007#>', 4, 0);
+add_option(document.getElementById("settingSelection"), '<#3012#>', 3, 0);
+add_option(document.getElementById("settingSelection"), '<#3011#>', 4, 0);
 }
 else{ //Adaptive Type or else
 document.getElementById('settingSelection').style.display = "none";
@@ -403,13 +403,13 @@ document.getElementById('settingSelection').style.display = "none";
 }
 else{
 if(qos_type == 0){ //Traditional Type
-add_option(document.getElementById("settingSelection"), '<#3008#>', 3, 0);
-add_option(document.getElementById("settingSelection"), '<#3007#>', 4, 0);
+add_option(document.getElementById("settingSelection"), '<#3012#>', 3, 0);
+add_option(document.getElementById("settingSelection"), '<#3011#>', 4, 0);
 }
 else{ //Bandwidth Limiter
 document.getElementById('settingSelection').style.display = "none";
 }
-document.getElementById('content_title').innerHTML = "<#378#> - <#2651#>";
+document.getElementById('content_title').innerHTML = "<#378#> - <#2655#>";
 document.getElementById('function_int_desc').style.display = "none";
 }
 /* MODELDEP */
@@ -567,7 +567,7 @@ return false;
 }
 if(qos_type != 2){ //not Bandwidth Limiter
 if( ((qos_type == 1 && document.form.bw_setting_name[1].checked == true ) || qos_type == 0 || qos_type == 3) && (document.form.obw.value.length == 0 || document.form.obw.value == 0)){ // To check field is 0 && Traditional QoS
-alert("<#3005#>");
+alert("<#3009#>");
 error_obw++;
 }
 else if( ((qos_type == 1 && document.form.bw_setting_name[1].checked == true ) || qos_type == 0 || qos_type == 3) && !validator.rangeFloat(document.form.obw, 0, 9999999999, "")){
@@ -599,7 +599,7 @@ document.form.obw.value = "1000";
 return false;
 }
 if( ((qos_type == 1 && document.form.bw_setting_name[1].checked == true ) || qos_type == 0 || qos_type == 3) && (document.form.ibw.value.length == 0 || document.form.ibw.value == 0)){ // To check field is 0 && Traditional QoS
-alert("<#3005#>");
+alert("<#3009#>");
 error_ibw++;
 }
 else if( ((qos_type == 1 && document.form.bw_setting_name[1].checked == true ) || qos_type == 0 || qos_type == 3) && !validator.rangeFloat(document.form.ibw, 0, 9999999999, "")){
@@ -628,7 +628,7 @@ document.form.ibw.value = 0;
 }
 if(qos_xobw_orig > 0){
 if((qos_xobw_orig/1024).toFixed(2) < parseFloat(document.form.obw.value)){
-alert("<#3512#> "+ (qos_xobw_orig/1024).toFixed(2));
+alert("<#3518#> "+ (qos_xobw_orig/1024).toFixed(2));
 document.form.obw.focus();
 document.form.obw.select();
 return false;
@@ -640,7 +640,7 @@ document.form.qos_obw.value = document.form.obw.value*1024;
 document.form.qos_ibw.value = document.form.ibw.value*1024;
 if(mtwancfg_support && wans_flag == "1") {
 if( ((qos_type == 1 && document.form.bw_setting_name[1].checked == true ) || qos_type == 0 || qos_type == 3) && (document.form.obw1.value.length == 0 || document.form.obw1.value == 0)){ // To check field is 0 && Traditional QoS
-alert("<#3005#>");
+alert("<#3009#>");
 error_obw1++;
 }
 else if( ((qos_type == 1 && document.form.bw_setting_name[1].checked == true ) || qos_type == 0 || qos_type == 3) && !validator.rangeFloat(document.form.obw1, 0, 9999999999, "")){
@@ -662,7 +662,7 @@ document.form.obw1.value = "1000";
 return false;
 }
 if( ((qos_type == 1 && document.form.bw_setting_name[1].checked == true ) || qos_type == 0 || qos_type == 3) && (document.form.ibw1.value.length == 0 || document.form.ibw1.value == 0)){ // To check field is 0 && Traditional QoS
-alert("<#3005#>");
+alert("<#3009#>");
 error_ibw1++;
 }
 else if( ((qos_type == 1 && document.form.bw_setting_name[1].checked == true ) || qos_type == 0 || qos_type == 3) && !validator.rangeFloat(document.form.ibw1, 0, 9999999999, "")){
@@ -686,7 +686,7 @@ document.form.ibw1.value = 0;
 }
 if(qos_xobw1_orig > 0){
 if((qos_xobw1_orig/1024).toFixed(2) < parseFloat(document.form.obw1.value)){
-alert("<#3512#> "+(qos_xobw1_orig/1024).toFixed(2));
+alert("<#3518#> "+(qos_xobw1_orig/1024).toFixed(2));
 document.form.obw1.focus();
 document.form.obw1.select();
 return false;
@@ -1165,7 +1165,7 @@ var max_priority = 0;
 if(qos_bw_rulelist != "")
 max_priority = qos_bw_rulelist_row.length;
 if(qos_bw_rulelist_row.length >= length){
-alert("<#2479#> " + length + " <#2480#>");
+alert("<#2483#> " + length + " <#2484#>");
 return false;
 }
 if(!validator.string(document.form.PC_devicename))
@@ -1177,14 +1177,14 @@ return false;
 }
 if(PC_mac != "" && PC_name == document.form.PC_devicename.value){
 if(qos_bw_rulelist.search(PC_mac+">") > -1 && PC_mac != ""){ //check same target
-alert("<#2472#>");
+alert("<#2476#>");
 document.form.PC_devicename.focus();
 return false;
 }
 }
 else{
 if(qos_bw_rulelist.search(document.form.PC_devicename.value+">") > -1){
-alert("<#2472#>");
+alert("<#2476#>");
 document.form.PC_devicename.focus();
 return false;
 }
@@ -1195,7 +1195,7 @@ document.getElementById("download_rate").focus();
 return false;
 }
 else if(isNaN(document.getElementById("download_rate").value) || document.getElementById("download_rate").value < 0.1){
-alert("<#2655#> : 0.1 Mb/s");
+alert("<#2659#> : 0.1 Mb/s");
 document.getElementById("download_rate").focus();
 return false;
 }
@@ -1205,7 +1205,7 @@ document.getElementById("upload_rate").focus();
 return false;
 }
 else if(isNaN(document.getElementById("upload_rate").value) || document.getElementById("upload_rate").value < 0.1){
-alert("<#2655#> : 0.1 Mb/s");
+alert("<#2659#> : 0.1 Mb/s");
 document.getElementById("upload_rate").focus();
 return false;
 }
@@ -1237,7 +1237,7 @@ return false;
 }
 else {
 document.form.PC_devicename.focus();
-alert(document.form.PC_devicename.value + " <#2633#>");
+alert(document.form.PC_devicename.value + " <#2637#>");
 return false;
 }
 }
@@ -1275,25 +1275,25 @@ var code = "";
 code += '<table width="100%" border="1" cellspacing="0" cellpadding="4" align="center" class="FormTable_table" id="mainTable_table">';
 code += '<thead><tr>';
 if(pm_support)
-code += '<td colspan="5"><#2907#>&nbsp;(<#2611#>&nbsp;32)</td>';
+code += '<td colspan="5"><#2911#>&nbsp;(<#2615#>&nbsp;32)</td>';
 else
-code += '<td colspan="5"><#1622#>&nbsp;(<#2611#>&nbsp;32)</td>';
+code += '<td colspan="5"><#1622#>&nbsp;(<#2615#>&nbsp;32)</td>';
 code += '</tr></thead>';
 code += '<tbody>';
 code += '<tr>';
-code += '<th style="width:60px" height="30px" title="<#3086#>">';
+code += '<th style="width:60px" height="30px" title="<#3090#>">';
 if(select_all_checked == 1)
 code += '<div><div id="selAll" class="all_enable" style="margin: auto;width:40px;" onclick="enable_check(this);"><#1395#></div></div>';
 else
 code += '<div><div id="selAll" class="all_disable" style="margin: auto;width:40px;" onclick="enable_check(this);"><#1395#></div></div>';
 code += '</th>';
 if(pm_support)
-code += '<th style="width:330px" title="Target can be a group name, IP or IP range(ex:192.168.1.5-10)"><#2816#></th>';
+code += '<th style="width:330px" title="Target can be a group name, IP or IP range(ex:192.168.1.5-10)"><#2820#></th>';
 else
-code += '<th style="width:330px"><#2816#></th>';
+code += '<th style="width:330px"><#2820#></th>';
 code += '<th style="width:130px"><#1791#></th>';
-code += '<th style="width:130px"><#3448#></th>';
-code += '<th style="width:90px"><#2610#></th>';
+code += '<th style="width:130px"><#3454#></th>';
+code += '<th style="width:90px"><#2614#></th>';
 code += '</tr>';
 code += '<tr id="main_element">';
 code += '<td style="background:#2F3A3E"><div id="enable_button" class="check" style="width:22px;height:22px;margin:0 auto;display:none"><div style="width:16px;height:16px;margin: 3px auto" class="icon_check"></div></div>-</td>';
@@ -1302,7 +1302,7 @@ if(pm_support)
 code += '<input type="text" style="margin-left:10px;float:left;width:255px;" class="input_20_table" name="PC_devicename" onkeyup="device_filter(this);check_field();" placeholder="Please select the Device Group Name" autocorrect="off" autocapitalize="off" autocomplete="off" disabled>';/*untranslated*/
 else
 code += '<input type="text" style="margin-left:10px;float:left;width:255px;" class="input_20_table" name="PC_devicename" onkeyup="device_filter(this);check_field();" placeholder="<#1194#>" autocorrect="off" autocapitalize="off" autocomplete="off">';
-code += '<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" onclick="pullLANIPList(this);" title="<#3089#>">';
+code += '<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" onclick="pullLANIPList(this);" title="<#3093#>">';
 code += '<div id="ClientList_Block_PC" class="clientlist_dropdown" style="margin-top:25px;margin-left:10px;"></div>';
 code += '</td>';
 code += '<td style="border-bottom:2px solid #000;text-align:right;"><input type="text" id="download_rate" class="input_6_table" maxlength="6" onkeypress="return validator.bandwidth_code(this, event);" onkeyup="check_field();"><span style="margin: 0 5px;color:#FFF;">Mb/s</span></td>';
@@ -1310,7 +1310,7 @@ code += '<td style="border-bottom:2px solid #000;text-align:right;"><input type=
 code += '<td style="border-bottom:2px solid #000;"><div id="add_delete" class="add_disable" style="margin:0 auto" onclick="addRow_main(this, 32)"></div></td>';
 code += '</tr>';
 if(qos_bw_rulelist == ""){
-code += '<tr><td style="color:#FFCC00;" colspan="10"><#2407#></td></tr>';
+code += '<tr><td style="color:#FFCC00;" colspan="10"><#2410#></td></tr>';
 }
 else{
 for(k=0;k< qos_bw_rulelist_row.length;k++){
@@ -1494,7 +1494,7 @@ hideClients_Block();
 <table id="category_table" width="100%">
 <tr>
 <td colspan="2">
-<div class="priority priority_highest"><#2278#></div>
+<div class="priority priority_highest"><#2281#></div>
 </td>
 </tr>
 <tr>
@@ -1504,7 +1504,7 @@ hideClients_Block();
 </tr>
 <tr>
 <td colspan="2">
-<div class="priority priority_lowest"><#2623#></div>
+<div class="priority priority_lowest"><#2627#></div>
 </td>
 </tr>
 </table>
@@ -1660,7 +1660,7 @@ show_settings("NonAdaptive");
 </td>
 </tr>
 <tr id="qos_type_tr" style="display:none">
-<th><#3006#></th>
+<th><#3010#></th>
 <td colspan="3">
 <input id="int_type" name="qos_type_radio" value="1" onClick="change_qos_type(this.value);" style="display:none;" type="radio" <% nvram_match("qos_type", "1","checked"); %>><a id="int_type_link" class="hintstyle" style="display:none;" href="javascript:void(0);" onClick="openHint(20, 5);"><label for="int_type"><#898#></label></a>
 <input id="trad_type" name="qos_type_radio" value="0" onClick="change_qos_type(this.value);" type="radio" <% nvram_match("qos_type", "0","checked"); %>><a class="hintstyle" href="javascript:void(0);" onClick="openHint(20, 6);"><label for="trad_type"><#1911#></label></a>
@@ -1679,7 +1679,7 @@ show_settings("NonAdaptive");
 <th colspan=3 id="dualwan_primary_title"></th>
 </tr>
 <tr id="upload_tr">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(20, 2);"><#3448#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(20, 2);"><#3454#></a></th>
 <td>
 <input type="text" maxlength="10" id="obw" name="obw" onKeyPress="return validator.isNumberFloat(this,event);" class="input_15_table" value="" autocorrect="off" autocapitalize="off">
 <label style="margin-left:5px;">Mb/s</label>
@@ -1703,7 +1703,7 @@ show_settings("NonAdaptive");
 <th colspan=3 id="dualwan_secondary_title"></th>
 </tr>
 <tr id="upload2_tr" style="display:none">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(20, 2);"><#3448#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(20, 2);"><#3454#></a></th>
 <td>
 <input type="text" maxlength="10" id="obw1" name="obw1" onKeyPress="return validator.isNumberFloat(this,event);" class="input_15_table" value="" autocorrect="off" autocapitalize="off">
 <label style="margin-left:5px;">Mb/s</label>

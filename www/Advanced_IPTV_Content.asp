@@ -510,7 +510,7 @@ port_conflict = true;
 }
 }
 if (port_conflict) {
-alert("<#3061#>");
+alert("<#3065#>");
 return false;
 }
 }
@@ -596,7 +596,7 @@ document.form.lacp_enabled.value = "0";
 }
 if(wan_bonding_support && orig_bond_wan == "1"){
 if(wanAggr_p2_conflicts_w_stb_port(document.form.switch_stb_x.value, wanAggr_p2_num(orig_wanports_bond))){
-var msg = "<#3730#>".replace(/LAN-*\D* 4/, wanAggr_p2_name(orig_wanports_bond));
+var msg = "<#3736#>".replace(/LAN-*\D* 4/, wanAggr_p2_name(orig_wanports_bond));
 if(confirm(msg)){
 document.form.bond_wan.disabled = false;
 document.form.bond_wan.value = "0";
@@ -785,7 +785,7 @@ return false;
 }
 if(document.form.wan_dnsenable_x_now.value == "0" && document.form.wan_proto_now.value != "dhcp" && document.form.wan_dns1_x_now.value == "" && document.form.wan_dns2_x_now.value == ""){
 document.form.wan_dns1_x_now.focus();
-alert("<#2420#>");
+alert("<#2423#>");
 return false;
 }
 if(!document.form.wan_dnsenable_x_now.value == "1"){
@@ -1108,7 +1108,7 @@ document.getElementById("iptv_port4").innerHTML = "LAN Port 1";
 }
 else if(val == "56"){
 if(changed){
-var msg="<#2780#>"; /*Untranslated*/
+var msg="<#2784#>"; /*Untranslated*/
 if(lacp_enabled){
 if(!confirm(msg)){
 document.form.iptv_port_settings.value = "12";
@@ -1132,20 +1132,20 @@ show_gaming_note(val);
 }
 function show_gaming_note(val){
 if(val == "12")
-document.getElementById("gaming_note").innerHTML = "<#3042#>";
+document.getElementById("gaming_note").innerHTML = "<#3046#>";
 else if(val == "56")
-document.getElementById("gaming_note").innerHTML = "<#3043#>";
+document.getElementById("gaming_note").innerHTML = "<#3047#>";
 document.getElementById("gaming_note_div").style.display = "";
 }
 function create_mr_select(val)
 {
 var select = document.form.mr_enable_x;
 if(improxy_support){
-add_option(select, "<#3840#> IGMP", "1", 0);
-add_option(select, "<#3840#> IGMP & MLD", "3", 0);
+add_option(select, "<#3846#> IGMP", "1", 0);
+add_option(select, "<#3846#> IGMP & MLD", "3", 0);
 }
 else
-add_option(select, "<#3840#>", "1", 0);
+add_option(select, "<#3846#>", "1", 0);
 select.value = val;
 if(select.selectedIndex < 0)
 select.selectedIndex = 0;
@@ -1297,11 +1297,11 @@ change_mr_enable(document.form.mr_enable_x.value);
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#2387#></td>
+<td colspan="2"><#2390#></td>
 </tr>
 </thead>
 <tr id="wan_dhcp_tr">
-<th><#2594#></th>
+<th><#2598#></th>
 <td>
 <div class="left" style="width:94px; float:left;" id="wandhcp_switch"></div>
 <div class="iphone_switch_container" style="height:32px; width:74px; position: relative; overflow: hidden">
@@ -1349,7 +1349,7 @@ return true;
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#2421#></td>
+<td colspan="2"><#2424#></td>
 </tr>
 </thead>
 <tr id="dnsenable_tr">
@@ -1398,7 +1398,7 @@ return true;
 </tr>
 </thead>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,29);"><#2936#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,29);"><#2940#></a></th>
 <td align="left">
 <select class="input_option" name="wan_auth_x_now" onChange="change_wan_type(document.form.wan_proto_now.value);">
 <option value="" <% nvram_match("wan_auth_x_now", "", "selected"); %>><#848#></option>
@@ -1406,7 +1406,7 @@ return true;
 </select></td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,4);"><#3494#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,4);"><#3500#></a></th>
 <td><input type="text" maxlength="64" class="input_32_table" name="wan_pppoe_username_now" value="" onkeypress="return validator.isString(this, event)"></td>
 </tr>
 <tr id="tr_pppoe_password">
@@ -1417,41 +1417,41 @@ return true;
 </td>
 </tr>
 <tr style="display:none">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,6);"><#2940#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,6);"><#2944#></a></th>
 <td>
 <input type="text" maxlength="10" class="input_12_table" name="wan_pppoe_idletime_now" value="" onKeyPress="return validator.isNumber(this,event);" />
 <input type="checkbox" style="margin-left:30;display:none;" name="wan_pppoe_idletime_check" value="" />
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,7);"><#2960#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,7);"><#2964#></a></th>
 <td><input type="text" maxlength="5" name="wan_pppoe_mtu_now" class="input_6_table" value="" onKeyPress="return validator.isNumber(this,event);"/></td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,8);"><#2958#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,8);"><#2962#></a></th>
 <td><input type="text" maxlength="5" name="wan_pppoe_mru_now" class="input_6_table" value="" onKeyPress="return validator.isNumber(this,event);"/></td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,9);"><#2966#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,9);"><#2970#></a></th>
 <td><input type="text" maxlength="32" class="input_32_table" name="wan_pppoe_service_now" value="" onkeypress="return validator.isString(this, event)"/></td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,10);"><#2944#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,10);"><#2948#></a></th>
 <td><input type="text" maxlength="32" class="input_32_table" name="wan_pppoe_ac_now" value="<% nvram_get("wan_pppoe_ac_now"); %>" onkeypress="return validator.isString(this, event)"/></td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,17);"><#2964#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,17);"><#2968#></a></th>
 <td>
 <select name="wan_pptp_options_x_now" class="input_option">
 <option value=""><#153#></option>
-<option value="-mppc"><#2824#></option>
+<option value="-mppc"><#2828#></option>
 <option value="+mppe-40">MPPE 40</option>
 <option value="+mppe-128">MPPE 128</option>
 </select>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,18);"><#2946#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,18);"><#2950#></a></th>
 <td><input type="text" name="wan_pppoe_options_x_now" value="<% nvram_get("wan_pppoe_options_x_now"); %>" class="input_32_table" maxlength="255" onKeyPress="return validator.isString(this, event)" onBlur="validator.string(this)"></td>
 </tr>
 </table>
@@ -1482,19 +1482,19 @@ return true;
 <div>&nbsp;</div>
 <div class="formfonttitle"><#389#> - IPTV</div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div id="IPTV_desc" class="formfontdesc" style="display:none;"><#2509#></div>
-<div id="IPTV_desc_DualWAN" class="formfontdesc" style="display:none;"><#2510#></div>
+<div id="IPTV_desc" class="formfontdesc" style="display:none;"><#2513#></div>
+<div id="IPTV_desc_DualWAN" class="formfontdesc" style="display:none;"><#2514#></div>
 <div id="IPTV_desc_DualWAN_BRTAC828" class="formfontdesc" style="display:none;">
-<#2511#>
+<#2515#>
 </div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#2920#></td>
+<td colspan="2"><#2924#></td>
 </tr>
 </thead>
 <tr id="port_settings" style="display:none;">
-<th width="30%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,28);"><#3041#></a></th>
+<th width="30%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,28);"><#3045#></a></th>
 <td>
 <select name="iptv_port_settings" class="input_option" onChange="change_port_settings(this.value, 1);" disabled>
 <option value="12" <% nvram_match( "iptv_port_settings", "12", "selected"); %>>LAN1/ LAN2</option>
@@ -1511,7 +1511,7 @@ return true;
 </td>
 </tr>
 <tr id="wan_stb_x">
-<th width="30%"><#2596#></th>
+<th width="30%"><#2600#></th>
 <td align="left">
 <select id="switch_stb_x0" name="switch_stb_x0" class="input_option" onchange="control_wans_primary(this.value);change_switch_stb(this.value);">
 </select>
@@ -1540,7 +1540,7 @@ return true;
 <td><span id="bridge_port">LAN4</span></td>
 </tr>
 <tr id="wan_internet_x" style="display: none;">
-<th width="30%"><#2326#></th>
+<th width="30%"><#2329#></th>
 <td>
 VID&nbsp;<input type="text" name="switch_wan0tagid" class="input_6_table" maxlength="4" value="" onKeyPress="return validator.isNumber(this, event);" autocorrect="off" autocapitalize="off" disabled>&nbsp;&nbsp;&nbsp;&nbsp;
 PRIO&nbsp;<input type="text" name="switch_wan0prio" class="input_3_table" maxlength="1" value="0" onKeyPress="return validator.isNumber(this, event);" autocorrect="off" autocapitalize="off" disabled>
@@ -1564,14 +1564,14 @@ PRIO&nbsp;<input type="text" name="switch_wan2prio" class="input_3_table" maxlen
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable" style="margin-top:10px;">
 <thead>
 <tr>
-<td colspan="2"><#2384#></td>
+<td colspan="2"><#2387#></td>
 </tr>
 </thead>
 <tr>
-<th><#3040#></th>
+<th><#3044#></th>
 <td>
 <select name="dr_enable_x" class="input_option">
-<option value="0" <% nvram_match("dr_enable_x", "0","selected"); %> ><#3841#></option>
+<option value="0" <% nvram_match("dr_enable_x", "0","selected"); %> ><#3847#></option>
 <option value="1" <% nvram_match("dr_enable_x", "1","selected"); %> >Microsoft</option>
 <option value="2" <% nvram_match("dr_enable_x", "2","selected"); %> >RFC3442</option>
 <option value="3" <% nvram_match("dr_enable_x", "3","selected"); %> >RFC3442 & Microsoft</option>
@@ -1587,21 +1587,21 @@ PRIO&nbsp;<input type="text" name="switch_wan2prio" class="input_3_table" maxlen
 </td>
 </tr>
 <tr id="mr_enable_field" style="display:none;">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,11);"><#3049#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,11);"><#3053#></a></th>
 <td>
 <select id="mr_enable_x" name="mr_enable_x" class="input_option" onChange="change_mr_enable(this.value);">
-<option value="0" <% nvram_match("mr_enable_x", "0","selected"); %> ><#3841#></option>
-<!-- <option value="1" <% nvram_match("mr_enable_x", "1","selected"); %> ><#3840#></option> -->
+<option value="0" <% nvram_match("mr_enable_x", "0","selected"); %> ><#3847#></option>
+<!-- <option value="1" <% nvram_match("mr_enable_x", "1","selected"); %> ><#3846#></option> -->
 </select>
-<span id="mr_hint" style="display:none;">( <#3050#> )</span>
+<span id="mr_hint" style="display:none;">( <#3054#> )</span>
 <div id="mr_disable" style="display:none;">
-<span style="color:#FFF;"><#3841#></span>
-<span style="margin-left: 5px;"><#3051#></span>
+<span style="color:#FFF;"><#3847#></span>
+<span style="margin-left: 5px;"><#3055#></span>
 </div>
 </td>
 </tr>
 <tr style="display:none;">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,14);"><#3059#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,14);"><#3063#></a></th>
 <td>
 <select name="mr_igmp_ver" class="input_option">
 <option value="1" <% nvram_match("mr_igmp_ver", "1","selected"); %> >IGMP v1</option>
@@ -1611,7 +1611,7 @@ PRIO&nbsp;<input type="text" name="switch_wan2prio" class="input_3_table" maxlen
 </td>
 </tr>
 <tr style="display:none;">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,15);"><#3060#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,15);"><#3064#></a></th>
 <td>
 <select name="mr_mld_ver" class="input_option">
 <option value="1" <% nvram_match("mr_mld_ver", "1","selected"); %> >MLD v1</option>
@@ -1623,22 +1623,22 @@ PRIO&nbsp;<input type="text" name="switch_wan2prio" class="input_3_table" maxlen
 <th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,16);">Enable Fast Leave</a></th>
 <td>
 <select name="mr_qleave_x" class="input_option">
-<option value="0" <% nvram_match("mr_qleave_x", "0","selected"); %> ><#3841#></option>
-<option value="1" <% nvram_match("mr_qleave_x", "1","selected"); %> ><#3840#></option>
+<option value="0" <% nvram_match("mr_qleave_x", "0","selected"); %> ><#3847#></option>
+<option value="1" <% nvram_match("mr_qleave_x", "1","selected"); %> ><#3846#></option>
 </select>
 </td>
 </tr>
 <tr id="enable_eff_multicast_forward" style="display:none;">
-<th><#3876#></th>
+<th><#3882#></th>
 <td>
 <select name="emf_enable" class="input_option">
-<option value="0" <% nvram_match("emf_enable", "0","selected"); %> ><#3841#></option>
-<option value="1" <% nvram_match("emf_enable", "1","selected"); %> ><#3840#></option>
+<option value="0" <% nvram_match("emf_enable", "0","selected"); %> ><#3847#></option>
+<option value="1" <% nvram_match("emf_enable", "1","selected"); %> ><#3846#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(6, 6);"><#3062#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(6, 6);"><#3066#></a></th>
 <td>
 <input id="udpxy_enable_x" type="text" maxlength="5" class="input_6_table" name="udpxy_enable_x" value="<% nvram_get("udpxy_enable_x"); %>" onkeypress="return validator.isNumber(this,event);" autocorrect="off" autocapitalize="off">
 </td>

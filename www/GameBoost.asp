@@ -196,15 +196,15 @@ var gameList = '<% nvram_get("rog_clientlist"); %>'.replace(/&#60/g, "<");
 function genGameList(){
 var list_array = gameList.split('<');
 var code = '';
-code += '<thead><tr><td colspan="4"><#2201#>&nbsp;(<#2611#>&nbsp;64)</td></tr></thead>';
+code += '<thead><tr><td colspan="4"><#2201#>&nbsp;(<#2615#>&nbsp;64)</td></tr></thead>';
 code += '<tr>';
-code += '<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);"><#1532#> (<#2950#>)</a></th>';
-code += '<th><#2610#></th>';
+code += '<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);"><#1532#> (<#2954#>)</a></th>';
+code += '<th><#2614#></th>';
 code += '</tr>';
 code += '<tr>';
 code += '<td width="40%">';
 code += '<input type="text" class="input_20_table" maxlength="17" id="client" style="margin-left:-12px;width:255px;" onKeyPress="return validator.isHWAddr(this,event)" onClick="hideClients_Block();" autocorrect="off" autocapitalize="off" placeholder="ex: <% nvram_get("lan_hwaddr"); %>">';
-code += '<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#3092#>">';
+code += '<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#3096#>">';
 code += '<div id="ClientList_Block_PC" class="clientlist_dropdown" style="margin-left:138px;"></div>';
 code += '</td>';
 code += '<td width="10%">';
@@ -247,12 +247,12 @@ alert("<#320#>");
 return false;
 }
 if(list_array.length > maximum){
-alert("<#2479#> " + maximum + " <#2480#>");
+alert("<#2483#> " + maximum + " <#2484#>");
 return false;
 }
 for(i=1; i<list_array.length; i++){
 if(list_array[i] == mac){
-alert("<#2472#>");
+alert("<#2476#>");
 return false;
 }
 }

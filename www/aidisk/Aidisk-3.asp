@@ -75,7 +75,7 @@ if(this.ddns_return_code != 'no_change'){
 var ddnsHint = getDDNSState(this.ddns_return_code, this.ddns_hostname_x, this.ddns_old_name);
 if(ddnsHint != ""){
 if(this.ddns_return_code == 'Time-out')
-show_alert_block("<#2530#>");
+show_alert_block("<#2534#>");
 else
 show_alert_block(ddnsHint);
 }
@@ -125,7 +125,7 @@ return false;
 var unvalid_start=new RegExp("^[0-9].*", "gi");
 if(unvalid_start.test(s) )
 {
-show_alert_block("<#2542#>");
+show_alert_block("<#2546#>");
 return false;
 }
 if(!validator.string(o)){
@@ -136,12 +136,12 @@ c = s.charCodeAt(i);
 if(c == 46){
 ++dot;
 if(dot > 0){
-show_alert_block("<#2542#>");
+show_alert_block("<#2546#>");
 return false;
 }
 }
 if(!validator.hostNameChar(c)){
-show_alert_block("<#2531#> '"+s.charAt(i)+"' !");
+show_alert_block("<#2535#> '"+s.charAt(i)+"' !");
 return false;
 }
 }
@@ -226,7 +226,7 @@ go_next_page();
 </td>
 </tr>
 <tr>
-<td align="left" class="formfonttitle" style="padding-left:20px;" height="72"><#3228#></td>
+<td align="left" class="formfonttitle" style="padding-left:20px;" height="72"><#3232#></td>
 </tr>
 <tr>
 <td>
@@ -243,7 +243,7 @@ go_next_page();
 </div>
 <br/>
 <p><input type="radio" name="check_asus_ddns" id="c2" onClick="switch_ddns();" >
-<label for="c2"><#2786#></label>
+<label for="c2"><#2790#></label>
 </p>
 </div>
 </td>

@@ -31,7 +31,7 @@ var keyword_rulelist_row = decodeURIComponent(keyword_rulelist_array).split('<')
 var code = "";
 code +='<table width="100%" border="1" cellspacing="0" cellpadding="4" align="center" class="list_table" id="keyword_rulelist_table">';
 if(keyword_rulelist_row.length == 1)
-code +='<tr><td style="color:#FFCC00;"><#2407#></td>';
+code +='<tr><td style="color:#FFCC00;"><#2410#></td>';
 else{
 for(var i =1; i < keyword_rulelist_row.length; i++){
 code +='<tr id="row'+i+'">';
@@ -62,13 +62,13 @@ document.form.keyword_enable_x[0].checked = true;
 var rule_num = document.getElementById('keyword_rulelist_table').rows.length;
 var item_num = document.getElementById('keyword_rulelist_table').rows[0].cells.length;
 if(rule_num >= upper){
-alert("<#2479#> " + upper + " <#2480#>");
+alert("<#2483#> " + upper + " <#2484#>");
 return false;
 }
 for(i=0; i<rule_num; i++){
 for(j=0; j<item_num-1; j++){ //only 1 value column
 if(obj.value == document.getElementById('keyword_rulelist_table').rows[i].cells[j].innerHTML){
-alert("<#2472#>");
+alert("<#2476#>");
 return;
 }
 }
@@ -91,7 +91,7 @@ if(j != item_num-2)
 tmp_value += ">";
 }
 }
-if(tmp_value == "<"+"<#2407#>" || tmp_value == "<")
+if(tmp_value == "<"+"<#2410#>" || tmp_value == "<")
 tmp_value = "";
 document.form.keyword_rulelist.value = tmp_value;
 showLoading();
@@ -151,7 +151,7 @@ refreshpage();
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#3277#></td>
+<td colspan="2"><#3281#></td>
 </tr>
 </thead>
 <tr>
@@ -165,12 +165,12 @@ refreshpage();
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table">
 <thead>
 <tr>
-<td colspan="2"><#2053#>&nbsp;(<#2611#>&nbsp;64)</td>
+<td colspan="2"><#2053#>&nbsp;(<#2615#>&nbsp;64)</td>
 </tr>
 </thead>
 <tr>
 <th width="80%"><#2053#></th>
-<th width="20%"><#2610#></th>
+<th width="20%"><#2614#></th>
 </tr>
 <tr>
 <td width="80%">

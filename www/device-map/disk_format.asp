@@ -148,7 +148,7 @@ invalid_char += keywordArray[i];
 }
 }
 if(invalid_char != "") {
-alert(invalid_char+ " <#2474#>");
+alert(invalid_char+ " <#2478#>");
 obj.focus();
 return false;
 }

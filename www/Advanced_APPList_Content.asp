@@ -29,7 +29,7 @@ code += '<table width="100%" border="1" align="center" cellpadding="4" cellspaci
 code += '<thead><tr><td colspan="3">IPKG List</td></tr></thead>';
 code += '<th style="width:20%">Name and Hyperlink</th><th style="width:10%">Version</th><th>Description</th>';
 if(apps_array.length == 0)
-code +='<tr><td style="color:#FFCC00;"><#2407#></td>';
+code +='<tr><td style="color:#FFCC00;"><#2410#></td>';
 else{
 for(var i =0; i < apps_array.length; i++){
 code +='<tr style="height:40px;">';

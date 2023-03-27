@@ -119,7 +119,7 @@ vts_rulelist_array["vts_rulelist_1"] = parseNvramToArray('<% nvram_char_to_ascii
 Object.keys(vts_rulelist_array).forEach(function(key) {
 gen_vts_ruleTable_Block(key);
 });
-if(wan_proto=="v6plus" && s46_ports_check_flag && array_ipv6_s46_ports.length > 1){
+if((wan_proto == "v6plus" || wan_proto == "ocnvc") && s46_ports_check_flag && array_ipv6_s46_ports.length > 1){
 $(".setup_info_icon").show();
 $(".setup_info_icon").click(
 function() {
@@ -371,7 +371,7 @@ return false;
 return true;
 }
 function del_Row(_this){
-if(!confirm("<#4132#>"))
+if(!confirm("<#4138#>"))
 return false;
 var row_idx = $(_this).closest("*[row_tr_idx]").attr( "row_tr_idx" );
 var wan_idx = $(_this).closest("*[wanUnitID]").attr( "wanUnitID" );
@@ -397,7 +397,7 @@ var wan_idx = _tableID.split("_")[2];
 var code = "";
 code += '<table width="100%" cellspacing="0" cellpadding="4" align="center" class="list_table" style="word-break:break-word;">';
 if(_arrayData.length == 0)
-code += '<tr><td style="color:#FFCC00;" colspan="8"><#2407#></td></tr>';
+code += '<tr><td style="color:#FFCC00;" colspan="8"><#2410#></td></tr>';
 else {
 for(var i = 0; i < _arrayData.length; i += 1) {
 var eachValue = _arrayData[i];
@@ -439,17 +439,17 @@ wan_title = "<#1866#>&nbsp;";
 break;
 }
 }
-html += '<td colspan="8">' + wan_title + '<#2409#>&nbsp;(<#2611#>&nbsp;' + profileMaxNum + ')</td>';
+html += '<td colspan="8">' + wan_title + '<#2412#>&nbsp;(<#2615#>&nbsp;' + profileMaxNum + ')</td>';
 html += '</tr>';
 html += '</thead>';
 html += '<tr>';
 html += '<th width="16%"><#1509#></th>';
-html += '<th width="15%"><#2411#></th>';
-html += '<th width="15%"><#2413#></th>';
-html += '<th width="17%"><#2414#></th>';
-html += '<th width="8%"><#2400#></th>';
-html += '<th width="17%"><#2408#></th>';
-html += '<th width="6%"><#2998#></th>';
+html += '<th width="15%"><#2414#></th>';
+html += '<th width="15%"><#2416#></th>';
+html += '<th width="17%"><#2417#></th>';
+html += '<th width="8%"><#2403#></th>';
+html += '<th width="17%"><#2411#></th>';
+html += '<th width="6%"><#3002#></th>';
 html += '<th width="6%"><#1649#></th>';
 html += '</tr>';
 html += '</table>';
@@ -493,7 +493,7 @@ $("#wans_unit option[value='" + i + "']").remove();
 }
 }
 if(rulelist_length == have_upper_num){
-alert("<#2479#> " + upper + " <#2480#>");
+alert("<#2483#> " + upper + " <#2484#>");
 return false;
 }
 }
@@ -510,8 +510,8 @@ $("#vts_port_x").attr('maxlength','3');
 $("#vts_lport_x").parent().parent().hide();
 }
 else{
-$("#vts_port_x").parent().parent().find('th').html('<#2411#><div class="setup_info_icon" style="display:none;"></div>');
-if(wan_proto=="v6plus" && s46_ports_check_flag && array_ipv6_s46_ports.length > 1){
+$("#vts_port_x").parent().parent().find('th').html('<#2414#><div class="setup_info_icon" style="display:none;"></div>');
+if((wan_proto == "v6plus" || wan_proto == "ocnvc") && s46_ports_check_flag && array_ipv6_s46_ports.length > 1){
 $(".setup_info_icon").show();
 $(".setup_info_icon").click(
 function() {
@@ -588,7 +588,7 @@ if(add_ruleList_array_temp.sourceIP == currentRuleArrayTemp.sourceIP &&
 add_ruleList_array_temp.externalPort == currentRuleArrayTemp.externalPort &&
 currentRuleArrayTemp.protocol != "OTHER")
 {
-alert("<#2472#>");
+alert("<#2476#>");
 document.getElementById("vts_port_x").focus();
 document.getElementById("vts_port_x").select();
 return false;
@@ -605,14 +605,14 @@ if(add_ruleList_array_temp.sourceIP == currentRuleArrayTemp.sourceIP &&
 add_ruleList_array_temp.externalPort == currentRuleArrayTemp.externalPort &&
 add_ruleList_array_temp.protocol == currentRuleArrayTemp.protocol)
 {
-alert("<#2472#>");
+alert("<#2476#>");
 document.getElementById("vts_port_x").focus();
 document.getElementById("vts_port_x").select();
 return false;
 }
 if(currentRuleArrayTemp.protocol == "BOTH" && add_ruleList_array_temp.protocol != "OTHER") {
 if(add_ruleList_array_temp.sourceIP == currentRuleArrayTemp.sourceIP && add_ruleList_array_temp.externalPort == currentRuleArrayTemp.externalPort) {
-alert("<#2472#>");
+alert("<#2476#>");
 document.getElementById("vts_port_x").focus();
 document.getElementById("vts_port_x").select();
 return false;
@@ -635,9 +635,9 @@ return false;
 else{
 if(!check_multi_range(document.getElementById("vts_port_x"), 1, 65535, true))
 return false;
-if(wan_proto=="v6plus" && s46_ports_check_flag && array_ipv6_s46_ports.length > 1){
+if((wan_proto == "v6plus" || wan_proto == "ocnvc") && s46_ports_check_flag && array_ipv6_s46_ports.length > 1){
 if (!check_multi_range_s46_ports(document.getElementById("vts_port_x"))){
-if(!confirm("The following port related settings may not work properly since the port is not available in current v6plus usable port range. Do you want to continue?")){
+if(!confirm(port_confirm)){
 document.getElementById("vts_port_x").focus();
 return false;
 }
@@ -768,7 +768,7 @@ $("#profile_setting").fadeOut(300);
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
 <div>
 <div id="ftpPortConflict" class="formfontdesc" style="display:none;color:#FFCC00;"></div>
-<div class="formfontdesc"><#2397#></div>
+<div class="formfontdesc"><#2400#></div>
 <ul style="margin-left:-25px; *margin-left:10px;">
 <div class="formfontdesc"><li><#2077#></div>
 <div class="formfontdesc" id="FTP_desc"><li><#2049#></div>
@@ -777,15 +777,15 @@ $("#profile_setting").fadeOut(300);
 <div class="formfontdesc" style="margin-top:-10px;">
 <a id="faq" href="" target="_blank" style="font-family:Lucida Console;text-decoration:underline;"><#396#>&nbspFAQ</a>
 </div>
-<div class="formfontdesc" id="lb_note" style="color:#FFCC00; display:none;"><#2599#></div>
+<div class="formfontdesc" id="lb_note" style="color:#FFCC00; display:none;"><#2603#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 <thead>
 <tr>
-<td colspan="4"><#3277#></td>
+<td colspan="4"><#3281#></td>
 </tr>
 </thead>
 <tr>
-<th><#2396#><input type="hidden" name="vts_num_x_0" value="<% nvram_get("vts_num_x"); %>" readonly="1" /></th>
+<th><#2399#><input type="hidden" name="vts_num_x_0" value="<% nvram_get("vts_num_x"); %>" readonly="1" /></th>
 <td>
 <div align="center" class="left" style="width:94px; float:left; cursor:pointer;" id="radio_VTS_enable"></div>
 <script type="text/javascript">
@@ -806,7 +806,7 @@ applyRule(0);
 <div id="vts_rulelist_Table_1" wanUnitID="1"></div>
 <div id="vts_rulelist_Block_1" wanUnitID="1"></div>
 <div class="apply_gen">
-<input class="button_gen" onclick="editProfile('new')" type="button" value="<#3659#>">
+<input class="button_gen" onclick="editProfile('new')" type="button" value="<#3665#>">
 </div>
 </td>
 </tr>
@@ -823,17 +823,17 @@ applyRule(0);
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#3597#></td>
+<td colspan="2"><#3603#></td>
 </tr>
 </thead>
 <tr>
-<th><#2406#></th>
+<th><#2409#></th>
 <td id="vts_rulelist">
 <select name="KnownApps" id="KnownApps" class="input_option" onchange="change_wizard(this, 'KnownApps');"></select>
 </td>
 </tr>
 <tr>
-<th><#2405#></th>
+<th><#2408#></th>
 <td id="VSGameList">
 <select name="KnownGames" id="KnownGames" class="input_option" onchange="change_wizard(this, 'KnownGames');"></select>
 </td>
@@ -843,7 +843,7 @@ applyRule(0);
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#3548#></td>
+<td colspan="2"><#3554#></td>
 </tr>
 </thead>
 <tr id="tr_wan_unit" style="display:none;">
@@ -864,7 +864,7 @@ applyRule(0);
 </td>
 </tr>
 <tr>
-<th><#2400#></th>
+<th><#2403#></th>
 <td>
 <select id="vts_proto_x" class="input_option">
 <option value="TCP">TCP</option>
@@ -875,28 +875,28 @@ applyRule(0);
 </td>
 </tr>
 <tr>
-<th><#2411#><div class="setup_info_icon" style="display:none;"></div></th>
+<th><#2414#><div class="setup_info_icon" style="display:none;"></div></th>
 <td>
 <input type="text" maxlength="60" class="input_25_table" id="vts_port_x" onKeyPress="return validator.isPortRange(this, event);" autocomplete="off" autocorrect="off" autocapitalize="off"/>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,26);"><#2413#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,26);"><#2416#></a></th>
 <td>
 <input type="text" maxlength="5" class="input_6_table" id="vts_lport_x" onKeyPress="return validator.isNumber(this,event);" autocomplete="off" autocorrect="off" autocapitalize="off"/>
 <span><#1986#></span>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,25);"><#2414#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,25);"><#2417#></a></th>
 <td>
 <input type="text" maxlength="15" class="input_25_table" id="vts_ipaddr_x" align="left" onkeypress="return validator.isIPAddr(this, event);" style="float:left;" onClick="hideClients_Block();" autocomplete="off" autocorrect="off" autocapitalize="off">
-<img id="pull_arrow" class="pull_arrow" height="16px;" src="images/arrow-down.gif" align="right" onclick="pullLANIPList(this);" title="<#3091#>">
+<img id="pull_arrow" class="pull_arrow" height="16px;" src="images/arrow-down.gif" align="right" onclick="pullLANIPList(this);" title="<#3095#>">
 <div id="ClientList_Block" class="clientlist_dropdown" style="margin-left:2px;margin-top:27px;width:238px;"></div>
 </td>
 </tr>
 <tr>
-<th><#2408#></th>
+<th><#2411#></th>
 <td>
 <input type="text" maxlength="18" class="input_25_table" id="vts_target_x" onKeyPress="return validator.isIPAddrPlusNetmask(this, event)" autocomplete="off" autocorrect="off" autocapitalize="off"/>
 <span><#1986#></span>
@@ -904,19 +904,19 @@ applyRule(0);
 </tr>
 </table>
 <div style="color:#FC0;margin:10px 0px;">
-* <#2411#>
-<br>
-<#2415#>
-<br>
-<#2416#>
-<br>
-<#2417#>
+* <#2414#>
 <br>
 <#2418#>
-<br><br>
-* <#2408#>
 <br>
 <#2419#>
+<br>
+<#2420#>
+<br>
+<#2421#>
+<br><br>
+* <#2411#>
+<br>
+<#2422#>
 </div>
 <div style="margin-top:15px;text-align:center;">
 <input class="button_gen" type="button" onclick="cancelProfile();" value="<#199#>">

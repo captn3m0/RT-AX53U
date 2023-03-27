@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
-<title><#842#> - <#2650#></title>
+<title><#842#> - <#2654#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="tmmenu.css">
@@ -46,9 +46,9 @@ block = '';
 gn = 0;
 grid = '<table width="730px" class="FormTable_NWM">';
 grid += "<tr><th style=\"height:30px;\"><#1682#></th>";
-grid += "<th><#3299#></th>";
-grid += "<th><#3306#></th>";
-grid += "<th><#3309#></th></tr>";
+grid += "<th><#3305#></th>";
+grid += "<th><#3312#></th>";
+grid += "<th><#3315#></th></tr>";
 for (i = 0; i < daily_history.length; ++i) {
 h = daily_history[i];
 if (h[0] >= lastt) {
@@ -60,7 +60,7 @@ lastu += h[2];
 }
 }
 if(rows == 0)
-grid +='<tr><td style="color:#FFCC00;" colspan="4"><#2407#></td></tr>';
+grid +='<tr><td style="color:#FFCC00;" colspan="4"><#2410#></td></tr>';
 E('bwm-daily-grid').innerHTML = grid + '</table>';
 E('last-dn').innerHTML = rescale(lastd);
 E('last-up').innerHTML = rescale(lastu);
@@ -132,10 +132,10 @@ return false;
 <td>
 <div align="right">
 <select class="input_option" style="width:120px" onchange="switchPage(this.options[this.selectedIndex].value)">
-<!--option><#3257#></option-->
-<option value="1"><#2648#></option>
-<option value="2"><#2649#></option>
-<option value="3" selected><#2650#></option>
+<!--option><#3261#></option-->
+<option value="1"><#2652#></option>
+<option value="2"><#2653#></option>
+<option value="3" selected><#2654#></option>
 </select>
 </div>
 </td>
@@ -149,7 +149,7 @@ return false;
 <table width="730" border="1" align="left" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#3277#></td>
+<td colspan="2"><#3281#></td>
 </tr>
 </thead>
 <tbody>
@@ -165,7 +165,7 @@ return false;
 </td>
 </tr>
 <tr class='even'>
-<th width="40%"><#3082#></th>
+<th width="40%"><#3086#></th>
 <td>
 <select style="width:70px" class="input_option" onchange='changeScale(this)' id='scale'>
 <option value=0>KB</option>
@@ -188,13 +188,13 @@ return false;
 <table width="730" border="1" align="left" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable" >
 <thead>
 <tr>
-<td colspan="2" id="TriggerList" style="text-align:left;"><#2592#> <span style="color:#FFF;background-color:transparent;" id='last-dates'></span></td>
+<td colspan="2" id="TriggerList" style="text-align:left;"><#2596#> <span style="color:#FFF;background-color:transparent;" id='last-dates'></span></td>
 </tr>
 </thead>
 <tbody>
-<tr class='even'><th width="40%"><#3299#></th><td id='last-dn'>-</td></tr>
-<tr class='odd'><th width="40%"><#3306#></th><td id='last-up'>-</td></tr>
-<tr class='footer'><th width="40%"><#3309#></th><td id='last-total'>-</td></tr>
+<tr class='even'><th width="40%"><#3305#></th><td id='last-dn'>-</td></tr>
+<tr class='odd'><th width="40%"><#3312#></th><td id='last-up'>-</td></tr>
+<tr class='footer'><th width="40%"><#3315#></th><td id='last-total'>-</td></tr>
 </tbody>
 </table>
 </td>

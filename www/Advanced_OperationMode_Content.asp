@@ -327,12 +327,12 @@ document.form.appendChild(NewInput);
 function saveMode(){
 if(sw_mode_orig == document.form.sw_mode.value){
 if(document.form.sw_mode.value != 2){
-alert("<#843#> <#2842#>");
+alert("<#843#> <#2846#>");
 return false;
 }
 else{ //Repeater, Express Way 2.4 GHz, Express Way 5 GHz
 if(wlc_express_orig == document.form.wlc_express.value){
-alert("<#843#> <#2842#>");
+alert("<#843#> <#2846#>");
 return false;
 }
 }

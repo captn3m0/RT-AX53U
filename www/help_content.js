@@ -1,21 +1,21 @@
 ﻿var productid = '<#843#>';
 helpcontent[0] = new Array("",
-"<#3822#>",
-"<#3862#>",
-"<#3785#>",
-"<#3897#>",
-"<#3775#>",
-"<#3842#>",
-"<#3912#>",
-"<#3908#>",
-"<#3837#>",
-"<#3832#>",
-"<#3923#><#2473#>", //11
+"<#3828#>",
+"<#3868#>",
+"<#3791#>",
+"<#3903#>",
+"<#3781#>",
+"<#3848#>",
+"<#3918#>",
+"<#3914#>",
+"<#3843#>",
+"<#3838#>",
+"<#3929#><#2477#>", //11
 "<#852#>",
 "<#853#>",
-"<#3787#><br/><#3839#>",
-"<#3811#>",
-"<#3824#>",
+"<#3793#><br/><#3845#>",
+"<#3817#>",
+"<#3830#>",
 "",
 "WEP-64bits: <#852#><br/>WEP-128bits: <#853#>",
 "<#852#><br/><#853#>",
@@ -31,131 +31,131 @@ helpcontent[0] = new Array("",
 if ("<% nvram_get("wl2_band"); %>".length == 0)
 helpcontent[0][27] = "Smart Connect is the feature which could automatically steer clients to the most appropriate band (2.4GHz and 5GHz)."; /*untranslated*/
 helpcontent[1] = new Array("",
-"<#3850#>",
-"<#3785#>",
-"<#3867#>",
-"<#3898#>",
-"<#3899#>",
-"<#3900#>",
-"<#3901#>");
-helpcontent[2] = new Array("",
-"<#3767#>",
-"<#3771#>",
-"<#3769#>");
-helpcontent[3] = new Array("",
-"<#3914#>",
-"<#3916#><p><a href='/Main_LogStatus_Content.asp' target='_blank'><#280#><#1521#></a></p>",
-"<#3918#><p><a href='/Main_LogStatus_Content.asp' target='_blank'><#280#><#1521#></a></p>",
-"<#3874#>",
-"<#3890#>",
+"<#3856#>",
 "<#3791#>",
-"<#3817#>",
-"<#3789#>",
-"<#3881#>",
-"<#3927#>",
 "<#3873#>",
-"<#3860#>",
-"<#3932#>",
-"<#3935#>",
+"<#3904#>",
+"<#3905#>",
 "<#3906#>",
-"<#3910#>",
+"<#3907#>");
+helpcontent[2] = new Array("",
+"<#3773#>",
+"<#3777#>",
+"<#3775#>");
+helpcontent[3] = new Array("",
+"<#3920#>",
+"<#3922#><p><a href='/Main_LogStatus_Content.asp' target='_blank'><#280#><#1521#></a></p>",
+"<#3924#><p><a href='/Main_LogStatus_Content.asp' target='_blank'><#280#><#1521#></a></p>",
+"<#3880#>",
+"<#3896#>",
+"<#3797#>",
+"<#3823#>",
+"<#3795#>",
+"<#3887#>",
+"<#3933#>",
+"<#3879#>",
+"<#3866#>",
+"<#3938#>",
+"<#3941#>",
+"<#3912#>",
+"<#3916#>",
+"<#3861#>",
+"<#3877#>",
+"[n Only]: <#3890#>",
+"<#3959#>",
+"<#3883#>", //21
+"<#3892#>",
+"<#3935#>",
+"<#3886#> (It's also called [Explicit Beamforming].)", /* untranslated */
+"<#3895#> (It's also called [Implicit Beamforming].)", /* untranslated */
 "<#3855#>",
-"<#3871#>",
-"[n Only]: <#3884#>",
-"<#3953#>",
-"<#3877#>", //21
-"<#3886#>",
-"<#3929#>",
-"<#3880#> (It's also called [Explicit Beamforming].)", /* untranslated */
-"<#3889#> (It's also called [Implicit Beamforming].)", /* untranslated */
-"<#3849#>",
-"<#3847#>",
-"<#4246#> <#3859#>",
-"<#3921#>",
-"<#3074#>",
-"<#3926#>", //31
-"<#3858#>",
-"<#3859#>",
-"<#3865#>"
+"<#3853#>",
+"<#4252#> <#3865#>",
+"<#3927#>",
+"<#3078#>",
+"<#3932#>", //31
+"<#3864#>",
+"<#3865#>",
+"<#3871#>"
 );
 helpcontent[4] = new Array("",
 "<#351#>",
 "<#353#>",
-"<#2571#>");
+"<#2575#>");
 helpcontent[5] = new Array("",
-"<#2502#>",
-"<#2512#><#2513#>",
-"<#2525#>",
-"<#2523#>",
-"<#2515#>",
-"<#2575#>",
-"<#2572#>",
-"<#2590#>",
-"<#2517#>",
+"<#2506#>",
+"<#2516#><#2517#>",
+"<#2529#>",
+"<#2527#>",
+"<#2519#>",
+"<#2579#>",
+"<#2576#>",
+"<#2594#>",
+"<#2521#>",
 "<#352#>",
-"<#2521#>", //11
-"<#2522#>",
-"<#2556#>",
-"<#3059#>",
-"<#3060#>",
+"<#2525#>", //11
+"<#2526#>",
+"<#2560#>",
+"<#3063#>",
+"<#3064#>",
 "Enable Fast Leave",
-"<#2548#>",
+"<#2552#>",
 "<#1701#>");
 helpcontent[6] = new Array("",
-"<#3020#>",
-"<#3021#>",
-"<#3022#>",
-"<#3023#>",
 "<#3024#>",
 "<#3025#>",
-"<#3045#>");
+"<#3026#>",
+"<#3027#>",
+"<#3028#>",
+"<#3029#>",
+"<#3049#>");
 helpcontent[7] = new Array("",
 "<#289#>",
 "<#311#>",
 "<#309#>",
-"<#2942#>",
-"<#2941#>",
-"<#2939#>",
-"<#2959#>",
-"<#2957#>",
-"<#2965#>",
+"<#2946#>",
+"<#2945#>",
 "<#2943#>",
-"<#2961#>", //11
+"<#2963#>",
+"<#2961#>",
+"<#2969#>",
+"<#2947#>",
+"<#2965#>", //11
 "<#307#>",
 "<#293#>",
 "<#295#>",
 "<#1515#>",
 "<#486#>",
-"<#2963#>",
-"<#2945#>",
+"<#2967#>",
+"<#2949#>",
 "<#1514#>",
-"<#2380#>",
-"<#2595#>", //21
-"<#2306#>",
-"<#2395#>",
-"<#2390#>",
-"<#2388#>",
-"<#2389#>",
+"<#2383#>",
+"<#2599#>", //21
+"<#2309#>",
+"<#2398#>",
+"<#2393#>",
+"<#2391#>",
+"<#2392#>",
 "<#598#>",
-"<#2458#>",
-"<#2934#>",
-"<#2935#>", //30
-"<#2949#>", //31
-"<#2952#>",
-"<#2954#>",
+"<#2462#>",
+"<#2938#>",
+"<#2939#>", //30
+"<#2953#>", //31
 "<#2956#>",
-"<#3699#>",
-"<#3687#>",
-"<#3691#>",
+"<#2958#>",
+"<#2960#>",
+"<#3705#>",
 "<#3693#>",
-"<#3695#>",
 "<#3697#>",
-"<#3685#>", //41
-"<#3683#>",
-"<#3702#>",
-"<#3704#>",
-"<#3706#>",
-"<#3708#>"
+"<#3699#>",
+"<#3701#>",
+"<#3703#>",
+"<#3691#>", //41
+"<#3689#>",
+"<#3708#>",
+"<#3710#>",
+"<#3712#>",
+"<#3714#>"
 );
 helpcontent[8] = new Array("",
 "<#2088#>",
@@ -176,86 +176,86 @@ helpcontent[10] = new Array("",
 "<#2063#>",
 "<#2061#>");
 helpcontent[11] = new Array("",
-"<#2579#>",
 "<#2583#>",
-"<#2576#>",
+"<#2587#>",
+"<#2580#>",
 "<#592#> <#356#>",
 "<#592#> <#266#>",
 "<#1874#>",
-"<#2587#>",
-"<#2589#>",
+"<#2591#>",
+"<#2593#>",
 "For destination IP address, you can:<br/>(a) enter a specific IP address, such as \"192.168.1.2\"<br/>(b) enter IP addresses within one subnet or within the same IP pool, such as \"192.168.1.0/24\"", /* untranslated */
 "<#752#>",
-"<#3475#>",
+"<#3481#>",
 "If there is no client connection for more than 1 minute, the PLC will enter sleep mode (power saving). The PLC will not wake up until the client connects. (It takes about ten seconds to wake up the PLC)", /* untranslated */
 "Enable Login CAPTCHA is to ensure only human users to pass through and prevent brute force login attack.", /* untranslated */
 "<#2133#>");
 helpcontent[12] = new Array("",
 "<#2227#>",
-"<#2975#>",
-"<#2977#>",
-"<#2979#>");
+"<#2979#>",
+"<#2981#>",
+"<#2983#>");
 helpcontent[13] = new Array("",
-"<#3937#>",
 "<#3943#>",
-"<#3945#>",
-"<#3869#>",
-"<#3941#>");
+"<#3949#>",
+"<#3951#>",
+"<#3875#>",
+"<#3947#>");
 helpcontent[14] = new Array("",
-"<#3453#>",
+"<#3459#>",
 "");
 helpcontent[15] = new Array("",
 "", /*<#968#>*/
-"<#975#><p><a href='../Advanced_AiDisk_ftp.asp' target='_parent' hidefocus='true'><#2764#></a></p><!--span style='color:red'><#976#></span-->",
+"<#975#><p><a href='../Advanced_AiDisk_ftp.asp' target='_parent' hidefocus='true'><#2768#></a></p><!--span style='color:red'><#976#></span-->",
 "<#978#>",
 "<#980#>");
 helpcontent[16] = new Array("",
 "<#1914#><p><#1915#> <a href='/QoS_EZQoS.asp'><#1507#></a></p>");
 helpcontent[17] = new Array("",
-"<#2481#>",
-"<#2482#>",
-"<#2275#>",
-"<#2464#>",
-"<#2465#>",
-"<#2466#>",
-"<#3139#>",
-"<#3137#>",
-"<#3129#>");
+"<#2485#>",
+"<#2486#>",
+"<#2278#>",
+"<#2468#>",
+"<#2469#>",
+"<#2470#>",
+"<#3143#>",
+"<#3141#>",
+"<#3133#>");
 helpcontent[18] = new Array("",
 "<#2075#>",
-"<#2915#>",
-"<#2373#>",
-"<#2915#>",
-"<#3499#>",
-"<#3196#>");
+"<#2919#>",
+"<#2376#>",
+"<#2919#>",
+"<#3505#>",
+"<#3200#>");
 helpcontent[19] = new Array("",
-"<#3110#>",
-"<#3116#>",
+"<#3114#>",
 "<#3120#>",
-"<#3111#>"
+"<#3124#>",
+"<#3115#>"
 );
 helpcontent[20] = new Array("",
 '<#1898#>',
-"<#2656#>",
-"<#2640#>",
+"<#2660#>",
+"<#2644#>",
 "<#1516#>",
 "<#1910#>",
 "<#1912#>",
 "<#156#>");
 helpcontent[21] = new Array("",
-"<#2292#>",
-"<#2297#>",
-"<#2298#>",
-"HSDPA<#2959#>",
-"HSDPA<#2957#>",
+"<#2295#>",
+"<#2300#>",
+"<#2301#>",
+"HSDPA<#2963#>",
+"HSDPA<#2961#>",
 "<#293#>",
 "<#295#>",
-"<#2293#>",
-"<#2282#>",
+"<#2296#>",
 "<#2285#>",
-"<#2302#>",
-"<#2295#>",
-"<#2301#>");
+"<#2288#>",
+"<#2305#>",
+"<#2298#>",
+"<#2304#>");
 helpcontent[22] = new Array("",
 "<#442#>",
 "<#442#>",
@@ -263,9 +263,9 @@ helpcontent[22] = new Array("",
 helpcontent[23] = new Array("",
 "",
 "",
-"<#3221#>",
-"<#3223#>",
-"<#3222#>");
+"<#3225#>",
+"<#3227#>",
+"<#3226#>");
 helpcontent[24] = new Array("",
 "<#293#>", //7,13
 "<#295#>", //7,14
@@ -306,17 +306,17 @@ helpcontent[26] = new Array("",
 "<#1856#>",
 "<#1830#>");
 helpcontent[27] = new Array("",
-"<#3981#>: <#3982#><br>" +
-"<#3983#>: <#3984#><br>" +
-"<#3985#>: <#3986#>");
+"<#3987#>: <#3988#><br>" +
+"<#3989#>: <#3990#><br>" +
+"<#3991#>: <#3992#>");
 if('<% nvram_default_get("lan_ipaddr"); %>' != "192.168.1.1"){
 helpcontent[4][1] = "<#351#>".replace("192.168.1.1", '<% nvram_default_get("lan_ipaddr"); %>');
 helpcontent[24][5] = "<#351#>".replace("192.168.1.1", '<% nvram_default_get("lan_ipaddr"); %>');
 }
 helpcontent[28] = new Array("");
 helpcontent[29] = new Array("",
-"<#2779#>",
-"<#2768#>");
+"<#2783#>",
+"<#2772#>");
 helpcontent[30] = new Array("",
 "Send alert before monthly alert is reached",/*untranslated*/
 "Cut-off internet if monthly limit is reached");/*untranslated*/
@@ -328,7 +328,7 @@ helpcontent[31] = new Array("",
 "Enter a whitelist URL, also known as walled garden.\nNote: Guest user can fetch the whitelist web content under the domain name without any authentication."/*untranslated*/
 );
 helpcontent[32] = new Array("",
-"<#4128#>",
+"<#4134#>",
 "Enable this option allows VPN clients to access the subnet of your LAN",/*untranslated*/
 "Enable this option allows VPN clients use the Internet from your router instead of the one at their location.",/*untranslated*/
 "Virtual network device type. TUN devices encapsulate IPv4 or IPv6 (OSI Layer 3) while TAP devices encapsulate Ethernet 802.3 (OSI Layer 2).",/*untranslated*/
@@ -358,8 +358,8 @@ helpcontent[32] = new Array("",
 "You can shift original certification of OpenVPN server from your other one or the old ASUS router, rather than create a new one and ask all clients to setup OpenVPN profile again."/*untranslated*/
 );
 helpcontent[33] = new Array("",
-"<#3625#>",
-"<#3643#>"
+"<#3631#>",
+"<#3649#>"
 );
 helpcontent[34] = new Array("",
 "This feature allows system to capture diagnostic System debug log in the background, duration depends on the Diagnostic debug log capture duration option, depends on the option selected, system might transmit single debug log automatically to ASUS Support Team for analysis after capture completed or transmit multiple debug logs over a period of time. Click on the yellow System icon could cancel the debug log capture.",/*untranslated*/
@@ -367,8 +367,8 @@ helpcontent[34] = new Array("",
 "<#2001#>"
 );
 helpcontent[35] = new Array("",
-"<#2734#>",
-"<#2749#>",
-"<#2746#>",
-"<#2732#>");
+"<#2738#>",
+"<#2753#>",
+"<#2750#>",
+"<#2736#>");
 

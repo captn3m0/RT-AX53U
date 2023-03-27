@@ -36,6 +36,9 @@ var wanObj = {
 "v6plus": {
 "ipv6_service": "ipv6pt"
 },
+"ocnvc": {
+"ipv6_service": "ipv6pt"
+},
 "vpn": {
 "wan_heartbeat_x": ""
 },

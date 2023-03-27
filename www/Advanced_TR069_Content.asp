@@ -228,7 +228,7 @@ document.getElementById("cert_panel").style.marginLeft = blockmarginLeft+"px";
 </td>
 </tr>
 <tr>
-<th><#3494#></th>
+<th><#3500#></th>
 <td>
 <input type="text" maxlength="32" name="tr_username" class="input_15_table" value="<% nvram_get("tr_username"); %>" onKeyPress="return is_string(this,event);" autocorrect="off" autocapitalize="off"/>
 </td>
@@ -247,7 +247,7 @@ document.getElementById("cert_panel").style.marginLeft = blockmarginLeft+"px";
 </tr>
 </thead>
 <tr>
-<th><#3494#></th>
+<th><#3500#></th>
 <td>
 <input type="text" maxlength="32" name="tr_conn_username" class="input_15_table" value="<% nvram_get("tr_conn_username"); %>" onKeyPress="return is_string(this,event);" autocorrect="off" autocapitalize="off"/>
 </td>

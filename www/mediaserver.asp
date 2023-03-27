@@ -278,7 +278,7 @@ return true;
 }
 function get_disk_tree(){
 if(disk_flag == 1){
-alert('<#2826#>');
+alert('<#2830#>');
 return false;
 }
 cal_panel_block("folderTree_panel", 0.25);
@@ -575,7 +575,7 @@ var dms_dir_type_x_tmp = "";
 var rule_num = document.getElementById("dlna_path_table").rows.length;
 var item_num = document.getElementById("dlna_path_table").rows[0].cells.length;
 if(rule_num >= upper){
-alert("<#2479#> " + upper + " <#2480#>");
+alert("<#2483#> " + upper + " <#2484#>");
 return false;
 }
 if(document.getElementById("PATH").value==""){
@@ -601,7 +601,7 @@ dms_dir_type_x_tmp += document.form.type_V_video.checked? "V" : "";
 if(item_num >=2){
 for(i=0; i<rule_num; i++){
 if(document.getElementById("PATH").value.toLowerCase() == document.getElementById("dlna_path_table").rows[i].cells[0].title.toLowerCase()){
-alert("<#2472#>");
+alert("<#2476#>");
 document.getElementById("PATH").focus();
 document.getElementById("PATH").select();
 return false;
@@ -630,7 +630,7 @@ var dms_dir_type_x_array_row = dms_dir_type_x_array.split('&#60');
 var code = "";
 code +='<table width="98%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="dlna_path_table">';
 if(dms_dir_x_array_row.length == 1)
-code +='<tr><td style="color:#FFCC00;" colspan="6"><#2407#></td></tr>';
+code +='<tr><td style="color:#FFCC00;" colspan="6"><#2410#></td></tr>';
 else{
 for(var i = 1; i < dms_dir_x_array_row.length; i++){
 var tmp_type = "";
@@ -679,7 +679,7 @@ document.form.dms_dir_manual.value = 0;
 <tr>
 <td><div id="createFolderBtn" class="createFolderBtn" title="<#913#>"></div></td>
 <td><div id="deleteFolderBtn" class="deleteFolderBtn" title="<#1712#>"></div></td>
-<td><div id="modifyFolderBtn" class="modifyFolderBtn" title="<#2762#>"></div></td>
+<td><div id="modifyFolderBtn" class="modifyFolderBtn" title="<#2766#>"></div></td>
 </tr>
 </table>
 </div>
@@ -743,7 +743,7 @@ document.form.dms_dir_manual.value = 0;
 </span>
 </div>
 <div id="splitLine" class="splitLine"></div>
-<div id="upnp_desc_id" class="formfontdesc" style="margin-top: 10px;"><#3452#></div>
+<div id="upnp_desc_id" class="formfontdesc" style="margin-top: 10px;"><#3458#></div>
 </td>
 </tr>
 <tr>
@@ -773,7 +773,7 @@ document.form.daapd_enable.value = 0;
 </td>
 </tr>
 <tr>
-<th><#2460#></th>
+<th><#2464#></th>
 <td>
 <div><input name="daapd_friendly_name" type="text" style="margin-left:15px;" class="input_32_table" maxlength="32" placeholder="<% nvram_get("lan_hostname"); %>" value="<% nvram_get("daapd_friendly_name"); %>" autocorrect="off" autocapitalize="off"><br/><div id="alert_msg1" style="color:#FC0;margin-left:10px;"></div></div>
 </td>
@@ -808,7 +808,7 @@ document.form.dms_enable.value = 0;
 }
 );
 </script>
-<div id="noUSB" style="color:#FC0;display:none;margin-left:17px;padding-top:2px;padding-bottom:2px;"><#2826#></div>
+<div id="noUSB" style="color:#FC0;display:none;margin-left:17px;padding-top:2px;padding-bottom:2px;"><#2830#></div>
 </td>
 </tr>
 <tr>
@@ -835,13 +835,13 @@ document.form.dms_enable.value = 0;
 <table width="98%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table" style="margin-top:8px;">
 <thead>
 <tr>
-<td colspan="3" id="GWStatic"><#1773#>&nbsp;(<#2611#>&nbsp;10)</td>
+<td colspan="3" id="GWStatic"><#1773#>&nbsp;(<#2615#>&nbsp;10)</td>
 </tr>
 </thead>
 <tr>
 <th><#1770#></th>
 <th><#1769#></th>
-<th><#2610#></th>
+<th><#2614#></th>
 </tr>
 <tr>
 <td width="45%">

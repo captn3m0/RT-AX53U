@@ -2266,8 +2266,11 @@ Acest profil VPN a fost dezactivat. Accesați pagina de setări a serverului VPN
 Faceți clic pe [ Acces setări ] de mai jos pentru a accesa pagina de setări VPN.
 Această setare nu poate fi selectată în timp ce este utilizată de celălalt prpfil creat.
 Rețea de domiciliu
+Acum nu există niciun profil VPN. Faceți clic pe [Acces setări] de mai jos în pagina de setare VPN și creați.
 Adăugați o rețea
 Listă de profiluri
+Alegeți o rețea definită
+Programare WiFi
 Versiune hardware
 Help
 Secţiunea de ajutor vă oferă indicaţii şi informaţii cu privire la utilizarea funcţiilor routerului. Faceţi clic pe.
@@ -2442,6 +2445,7 @@ Adresă IPv6 LAN
 Prefix IPv6 LAN
 Setare LAN IPv6
 Native
+OCN Virtual Connect
 v6plus
 Lungime prefix IPv6
 Releu IPv4 Anycast
@@ -3280,6 +3284,8 @@ LAN
 Diverse
 Telecommunications Standards
 Întrerupere interfață WAN
+Programat
+Acces unic
 Programare în timp
 Time Machine
 Cum se utilizează Apple Time Machine?
@@ -3347,10 +3353,10 @@ Alaska
 Ora Pacificului (SUA, Canada)
 Ora zonei muntoase (SUA, Canada)
 Arizona
-Chihuahua, Mazatlan
+Mazatlan
 Saskatchewan
 Guadalajara, Mexico City
-Monterrey
+Monterrey, Chihuahua
 America Centrală
 Ora Estică (SUA, Canada)
 Indiana (est)

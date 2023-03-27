@@ -2266,8 +2266,11 @@ Este perfil VPN está desabilitado Vá para a página de configuração do Servi
 Clique em [ Ir para Configurações ] abaixo para a página de configuração VPN.
 Esta configuração não pode ser selecionada durante a utilização no outro perfil criado.
 Rede doméstica
+Não há perfil VPN no momento. Clique em [Ir para Configuração] abaixo na página de configuração de VPN e crie.
 Adicione uma Rede
 Lista de perfil
+Escolha uma rede definida
+Programação da Wi-Fi
 Versão do hardware
 Ajuda
 A Ajuda fornece orientações e informações obre como usar as funções do roteador. Clique em
@@ -2442,6 +2445,7 @@ LAN Endereço IPv6
 LAN Prefixo IPv6
 Configuração LAN IPv6
 Native
+OCN Virtual Connect
 v6plus
 Comprimento do Prefixo IPv6
 Relé Anycast IPv4
@@ -3280,6 +3284,8 @@ LAN
 Diversos
 Padrões de Telecomunicações
 Terminar Interface WAN
+Programado
+Acesso único
 Programação de Tempo
 Time Machine
 Como utilizar a Apple Time Machine?
@@ -3347,10 +3353,10 @@ Alaska
 Hora do Pacífico (EUA, Canadá)
 Horário das Montanhas (EUA, Canadá)
 Arizona
-Chihuahua, Mazatlán
+Mazatlán
 Saskatchewan
 Guadalajara, Cidade do México
-Monterrey
+Monterrey, Chihuahua
 Hora Central (EUA, Canadá)
 Hora do Leste (EUA, Canadá)
 Indiana (leste)

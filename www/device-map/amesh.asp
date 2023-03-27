@@ -75,7 +75,7 @@ var html = "";
 switch(_supportType) {
 case "central_led" :
 html += "<div style='margin-top:10px;'>";
-html += "<div class='aimesh_node_setting_info_title'><#4146#></div>";
+html += "<div class='aimesh_node_setting_info_title'><#4152#></div>";
 html += "<div class='aimesh_node_setting_info_content'>";
 html += "<div id='led_slider' class='led_slider'></div>";
 html += "<div id='led_text'></div>";
@@ -86,7 +86,7 @@ break;
 case "lp55xx_led" :
 case "ctrl_led" :
 html += "<div style='margin-top:10px;'>";
-html += "<div class='aimesh_node_setting_info_title'><#4172#></div>";
+html += "<div class='aimesh_node_setting_info_title'><#4178#></div>";
 html += "<div class='aimesh_node_setting_info_content'>";
 html += "<div align='center' style='float:left;cursor:pointer;' id='led_radio'></div>";
 html += "</div>";
@@ -191,7 +191,7 @@ gen_current_onboardinglist(get_cfg_clientlist, get_wclientlist, get_wiredclientl
 }
 else {
 $('#onBoarding_block').empty();
-$('#onBoarding_block').append("<div class='amesh_no_data'><#2407#></div>");
+$('#onBoarding_block').append("<div class='amesh_no_data'><#2410#></div>");
 if(typeof parent.show_AMesh_status !== 'undefined' && $.isFunction(parent.show_AMesh_status))
 parent.show_AMesh_status(0, 1);
 }
@@ -583,7 +583,7 @@ download_cloud_icon(model_info, device_id, "onBoarding_block");
 }
 /* Update ameshNumber start */
 if($('#onBoarding_block').children().length == 0) {
-$('#onBoarding_block').append("<div class='amesh_no_data'><#2407#></div>");
+$('#onBoarding_block').append("<div class='amesh_no_data'><#2410#></div>");
 if(typeof parent.show_AMesh_status !== 'undefined' && $.isFunction(parent.show_AMesh_status))
 parent.show_AMesh_status(0, 1);
 }
@@ -963,7 +963,7 @@ if(_ob_path == "1" && wps_enable == "0"){
 if(isSupport("wps_method_ob")){
 var $amesh_wps_text = $('<div>');
 $amesh_wps_text.addClass("amesh_hint_text");
-var hint_text = "<#3758#>";
+var hint_text = "<#3764#>";
 $amesh_wps_text.html(hint_text);
 $connectHtml.find(".amesh_action_bg").before($amesh_wps_text);
 }
@@ -1047,7 +1047,7 @@ var $amesh_wps_text = $('<div>');
 $amesh_wps_text.addClass("amesh_hint_text");
 var hint_text = "<#1018#>";
 hint_text += "<br>";
-hint_text += "<#3758#>";
+hint_text += "<#3764#>";
 $amesh_wps_text.html(hint_text);
 $connectHtml.find(".amesh_action_bg").before($amesh_wps_text);
 }
@@ -1585,9 +1585,9 @@ code += "<div class='aimesh_node_info_bg'>";
 code += "<table id='aimesh_node_client_tb' width='100%' border='1' align='center' cellpadding='0' cellspacing='0' class='FormTable_table'>";
 code += "<tr id='aimesh_node_client_header_tr' height='30px'>";
 code += "<th class='IE8HACK' width=" + aimesh_node_client_info_width[0] + "><#1533#></th>";
-code += "<th class='aimesh_node_client_item' width=" + aimesh_node_client_info_width[1] + " data-clickID='client_name'><#2868#></th>";
-code += "<th class='aimesh_node_client_item' width=" + aimesh_node_client_info_width[2] + " data-clickID='client_ip'><#3520#></th>";
-code += "<th class='aimesh_node_client_item' width=" + aimesh_node_client_info_width[3] + " data-clickID='client_interface'><#3670#></th>";
+code += "<th class='aimesh_node_client_item' width=" + aimesh_node_client_info_width[1] + " data-clickID='client_name'><#2872#></th>";
+code += "<th class='aimesh_node_client_item' width=" + aimesh_node_client_info_width[2] + " data-clickID='client_ip'><#3526#></th>";
+code += "<th class='aimesh_node_client_item' width=" + aimesh_node_client_info_width[3] + " data-clickID='client_interface'><#3676#></th>";
 code += "</tr>";
 code += "</table>";
 code += "</div>";
@@ -1703,7 +1703,7 @@ $conn_priority_select_obj.attr("disabled", false);
 }
 }
 $popupBgHtml.find("#aimesh_node_fw_version").html(node_info.fwver.split("-")[0]);
-$popupBgHtml.find("#aimesh_node_moreconfig").html("<#2764#>");
+$popupBgHtml.find("#aimesh_node_moreconfig").html("<#2768#>");
 if(!node_capability.usb)
 $popupBgHtml.find("#aimesh_node_usb_app_bg").remove();
 /* settup value end */
@@ -1763,7 +1763,7 @@ var block_chars_array = ["\""];
 var block_chars_hint = "";
 for(var i = 0; i < block_chars_array.length; i++) {
 if(node_location_text.indexOf(block_chars_array[i]) >= 0)
-block_chars_hint = block_chars_array[i] + " <#2474#>";
+block_chars_hint = block_chars_array[i] + " <#2478#>";
 }
 if(block_chars_hint != "") {
 show_valid_hint(block_chars_hint);
@@ -1837,7 +1837,7 @@ parent.window.location.href = "/Advanced_FirmwareUpgrade_Content.asp";
 $popupBgHtml.find("#aimesh_node_moreconfig").click(
 function() {
 if(node_info.online == "1" && re_path > 0) {
-var moreConfig = ($popupBgHtml.find(".aimesh_node_setting_bg").css("display") == "none") ? "<#1648#>" : "<#2764#>";
+var moreConfig = ($popupBgHtml.find(".aimesh_node_setting_bg").css("display") == "none") ? "<#1648#>" : "<#2768#>";
 $popupBgHtml.find("#aimesh_node_moreconfig").html(moreConfig);
 var display_state = $popupBgHtml.find(".aimesh_node_setting_bg").css("display");
 if(display_state == "none") {
@@ -1879,7 +1879,7 @@ if(led_status.support) {
 switch(led_status.support) {
 case "central_led":
 var color_table = ["#c6dafc", "#7baaf7", "#4285f4", "#3367d6"];
-var led_table = ["<#1648#>", "<#2622#>", "<#2644#>", "<#2277#>"];
+var led_table = ["<#1648#>", "<#2626#>", "<#2648#>", "<#2280#>"];
 parent.$("#edit_amesh_client_block").find("#led_text").html(led_table[led_status.value]);
 parent.$("#edit_amesh_client_block").find("#led_slider").slider({
 orientation: "horizontal",
@@ -2178,7 +2178,7 @@ sorterApi.drawBorder(parent.$("#edit_amesh_client_block .aimesh_node_info_bg #ai
 function gen_AiMesh_node_client(_nodeClient_array) {
 var nodeClientHtml = "";
 if(_nodeClient_array.length == 0)
-nodeClientHtml = "<tr class='aimesh_node_client_tr'><td style='color:#FFCC00;' colspan='" + aimesh_node_client_list_colspan + "'><#2407#></td></tr>";
+nodeClientHtml = "<tr class='aimesh_node_client_tr'><td style='color:#FFCC00;' colspan='" + aimesh_node_client_list_colspan + "'><#2410#></td></tr>";
 else {
 for(var i = 0; i < _nodeClient_array.length; i += 1) {
 var nodeClientObj = _nodeClient_array[i];
@@ -2218,7 +2218,7 @@ nodeClientHtml += "<div class='clientIcon_no_hover " + icon_type + " aimesh_node
 nodeClientHtml += "</td>";
 var client_name = (nodeClientObj.nickName == "") ? nodeClientObj.name : nodeClientObj.nickName;
 nodeClientHtml += "<td width='" + aimesh_node_client_info_width[1] + ";'style='word-wrap:break-word; word-break:break-all;'>" + client_name + "</td>";
-var nodeIP = (nodeClientObj.ip == "offline") ? "<#4145#>" : nodeClientObj.ip;
+var nodeIP = (nodeClientObj.ip == "offline") ? "<#4151#>" : nodeClientObj.ip;
 nodeClientHtml += "<td width='" + aimesh_node_client_info_width[2] + "'>" + nodeIP + "</td>";
 var rssi = 0;
 if(nodeClientObj.isWL == "0")
@@ -2235,7 +2235,7 @@ nodeClientHtml += "</td>";
 nodeClientHtml += "</tr>";
 }
 if(nodeClientHtml == "")
-nodeClientHtml = "<tr class='aimesh_node_client_tr'><td style='color:#FFCC00;' colspan='" + aimesh_node_client_list_colspan + "'><#2407#></td></tr>";
+nodeClientHtml = "<tr class='aimesh_node_client_tr'><td style='color:#FFCC00;' colspan='" + aimesh_node_client_list_colspan + "'><#2410#></td></tr>";
 }
 return nodeClientHtml;
 }
@@ -2278,16 +2278,16 @@ if(_node_info.online == "1" && handle_re_path(_node_info.re_path) > 0){
 if(_node_info.re_path == "1" || _node_info.re_path == "16" || _node_info.re_path == "32" || _node_info.re_path == "64") {
 var real_port_type = gen_real_port_type(_node_info);
 if(real_port_type.type == "eth"){
-component.text = "<#3307#>";
+component.text = "<#3313#>";
 component.icon = "<div class='radioIcon radio_wired'></div>";
 }
 else if(real_port_type.type == "plc"){
-component.text = "<#4221#>";
+component.text = "<#4227#>";
 component.icon = "<div class='radioIcon radio_plc'></div>";
 }
 }
 else {
-component.text = "<#3308#>";
+component.text = "<#3314#>";
 var bandClass = (navigator.userAgent.toUpperCase().match(/CHROME\/([\d.]+)/)) ? "band_txt_chrome" : "band_txt";
 var wireless_band = 0;
 var wireless_band_array = ["2.4G", "5G", "6G"];
@@ -2546,7 +2546,7 @@ return ((isNaN(result)) ? 0 : result);
 <table width="95%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="table1px">
 <tr>
 <td>
-<div id="onBoarding_block"><div class='amesh_no_data'><#2407#></div></div>
+<div id="onBoarding_block"><div class='amesh_no_data'><#2410#></div></div>
 </td>
 </tr>
 <tr>

@@ -2266,8 +2266,11 @@ Bu VPN profili devre dışı bırakıldı. Lütfen VPN Sunucusu ayar sayfasına 
 VPN ayar sayfasına gitmek için aşağıdaki [ Ayarlara Git ] öğesine tıklayın.
 Bu ayar, oluşturulan diğer profil tarafından kullanılırken seçilemez.
 Ev Ağı
+Şu anda bir VPN profili bulunamadı. VPN ayarları sayfasına gitmek için aşağıdaki [Ayarlara Git] öğesine tıklayın ve oluşturun.
 Ağ ekle
 Profil Listesi
+Tanımlı bir ağ seçin
+WiFi Zamanlama
 Donanım sürümü
 Help
 Yardım, yönlendirici işlevlerini kullanmayla ilgili size rehberlik ve bilgi sağlar. Yardım almak
@@ -2442,6 +2445,7 @@ Yerel Ağ IPv6 Adresi
 Yerel Ağ IPv6 Öneki
 IPv6 Yerel Ağ Ayarı
 Native
+OCN Virtual Connect
 v6plus
 IPv6 Önayar Uzunluğu
 IPv4 Her Noktaya Yayın
@@ -3280,6 +3284,8 @@ Yerel Ağ
 Çeşitli
 Telecommunications Standards
 WAN Arabirimini Sonlandır
+Zamanlanmış
+Tek Zamanlı Erişim
 Zaman Planlama
 Time Machine
 Apple Time Machine nasıl kullanılır?
@@ -3347,10 +3353,10 @@ Alaska
 Pasifik Zamanı (ABD, Kanada)
 Dağ Zamanı (ABD, Kanada)
 Arizona
-Chihuahua, Mazatlan
+Mazatlan
 Saskatchewan
 Guadalajara, Mexico City
-Monterrey
+Monterrey, Chihuahua
 Orta Amerika
 Doğu Zamanı (ABD, Kanada)
 Indiana (Doğu)

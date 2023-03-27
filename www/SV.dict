@@ -2266,8 +2266,11 @@ Den här VPN-profilen är avaktiverad. Gå till sidan för inställning av VPN-s
 Klicka på [ Gå till inställning ] nedan för att komma till sidan VPN-inställning.
 Den här inställningen kan inte väljas när den andra skapade profilen används.
 Hemnätverk
+Det finns ingen VPN-profil nu. Klicka på [Gå till inställning] nedan för att komma till sidan VPN-inställning och skapa en.
 Lägg till ett nätverk
 Profillista
+Välj ett definierat nätverk
+WiFi-schemaläggning
 Hårdvaruversion
 Help
 Hjälpen ger dig riktlinjer och information om hur man använder routerns funktioner. Klicka på
@@ -2442,6 +2445,7 @@ LAN IPv6-adress
 LAN IPv6 prefix
 IPv6 LAN inställning
 Native
+OCN Virtual Connect
 v6plus
 IPv6 prefixlängd
 IPv4 anycast-relä
@@ -3280,6 +3284,8 @@ LAN
 Övrigt
 Telecommunications Standards
 Avsluta WAN-gränssnitt
+Schemalagt
+Engångsåtkomst
 Schemaläggning av tid
 Tidsmaskin
 Hur man använder Apple Tidsmaskin?
@@ -3347,10 +3353,10 @@ Alaska
 Pacific Time (USA, Kanada)
 Mountain Time (USA, Kanada)
 Arizona
-Chihuahua, Mazatlan
+Mazatlan
 Saskatchewan
 Guadalajara, Mexico City
-Monterrey
+Monterrey, Chihuahua
 Centralamerika
 Eastern Time (USA, Kanada)
 Indiana (East)

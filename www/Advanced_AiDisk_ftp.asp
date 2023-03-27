@@ -192,7 +192,7 @@ account_group_list = this.groups;
 else
 account_group_list = this.accounts;
 if(this.account_group_list.length <= 0)
-account_group_menu_code += '<div class="noAccount" id="noAccount"><#2827#></div>\n'
+account_group_menu_code += '<div class="noAccount" id="noAccount"><#2831#></div>\n'
 else{
 for(var i = 0; i < account_group_list.length; ++i){
 account_group_menu_code += '<div class="userIcon" id="';
@@ -421,7 +421,7 @@ var accounts_length = this.accounts.length;
 var maximum_account = httpApi.nvramGet(["st_max_user"]).st_max_user;
 document.getElementById("createAccountBtn").onclick = function(){
 if(accounts_length >= maximum_account) {
-alert("<#2479#> " + maximum_account + " <#2480#>");
+alert("<#2483#> " + maximum_account + " <#2484#>");
 return false;
 }
 else
@@ -604,9 +604,9 @@ setTimeout('get_disk_tree();', 1000);
 }
 function secure_check(flag){
 if(ftp_ssl_support){
-document.getElementById("TLS_disabled").innerHTML = (flag==1)? "":"<#3489#>";
+document.getElementById("TLS_disabled").innerHTML = (flag==1)? "":"<#3495#>";
 if(flag==1 && !get_manage_type(PROTOCOL)){
-alert("<#3490#>");
+alert("<#3496#>");
 document.form.ftp_tls[1].checked = true;
 return;
 }
@@ -715,7 +715,7 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 $('#radio_anonymous_enable').iphoneSwitch(!get_manage_type(PROTOCOL),
 function() {
 if(ftp_ssl_support && ftp_tls_orig=="1"){
-alert("<#3490#>");
+alert("<#3496#>");
 refreshpage();
 }
 else{
@@ -741,7 +741,7 @@ switchAccount(PROTOCOL);
 </tr>
 <tr>
 <th>
-<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,1);"><#3136#></a>
+<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,1);"><#3140#></a>
 </th>
 <td>
 <input type="text" name="st_max_user" class="input_3_table" maxlength="2" value="<% nvram_get("st_max_user"); %>" onKeyPress="return validator.isNumber(this, event);" autocorrect="off" autocapitalize="off">
@@ -749,15 +749,15 @@ switchAccount(PROTOCOL);
 </tr>
 <tr>
 <th>
-<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,9);"><#3130#></a>
+<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,9);"><#3134#></a>
 </th>
 <td>
 <select name="ftp_lang" class="input_option">
-<option value="CN" <% nvram_match("ftp_lang", "CN", "selected"); %>>GBK</option><!-- <#3133#> -->
-<option value="TW" <% nvram_match("ftp_lang", "TW", "selected"); %>>Big5</option><!-- <#3132#> -->
-<option value="EN" <% nvram_match("ftp_lang", "EN", "selected"); %>>UTF-8</option><!--<#3131#>-->
-<option value="RU" <% nvram_match("ftp_lang", "RU", "selected"); %>><#3134#></option>
-<option value="CZ" <% nvram_match("ftp_lang", "CZ", "selected"); %>><#3135#></option>
+<option value="CN" <% nvram_match("ftp_lang", "CN", "selected"); %>>GBK</option><!-- <#3137#> -->
+<option value="TW" <% nvram_match("ftp_lang", "TW", "selected"); %>>Big5</option><!-- <#3136#> -->
+<option value="EN" <% nvram_match("ftp_lang", "EN", "selected"); %>>UTF-8</option><!--<#3135#>-->
+<option value="RU" <% nvram_match("ftp_lang", "RU", "selected"); %>><#3138#></option>
+<option value="CZ" <% nvram_match("ftp_lang", "CZ", "selected"); %>><#3139#></option>
 </select>
 </td>
 </tr>
@@ -775,13 +775,13 @@ switchAccount(PROTOCOL);
 <tr id="trAccount" style="display:none;">
 <td><div id="createAccountBtn" title="<#911#>"></div></td>
 <td><div id="deleteAccountBtn" title="<#1709#>"></div></td>
-<td><div id="modifyAccountBtn" title="<#2758#>"></div></td>
+<td><div id="modifyAccountBtn" title="<#2762#>"></div></td>
 </tr>
 <tr id="trPMGroup" style="display:none;">
 <td>
 <select name="" id="user_type" class="input_option" onchange="switchUserType(this.value);">
-<option value="group"><#2886#></option>
-<option value="account"><#2888#></option>
+<option value="group"><#2890#></option>
+<option value="account"><#2892#></option>
 </select>
 </td>
 </tr>
@@ -792,7 +792,7 @@ switchAccount(PROTOCOL);
 <tr>
 <td><div id="createFolderBtn" title="<#913#>"></div></td>
 <td><div id="deleteFolderBtn" title="<#1712#>"></div></td>
-<td><div id="modifyFolderBtn" title="<#2762#>"></div></td>
+<td><div id="modifyFolderBtn" title="<#2766#>"></div></td>
 </tr>
 </table>
 </td>

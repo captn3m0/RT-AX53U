@@ -95,7 +95,7 @@ if(j != item_num-2)
 tmp_value += ">";
 }
 }
-if(tmp_value == "<"+"<#2407#>" || tmp_value == "<")
+if(tmp_value == "<"+"<#2410#>" || tmp_value == "<")
 tmp_value = "";
 document.form.ipv6_fw_rulelist.value = tmp_value;
 rule_num = document.getElementById('ipv4_fw_rulelist_table').rows.length;
@@ -107,7 +107,7 @@ tmp_value += "<";
 tmp_value += document.getElementById('ipv4_fw_rulelist_table').rows[i].cells[2].innerHTML + '>>' + document.getElementById('ipv4_fw_rulelist_table').rows[i].cells[0].innerHTML + '>>>' + document.getElementById('ipv4_fw_rulelist_table').rows[i].cells[1].innerHTML;
 }
 }
-if(tmp_value == "<"+"<#2407#>" || tmp_value == "<"){
+if(tmp_value == "<"+"<#2410#>" || tmp_value == "<"){
 tmp_value = "";
 }
 document.form.filter_wllist.value = tmp_value;
@@ -192,7 +192,7 @@ document.form.ipv6_fw_enable[0].checked = true;
 var rule_num = document.getElementById('ipv6_fw_rulelist_table').rows.length;
 var item_num = document.getElementById('ipv6_fw_rulelist_table').rows[0].cells.length;
 if(rule_num >= upper){
-alert("<#2479#> " + upper + " <#2480#>");
+alert("<#2483#> " + upper + " <#2484#>");
 return;
 }
 addRow(document.form.ipv6_fw_desc_x_0 ,1);
@@ -217,7 +217,7 @@ if(!check_multi_range_v4(document.form.ipv4_fw_port_x_0, 1, 65535, true)) {retur
 var rule_num = document.getElementById('ipv4_fw_rulelist_table').rows.length;
 var item_num = document.getElementById('ipv4_fw_rulelist_table').rows[0].cells.length;
 if(rule_num >= upper){
-alert("<#2479#> " + upper + " <#2480#>");
+alert("<#2483#> " + upper + " <#2484#>");
 return;
 }
 ipv4_fw_rulelist_array += '<' + document.form.ipv4_fw_proto_x_0.value + '>>' + document.form.ipv4_fw_lipaddr_x_0.value + '>>>' + document.form.ipv4_fw_port_x_0.value;
@@ -264,7 +264,7 @@ for(i=0;i<PortSplit.length;i++){
 PortSplit[i] = PortSplit[i].replace(/(^\s*)|(\s*$)/g, ""); // "\space" to ""
 PortSplit[i] = PortSplit[i].replace(/(^0*)/g, ""); // "^0" to ""
 if(PortSplit[i] == "" ||PortSplit[i] == 0){
-alert("<#2478#>");
+alert("<#2482#>");
 obj.focus();
 obj.select();
 return false;
@@ -334,7 +334,7 @@ var ipv6_fw_rulelist_row = decodeURIComponent(ipv6_fw_rulelist_array).split('<')
 var code = "";
 code +='<table width="100%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="ipv6_fw_rulelist_table">';
 if(ipv6_fw_rulelist_row.length == 1)
-code +='<tr><td style="color:#FFCC00;" colspan="6"><#2407#></td></tr>';
+code +='<tr><td style="color:#FFCC00;" colspan="6"><#2410#></td></tr>';
 else{
 for(var i = 1; i < ipv6_fw_rulelist_row.length; i++){
 overlib_str0[i] ="";
@@ -389,7 +389,7 @@ var ipv4_fw_rulelist_row = decodeURIComponent(ipv4_fw_rulelist_array).split('<')
 var code = "";
 code +='<table width="100%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="ipv4_fw_rulelist_table">';
 if(ipv4_fw_rulelist_row.length == 1){
-code +='<tr><td style="color:#FFCC00;" colspan="6"><#2407#></td></tr>';
+code +='<tr><td style="color:#FFCC00;" colspan="6"><#2410#></td></tr>';
 }
 else{
 for(var i = 1; i < ipv4_fw_rulelist_row.length; i++){
@@ -558,9 +558,9 @@ return true;
 <td>
 <select name="fw_log_x" class="input_option">
 <option value="none" <% nvram_match("fw_log_x", "none","selected"); %>><#848#></option>
-<option value="drop" <% nvram_match("fw_log_x", "drop","selected"); %>><#2846#></option>
-<option value="accept" <% nvram_match("fw_log_x", "accept","selected"); %>><#2843#></option>
-<option value="both" <% nvram_match("fw_log_x", "both","selected"); %>><#2844#></option>
+<option value="drop" <% nvram_match("fw_log_x", "drop","selected"); %>><#2850#></option>
+<option value="accept" <% nvram_match("fw_log_x", "accept","selected"); %>><#2847#></option>
+<option value="both" <% nvram_match("fw_log_x", "both","selected"); %>><#2848#></option>
 </select>
 </td>
 </tr>
@@ -598,7 +598,7 @@ return true;
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 <thead>
 <tr>
-<td colspan="4"><#3277#></td>
+<td colspan="4"><#3281#></td>
 </tr>
 </thead>
 <tr>
@@ -612,14 +612,14 @@ return true;
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table">
 <thead>
 <tr>
-<td colspan="7"><#2102#>&nbsp;(<#2611#>&nbsp;128)</td>
+<td colspan="7"><#2102#>&nbsp;(<#2615#>&nbsp;128)</td>
 </tr>
 </thead>
 <tr>
 <th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,25);"><#2067#></a></th>
 <th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,24);"><#2068#></a></th>
-<th><#2400#></th>
-<th><#2610#></th>
+<th><#2403#></th>
+<th><#2614#></th>
 </tr>
 <tr>
 <td width="30%">
@@ -648,7 +648,7 @@ return true;
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 <thead>
 <tr>
-<td colspan="4"><#3277#></td>
+<td colspan="4"><#3281#></td>
 </tr>
 </thead>
 <tr>
@@ -659,7 +659,7 @@ return true;
 </td>
 </tr>
 <tr>
-<th><#2406#></th>
+<th><#2409#></th>
 <td id="ipv6_fw_rulelist">
 <select name="KnownApps" id="KnownApps" class="input_option" onchange="change_wizard(this, 'KnownApps');"></select>
 </td>
@@ -668,16 +668,16 @@ return true;
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table">
 <thead>
 <tr>
-<td colspan="7"><#2102#>&nbsp;(<#2611#>&nbsp;128)</td>
+<td colspan="7"><#2102#>&nbsp;(<#2615#>&nbsp;128)</td>
 </tr>
 </thead>
 <tr>
 <th><#1509#></th>
 <th><#2103#></th>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,25);"><#2398#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,25);"><#2401#></a></th>
 <th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,24);"><#2068#></a></th>
-<th><#2400#></th>
-<th><#2610#></th>
+<th><#2403#></th>
+<th><#2614#></th>
 </tr>
 <tr>
 <td width="15%">

@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#842#> - <#2646#></title>
+<title><#842#> - <#2650#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script language="JavaScript" type="text/javascript" src="/state.js"></script>
@@ -144,7 +144,7 @@ infolist = new Array();
 infolist.push(["<#725#> ...","No_selected"]);
 infolist.push(["<#1987#>","phone"]);
 infolist.push(["QQ","qq"]);
-infolist.push(["<#3744#>","wechat"]);
+infolist.push(["<#3750#>","wechat"]);
 for(var i = 0; i < infolist.length; i++){
 document.form.fb_contact_type.options[i] = new Option(infolist[i][0], infolist[i][1]);
 }
@@ -238,7 +238,7 @@ desclist.push(["<#1911#>","Traditional QoS"]);
 url_group.push(["AiProtection"]);
 desclist.push(["<#891#>","Gaming"]);
 url_group.push(["GameBoost"]);
-desclist.push(["<#3325#>/<#378#>","Traffic Analyzer/Manager"]);
+desclist.push(["<#3331#>/<#378#>","Traffic Analyzer/Manager"]);
 url_group.push(["TrafficMonitor"]);
 desclist.push(["<#468#>","Parental Ctrl"]);
 url_group.push(["ParentalControl"]);
@@ -256,7 +256,7 @@ desclist.push(["<#221#>","Dual WAN"]); //15
 url_group.push(["WANPort"]);
 desclist.push(["<#389#>","LAN"]);
 url_group.push(["LAN", "DHCP", "GWStaticRoute", "IPTV", "SwitchCtrl"]);
-desclist.push(["<#403#>/<#3484#>","USB dongle"]);
+desclist.push(["<#403#>/<#3490#>","USB dongle"]);
 url_group.push(["Modem"]);
 desclist.push(["<#1785#>","DM"]);
 url_group.push(["DownloadMaster"]);//false value
@@ -272,18 +272,18 @@ desclist.push(["<#410#>","Administration"]);
 url_group.push(["OperationMode", "System", "SettingBackup"]);
 desclist.push(["<#747#>","System Log"]);
 url_group.push(["System"]);
-desclist.push(["<#2801#>","Network Tools"]); //25
+desclist.push(["<#2805#>","Network Tools"]); //25
 url_group.push(["Status_"]);
-desclist.push(["<#3016#>","Rescue"]);
+desclist.push(["<#3020#>","Rescue"]);
 url_group.push(["Rescue"]);//false value
 desclist.push(["<#1932#>","Other Devices"]);
 url_group.push(["Other_Device"]);//false value
-desclist.push(["<#3743#>","Fail to access"]);
+desclist.push(["<#3749#>","Fail to access"]);
 url_group.push(["GUI"]);//false value
 desclist.push(["<#414#>","FW update"]);
 url_group.push(["FirmwareUpgrade"]);
 if(isSupport("Instant_Guard")){
-desclist.push(["<#4219#>","Instant Guard"]); //30
+desclist.push(["<#4225#>","Instant Guard"]); //30
 url_group.push(["Instant_Guard"]);
 }
 }
@@ -694,7 +694,7 @@ var days = Math.floor(dblog_remaining / 60 / 60 / 24);
 var hours = Math.floor(dblog_remaining / 60 / 60 % 24);
 var minutes = Math.floor(dblog_remaining / 60 % 60);
 var seconds = Math.floor(dblog_remaining % 60);
-var remaining_time_str = "<#2766#> : ";
+var remaining_time_str = "<#2770#> : ";
 if(dblog_remaining == 0) {
 remaining_time_str += "0" + " " + "(Prepare data...)"; //Untranslated
 return remaining_time_str;
@@ -702,11 +702,11 @@ return remaining_time_str;
 if(days)
 remaining_time_str += days + " <#1690#> ";
 if(hours)
-remaining_time_str += hours + " <#2280#> ";
+remaining_time_str += hours + " <#2283#> ";
 if(minutes)
-remaining_time_str += minutes + " <#2657#> ";
+remaining_time_str += minutes + " <#2661#> ";
 if(seconds)
-remaining_time_str += seconds + " <#3084#> ";
+remaining_time_str += seconds + " <#3088#> ";
 return remaining_time_str;
 };
 $(".dblog_remaining_text").html(transformTime(dblog_remaining));
@@ -826,13 +826,13 @@ return sec;
 var selectOption = {};
 var baseOption = {};
 if(hnd_ax_675x_support) {
-selectOption = {"1 <#2280#>" : hour_to_sec(1)};
+selectOption = {"1 <#2283#>" : hour_to_sec(1)};
 }
 if(usb_support && $("input[name=dblog_tousb_cb]").prop("checked")) {
-baseOption = { "12 <#2280#>" : hour_to_sec(12), "1 <#1690#>" : hour_to_sec(24), "2 <#1690#>" : hour_to_sec(48), "3 <#1690#>" : hour_to_sec(72) };
+baseOption = { "12 <#2283#>" : hour_to_sec(12), "1 <#1690#>" : hour_to_sec(24), "2 <#1690#>" : hour_to_sec(48), "3 <#1690#>" : hour_to_sec(72) };
 }
 else {
-baseOption = { "6 <#2280#>" : hour_to_sec(6), "12 <#2280#>" : hour_to_sec(12), "24 <#2280#>" : hour_to_sec(24) };
+baseOption = { "6 <#2283#>" : hour_to_sec(6), "12 <#2283#>" : hour_to_sec(12), "24 <#2283#>" : hour_to_sec(24) };
 }
 Object.assign(selectOption, baseOption);
 $.each(selectOption, function(item, value) {
@@ -1126,7 +1126,7 @@ setTimeout("redirect()", 1000);
 <tr>
 <td bgcolor="#4D595D" valign="top" >
 <div>&nbsp;</div>
-<div class="formfonttitle"><#410#> - <#2646#></div>
+<div class="formfonttitle"><#410#> - <#2650#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
 <div id="fb_desc0" class="formfontdesc" style="display:none;"><#1957#></div>
 <div id="fb_desc1" class="formfontdesc" style="display:none;"><#1958#></div>
@@ -1150,7 +1150,7 @@ setTimeout("redirect()", 1000);
 </td>
 </tr>
 <tr id="fb_email_provider_field" style="display: none;">
-<th><#2989#></th>
+<th><#2993#></th>
 <td>
 <div style="float:left;">
 <select class="input_option" name="fb_email_provider" onChange="change_fb_email_provider(this);">
@@ -1193,8 +1193,8 @@ setTimeout("redirect()", 1000);
 <input type="radio" name="dslx_diag_enable" class="input" value="1" onclick="change_dsl_diag_enable(1);"><#187#>
 <input type="radio" name="dslx_diag_enable" class="input" value="0" onclick="change_dsl_diag_enable(0);" checked><#186#>
 <br>
-<span id="storage_ready" class="hint-color" style="display:none;">* <#3482#></span>
-<span id="be_lack_storage" class="hint-color" style="display:none;">* <#2826#></span>
+<span id="storage_ready" class="hint-color" style="display:none;">* <#3488#></span>
+<span id="be_lack_storage" class="hint-color" style="display:none;">* <#2830#></span>
 </td>
 </tr>
 <tr id="dslx_diag_duration">
@@ -1202,11 +1202,11 @@ setTimeout("redirect()", 1000);
 <td>
 <select class="input_option" name="dslx_diag_duration">
 <option value="0" selected><#153#></option>
-<option value="3600">1 <#2280#></option>
-<option value="18000">5 <#2280#></option>
-<option value="43200">12 <#2280#></option>
-<option value="86400">24 <#2280#></option>
-<option value="172800">48 <#2280#></option>
+<option value="3600">1 <#2283#></option>
+<option value="18000">5 <#2283#></option>
+<option value="43200">12 <#2283#></option>
+<option value="86400">24 <#2283#></option>
+<option value="172800">48 <#2283#></option>
 </select>
 </td>
 </tr>
@@ -1217,7 +1217,7 @@ setTimeout("redirect()", 1000);
 <input type='radio' name='dblog_enable' id='dblog_status_en' value="1" onclick="diag_change_dblog_status();"><label for='dblog_status_en'><#187#></label>
 <input type='radio' name='dblog_enable' id='dblog_status_dis' value="0" onclick="diag_change_dblog_status();" checked><label for='dblog_status_dis'><#186#></label>
 <label class="storeUSBHint hint-color"><input type="checkbox" name="dblog_tousb_cb" value="1" onclick="diag_change_storeUSB();" checked><#1955#></label>
-<span class="noUSBHint hint-color">* <#2826#></span>
+<span class="noUSBHint hint-color">* <#2830#></span>
 </div>
 <div class="dblog_enabled_status">
 <span>* <#1946#></span>

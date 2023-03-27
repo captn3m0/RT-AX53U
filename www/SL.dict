@@ -2266,8 +2266,11 @@ Ta profil VPN je onemogočen. Odprite stran za nastavitev strežnika VPN in ga o
 Stran za nastavitev strežnika VPN odprete tako, da spodaj kliknete »Pojdi na nastavitev«.
 Te nastavitve ne morete izbrati, če uporabljate profil, ki ga je ustvaril drug uporabnik.
 Domače omrežje
+Trenutno ni nobenega profila VPN. Spodaj kliknite [Pojdi na nastavitev], da odprete stran z nastavitvijo omrežja VPN in ustvarite omrežje.
 Dodaj omrežje
 Seznam profilov
+Izberite definirano omrežje
+Razporejanje za WiFi
 Različica strojne opreme
 Pomoč
 V pomoči najdete nasvete in informacije o uporabi funkcij usmerjevalnika. Kliknite
@@ -2442,6 +2445,7 @@ Naslov IPv6 omrežja LAN
 Predpona IPv6 omrežja LAN
 Nastavitev omrežja LAN IPv6
 Native
+OCN Virtual Connect
 v6plus
 Dolžina predpone IPv6
 Posredovanje Anycast za IPv4
@@ -3280,6 +3284,8 @@ Lokalno omrežje
 Razno
 Telekomunikacijski standardi
 Prekinitev vmesnika WAN
+Razporejeno
+Enkraten dostop
 Časovni razpored
 Time Machine
 Kako uporabljati Apple Time Machine?
@@ -3347,10 +3353,10 @@ Aljaska
 Pacifiški čas (ZDA, Kanada)
 Gorski čas (ZDA, Kanada)
 Arizona
-Chihuahua, Mazatlan
+Mazatlan
 Saskatchewan
 Guadalajara, Mexico City
-Monterrey
+Monterrey, Chihuahua
 Osrednji čas (ZDA, Kanada)
 Vzhodni čas (ZDA, Kanada)
 Indiana (vzhod)

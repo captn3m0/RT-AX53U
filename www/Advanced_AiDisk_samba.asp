@@ -195,7 +195,7 @@ account_group_list = this.groups;
 else
 account_group_list = this.accounts;
 if(account_group_list.length <= 0)
-account_group_menu_code += '<div class="noAccount" id="noAccount"><#2827#></div>\n'
+account_group_menu_code += '<div class="noAccount" id="noAccount"><#2831#></div>\n'
 else{
 for(var i = 0; i < account_group_list.length; ++i){
 account_group_menu_code += '<div class="userIcon" id="';
@@ -411,7 +411,7 @@ var accounts_length = this.accounts.length;
 var maximum_account = httpApi.nvramGet(["st_max_user"]).st_max_user;
 document.getElementById("createAccountBtn").onclick = function(){
 if(accounts_length >= maximum_account) {
-alert("<#2479#> " + maximum_account + " <#2480#>");
+alert("<#2483#> " + maximum_account + " <#2484#>");
 return false;
 }
 else
@@ -682,8 +682,8 @@ setTimeout('get_disk_tree();', 1000);
 </span>
 </div>
 <div id="splitLine" class="splitLine"></div>
-<div class="formfontdesc" style="margin-top: 10px;"><#3078#></div>
-<div id="smbv1_hint" class="formfontdesc"><#921#>&nbsp;<#3079#></div>
+<div class="formfontdesc" style="margin-top: 10px;"><#3082#></div>
+<div id="smbv1_hint" class="formfontdesc"><#921#>&nbsp;<#3083#></div>
 </td>
 </tr>
 <tr>
@@ -728,7 +728,7 @@ switchAccount(PROTOCOL);
 </tr>
 <tr>
 <th>
-<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,2);"><#3128#></a>
+<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,2);"><#3132#></a>
 </th>
 <td>
 <div><input type="text" name="computer_name" id="computer_name" class="input_20_table charToUpperCase" maxlength="15" value="<% nvram_get("computer_name"); %>" autocorrect="off" autocapitalize="on"><br/>
@@ -737,7 +737,7 @@ switchAccount(PROTOCOL);
 </tr>
 <tr>
 <th>
-<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,3);"><#3141#></a>
+<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,3);"><#3145#></a>
 </th>
 <td>
 <input type="text" name="st_samba_workgroup" id="st_samba_workgroup" class="input_20_table charToUpperCase" maxlength="15" value="<% nvram_get("st_samba_workgroup"); %>" autocorrect="off" autocapitalize="on">
@@ -745,7 +745,7 @@ switchAccount(PROTOCOL);
 </tr>
 <tr>
 <th>
-<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,1);"><#3136#></a>
+<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,1);"><#3140#></a>
 </th>
 <td>
 <input type="text" name="st_max_user" class="input_3_table" maxlength="2" value="<% nvram_get("st_max_user"); %>" onKeyPress="return validator.isNumber(this, event);" autocorrect="off" autocapitalize="off">
@@ -755,8 +755,8 @@ switchAccount(PROTOCOL);
 <th><#969#></th>
 <td>
 <select name="usb_fs_ntfs_sparse" class="input_option">
-<option class="content_input_fd" value="0" <% nvram_match("usb_fs_ntfs_sparse", "0","selected"); %>><#3841#></option>
-<option class="content_input_fd" value="1" <% nvram_match("usb_fs_ntfs_sparse", "1","selected"); %>><#3840#></option>
+<option class="content_input_fd" value="0" <% nvram_match("usb_fs_ntfs_sparse", "0","selected"); %>><#3847#></option>
+<option class="content_input_fd" value="1" <% nvram_match("usb_fs_ntfs_sparse", "1","selected"); %>><#3846#></option>
 </select>
 </td>
 </tr>
@@ -774,13 +774,13 @@ switchAccount(PROTOCOL);
 <tr id="trAccount" style="display:none;">
 <td><div id="createAccountBtn" title="<#911#>"></div></td>
 <td><div id="deleteAccountBtn" title="<#1709#>"></div></td>
-<td><div id="modifyAccountBtn" title="<#2758#>"></div></td>
+<td><div id="modifyAccountBtn" title="<#2762#>"></div></td>
 </tr>
 <tr id="trPMGroup" style="display:none;">
 <td>
 <select name="" id="user_type" class="input_option" onchange="switchUserType(this.value);">
-<option value="group"><#2886#></option>
-<option value="account"><#2888#></option>
+<option value="group"><#2890#></option>
+<option value="account"><#2892#></option>
 </select>
 </td>
 </tr>
@@ -791,7 +791,7 @@ switchAccount(PROTOCOL);
 <tr>
 <td><div id="createFolderBtn" title="<#913#>"></div></td>
 <td><div id="deleteFolderBtn" title="<#1712#>"></div></td>
-<td><div id="modifyFolderBtn" title="<#2762#>"></div></td>
+<td><div id="modifyFolderBtn" title="<#2766#>"></div></td>
 </tr>
 </table>
 </td>

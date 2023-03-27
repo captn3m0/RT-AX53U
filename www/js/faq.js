@@ -49,7 +49,7 @@
 },
 "webAppFilter": {
 "index": "webAppFilter",
-"name": "<#3282#>",
+"name": "<#3288#>",
 "link": "AiProtection_WebProtector.asp",
 "menu": "<#468#>",
 "mode": ["RT"],
@@ -73,7 +73,7 @@
 },
 "qos": {
 "index": "qos",
-"name": "<#2651#>",
+"name": "<#2655#>",
 "link": "QoS_EZQoS.asp",
 "menu": "<#2158#>",
 "mode": ["RT"],
@@ -105,7 +105,7 @@
 },
 "internetSpeed": {
 "index": "internetSpeed",
-"name": "<#2331#>",
+"name": "<#2334#>",
 "link": "AdaptiveQoS_InternetSpeed.asp",
 "menu": "<#2158#>",
 "mode": ["RT"],
@@ -129,9 +129,9 @@
 },
 "wifiRadar": {
 "index": "wifiRadar",
-"name": "<#3749#>",
+"name": "<#3755#>",
 "link": "WiFi_Insight.asp",
-"menu": "<#3749#>",
+"menu": "<#3755#>",
 "mode": ["RT", "AP", "RE"],
 "support": (() => isSupport("rog"))(),
 },
@@ -161,7 +161,7 @@
 },
 "vpnFusion": {
 "index": "vpnFusion",
-"name": "<#4112#>",
+"name": "<#4118#>",
 "link": "Advanced_VPNClient_Content.asp",
 "menu": "VPN",
 "mode": ["RT"],
@@ -169,7 +169,7 @@
 },
 "instantGuard": {
 "index": "instantGuard",
-"name": "<#4112#>",
+"name": "<#4118#>",
 "link": "Advanced_Instant_Guard.asp",
 "menu": "VPN",
 "mode": ["RT"],
@@ -177,9 +177,9 @@
 },
 "statistic": {
 "index": "statistic",
-"name": "<#3211#>",
+"name": "<#3215#>",
 "link": "TrafficAnalyzer_Statistic.asp",
-"menu": "<#3325#>",
+"menu": "<#3331#>",
 "mode": ["RT"],
 "support": (() => isSupport("traffic_analyzer"))(),
 },
@@ -187,7 +187,7 @@
 "index": "bandwidthMponitor",
 "name": "<#1429#>",
 "link": "AdaptiveQoS_Bandwidth_Monitor.asp",
-"menu": "<#3325#>",
+"menu": "<#3331#>",
 "mode": ["RT"],
 "support": (() => isSupport("bandwidth_monitor"))(),
 },
@@ -195,7 +195,7 @@
 "index": "TrafficMponitor",
 "name": "<#776#>",
 "link": "Main_TrafficMonitor_realtime.asp",
-"menu": "<#3325#>",
+"menu": "<#3331#>",
 "mode": ["RT"],
 "support": (() => isSupport("bandwidth_monitor"))(),
 },
@@ -203,13 +203,13 @@
 "index": "webHistory",
 "name": "<#893#>",
 "link": "AdaptiveQoS_WebHistory.asp",
-"menu": "<#3325#>",
+"menu": "<#3331#>",
 "mode": ["RT"],
 "support": (() => isSupport("web_history"))(),
 },
 "auraRGB": {
 "index": "auraRGB",
-"name": "<#4152#>",
+"name": "<#4158#>",
 "link": "index.asp",
 "menu": "<#380#>",
 "mode": ["RT", "AP", "MB", "RE"],
@@ -225,7 +225,7 @@
 },
 "smartConnect": {
 "index": "smartConnect",
-"name": "<#3168#>",
+"name": "<#3172#>",
 "link": "Advanced_Wireless_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -233,7 +233,7 @@
 },
 "wirelessHideSSID": {
 "index": "wirelessHideSSID",
-"name": "<#3863#>",
+"name": "<#3869#>",
 "link": "Advanced_Wireless_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -249,7 +249,7 @@
 },
 "channelBandwidth": {
 "index": "channelBandwidth",
-"name": "<#3788#>",
+"name": "<#3794#>",
 "link": "Advanced_Wireless_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -265,7 +265,7 @@
 },
 "authMethod": {
 "index": "authMethod",
-"name": "<#3776#>",
+"name": "<#3782#>",
 "link": "Advanced_Wireless_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -281,7 +281,7 @@
 },
 "wpaKey": {
 "index": "wpaKey",
-"name": "<#3913#>",
+"name": "<#3919#>",
 "link": "Advanced_Wireless_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -289,7 +289,7 @@
 },
 "protectedManagementFrames": {
 "index": "protectedManagementFrames",
-"name": "<#3894#>",
+"name": "<#3900#>",
 "link": "Advanced_Wireless_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -297,7 +297,7 @@
 },
 "gtkInterval": {
 "index": "gtkInterval",
-"name": "<#3924#>",
+"name": "<#3930#>",
 "link": "Advanced_Wireless_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -345,7 +345,7 @@
 },
 "wirelessRadio": {
 "index": "wirelessRadio",
-"name": "<#3915#>",
+"name": "<#3921#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -353,7 +353,7 @@
 },
 "wirelessScheduler": {
 "index": "wirelessScheduler",
-"name": "<#3930#>",
+"name": "<#3936#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -361,7 +361,7 @@
 },
 "apIsolate": {
 "index": "apIsolate",
-"name": "<#3891#>",
+"name": "<#3897#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -369,7 +369,7 @@
 },
 "roamingAssistant": {
 "index": "roamingAssistant",
-"name": "<#3026#>",
+"name": "<#3030#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -377,7 +377,7 @@
 },
 "igmpSnooping": {
 "index": "igmpSnooping",
-"name": "<#3887#>",
+"name": "<#3893#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -385,7 +385,7 @@
 },
 "multicastRate": {
 "index": "multicastRate",
-"name": "<#3818#>",
+"name": "<#3824#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -401,7 +401,7 @@
 },
 "rtsThreshold": {
 "index": "rtsThreshold",
-"name": "<#3928#>",
+"name": "<#3934#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -409,7 +409,7 @@
 },
 "dtimInterval": {
 "index": "dtimInterval",
-"name": "<#3875#>",
+"name": "<#3881#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -417,7 +417,7 @@
 },
 "beaconInterval": {
 "index": "beaconInterval",
-"name": "<#3861#>",
+"name": "<#3867#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -425,7 +425,7 @@
 },
 "txBurting": {
 "index": "txBurting",
-"name": "<#3933#>",
+"name": "<#3939#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -433,7 +433,7 @@
 },
 "wmm": {
 "index": "wmm",
-"name": "<#3936#>",
+"name": "<#3942#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -441,7 +441,7 @@
 },
 "wmmNoAck": {
 "index": "wmmNoAck",
-"name": "<#3907#>",
+"name": "<#3913#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -449,7 +449,7 @@
 },
 "wmmApsd": {
 "index": "wmmApsd",
-"name": "<#3856#>",
+"name": "<#3862#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -457,7 +457,7 @@
 },
 "optAmpduAggregation": {
 "index": "optAmpduAggregation",
-"name": "<#3848#>",
+"name": "<#3854#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -465,7 +465,7 @@
 },
 "optAmpduAggregation": {
 "index": "optAmpduAggregation",
-"name": "<#3848#>",
+"name": "<#3854#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -473,7 +473,7 @@
 },
 "airtimeFairness": {
 "index": "airtimeFairness",
-"name": "<#3857#>",
+"name": "<#3863#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -481,7 +481,7 @@
 },
 "muMimo": {
 "index": "muMimo",
-"name": "<#3819#>",
+"name": "<#3825#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -489,7 +489,7 @@
 },
 "ofdma": {
 "index": "ofdma",
-"name": "<#2839#>",
+"name": "<#2843#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -497,7 +497,7 @@
 },
 "explicitBeamforming": {
 "index": "explicitBeamforming",
-"name": "<#3879#>",
+"name": "<#3885#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -505,7 +505,7 @@
 },
 "implicitBeamforming": {
 "index": "implicitBeamforming",
-"name": "<#3934#>",
+"name": "<#3940#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -513,7 +513,7 @@
 },
 "txPower": {
 "index": "txPower",
-"name": "<#3825#>",
+"name": "<#3831#>",
 "link": "Advanced_WAdvanced_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -521,7 +521,7 @@
 },
 "roamingBlockList": {
 "index": "roamingBlockList",
-"name": "<#3751#>",
+"name": "<#3757#>",
 "link": "Advanced_Roaming_Block_Content.asp",
 "menu": "<#382#>",
 "mode": ["RT", "AP"],
@@ -553,7 +553,7 @@
 },
 "dhcpServer": {
 "index": "dhcpServer",
-"name": "<#2557#>",
+"name": "<#2561#>",
 "link": "Advanced_DHCP_Content.asp",
 "menu": "<#389#>",
 "mode": ["RT"],
@@ -561,7 +561,7 @@
 },
 "dnsServer": {
 "index": "dnsServer",
-"name": "<#2573#>",
+"name": "<#2577#>",
 "link": "Advanced_DHCP_Content.asp",
 "menu": "<#389#>",
 "mode": ["RT"],
@@ -585,7 +585,7 @@
 },
 "switchControl": {
 "index": "switchControl",
-"name": "<#3237#>",
+"name": "<#3241#>",
 "link": "Advanced_SwitchCtrl_Content.asp",
 "menu": "<#389#>",
 "mode": ["RT", "AP", "MB", "RE"],
@@ -593,7 +593,7 @@
 },
 "linkAggregation": {
 "index": "linkAggregation",
-"name": "<#2778#>",
+"name": "<#2782#>",
 "link": "Advanced_SwitchCtrl_Content.asp",
 "menu": "<#389#>",
 "mode": ["RT", "AP", "MB", "RE"],
@@ -657,7 +657,7 @@
 },
 "aiDisk": {
 "index": "aiDisk",
-"name": "<#2647#>",
+"name": "<#2651#>",
 "link": "aidisk.asp",
 "menu": "<#379#>",
 "mode": ["RT", "AP", "MB", "RE"],
@@ -689,7 +689,7 @@
 },
 "networkPrinter": {
 "index": "networkPrinter",
-"name": "<#2799#>",
+"name": "<#2803#>",
 "link": "PrinterServer.asp",
 "menu": "<#379#>",
 "mode": ["RT", "AP", "MB", "RE"],
@@ -705,7 +705,7 @@
 },
 "timeMachine": {
 "index": "timeMachine",
-"name": "<#3283#>",
+"name": "<#3289#>",
 "link": "Advanced_TimeMachine.asp",
 "menu": "<#379#>",
 "mode": ["RT", "AP", "MB", "RE"],
@@ -729,7 +729,7 @@
 },
 "aicloudSync": {
 "index": "aicloudSync",
-"name": "<#3178#>",
+"name": "<#3182#>",
 "link": "cloud_sync.asp",
 "menu": "<#959#>",
 "mode": ["RT", "AP", "MB", "RE"],
@@ -737,7 +737,7 @@
 },
 "aicloudSyncServer": {
 "index": "aicloudSyncServer",
-"name": "<#959#> <#3103#>",
+"name": "<#959#> <#3107#>",
 "link": "cloud_router_sync.asp",
 "menu": "<#959#>",
 "mode": ["RT", "AP", "MB", "RE"],
@@ -745,7 +745,7 @@
 },
 "aicloudSetting": {
 "index": "aicloudSetting",
-"name": "<#959#> <#3123#>",
+"name": "<#959#> <#3127#>",
 "link": "cloud_settings.asp",
 "menu": "<#959#>",
 "mode": ["RT", "AP", "MB", "RE"],
@@ -753,7 +753,7 @@
 },
 "aicloudLog": {
 "index": "aicloudLog",
-"name": "<#959#> <#2617#>",
+"name": "<#959#> <#2621#>",
 "link": "cloud_syslog.asp",
 "menu": "<#959#>",
 "mode": ["RT", "AP", "MB", "RE"],
@@ -857,7 +857,7 @@
 },
 "hddHibernation": {
 "index": "hddHibernation",
-"name": "<#3474#>",
+"name": "<#3480#>",
 "link": "Advanced_System_Content.asp",
 "menu": "<#410#>",
 "mode": ["RT", "AP", "MB", "RE"],
@@ -865,7 +865,7 @@
 },
 "usbMode": {
 "index": "usbMode",
-"name": "<#3096#>",
+"name": "<#3100#>",
 "link": "Advanced_System_Content.asp",
 "menu": "<#410#>",
 "mode": ["RT", "AP", "MB", "RE"],
@@ -873,7 +873,7 @@
 },
 "timeZone": {
 "index": "timeZone",
-"name": "<#2585#>",
+"name": "<#2589#>",
 "link": "Advanced_System_Content.asp",
 "menu": "<#410#>",
 "mode": ["RT", "AP", "MB", "RE"],
@@ -881,7 +881,7 @@
 },
 "netServer": {
 "index": "netServer",
-"name": "<#2577#>",
+"name": "<#2581#>",
 "link": "Advanced_System_Content.asp",
 "menu": "<#410#>",
 "mode": ["RT", "AP", "MB", "RE"],
@@ -889,7 +889,7 @@
 },
 "networkMonitoring": {
 "index": "networkMonitoring",
-"name": "<#2797#>",
+"name": "<#2801#>",
 "link": "Advanced_System_Content.asp",
 "menu": "<#410#>",
 "mode": ["RT", "AP", "MB", "RE"],
@@ -937,7 +937,7 @@
 },
 "idleTimeout": {
 "index": "idleTimeout",
-"name": "<#4074#>",
+"name": "<#4080#>",
 "link": "Advanced_System_Content.asp",
 "menu": "<#410#>",
 "mode": ["RT", "AP", "MB", "RE"],
@@ -945,7 +945,7 @@
 },
 "localAuthMethod": {
 "index": "localAuthMethod",
-"name": "<#3776#>",
+"name": "<#3782#>",
 "link": "Advanced_System_Content.asp",
 "menu": "<#410#>",
 "mode": ["RT", "AP", "MB", "RE"],
@@ -993,7 +993,7 @@
 },
 "factoryDefault": {
 "index": "factoryDefault",
-"name": "<#3112#>",
+"name": "<#3116#>",
 "link": "Advanced_SettingBackup_Content.asp",
 "menu": "<#415#>",
 "mode": ["RT", "AP", "MB", "RE"],
@@ -1001,7 +1001,7 @@
 },
 "saveSetting": {
 "index": "saveSetting",
-"name": "<#3117#>",
+"name": "<#3121#>",
 "link": "Advanced_SettingBackup_Content.asp",
 "menu": "<#415#>",
 "mode": ["RT", "AP", "MB", "RE"],
@@ -1009,7 +1009,7 @@
 },
 "restoreSetting": {
 "index": "saveSrestoreSettingtting",
-"name": "<#3121#>",
+"name": "<#3125#>",
 "link": "Advanced_SettingBackup_Content.asp",
 "menu": "<#415#>",
 "mode": ["RT", "AP", "MB", "RE"],
@@ -1017,9 +1017,9 @@
 },
 "feedback": {
 "index": "feedback",
-"name": "<#2646#>",
+"name": "<#2650#>",
 "link": "Advanced_Feedback.asp",
-"menu": "<#2646#>",
+"menu": "<#2650#>",
 "mode": ["RT", "AP", "MB", "RE"],
 "support": (() => isSupport("frs_feedback"))(),
 },
@@ -1049,7 +1049,7 @@
 },
 "ipv6Log": {
 "index": "ipv6Log",
-"name": "<#2438#>",
+"name": "<#2441#>",
 "link": "Main_IPV6Status_Content.asp",
 "menu": "<#747#>",
 "mode": ["RT"],
@@ -1081,9 +1081,9 @@
 },
 "networkAnalysis": {
 "index": "networkAnalysis",
-"name": "<#2796#>",
+"name": "<#2800#>",
 "link": "Main_Analysis_Content.asp",
-"menu": "<#2801#>",
+"menu": "<#2805#>",
 "mode": ["RT", "AP", "MB", "RE"],
 "support": true,
 },
@@ -1091,23 +1091,23 @@
 "index": "netstat",
 "name": "Netstat",
 "link": "Main_Netstat_Content.asp",
-"menu": "<#2801#>",
+"menu": "<#2805#>",
 "mode": ["RT", "AP", "MB", "RE"],
 "support": true,
 },
 "wakeOnLan": {
 "index": "wakeOnLan",
-"name": "<#2818#>",
+"name": "<#2822#>",
 "link": "Main_WOL_Content.asp",
-"menu": "<#2801#>",
+"menu": "<#2805#>",
 "mode": ["RT", "AP", "MB", "RE"],
 "support": true,
 },
 "smartConnectRule": {
 "index": "smartConnectRule",
-"name": "<#3171#>",
+"name": "<#3175#>",
 "link": "Advanced_Smart_Connect.asp",
-"menu": "<#2801#>",
+"menu": "<#2805#>",
 "mode": ["RT", "AP"],
 "support": (() => isSupport("smart_connect") || isSupport("bandstr"))(),
 },

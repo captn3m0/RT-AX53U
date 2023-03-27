@@ -56,7 +56,7 @@ index: "menu_GuestNetwork",
 tab: [
 {url: "Guest_network.asp", tabName: "<#282#>"},
 {url: "Captive_Portal.asp", tabName: "Free WiFi"},
-{url: "Captive_Portal_Advanced.asp", tabName: "<#4018#>"},
+{url: "Captive_Portal_Advanced.asp", tabName: "<#4024#>"},
 {url: "Guest_network_fbwifi.asp", tabName: "Facebook WiFi"},
 {url: "NULL", tabName: "__INHERIT__"}
 ]
@@ -79,8 +79,8 @@ menuName: "<#468#>",
 index: "menu_ParentalControl",
 tab: [
 {url: "AiProtection_WebProtector.asp", tabName: "<#1210#>"},
-{url: "ParentalControl.asp", tabName: "<#3282#>"},
-{url: "YandexDNS.asp", tabName: "<#3974#>"},
+{url: "ParentalControl.asp", tabName: "<#3288#>"},
+{url: "YandexDNS.asp", tabName: "<#3980#>"},
 {url: "NULL", tabName: "__INHERIT__"}
 ]
 },
@@ -97,10 +97,10 @@ menuName: "<#898#>",
 index: "menu_BandwidthMonitor",
 tab: [
 {url: "AdaptiveQoS_Bandwidth_Monitor.asp", tabName: "<#1429#>"},
-{url: "QoS_EZQoS.asp", tabName: "<#2651#>"},
+{url: "QoS_EZQoS.asp", tabName: "<#2655#>"},
 {url: "AdaptiveQoS_WebHistory.asp", tabName: "<#893#>"},
 {url: "AdaptiveQoS_ROG.asp", tabName: "<table style='margin-top:-7px;'><tr><td><img src='/images/ROG_Logo.png' style='border:0px;width:32px;'></td><td>ROG First</td></tr></table>"},
-{url: "Main_Spectrum_Content.asp", tabName: "<#3200#>"},
+{url: "Main_Spectrum_Content.asp", tabName: "<#3204#>"},
 {url: "AdaptiveQoS_TrafficLimiter.asp", tabName: "Traffic Limiter"},
 {url: "Advanced_QOSUserPrio_Content.asp", tabName: "__INHERIT__"},
 {url: "Advanced_QOSUserRules_Content.asp", tabName: "__INHERIT__"},
@@ -108,7 +108,7 @@ tab: [
 {url: "Main_TrafficMonitor_realtime.asp", tabName: "<#776#>"},
 {url: "Main_TrafficMonitor_last24.asp", tabName: "__INHERIT__"},
 {url: "Main_TrafficMonitor_daily.asp", tabName: "__INHERIT__"},
-{url: "AdaptiveQoS_InternetSpeed.asp", tabName: "<#2331#>"},
+{url: "AdaptiveQoS_InternetSpeed.asp", tabName: "<#2334#>"},
 {url: "NULL", tabName: "__INHERIT__"}
 ]
 },
@@ -149,10 +149,10 @@ menuName: "<#959#>",
 index: "menu_AiCloud",
 tab: [
 {url: "cloud_main.asp", tabName: "AiCloud 2.0"},
-{url: "cloud_sync.asp", tabName: "<#3178#>"},
-{url: "cloud_router_sync.asp", tabName: "<#3103#>"},
-{url: "cloud_settings.asp", tabName: "<#3123#>"},
-{url: "cloud_syslog.asp", tabName: "<#2617#>"},
+{url: "cloud_sync.asp", tabName: "<#3182#>"},
+{url: "cloud_router_sync.asp", tabName: "<#3107#>"},
+{url: "cloud_settings.asp", tabName: "<#3127#>"},
+{url: "cloud_syslog.asp", tabName: "<#2621#>"},
 {url: "NULL", tabName: "__INHERIT__"}
 ]
 },
@@ -174,8 +174,8 @@ tab: [
 {url: "Advanced_ACL_Content.asp", tabName: "<#386#>"},
 {url: "Advanced_WSecurity_Content.asp", tabName: "<#387#>"},
 {url: "Advanced_WAdvanced_Content.asp", tabName: "<#388#>"},
-{url: "Advanced_WProxy_Content.asp", tabName: "<#3748#>"},
-{url: "Advanced_Roaming_Block_Content.asp", tabName: "<#3751#>"},
+{url: "Advanced_WProxy_Content.asp", tabName: "<#3754#>"},
+{url: "Advanced_Roaming_Block_Content.asp", tabName: "<#3757#>"},
 {url: "NULL", tabName: "__INHERIT__"}
 ]
 },
@@ -188,7 +188,7 @@ tab: [
 {url: "Advanced_MultiSubnet_Content.asp", tabName: "<#391#>"},
 {url: "Advanced_GWStaticRoute_Content.asp", tabName: "<#392#>"},
 {url: "Advanced_IPTV_Content.asp", tabName: "IPTV"},
-{url: "Advanced_SwitchCtrl_Content.asp", tabName: "<#3237#>"},
+{url: "Advanced_SwitchCtrl_Content.asp", tabName: "<#3241#>"},
 {url: "NULL", tabName: "__INHERIT__"}
 ]
 },
@@ -234,9 +234,9 @@ tab: [
 {url: "Advanced_VPN_PPTP.asp", tabName: "<#170#>"},
 {url: "Advanced_VPN_OpenVPN.asp", tabName: "__INHERIT__"},
 {url: "Advanced_VPN_IPSec.asp", tabName: "__INHERIT__"},
-{url: "Advanced_VPNClient_Content.asp", tabName: (vpn_fusion_support) ? "<#4112#>" : "<#3662#>"},
+{url: "Advanced_VPNClient_Content.asp", tabName: (vpn_fusion_support) ? "<#4118#>" : "<#3668#>"},
 {url: "Advanced_TOR_Content.asp", tabName: "TOR"},
-{url: "Advanced_Instant_Guard.asp", tabName: "<#4219#>"},
+{url: "Advanced_Instant_Guard.asp", tabName: "<#4225#>"},
 {url: "Advanced_WireguardServer_Content.asp", tabName: "WireGuard Server"},/*untranslated*/
 {url: "NULL", tabName: "__INHERIT__"}
 ]
@@ -262,12 +262,12 @@ tab: [
 {url: "Advanced_SettingBackup_Content.asp", tabName: "<#415#>"},
 {url: "Advanced_PerformanceTuning_Content.asp", tabName: "<#1917#>"},
 {url: "Advanced_ADSL_Content.asp", tabName: "<#377#>"},
-{url: "Advanced_Feedback.asp", tabName: "<#2646#>"},
+{url: "Advanced_Feedback.asp", tabName: "<#2650#>"},
 {url: "Feedback_Info.asp", tabName: "__INHERIT__"},
 {url: "Advanced_SNMP_Content.asp", tabName: "SNMP"},
 {url: "Advanced_TR069_Content.asp", tabName: "TR-069"},
 {url: "Advanced_Notification_Content.asp", tabName: "Notification"},
-{url: "Advanced_Privacy.asp", tabName: "<#4143#>"},
+{url: "Advanced_Privacy.asp", tabName: "<#4149#>"},
 {url: "NULL", tabName: "__INHERIT__"}
 ]
 },
@@ -288,13 +288,13 @@ tab: [
 ]
 },
 {
-menuName: "<#2801#>",
+menuName: "<#2805#>",
 index: "menu_NekworkTool",
 tab: [
-{url: "Main_Analysis_Content.asp", tabName: "<#2796#>"},
+{url: "Main_Analysis_Content.asp", tabName: "<#2800#>"},
 {url: "Main_Netstat_Content.asp", tabName: "Netstat"},
-{url: "Main_WOL_Content.asp", tabName: "<#2818#>"},
-{url: "Advanced_Smart_Connect.asp", tabName: "<#3171#>"},
+{url: "Main_WOL_Content.asp", tabName: "<#2822#>"},
+{url: "Advanced_Smart_Connect.asp", tabName: "<#3175#>"},
 {url: "NULL", tabName: "__INHERIT__"}
 ]
 }
@@ -313,7 +313,7 @@ retArray.push("menu_BandwidthMonitor");
 if(!adaptiveqos_support){
 for(i=0; i<menuTree.list.length; i++){
 if(menuTree.list[i].menuName == '<#898#>'){
-menuTree.list[i].menuName = '<#2651#>';
+menuTree.list[i].menuName = '<#2655#>';
 }
 }
 }

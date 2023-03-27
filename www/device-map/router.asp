@@ -141,12 +141,12 @@ function getInterface(){
 wlInterface = []; // initialize
 var _temp = new Array();
 var typeObj = {
-'triBandSmartConnect': [['0', '<#3166#>', '0']],
+'triBandSmartConnect': [['0', '<#3170#>', '0']],
 'dualBand6GHzSmartConnect': [['0', '2.4 / 5 GHz', '0'], ['2', '6 GHz', '2']],
-'dualBandSmartConnect': [['0', '<#3165#>', '0']],
+'dualBandSmartConnect': [['0', '<#3169#>', '0']],
 'triBand5GHzSmartConnect': [['0', '2.4 GHz', '0'], ['1', '5GHz Smart Connect', '1']],
-'triBandMeshSmartConnect': [['0', '<#3165#>', '0'], ['2', '5 GHz-2', '2']],
-'triBand6GHzMeshSmartConnect': [['0', '<#3165#>', '0'], ['2', '6 GHz', '2']],
+'triBandMeshSmartConnect': [['0', '<#3169#>', '0'], ['2', '5 GHz-2', '2']],
+'triBand6GHzMeshSmartConnect': [['0', '<#3169#>', '0'], ['2', '6 GHz', '2']],
 'lyraHide': [['0', 'Wireless', '0']],
 '2.4G': [['0', '2.4 GHz', '0']],
 '5GDualBand': [['1', '5 GHz', '1']],
@@ -238,7 +238,7 @@ $('#smart_connect_field').show();
 var smartConnectType_ori = nvram['smart_connect_x'];
 if(smartConnectType_ori != '0'){
 code += '<div class="info-block">';
-code += '<div class="info-title"><#3163#></div>';
+code += '<div class="info-title"><#3167#></div>';
 code += '<div><select id="smart_connect_x" class="input_option" onchange="updateVariable(this.id, value)"></select></div>';
 code += '</div>';
 }
@@ -287,7 +287,7 @@ code += '<div><input type="text" class="input-size-25" id="wl'+ unit +'_ssid" on
 code += '</div>';
 if(!system.lyraHideSupport){
 code += '<div class="info-block">';
-code += '<div class="info-title"><#3776#></div>';
+code += '<div class="info-title"><#3782#></div>';
 code += '<div><select id="wl'+ unit +'_auth_mode_x" class="input_option" onchange="updateVariable(this.id, value)">'+ _temp +'</select></div>';
 code += '</div>';
 code += '<div id="wl'+ unit +'_no_wp3_hint" class="wpa3_hint" style="display:none;">';
@@ -306,7 +306,7 @@ code += '</div>';
 }
 if(_authMode != 'owe' && _authMode != 'openowe'){
 code += '<div class="info-block">';
-code += '<div class="info-title"><#3958#></div>';
+code += '<div class="info-title"><#3964#></div>';
 code += '<div><input type="text" class="input-size-25" id="wl'+ unit +'_wpa_psk" oninput="updateVariable(this.id, value, false)"></div>';
 code += '</div>';
 }
@@ -314,7 +314,7 @@ code += '</div>';
 else if(_authMode == 'shared' || (_authMode == 'open' && nmode_x == '2')){
 if(_authMode == 'shared' || (_authMode == 'open' && wepEncryption != '0')){
 code += '<div class="info-block">';
-code += '<div class="info-title"><#3838#></div>';
+code += '<div class="info-title"><#3844#></div>';
 code += '<div><select id="wl'+ unit +'_wep_x" class="input_option" onchange="updateVariable(this.id, value)"></select></div>';
 code += '</div>';
 code += '<div class="info-block">';
@@ -364,19 +364,19 @@ var code = '';
 var _smart_connect_x = variable['smart_connect_x']
 if(system.band5g2Support){
 if(dwb_info.mode == '1'){
-_optionArray = [['<#848#>', '0'], ['<#3165#>', '1']];
+_optionArray = [['<#848#>', '0'], ['<#3169#>', '1']];
 }
 else{
 if(isSupport("wifi6e")){
-_optionArray = [['<#848#>', '0'], ['<#3166#>', '1'], ['<#3165#>', '3']];
+_optionArray = [['<#848#>', '0'], ['<#3170#>', '1'], ['<#3169#>', '3']];
 }
 else{
-_optionArray = [['<#848#>', '0'], ['<#3166#>', '1'], ['5GHz Smart Connect', '2']];
+_optionArray = [['<#848#>', '0'], ['<#3170#>', '1'], ['5GHz Smart Connect', '2']];
 }
 }
 }
 else{
-_optionArray = [['<#848#>', '0'], ['<#3165#>', '1']];
+_optionArray = [['<#848#>', '0'], ['<#3169#>', '1']];
 }
 for(var i=0; i<_optionArray.length; i++){
 code += '<option value="'+ _optionArray[i][1] +'">'+ _optionArray[i][0] +'</option>';
@@ -415,7 +415,7 @@ var authObj = {
 'wifiNewCertNoWPA3': [['Open System', 'open'], ['Shared Key', 'shared'], ['WPA2-Personal', 'psk2'], ['WPA-Auto-Personal', 'pskpsk2'], ['WPA2-Enterprise', 'wpa2'], ['WPA-Auto-Enterprise', 'wpawpa2'], ['Radius with 802.1x', 'radius']],
 'normalWithWPA3': [['Open System', 'open'], ['WPA2-Personal', 'psk2'], ['WPA3-Personal', 'sae'], ['WPA/WPA2-Personal', 'pskpsk2'], ['WPA2/WPA3-Personal', 'psk2sae'], ['WPA2-Enterprise', 'wpa2'], ['WPA/WPA2-Enterprise', 'wpawpa2']],
 'normalWithoutWPA3': [['Open System', 'open'], ['WPA2-Personal', 'psk2'], ['WPA-Auto-Personal', 'pskpsk2'], ['WPA2-Enterprise', 'wpa2'], ['WPA-Auto-Enterprise', 'wpawpa2']],
-'6G': [['<#4226#>', 'owe'], ['WPA3-Personal', 'sae']],
+'6G': [['<#4232#>', 'owe'], ['WPA3-Personal', 'sae']],
 'normalWithWPA3OWE': [['Open System', 'open'], ['Enhanced OPEN Transition', 'openowe'], ['WPA2-Personal', 'psk2'], ['WPA3-Personal', 'sae'], ['WPA/WPA2-Personal', 'pskpsk2'], ['WPA2/WPA3-Personal', 'psk2sae'], ['WPA2-Enterprise', 'wpa2'], ['WPA/WPA2-Enterprise', 'wpawpa2']]
 }
 if(sw_mode == '2' || (system.modelName == 'RT-AC87U' && unit == '1')){

@@ -7,7 +7,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#2801#> - <#2818#></title>
+<title><#2805#> - <#2822#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="/device-map/device-map.css">
@@ -99,7 +99,7 @@ var code = "";
 var clientListEventData = [];
 code += '<table width="100%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="wollist_table">';
 if(Object.keys(manually_wol_list_array).length == 0)
-code += '<tr><td style="color:#FFCC00;"><#2407#></td></tr>';
+code += '<tr><td style="color:#FFCC00;"><#2410#></td></tr>';
 else{
 var userIconBase64 = "NoIcon";
 var clientName, deviceType, deviceVender;
@@ -170,7 +170,7 @@ function addRow_Group(upper){
 var rule_num = document.getElementById('wollist_table').rows.length;
 var item_num = document.getElementById('wollist_table').rows[0].cells.length;
 if(rule_num >= upper){
-alert("<#2479#> " + upper + " <#2480#>");
+alert("<#2483#> " + upper + " <#2484#>");
 return false;
 }
 if(document.form.wollist_macAddr.value==""){
@@ -186,7 +186,7 @@ return false;
 if(item_num >=2){
 for(i=0; i<rule_num; i++){
 if(manually_wol_list_array[document.form.wollist_macAddr.value.toUpperCase()] != null){
-alert("<#2472#>");
+alert("<#2476#>");
 document.form.wollist_macAddr.focus();
 document.form.wollist_macAddr.select();
 return false;
@@ -257,7 +257,7 @@ var tmp_value = "";
 Object.keys(manually_wol_list_array).forEach(function(key) {
 tmp_value += "<" + manually_wol_list_array[key] + ">" + key;
 });
-if(tmp_value == "<"+"<#2407#>" || tmp_value == "<")
+if(tmp_value == "<"+"<#2410#>" || tmp_value == "<")
 tmp_value = "";
 document.wolform.wollist.value = tmp_value;
 showLoading();
@@ -297,16 +297,16 @@ document.wolform.submit();
 <tr>
 <td bgcolor="#4D595D" colspan="3" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#2801#> - <#2818#></div>
+<div class="formfonttitle"><#2805#> - <#2822#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#3161#></div>
-<div class="formfontdesc"><#3162#></div>
+<div class="formfontdesc"><#3165#></div>
+<div class="formfontdesc"><#3166#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
-<th width="20%"><#2816#></th>
+<th width="20%"><#2820#></th>
 <td>
 <input type="text" class="input_20_table" maxlength="17" name="destIP" value="" placeholder="ex: <% nvram_get("lan_hwaddr"); %>" onKeyPress="return validator.isHWAddr(this,event);" autocorrect="off" autocapitalize="off">
-<input class="button_gen" id="cmdBtn" onClick="onSubmitCtrl(this, ' Refresh ')" type="button" value="<#2819#>">
+<input class="button_gen" id="cmdBtn" onClick="onSubmitCtrl(this, ' Refresh ')" type="button" value="<#2823#>">
 <img id="loadingIcon" style="display:none;" src="/images/InternetScan.gif"></span>
 </td>
 </tr>
@@ -314,17 +314,17 @@ document.wolform.submit();
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table" style="margin-top:8px;">
 <thead>
 <tr>
-<td colspan="2" id="GWStatic"><#2812#>&nbsp;(<#2611#>&nbsp;32)</td>
+<td colspan="2" id="GWStatic"><#2816#>&nbsp;(<#2615#>&nbsp;32)</td>
 </tr>
 </thead>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);"><#1532#> (<#2950#>)</a></th>
-<th><#2610#></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);"><#1532#> (<#2954#>)</a></th>
+<th><#2614#></th>
 </tr>
 <tr>
 <td width="80%">
 <input type="text" class="input_20_table" maxlength="17" name="wollist_macAddr" onClick="hideClients_Block();" autocorrect="off" autocapitalize="off" style="margin-left:-12px;width:255px;" onKeyPress="return validator.isHWAddr(this,event)" placeholder="ex: <% nvram_get("lan_hwaddr"); %>">
-<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#3090#>">
+<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#3094#>">
 <div id="ClientList_Block_PC" class="clientlist_dropdown"></div>
 </td>
 <td width="20%">

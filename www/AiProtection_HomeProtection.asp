@@ -967,7 +967,7 @@ $(".shadow").css("display", "none");
 </td>
 </tr>
 <tr>
-<th><#3963#> -</th>
+<th><#3969#> -</th>
 <td>
 <div id="wps_status"></div>
 </td>
@@ -1072,7 +1072,7 @@ $(".shadow").css("display", "none");
 <td>
 <table class="FormTable" width="99%" border="1" align="center" cellpadding="4" cellspacing="0">
 <tr>
-<th><#2989#></th>
+<th><#2993#></th>
 <td>
 <div>
 <select class="input_option" id="mail_provider">
@@ -1093,7 +1093,7 @@ $(".shadow").css("display", "none");
 </td>
 </tr>
 <tr>
-<th><#2296#></th>
+<th><#2299#></th>
 <td>
 <div>
 <input type="password" class="input_30_table" id="mail_password" maxlength="100" value="" autocorrect="off" autocapitalize="off">
@@ -1101,7 +1101,7 @@ $(".shadow").css("display", "none");
 </td>
 </tr>
 <tr>
-<th><#2835#></th>
+<th><#2839#></th>
 <td>
 <div>
 <div>

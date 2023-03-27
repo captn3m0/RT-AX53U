@@ -370,7 +370,7 @@ code += '<div style="display:table-cell;width:150px;padding-right:5px;"><#1206#>
 code += '<div style="display:table-cell;width:100px;padding-right:5px;"><#1205#></div>';
 code += '</div>';
 if(dataObj == ""){
-code += '<div style="text-align:center;font-size:16px;color:#FC0;margin-top:90px;"><#2407#></div>';
+code += '<div style="text-align:center;font-size:16px;color:#FC0;margin-top:90px;"><#2410#></div>';
 }
 else{
 for(i=0;i<Object.keys(dataObj).length;i++){

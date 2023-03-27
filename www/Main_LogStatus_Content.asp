@@ -200,20 +200,20 @@ setTimeout("get_log_data();", 5000);
 </tr>
 <tr>
 <th><#2228#></a></th>
-<td><span id="boot_days"></span> <#1690#> <span id="boot_hours"></span> <#2280#> <span id="boot_minutes"></span> <#2657#> <span id="boot_seconds"></span> <#3084#></td>
+<td><span id="boot_days"></span> <#1690#> <span id="boot_hours"></span> <#2283#> <span id="boot_minutes"></span> <#2661#> <span id="boot_seconds"></span> <#3088#></td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(11,1)"><#2580#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(11,1)"><#2584#></a></th>
 <td>
 <input type="text" maxlength="64" class="input_30_table" name="log_ipaddr" value="<% nvram_get("log_ipaddr"); %>" onKeyPress="return validator.isString(this, event)" autocorrect="off" autocapitalize="off">
 <br/><span id="alert_msg1" class="hint-color"></span>
 </td>
 </tr>
 <tr>
-<th><#2582#></th>
+<th><#2586#></th>
 <td>
 <input type="text" class="input_6_table" maxlength="5" name="log_port" onKeyPress="return validator.isNumber(this,event);" autocorrect="off" autocapitalize="off" value='<% nvram_get("log_port"); %>'>
-<div class="hint-color"><#2581#></div>
+<div class="hint-color"><#2585#></div>
 </td>
 </tr>
 </table>

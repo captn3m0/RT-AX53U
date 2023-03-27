@@ -161,19 +161,19 @@ return true;
 </td>
 </tr>
 <tr>
-<td align="left" class="formfonttitle" style="padding-left:20px;" height="72"><#3229#>: <#3227#></td>
+<td align="left" class="formfonttitle" style="padding-left:20px;" height="72"><#3233#>: <#3231#></td>
 </tr>
 <tr>
 <td valign="top">
 <div style="margin-left:20px;">
 <br/><p><input type="radio" id="d3" name="dummyoption" value="2" width="10" onclick="showTextinWizard(this.value);"/>
-<label for="d3"><#3232#></label>
+<label for="d3"><#3236#></label>
 </p>
 <br/><p><input type="radio" id="d2" name="dummyoption" value="1" width="10" onclick="showTextinWizard(this.value);"/>
-<label for="d2"><#3231#></label>
+<label for="d2"><#3235#></label>
 </p>
 <br/><p><input type="radio" id="d1" name="dummyoption" value="0" width="10" onclick="showTextinWizard(this.value);"/>
-<label for="d1" id="d1_desc"><#3230#></label>
+<label for="d1" id="d1_desc"><#3234#></label>
 </p>
 </div>
 <div id="share0_Hint" style="margin-top:10px;color:#FC0;margin-left:45px;">
@@ -183,7 +183,7 @@ return true;
 <table width="80%" border="1" align="center" cellpadding="2" cellspacing="0" bordercolor="#7ea7bd" class="FormTable_table">
 <tr>
 <th width="100"><#961#></th>
-<th><#2296#></th>
+<th><#2299#></th>
 <th width="50" ><#970#></th>
 <th width="50" ><#989#></th>
 </tr>

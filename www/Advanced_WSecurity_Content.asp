@@ -149,11 +149,11 @@ $("#lantiq_ready").hide();
 <div>&nbsp;</div>
 <div class="formfonttitle"><#382#> - <#387#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#3766#></div>
+<div class="formfontdesc"><#3772#></div>
 <div id="lantiq_ready" style="display:none;color:#FC0;margin-left:5px;font-size:13px;">Wireless is setting...</div>
 <table id="MainTable1" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 <tr id="wl_unit_field">
-<th><#2324#></th>
+<th><#2327#></th>
 <td>
 <select name="wl_unit" class="input_option" onChange="change_wl_unit();">
 <option class="content_input_fd" value="0" <% nvram_match("wl_unit", "0","selected"); %>>2.4GHz</option>
@@ -167,7 +167,7 @@ $("#lantiq_ready").hide();
 <tr>
 <th>
 <a class="hintstyle" href="javascript:void(0);" onClick="openHint(2,1);">
-<#3768#></a>
+<#3774#></a>
 </th>
 <td>
 <input type="text" maxlength="39" class="input_32_table" name="wl_radius_ipaddr" value="<% nvram_get("wl_radius_ipaddr"); %>" onKeyPress="return validator.isIPAddr(this, event)" autocorrect="off" autocapitalize="off">
@@ -176,7 +176,7 @@ $("#lantiq_ready").hide();
 <tr>
 <th>
 <a class="hintstyle" href="javascript:void(0);" onClick="openHint(2,2);">
-<#3772#></a>
+<#3778#></a>
 </th>
 <td>
 <input type="text" maxlength="5" class="input_6_table" name="wl_radius_port" value="<% nvram_get("wl_radius_port"); %>" onkeypress="return validator.isNumber(this,event)" autocorrect="off" autocapitalize="off"/>
@@ -185,7 +185,7 @@ $("#lantiq_ready").hide();
 <tr>
 <th >
 <a class="hintstyle" href="javascript:void(0);" onClick="openHint(2,3);">
-<#3770#></a>
+<#3776#></a>
 </th>
 <td>
 <input type="password" maxlength="64" class="input_32_table" name="wl_radius_key" value="<% nvram_get("wl_radius_key"); %>" autocorrect="off" autocapitalize="off">

@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#842#> - <#3751#></title>
+<title><#842#> - <#3757#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="device-map/device-map.css">
@@ -50,7 +50,7 @@ var code = "";
 var clientListEventData = [];
 code += '<table width="100%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="wl_maclist_x_table">';
 if(Object.keys(wl_rast_static_client_array).length == 0)
-code += '<tr><td style="color:#FFCC00;"><#2407#></td></tr>';
+code += '<tr><td style="color:#FFCC00;"><#2410#></td></tr>';
 else{
 var userIconBase64 = "NoIcon";
 var clientName, deviceType, deviceVender;
@@ -123,7 +123,7 @@ show_wl_maclist_x();
 function addRow(obj, upper){
 var mac = obj.value.toUpperCase();
 if(Object.keys(wl_rast_static_client_array).length >= upper) {
-alert("<#2479#> " + upper + " <#2480#>");
+alert("<#2483#> " + upper + " <#2484#>");
 return false;
 }
 if(mac == "") {
@@ -138,7 +138,7 @@ obj.select();
 return false;
 }
 if(wl_rast_static_client_array[mac] != null) {
-alert("<#2472#>");
+alert("<#2476#>");
 obj.focus();
 obj.select();
 return false;
@@ -467,17 +467,17 @@ top.document.write(wlHintCss + wlHintHtml);
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#382#> - <#3751#></div>
+<div class="formfonttitle"><#382#> - <#3757#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#3028#></div>
+<div class="formfontdesc"><#3032#></div>
 <table id="MainTable1" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#3277#></td>
+<td colspan="2"><#3281#></td>
 </tr>
 </thead>
 <tr>
-<th width="30%"><#3029#></th>
+<th width="30%"><#3033#></th>
 <td>
 <label><input type="radio" name="enable_roaming" value="1" onclick="enable_roaming_block();" <% nvram_match("rast_static_cli_enable", "1","checked"); %>><#187#></label>
 <label><input type="radio" name="enable_roaming" value="0" onclick="enable_roaming_block();" <% nvram_match("rast_static_cli_enable", "0","checked"); %>><#186#></label>
@@ -487,17 +487,17 @@ top.document.write(wlHintCss + wlHintHtml);
 <table id="MainTable2" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table">
 <thead>
 <tr>
-<td colspan="2"><#3751#>&nbsp;(<#2611#>&nbsp;64)</td>
+<td colspan="2"><#3757#>&nbsp;(<#2615#>&nbsp;64)</td>
 </tr>
 </thead>
 <tr>
-<th width="80%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);"><#1532#> (<#2950#>)</a></th>
-<th width="20%"><#2610#></th>
+<th width="80%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);"><#1532#> (<#2954#>)</a></th>
+<th width="20%"><#2614#></th>
 </tr>
 <tr>
 <td width="80%">
 <input type="text" maxlength="17" class="input_macaddr_table" name="wlX_rast_static_client" onKeyPress="return validator.isHWAddr(this,event)" onClick="hideClients_Block();" autocorrect="off" autocapitalize="off" placeholder="ex: <% nvram_get("lan_hwaddr"); %>" style="width:255px;">
-<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;" onclick="pullWLMACList(this);" title="<#3097#>">
+<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;" onclick="pullWLMACList(this);" title="<#3101#>">
 <div id="WL_MAC_List_Block" class="clientlist_dropdown" style="margin-left:167px;"></div>
 </td>
 <td width="20%">

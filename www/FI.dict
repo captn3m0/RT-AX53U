@@ -2266,8 +2266,11 @@ Tämä VPN-profiili on pois käytöstä. Siirry VPN-palvelimen asetussivulle ja 
 Siirry VPN-asetussivulle napsauttamalla [ Siirry asetuksiin ] alla.
 Tätä asetusta ei voi valita, kun käytetään jonkun muun luomaa profiilia.
 Kotiverkko
+Nyt ei ole VPN-profiilia. Siirry VPN-asetussivulle napsauttamalla [Siirry asetuksiin] alla ja luo se.
 Lisää verkko
 Profiililuettelo
+Valitse määritetty verkko
+Wi-Fi-ajoitus
 Laiteohjelmistoversio
 Help
 Saat Ohjeista ohjeita ja tietoja reitittimen toimintojen käyttämisestä. Napsauta
@@ -2442,6 +2445,7 @@ LAN IPv6-osoite
 LAN IPv6-etuliite
 IPv6 LAN-asetus
 Native
+OCN Virtual Connect
 v6plus
 IPv6-etuliitteen pituus
 IPv4 Anycast -välitys
@@ -3280,6 +3284,8 @@ LAN
 Muut
 Telecommunications Standards
 Päätä WAN-liittymä
+Ajoitettu
+Kertakäyttöoikeus
 Aikataulun määritys
 Aikakone
 Kuinka Apple-aikakonetta käytetään?
@@ -3347,10 +3353,10 @@ Alaska
 Tyynenmeren aika (Yhdysvallat, Kanada)
 Vuoriston aika (Yhdysvallat, Kanada)
 Arizona
-Chihuahua, Mazatlan
+Mazatlan
 Saskatchewan
 Guadalajara, Mexico City
-Monterrey
+Monterrey, Chihuahua
 Keski-Amerikka
 Itäinen aika (Yhdysvallat, Kanada)
 Indiana (Itä)

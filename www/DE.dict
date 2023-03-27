@@ -2266,8 +2266,11 @@ Dieses VPN-Profil ist deaktiviert. Bitte zur Einstellungsseite des VPN-Servers g
 Klicken Sie unten auf [ Go-Einstellung ], um zur VPN-Einstellungsseite zu gelangen.
 Diese Einstellung kann nicht gewählt werden, während sie vom anderen eingerichteten Profil genutzt wird.
 Heimnetzwerk
+Es ist noch kein VPN-Profil vorhanden. Klicken Sie auf [Go-Einstellung] unten, um zur Seite der VPN-Einstellungen zu gelangen und das Profil zu erstellen.
 Ein Netzwerk hinzufügen
 Profilliste
+Wählen Sie ein defniertes Netzwerk
+WLAN-Scheduling
 Hardwareversion
 Help
 In der Hilfe finden Sie Richtlinien und Informationen zur Nutzung der Router-Funktionen. Klicken Sie auf die
@@ -2442,6 +2445,7 @@ LAN IPv6-Adresse
 LAN IPv6-Präfix
 IPv6 LAN-Einstellungen
 Native
+OCN Virtual Connect
 v6plus
 IPv6-Präfixlänge
 IPv4 Anycast Relay
@@ -3280,6 +3284,8 @@ LAN
 Verschiedenes
 Telecommunications Standards
 WAN-Schnittstelle beenden
+Geplant
+Einmaliger Zugriff
 Zeitplanung
 Time Machine
 Wie Apple TIME MACHINE nutzen?
@@ -3347,10 +3353,10 @@ Alaska
 Pazifische Zeit (USA, Kanada)
 Mountain-Zeit (USA, Kanada)
 Arizona
-Chihuahua, Mazatlan
+Mazatlan
 Saskatchewan
 Guadalajara, Mexico City
-Monterrey
+Monterrey, Chihuahua
 Zentralamerika
 Östliche Zeit (USA, Kanada)
 Indiana (Osten)

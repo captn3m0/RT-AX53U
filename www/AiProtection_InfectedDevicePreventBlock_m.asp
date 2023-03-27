@@ -356,7 +356,7 @@ code += '</div>';
 }
 else{
 $('#deleteData').hide();
-code += '<div class="no-data"><#2407#></div>';
+code += '<div class="no-data"><#2410#></div>';
 }
 $("#detail_info_table").html(code);
 }

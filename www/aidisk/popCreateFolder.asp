@@ -105,7 +105,7 @@ return false;
 <table width="100%" class="popTable" border="0" align="center" cellpadding="0" cellspacing="0">
 <thead>
 <tr>
-<td colspan="2"><span style="color:#FFF"><#913#> <#2322#> </span><span style="color:#FFF" id="poolName"></span><img src="../images/button-close.gif" onClick="parent.hidePop('OverlayMask');"></td>
+<td colspan="2"><span style="color:#FFF"><#913#> <#2325#> </span><span style="color:#FFF" id="poolName"></span><img src="../images/button-close.gif" onClick="parent.hidePop('OverlayMask');"></td>
 </tr>
 </thead>
 <tbody>

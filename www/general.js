@@ -293,7 +293,7 @@ showhide("wildcard_field",1);
 if(letsencrypt_support)
 show_cert_settings(1);
 change_ddns_setting(document.form.ddns_server_x.value);
-showhide("ddns_ipcheck_tr", 1);
+show_ipv6update_setting();
 }else{
 if(document.form.ddns_server_x.value == "WWW.ASUS.COM"){
 document.form.DDNSName.parentNode.parentNode.parentNode.style.display = "none";
@@ -312,7 +312,7 @@ showhide("wildcard_field",0);
 document.form.ddns_regular_check.value = 0;
 showhide("check_ddns_field", 0);
 inputCtrl(document.form.ddns_regular_period, 0);
-showhide("ddns_ipcheck_tr", 0);
+showhide("ddns_ipv6update_tr", 0);
 document.getElementById("ddns_status_tr").style.display = "none";
 document.getElementById("ddns_result_tr").style.display = "none";
 if(letsencrypt_support)
@@ -397,6 +397,8 @@ else if (document.form.ddns_server_x.value == 'WWW.SELFHOST.DE')
 tourl = "http://WWW.SELFHOST.DE";
 else if (document.form.ddns_server_x.value == 'WWW.DNSOMATIC.COM')
 tourl = "http://dnsomatic.com/create/";
+else if (document.form.ddns_server_x.value == 'DNS.HE.NET')
+tourl = "https://ipv6.he.net/certification/register.php";
 else if (document.form.ddns_server_x.value == 'WWW.TUNNELBROKER.NET')
 tourl = "http://www.tunnelbroker.net/register.php";
 else if (document.form.ddns_server_x.value == 'WWW.ASUS.COM')
@@ -1277,13 +1279,13 @@ x.selectedIndex = 1;
 x.remove(x.selectedIndex);
 }
 if ((CurrentCh >=1) && (CurrentCh <= 4)){
-x.options[0].text = "<#3813#>";
+x.options[0].text = "<#3819#>";
 x.options[0].value = "lower";
 }
 else if ((CurrentCh >= 5) && (CurrentCh <= 7)){
-x.options[0].text = "<#3813#>";
+x.options[0].text = "<#3819#>";
 x.options[0].value = "lower";
-add_option(document.form.wl_nctrlsb, "<#3814#>", "upper");
+add_option(document.form.wl_nctrlsb, "<#3820#>", "upper");
 if (document.form.wl_nctrlsb_old.value == "upper")
 document.form.wl_nctrlsb.options.selectedIndex=1;
 if(is_high_power && CurrentCh == 5) // for high power model, Jieming added at 2013/08/19
@@ -1292,25 +1294,25 @@ else if(is_high_power && CurrentCh == 7)
 document.form.wl_nctrlsb.remove(0);
 }
 else if ((CurrentCh >= 8) && (CurrentCh <= 9)){
-x.options[0].text = "<#3814#>";
+x.options[0].text = "<#3820#>";
 x.options[0].value = "upper";
 if (option_length >=14){
-add_option(document.form.wl_nctrlsb, "<#3813#>", "lower");
+add_option(document.form.wl_nctrlsb, "<#3819#>", "lower");
 if (document.form.wl_nctrlsb_old.value == "lower")
 document.form.wl_nctrlsb.options.selectedIndex=1;
 }
 }
 else if (CurrentCh == 10){
-x.options[0].text = "<#3814#>";
+x.options[0].text = "<#3820#>";
 x.options[0].value = "upper";
 if (option_length > 14){
-add_option(document.form.wl_nctrlsb, "<#3813#>", "lower");
+add_option(document.form.wl_nctrlsb, "<#3819#>", "lower");
 if (document.form.wl_nctrlsb_old.value == "lower")
 document.form.wl_nctrlsb.options.selectedIndex=1;
 }
 }
 else if (CurrentCh >= 11){
-x.options[0].text = "<#3814#>";
+x.options[0].text = "<#3820#>";
 x.options[0].value = "upper";
 }
 else{
@@ -1367,7 +1369,7 @@ break;
 opts = document.form.wl_auth_mode_x.options;
 if(opts[opts.selectedIndex].text == "WPA-Personal" || opts[opts.selectedIndex].text == "WPA-Enterprise")
 algos = new Array("TKIP");
-else if(opts[opts.selectedIndex].text == "WPA2-Personal" || opts[opts.selectedIndex].text == "<#4226#>" || opts[opts.selectedIndex].text == "WPA3-Personal" || opts[opts.selectedIndex].text == "WPA2/WPA3-Personal" || opts[opts.selectedIndex].text == "WPA2-Enterprise")
+else if(opts[opts.selectedIndex].text == "WPA2-Personal" || opts[opts.selectedIndex].text == "<#4232#>" || opts[opts.selectedIndex].text == "WPA3-Personal" || opts[opts.selectedIndex].text == "WPA2/WPA3-Personal" || opts[opts.selectedIndex].text == "WPA2-Enterprise")
 algos = new Array("AES");
 else
 algos = new Array("AES", "TKIP+AES");
@@ -1409,7 +1411,7 @@ $('#mbo_notice').hide();
 }
 var wl_unit = '<% nvram_get("wl_unit"); %>';
 if(band6g_support && wl_unit == '2'){
-mfp_array = [["<#3896#>", "2"]];
+mfp_array = [["<#3902#>", "2"]];
 free_options(document.form.wl_mfp);
 document.form.wl_mfp.length = mfp_array.length;
 for(i=0; i<mfp_array.length; i++){
@@ -1579,7 +1581,7 @@ var wl_unit = '<% nvram_get("wl_unit"); %>';
 if(sw_mode == 2){
 if(wpa3_support){
 if(band6g_support && wl_unit == '2'){ // for 6 GHz
-var auth_array = [["<#4226#>", "owe"], ["WPA3-Personal", "sae"]];
+var auth_array = [["<#4232#>", "owe"], ["WPA3-Personal", "sae"]];
 }
 else{
 var auth_array = [["Open System", "open"], ["WPA2-Personal", "psk2"], ["WPA3-Personal", "sae"], ["WPA/WPA2-Personal", "pskpsk2"], ["WPA2/WPA3-Personal", "psk2sae"]];
@@ -1602,7 +1604,7 @@ var auth_array = [["Open System", "open"], ["WPA2-Personal", "psk2"], ["WPA-Auto
 else{
 if(wpa3_support){
 if(band6g_support && wl_unit == '2'){ // for 6 GHz
-var auth_array = [["<#4226#>", "owe"], ["WPA3-Personal", "sae"]];
+var auth_array = [["<#4232#>", "owe"], ["WPA3-Personal", "sae"]];
 }
 else{
 var auth_array = [["Open System", "open"], ["WPA2-Personal", "psk2"], ["WPA3-Personal", "sae"], ["WPA/WPA2-Personal", "pskpsk2"], ["WPA2/WPA3-Personal", "psk2sae"], ["WPA2-Enterprise", "wpa2"], ["WPA/WPA2-Enterprise", "wpawpa2"]];
@@ -1624,7 +1626,7 @@ else{
 if(new_wifi_cert_support){
 if(wpa3_support){
 if(band6g_support && wl_unit == '2'){ // for 6 GHz
-var auth_array = [["<#4226#>", "owe"], ["WPA3-Personal", "sae"]];
+var auth_array = [["<#4232#>", "owe"], ["WPA3-Personal", "sae"]];
 }
 else{
 var auth_array = [["Open System", "open"], ["Shared Key", "shared"], ["WPA2-Personal", "psk2"], ["WPA3-Personal", "sae"], ["WPA/WPA2-Personal", "pskpsk2"], ["WPA2/WPA3-Personal", "psk2sae"], ["WPA2-Enterprise", "wpa2"], ["WPA/WPA2-Enterprise", "wpawpa2"], ["Radius with 802.1x", "radius"]];
@@ -1648,7 +1650,7 @@ var auth_array = [["Open System", "open"], ["Shared Key", "shared"], ["WPA-Perso
 if(_current_page == "Guest_network.asp"){
 if(wpa3_support){
 if(band6g_support && g_unit == '2'){ // for 6 GHz
-var auth_array = [["<#4226#>", "owe"], ["WPA3-Personal", "sae"]];
+var auth_array = [["<#4232#>", "owe"], ["WPA3-Personal", "sae"]];
 if(auth_method_array != 'owe' && auth_method_array != 'sae'){
 auth_method_array = 'owe';
 }
@@ -1686,57 +1688,57 @@ function getDDNSState(ddns_return_code, ddns_hostname, ddns_old_hostname)
 {
 var ddnsStateHint = "";
 if(ddns_return_code.indexOf('-1')!=-1)
-ddnsStateHint = "<#2537#>";
-else if(ddns_return_code.indexOf('200')!=-1)
-ddnsStateHint = "<#2538#>";
-else if(ddns_return_code.indexOf('203')!=-1)
-ddnsStateHint = "<#2544#> '"+ddns_hostname+"' <#2546#>";
-else if(ddns_return_code.indexOf('220')!=-1)
-ddnsStateHint = "<#2539#>";
-else if(ddns_return_code.indexOf('230')!=-1)
-ddnsStateHint = "<#2540#>";
-else if(ddns_return_code.indexOf('233')!=-1)
-ddnsStateHint = "<#2544#> '"+ddns_hostname+"' <#2547#> '"+ddns_old_hostname+"'";
-else if(ddns_return_code.indexOf('296')!=-1)
 ddnsStateHint = "<#2541#>";
-else if(ddns_return_code.indexOf('297')!=-1)
+else if(ddns_return_code.indexOf('200')!=-1)
 ddnsStateHint = "<#2542#>";
-else if(ddns_return_code.indexOf('298')!=-1)
+else if(ddns_return_code.indexOf('203')!=-1)
+ddnsStateHint = "<#2548#> '"+ddns_hostname+"' <#2550#>";
+else if(ddns_return_code.indexOf('220')!=-1)
 ddnsStateHint = "<#2543#>";
+else if(ddns_return_code.indexOf('230')!=-1)
+ddnsStateHint = "<#2544#>";
+else if(ddns_return_code.indexOf('233')!=-1)
+ddnsStateHint = "<#2548#> '"+ddns_hostname+"' <#2551#> '"+ddns_old_hostname+"'";
+else if(ddns_return_code.indexOf('296')!=-1)
+ddnsStateHint = "<#2545#>";
+else if(ddns_return_code.indexOf('297')!=-1)
+ddnsStateHint = "<#2546#>";
+else if(ddns_return_code.indexOf('298')!=-1)
+ddnsStateHint = "<#2547#>";
 else if(ddns_return_code.indexOf('299')!=-1)
 ddnsStateHint = "<#354#>";
 else if(ddns_return_code.indexOf('390')!=-1)
 ddnsStateHint = "Server Error";
 else if(ddns_return_code.indexOf('401')!=-1)
-ddnsStateHint = "<#2528#>";
+ddnsStateHint = "<#2532#>";
 else if (ddns_return_code.indexOf('402')!=-1)
-ddnsStateHint = "<#2533#>";
-else if(ddns_return_code.indexOf('407')!=-1)
-ddnsStateHint = "<#2529#>";
-else if(ddns_return_code == 'Time-out')
-ddnsStateHint = "<#2527#>";
-else if(ddns_return_code =='unknown_error')
 ddnsStateHint = "<#2537#>";
+else if(ddns_return_code.indexOf('407')!=-1)
+ddnsStateHint = "<#2533#>";
+else if(ddns_return_code == 'Time-out')
+ddnsStateHint = "<#2531#>";
+else if(ddns_return_code =='unknown_error')
+ddnsStateHint = "<#2541#>";
 else if(ddns_return_code =='connect_fail')
 ddnsStateHint = "<#550#>";
 else if(ddns_return_code =='no_change')
-ddnsStateHint = "<#2545#>";
+ddnsStateHint = "<#2549#>";
 else if(ddns_return_code =='ddns_query')
 ddnsStateHint = "<#373#>";
 else if(ddns_return_code =='auth_fail')
 ddnsStateHint = "<#544#>";
 else if(ddns_return_code !='')
-ddnsStateHint = "<#2537#>";
+ddnsStateHint = "<#2541#>";
 return ddnsStateHint;
 }
 function get_yadns_modedesc(mode)
 {
 if (mode == 0)
-return "<#3981#>";
+return "<#3987#>";
 else if(mode == 1)
-return "<#3983#>";
+return "<#3989#>";
 else if(mode == 2)
-return "<#3985#>";
+return "<#3991#>";
 else if(mode == -1)
 return "<#1518#>";
 return "";
@@ -1860,5 +1862,41 @@ loop_idx++;
 code += "</div>";
 return code;
 }
+}
+function is_unit_24g(_unit) {
+if (based_modelid == "GT-AXE16000" || based_modelid == "GT-BE98" || based_modelid == "GT-BE98_PRO") {
+if (_unit == 3) return true;
+} else {
+if (_unit == 0) return true;
+}
+return false;
+}
+function is_unit_5g(_unit) {
+if (based_modelid == "GT-AXE16000" || based_modelid == "GT-BE98" || based_modelid == "GT-BE98_PRO") {
+if (_unit == 0) return true;
+} else if (wl_info.band5g_support) {
+if (_unit == 1) return true;
+}
+return false;
+}
+function is_unit_5g_2(_unit) {
+if (based_modelid == "GT-AXE16000" || based_modelid == "GT-BE98" || based_modelid == "GT-BE98_PRO") {
+if (_unit == 1) return true;
+} else if (wl_info.band5g_2_support) {
+if (_unit == 2) return true;
+}
+return false;
+}
+function is_unit_6g(_unit) {
+if (band6g_support) {
+if (_unit == 2) return true;
+}
+return false;
+}
+function is_unit_60g(_unit){
+if (band60g_support) {
+if (_unit == 3) return true;
+}
+return false;
 }
 

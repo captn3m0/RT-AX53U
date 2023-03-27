@@ -224,13 +224,13 @@ if(startNum == 1){
 document.getElementById("leftBtn").style.visibility = "hidden";
 }else{
 document.getElementById("leftBtn").style.visibility = "";
-document.getElementById("leftBtn").title = "<#2973#>";
+document.getElementById("leftBtn").title = "<#2977#>";
 }
 if(endNum == client_list_row.length){
 document.getElementById("rightBtn").style.visibility = "hidden";
 }else{
 document.getElementById("rightBtn").style.visibility = "";
-document.getElementById("rightBtn").title = "<#2823#>";
+document.getElementById("rightBtn").title = "<#2827#>";
 }
 }
 function showNextItem(act){
@@ -282,7 +282,7 @@ else if(j == 4){
 code += '<td width="30%" class="border2"><div class="findname">' + client_list_col[5] +'</div></td>';
 }
 else if(j == 5){
-code += '<td width="6%" class="border4"><div border="0px"><a title="<#3091#>" target="_blank" href="http://'+ client_list_col[2] +'"><img src="../images/arrow-right.png" width="32px" hight="20px" style="border:0px"></a></div></td>';
+code += '<td width="6%" class="border4"><div border="0px"><a title="<#3095#>" target="_blank" href="http://'+ client_list_col[2] +'"><img src="../images/arrow-right.png" width="32px" hight="20px" style="border:0px"></a></div></td>';
 }
 else
 code += '';
@@ -295,7 +295,7 @@ document.getElementById("client_list_Block").style.display = "none";
 if(direct_dut == 1)
 location.href = '/';
 if(document.getElementById('client_list_table').innerHTML == "<tbody></tbody>"){
-code ='<tr><td style="color:#FFCC00;" colspan="4"><#2407#></td></tr>'
+code ='<tr><td style="color:#FFCC00;" colspan="4"><#2410#></td></tr>'
 document.getElementById("client_list_Block").innerHTML = code;
 }
 }

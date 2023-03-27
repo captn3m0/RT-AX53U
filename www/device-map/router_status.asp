@@ -24,7 +24,7 @@ var array_size = 46;
 var cpu_usage_array = new Array();
 var ram_usage_array = new Array();
 var color_table = ["#c6dafc", "#7baaf7", "#4285f4", "#3367d6"];
-var led_table = ["<#1517#>", "<#2986#>", "<#2644#>", "<#2277#>"];
+var led_table = ["<#1517#>", "<#2990#>", "<#2648#>", "<#2280#>"];
 $(document).ready(function(){
 if(system.INTELplatform){
 register_event();
@@ -86,7 +86,7 @@ variable = Object.assign(variable, nvram);
 function genElement(){
 var code = '';
 if(system.INTELplatform){
-code += '<div class="info-title"><#4146#></div>';
+code += '<div class="info-title"><#4152#></div>';
 code += '<div class="display-flex flex-a-center led-container">';
 code += '<div id="slider"></div>';
 code += '<div id="color_pad"></div>';
@@ -95,10 +95,10 @@ $('#led_field').html(code);
 code = ''; // initialize
 }
 var _lanIP = (variable.lan_ipaddr_t == '') ? variable.lan_ipaddr : variable.lan_ipaddr_t;
-code += '<div class="info-block"><div class="info-title"><#2500#></div><div class="info-content">'+ _lanIP +'</div></div>';
-code += '<div class="info-block"><div class="info-title"><#2891#></div><div class="info-content">'+ variable.secret_code +'</div></div>';
+code += '<div class="info-block"><div class="info-title"><#2504#></div><div class="info-content">'+ _lanIP +'</div></div>';
+code += '<div class="info-block"><div class="info-title"><#2895#></div><div class="info-content">'+ variable.secret_code +'</div></div>';
 if(variable.serial_no != ''){
-code += '<div class="info-block"><div class="info-title"><#3099#></div><div class="info-content">'+ variable.serial_no +'</div></div>';
+code += '<div class="info-block"><div class="info-title"><#3103#></div><div class="info-content">'+ variable.serial_no +'</div></div>';
 }
 code += '<div class="info-block"><div class="info-title">LAN <#367#></div><div class="info-content">'+ variable.lan_hwaddr +'</div></div>';
 if(system.band2gSupport){
@@ -127,8 +127,8 @@ var yadns_enable = variable.yadns_enable_x;
 var yadns_mode = variable.yadns_mode;
 var yadns_clients = variable.yadns_clients;
 var mode = (yadns_enable != '0') ? yadns_mode : 4;
-var modeDesc = ['<#3981#>', '<#3983#>', '<#3985#>', '', '<#1518#>'];
-code += '<div class="division-block"><#3974#></div>';
+var modeDesc = ['<#3987#>', '<#3989#>', '<#3991#>', '', '<#1518#>'];
+code += '<div class="division-block"><#3980#></div>';
 code += '<div class="info-block"><div class="info-content">' + modeDesc[mode] +'</div></div>';
 for(var i=0; i<3; i++){
 if(yadns_enable != 0 && i != mode && yadns_clients[i]){
@@ -413,12 +413,12 @@ setTimeout("get_ethernet_ports();", 3000);
 }
 function get_plc_ports() {
 if(based_modelid == "PL-AX56_XP4"){
-var code = '<div class="division-block"><#4221#></div>';
+var code = '<div class="division-block"><#4227#></div>';
 code += '<div>';
 code += '<div class="display-flex flex-a-center table-header">';
 code += '<div class="port-block-width table-content"><#731#></div>';
-code += '<div class="port-block-width table-content">Tx (<#2345#>)</div>';
-code += '<div class="port-block-width table-content">Rx (<#2345#>)</div>';
+code += '<div class="port-block-width table-content">Tx (<#2348#>)</div>';
+code += '<div class="port-block-width table-content">Rx (<#2348#>)</div>';
 code += '</div>';
 var autodet_plc_state = parseInt(httpApi.nvramGet(["autodet_plc_state"], true).autodet_plc_state);
 var status = "<#217#>";

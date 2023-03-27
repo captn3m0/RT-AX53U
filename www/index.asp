@@ -349,7 +349,7 @@ document.getElementById('wlc_band_status').innerHTML = "5 GHz";
 }
 }
 }
-document.getElementById('NM_connect_title').innerHTML = "<#2851#> :";
+document.getElementById('NM_connect_title').innerHTML = "<#2855#> :";
 }
 else{
 document.getElementById("index_status").innerHTML = '<span style="word-break:break-all;">' + wanlink_ipaddr + '</span>'
@@ -393,7 +393,7 @@ document.getElementById("first_wan_title").innerHTML = eLAN_str;
 else if(dualwan_first_if == 'usb'){
 document.getElementById("iconInternet_primary").style.background = "url('images/New_ui/networkmap/Mobile-Broadband.png') no-repeat 0% 0%";
 if(gobi_support)
-document.getElementById("first_wan_title").innerHTML = "<#2740#>:";
+document.getElementById("first_wan_title").innerHTML = "<#2744#>:";
 else
 document.getElementById("first_wan_title").innerHTML = "<#403#>:";
 }
@@ -404,7 +404,7 @@ document.getElementById("second_wan_title").innerHTML = eLAN_str;
 else if(dualwan_second_if == 'usb'){
 document.getElementById("iconInternet_secondary").style.background = "url('images/New_ui/networkmap/Mobile-Broadband.png') no-repeat 0% 0%";
 if(gobi_support)
-document.getElementById("second_wan_title").innerHTML = "<#2740#>:";
+document.getElementById("second_wan_title").innerHTML = "<#2744#>:";
 else
 document.getElementById("second_wan_title").innerHTML = "<#403#>:";
 }
@@ -468,9 +468,9 @@ document.getElementById("ddns_fail_hint").className = "notificationoff";
 if( ddns_enable == '0')
 document.getElementById("ddnsHostName").innerHTML = '<a style="color:#FFF;text-decoration:underline;" href="/Advanced_ASUSDDNS_Content.asp?af=ddns_enable_x"><#1521#></a>';
 else if(ddnsName == '')
-document.getElementById("ddnsHostName").innerHTML = '<a style="color:#FFF;text-decoration:underline;" href="/Advanced_ASUSDDNS_Content.asp?af=DDNSName"><#3151#></a>';
+document.getElementById("ddnsHostName").innerHTML = '<a style="color:#FFF;text-decoration:underline;" href="/Advanced_ASUSDDNS_Content.asp?af=DDNSName"><#3155#></a>';
 else if(ddnsName == isMD5DDNSName())
-document.getElementById("ddnsHostName").innerHTML = '<a style="color:#FFF;text-decoration:underline;" href="/Advanced_ASUSDDNS_Content.asp?af=DDNSName"><#3151#></a>';
+document.getElementById("ddnsHostName").innerHTML = '<a style="color:#FFF;text-decoration:underline;" href="/Advanced_ASUSDDNS_Content.asp?af=DDNSName"><#3155#></a>';
 else{
 if(ddns_server_x == "WWW.DNSOMATIC.COM"){
 document.getElementById("ddnsHostName").innerHTML = '<a style="color:#FFF;text-decoration:underline;" href="https://dnsomatic.com/" target="_blank"><#1521#></a>';
@@ -534,7 +534,7 @@ clickEvent(document.getElementById("iconRouter"));
 }
 function showMapWANStatus(flag){
 if(sw_mode == "3"){
-showtext(document.getElementById("NM_connect_status"), "<div style='margin-top:10px;'><#3851#></div>");
+showtext(document.getElementById("NM_connect_status"), "<div style='margin-top:10px;'><#3857#></div>");
 }
 else if(sw_mode == "2"){
 showtext(document.getElementById("NM_connect_title"), "<div style='margin-top:10px;'><#742#>:</div><br>");
@@ -677,7 +677,7 @@ css_icon = "iconNoM2";
 icon_html_code += '<div class="' + css_icon + '""></div>';
 dec_html_code += '<div style="margin:10px" id="noUSB'+ device_seat +'">';
 if(rc_support.search("usbX") > -1)
-dec_html_code += '<#2828#>';
+dec_html_code += '<#2832#>';
 else
 dec_html_code += '<#1664#>';
 dec_html_code += '</div>\n';
@@ -707,7 +707,7 @@ if(!dualWAN_support){
 check_wan_unit();
 }
 icon = "iconInternet";
-stitle = "<#3221#>";
+stitle = "<#3225#>";
 document.getElementById("statusframe").src = "/device-map/internet.asp";
 if(wans_flag){
 if(gobi_support) {
@@ -719,12 +719,12 @@ else if(dualwan_first_if == "lan")
 stitle = eLAN_str+" Status";
 else if(dualwan_first_if == "usb"){
 if(gobi_support)
-stitle = "<#2740#> Status";
+stitle = "<#2744#> Status";
 else
 stitle = "<#403#> Status";
 }
 else
-stitle = "<#3224#>";
+stitle = "<#3228#>";
 }
 else{
 if(dualwan_second_if == "wan")
@@ -733,19 +733,19 @@ else if(dualwan_second_if == "lan")
 stitle = eLAN_str+" Status";
 else if(dualwan_second_if == "usb"){
 if(gobi_support)
-stitle = "<#2740#> Status";
+stitle = "<#2744#> Status";
 else
 stitle = "<#403#> Status";
 }
 else
-stitle = "<#3225#>";
+stitle = "<#3229#>";
 }
 }
 else {
 if(obj.id.indexOf("primary") != -1)
-stitle = "<#3224#>";
+stitle = "<#3228#>";
 else
-stitle = "<#3225#>";
+stitle = "<#3229#>";
 }
 }
 if(obj.id.indexOf("Internet_secondary") > 0){
@@ -757,15 +757,15 @@ pap_click_flag = 0;
 }
 else if(obj.id.indexOf("Router") > 0){
 icon = "iconRouter";
-stitle = "<#2652#>";
+stitle = "<#2656#>";
 }
 else if(obj.id.indexOf("Client") > 0){
 icon = "iconClient";
-stitle = "<#3220#>";
+stitle = "<#3224#>";
 }
 else if(obj.id.indexOf("USBdisk") > 0){
 icon = "iconUSBdisk";
-stitle = "<#3223#>";
+stitle = "<#3227#>";
 currentUsbPort = obj.id.slice(-1) - 1;
 if(currentUsbPort == "2") // 0, 1 usb, 2: M.2
 stitle = "M.2 SSD disk status";/*untranslated*/
@@ -783,7 +783,7 @@ seat = obj.id.indexOf("Printer") + 7;
 clicked_device_order = parseInt(obj.id.substring(seat, seat+1));
 currentUsbPort = obj.id.slice(-1) - 1;
 icon = "iconPrinter";
-stitle = "<#3222#>";
+stitle = "<#3226#>";
 document.getElementById("statusframe").src = "/device-map/printer.asp";
 }
 else if(obj.id.indexOf("No") > 0){
@@ -953,7 +953,7 @@ if(ddnsHint != "")
 str = ddnsHint;
 }
 else
-str = "<#2537#>";
+str = "<#2541#>";
 if(str != "")
 overlib(str);
 }
@@ -1006,7 +1006,7 @@ var existMac = element.split(">")[0];
 var existIP = element.split(">")[1];
 if(existIP == document.getElementById("ipaddr_field").value) {
 if(existMac != document.getElementById("macaddr_field").value) {
-alert("<#2472#>");
+alert("<#2476#>");
 ip_obj.value = document.getElementById("ipaddr_field_orig").value;
 ip_obj.focus();
 retFlag = 0;
@@ -1367,7 +1367,7 @@ document.getElementById("changeClientIconControl").style.display = "none";
 document.getElementById("divDropClientImage").onclick = null;
 }
 if(bwdpi_support) {
-document.getElementById("time_scheduling_title").innerHTML = "<#3282#>";
+document.getElementById("time_scheduling_title").innerHTML = "<#3288#>";
 }
 firstTimeOpenBlock = false;
 var clientName = (clientObj.nickName == "") ? clientObj.name : clientObj.nickName;
@@ -1398,7 +1398,7 @@ var connectModeTip = "";
 var clientIconHtml = "";
 if(clientObj.isWL == "0") {
 rssi_t = "wired";
-connectModeTip = "<#3307#>";
+connectModeTip = "<#3313#>";
 }
 else {
 rssi_t = client_convRSSI(clientObj.rssi);
@@ -1646,7 +1646,7 @@ userUploadFlag = true;
 return false;
 }
 else {
-alert("<#3119#>");
+alert("<#3123#>");
 return false;
 }
 }
@@ -1768,7 +1768,7 @@ var clientIcon = "";
 var custom_usericon_length = custom_usericon_row.length;
 code +='<table width="95%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="usericon_table">';
 if(custom_usericon_length == 1) {
-code +='<tr><td style="color:#FFCC00;" colspan="4"><#2407#></td></tr>';
+code +='<tr><td style="color:#FFCC00;" colspan="4"><#2410#></td></tr>';
 document.getElementById('edit_usericon_block').style.height = "145px";
 }
 else {
@@ -1804,7 +1804,7 @@ document.getElementById('edit_usericon_block').style.height = (61 * (trCount + 1
 if(trCount == 0) {
 var code = "";
 code +='<table width="95%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="usericon_table">';
-code +='<tr><td style="color:#FFCC00;" colspan="4"><#2407#></td></tr>';
+code +='<tr><td style="color:#FFCC00;" colspan="4"><#2410#></td></tr>';
 code +='</table>';
 document.getElementById('edit_usericon_block').style.height = "145px";
 document.getElementById("usericon_block").innerHTML = code;
@@ -1839,7 +1839,7 @@ else
 return false;
 };
 if (!checkImageExtension($obj.val()))
-alert("<#3119#>");
+alert("<#3123#>");
 else {
 var fileReader = new FileReader();
 fileReader.onload = function (fileReader) {
@@ -2036,7 +2036,7 @@ iframe.contentWindow.document.form.submit();
 <table width="95%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table" style="margin-top:8px;">
 <thead>
 <tr>
-<td colspan="4">Client upload icon&nbsp;(<#2611#>&nbsp;100)</td>
+<td colspan="4">Client upload icon&nbsp;(<#2615#>&nbsp;100)</td>
 </tr>
 </thead>
 <tr>
@@ -2129,10 +2129,10 @@ MAC
 <div class="clientList_line"></div>
 <div style="height:32px;width:100%;margin:5px 0;">
 <div style="width:65%;float:left;line-height:32px;">
-<span id="time_scheduling_title" onmouseover='return overlib("<#2860#>");' onmouseout="return nd();"><#468#></span>
+<span id="time_scheduling_title" onmouseover='return overlib("<#2864#>");' onmouseout="return nd();"><#468#></span>
 </div>
 <div align="center" class="left" style="cursor:pointer;float:right;" id="radio_TimeScheduling_enable"></div>
-<div id="internetTimeScheduling" class="internetTimeEdit" style="float:right;margin-right:10px;" title="<#3282#>" onclick="redirectTimeScheduling(document.getElementById('macaddr_field').value);" ></div>
+<div id="internetTimeScheduling" class="internetTimeEdit" style="float:right;margin-right:10px;" title="<#3288#>" onclick="redirectTimeScheduling(document.getElementById('macaddr_field').value);" ></div>
 </div>
 <div class="clientList_line"></div>
 <div style="height:32px;width:100%;margin:5px 0;">
@@ -2220,7 +2220,7 @@ hideEditBlock();
 </td>
 <td id="single_wan_status" colspan="2" valign="middle" bgcolor="#444f53" class="NM_radius_right" onclick="" style="padding:5px;cursor:auto;width:180px;height:130px">
 <div>
-<span id="NM_connect_title" style="font-size:12px;font-family: Verdana, Arial, Helvetica, sans-serif;"><#3221#>:</span>
+<span id="NM_connect_title" style="font-size:12px;font-family: Verdana, Arial, Helvetica, sans-serif;"><#3225#>:</span>
 <br>
 <strong id="NM_connect_status" class="index_status" style="font-size:14px;"><#632#>...</strong>
 </div>
@@ -2235,7 +2235,7 @@ hideEditBlock();
 <span><img id="le_icon" src="images/New_ui/networkmap/LE_badge_color.svg" style="width:25px; height:25px; display:none;"></span>
 </div>
 <div id="wlc_band_div" style="margin-top:5px;display:none">
-<span style="font-size:14px;font-family: Verdana, Arial, Helvetica, sans-serif;"><#2324#>:</span>
+<span style="font-size:14px;font-family: Verdana, Arial, Helvetica, sans-serif;"><#2327#>:</span>
 <strong id="wlc_band_status" class="index_status" style="font-size:14px;"></strong>
 </div>
 <div id="dataRate_div" style="margin-top:5px;display:none">
@@ -2276,7 +2276,7 @@ hideEditBlock();
 Advanced_Wireless_Content.asp">On</a></strong>
 </div>
 <div id="wlSecurityContext">
-<span style="font-size:14px;font-family: Verdana, Arial, Helvetica, sans-serif;"><#3085#>: </span>
+<span style="font-size:14px;font-family: Verdana, Arial, Helvetica, sans-serif;"><#3089#>: </span>
 <br/>
 <strong id="wl_securitylevel_span" class="index_status"></strong>
 <img id="iflock">
@@ -2297,7 +2297,7 @@ Advanced_Wireless_Content.asp">On</a></strong>
 </tr>
 <tr>
 <td id="clients_td" width="150" bgcolor="#444f53" align="center" valign="top" class="NM_radius" style="padding-bottom:15px;">
-<div class="block_all_icon"><div><#2879#></div></div>
+<div class="block_all_icon"><div><#2883#></div></div>
 <script type="text/javascript">
 $(".block_all_icon").unbind("click").click(function(e){
 e = e || event;
@@ -2311,7 +2311,7 @@ block_all_device_hint();
 </a>
 <div class="clients" id="clientNumber" style="cursor:pointer;"></div>
 </div>
-<input type="button" class="button_gen" value="<#3505#>" style="margin-top:15px;" onClick="pop_clientlist_listview(true)">
+<input type="button" class="button_gen" value="<#3511#>" style="margin-top:15px;" onClick="pop_clientlist_listview(true)">
 <div id="networkmap_switch" style="display:none">
 <div align="center" class="left" style="width:94px; cursor:pointer;margin-top:10px" id="networkmap_enable_t"></div>
 <div class="iphone_switch_container" style="height:32px; width:74px; position: relative; overflow: hidden">

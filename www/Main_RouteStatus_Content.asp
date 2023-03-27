@@ -50,7 +50,7 @@
 <div>&nbsp;</div>
 <div class="formfonttitle"><#747#> - <#420#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#3036#></div>
+<div class="formfontdesc"><#3040#></div>
 <div style="margin-top:8px">
 <textarea class="textarea_ssh_table" style="width:99%; font-family:'Courier New', Courier, mono; font-size:13px;" cols="63" rows="25" readonly="readonly" wrap=off><% nvram_dump("route.log",""); %></textarea></div>
 <div class="apply_gen">

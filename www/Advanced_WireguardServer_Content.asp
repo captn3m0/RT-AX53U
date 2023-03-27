@@ -110,7 +110,7 @@ $('#wgs_QRCode_block').hide();
 <table id="WgcBasicTable" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#3277#></td>
+<td colspan="2"><#3281#></td>
 </tr>
 </thead>
 <tr id="wgs_unit_field" class="rept ew">

@@ -369,7 +369,7 @@ document.getElementById("last_time_lock_warning").innerHTML ="You have entered a
 if(flag != ""){
 document.getElementById("error_status_field").style.display ="";
 if(flag == 3){
-document.getElementById("error_status_field").innerHTML ="* <#2484#>";
+document.getElementById("error_status_field").innerHTML ="* <#2488#>";
 }
 else if(flag == 7){
 document.getElementById("error_status_field").innerHTML ="You have entered an incorrect username or password 5 times. Please try again after "+"<span id='rtime'></span>"+" seconds.";
@@ -600,13 +600,13 @@ captcha_pic.src = "captcha.gif" + queryString;
 <div class="prod_madelName"><#843#></div>
 <div id="login_filed">
 <div class="p1 title_gap"><#726#></div>
-<div id="name_title_ie" style="display:none;margin:20px 0 -10px 78px;" class="p1 title_gap"><#3494#></div>
+<div id="name_title_ie" style="display:none;margin:20px 0 -10px 78px;" class="p1 title_gap"><#3500#></div>
 <div class="title_gap">
-<input type="text" id="login_username" name="login_username" tabindex="1" class="form_input" maxlength="128" autocapitalize="off" autocomplete="off" placeholder="<#3494#>">
+<input type="text" id="login_username" name="login_username" tabindex="1" class="form_input" maxlength="128" autocapitalize="off" autocomplete="off" placeholder="<#3500#>">
 </div>
-<div id="password_title_ie" style="display:none;margin:20px 0 -20px 78px;" class="p1 title_gap"><#2296#></div>
+<div id="password_title_ie" style="display:none;margin:20px 0 -20px 78px;" class="p1 title_gap"><#2299#></div>
 <div class="password_gap">
-<input type="password" name="login_passwd" tabindex="2" class="form_input" maxlength="128" placeholder="<#2296#>" autocapitalize="off" autocomplete="off">
+<input type="password" name="login_passwd" tabindex="2" class="form_input" maxlength="128" placeholder="<#2299#>" autocapitalize="off" autocomplete="off">
 </div>
 <div class="error_hint" style="display:none;" id="error_status_field"></div>
 <div class="warming_desc" style="display:none;" id="last_time_lock_warning"></div>
@@ -621,13 +621,13 @@ captcha_pic.src = "captcha.gif" + queryString;
 <div id="nologin_field" style="display:none;">
 <div class="p1 title_gap"></div>
 <div class="nologin">
-<#2619#>
+<#2623#>
 <div id="logined_ip_str"></div>
 </div>
 </div>
 <div id="logout_field" style="display:none;">
 <div class="p1 title_gap"></div>
-<div class="nologin"><#2620#></div>
+<div class="nologin"><#2624#></div>
 </div>
 </div>
 </div>

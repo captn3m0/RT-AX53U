@@ -2266,8 +2266,11 @@ Denne VPN-profil er deaktiveret. Gå til siden med VPN-serverindstillinger og ak
 Klik på [ Go Setting ] nedenfor på side for VPN-indstilling.
 Denne indstilling kan ikke vælges, mens der bruges den anden oprettede profil.
 Hjemmenetværk
+Der er ingen VPN-profil nu. Klik på [Go Setting] nedenfor på side for VPN-indstilling og opret.
 Tilføj et netværk
 Liste over profiler
+Vælg et defineret netværk
+WiFi-planlægning
 Hardware-version
 Help
 Hjælp giver vejledninger og oplysninger om, hvordan routerens funktioner anvendes. Klik
@@ -2442,6 +2445,7 @@ Lokalnetværk IPv6-adresse
 Lokalnetværk IPv6 præfiks
 IPv6 Lokalnetværk-indstillinger
 Native
+OCN Virtual Connect
 v6plus
 IPv6 præfikslængde
 IPv4-Anycast-relæ
@@ -3280,6 +3284,8 @@ Lokalnetværk (LAN)
 Diverse
 Telecommunications Standards
 Afbryd WAN-grænsefladen
+Planlagt
+Adgang enkelt gang
 Tidsplanlægning
 Tidsmaskine
 Sådan bruges Apple tidsmaskinen
@@ -3347,10 +3353,10 @@ Alaska
 Pacific-tid (USA og Canada)
 Mountain-tid (USA og Canada)
 Arizona
-Chihuahua, Mazatlan
+Mazatlan
 Saskatchewan
 Guadalajara, Mexico City
-Monterrey
+Monterrey, Chihuahua
 Mellemamerika
 Eastern-tid (USA og Canada)
 Indiana (øst)

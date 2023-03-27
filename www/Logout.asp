@@ -25,7 +25,7 @@ text-align: left;
 <table border="0" align="center" cellpadding="10" cellspacing="0">
 <tr>
 <td>
-<div class="desc"><#2620#></div>
+<div class="desc"><#2624#></div>
 </td>
 </tr>
 </table>

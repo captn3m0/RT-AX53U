@@ -116,15 +116,15 @@ return folder_name;
 <table width="100%" class="popTable" border="0" align="center" cellpadding="0" cellspacing="0">
 <thead>
 <tr>
-<td colspan="2"><span style="color:#FFF"><#2762#></span><img src="../images/button-close.gif" onClick="parent.hidePop('OverlayMask');"></td>
+<td colspan="2"><span style="color:#FFF"><#2766#></span><img src="../images/button-close.gif" onClick="parent.hidePop('OverlayMask');"></td>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td colspan="2" height="30"><#2761#></td>
+<td colspan="2" height="30"><#2765#></td>
 </tr>
 <tr>
-<th><#2914#>: </th>
+<th><#2918#>: </th>
 <td colspan="3"><span id="selected_Pool"></span></td>
 </tr>
 <tr>
@@ -132,7 +132,7 @@ return folder_name;
 <td colspan="3"><span id="selected_Folder"></span></td>
 </tr>
 <tr>
-<th><#2821#>: </th>
+<th><#2825#>: </th>
 <td><input class="input_25_table" type="text" name="new_folder" id="new_folder" onkeypress="return NoSubmit(event)" autocorrect="off" autocapitalize="off"></td>
 </tr>
 <tr>

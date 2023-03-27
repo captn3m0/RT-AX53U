@@ -97,14 +97,14 @@ document.form.submit();
 </table>
 </div>
 <div style="margin:5px;" class="splitLine"></div>
-<div class="formfontdesc"><#3457#></div>
+<div class="formfontdesc"><#3463#></div>
 <table width="98%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
 <th width="40%">WebDav to Samba</th>
 <td>
 <select name="enable_webdav" class="input_option" onChange="hideAll(this.value);">
-<option value="0" <% nvram_match("enable_webdav", "0","selected"); %> ><#3841#></option>
-<option value="1" <% nvram_match("enable_webdav", "1","selected"); %> ><#3840#></option>
+<option value="0" <% nvram_match("enable_webdav", "0","selected"); %> ><#3847#></option>
+<option value="1" <% nvram_match("enable_webdav", "1","selected"); %> ><#3846#></option>
 </select>
 </td>
 </tr>

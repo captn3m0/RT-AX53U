@@ -109,10 +109,10 @@ var faq_href1 = "https://nw-dlcdnet.asus.com/support/forward.html?model=&type=Fa
 var faq_href2 = "https://nw-dlcdnet.asus.com/support/forward.html?model=&type=Faq&lang="+ui_lang+"&kw=&num=142";
 function initial(){
 default_apps_array = [["AiDisk", "aidisk.asp", "<#991#>", "Aidisk_png", ""],
-["<#3100#>", "mediaserver.asp", "<#3453#>", "server_png", ""],
-["<#2799#>", "PrinterServer.asp", "<#2798#>", "PrinterServer_png", ""],
-["3G/4G", "Advanced_Modem_Content.asp", "<#2288#>", "modem_png", ""],
-["<#3283#>", "Advanced_TimeMachine.asp", "<#3288#>", "TimeMachine_png", "1.0.0.1"]];
+["<#3104#>", "mediaserver.asp", "<#3459#>", "server_png", ""],
+["<#2803#>", "PrinterServer.asp", "<#2802#>", "PrinterServer_png", ""],
+["3G/4G", "Advanced_Modem_Content.asp", "<#2291#>", "modem_png", ""],
+["<#3289#>", "Advanced_TimeMachine.asp", "<#3294#>", "TimeMachine_png", "1.0.0.1"]];
 if(re_mode == "1"){
 $("#FormTitle").addClass("perNode_app_table");
 default_apps_array[1][1] = "";
@@ -126,15 +126,15 @@ show_menu();
 $("#FormTitle").css("display", "");
 if(!media_support){
 default_apps_array[1][1] = "Advanced_AiDisk_samba.asp";
-default_apps_array[1].splice(2,1,"<#2643#>");
+default_apps_array[1].splice(2,1,"<#2647#>");
 }
 if(sw_mode == 2 || sw_mode == 3 || sw_mode == 4 || re_mode == "1" || noaidisk_support){
 if(default_apps_array.getIndexByValue2D("AiDisk") != -1)
 default_apps_array = default_apps_array.del(default_apps_array.getIndexByValue2D("AiDisk")[0]);
 }
 if(!printer_support || noprinter_support || re_mode == "1"){
-if(default_apps_array.getIndexByValue2D("<#2799#>") != -1)
-default_apps_array = default_apps_array.del(default_apps_array.getIndexByValue2D("<#2799#>")[0]);
+if(default_apps_array.getIndexByValue2D("<#2803#>") != -1)
+default_apps_array = default_apps_array.del(default_apps_array.getIndexByValue2D("<#2803#>")[0]);
 }
 if(sw_mode == 2 || sw_mode == 3 || sw_mode == 4 || re_mode == "1" || !modem_support || nomodem_support ||
 based_modelid.substring(0,3) == "4G-"){
@@ -142,8 +142,8 @@ if(default_apps_array.getIndexByValue2D("3G/4G") != -1)
 default_apps_array = default_apps_array.del(default_apps_array.getIndexByValue2D("3G/4G")[0]);
 }
 if(!timemachine_support){
-if(default_apps_array.getIndexByValue2D("<#3283#>") != -1)
-default_apps_array = default_apps_array.del(default_apps_array.getIndexByValue2D("<#3283#>")[0]);
+if(default_apps_array.getIndexByValue2D("<#3289#>") != -1)
+default_apps_array = default_apps_array.del(default_apps_array.getIndexByValue2D("<#3289#>")[0]);
 }
 trNum = default_apps_array.length;
 if(_apps_action == '' &&
@@ -235,21 +235,21 @@ var proceed = 0.6;
 if(apps_state_upgrade != 4 && apps_state_upgrade != ""){ // upgrade error handler
 errorcode = "apps_state_upgrade = " + apps_state_upgrade;
 if(apps_state_error == 1)
-document.getElementById("apps_state_desc").innerHTML = "<#3480#>";
+document.getElementById("apps_state_desc").innerHTML = "<#3486#>";
 else if(apps_state_error == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#3468#>";
+document.getElementById("apps_state_desc").innerHTML = "<#3474#>";
 else if(apps_state_error == 4)
-document.getElementById("apps_state_desc").innerHTML = "<#3467#>";
-else if(apps_state_error == 6)
-document.getElementById("apps_state_desc").innerHTML = "<#3470#>";
-else if(apps_state_error == 7)
 document.getElementById("apps_state_desc").innerHTML = "<#3473#>";
-else if(apps_state_error == 9)
-document.getElementById("apps_state_desc").innerHTML = "<#3472#>";
-else if(apps_state_error == 10)
-document.getElementById("apps_state_desc").innerHTML = "<#3469#>";
-else if(apps_state_upgrade == 0)
+else if(apps_state_error == 6)
+document.getElementById("apps_state_desc").innerHTML = "<#3476#>";
+else if(apps_state_error == 7)
 document.getElementById("apps_state_desc").innerHTML = "<#3479#>";
+else if(apps_state_error == 9)
+document.getElementById("apps_state_desc").innerHTML = "<#3478#>";
+else if(apps_state_error == 10)
+document.getElementById("apps_state_desc").innerHTML = "<#3475#>";
+else if(apps_state_upgrade == 0)
+document.getElementById("apps_state_desc").innerHTML = "<#3485#>";
 else if(apps_state_upgrade == 1){
 if(apps_download_percent > 0 && apps_download_percent <= 100){
 document.getElementById("apps_state_desc").innerHTML = apps_download_file + " is downloading.. " + " <b>" + apps_download_percent + "</b> <span style='font-size: 16px;'>%</span>";
@@ -263,12 +263,12 @@ document.getElementById("apps_state_desc").innerHTML = "[" + cookie.get("apps_la
 installPercent = installPercent + proceed;//*/
 }
 else{
-document.getElementById("apps_state_desc").innerHTML = "&nbsp;<#3479#>...";
+document.getElementById("apps_state_desc").innerHTML = "&nbsp;<#3485#>...";
 apps_download_percent_done++;
 }
 }
 else if(apps_state_upgrade == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#3491#>";
+document.getElementById("apps_state_desc").innerHTML = "<#3497#>";
 else{
 if(apps_depend_action_target != "terminated" && apps_depend_action_target != "error"){
 if(apps_depend_action_target == "")
@@ -291,11 +291,11 @@ installPercent = installPercent + proceed;
 else if(apps_state_enable != 2 && apps_state_enable != ""){
 errorcode = "apps_state_enable = " + apps_state_enable;
 if(apps_state_error == 1)
-document.getElementById("apps_state_desc").innerHTML = "<#3471#>";
+document.getElementById("apps_state_desc").innerHTML = "<#3477#>";
 else if(apps_state_error == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#3468#>";
+document.getElementById("apps_state_desc").innerHTML = "<#3474#>";
 else if(apps_state_error == 3)
-document.getElementById("apps_state_desc").innerHTML = "<#3466#>";
+document.getElementById("apps_state_desc").innerHTML = "<#3472#>";
 else if(apps_state_error == 8)
 document.getElementById("apps_state_desc").innerHTML = "Enable error!";
 else{
@@ -306,74 +306,74 @@ document.getElementById("apps_state_desc").innerHTML = "<#497#>";
 else if(apps_state_update != 2 && apps_state_update != ""){
 errorcode = "apps_state_update = " + apps_state_update;
 if(apps_state_error == 1)
-document.getElementById("apps_state_desc").innerHTML = "<#3460#>";
+document.getElementById("apps_state_desc").innerHTML = "<#3466#>";
 else if(apps_state_error == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#3458#>";
+document.getElementById("apps_state_desc").innerHTML = "<#3464#>";
 else
-document.getElementById("apps_state_desc").innerHTML = "<#3447#>";
+document.getElementById("apps_state_desc").innerHTML = "<#3453#>";
 }
 else if(apps_state_remove != 2 && apps_state_remove != ""){
 errorcode = "apps_state_remove = " + apps_state_remove;
-document.getElementById("apps_state_desc").innerHTML = "<#3445#>";
+document.getElementById("apps_state_desc").innerHTML = "<#3451#>";
 }
 else if(apps_state_switch != 4 && apps_state_switch != 5 && apps_state_switch != ""){
 errorcode = "apps_state_switch = " + apps_state_switch;
 if(apps_state_error == 1)
-document.getElementById("apps_state_desc").innerHTML = "<#3471#>";
+document.getElementById("apps_state_desc").innerHTML = "<#3477#>";
 else if(apps_state_error == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#3468#>";
+document.getElementById("apps_state_desc").innerHTML = "<#3474#>";
 else if(apps_state_switch == 1)
-document.getElementById("apps_state_desc").innerHTML = "<#3461#>";
+document.getElementById("apps_state_desc").innerHTML = "<#3467#>";
 else if(apps_state_switch == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#3462#>";
+document.getElementById("apps_state_desc").innerHTML = "<#3468#>";
 else if(apps_state_switch == 3)
-document.getElementById("apps_state_desc").innerHTML = "<#3459#>";
+document.getElementById("apps_state_desc").innerHTML = "<#3465#>";
 else
 document.getElementById("apps_state_desc").innerHTML = "<#1894#>";
 }
 else if(apps_state_autorun != 4 && apps_state_autorun != ""){
 errorcode = "apps_state_autorun = " + apps_state_autorun;
 if(apps_state_error == 1)
-document.getElementById("apps_state_desc").innerHTML = "<#3471#>";
+document.getElementById("apps_state_desc").innerHTML = "<#3477#>";
 else if(apps_state_error == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#3468#>";
+document.getElementById("apps_state_desc").innerHTML = "<#3474#>";
 else if(apps_state_autorun == 1)
-document.getElementById("apps_state_desc").innerHTML = "<#3456#>";
+document.getElementById("apps_state_desc").innerHTML = "<#3462#>";
 else if(apps_state_install == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#3463#>";
+document.getElementById("apps_state_desc").innerHTML = "<#3469#>";
 else
 document.getElementById("apps_state_desc").innerHTML = "<#1424#>";
 }
 else if(apps_state_install != 5 && apps_state_error > 0){ // install error handler
 if(apps_state_error == 1)
-document.getElementById("apps_state_desc").innerHTML = "<#3480#>";
+document.getElementById("apps_state_desc").innerHTML = "<#3486#>";
 else if(apps_state_error == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#3468#>";
+document.getElementById("apps_state_desc").innerHTML = "<#3474#>";
 else if(apps_state_error == 3)
-document.getElementById("apps_state_desc").innerHTML = "<#3466#>";
-else if(apps_state_error == 4)
-document.getElementById("apps_state_desc").innerHTML = "<#3467#>";
-else if(apps_state_error == 5)
-document.getElementById("apps_state_desc").innerHTML = "<#3465#>";
-else if(apps_state_error == 6)
-document.getElementById("apps_state_desc").innerHTML = "<#3470#>";
-else if(apps_state_error == 7)
-document.getElementById("apps_state_desc").innerHTML = "<#3473#>";
-else if(apps_state_error == 9)
 document.getElementById("apps_state_desc").innerHTML = "<#3472#>";
+else if(apps_state_error == 4)
+document.getElementById("apps_state_desc").innerHTML = "<#3473#>";
+else if(apps_state_error == 5)
+document.getElementById("apps_state_desc").innerHTML = "<#3471#>";
+else if(apps_state_error == 6)
+document.getElementById("apps_state_desc").innerHTML = "<#3476#>";
+else if(apps_state_error == 7)
+document.getElementById("apps_state_desc").innerHTML = "<#3479#>";
+else if(apps_state_error == 9)
+document.getElementById("apps_state_desc").innerHTML = "<#3478#>";
 else if(apps_state_error == 10)
-document.getElementById("apps_state_desc").innerHTML = "<#3469#>";
+document.getElementById("apps_state_desc").innerHTML = "<#3475#>";
 isinstall = 0;
 }
 else if(apps_state_install != 5 && apps_state_install != ""){
 isinstall = 1;
 errorcode = "_apps_state_install = " + apps_state_install;
 if(apps_state_install == 0)
-document.getElementById("apps_state_desc").innerHTML = "<#3481#>";
+document.getElementById("apps_state_desc").innerHTML = "<#3487#>";
 else if(apps_state_install == 1)
-document.getElementById("apps_state_desc").innerHTML = "<#3456#>";
+document.getElementById("apps_state_desc").innerHTML = "<#3462#>";
 else if(apps_state_install == 2)
-document.getElementById("apps_state_desc").innerHTML = "<#3463#>";
+document.getElementById("apps_state_desc").innerHTML = "<#3469#>";
 else if(apps_state_install == 3){
 if(apps_download_percent > 0 && apps_download_percent <= 100){
 document.getElementById("apps_state_desc").innerHTML = apps_download_file + " is downloading.. " + " <b>" + apps_download_percent + "</b> <span style='font-size: 16px;'>%</span>";
@@ -387,7 +387,7 @@ document.getElementById("apps_state_desc").innerHTML = "[" + cookie.get("apps_la
 installPercent = installPercent + proceed;//*/
 }
 else{
-document.getElementById("apps_state_desc").innerHTML = "&nbsp;<#3479#>...";
+document.getElementById("apps_state_desc").innerHTML = "&nbsp;<#3485#>...";
 apps_download_percent_done++;
 }
 }
@@ -434,7 +434,7 @@ return false;
 var trNum;
 function show_apps(){
 if(re_mode != "1")
-document.getElementById("usbHint").innerHTML = "<#3014#>";
+document.getElementById("usbHint").innerHTML = "<#3018#>";
 var counter = 0;
 appnum = 0;
 if(apps_array == "" && (appnet_support || appbase_support)){
@@ -504,7 +504,7 @@ else
 htmlcode += '<div class="app_name">' + default_apps_array[i][0] + '</div>\n';
 }
 if(i ==3){
-htmlcode += '<div class="app_desc">' + default_apps_array[i][2] + ' <a href="https://www.asus.com/event/networks_3G4G_support/" target="_blank" style="text-decoration:underline;"><#3235#></a></div>\n';
+htmlcode += '<div class="app_desc">' + default_apps_array[i][2] + ' <a href="https://www.asus.com/event/networks_3G4G_support/" target="_blank" style="text-decoration:underline;"><#3239#></a></div>\n';
 }
 else{
 htmlcode += '<div class="app_desc">' + default_apps_array[i][2] + '</div>\n';
@@ -631,9 +631,9 @@ htmlcode += '<div style="margin-top:10px;">\n';
 if(apps_array[i][3] == "yes"){ //installed
 htmlcode += '<span class="app_action" onclick="apps_form(\'remove\',\''+ apps_array[i][0] +'\',\'\');">Uninstall</span>\n'; /* untranslated */
 if(apps_array[i][4] == "yes") //enable
-htmlcode += '<span class="app_action" onclick="apps_form(\'enable\',\''+ apps_array[i][0] +'\',\'no\');"><#3841#></span>\n';
+htmlcode += '<span class="app_action" onclick="apps_form(\'enable\',\''+ apps_array[i][0] +'\',\'no\');"><#3847#></span>\n';
 else
-htmlcode += '<span class="app_action" onclick="apps_form(\'enable\',\''+ apps_array[i][0] +'\',\'yes\');"><#3840#></span>\n';
+htmlcode += '<span class="app_action" onclick="apps_form(\'enable\',\''+ apps_array[i][0] +'\',\'yes\');"><#3846#></span>\n';
 if(sw_mode == 3 || link_internet == "2")
 htmlcode += '<span class="app_action" onclick="apps_form(\'update\',\''+ apps_array[i][0] +'\',\'\');">Check update</span>\n'; /* untranslated */
 if(apps_array[i][0] == "downloadmaster"){
@@ -644,9 +644,9 @@ htmlcode += '<span class="app_action" onclick="location.href=\'fileflex.asp\';">
 if( cookie.get("apps_last") == apps_array[i][0] &&
 hasNewVer(apps_array[i]) &&
 (sw_mode == 3 || link_internet == "2"))
-htmlcode += '</div><div style="color:#FC0;margin-top:10px;"><span class="app_action" onclick="apps_form(\'upgrade\',\''+ apps_array[i][0] +'\',\'\');"><#3446#></span>\n';
+htmlcode += '</div><div style="color:#FC0;margin-top:10px;"><span class="app_action" onclick="apps_form(\'upgrade\',\''+ apps_array[i][0] +'\',\'\');"><#3452#></span>\n';
 else if(cookie.get("apps_last") == apps_array[i][0])
-htmlcode += "</div><div style=\"color:#FC0;margin-top:10px;margin-left:10px;\"><span class=\"app_no_action\" onclick=\"\"><#2613#></span>\n";
+htmlcode += "</div><div style=\"color:#FC0;margin-top:10px;margin-left:10px;\"><span class=\"app_no_action\" onclick=\"\"><#2617#></span>\n";
 }
 else{
 if(apps_array[i][0] == "downloadmaster" || apps_array[i][0] == "mediaserver" || apps_array[i][0] == "aicloud" || apps_array[i][0] == "mediaserver2" || apps_array[i][0] == "fileflex")
@@ -758,7 +758,7 @@ if(accessableSize > 1)
 htmlcode += '<div class="app_desc"><#1425#>: <b>'+ accessableSize+" GB" + '</b></div>';
 else
 htmlcode += '<div class="app_desc"><#1425#>: <b>'+ accessableSize+" GB <span style=\'color:#FFCC00\'>(Disk quota can not less than 1GB)" + '</span></b></div>';
-htmlcode += '<div class="app_desc"><#3310#>: <b>'+ totalSize+" GB" + '</b></div>';
+htmlcode += '<div class="app_desc"><#3316#>: <b>'+ totalSize+" GB" + '</b></div>';
 htmlcode += '<div class="app_desc"><b>' + usbDevicesList[i].deviceName + '</b></div>';
 htmlcode += '</div><br/><br/></td></tr>\n';
 mounted_partition++;
@@ -766,9 +766,9 @@ mounted_partition++;
 }
 if(mounted_partition == 0){
 if(re_mode == "1")
-htmlcode += '<tr height="360px"><td colspan="2" class="perNode_nohover"><span class="app_name" style="line-height:100%"><#2826#></span></td></tr>\n';
+htmlcode += '<tr height="360px"><td colspan="2" class="perNode_nohover"><span class="app_name" style="line-height:100%"><#2830#></span></td></tr>\n';
 else
-htmlcode += '<tr height="360px"><td colspan="2" class="nohover"><span class="app_name" style="line-height:100%"><#2826#></span></td></tr>\n';
+htmlcode += '<tr height="360px"><td colspan="2" class="nohover"><span class="app_name" style="line-height:100%"><#2830#></span></td></tr>\n';
 }
 document.getElementById("partition_div").innerHTML = htmlcode;
 document.getElementById("usbHint").innerHTML = "<#1780#> :";

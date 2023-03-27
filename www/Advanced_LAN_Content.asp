@@ -183,7 +183,7 @@ if(sw_mode == 1 && document.form.wan_ipaddr_x.value != "0.0.0.0" && document.for
 if(validator.matchSubnet2(document.form.wan_ipaddr_x.value, document.form.wan_netmask_x, document.form.lan_ipaddr.value, document.form.lan_netmask)){
 document.form.lan_ipaddr.focus();
 document.form.lan_ipaddr.select();
-alert("<#2422#>");
+alert("<#2425#>");
 return false;
 }
 }
@@ -264,7 +264,7 @@ ipPoolStart = ipPoolStartArray[0] + "." + ipPoolStartArray[1] + "." + ipPoolStar
 }
 ipPoolEnd = ipPoolEndArray[0] + "." + ipPoolEndArray[1] + "." + ipPoolEndArray[2] + "." + ipPoolEndArray[3];
 if((document.form.dhcp_start.value != ipPoolStart) || (document.form.dhcp_end.value != ipPoolEnd)){
-if(confirm("<#2470#>")){
+if(confirm("<#2474#>")){
 document.form.dhcp_start.value = ipPoolStart;
 document.form.dhcp_end.value = ipPoolEnd;
 }else{
@@ -369,12 +369,12 @@ return false;
 <div>&nbsp;</div>
 <div class="formfonttitle"><#389#> - <#390#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#2506#></div>
-<div id="VPN_conflict" class="formfontdesc" style="color:#FFCC00;display:none;"><#2507#></div>
+<div class="formfontdesc"><#2510#></div>
+<div id="VPN_conflict" class="formfontdesc" style="color:#FFCC00;display:none;"><#2511#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
 <th>
-<a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,13);"><#2557#></a>
+<a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,13);"><#2561#></a>
 </th>
 <td>
 <input type="text" maxlength="32" class="input_32_table" name="lan_hostname" value="<% nvram_get("lan_hostname"); %>" onkeypress="return validator.isString(this, event)" autocorrect="off" autocapitalize="off"><br/>
@@ -383,7 +383,7 @@ return false;
 </tr>
 <tr>
 <th>
-<a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,2);"><#2514#></a>
+<a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,2);"><#2518#></a>
 </th>
 <td>
 <input type="text" maxlength="32" class="input_32_table" name="lan_domain" value="<% nvram_get("lan_domain"); %>" onkeypress="return validator.isString(this, event)" autocorrect="off" autocapitalize="off"><br/>

@@ -467,6 +467,7 @@ var IPv6_support = isSupport("ipv6");
 var IPv6_Passthrough_support = isSupport("ipv6pt");
 var IPv6_Only_support = isSupport("v6only");
 var Softwire46_support = isSupport("s46");
+var ocnvc_support = isSupport("ocnvc");
 var ParentalCtrl2_support = isSupport("PARENTAL2");
 var pptpd_support = isSupport("pptpd");
 var openvpnd_support = isSupport("openvpnd");
@@ -498,6 +499,7 @@ var swisscom_support = isSupport("swisscom");
 var tmo_support = isSupport("tmo");
 var atf_support = isSupport("atf");
 var pwrsave_support = isSupport("pwrsave");
+var pagecache_ratio_support = isSupport("pcache_ratio");
 var wl_mfp_support = isSupport("wl_mfp"); // For Protected Management Frames, ARM platform
 var bwdpi_support = isSupport("bwdpi");
 var bwdpi_mals_support = isSupport("dpi_mals");
@@ -913,14 +915,14 @@ banner_code +='<tbody><tr>\n';
 if(radio_all_disabled && !radioHintIgnored){
 banner_code += '<div style="padding: 2px 8px;margin: 0 0 2px 230px;width:735px;display:flex;justify-content:space-between;" class="radio_hint top_banner_hint">';
 banner_code += '<div style="background-image: url(\'images/New_ui/exclamationmark.svg\');width:16px;height:16px;background-size: 100%;background-repeat:no-repeat;cursor: pointer"></div>';
-banner_code += '<div style="font-size: 14px;margin-left:12px;"><#4231#></div>';
+banner_code += '<div style="font-size: 14px;margin-left:12px;"><#4237#></div>';
 banner_code += '<div style="background-image: url(\'images/New_ui/arrow_right.svg\');width:16px;height:16px;background-size: 60%;background-repeat:no-repeat;cursor: pointer;margin-left: auto" onclick="radio_hint();"></div>';
 banner_code += '</div>';
 }
 if(block_all_device && !blockAllDeviceHintIgnored){
 banner_code += '<div style="padding: 2px 8px;margin: 0 0 2px 230px;width:735px;display:flex;justify-content:space-between;" class="radio_hint top_banner_hint">';
 banner_code += '<div style="background-image: url(\'images/New_ui/exclamationmark.svg\');width:16px;height:16px;background-size: 100%;background-repeat:no-repeat;cursor: pointer"></div>';
-banner_code += '<div style="font-size: 14px;margin-left:12px;"><#2876#></div>';
+banner_code += '<div style="font-size: 14px;margin-left:12px;"><#2880#></div>';
 banner_code += '<div style="background-image: url(\'images/New_ui/arrow_right.svg\');width:16px;height:16px;background-size: 60%;background-repeat:no-repeat;cursor: pointer;margin-left: auto" onclick="block_all_device_hint(\'1\');"></div>';
 banner_code += '</div>';
 }
@@ -1043,9 +1045,9 @@ set_traffic_show("1");
 banner_code +='<div id="mobile_traffic_warning" class="traffic_warning" style="display: none; opacity:0;">\n';
 banner_code +='<div style="text-align:right"><img src="/images/button-close.gif" style="width:30px;cursor:pointer" onclick="slow_hide_warning();"></div>';
 banner_code +='<div style="margin:0px 30px 10px;">';
-banner_code += "<#2684#>";
+banner_code += "<#2688#>";
 banner_code +='</div>';
-banner_code +="<span><input style=\"margin-left:30px;\" type=\"checkbox\" name=\"stop_show_chk\" id=\"stop_show_chk\"><#2737#></input></span>";
+banner_code +="<span><input style=\"margin-left:30px;\" type=\"checkbox\" name=\"stop_show_chk\" id=\"stop_show_chk\"><#2741#></input></span>";
 banner_code +='<div style="margin-top:20px;padding-bottom:10px;width:100%;text-align:center;">';
 banner_code +='<input id="changeButton" class="button_gen" type="button" value="Change" onclick="setTrafficLimit();">';
 banner_code +='</div>';
@@ -1172,7 +1174,7 @@ return false;
 if(obj.value){
 for(var i=0; i<keywordArray.length; i++){
 if( obj.value.indexOf(keywordArray[i]) >= 0){
-alert(keywordArray+ " <#2474#>");
+alert(keywordArray+ " <#2478#>");
 obj.focus();
 return false;
 }
@@ -1574,17 +1576,17 @@ href_lang = "/"; //global only
 footer_code = '<div align="center" class="bottom-image"></div>\n';
 footer_code +='<div align="center" class="copyright"><#276#></div><br>';
 footer_code += '<div style="margin-top:-75px;margin-left:205px;"><table width="765px" border="0" align="center" cellpadding="0" cellspacing="0"><tr>';
-footer_code += '<td width="20" align="right"><div id="bottom_help_icon" style="margin-right:3px;"></div></td><td width="110" id="bottom_help_title" align="left"><#2271#> & <#3235#></td>';
+footer_code += '<td width="20" align="right"><div id="bottom_help_icon" style="margin-right:3px;"></div></td><td width="110" id="bottom_help_title" align="left"><#2274#> & <#3239#></td>';
 var genlink = "https://nw-dlcdnet.asus.com/support/forward.html?model="+support_site_modelid+"&type=Manual&lang="+href_lang+"&kw=&num=";
-footer_code += "<td width=\"335\" id=\"bottom_help_link\" align=\"left\"><a target=\"_blank\" rel=\"noreferrer\" href=\""+ genlink +"\" style=\"font-weight: bolder;text-decoration:underline;cursor:pointer;\"><#2626#></a>";
-footer_code += "&nbsp|&nbsp<a id=\"registration_link\" target=\"_blank\" rel=\"noreferrer\" href=\""+ href_reg_url +"\" target=\"_self\" style=\"font-weight: bolder;text-decoration:underline;cursor:pointer;\"><#2988#></a>";
+footer_code += "<td width=\"335\" id=\"bottom_help_link\" align=\"left\"><a target=\"_blank\" rel=\"noreferrer\" href=\""+ genlink +"\" style=\"font-weight: bolder;text-decoration:underline;cursor:pointer;\"><#2630#></a>";
+footer_code += "&nbsp|&nbsp<a id=\"registration_link\" target=\"_blank\" rel=\"noreferrer\" href=\""+ href_reg_url +"\" target=\"_self\" style=\"font-weight: bolder;text-decoration:underline;cursor:pointer;\"><#2992#></a>";
 if(dsl_support && frs_feedback_support){
-footer_code += '&nbsp|&nbsp<a id="fb_link" href="/Advanced_Feedback.asp" target="_self" style="font-weight: bolder;text-decoration:underline;cursor:pointer;"><#2646#></a>';
+footer_code += '&nbsp|&nbsp<a id="fb_link" href="/Advanced_Feedback.asp" target="_self" style="font-weight: bolder;text-decoration:underline;cursor:pointer;"><#2650#></a>';
 }
 else if(frs_feedback_support){
 var header_info = [<% get_header_info(); %>];
 var location_href = '/Advanced_Feedback.asp?origPage=' + header_info[0].current_page;
-footer_code += '&nbsp|&nbsp<a id="fb_link" href="'+location_href+'" target="_self" style="font-weight: bolder;text-decoration:underline;cursor:pointer;"><#2646#></a>';
+footer_code += '&nbsp|&nbsp<a id="fb_link" href="'+location_href+'" target="_self" style="font-weight: bolder;text-decoration:underline;cursor:pointer;"><#2650#></a>';
 }
 footer_code += '</td>';
 footer_code += '<td width="270" id="bottom_help_FAQ" align="right" style="font-family:Arial, Helvetica, sans-serif;">FAQ&nbsp&nbsp<input type="text" id="FAQ_input" class="input_FAQ_table" maxlength="40" onKeyPress="submitenter(this,event);" autocorrect="off" autocapitalize="off" onkeyup="filterFAQ();"></td>';
@@ -2522,7 +2524,7 @@ document.getElementById("adsl_line_status").onmouseout = function(){nd();}
 var wans_mode = '<%nvram_get("wans_mode");%>';
 var NM_connect_obj = function(_link_status, _link_sbstatus, _link_auxstatus, unit){
 if(dualwan_enabled && active_wan_unit != unit && (wans_mode == "fo" || wans_mode == "fb")){
-this.hint = "<#3207#>";
+this.hint = "<#3211#>";
 this.className = "_standby";
 }
 else{
@@ -2545,7 +2547,7 @@ this.link="/Advanced_WAN_Content.asp";
 }
 this.hasInternet = false;
 if(wans_dualwan_array[unit] == "usb" && sim_state == "-1"){
-this.hint = "<#2727#>";
+this.hint = "<#2731#>";
 this.className = "_disconnected";
 }
 else if(_link_auxstatus == "1"){
@@ -2556,7 +2558,7 @@ this.className = "_disconnected";
 else if(_link_status == "2" && _link_sbstatus == "0"){
 this.link = "";
 if(dualwan_enabled && active_wan_unit != unit && (wans_mode == "fo" || wans_mode == "fb")){
-this.hint = "<#3208#>";
+this.hint = "<#3212#>";
 this.className = "_standby";
 }
 else if(link_internet == "2"){
@@ -3102,7 +3104,7 @@ setTimeout(function(){notification.updateNTDB_Status();}, 10000);
 else
 notification.updateNTDB_Status()
 if(letsencrypt_support && le_restart_httpd == "1" && le_restart_httpd_chk == ""){
-alert("<#2570#>");
+alert("<#2574#>");
 le_restart_httpd_chk = le_restart_httpd;
 }
 if(window.frames["statusframe"] && window.frames["statusframe"].stopFlag == 1 || stopFlag == 1){
@@ -3209,7 +3211,7 @@ NewInput.value = _val;
 document.form.appendChild(NewInput);
 }
 function isPortConflict(_val, service){
-var str = "(" + _val + ") <#2930#>: ";
+var str = "(" + _val + ") <#2934#>: ";
 if(_val == '<% nvram_get("http_lanport"); %>'){
 str = str + "HTTP LAN port.";
 return str;
@@ -3269,7 +3271,7 @@ StrIndex = today.toString().indexOf("+");
 if(StrIndex > 0){
 if(timezone != today.toString().substring(StrIndex, StrIndex+5)){
 document.getElementById("timezone_hint_div").style.display = "";
-document.getElementById("timezone_hint").innerHTML = "* <#2584#>";
+document.getElementById("timezone_hint").innerHTML = "* <#2588#>";
 }
 else
 return;
@@ -3689,15 +3691,15 @@ $("#loadingBlock").css({"visibility": "hidden"});
 var obj = $('.banner1');
 var code = '<div class="eula_panel_container border-container" style="display:block;position:absolute;width:450px;height:280px;background-color: rgba(0,0,0,.9);padding: 24px 36px;font-family:Roboto;">';
 code += '<div style="font-size: 16px;font-weight: bold;margin: 12px 0;">Your WiFi radio is currently disabled</div>';
-code += '<div style="margin: 24px 0;"><#4232#></div>';
-var _str = '<#4233#>';
-var _str1 = '<#4234#>';
+code += '<div style="margin: 24px 0;"><#4238#></div>';
+var _str = '<#4239#>';
+var _str1 = '<#4240#>';
 var _temp = _str.replace('%1$@', 'WiFi radio').replace('%2$@', _str1);
 code += '<div style="margin: 24px 0;">'+ _temp +'</div>';
-code += '<div style="margin: 32px 0;"><input id="radio_hint_checkbox" type="checkbox"><#4235#></div>';
+code += '<div style="margin: 32px 0;"><input id="radio_hint_checkbox" type="checkbox"><#4241#></div>';
 code += '<div style="display:flex;justify-content:flex-end;margin:28px 0;">';
 code += '<div id="cancelBtn" class="button-container button-container-sm" style="margin: 0 12px;" onclick="radio_disagree();"><div class="button-icon icon-cancel"></div><div class="button-text"><#199#></div></div>';
-code += '<div id="applyBtn" class="button-container button-container-sm" style="margin: 0 12px;" onclick="radio_agree();"><div class="button-icon button-icon-check"></div><div class="button-text"><#4234#></div></div>';
+code += '<div id="applyBtn" class="button-container button-container-sm" style="margin: 0 12px;" onclick="radio_agree();"><div class="button-icon button-icon-check"></div><div class="button-text"><#4240#></div></div>';
 code += '</div></div>';
 obj.html(code);
 }
@@ -3746,11 +3748,11 @@ $("#Loading").css({"visibility": "visible"});
 $("#loadingBlock").css({"visibility": "hidden"});
 var obj = $('.banner1');
 var code = '<div class="eula_panel_container border-container" style="display:block;position:absolute;width:450px;height:auto;background-color: rgba(0,0,0,.9);padding: 24px 36px;font-family:Roboto;">';
-code += '<div style="font-size: 16px;font-weight: bold;margin: 12px 0;"><#2876#></div>';
-code += '<div style="margin: 18px 0;"><#2877#></div>';
-code += '<div style="margin: 18px 0;"><#2878#></div>';
+code += '<div style="font-size: 16px;font-weight: bold;margin: 12px 0;"><#2880#></div>';
+code += '<div style="margin: 18px 0;"><#2881#></div>';
+code += '<div style="margin: 18px 0;"><#2882#></div>';
 if(_flag == "1")
-code += '<div style="margin: 18px 0;"><input id="radio_hint_checkbox" type="checkbox"><#4235#></div>';
+code += '<div style="margin: 18px 0;"><input id="radio_hint_checkbox" type="checkbox"><#4241#></div>';
 code += '<div style="display:flex;justify-content:flex-end;margin-top:28px;">';
 code += '<div id="cancelBtn" class="button-container button-container-sm" style="margin: 0 12px;"><div class="button-icon icon-cancel"></div><div class="button-text"><#199#></div></div>';
 code += '<div id="applyBtn" class="button-container button-container-sm" style="margin: 0 12px;"><div class="button-icon button-icon-check"></div><div class="button-text"><#1517#></div></div>';

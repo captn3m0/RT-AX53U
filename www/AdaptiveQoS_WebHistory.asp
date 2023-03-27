@@ -117,7 +117,7 @@ match = 0;
 var code = "";
 code += "<tr>";
 code += "<th style='width:20%;text-align:left'><#874#></th>";
-code += "<th style='width:30%;text-align:left'><#2950#> / <#1532#></th>";
+code += "<th style='width:30%;text-align:left'><#2954#> / <#1532#></th>";
 code += "<th style='width:50%;text-align:left'><#1789#></th>";
 code += "</tr>";
 for(var i=0; i<data_array.length; i++){
@@ -423,7 +423,7 @@ download(csvContent, 'Web_History.csv', 'data:text/csv;charset=utf-8');
 <tr>
 <td bgcolor="#4D595D" colspan="3" valign="top">
 <div>&nbsp;</div>
-<div id="content_title" class="formfonttitle"><#2651#> - <#893#></div>
+<div id="content_title" class="formfonttitle"><#2655#> - <#893#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
 <div class="formfontdesc">
 <#894#>

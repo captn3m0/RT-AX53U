@@ -246,7 +246,7 @@ var sc_status = "0";
 if(isSupport("smart_connect")){
 var $sc_switch_bg = $("<div>").addClass("switch_ctl_bg");
 $sc_switch_bg.appendTo($hint_bg);
-$sc_switch_bg.append($("<div>").addClass("title_text").html("<#3168#>"));
+$sc_switch_bg.append($("<div>").addClass("title_text").html("<#3172#>"));
 var $sc_switch = $("<div>").addClass("switch");
 sc_status = httpApi.nvramGet(["smart_connect_x"]).smart_connect_x;
 $sc_switch.addClass(((sc_status == "0") ? "off" : "on"));
@@ -272,15 +272,15 @@ $(".popup_hint_component .sc_item_list_bg").hide();
 var sc_array = [];
 if(wl_info.band2g_support && wl_info.band5g_support && (wl_info.band5g_2_support || wl_info.band6g_support)){
 if(isSupport("wifi6e")){
-sc_array.push({"text":"<#3166#> (2.4 GHz, 5 GHz and 6 GHz)", "value":"1"});
+sc_array.push({"text":"<#3170#> (2.4 GHz, 5 GHz and 6 GHz)", "value":"1"});
 }
 else{
-sc_array.push({"text":"<#3166#> (2.4 GHz, 5 GHz-1 and 5 GHz-2)", "value":"1"});
+sc_array.push({"text":"<#3170#> (2.4 GHz, 5 GHz-1 and 5 GHz-2)", "value":"1"});
 sc_array.push({"text":"5 GHz Smart Connect (5 GHz-1 and 5 GHz-2)", "value":"2"});
 }
 }
 else if(wl_info.band2g_support && wl_info.band5g_support)
-sc_array.push({"text":"<#3165#> (2.4 GHz and 5 GHz)", "value":"1"});
+sc_array.push({"text":"<#3169#> (2.4 GHz and 5 GHz)", "value":"1"});
 var $sc_item_list_bg = $("<div>").addClass("sc_item_list_bg");
 $sc_item_list_bg.appendTo($hint_bg);
 sc_array.forEach(function(item, index, array){
@@ -455,12 +455,12 @@ var not_support_list = check_not_support_nodes("manual_reset_default");
 if(not_support_list == "") {
 hint += "<#1121#><#1133#>";
 hint += "<br>";
-hint += "<#3108#>";
+hint += "<#3112#>";
 }
 else {
 hint += "<#1122#>".replace("#MINUTES", reboot_minutes);
 hint += "<br>";
-hint += "<#3108#>";
+hint += "<#3112#>";
 hint += "<br><br>";
 var model_list_hint = "* <#1123#> <#1124#> #MODELLIST".replace("#MODELLIST", not_support_list);
 hint += $("<span>").css("color", "#FC0").html(model_list_hint)[0].outerHTML;
@@ -469,7 +469,7 @@ var lan_ipaddr = httpApi.nvramGet(["lan_ipaddr"]).lan_ipaddr;
 var lan_ipaddr_ori = '<% nvram_default_get("lan_ipaddr"); %>';
 if(lan_ipaddr != lan_ipaddr_ori){
 hint += "<br><br>";
-hint += $("<span>").css("color", "#FC0").html("* <#3109#>".replace("192.168.1.1", lan_ipaddr_ori).replace("\n", '<br>'))[0].outerHTML;
+hint += $("<span>").css("color", "#FC0").html("* <#3113#>".replace("192.168.1.1", lan_ipaddr_ori).replace("\n", '<br>'))[0].outerHTML;
 }
 popupHint.set_text(hint);
 popupHint.set_btn_ok(function(){
@@ -494,11 +494,11 @@ var reboot_minutes = Math.ceil(reboot_time / 60);
 var hint = "";
 var not_support_list = check_not_support_nodes("manual_reboot");
 if(not_support_list == "")
-hint = "<#1119#><#1133#><br><#3108#>";
+hint = "<#1119#><#1133#><br><#3112#>";
 else {
 hint += "Rebooting the router will cause all connected devices to lose the Internet connectivity and it takes around #MINUTES minutes. All devices will be reconnected again while the reboot completed.".replace("#MINUTES", reboot_minutes);/* untranslated */
 hint += "<br>";
-hint += "<#3108#>";
+hint += "<#3112#>";
 hint += "<br><br>";
 var model_list_hint = "* <#1123#> <#1125#> #MODELLIST".replace("#MODELLIST", not_support_list);
 hint += $("<span>").css("color", "#FC0").html(model_list_hint)[0].outerHTML;
@@ -678,7 +678,7 @@ $(document).ready(initial_system_settings);
 </div>
 <div class="system_settings_bg roaming_block">
 <div class="system_icon"></div>
-<div class="system_text"><span><#3751#></span></div>
+<div class="system_text"><span><#3757#></span></div>
 </div>
 <div class="system_settings_bg reset">
 <div class="system_icon"></div>

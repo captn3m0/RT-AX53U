@@ -66,9 +66,9 @@ showtext(document.getElementById("ddnslink2_LAN"), 'LAN FTP address: <a id="ddns
 else{
 document.getElementById("noWAN_link").style.display = "";
 if(FTP_status != 1)
-showtext(document.getElementById("noWAN_link"), '<#2607#>');
+showtext(document.getElementById("noWAN_link"), '<#2611#>');
 else if(ddns_enable != 1){
-showtext(document.getElementById("noWAN_link"), "<#2608#>");
+showtext(document.getElementById("noWAN_link"), "<#2612#>");
 document.getElementById("desc_2").style.display = "";
 document.getElementById("ddnslink1_LAN").style.display = "";
 if(FTP_mode == 1){
@@ -77,7 +77,7 @@ showtext(document.getElementById("ddnslink1_LAN"), 'LAN FTP address: <a id="ddns
 showtext(document.getElementById("ddnslink1_LAN"), 'LAN FTP address: <a id="ddnslink1_LAN_link" target="_blank" style="text-decoration: underline; font-family:Lucida Console;">ftp://<% nvram_get("lan_ipaddr"); %></a>');
 }
 }else if(ddns_hostname.length <= 0){
-showtext(document.getElementById("noWAN_link"), "<#2609#>");
+showtext(document.getElementById("noWAN_link"), "<#2613#>");
 }else
 alert("FTP and ddns exception");
 }
@@ -113,7 +113,7 @@ document.redirectForm.submit();
 <tr>
 <td>
 <div style="width:660px;line-height:180%;font-size:16px;margin-left:30px;">
-<div id="Nodisk_hint" class="alert_string" style="display:none;"><#2826#></div>
+<div id="Nodisk_hint" class="alert_string" style="display:none;"><#2830#></div>
 <div id="AiDiskWelcome_desp">
 <#990#>
 <ul>

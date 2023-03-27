@@ -43,19 +43,19 @@ $("#restoreInit").prop("checked", false);
 }
 }
 function restoreRule(_flag){
-var alert_string = "<#3107#>";
+var alert_string = "<#3111#>";
 if($('#restoreInit').prop("checked") && bwdpi_support)
-alert_string = "<#3114#>";
+alert_string = "<#3118#>";
 if(lan_ipaddr != '<% nvram_default_get("lan_ipaddr"); %>')
-alert_string += "<#3109#>\n\n".replace("192.168.1.1", '<% nvram_default_get("lan_ipaddr"); %>');
-alert_string += "<#3108#>";
+alert_string += "<#3113#>\n\n".replace("192.168.1.1", '<% nvram_default_get("lan_ipaddr"); %>');
+alert_string += "<#3112#>";
 if(confirm(alert_string)){
 document.form.action1.blur();
 if($('#restoreInit').prop("checked") && bwdpi_support)
 document.restoreform.action_mode.value = "restore_erase";
 else
 document.restoreform.action_mode.value = "Restore";
-showtext(document.getElementById("loading_block2"), "<#3081#>");
+showtext(document.getElementById("loading_block2"), "<#3085#>");
 document.getElementById('loading_block3').style.display = "none";
 showLoading();
 document.restoreform.submit();
@@ -90,12 +90,12 @@ file_obj.focus();
 else if(file_obj_name.length < 6 ||
 file_obj_name.lastIndexOf(".CFG") < 0 ||
 file_obj_name.lastIndexOf(".CFG") != (file_obj_name.length)-4){
-alert("<#3119#>");
+alert("<#3123#>");
 file_obj.focus();
 }
 else{
 disableCheckChangedStatus();
-showtext(document.getElementById("loading_block2"), "<#3105#>");
+showtext(document.getElementById("loading_block2"), "<#3109#>");
 document.getElementById('loading_block3').style.display = "none";
 document.form.submit();
 }
@@ -193,11 +193,11 @@ document.form.file.click();
 <div>&nbsp;</div>
 <div class="formfonttitle"><#410#> - <#415#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#3118#></div>
+<div class="formfontdesc"><#3122#></div>
 <table width="100%" border="1" align="center" cellpadding="6" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
 <th width="25%" align="right">
-<a id="factorydefault_hint" class="hintstyle" href="javascript:void(0);" onclick="openHint(19,4)"><#3112#></a>
+<a id="factorydefault_hint" class="hintstyle" href="javascript:void(0);" onclick="openHint(19,4)"><#3116#></a>
 </th>
 <td colspan = "4">
 <div style="float:left;">
@@ -208,7 +208,7 @@ document.form.file.click();
 <input type="checkbox" id="restoreInit">
 </div>
 <div style="float:left;width:65%;">
-<span><label for="restoreInit"><#3115#></label></span>
+<span><label for="restoreInit"><#3119#></label></span>
 </div>
 </div>
 <input type="hidden" name="wl_gmode_protection_x" value="<% nvram_get("wl_gmode_protection_x"); %>" />
@@ -216,11 +216,11 @@ document.form.file.click();
 </tr>
 <tr>
 <th align="right" style="border-bottom:none">
-<a class="hintstyle" href="javascript:void(0);" onclick="openHint(19,2)"><#3117#></a>
+<a class="hintstyle" href="javascript:void(0);" onclick="openHint(19,2)"><#3121#></a>
 </th>
 <td>
 <div style="float:left;display:table-cell">
-<input class="button_gen" onclick="saveSetting('Router');" type="button" value="<#3117#>" name="action2" />
+<input class="button_gen" onclick="saveSetting('Router');" type="button" value="<#3121#>" name="action2" />
 </div>
 <div style="display:table-cell">
 <div id="remove_passwd_field" style="display:table-row">
@@ -228,7 +228,7 @@ document.form.file.click();
 <input id="remove_passwd" type="checkbox">
 </div>
 <div style="float:left;width:80%;">
-<span><label for="remove_passwd"><#3122#></span></label>
+<span><label for="remove_passwd"><#3126#></span></label>
 </div>
 </div>
 <div id="transfer_ddns_field" style="display:table-row">
@@ -244,7 +244,7 @@ document.form.file.click();
 </tr>
 <tr>
 <th align="right">
-<a class="hintstyle" href="javascript:void(0);" onclick="openHint(19,3)"><#3121#></a>
+<a class="hintstyle" href="javascript:void(0);" onclick="openHint(19,3)"><#3125#></a>
 </th>
 <td colspan = "4">
 <div style="margin-left:-10px;">

@@ -69,7 +69,7 @@ $settingPofile_name.length < 6 ||
 $settingPofile_name.lastIndexOf(".CFG") < 0 ||
 $settingPofile_name.lastIndexOf(".CFG") != ($settingPofile_name.length)-4)
 {
-$("#settingProfileBar").showSelectorHint("<#3119#>");
+$("#settingProfileBar").showSelectorHint("<#3123#>");
 return false;
 }
 httpApi.uploadFile($("#setting_profile").prop('files')[0]);
@@ -358,6 +358,21 @@ updateOriginWan();
 }
 goTo.Wireless();
 };
+apply.ocnvc = function(){
+if($("#wan_dhcp_option_checkbox").is(":checked")){
+$("#wan_dhcp_option_checkbox").prop("checked", false);
+$("#wan_dhcp_option_checkbox").prev().toggleClass('ui-checkbox-on ui-checkbox-off');
+}
+if(isWANChanged()){
+httpApi.nvramSet((function(){
+qisPostData.action_mode = "apply";
+qisPostData.rc_service = "restart_wan_if " + systemVariable.ethWanIf;
+return qisPostData;
+})());
+updateOriginWan();
+}
+goTo.Wireless();
+};
 apply.iptv = function(){
 if(qisPostData.switch_wantag == "movistar"){
 if(hasBlank([
@@ -530,7 +545,7 @@ else
 $(".sim_pin_apply").html("<#196#>");
 switch(sim_state){
 case '1':
-$("#sim_desc").html("<#2730#>");
+$("#sim_desc").html("<#2734#>");
 $(".sim_pin_apply").html("<#204#>");
 $("#pin_setting").css("display", "none");
 $("#verify_pincode_status").css("display", "none");
@@ -538,7 +553,7 @@ goTo.Wireless();
 break;
 case '2':
 if(g3err_pin == '1' && pin_remaining_count < 3){
-$("#verify_pincode_status").html("<#2754#>");
+$("#verify_pincode_status").html("<#2758#>");
 $("#verify_pincode_status").css("display", "");
 $("#remaing_num").html(pin_remaining_count);
 if( pin_remaining_count == 0){
@@ -561,17 +576,17 @@ else if(!isPage("simunlock_selection"))
 goTo.loadPage("simunlock_selection", false);
 break;
 case '4':
-$("#verify_pincode_status").html("<#2692#>");
+$("#verify_pincode_status").html("<#2696#>");
 break;
 case '6':
-$("#verify_pincode_status").html("<#2752#>");
+$("#verify_pincode_status").html("<#2756#>");
 break;
 case '-1':
-$("#verify_pincode_status").html("<#2727#>");
+$("#verify_pincode_status").html("<#2731#>");
 break;
 case '-2':
 case '-10':
-$("#verify_pincode_status").html("<#2725#>");
+$("#verify_pincode_status").html("<#2729#>");
 break;
 default:
 break;
@@ -597,7 +612,7 @@ if(httpApi.nvramGet(["usb_modem_act_sim"]).usb_modem_act_sim == "1")
 goTo.Wireless();
 else{
 if($("#sim_pincode").val().search(/^\d{4,8}$/) == -1){
-$("#verify_pincode_status").html("<#2476#>");
+$("#verify_pincode_status").html("<#2480#>");
 $("#verify_pincode_status").css("display", "");
 return false;
 }
@@ -622,9 +637,9 @@ checkSimActResult(1);
 apply.simpuk = function(){
 if($("#new_pincode").val().search(/^\d{4,8}$/) == -1){
 if($("#new_pincode").val().length == 0)
-$("#new_pincode_status").html("<#2698#>");
+$("#new_pincode_status").html("<#2702#>");
 else
-$("#new_pincode_status").html("<#2476#>");
+$("#new_pincode_status").html("<#2480#>");
 $("#new_pincode_status").css("display", "");
 return false;
 }
@@ -1704,7 +1719,7 @@ goTo.loadPage("getLanIp_setting", true);
 else
 goTo.loadPage("lanStatic_setting", true);
 }
-else if(systemVariable.manualWanType == "DHCP" || systemVariable.manualWanType == "V6PLUS"){
+else if(systemVariable.manualWanType == "DHCP" || systemVariable.manualWanType == "V6PLUS" || systemVariable.manualWanType == "OCNVC"){
 goTo.loadPage("wan_setting", true);
 }
 else if(systemVariable.detwanResult.wanType == "DHCP" || systemVariable.detwanResult.wanType == "CONNECTED"){
@@ -2478,6 +2493,18 @@ systemVariable.manualWanType = 'V6PLUS';
 }
 apply.v6plus();
 };
+goTo.OCNVC = function(){
+if(systemVariable.originWanType.toLowerCase() !== "ocnvc"){
+postDataModel.remove(wanObj.all);
+postDataModel.insert(wanObj.general);
+postDataModel.insert(wanObj.ocnvc);
+qisPostData.wan_proto = "ocnvc";
+}
+if(systemVariable.manualWanSetup){
+systemVariable.manualWanType = 'OCNVC';
+}
+apply.ocnvc();
+};
 goTo.PPTP = function(){
 postDataModel.insert(wanObj.general);
 qisPostData.wan_proto = "pptp";
@@ -2760,9 +2787,9 @@ systemVariable.papList = [];
 systemVariable.papListAiMesh = [];
 $("#siteSurveyLoading").html(Get_Component_Loading);
 if(isSupport("concurrep"))
-$("#siteSurvey_page").find(".titleSub").html("<#4147#>");
+$("#siteSurvey_page").find(".titleSub").html("<#4153#>");
 else
-$("#siteSurvey_page").find(".titleSub").html("<#3821#>");
+$("#siteSurvey_page").find(".titleSub").html("<#3827#>");
 httpApi.nvramSet({"action_mode": "apply", "rc_service":"restart_wlcscan"}, function(){
 setTimeout(function(){
 var siteSurveyResult = {
@@ -2802,9 +2829,9 @@ goTo.loadPage("amas_option_page", false);
 }
 goTo.papList = function() {
 if(isSupport("RPMesh"))
-$("#papList_page").find(".titleSub").html("<#4147#>");
+$("#papList_page").find(".titleSub").html("<#4153#>");
 else
-$("#papList_page").find(".titleSub").html("<#3821#>");
+$("#papList_page").find(".titleSub").html("<#3827#>");
 genPAPList(systemVariable.papList, systemVariable.multiPAP.wlcOrder);
 goTo.loadPage("papList_page", false);
 };

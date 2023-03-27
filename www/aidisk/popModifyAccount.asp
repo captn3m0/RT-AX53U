@@ -106,12 +106,12 @@ return true;
 <table width="90%" class="popTable" border="0" align="center" cellpadding="0" cellspacing="0">
 <thead>
 <tr>
-<td colspan="2"><span style="color:#FFF"><#2758#>: </span><span style="color:#FFF" id="selected_account"></span><img src="../images/button-close.gif" onClick="parent.hidePop('OverlayMask');"></td>
+<td colspan="2"><span style="color:#FFF"><#2762#>: </span><span style="color:#FFF" id="selected_account"></span><img src="../images/button-close.gif" onClick="parent.hidePop('OverlayMask');"></td>
 </tr>
 </thead>
 <tbody>
 <tr valign="middle">
-<td height="30" colspan="2" class="hint_word"><#2756#></td>
+<td height="30" colspan="2" class="hint_word"><#2760#></td>
 </tr>
 <tr>
 <th><#961#>: </th>
@@ -120,7 +120,7 @@ return true;
 </td>
 </tr>
 <tr>
-<th><#2757#>: </th>
+<th><#2761#>: </th>
 <td><input type="password" class="input_15_table" name="new_password" id="new_password" onKeyPress="return validator.isString(this, event);" maxlength="33" autocorrect="off" autocapitalize="off"></td>
 </tr>
 <tr>

@@ -374,7 +374,7 @@ else{ //for Parental Control(Time Scheduling)
 code_title = "<div class='er_title' style='height:auto;'><#1504#></div>"
 code_suggestion = "<ul>";
 if(bwdpi_support)
-parental_string = "<#3282#>";
+parental_string = "<#3288#>";
 else
 parental_string = "<#468#>";
 code_suggestion += "<li><#1501#> "+ parental_string +" <#1502#></li>";

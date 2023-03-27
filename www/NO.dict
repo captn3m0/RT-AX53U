@@ -2266,8 +2266,11 @@ Denne VPN-profilen er deaktivert. Gå til innstillingssiden for VPN Server, og a
 Klikk på Gå til innstillinger for å åpne siden for VPN-innstillinger.
 Denne innstillingen kan ikke velges mens du bruker den andre opprettede profilen.
 Privat nettverk
+Det finnes ingen VPN-profil nå. Klikk på [Gå til innstillinger] nedenfor for å gå til siden for VPN-innstillinger og opprette.
 Legg til et nettverk
 Profilliste
+Velg et definert nettverk
+Wi-Fi-tidsplan
 Maskinvareversjon
 Help
 Hjelp gir deg retningslinjer og informasjon om bruk av ruterens funksjoner. Klikk på
@@ -2442,6 +2445,7 @@ LAN IPv6-adresse
 LAN IPv6 prefiks
 IPv6 LAN-innstilling
 Native
+OCN Virtual Connect
 v6plus
 IPv6 prefiks lengde
 IPv4 Anykast-relé
@@ -3280,6 +3284,8 @@ LAN
 Diverse
 Telecommunications Standards
 Avslutt WAN-grensesnitt
+Planlagt
+Engangstilgang
 Tidsplan
 Time Machine
 Hvordan bruker jeg Apple Time Machine?
@@ -3347,10 +3353,10 @@ Alaska
 Stillehavskysten (USA og Canada)
 Rocky Mountains (USA og Canada)
 Arizona
-Chihuahua, Mazatlan
+Mazatlan
 Saskatchewan
 Guadalajara, Mexico City
-Monterrey
+Monterrey, Chihuahua
 Sentral-Amerika
 Østkysten (USA og Canada)
 Indiana (øst)

@@ -199,7 +199,7 @@ $(".button_gen.ipsec_active.export").click(function(e){export_cert("0");});
 $(".button_gen.ipsec_active.renew").unbind("click");
 $(".button_gen.ipsec_active.renew").click(function(e){export_cert("1");});
 if(response.update_state == "1")
-$(".ipsec_inactive.renew_hint").show().html("<br><#3642#>");
+$(".ipsec_inactive.renew_hint").show().html("<br><#3648#>");
 }
 }
 });
@@ -238,7 +238,7 @@ $("#client_pwd_strength").css("display", "none");
 var MAX_RETRY_NUM = 5;
 var external_ip_retry_cnt = MAX_RETRY_NUM;
 function show_warning_message(){
-var set_ddns_text = '<a href="../Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration: underline; font-family:Lucida Console;"><#3650#></a>';
+var set_ddns_text = '<a href="../Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration: underline; font-family:Lucida Console;"><#3656#></a>';
 var set_ip_and_ddns_text = wanlink_ipaddr() + ', ' + set_ddns_text;
 if(realip_support && (based_modelid == "BRT-AC828"|| wans_mode != "lb")){
 if(realip_state != "2" && external_ip_retry_cnt > 0){
@@ -249,7 +249,7 @@ setTimeout("get_real_ip();", 3000);
 }
 else if(realip_state != "2"){
 if(validator.isPrivateIP(wanlink_ipaddr())){
-document.getElementById("privateIP_notes").innerHTML = "<#3590#>";
+document.getElementById("privateIP_notes").innerHTML = "<#3596#>";
 document.getElementById("privateIP_notes").style.display = "";
 $(".general_server_addr").html("-");
 document.getElementById("faq_port_forwarding").href=faq_href_port_forwarding; //this id is include in string : #vpn_privateIP_hint#
@@ -267,7 +267,7 @@ $(".general_server_addr").html(set_ip_and_ddns_text);
 }
 else{
 if(!external_ip){
-document.getElementById("privateIP_notes").innerHTML = "<#3590#>";
+document.getElementById("privateIP_notes").innerHTML = "<#3596#>";
 document.getElementById("privateIP_notes").style.display = "";
 $(".general_server_addr").html("-");
 document.getElementById("faq_port_forwarding").href=faq_href_port_forwarding; //this id is include in string : #vpn_privateIP_hint#
@@ -285,7 +285,7 @@ $(".general_server_addr").html(set_ip_and_ddns_text);
 }
 }
 else if(validator.isPrivateIP(wanlink_ipaddr())){
-document.getElementById("privateIP_notes").innerHTML = "<#3590#>";
+document.getElementById("privateIP_notes").innerHTML = "<#3596#>";
 document.getElementById("privateIP_notes").style.display = "";
 $(".general_server_addr").html("-");
 document.getElementById("faq_port_forwarding").href=faq_href_port_forwarding; //this id is include in string : #vpn_privateIP_hint#
@@ -343,7 +343,7 @@ var ipsec_user_name = "";
 var ipsec_user_pwd = "";
 code +='<table width="100%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="ipsec_client_list_table">';
 if(Object.keys(ipsec_client_list_json).length == 0)
-code +='<tr><td style="color:#FFCC00;" colspan="5"><#2407#></td></tr>';
+code +='<tr><td style="color:#FFCC00;" colspan="5"><#2410#></td></tr>';
 else{
 for(var username in ipsec_client_list_json) {
 if(ipsec_client_list_json.hasOwnProperty(username)) {
@@ -380,7 +380,7 @@ var ike_obj = document.form.ipsec_client_list_ike;
 var rule_num = document.getElementById("ipsec_client_list_table").rows.length;
 var item_num = document.getElementById("ipsec_client_list_table").rows[0].cells.length;
 if(rule_num >= upper) {
-alert("<#2479#> " + upper + " <#2480#>");
+alert("<#2483#> " + upper + " <#2484#>");
 return false;
 }
 var validAccount = function() {
@@ -409,7 +409,7 @@ return false;
 }
 var is_common_string = check_common_string(valid_password.value, "httpd_password");
 if(valid_password.value.length > 0 && is_common_string){
-if(!confirm("<#2296#> : <#316#>")){
+if(!confirm("<#2299#> : <#316#>")){
 valid_password.focus();
 valid_password.select();
 return false;
@@ -421,7 +421,7 @@ if(validAccount()) {
 if(item_num >= 2) {
 for(var i = 0; i < rule_num; i +=1 ) {
 if(ipsec_client_list_json.hasOwnProperty(username_obj.value)) {
-alert("<#2472#>");
+alert("<#2476#>");
 username_obj.focus();
 username_obj.select();
 return false;
@@ -488,7 +488,7 @@ return false;
 }
 var is_common_string = check_common_string(document.form.ipsec_preshared_key.value, "wpa_key");
 if(is_common_string){
-if(!confirm("<#3600#> : <#316#>")){
+if(!confirm("<#3606#> : <#316#>")){
 document.form.ipsec_preshared_key.focus();
 document.form.ipsec_preshared_key.select();
 return false;
@@ -507,7 +507,7 @@ var ipsecLanNetMask = "255.255.255.0";
 var ipConflict;
 ipConflict = checkIPConflict("LAN", ipsecLanIPAddr, ipsecLanNetMask);
 if(ipConflict.state) {
-alert("<#2468#>: " + ipConflict.ipAddr + ",\n" + "<#2800#>: " + ipConflict.netLegalRangeStart + " ~ " + ipConflict.netLegalRangeEnd);
+alert("<#2472#>: " + ipConflict.ipAddr + ",\n" + "<#2804#>: " + ipConflict.netLegalRangeStart + " ~ " + ipConflict.netLegalRangeEnd);
 document.form.ipsec_clients_start.focus();
 document.form.ipsec_clients_start.select();
 return false;
@@ -546,7 +546,7 @@ return true;
 }
 function applyRule() {
 if(validForm()) {
-var confirmFlag = confirm('<#3648#>');
+var confirmFlag = confirm('<#3654#>');
 if(!confirmFlag)
 return false;
 /* data structure
@@ -722,9 +722,9 @@ $("#connection_ipsec_profile_panel").css("top", "440px");
 $("#connection_ipsec_profile_panel").css("left", "225px");
 html += "<div class='ipsec_connect_status_title_bg'>";
 html += "<div class='ipsec_connect_status_title' style='width:240px;'>Remote IP</div>";/*untranslated*/
-html += "<div class='ipsec_connect_status_title'><#3220#></div>";
+html += "<div class='ipsec_connect_status_title'><#3224#></div>";
 html += "<div class='ipsec_connect_status_title'><#874#></div>";
-html += "<div class='ipsec_connect_status_title'><#3607#> <#2888#></div>";
+html += "<div class='ipsec_connect_status_title'><#3613#> <#2892#></div>";
 html += "<div class='ipsec_connect_status_title'>PSKRAUTHTIME</div>";/*untranslated*/
 html += "<div class='ipsec_connect_status_close'><a onclick='close_connect_status();'><img width='18px' height='18px' src=\"/images/button-close.png\" onmouseover='this.src=\"/images/button-close2.png\"' onmouseout='this.src=\"/images/button-close.png\"' border='0'></a></div>";
 html += "</div>";
@@ -774,7 +774,7 @@ if(ikev2_cert_state == "3"){
 clearInterval(interval_check);
 $(".button_gen.ipsec_active.renew").show();
 $(".renewLoadingIcon").hide();
-alert("<#3646#>");
+alert("<#3652#>");
 }
 else{
 count++;
@@ -782,7 +782,7 @@ if(count >= timer){
 clearInterval(interval_check);
 $(".button_gen.ipsec_active.renew").show();
 $(".renewLoadingIcon").hide();
-alert("<#3647#>");
+alert("<#3653#>");
 }
 }
 }, 1000);
@@ -840,16 +840,16 @@ alert("<#3647#>");
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
 <div id="privateIP_notes" class="formfontdesc" style="display:none;color:#FFCC00;"></div>
 <div class="formfontdesc">
-<span class="hint-color"><#3616#></span>
+<span class="hint-color"><#3622#></span>
 </div>
 <table id="ipsec_general_setting" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#3277#></td>
+<td colspan="2"><#3281#></td>
 </tr>
 </thead>
 <tr>
-<th><#3526#></th>
+<th><#3532#></th>
 <td>
 <div align="center" class="left" style="float:left;cursor:pointer;" id="radio_ipsec_enable"></div>
 <div class="iphone_switch_container" style="height:32px; width:74px; position: relative; overflow: hidden;"></div>
@@ -869,7 +869,7 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 </td>
 </tr>
 <tr class="ipsec_setting_content">
-<th><#3768#></th>
+<th><#3774#></th>
 <td class="general_server_addr">-</td>
 </tr>
 <tr class="ipsec_setting_content">
@@ -892,9 +892,9 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 </td>
 </tr>
 <tr class="ipsec_setting_content">
-<th><#3600#></th>
+<th><#3606#></th>
 <td>
-<input id="ipsec_preshared_key" name="ipsec_preshared_key" type="password" autocapitalization="off" onBlur="switchType(this, false);" onFocus="switchType(this, true);" class="input_25_table" maxlength="32" placeholder="<#3592#>" autocomplete="off" autocorrect="off" autocapitalize="off">
+<input id="ipsec_preshared_key" name="ipsec_preshared_key" type="password" autocapitalization="off" onBlur="switchType(this, false);" onFocus="switchType(this, true);" class="input_25_table" maxlength="32" placeholder="<#3598#>" autocomplete="off" autocorrect="off" autocapitalize="off">
 <div id="preshared_key_strength"></div>
 </td>
 </tr>
@@ -907,15 +907,15 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 </tr>
 </thead>
 <tr>
-<th><#3635#></th>
+<th><#3641#></th>
 <td>500</td>
 </tr>
 <tr>
-<th><#3636#></th>
+<th><#3642#></th>
 <td>4500</td>
 </tr>
 <tr>
-<th><#3520#></th>
+<th><#3526#></th>
 <td>
 <input type="text" maxlength="11" class="input_12_table" name="ipsec_clients_start" onBlur="setClientsEnd();" value="10.10.10" autocomplete="off" autocorrect="off" autocapitalize="off"/>
 <span style="font-family: Lucida Console;color: #FFF;">.1 ~ </span>
@@ -937,21 +937,21 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 </td>
 </tr>
 <tr>
-<th><#2423#></th>
+<th><#2426#></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="ipsec_wins1" onkeypress="return validator.isIPAddr(this, event)" autocomplete="off" autocorrect="off" autocapitalize="off">
 <span class="hint-color"><#1986#></span>
 </td>
 </tr>
 <tr>
-<th><#2424#></th>
+<th><#2427#></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="ipsec_wins2" onkeypress="return validator.isIPAddr(this, event)" autocomplete="off" autocorrect="off" autocapitalize="off">
 <span class="hint-color"><#1986#></span>
 </td>
 </tr>
 <tr id="tr_localPublicInterface" style="display:none;">
-<th><#3599#></th>
+<th><#3605#></th>
 <td>
 <select name="ipsec_local_public_interface" class="input_option"></select>
 </td>
@@ -964,23 +964,23 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 <td colspan="2">IKEv1 Config</td></tr>
 </thead>
 <tr id="tr_adv_exchange_mode">
-<th><#3605#></th>
-<td><#3606#></td>
+<th><#3611#></th>
+<td><#3612#></td>
 </tr>
 <tr id="tr_adv_dead_peer_detection">
-<th><#3608#></th>
+<th><#3614#></th>
 <td>
 <input type="radio" name="ipsec_dead_peer_detection" id="ipsec_dead_peer_detection_en" class="input" value="1" onchange="changeAdvDeadPeerDetection(this)" checked>
-<label for='ipsec_dead_peer_detection_en' id="ipsec_dead_peer_detection_en_label"><#3840#></label>
+<label for='ipsec_dead_peer_detection_en' id="ipsec_dead_peer_detection_en_label"><#3846#></label>
 <input type="radio" name="ipsec_dead_peer_detection" id="ipsec_dead_peer_detection_dis" class="input" value="0" onchange="changeAdvDeadPeerDetection(this)">
-<label for='ipsec_dead_peer_detection_dis' id="ipsec_dead_peer_detection_dis_label"><#3841#></label>
+<label for='ipsec_dead_peer_detection_dis' id="ipsec_dead_peer_detection_dis_label"><#3847#></label>
 </td>
 </tr>
 <tr id="tr_adv_dpd_interval">
-<th><#3609#></th>
+<th><#3615#></th>
 <td>
 <input type="text" class="input_3_table" name="ipsec_dpd" maxlength="3" value="10" onKeyPress="return validator.isNumber(this,event)" autocomplete="off" autocorrect="off" autocapitalize="off">
-<span class="hint-color">(10~900) <#3084#></span>
+<span class="hint-color">(10~900) <#3088#></span>
 </td>
 </tr>
 </table>
@@ -990,24 +990,24 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 <td colspan="2">IKEv2 Config</td></tr>
 </thead>
 <tr>
-<th><#3531#></th>
+<th><#3537#></th>
 <td>
 <div><#731#> : <span id="cert_status"></span></div>
-<div><#3640#> : <span id="cert_issueTo"></span></div>
-<div><#3639#> : <span id="cert_issueBy"></span></div>
-<div><#3571#> : <span id="cert_expire"></span></div>
+<div><#3646#> : <span id="cert_issueTo"></span></div>
+<div><#3645#> : <span id="cert_issueBy"></span></div>
+<div><#3577#> : <span id="cert_expire"></span></div>
 <div>
 <input class="button_gen_dis ipsec_active export" type="button" value="<#1520#>">
 <span class="ipsec_inactive"><#729#></span>
 <input type="radio" name="ipsec_export_cert" id="ipsec_export_cert_windows" class="input" value="0" checked>
-<label for="ipsec_export_cert_windows"><#3644#></label>
+<label for="ipsec_export_cert_windows"><#3650#></label>
 <input type="radio" name="ipsec_export_cert" id="ipsec_export_cert_mobile" class="input" value="1">
-<label for="ipsec_export_cert_mobile"><#3645#></label>
+<label for="ipsec_export_cert_mobile"><#3651#></label>
 </div>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(33,2);"><#3641#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(33,2);"><#3647#></a></th>
 <td style="position:relative;">
 <input class="button_gen_dis ipsec_active renew" type="button" value="<#206#>">
 <span class="ipsec_inactive renew_hint"><#729#></span>
@@ -1016,7 +1016,7 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 </tr>
 </table>
 <div class="formfontdesc" style="margin-top:8px;">
-<#3527#> :
+<#3533#> :
 <span class="faq_link">1. <a id="faq_windows" href="" target="_blank" style="text-decoration:underline;">Windows</a></span>
 <span class="faq_link">2. <a id="faq_macOS" href="" target="_blank" style="text-decoration:underline;">Mac OS</a></span>
 <span class="faq_link">3. <a id="faq_iPhone" href="" target="_blank" style="text-decoration:underline;">iOS</a></span>
@@ -1025,14 +1025,14 @@ switch_on_container_path: '/switcherplugin/iphone_switch_container_off.png'
 <table id="tbAccountList" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table" style="margin-top:15px;">
 <thead>
 <tr>
-<td colspan="4"><#3495#>&nbsp;(<#2611#>&nbsp;8)</td>
+<td colspan="4"><#3501#>&nbsp;(<#2615#>&nbsp;8)</td>
 </tr>
 </thead>
 <tr>
-<th><#3494#></th>
-<th><#2296#></th>
-<th><#3649#></th>
-<th><#2610#></th>
+<th><#3500#></th>
+<th><#2299#></th>
+<th><#3655#></th>
+<th><#2614#></th>
 </tr>
 <tr>
 <td width="30%">

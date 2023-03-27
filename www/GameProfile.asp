@@ -83,7 +83,7 @@ function initial(){
 show_menu();
 $("#faq").attr('target','_blank')
 .attr("href", faq_href);
-if(wan_proto=="v6plus" && s46_ports_check_flag && array_ipv6_s46_ports.length > 1){
+if((wan_proto == "v6plus" || wan_proto == "ocnvc") && s46_ports_check_flag && array_ipv6_s46_ports.length > 1){
 $("#v6plus_port_range_note").show();
 $(".setup_info_icon_game").show();
 $(".setup_info_icon_game").click(
@@ -187,7 +187,7 @@ var _count = 0;
 code += '<div class="flexbox table-title">';
 code += '<div class="table-content1-width"><div><#1234#></div></div>';
 code += '<div class="table-content2-width"><div><#1535#></div></div>';
-code += '<div class="table-content3-width"><div><#2400#></div></div>';
+code += '<div class="table-content3-width"><div><#2403#></div></div>';
 code += '<div class="table-content4-width"><div>Actions</div></div>';
 code += '</div>';
 for(i=1; i< vts_rulelist_row.length; i++){
@@ -337,7 +337,7 @@ for(i=0;i<PortSplit.length;i++){
 PortSplit[i] = PortSplit[i].replace(/(^\s*)|(\s*$)/g, ""); // "\space" to ""
 PortSplit[i] = PortSplit[i].replace(/(^0*)/g, ""); // "^0" to ""
 if(PortSplit[i] == "" ||PortSplit[i] == 0){
-alert("<#2478#>");
+alert("<#2482#>");
 obj.focus();
 obj.select();
 return false;
@@ -534,9 +534,9 @@ return false;
 else{
 if(!check_multi_range(document.getElementById("new_profile_externalPort"), 1, 65535, true))
 return false;
-if(wan_proto=="v6plus" && s46_ports_check_flag && array_ipv6_s46_ports.length > 1){
+if((wan_proto == "v6plus" || wan_proto == "ocnvc") && s46_ports_check_flag && array_ipv6_s46_ports.length > 1){
 if (!check_multi_range_s46_ports(document.getElementById("new_profile_externalPort"))){
-if(!confirm("The following port related settings may not work properly since the port is not available in current v6plus usable port range. Do you want to continue?"))
+if(!confirm(port_confirm))
 {
 document.getElementById("new_profile_externalPort").focus();
 return false;
@@ -639,7 +639,7 @@ genListTable();
 </div>
 <div class="divide-line"></div>
 <div class="flexbox flex-a-center control-f-container">
-<div class="control-description"><#2396#></div>
+<div class="control-description"><#2399#></div>
 <div class="switch-button-container">
 <label for="PF_switch" >
 <input type="checkbox" id="PF_switch" class="switch-button" onchange="switchPortForward(this);">
@@ -780,7 +780,7 @@ genListTable();
 <div>
 <div class="flexbox flex-a-center new-g-profile">
 <div class="new-g-p-step">3</div>
-<div class="new-g-p-s-title"><#3123#></div>
+<div class="new-g-p-s-title"><#3127#></div>
 </div>
 <div class="new-p-platform">
 <div id="name_field" class="game-p-s-field">
@@ -788,12 +788,12 @@ genListTable();
 <input id="new_profile_name" type="text" class="input-container" value="" maxlength="30" onkeypress="return validator.isString(this, event);" autocomplete="off" autocorrect="off" autocapitalize="off" >
 </div>
 <div id="protocol_field" class="game-p-s-field">
-<div class="settings-filed-title"><#2400#></div>
+<div class="settings-filed-title"><#2403#></div>
 <div class="select-container">
 <select name="" id="new_profile_protocol">
 <option value="TCP">TCP</option>
 <option value="UDP">UDP</option>
-<option value="BOTH"><#2844#></option>
+<option value="BOTH"><#2848#></option>
 </select>
 <div class="select-arrow">
 <div></div>
@@ -801,16 +801,16 @@ genListTable();
 </div>
 </div>
 <div id="externalPort_field" class="game-p-s-field">
-<div class="settings-filed-title"><#2411#><div class="setup_info_icon_game" style="display:none;"></div></div>
+<div class="settings-filed-title"><#2414#><div class="setup_info_icon_game" style="display:none;"></div></div>
 <input id="new_profile_externalPort" type="text" class="input-container" value="" maxlength="60" onkeypress="return validator.isPortRange(this, event);" autocomplete="off" autocorrect="off" autocapitalize="off" >
 </div>
 <div id="localPort_field" class="game-p-s-field">
-<div class="settings-filed-title"><#2413#></div>
+<div class="settings-filed-title"><#2416#></div>
 <input id="new_profile_localPort" type="text" class="input-container" style="width:80px;" value="" maxlength="5" onkeypress="return validator.isNumber(this,event);" autocomplete="off" autocorrect="off" autocapitalize="off" >
 <div class="hint"><#1986#></div>
 </div>
 <div id="localIP_field" class="game-p-s-field" >
-<div class="settings-filed-title"><#2414#></div>
+<div class="settings-filed-title"><#2417#></div>
 <div style="position: relative">
 <input id="new_profile_localIP" type="text" class="input-container" value="" maxlength="15" onkeypress="return validator.isIPAddr(this, event);" autocomplete="off" autocorrect="off" autocapitalize="off">
 <div class="select-arrow" style="cursor:pointer;z-index: 999;" onclick="pullLANIPList(this);" >
@@ -820,7 +820,7 @@ genListTable();
 </div>
 </div>
 <div id="sourceIP_field" class="game-p-s-field">
-<div class="settings-filed-title"><#2408#></div>
+<div class="settings-filed-title"><#2411#></div>
 <input id="new_profile_sourceIP" type="text" class="input-container" value="" maxlength="15" onkeypress="return validator.isIPAddrPlusNetmask(this, event)" autocomplete="off" autocorrect="off" autocapitalize="off" >
 <div class="hint"><#1986#></div>
 </div>
@@ -852,7 +852,7 @@ genListTable();
 </div>
 <div class="flexbox flex-a-center flex-j-spaceB new-g-p-t-field ">
 <div class="new-g-p-title"><#2185#></div>
-<div class="new-g-p-rule"><span id="rule_num">2</span> Rules (<#2611#> 32)</div>
+<div class="new-g-p-rule"><span id="rule_num">2</span> Rules (<#2615#> 32)</div>
 </div>
 <div id="list_content">
 <div class="flexbox table-title">
@@ -863,7 +863,7 @@ genListTable();
 <div><#1535#></div>
 </div>
 <div class="table-content3-width">
-<div><#2400#></div>
+<div><#2403#></div>
 </div>
 <div class="table-content4-width">
 <div>Actions</div>

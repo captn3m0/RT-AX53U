@@ -550,7 +550,8 @@ var connect_proto_array = {
 "ipoa": "IPoA",
 "lw4o6": "LW 4over6",
 "map-e": "MAP-E",
-"v6plus": "<#2444#>",
+"v6plus": "<#2448#>",
+"ocnvc": "<#2447#>",
 "usb modem": "USB Modem"
 };
 var result = {
@@ -564,7 +565,7 @@ var wan_index = (_index == undefined) ? 0 : _index;
 if(dualwan_enabled){
 if(active_wan_unit != wan_index && (wans_mode == "fo" || wans_mode == "fb")){
 result.status = "standby";
-result.status_text = "<#3207#>";
+result.status_text = "<#3211#>";
 }
 else{//lb
 result.status = (httpApi.isConnected(wan_index)) ? "connected" : "disconnected";
@@ -593,7 +594,7 @@ var proto_text = connect_proto_array[(result.proto).toLowerCase()];
 result.proto_text = ((proto_text != undefined) ? proto_text : result.proto);
 if(isSupport("gobi") && result.proto == "USB Modem"){
 var modem_operation = httpApi.nvramGet(["usb_modem_act_operation"], true).usb_modem_act_operation;
-result.proto_text = ((modem_operation != "") ? modem_operation : "<#2740#>");
+result.proto_text = ((modem_operation != "") ? modem_operation : "<#2744#>");
 }
 }
 }
@@ -755,23 +756,23 @@ $.get("/update_wlanlog.cgi");
 var retData = {
 "GAME_BOOST": {
 "value": 3,
-"text": "<#4151#>",
-"desc": "<#4167#>"
+"text": "<#4157#>",
+"desc": "<#4173#>"
 },
 "ACS_DFS": {
 "value": 1,
-"text": "<#3808#>",
-"desc": "<#4169#>"
+"text": "<#3814#>",
+"desc": "<#4175#>"
 },
 "LED": {
 "value": 0,
-"text": "<#4172#>",
-"desc": "<#4173#>"
+"text": "<#4178#>",
+"desc": "<#4179#>"
 },
 "AURA_RGB": {
 "value": 2,
-"text": "<#4152#>",
-"desc": "<#4153#>"
+"text": "<#4158#>",
+"desc": "<#4159#>"
 }
 };
 var productid = httpApi.nvramGet(["productid"]).productid;
@@ -780,13 +781,13 @@ delete retData.LED;
 delete retData.AURA_RGB;
 retData.AURA_SHUFFLE = {
 "value": 4,
-"text": "<#4154#>",
-"desc": "<#4155#>"
+"text": "<#4160#>",
+"desc": "<#4161#>"
 }
 retData.GEFORCE_NOW = {
 "value": 5,
-"text": "<#4170#>",
-"desc": "<#4171#>"
+"text": "<#4176#>",
+"desc": "<#4177#>"
 }
 }
 var sw_mode = (window.hasOwnProperty("qisPostData") && qisPostData.hasOwnProperty("sw_mode")) ? qisPostData.sw_mode : httpApi.nvramGet(["sw_mode"]).sw_mode;
@@ -1072,7 +1073,7 @@ else
 return parseInt(enable_ftp);
 }
 },
-hint : "<#2401#>\n<#2402#>"
+hint : "<#2404#>\n<#2405#>"
 },
 port_forwarding : {
 enabled : function(){
@@ -1122,7 +1123,7 @@ break break_loop;
 }
 return state;
 },
-hint : "<#2401#>\n<#2403#>"
+hint : "<#2404#>\n<#2406#>"
 },
 conflict : function(){
 return (httpApi.ftp_port_conflict_check.usb_ftp.enabled() && httpApi.ftp_port_conflict_check.port_forwarding.enabled()) ? true : false;

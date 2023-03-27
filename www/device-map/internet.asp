@@ -105,11 +105,11 @@ var Days = ~~(total / 24);
 if (Days != 0)
 value += Days.toString() + " <#1690#> ";
 if (Hours != 0)
-value += Hours.toString() + " <#2280#> ";
+value += Hours.toString() + " <#2283#> ";
 if (Minutes != 0)
-value += Minutes.toString() + " <#2657#> ";
+value += Minutes.toString() + " <#2661#> ";
 if (Seconds != 0)
-value += Seconds.toString() + " <#3084#>";
+value += Seconds.toString() + " <#3088#>";
 return value;
 }
 function initial(){
@@ -122,10 +122,10 @@ sec_if = add_lanport_number(sec_if);
 pri_if = pri_if.toUpperCase();
 sec_if = sec_if.toUpperCase();
 if(gobi_support){
-pri_if = (pri_if == "USB")? "<#2740#>" : pri_if;
-sec_if = (sec_if == "USB")? "<#2740#>": sec_if;
-if((unit == "0" && pri_if == "<#2740#>") || (unit == "1" && sec_if == "<#2740#>"))
-$("#wan_enable_title").text("<#2661#>");
+pri_if = (pri_if == "USB")? "<#2744#>" : pri_if;
+sec_if = (sec_if == "USB")? "<#2744#>": sec_if;
+if((unit == "0" && pri_if == "<#2744#>") || (unit == "1" && sec_if == "<#2744#>"))
+$("#wan_enable_title").text("<#2665#>");
 }
 if(based_modelid == "GT-AXY16000" || based_modelid == "RT-AX89U"){
 if(pri_if == "WAN2")
@@ -312,12 +312,14 @@ wanlink_type_conv = "LW 4over6";
 else if(wanlink_type_conv == "map-e")
 wanlink_type_conv = "MAP-E";
 else if(wanlink_type_conv == "v6plus")
-wanlink_type_conv = "<#2444#>";
+wanlink_type_conv = "<#2448#>";
+else if(wanlink_type_conv == "ocnvc")
+wanlink_type_conv = "<#2447#>";
 else if(gobi_support && wanlink_type_conv == "USB Modem"){
 if(modem_operation != "")
 wanlink_type_conv = modem_operation;
 else
-wanlink_type_conv = "<#2740#>";
+wanlink_type_conv = "<#2744#>";
 }
 showtext($("#connectionType")[0], wanlink_type_conv);
 }
@@ -331,8 +333,8 @@ sec_if = add_lanport_number(sec_if);
 pri_if = pri_if.toUpperCase();
 sec_if = sec_if.toUpperCase();
 if(gobi_support){
-pri_if = (pri_if == "USB")? "<#2740#>" : pri_if;
-sec_if = (sec_if == "USB")? "<#2740#>": sec_if;
+pri_if = (pri_if == "USB")? "<#2744#>" : pri_if;
+sec_if = (sec_if == "USB")? "<#2744#>": sec_if;
 }
 if(based_modelid == "GT-AXY16000" || based_modelid == "RT-AX89U"){
 if(pri_if == "WAN2")
@@ -822,21 +824,21 @@ return true;
 </tr>
 <tr id=dualwan_row_main style="display:none">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#3712#></p>
+<p class="formfonttitle_nwm"><#3718#></p>
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px;line-height:20px;" id="dualwan_current"></p>
 <div style="margin-top:5px;" class="line_horizontal"></div>
 </td>
 </tr>
 <tr id=dualwan_row_primary style="display:none">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#3710#></p>
+<p class="formfonttitle_nwm"><#3716#></p>
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px;line-height:20px;" id="dualwan_primary_if"></p>
 <div style="margin-top:5px;" class="line_horizontal"></div>
 </td>
 </tr>
 <tr id=dualwan_row_secondary style="display:none">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#3710#></p>
+<p class="formfonttitle_nwm"><#3716#></p>
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px;line-height:20px;" id="dualwan_secondary_if"></p>
 <div style="margin-top:5px;" class="line_horizontal"></div>
 </td>
@@ -864,7 +866,7 @@ return true;
 </tr>
 <tr id="primary_WANIP_ctrl">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#3672#></p>
+<p class="formfonttitle_nwm"><#3678#></p>
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px; line-height:20px;" id="WANIP"></p>
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px;line-height:20px;" id="xWANIP"></p>
 <span id="wan_status" style="display:none"></span>
@@ -881,7 +883,7 @@ return true;
 </tr>
 <tr style="display:none;" id="secondary_WANIP_ctrl">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#3672#></p>
+<p class="formfonttitle_nwm"><#3678#></p>
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px;line-height:20px;" id="secondary_WANIP"></p>
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px;line-height:20px;" id="secondary_xWANIP"></p>
 <span id="wan_status" style="display:none"></span>
@@ -898,7 +900,7 @@ return true;
 </tr>
 <tr style="display:none;" id="yadns_ctrl">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#3974#></p>
+<p class="formfonttitle_nwm"><#3980#></p>
 <a href="/YandexDNS.asp" target="_parent">
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px;line-height:20px;" id="yadns_mode"></p>
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px;line-height:20px;" id="yadns_DNS1"></p>
@@ -929,7 +931,7 @@ return true;
 </tr>
 <tr id="primary_gateway_ctrl">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#3055#></p>
+<p class="formfonttitle_nwm"><#3059#></p>
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px;line-height:20px;" id="gateway"></p>
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px;line-height:20px;" id="xgateway"></p>
 <div style="margin-top:5px;" class="line_horizontal"></div>
@@ -937,7 +939,7 @@ return true;
 </tr>
 <tr style="display:none;" id="secondary_gateway_ctrl">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#3055#></p>
+<p class="formfonttitle_nwm"><#3059#></p>
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px;line-height:20px;" id="secondary_gateway"></p>
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px;line-height:20px;" id="secondary_xgateway"></p>
 <div style="margin-top:5px;" class="line_horizontal"></div>
@@ -945,7 +947,7 @@ return true;
 </tr>
 <tr style="display:none;" id="primary_lease_ctrl">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#2516#></p>
+<p class="formfonttitle_nwm"><#2520#></p>
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px;line-height:20px;" id="lease"></p>
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px;line-height:20px;" id="xlease"></p>
 <div style="margin-top:5px;" class="line_horizontal"></div>
@@ -953,7 +955,7 @@ return true;
 </tr>
 <tr style="display:none;" id="primary_expires_ctrl">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#2602#></p>
+<p class="formfonttitle_nwm"><#2606#></p>
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px;line-height:20px;" id="expires"></p>
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px;line-height:20px;" id="xexpires"></p>
 <div style="margin-top:5px;" class="line_horizontal"></div>
@@ -961,7 +963,7 @@ return true;
 </tr>
 <tr style="display:none;" id="secondary_lease_ctrl">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#2516#></p>
+<p class="formfonttitle_nwm"><#2520#></p>
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px;line-height:20px;" id="secondary_lease"></p>
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px;line-height:20px;" id="secondary_xlease"></p>
 <div style="margin-top:5px;" class="line_horizontal"></div>
@@ -969,7 +971,7 @@ return true;
 </tr>
 <tr style="display:none;" id="secondary_expires_ctrl">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#2602#></p>
+<p class="formfonttitle_nwm"><#2606#></p>
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px;line-height:20px;" id="secondary_expires"></p>
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px;line-height:20px;" id="secondary_xexpires"></p>
 <div style="margin-top:5px;" class="line_horizontal"></div>
@@ -1006,7 +1008,7 @@ return true;
 </tr>
 <tr>
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#2500#></p>
+<p class="formfonttitle_nwm"><#2504#></p>
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px;line-height:20px;"><% nvram_get("lan_ipaddr"); %></p>
 <div style="margin-top:5px;" class="line_horizontal"></div>
 </td>
@@ -1027,7 +1029,7 @@ return true;
 </tr>
 <tr>
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#2287#></p>
+<p class="formfonttitle_nwm"><#2290#></p>
 <p class="tab_info_bg" style="padding-left:10px; margin-top:3px;line-height:20px;"><% nvram_get("lan_dns"); %></p>
 <div style="margin-top:5px;" class="line_horizontal"></div>
 </td>

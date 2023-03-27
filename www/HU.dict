@@ -2266,8 +2266,11 @@ Ez a VPN-profil le van tiltva. Kérjük, lépjen a VPN szerverbeállítások old
 Kattintson az alábbi [ Ugrás a Beállításokra ] gombra a VPN-beállítások oldalra lépéshez.
 Ez a beállítás nem választható ki a másik létrehozott profil használatakor.
 Otthoni hálózat
+Jelenleg nincs VPN-profil. Kattintson az alábbi „Ugrás a Beállításokra” gombra a VPN-beállítások oldalra lépéshez és a létrehozáához.
 Hálózat hozzáadása
 Profillista
+Egy meghatározott hálózat kiválasztása
+WiFi ütemezése
 Hardver verziója
 Help
 A súgó útmutatást és tájékoztatást ad a router funkcióinak használatáról. Kattintson a
@@ -2442,6 +2445,7 @@ LAN IPv6 cím
 LAN IPv6 előtag
 IPv6 LAN beállítás
 Native
+OCN Virtual Connect
 v6plus
 IPv6 előtag hossza
 IPv4 csomópont-választásos relé
@@ -3280,6 +3284,8 @@ LAN
 Vegyes
 Telecommunications Standards
 WAN-csatlakozás leállítása
+Ütemezett
+Egyszeri hozzáférés
 Időbeli Ütemezés
 Time Machine
 Hogyan használható az Apple Time Machine?
@@ -3347,10 +3353,10 @@ Alaszka
 Csendes-óceáni idő (USA, Kanada)
 Hegyvidéki idő (USA, Kanada)
 Arizona
-Chihuahua, Mazatlan
+Mazatlan
 Saskatchewan
 Guadalajara, Mexikóváros
-Monterrey
+Monterrey, Chihuahua
 Közép-Amerika
 Keleti idő (USA, Kanada)
 Indiana (Kelet)

@@ -170,7 +170,7 @@ code += '<td width="'+wid[1]+'%">'+ cp_netmask +'</td>';
 code += '<td width="'+wid[2]+'%">'+ ip_range[0] +'</td>';
 code += '<td width="'+wid[3]+'%">'+ ip_range[1] +'</td>';
 code += '<td width="'+wid[4]+'%">'+ cp_lease +'</td>';
-code += '<td colspan = "2">'+'<#4018#>'+'</td>';
+code += '<td colspan = "2">'+'<#4024#>'+'</td>';
 code += '</tr>';
 }
 /* Show subnet information of Free WIFI */
@@ -481,7 +481,7 @@ return false;
 if(captivePortal_support){
 var ipConflict_cp = checkIPConflict("", lanIPAddr, lanNetMask, cp_gateway, cp_netmask);
 if(ipConflict_cp.state) {
-alertMsg("<#4018#>", ipConflict_cp.ipAddr, ipConflict_cp.netLegalRangeStart, ipConflict_cp.netLegalRangeEnd);
+alertMsg("<#4024#>", ipConflict_cp.ipAddr, ipConflict_cp.netLegalRangeStart, ipConflict_cp.netLegalRangeEnd);
 return false;
 }
 }
@@ -623,7 +623,7 @@ var code = "";
 var clientListEventData = [];
 code += '<table width="100%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="dhcp_staticlist_table">';
 if(Object.keys(manually_dhcp_list_array).length == 0)
-code += '<tr><td style="color:#FFCC00;"><#2407#></td></tr>';
+code += '<tr><td style="color:#FFCC00;"><#2410#></td></tr>';
 else {
 var userIconBase64 = "NoIcon";
 var clientName, deviceType, deviceVender;
@@ -701,7 +701,7 @@ var rule_num = document.getElementById('dhcp_staticlist_table').rows.length;
 var item_num = document.getElementById('dhcp_staticlist_table').rows[0].cells.length;
 var mac_duplicate = 0, ip_duplicate = 0;
 if(rule_num >= upper){
-alert("<#2479#> " + upper + " <#2480#>");
+alert("<#2483#> " + upper + " <#2484#>");
 return false;
 }
 if(document.form.dhcp_staticmac_x_0.value ==""){
@@ -734,7 +734,7 @@ else if(ip_duplicate){
 document.form.dhcp_staticip_x_0.focus();
 document.form.dhcp_staticip_x_0.select();
 }
-alert("<#2472#>");
+alert("<#2476#>");
 return false;
 }
 manually_dhcp_list_array[document.form.dhcp_staticip_x_0.value.toUpperCase()] = document.form.dhcp_staticmac_x_0.value;
@@ -874,18 +874,18 @@ hideClients_Block();
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#3277#></td>
+<td colspan="2"><#3281#></td>
 </tr>
 </thead>
 <tr>
-<th><#2503#></th>
+<th><#2507#></th>
 <td>
 <input type="radio" value="1" name="radioDHCPEnable" class="content_input_fd" checked><#187#>
 <input type="radio" value="0" name="radioDHCPEnable" class="content_input_fd"><#186#>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,2);"><#2514#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,2);"><#2518#></a></th>
 <td>
 <input type="text" maxlength="32" class="input_25_table" name="tLan_domain" value="" autocorrect="off" autocapitalize="off">
 </td>
@@ -903,19 +903,19 @@ hideClients_Block();
 </td>
 </tr>
 <tr>
-<th><#2526#></th>
+<th><#2530#></th>
 <td>
 <input type="text" maxlength="15" class="input_25_table" name="tDHCPStart" onKeyPress="return validator.isIPAddr(this,event);">
 </td>
 </tr>
 <tr>
-<th><#2524#></th>
+<th><#2528#></th>
 <td>
 <input type="text" maxlength="15" class="input_25_table" name="tDHCPEnd" onKeyPress="return validator.isIPAddr(this,event);">
 </td>
 </tr>
 <tr>
-<th><#2516#></th>
+<th><#2520#></th>
 <td>
 <input type="text" maxlength="6" class="input_25_table" name="tLeaseTime" onKeyPress="return validator.isNumber(this,event);">
 </td>
@@ -924,18 +924,18 @@ hideClients_Block();
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable" style="margin-top:8px">
 <thead>
 <tr>
-<td colspan="2"><#2574#></td>
+<td colspan="2"><#2578#></td>
 </tr>
 </thead>
 <tr>
-<th width="200"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,7);"><#2573#></a></th>
+<th width="200"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,7);"><#2577#></a></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="dhcp_dns" value="" onKeyPress="return validator.isIPAddr(this,event)" autocorrect="off" autocapitalize="off">
 <div id="yadns_hint" style="display:none;"></div>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,8);"><#2591#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,8);"><#2595#></a></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="dhcp_wins" value="" onkeypress="return validator.isIPAddr(this,event)" autocorrect="off" autocapitalize="off"/>
 </td>
@@ -944,11 +944,11 @@ hideClients_Block();
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable" style="margin-top:8px;" >
 <thead>
 <tr>
-<td colspan="3"><#2519#></td>
+<td colspan="3"><#2523#></td>
 </tr>
 </thead>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,9);"><#2518#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,9);"><#2522#></a></th>
 <td colspan="2" style="text-align:left;">
 <input type="radio" value="1" name="dhcp_static" /><#187#>
 <input type="radio" value="0" name="dhcp_static" /><#186#>
@@ -958,18 +958,18 @@ hideClients_Block();
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table" style="margin-top:8px;">
 <thead>
 <tr>
-<td colspan="3" id="GWStatic"><#2520#>&nbsp;(<#2611#>&nbsp;<span id="max_staticIp_num" style="color:#FFF;">8</span>)</td>
+<td colspan="3" id="GWStatic"><#2524#>&nbsp;(<#2615#>&nbsp;<span id="max_staticIp_num" style="color:#FFF;">8</span>)</td>
 </tr>
 </thead>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);"><#1532#> (<#2950#>)</a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);"><#1532#> (<#2954#>)</a></th>
 <th><#290#></th>
-<th><#2610#></th>
+<th><#2614#></th>
 </tr>
 <tr>
 <td width="60%">
 <input type="text" class="input_20_table" maxlength="17" name="dhcp_staticmac_x_0" style="margin-left:-12px;width:255px;" onKeyPress="return validator.isHWAddr(this,event)" onClick="hideClients_Block();" autocorrect="off" autocapitalize="off" placeholder="ex: <% nvram_get("lan_hwaddr"); %>">
-<img id="pull_arrow" height="14px;" src="images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#3092#>">
+<img id="pull_arrow" height="14px;" src="images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#3096#>">
 <div id="ClientList_Block_PC" class="clientlist_dropdown" style="margin-left:50px;"></div>
 </td>
 <td width="30%">
@@ -1008,18 +1008,18 @@ hideClients_Block();
 <tr>
 <td bgcolor="#4D595D" valign="top" >
 <div>&nbsp;</div>
-<div class="formfonttitle"><#389#> - <#3234#></div>
+<div class="formfonttitle"><#389#> - <#3238#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
 <div class="formfontdesc"><#423#></div>
-<div style="margin-left:8px; margin-bottom:7px;"> <div style="font-size:12px; font-weight:800;display:table-cell;vertical-align:bottom;"><#424#>&nbsp;(<#2611#>&nbsp;8)</div><div style="display:table-cell;padding-left:6px;"><input id="add_subnet_btn" type="button" class="add_btn" onClick="add_subnet();" value=""></div></div>
+<div style="margin-left:8px; margin-bottom:7px;"> <div style="font-size:12px; font-weight:800;display:table-cell;vertical-align:bottom;"><#424#>&nbsp;(<#2615#>&nbsp;8)</div><div style="display:table-cell;padding-left:6px;"><input id="add_subnet_btn" type="button" class="add_btn" onClick="add_subnet();" value=""></div></div>
 <table width="98%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table" id="subnet_table" style="margin-top:5px;">
 <tr>
-<th style="width:19%"><#3055#></th>
+<th style="width:19%"><#3059#></th>
 <th style="width:19%"><#312#></th>
-<th style="width:19%"><#2526#></th>
-<th style="width:19%"><#2524#></th>
-<th style="width:10%"><#2516#></th>
-<th style="width:7%"><#2998#></th>
+<th style="width:19%"><#2530#></th>
+<th style="width:19%"><#2528#></th>
+<th style="width:10%"><#2520#></th>
+<th style="width:7%"><#3002#></th>
 <th><#1649#></th>
 </tr>
 </table>

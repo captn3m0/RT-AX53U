@@ -298,7 +298,7 @@ if(re.test(obj.value)){
 return "";
 }
 else{
-return "<#2486#>";
+return "<#2490#>";
 }
 },
 host_name: function(obj){
@@ -313,7 +313,7 @@ var re = new RegExp(/^[a-z0-9][a-z0-9-_]*$/i);
 if(re.test(obj.value))
 return "";
 else
-return "<#2487#> <#2488#>";
+return "<#2491#> <#2492#>";
 },
 friendly_name: function(obj){
 var invalid_char = "";
@@ -331,7 +331,7 @@ var re = new RegExp(/^[a-z][a-z0-9-]*$/i);
 if(re.test(obj.value))
 return "";
 else
-return "<#2489#> <#2490#>";
+return "<#2493#> <#2494#>";
 },
 requireWANIP: function(v){
 if(v == 'wan_ipaddr_x' || v == 'wan_netmask_x' ||
@@ -832,13 +832,23 @@ return true;
 alert("It is invalid URL."); /*untranslated*/
 return false;
 },
-isValidHost: function(value) {
+isValidHost: function(value) { //<#334#>
+var err_count=0;
+var alert_content = "<#334#>\n<#2490#>";
 var urlregex = new RegExp("^([a-zA-Z0-9\.\-]+(\:[a-zA-Z0-9\.&amp;%\$\-]+)*@)*((25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9])\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[0-9])|([a-zA-Z0-9\-]+\.)*[a-zA-Z0-9\-]+\.(com|edu|gov|int|mil|net|org|biz|arpa|info|name|pro|aero|coop|museum|[a-zA-Z]{2}))$");
-if(urlregex.test(value)){
-return true;
+if(!urlregex.test(value)){
+err_count++;
 }
-alert("<#2486#>");
+var rangere=new RegExp("^((([0-9A-Fa-f]{1,4}:){7}[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){6}:[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){5}:([0-9A-Fa-f]{1,4}:)?[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){4}:([0-9A-Fa-f]{1,4}:){0,2}[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){3}:([0-9A-Fa-f]{1,4}:){0,3}[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){2}:([0-9A-Fa-f]{1,4}:){0,4}[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){6}((\\b((25[0-5])|(1\\d{2})|(2[0-4]\\d)|(\\d{1,2}))\\b)\\.){3}(\\b((25[0-5])|(1\\d{2})|(2[0-4]\\d)|(\\d{1,2}))\\b))|(([0-9A-Fa-f]{1,4}:){0,5}:((\\b((25[0-5])|(1\\d{2})|(2[0-4]\\d)|(\\d{1,2}))\\b)\\.){3}(\\b((25[0-5])|(1\\d{2})|(2[0-4]\\d)|(\\d{1,2}))\\b))|(::([0-9A-Fa-f]{1,4}:){0,5}((\\b((25[0-5])|(1\\d{2})|(2[0-4]\\d)|(\\d{1,2}))\\b)\\.){3}(\\b((25[0-5])|(1\\d{2})|(2[0-4]\\d)|(\\d{1,2}))\\b))|([0-9A-Fa-f]{1,4}::([0-9A-Fa-f]{1,4}:){0,5}[0-9A-Fa-f]{1,4})|(::([0-9A-Fa-f]{1,4}:){0,6}[0-9A-Fa-f]{1,4})|(([0-9A-Fa-f]{1,4}:){1,7}:))$", "gi");
+if(!rangere.test(value)){
+err_count++;
+}
+if(err_count==2){
+alert(value +" \n"+ alert_content);
 return false;
+}
+else
+return true;
 },
 inet_network: function(ip_str){
 if(!ip_str)

@@ -52,6 +52,15 @@ wl_channel_list_2g = '<% channel_list_2g(); %>';
 wl_channel_list_5g = '<% channel_list_5g(); %>';
 wl_channel_list_5g_2 = '<% channel_list_5g_2(); %>';
 wl_channel_list_60g = '<% channel_list_60g(); %>';
+var acs_ch13_support = (function(){
+var ch_2g = JSON.parse(wl_channel_list_2g);
+for(var element of ch_2g){
+if(element > 11){
+return true;
+}
+}
+return false;
+})();
 var wl_unit_value = '<% nvram_get("wl_unit"); %>';
 var wl_subunit_value = '<% nvram_get("wl_subunit"); %>';
 var wlc_band_value = '<% nvram_get("wlc_band"); %>';
@@ -136,13 +145,13 @@ var confirm_content = "";
 if(!band6g_support || wl_unit != '2'){ // not for 6 GHz
 confirm_flag=1;
 confirm_content += "<b>WPA3-Personal</b><br>";
-confirm_content += "<#3777#><br><br>";
+confirm_content += "<#3783#><br><br>";
 confirm_content += "<b>WPA2/WPA3-Personal</b><br>";
-confirm_content += "<#3778#><br><br>";
+confirm_content += "<#3784#><br><br>";
 confirm_content += "<b>WPA2-Personal</b><br>";
-confirm_content += "<#3779#><br><br>";
+confirm_content += "<#3785#><br><br>";
 confirm_content += "<b>WPA-Auto-Personal</b><br>";
-confirm_content += "<#3780#>";
+confirm_content += "<#3786#>";
 $(".setup_help_icon").show();
 $(".setup_help_icon").click(
 function() {
@@ -157,7 +166,7 @@ htmlbodyforIE[0].style.overflow = "hidden";
 $("#Loading").css('visibility', 'visible');
 $("#loadingBlock").css('visibility', 'hidden');
 confirm_asus({
-title: "<#3776#>",
+title: "<#3782#>",
 contentA: confirm_content,
 contentC: "",
 left_button: "Hidden",
@@ -198,7 +207,7 @@ document.form.wl_channel.value = document.form.wl_channel_orig.value;
 if (band60g_support && document.form.wl_unit.value == '3')
 document.form.wl_edmg_channel.value = document.form.wl_edmg_channel_orig.value;
 if(document.form.wl_wpa_psk.value.length <= 0)
-document.form.wl_wpa_psk.value = "<#3764#>";
+document.form.wl_wpa_psk.value = "<#3770#>";
 if(document.form.wl_unit[0].selected == true)
 document.getElementById("wl_gmode_checkbox").style.display = "";
 if(document.form.wl_nmode_x.value=='1'){
@@ -209,17 +218,31 @@ else{
 document.form.wl_gmode_check.checked = true;
 document.getElementById("wl_gmode_check").disabled = false;
 }
-if(document.form.wl_gmode_protection.value == "auto")
+if(is_unit_24g(wl_unit_value)){
+if(document.form.wl_gmode_protection.value == "auto"){
 document.form.wl_gmode_check.checked = true;
-else
+}
+else{
 document.form.wl_gmode_check.checked = false;
+}
+document.getElementById("wl_gmode_checkbox").style.display = "";
+if(disable11b_support){
+if(document.form.wl_rateset.value == "ofdm"){
+document.form.wl_rateset_check.checked = true;
+}
+else{
+document.form.wl_rateset_check.checked = false;
+}
+wl_mode_change(document.form.wl_nmode_x.value);
+}
+}
 if(!band5g_support)
 document.getElementById("wl_unit_field").style.display = "none";
 handle_11ac_80MHz();
 genBWTable('<% nvram_get("wl_unit"); %>');
 if(isSwMode("re") || isSwMode("mb"))
 document.form.wl_subunit.value = (wl_unit_value == wlc_band_value) ? 1 : -1;
-document.getElementById('WPS_hideSSID_hint').innerHTML = "<#3964#>";
+document.getElementById('WPS_hideSSID_hint').innerHTML = "<#3970#>";
 if("<% nvram_get("wl_closed"); %>" == 1 && (isSwMode("rt") || isSwMode("ap"))){
 document.getElementById('WPS_hideSSID_hint').style.display = "";
 }
@@ -251,7 +274,7 @@ document.form.wl_subunit.value = 1;
 }
 var skip_channel_2g = '<% nvram_get("skip_channel_2g"); %>';
 var skip_channel_5g = '<% nvram_get("skip_channel_5g"); %>';
-if(skip_channel_2g == "CH13" && wl_unit_value == "0"){
+if(acs_ch13_support && wl_unit_value == "0"){
 document.getElementById("acs_ch13_checkbox").style = "";
 }
 if(skip_channel_5g == "band1" && wl_unit_value == "1"){
@@ -460,13 +483,13 @@ x.selectedIndex = 1;
 x.remove(x.selectedIndex);
 }
 if ((CurrentCh >=1) && (CurrentCh <= 4)){
-x.options[0].text = "<#3813#>";
+x.options[0].text = "<#3819#>";
 x.options[0].value = "lower";
 }
 else if ((CurrentCh >= 5) && (CurrentCh <= 7)){
-x.options[0].text = "<#3813#>";
+x.options[0].text = "<#3819#>";
 x.options[0].value = "lower";
-add_option(document.form.wl_nctrlsb, "<#3814#>", "upper");
+add_option(document.form.wl_nctrlsb, "<#3820#>", "upper");
 if (document.form.wl_nctrlsb_old.value == "upper")
 document.form.wl_nctrlsb.options.selectedIndex=1;
 if(is_high_power && CurrentCh == 5) // for high power model, Jieming added at 2013/08/19
@@ -475,16 +498,16 @@ else if(is_high_power && CurrentCh == 7)
 document.form.wl_nctrlsb.remove(0);
 }
 else if ((CurrentCh >= 8) && (CurrentCh <= 10)){
-x.options[0].text = "<#3814#>";
+x.options[0].text = "<#3820#>";
 x.options[0].value = "upper";
 if (option_length >=14){
-add_option(document.form.wl_nctrlsb, "<#3813#>", "lower");
+add_option(document.form.wl_nctrlsb, "<#3819#>", "lower");
 if (document.form.wl_nctrlsb_old.value == "lower")
 document.form.wl_nctrlsb.options.selectedIndex=1;
 }
 }
 else if (CurrentCh >= 11){
-x.options[0].text = "<#3814#>";
+x.options[0].text = "<#3820#>";
 x.options[0].value = "upper";
 }
 else{
@@ -529,7 +552,7 @@ alert("Please wait a minute for wireless ready");
 return false;
 }
 var auth_mode = document.form.wl_auth_mode_x.value;
-if(document.form.wl_wpa_psk.value == "<#3764#>")
+if(document.form.wl_wpa_psk.value == "<#3770#>")
 document.form.wl_wpa_psk.value = "";
 if(validForm()){
 if(amesh_support && (isSwMode("rt") || isSwMode("ap")) && ameshRouter_support) {
@@ -566,19 +589,19 @@ confirm_content="<#1006#>";
 else {
 if(document.form.wl_closed[0].checked && document.form.wps_enable.value == 1 && (isSwMode("rt") || isSwMode("ap"))){
 confirm_flag=1;
-confirm_content="<#3762#>";
+confirm_content="<#3768#>";
 }
 }
 if(document.form.wps_enable.value == 1){ //disable WPS if choose WEP or WPA/TKIP Encryption
 if(wps_multiband_support && (document.form.wps_multiband.value == 1 || document.form.wps_band.value == wl_unit_value)){ //Ralink, Qualcomm Atheros
 if(document.form.wl_auth_mode_x.value == "open" && document.form.wl_wep_x.value == "0"){
-if(!confirm("<#3763#>"))
+if(!confirm("<#3769#>"))
 return false;
 }
 if( document.form.wl_auth_mode_x.value == "shared"
 || document.form.wl_auth_mode_x.value == "psk" || document.form.wl_auth_mode_x.value == "wpa"
 || document.form.wl_auth_mode_x.value == "open" && (document.form.wl_wep_x.value == "1" || document.form.wl_wep_x.value == "2")){ //open wep case
-if(confirm("<#3761#>")){
+if(confirm("<#3767#>")){
 document.form.wps_enable.value = "0";
 }
 else{
@@ -588,13 +611,13 @@ return false;
 }
 else{ //Broadcom
 if(document.form.wl_auth_mode_x.value == "open" && document.form.wl_wep_x.value == "0"){
-if(!confirm("<#3763#>"))
+if(!confirm("<#3769#>"))
 return false;
 }
 if( document.form.wl_auth_mode_x.value == "shared"
 || document.form.wl_auth_mode_x.value == "psk" || document.form.wl_auth_mode_x.value == "wpa"
 || document.form.wl_auth_mode_x.value == "open" && (document.form.wl_wep_x.value == "1" || document.form.wl_wep_x.value == "2")){ //open wep case
-if(confirm("<#3761#>")){
+if(confirm("<#3767#>")){
 document.form.wps_enable.value = "0";
 }
 else{
@@ -679,7 +702,7 @@ htmlbodyforIE[0].style.overflow = "hidden";
 $("#Loading").css('visibility', 'visible');
 $("#loadingBlock").css('visibility', 'hidden');
 confirm_asus({
-title: "<#3863#>",
+title: "<#3869#>",
 contentA: confirm_content+"<br><br><#1013#> <#996#>",
 contentC: "",
 left_button: "<#1665#>",
@@ -813,7 +836,7 @@ document.form.wl_subunit.value = 1;
 change_wl_unit();
 }
 function clean_input(obj){
-if(obj.value == "<#3764#>")
+if(obj.value == "<#3770#>")
 obj.value = "";
 }
 function check_NOnly_to_GN(){
@@ -822,9 +845,9 @@ if(wl_unit_value == "1" || wl_unit_value == "2"){ //5G
 for(var i=0;i<gn_array_5g.length;i++){
 if(gn_array_5g[i][0] == "1" && (gn_array_5g[i][3] == "tkip" || gn_array_5g[i][5] == "1" || gn_array_5g[i][5] == "2")){
 if(document.form.wl_nmode_x.value == "0")
-document.getElementById('wl_NOnly_note').innerHTML = '<br>* <#3947#>';
+document.getElementById('wl_NOnly_note').innerHTML = '<br>* <#3953#>';
 else{
-document.getElementById('wl_NOnly_note').innerHTML = '<br>* <#3951#>';
+document.getElementById('wl_NOnly_note').innerHTML = '<br>* <#3957#>';
 }
 document.getElementById('wl_NOnly_note').style.display = "";
 return false;
@@ -835,9 +858,9 @@ else if(wl_unit_value == "0"){ //2.4G
 for(var i=0;i<gn_array_2g.length;i++){
 if(gn_array_2g[i][0] == "1" && (gn_array_2g[i][3] == "tkip" || gn_array_2g[i][5] == "1" || gn_array_2g[i][5] == "2")){
 if(document.form.wl_nmode_x.value == "0")
-document.getElementById('wl_NOnly_note').innerHTML = '<br>* <#3947#>';
+document.getElementById('wl_NOnly_note').innerHTML = '<br>* <#3953#>';
 else
-document.getElementById('wl_NOnly_note').innerHTML = '<br>* <#3951#>';
+document.getElementById('wl_NOnly_note').innerHTML = '<br>* <#3957#>';
 document.getElementById('wl_NOnly_note').style.display = "";
 return false;
 }
@@ -850,18 +873,18 @@ return true;
 function high_power_auto_channel(){
 if(is_high_power){
 if(document.form.wl_channel.value == 1){
-if(confirm("<#3781#>")){
+if(confirm("<#3787#>")){
 document.form.wl_channel.value = 2;
 }
-else if(!(confirm("<#3782#>"))){
+else if(!(confirm("<#3788#>"))){
 document.form.wl_channel.value = 2;
 }
 }
 else if(document.form.wl_channel.value == 11){
-if(confirm("<#3783#>")){
+if(confirm("<#3789#>")){
 document.form.wl_channel.value = 10;
 }
-else if(!(confirm("<#3784#>"))){
+else if(!(confirm("<#3790#>"))){
 document.form.wl_channel.value = 10;
 }
 }
@@ -918,23 +941,23 @@ document.form.smart_connect_x.value = val;
 var value = new Array();
 var desc = new Array();
 if(isSupport("triband") && dwb_info.mode) {
-desc = ["<#3165#> (2.4GHz and 5GHz)"];
+desc = ["<#3169#> (2.4GHz and 5GHz)"];
 value = ["1"];
 add_options_x2(document.form.smart_connect_t, desc, value, val);
 }
 else {
 if(based_modelid=="RT-AC5300" || based_modelid=="GT-AC5300"){
-desc = ["<#3166#> (2.4GHz, 5GHz-1 and 5GHz-2)", "5GHz Smart Connect (5GHz-1 and 5GHz-2)"];
+desc = ["<#3170#> (2.4GHz, 5GHz-1 and 5GHz-2)", "5GHz Smart Connect (5GHz-1 and 5GHz-2)"];
 value = ["1", "2"];
 add_options_x2(document.form.smart_connect_t, desc, value, val);
 }
 else if(based_modelid =="RT-AC3200" || based_modelid =="RT-AC95U"){
-desc = ["<#3166#> (2.4GHz, 5GHz-1 and 5GHz-2)"];
+desc = ["<#3170#> (2.4GHz, 5GHz-1 and 5GHz-2)"];
 value = ["1"];
 add_options_x2(document.form.smart_connect_t, desc, value, val);
 }
 else if(based_modelid == "RT-AC88U" || based_modelid == "RT-AC86U" || based_modelid == "GT-AC2900" || based_modelid == "RT-AC3100" || based_modelid == "BLUECAVE" || based_modelid == "MAP-AC1750" || based_modelid == "RT-AX89U" || based_modelid == "GT-AXY16000" || based_modelid.substring(0,7) == "RT-AC59" || based_modelid == "XD4S"){
-desc = ["<#3165#> (2.4GHz and 5GHz)"];
+desc = ["<#3169#> (2.4GHz and 5GHz)"];
 value = ["1"];
 add_options_x2(document.form.smart_connect_t, desc, value, val);
 }
@@ -1070,6 +1093,26 @@ obj.options[2] = new Option("Legacy", 2);
 }
 obj.value = '<% nvram_get("wl_nmode_x"); %>';
 }
+function wl_mode_change(mode){
+if(is_unit_24g(wl_unit_value)){
+if(mode == '0'){
+document.form.wl_rateset.disabled = false;
+document.getElementById("wl_rateset_checkbox").style.display = "";
+}
+else{
+document.form.wl_rateset.disabled = true;
+document.getElementById("wl_rateset_checkbox").style.display = "none";
+}
+}
+}
+function wl_disable11b(obj){
+if(obj.checked){
+document.form.wl_rateset.value = 'ofdm';
+}
+else{
+document.form.wl_rateset.value = 'default';
+}
+}
 function change_wl_nmode(o){
 if(Bcmwifi_support) {
 if(o.value == '2')
@@ -1130,7 +1173,7 @@ error: function(xhr) {
 setTimeout("ajax_wl_channel();", 1000);
 },
 success: function(response){
-$("#auto_channel").html("<#3760#>: " + cur_control_channel[wl_unit]);
+$("#auto_channel").html("<#3766#>: " + cur_control_channel[wl_unit]);
 setTimeout("ajax_wl_channel();", 5000);
 }
 });
@@ -1220,6 +1263,7 @@ $('#mbo_notice').hide();
 <input type="hidden" name="wps_band" value="<% nvram_get("wps_band_x"); %>" disabled>
 <input type="hidden" name="wps_multiband" value="<% nvram_get("wps_multiband"); %>" disabled>
 <input type="hidden" name="w_Setting" value="1">
+<input type="hidden" name="wl_rateset" value="<% nvram_get("wl_rateset"); %>" >
 <input type="hidden" name="w_apply" value="1">
 <input type="hidden" name="smart_connect_x" value="<% nvram_get("smart_connect_x"); %>">
 <table class="content" align="center" cellpadding="0" cellspacing="0">
@@ -1245,14 +1289,14 @@ $('#mbo_notice').hide();
 <div id="lantiq_ready" style="display:none;color:#FC0;margin-left:5px;font-size:13px;">Wireless is setting...</div>
 <table width="99%" border="1" align="center" cellpadding="4" cellspacing="0" id="WLgeneral" class="FormTable">
 <tr id="smartcon_enable_field" style="display:none;">
-<th width="30%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0,27);"><#3168#></a></th>
+<th width="30%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0,27);"><#3172#></a></th>
 <td>
 <div id="smartcon_enable_block" style="display:none;">
 <span style="color:#FFF;" id="smart_connect_enable_word">&nbsp;&nbsp;</span>
 <input type="button" name="enableSmartConbtn" id="enableSmartConbtn" value="" class="button_gen" onClick="enableSmartCon();">
 <br>
 </div>
-<div id="radio_smartcon_enable" class="left" style="width: 94px;display:table-cell;"></div><div id="smartcon_rule_link" style="display:table-cell; vertical-align: middle;"><a href="Advanced_Smart_Connect.asp" style="font-family:Lucida Console;color:#FC0;text-decoration:underline;cursor:pointer;"><#3171#></a></div>
+<div id="radio_smartcon_enable" class="left" style="width: 94px;display:table-cell;"></div><div id="smartcon_rule_link" style="display:table-cell; vertical-align: middle;"><a href="Advanced_Smart_Connect.asp" style="font-family:Lucida Console;color:#FC0;text-decoration:underline;cursor:pointer;"><#3175#></a></div>
 <div class="clear"></div>
 <script type="text/javascript">
 var flag = '<% get_parameter("flag"); %>';
@@ -1280,7 +1324,7 @@ enableSmartCon(0);
 </td>
 </tr>
 <tr id="smart_connect_field" style="display:none;">
-<th><#3163#></th>
+<th><#3167#></th>
 <td id="smart_connect_switch">
 <select name="smart_connect_t" class="input_option" onChange="enableSmartCon(this.value);">
 <option class="content_input_fd" value="1" >Tri-band Smart Connect (2.4GHz, 5GHz-1 and 5GHz-2)</optio>
@@ -1289,7 +1333,7 @@ enableSmartCon(0);
 </td>
 </tr>
 <tr id="wl_unit_field">
-<th><#2324#></th>
+<th><#2327#></th>
 <td>
 <select name="wl_unit" class="input_option" onChange="_change_wl_unit(this.value);">
 <option class="content_input_fd" value="0" <% nvram_match("wl_unit", "0","selected"); %>>2.4 GHz</option>
@@ -1305,8 +1349,8 @@ enableSmartCon(0);
 <option class="content_input_fd" value="0" <% nvram_match("wl_subunit", "0","selected"); %>>Primary</option>
 </select>
 <select id="wl_bss_enabled_field" name="wl_bss_enabled" class="input_option" onChange="mbss_switch();">
-<option class="content_input_fd" value="0" <% nvram_match("wl_bss_enabled", "0","selected"); %>><#3841#></option>
-<option class="content_input_fd" value="1" <% nvram_match("wl_bss_enabled", "1","selected"); %>><#3840#></option>
+<option class="content_input_fd" value="0" <% nvram_match("wl_bss_enabled", "0","selected"); %>><#3847#></option>
+<option class="content_input_fd" value="1" <% nvram_match("wl_bss_enabled", "1","selected"); %>><#3846#></option>
 </select>
 </td>
 </tr-->
@@ -1317,7 +1361,7 @@ enableSmartCon(0);
 </td>
 </tr>
 <tr id="wl_closed_field">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 2);"><#3863#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 2);"><#3869#></a></th>
 <td>
 <input type="radio" value="1" name="wl_closed" class="input" onClick="return change_common_radio(this, 'WLANConfig11b', 'wl_closed', '1')" <% nvram_match("wl_closed", "1", "checked"); %>><#187#>
 <input type="radio" value="0" name="wl_closed" class="input" onClick="return change_common_radio(this, 'WLANConfig11b', 'wl_closed', '0')" <% nvram_match("wl_closed", "0", "checked"); %>><#186#>
@@ -1327,7 +1371,7 @@ enableSmartCon(0);
 </td>
 </tr>
 <tr>
-<th><a id="wl_mode_desc" class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 4);"><#3902#></a></th>
+<th><a id="wl_mode_desc" class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 4);"><#3908#></a></th>
 <td>
 <select name="wl_nmode_x" class="input_option" onChange="wireless_mode_change(this);">
 <option value="0" <% nvram_match("wl_nmode_x", "0","selected"); %>><#153#></option>
@@ -1335,55 +1379,56 @@ enableSmartCon(0);
 <option value="2" <% nvram_match("wl_nmode_x", "2","selected"); %>>Legacy</option>
 <option value="8" <% nvram_match("wl_nmode_x", "8","selected"); %>>N/AC Mixed</option>
 </select>
-<span id="wl_optimizexbox_span" style="display:none"><input type="checkbox" name="wl_optimizexbox_ckb" id="wl_optimizexbox_ckb" value="<% nvram_get("wl_optimizexbox"); %>" onclick="document.form.wl_optimizexbox.value=(this.checked==true)?1:0;"> <#3904#></input></span>
-<span id="wl_gmode_checkbox" style="display:none;"><input type="checkbox" name="wl_gmode_check" id="wl_gmode_check" value="" onClick="wl_gmode_protection_check();"> <#3903#></input></span>
-<span id="wl_nmode_x_hint" style="display:none;"><br><#3948#><br></span>
+<span id="wl_optimizexbox_span" style="display:none"><input type="checkbox" name="wl_optimizexbox_ckb" id="wl_optimizexbox_ckb" value="<% nvram_get("wl_optimizexbox"); %>" onclick="document.form.wl_optimizexbox.value=(this.checked==true)?1:0;"> <#3910#></input></span>
+<span id="wl_gmode_checkbox" style="display:none;"><input type="checkbox" name="wl_gmode_check" id="wl_gmode_check" value="" onClick="wl_gmode_protection_check();"> <#3909#></input></span>
+<span id="wl_rateset_checkbox" style="display:none;"><input type="checkbox" name="wl_rateset_check" id="wl_rateset_check" value="<% nvram_get("wl_rateset"); %>" onClick="wl_disable11b(this);">Disable 11b</span>
+<span id="wl_nmode_x_hint" style="display:none;"><br><#3954#><br></span>
 <span id="wl_NOnly_note" style="display:none;"></span>
 <!-- [N only] is not compatible with current guest network authentication method(TKIP or WEP), Please go to <a id="gn_link" href="/Guest_network.asp?af=wl_NOnly_note" target="_blank" style="color:#FFCC00;font-family:Lucida Console;text-decoration:underline;">guest network</a> and change the authentication method. -->
 </td>
 </tr>
 <tr id="he_mode_field" style="display:none">
 <th>
-<a id="he_mode_text" class="hintstyle" href="javascript:void(0);" onClick=""><#3815#></a>
+<a id="he_mode_text" class="hintstyle" href="javascript:void(0);" onClick=""><#3821#></a>
 </th>
 <td>
 <div style="display:flex;align-items: center;">
 <select name="wl_11ax" class="input_option" onChange="he_frame_mode(this);">
-<option value="1" <% nvram_match("wl_11ax", "1" ,"selected"); %> ><#3840#></option>
-<option value="0" <% nvram_match("wl_11ax", "0" ,"selected"); %> ><#3841#></option>
+<option value="1" <% nvram_match("wl_11ax", "1" ,"selected"); %> ><#3846#></option>
+<option value="0" <% nvram_match("wl_11ax", "0" ,"selected"); %> ><#3847#></option>
 </select>
-<span id="he_mode_faq" style="padding: 0 10px"><#3816#></span>
+<span id="he_mode_faq" style="padding: 0 10px"><#3822#></span>
 </div>
 </td>
 </tr>
 <tr id="mbo_field" style="display:none">
 <th>
-<a class="hintstyle"><#3773#></a>
+<a class="hintstyle"><#3779#></a>
 </th>
 <td>
 <div style="width:465px;display:flex;align-items: center;">
 <select name="wl_mbo_enable" class="input_option" onChange="handleMFP();">
-<option value="1" <% nvram_match("wl_mbo_enable", "1","selected"); %>><#3840#></option>
-<option value="0" <% nvram_match("wl_mbo_enable", "0","selected"); %>><#3841#></option>
+<option value="1" <% nvram_match("wl_mbo_enable", "1","selected"); %>><#3846#></option>
+<option value="0" <% nvram_match("wl_mbo_enable", "0","selected"); %>><#3847#></option>
 </select>
 </div>
 </td>
 </tr>
 <tr id="twt_field" style="display:none">
 <th>
-<a class="hintstyle"><#3831#></a>
+<a class="hintstyle"><#3837#></a>
 </th>
 <td>
 <div style="width:465px;display:flex;align-items: center;">
 <select name="wl_twt" class="input_option">
-<option value="1" <% nvram_match("wl_twt", "1","selected"); %>><#3840#></option>
-<option value="0" <% nvram_match("wl_twt", "0","selected"); %>><#3841#></option>
+<option value="1" <% nvram_match("wl_twt", "1","selected"); %>><#3846#></option>
+<option value="0" <% nvram_match("wl_twt", "0","selected"); %>><#3847#></option>
 </select>
 </div>
 </td>
 </tr>
 <tr id="wl_bw_field">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 14);"><#3788#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 14);"><#3794#></a></th>
 <td>
 <select name="wl_bw" class="input_option" onChange="insertExtChannelOption();">
 <option class="content_input_fd" value="1" <% nvram_match("wl_bw", "1","selected"); %>>20/40/80 MHz</option>
@@ -1400,10 +1445,10 @@ enableSmartCon(0);
 <select name="wl_channel" class="input_option" onChange="high_power_auto_channel();insertExtChannelOption();"></select>
 <span id="auto_channel" style="display:none;margin-left:10px;"></span><br>
 <div style="margin-top:5px">
-<div><span id="dfs_checkbox" style="display:none"><input type="checkbox" onClick="check_DFS_support(this);" name="acs_dfs_checkbox" <% nvram_match("acs_dfs", "1", "checked"); %>><#3808#></input></span></div>
-<div><span id="acs_band1_checkbox" style="display:none;"><input type="checkbox" onClick="check_acs_band1_support(this);" <% nvram_match("acs_band1", "1", "checked"); %>><#3806#></input></span></div>
-<div><span id="acs_band3_checkbox" style="display:none;"><input type="checkbox" onClick="check_acs_band3_support(this);" <% nvram_match("acs_band3", "1", "checked"); %>><#3807#></input></span></div>
-<div><span id="acs_ch13_checkbox" style="display:none;"><input type="checkbox" onClick="check_acs_ch13_support(this);" <% nvram_match("acs_ch13", "1", "checked"); %>><#3805#></input></span></div>
+<div><span id="dfs_checkbox" style="display:none"><input type="checkbox" onClick="check_DFS_support(this);" name="acs_dfs_checkbox" <% nvram_match("acs_dfs", "1", "checked"); %>><#3814#></input></span></div>
+<div><span id="acs_band1_checkbox" style="display:none;"><input type="checkbox" onClick="check_acs_band1_support(this);" <% nvram_match("acs_band1", "1", "checked"); %>><#3812#></input></span></div>
+<div><span id="acs_band3_checkbox" style="display:none;"><input type="checkbox" onClick="check_acs_band3_support(this);" <% nvram_match("acs_band3", "1", "checked"); %>><#3813#></input></span></div>
+<div><span id="acs_ch13_checkbox" style="display:none;"><input type="checkbox" onClick="check_acs_ch13_support(this);" <% nvram_match("acs_ch13", "1", "checked"); %>><#3811#></input></span></div>
 </div>
 </td>
 </tr>
@@ -1417,7 +1462,7 @@ enableSmartCon(0);
 </td>
 </tr>
 <tr id="wl_nctrlsb_field">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 15);"><#3812#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 15);"><#3818#></a></th>
 <td>
 <select name="wl_nctrlsb" class="input_option">
 <option value="lower" <% nvram_match("wl_nctrlsb", "lower", "selected"); %>>lower</option>
@@ -1426,7 +1471,7 @@ enableSmartCon(0);
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 5);"><#3776#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 5);"><#3782#></a></th>
 <td>
 <select name="wl_auth_mode_x" class="input_option" onChange="authentication_method_change(this);">
 <option value="open" <% nvram_match("wl_auth_mode_x", "open", "selected"); %>>Open System</option>
@@ -1454,7 +1499,7 @@ enableSmartCon(0);
 </td>
 </tr>
 <tr id="wpa_psk_key_field">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 7);"><#3913#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 7);"><#3919#></a></th>
 <td>
 <div class="wpa_psk_container">
 <div><input type="text" name="wl_wpa_psk" maxlength="64" class="input_32_table" value="<% nvram_get("wl_wpa_psk"); %>" autocorrect="off" autocapitalize="off"></div>
@@ -1462,7 +1507,7 @@ enableSmartCon(0);
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 9);"><#3838#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 9);"><#3844#></a></th>
 <td>
 <select name="wl_wep_x" class="input_option" onChange="wep_encryption_change(this);">
 <option value="0" <% nvram_match("wl_wep_x", "0", "selected"); %>><#848#></option>
@@ -1484,23 +1529,23 @@ enableSmartCon(0);
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#3833#></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#3839#></th>
 <td><input type="text" name="wl_key1" id="wl_key1" maxlength="27" class="input_25_table" value="<% nvram_get("wl_key1"); %>" onKeyUp="return change_wlkey(this, 'WLANConfig11b');" autocorrect="off" autocapitalize="off"></td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#3834#></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#3840#></th>
 <td><input type="text" name="wl_key2" id="wl_key2" maxlength="27" class="input_25_table" value="<% nvram_get("wl_key2"); %>" onKeyUp="return change_wlkey(this, 'WLANConfig11b');" autocorrect="off" autocapitalize="off"></td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#3835#></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#3841#></th>
 <td><input type="text" name="wl_key3" id="wl_key3" maxlength="27" class="input_25_table" value="<% nvram_get("wl_key3"); %>" onKeyUp="return change_wlkey(this, 'WLANConfig11b');" autocorrect="off" autocapitalize="off"></td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#3836#></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 18);"><#3842#></th>
 <td><input type="text" name="wl_key4" id="wl_key4" maxlength="27" class="input_25_table" value="<% nvram_get("wl_key4"); %>" onKeyUp="return change_wlkey(this, 'WLANConfig11b');" autocorrect="off" autocapitalize="off"></td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 8);"><#3909#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 8);"><#3915#></a></th>
 <td>
 <input type="text" name="wl_phrase_x" maxlength="64" class="input_32_table" value="<% nvram_get("wl_phrase_x"); %>" onKeyUp="return is_wlphrase('WLANConfig11b', 'wl_phrase_x', this);" autocorrect="off" autocapitalize="off">
 </td>
@@ -1508,7 +1553,7 @@ enableSmartCon(0);
 <tr >
 <th>
 <a class="hintstyle" href="javascript:void(0);" onClick="openHint(2,1);">
-<#3768#></a>
+<#3774#></a>
 </th>
 <td>
 <input type="text" maxlength="39" class="input_32_table" name="wl_radius_ipaddr" value='<% nvram_get("wl_radius_ipaddr"); %>' onKeyPress="return validator.isIPAddr(this, event)" autocorrect="off" autocapitalize="off">
@@ -1517,7 +1562,7 @@ enableSmartCon(0);
 <tr>
 <th>
 <a class="hintstyle" href="javascript:void(0);" onClick="openHint(2,2);">
-<#3772#></a>
+<#3778#></a>
 </th>
 <td>
 <input type="text" maxlength="5" class="input_6_table" name="wl_radius_port" value='<% nvram_get("wl_radius_port"); %>' onkeypress="return validator.isNumber(this,event)" autocorrect="off" autocapitalize="off"/>
@@ -1526,27 +1571,27 @@ enableSmartCon(0);
 <tr>
 <th >
 <a class="hintstyle" href="javascript:void(0);" onClick="openHint(2,3);">
-<#3770#></a>
+<#3776#></a>
 </th>
 <td>
 <input type="password" maxlength="64" class="input_32_table" name="wl_radius_key" value="<% nvram_get("wl_radius_key"); %>" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none">
-<th><#3894#></th>
+<th><#3900#></th>
 <td>
 <select name="wl_mfp" class="input_option" >
-<option value="0" <% nvram_match("wl_mfp", "0", "selected"); %>><#3841#></option>
-<option value="1" <% nvram_match("wl_mfp", "1", "selected"); %>><#3895#></option>
-<option value="2" <% nvram_match("wl_mfp", "2", "selected"); %>><#3896#></option>
+<option value="0" <% nvram_match("wl_mfp", "0", "selected"); %>><#3847#></option>
+<option value="1" <% nvram_match("wl_mfp", "1", "selected"); %>><#3901#></option>
+<option value="2" <% nvram_match("wl_mfp", "2", "selected"); %>><#3902#></option>
 </select>
 <span id="mbo_notice_wpa3" style="display:none">*If the Authentication Method is WPA3-Personal, the Protected Management Frames will be Required.</span>
 <span id="mbo_notice_combo" style="display:none">*If the Authentication Method is WPA2/WPA3-Personal, the Protected Management Frames will be Capable.</span>
-<span id="mbo_notice" style="display:none"><#3774#></span>
+<span id="mbo_notice" style="display:none"><#3780#></span>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 11);"><#3924#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 11);"><#3930#></a></th>
 <td><input type="text" maxlength="7" name="wl_wpa_gtk_rekey" class="input_6_table" value='<% nvram_get("wl_wpa_gtk_rekey"); %>' onKeyPress="return validator.isNumber(this,event);" autocorrect="off" autocapitalize="off"></td>
 </tr>
 </table>

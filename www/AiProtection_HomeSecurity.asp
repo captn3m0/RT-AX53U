@@ -110,9 +110,9 @@ $("#Link_to_ParentalCtrl").attr("href", "ParentalControl.asp");
 <a id="Link_to_ParentalCtrl" style="text-decoration: underline;" href="AiProtection_WebProtector.asp"><#468#></a>
 </div>
 <div class="app_desc" style="height:60px;">
-<li id="item_time_scheduling"><#3282#></li>
+<li id="item_time_scheduling"><#3288#></li>
 <li id="item_filter"><#1210#></li>
-<li id="item_yandex" style="display:none;"><#3974#></li>
+<li id="item_yandex" style="display:none;"><#3980#></li>
 </div>
 </td>
 </tr>

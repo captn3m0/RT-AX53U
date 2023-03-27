@@ -2266,8 +2266,11 @@ Ten profil VPN jest wyłączony. Przejdź do strony ustawień serwera VPN i wł�
 Kliknij [ Idź do menu Ustawienia ] poniżej, aby wyświetlić stronę ustawień VPN.
 Tego ustawienia nie można wybrać, gdy jest używane przez inny profil.
 Sieć domowa
+Nie ma teraz profilu VPN. Kliknij [Idź do menu Ustawienia] poniżej, aby wyświetlić stronę ustawień VPN, i utwórz profil.
 Dodaj sieć
 Lista profili
+Wybierz określoną sieć
+Planowanie Wi-Fi
 Wersja sprzętu
 Help
 Pomoc poprowadzi Cię przez podręcznik i informację na temat używania funkcji routera. Kliknij
@@ -2442,6 +2445,7 @@ LAN Adres IPv6
 LAN prefiks IPv6
 Ustawienie LAN IPv6
 Native
+OCN Virtual Connect
 v6plus
 Długość prefiksu IPv6
 Przekazywanie adresów IPv4 podczas transmisji Anycast
@@ -3280,6 +3284,8 @@ LAN
 Dodatkowe
 Telecommunications Standards
 Zakończ działanie interfejsu WAN
+Wg harmonogramu
+Dostęp jednorazowy
 Ustalanie harmonogramu
 Time Machine
 Jak korzystać z programu Time Machine firmy Apple?
@@ -3347,10 +3353,10 @@ Alaska
 Pacific Time (US, Canada)
 Mountain Time (US, Canada)
 Arizona
-Chihuahua, Mazatlan
+Mazatlan
 Saskatchewan
 Guadalajara, Mexico City
-Monterrey
+Monterrey, Chihuahua
 Central Time (US, Canada)
 Eastern Time (US, Canada)
 Indiana (East)

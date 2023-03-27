@@ -384,7 +384,7 @@ code += '<div style="display:table-cell;width:130px;padding-right:5px;"><#1205#>
 code += '<div style="display:table-cell;width:180px;padding-right:5px;"><#1207#></div>';
 code += '</div>';
 if(data_array == ""){
-code += '<div style="text-align:center;font-size:16px;color:#FC0;margin-top:90px;"><#2407#></div>';
+code += '<div style="text-align:center;font-size:16px;color:#FC0;margin-top:90px;"><#2410#></div>';
 }
 else{
 for(i=0; i<data_array.length; i++){

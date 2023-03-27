@@ -2266,8 +2266,11 @@ Ce profil VPN est désactivé. Veuillez accéder à la page de configuration du 
 Cliquez sur « Réglage de l'accès » ci-dessous pour accéder à la page de configuration du VPN.
 Ce paramètre ne peut pas être sélectionné lors de l'utilisation d'un autre profil créé.
 Réseau domestique
+Il n&#39;y a pas de profil VPN pour l’instant. Cliquez sur [Réglage de l&#39;accès] ci-dessous pour accéder à la page de configuration du VPN et passer à la création.
 Ajouter un réseau
 Liste des profils
+Choisir un réseau défini
+Planification du Wi-Fi
 Version du matériel
 Help
 Le fichier d'Aide vous fournit des directives et des informations concernant les différentes fonctions du routeur.
@@ -2442,6 +2445,7 @@ Réseau local adresse IPv6
 Réseau local préfixe IPv6
 Paramètres réseau local IPv6
 Native
+OCN Virtual Connect
 v6plus
 Longueur de préfixe IPv6
 Relais Anycast IPv4
@@ -3280,6 +3284,8 @@ Réseau local
 Divers
 Telecommunications Standards
 Arrêt d'interface WAN
+Planifié
+Accès unique
 Horaires
 Time Machine
 Comment utiliser Apple Time Machine ?
@@ -3347,10 +3353,10 @@ Alaska
 Pacific Time (US, Canada)
 Mountain Time (US, Canada)
 Arizona
-Chihuahua, Mazatlan
+Mazatlan
 Saskatchewan
 Guadalajara, Mexico City
-Monterrey
+Monterrey, Chihuahua
 Central Time (US, Canada)
 Eastern Time (US, Canada)
 Indiana (East)

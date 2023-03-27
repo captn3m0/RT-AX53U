@@ -2266,8 +2266,11 @@ Este perfil de VPN está deshabilitado. Vaya a la página de configuración del 
 Haga clic en [ Ir a Configuración ] a continuación para la página de configuración de VPN.
 No se puede seleccionar esta configuración si la está usando otro perfil creado.
 Red doméstica
+No hay ningún perfil de VPN en este momento. Haga clic en [Ir a Configuración] a continuación para ir la página de configuración de VPN y crearlo.
 Añadir una red
 Lista de perfiles
+Elija una red definida
+Programación WiFi
 Versión de hardware
 Ayuda
 La ayuda proporcionada instrucciones e información acerca del uso de las funciones del enrutador. Haga clic en las
@@ -2442,6 +2445,7 @@ LAN Dirección IPv6
 LAN Prefijo IPv6
 Configuración LAN IPv6
 Native
+OCN Virtual Connect
 v6plus
 Longitud de prefijo IPv6
 Retardo anycast IPv4
@@ -3280,6 +3284,8 @@ LAN
 Opciones varias
 Telecommunications Standards
 Terminar interfaz WAN
+Programado
+Acceso único
 Programación de tiempo
 Máquina de tiempo
 ¿Cómo utilizar la máquina de tiempo de Apple?
@@ -3347,10 +3353,10 @@ Alaska
 Hora del Pacífico (EE.UU. y Canadá)
 Hora de las Montañas (EE.UU. y Canadá)
 Arizona
-Chihuahua, Mazatlán
+Mazatlán
 Saskatchewan
 Guadalajara, Ciudad de México
-Monterrey
+Monterrey, Chihuahua
 América Central
 Hora del Este (EE.UU. y Canadá)
 Indiana (Este)

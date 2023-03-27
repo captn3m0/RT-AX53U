@@ -31,7 +31,7 @@ corrected_timezone();
 function init_setting(){
 wItem = new Array(new Array("WWW", "80", "TCP"),new Array("TELNET", "23", "TCP"),new Array("FTP", "20:21", "TCP"));
 free_options(document.form.LWKnownApps);
-add_option(document.form.LWKnownApps, "<#2393#>", "User Defined", 1);
+add_option(document.form.LWKnownApps, "<#2396#>", "User Defined", 1);
 for (i = 0; i < wItem.length; i++){
 add_option(document.form.LWKnownApps, wItem[i][0], wItem[i][0], 0);
 }
@@ -64,7 +64,7 @@ if(j != item_num-2)
 tmp_value += ">";
 }
 }
-if(tmp_value == "<"+"<#2407#>" || tmp_value == "<")
+if(tmp_value == "<"+"<#2410#>" || tmp_value == "<")
 tmp_value = "";
 document.form.filter_lwlist.value = tmp_value;
 updateDateTime();
@@ -148,7 +148,7 @@ document.form.fw_lw_enable_x[0].checked = true;
 var rule_num = document.getElementById('filter_lwlist_table').rows.length;
 var item_num = document.getElementById('filter_lwlist_table').rows[0].cells.length;
 if(rule_num >= upper){
-alert("<#2479#> " + upper + " <#2480#>");
+alert("<#2483#> " + upper + " <#2484#>");
 return false;
 }
 if(document.form.filter_lw_srcip_x_0.value=="" && document.form.filter_lw_srcport_x_0.value=="" &&
@@ -278,7 +278,7 @@ if(portrange_min(document.form.filter_lw_dstport_x_0.value, 11) > portrange_max(
 || (document.form.filter_lw_dstport_x_0.value!="" && document.getElementById('filter_lwlist_table').rows[i].cells[3].innerHTML =="") ){
 return false;
 }else{
-alert("<#2472#>");
+alert("<#2476#>");
 return true;
 }
 }
@@ -325,7 +325,7 @@ var filter_lwlist_row = filter_lwlist_array.split('&#60');
 var code = "";
 code +='<table width="100%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="filter_lwlist_table">';
 if(filter_lwlist_row.length == 1)
-code +='<tr><td style="color:#FFCC00;" colspan="6"><#2407#></td>';
+code +='<tr><td style="color:#FFCC00;" colspan="6"><#2410#></td>';
 else{
 for(var i = 1; i < filter_lwlist_row.length; i++){
 code +='<tr id="row'+i+'">';
@@ -461,16 +461,16 @@ document.form.filter_lw_time2_x_endmin);
 <th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(10,3);"><#2059#></a></th>
 <td>
 <select name="filter_lw_default_x" class="input_option">
-<option value="DROP" <% nvram_match("filter_lw_default_x", "DROP","selected"); %>><#3745#></option>
+<option value="DROP" <% nvram_match("filter_lw_default_x", "DROP","selected"); %>><#3751#></option>
 <option value="ACCEPT" <% nvram_match("filter_lw_default_x", "ACCEPT","selected"); %>><#1438#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th><#2394#></th>
+<th><#2397#></th>
 <td>
 <select name="LWKnownApps" class="input_option" onChange="change_wizard(this, 'LWKnownApps');">
-<option value="User Defined"><#2393#></option>
+<option value="User Defined"><#2396#></option>
 </select>
 </td>
 </tr>
@@ -519,7 +519,7 @@ document.form.filter_lw_time2_x_endmin);
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table">
 <thead>
 <tr>
-<td colspan="6" id="filter_lwlist"><#2069#>&nbsp;(<#2611#>&nbsp;32)</td>
+<td colspan="6" id="filter_lwlist"><#2069#>&nbsp;(<#2615#>&nbsp;32)</td>
 </tr>
 </thead>
 <tr>
@@ -527,8 +527,8 @@ document.form.filter_lw_time2_x_endmin);
 <th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(18,2);"><#2068#></a></th>
 <th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(18,3);"><#2060#></a></th>
 <th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(18,2);"><#2068#></a></th>
-<th><#2400#></th>
-<th><#2610#></th>
+<th><#2403#></th>
+<th><#2614#></th>
 </tr>
 <tr>
 <td width="20%"><input type="text" maxlength="39" class="input_15_table" name="filter_lw_srcip_x_0" autocorrect="off" autocapitalize="off"></td>
