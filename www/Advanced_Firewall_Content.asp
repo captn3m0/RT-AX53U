@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#842#> - <#407#></title>
+<title><#860#> - <#421#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script type="text/javascript" src="/js/jquery.js"></script>
@@ -31,7 +31,7 @@ corrected_timezone();
 function init_setting(){
 wItem = new Array(new Array("WWW", "80", "TCP"),new Array("TELNET", "23", "TCP"),new Array("FTP", "20:21", "TCP"));
 free_options(document.form.LWKnownApps);
-add_option(document.form.LWKnownApps, "<#2396#>", "User Defined", 1);
+add_option(document.form.LWKnownApps, "<#2434#>", "User Defined", 1);
 for (i = 0; i < wItem.length; i++){
 add_option(document.form.LWKnownApps, wItem[i][0], wItem[i][0], 0);
 }
@@ -64,7 +64,7 @@ if(j != item_num-2)
 tmp_value += ">";
 }
 }
-if(tmp_value == "<"+"<#2410#>" || tmp_value == "<")
+if(tmp_value == "<"+"<#2448#>" || tmp_value == "<")
 tmp_value = "";
 document.form.filter_lwlist.value = tmp_value;
 updateDateTime();
@@ -82,18 +82,18 @@ return false;
 if(!validator.portList(document.form.filter_lw_icmp_x, 'filter_lw_icmp_x'))
 return false;
 /*if(document.form.filter_lw_time_x_starthour.value > document.form.filter_lw_time_x_endhour.value){
-alert("<#2081#>");
+alert("<#2103#>");
 document.form.filter_lw_time_x_starthour.focus();
 document.form.filter_lw_time_x_starthour.select;
 return false;
 }else if(document.form.filter_lw_time_x_starthour.value == document.form.filter_lw_time_x_endhour.value){
 if(document.form.filter_lw_time_x_startmin.value > document.form.filter_lw_time_x_endmin.value){
-alert("<#2081#>");
+alert("<#2103#>");
 document.form.filter_lw_time_x_startmin.focus();
 document.form.filter_lw_time_x_startmin.select;
 return false;
 }else if(document.form.filter_lw_time_x_startmin.value == document.form.filter_lw_time_x_endmin.value){
-alert("<#2082#>");
+alert("<#2104#>");
 document.form.filter_lw_time_x_startmin.focus();
 document.form.filter_lw_time_x_startmin.select;
 return false;
@@ -103,7 +103,7 @@ if(!document.form.filter_lw_date_x_Sun.checked && !document.form.filter_lw_date_
 !document.form.filter_lw_date_x_Tue.checked && !document.form.filter_lw_date_x_Wed.checked &&
 !document.form.filter_lw_date_x_Thu.checked && !document.form.filter_lw_date_x_Fri.checked &&
 !document.form.filter_lw_date_x_Sat.checked && !document.form.fw_lw_enable_x[1].checked){
-alert("<#2065#>");
+alert("<#2087#>");
 document.form.filter_lw_date_x_Sun.focus();
 return false;
 }
@@ -148,13 +148,13 @@ document.form.fw_lw_enable_x[0].checked = true;
 var rule_num = document.getElementById('filter_lwlist_table').rows.length;
 var item_num = document.getElementById('filter_lwlist_table').rows[0].cells.length;
 if(rule_num >= upper){
-alert("<#2483#> " + upper + " <#2484#>");
+alert("<#2524#> " + upper + " <#2525#>");
 return false;
 }
 if(document.form.filter_lw_srcip_x_0.value=="" && document.form.filter_lw_srcport_x_0.value=="" &&
 document.form.filter_lw_dstip_x_0.value=="" && document.form.filter_lw_dstport_x_0.value=="")
 {
-alert("<#320#>");
+alert("<#332#>");
 document.form.filter_lw_srcip_x_0.focus();
 document.form.filter_lw_srcip_x_0.select();
 return false;
@@ -174,7 +174,7 @@ srcip_flag_v4=1;
 }
 else if(!validator.validIPForm(document.form.filter_lw_srcip_x_0, 3)){
 if(!validator.isLegal_ipv6(document.form.filter_lw_srcip_x_0, 1)){
-alert(document.form.filter_lw_srcip_x_0.value + ": <#334#>");
+alert(document.form.filter_lw_srcip_x_0.value + ": <#346#>");
 document.form.filter_lw_srcip_x_0.focus();
 document.form.filter_lw_srcip_x_0.select();
 return false;
@@ -197,7 +197,7 @@ dstip_flag_v4=1;
 }
 else if(!validator.validIPForm(document.form.filter_lw_dstip_x_0, 3)){
 if(!validator.isLegal_ipv6(document.form.filter_lw_dstip_x_0, 1)){
-alert(document.form.filter_lw_dstip_x_0.value + ": <#334#>");
+alert(document.form.filter_lw_dstip_x_0.value + ": <#346#>");
 document.form.filter_lw_srcip_x_0.focus();
 document.form.filter_lw_srcip_x_0.select();
 return false;
@@ -278,7 +278,7 @@ if(portrange_min(document.form.filter_lw_dstport_x_0.value, 11) > portrange_max(
 || (document.form.filter_lw_dstport_x_0.value!="" && document.getElementById('filter_lwlist_table').rows[i].cells[3].innerHTML =="") ){
 return false;
 }else{
-alert("<#2476#>");
+alert("<#2517#>");
 return true;
 }
 }
@@ -325,7 +325,7 @@ var filter_lwlist_row = filter_lwlist_array.split('&#60');
 var code = "";
 code +='<table width="100%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="filter_lwlist_table">';
 if(filter_lwlist_row.length == 1)
-code +='<tr><td style="color:#FFCC00;" colspan="6"><#2410#></td>';
+code +='<tr><td style="color:#FFCC00;" colspan="6"><#2448#></td>';
 else{
 for(var i = 1; i < filter_lwlist_row.length; i++){
 code +='<tr id="row'+i+'">';
@@ -437,55 +437,55 @@ document.form.filter_lw_time2_x_endmin);
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#404#> - <#407#></div>
+<div class="formfonttitle"><#418#> - <#421#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#2038#></div>
-<div class="formfontdesc"><#2040#></div>
-<div class="formfontdesc" style="color:#FFCC00;"><#2041#></div>
-<div id="svc_hint_div" style="display:none;"><span onClick="location.href='Advanced_System_Content.asp?af=ntp_server0'" style="color:#FFCC00;text-decoration:underline;cursor:pointer;"><#281#></span></div>
+<div class="formfontdesc"><#2060#></div>
+<div class="formfontdesc"><#2062#></div>
+<div class="formfontdesc" style="color:#FFCC00;"><#2063#></div>
+<div id="svc_hint_div" style="display:none;"><span onClick="location.href='Advanced_System_Content.asp?af=ntp_server0'" style="color:#FFCC00;text-decoration:underline;cursor:pointer;"><#290#></span></div>
 <div id="timezone_hint_div" style="display:none;"><span id="timezone_hint" onclick="location.href='Advanced_System_Content.asp?af=time_zone_select'" style="color:#FFCC00;text-decoration:underline;cursor:pointer;"></span></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="6" id="filter_lwlist"><#407#></td>
+<td colspan="6" id="filter_lwlist"><#421#></td>
 </tr>
 </thead>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(10,5);"><#2062#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(10,5);"><#2084#></a></th>
 <td>
-<input type="radio" value="1" name="fw_lw_enable_x" onClick="return change_common_radio(this, 'FirewallConfig', 'fw_lw_enable_x', '1')" <% nvram_match_x("FirewallConfig","fw_lw_enable_x", "1", "checked"); %>><#187#>
-<input type="radio" value="0" name="fw_lw_enable_x" onClick="return change_common_radio(this, 'FirewallConfig', 'fw_lw_enable_x', '0')" <% nvram_match_x("FirewallConfig","fw_lw_enable_x", "0", "checked"); %>><#186#>
+<input type="radio" value="1" name="fw_lw_enable_x" onClick="return change_common_radio(this, 'FirewallConfig', 'fw_lw_enable_x', '1')" <% nvram_match_x("FirewallConfig","fw_lw_enable_x", "1", "checked"); %>><#194#>
+<input type="radio" value="0" name="fw_lw_enable_x" onClick="return change_common_radio(this, 'FirewallConfig', 'fw_lw_enable_x', '0')" <% nvram_match_x("FirewallConfig","fw_lw_enable_x", "0", "checked"); %>><#193#>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(10,3);"><#2059#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(10,3);"><#2081#></a></th>
 <td>
 <select name="filter_lw_default_x" class="input_option">
-<option value="DROP" <% nvram_match("filter_lw_default_x", "DROP","selected"); %>><#3751#></option>
-<option value="ACCEPT" <% nvram_match("filter_lw_default_x", "ACCEPT","selected"); %>><#1438#></option>
+<option value="DROP" <% nvram_match("filter_lw_default_x", "DROP","selected"); %>><#3849#></option>
+<option value="ACCEPT" <% nvram_match("filter_lw_default_x", "ACCEPT","selected"); %>><#1456#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th><#2397#></th>
+<th><#2435#></th>
 <td>
 <select name="LWKnownApps" class="input_option" onChange="change_wizard(this, 'LWKnownApps');">
-<option value="User Defined"><#2396#></option>
+<option value="User Defined"><#2434#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(10,1);"><#2055#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(10,1);"><#2077#></a></th>
 <td>
-<input type="checkbox" name="filter_lw_date_x_Mon" class="input" onclick="check_Timefield_checkbox()"><#1684#>
-<input type="checkbox" name="filter_lw_date_x_Tue" class="input" onclick="check_Timefield_checkbox()"><#1688#>
-<input type="checkbox" name="filter_lw_date_x_Wed" class="input" onclick="check_Timefield_checkbox()"><#1689#>
-<input type="checkbox" name="filter_lw_date_x_Thu" class="input" onclick="check_Timefield_checkbox()"><#1687#>
-<input type="checkbox" name="filter_lw_date_x_Fri" class="input" onclick="check_Timefield_checkbox()"><#1683#>
+<input type="checkbox" name="filter_lw_date_x_Mon" class="input" onclick="check_Timefield_checkbox()"><#1706#>
+<input type="checkbox" name="filter_lw_date_x_Tue" class="input" onclick="check_Timefield_checkbox()"><#1710#>
+<input type="checkbox" name="filter_lw_date_x_Wed" class="input" onclick="check_Timefield_checkbox()"><#1711#>
+<input type="checkbox" name="filter_lw_date_x_Thu" class="input" onclick="check_Timefield_checkbox()"><#1709#>
+<input type="checkbox" name="filter_lw_date_x_Fri" class="input" onclick="check_Timefield_checkbox()"><#1705#>
 </td>
 </tr>
 <tr id="enable_time_week_tr">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(10,2);"><#2057#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(10,2);"><#2079#></a></th>
 <td>
 <input type="text" maxlength="2" class="input_3_table" name="filter_lw_time_x_starthour" onKeyPress="return validator.isNumber(this,event);" onblur="validator.timeRange(this, 0);" autocorrect="off" autocapitalize="off"> :
 <input type="text" maxlength="2" class="input_3_table" name="filter_lw_time_x_startmin" onKeyPress="return validator.isNumber(this,event);" onblur="validator.timeRange(this, 1);" autocorrect="off" autocapitalize="off"> -
@@ -494,14 +494,14 @@ document.form.filter_lw_time2_x_endmin);
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(10,1);"><#2055#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(10,1);"><#2077#></a></th>
 <td>
-<input type="checkbox" name="filter_lw_date_x_Sat" class="input" onclick="check_Timefield_checkbox()"><#1685#>
-<input type="checkbox" name="filter_lw_date_x_Sun" class="input" onclick="check_Timefield_checkbox()"><#1686#>
+<input type="checkbox" name="filter_lw_date_x_Sat" class="input" onclick="check_Timefield_checkbox()"><#1707#>
+<input type="checkbox" name="filter_lw_date_x_Sun" class="input" onclick="check_Timefield_checkbox()"><#1708#>
 </td>
 </tr>
 <tr id="enable_time_weekend_tr">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(10,2);"><#2057#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(10,2);"><#2079#></a></th>
 <td>
 <input type="text" maxlength="2" class="input_3_table" name="filter_lw_time2_x_starthour" onKeyPress="return validator.isNumber(this,event);" onblur="validator.timeRange(this, 0);" autocorrect="off" autocapitalize="off"> :
 <input type="text" maxlength="2" class="input_3_table" name="filter_lw_time2_x_startmin" onKeyPress="return validator.isNumber(this,event);" onblur="validator.timeRange(this, 1);" autocorrect="off" autocapitalize="off"> -
@@ -510,7 +510,7 @@ document.form.filter_lw_time2_x_endmin);
 </td>
 </tr>
 <tr>
-<th ><a class="hintstyle" href="javascript:void(0);" onClick="openHint(10,4);"><#2064#></a></th>
+<th ><a class="hintstyle" href="javascript:void(0);" onClick="openHint(10,4);"><#2086#></a></th>
 <td>
 <input type="text" maxlength="64" class="input_32_table" name="filter_lw_icmp_x" value="<% nvram_get("filter_lw_icmp_x"); %>" onKeyPress="return validator.isPortlist(this,event)" autocorrect="off" autocapitalize="off">
 </td>
@@ -519,16 +519,16 @@ document.form.filter_lw_time2_x_endmin);
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table">
 <thead>
 <tr>
-<td colspan="6" id="filter_lwlist"><#2069#>&nbsp;(<#2615#>&nbsp;32)</td>
+<td colspan="6" id="filter_lwlist"><#2091#>&nbsp;(<#2656#>&nbsp;32)</td>
 </tr>
 </thead>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(18,3);"><#2067#></a></th>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(18,2);"><#2068#></a></th>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(18,3);"><#2060#></a></th>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(18,2);"><#2068#></a></th>
-<th><#2403#></th>
-<th><#2614#></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(18,3);"><#2089#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(18,2);"><#2090#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(18,3);"><#2082#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(18,2);"><#2090#></a></th>
+<th><#2441#></th>
+<th><#2655#></th>
 </tr>
 <tr>
 <td width="20%"><input type="text" maxlength="39" class="input_15_table" name="filter_lw_srcip_x_0" autocorrect="off" autocapitalize="off"></td>
@@ -555,7 +555,7 @@ document.form.filter_lw_time2_x_endmin);
 </table>
 <div id="filter_lwlist_Block"></div>
 <div class="apply_gen">
-<input name="button" type="button" class="button_gen" onclick="applyRule()" value="<#196#>"/>
+<input name="button" type="button" class="button_gen" onclick="applyRule()" value="<#203#>"/>
 </div>
 </td>
 </tr>

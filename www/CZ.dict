@@ -66,7 +66,7 @@ Informace nejsou k dispozici. Zaktualizujte firmware svého routeru na nejnověj
 Restartováním routeru bude přerušeno připojení k internetu všech připojených zařízení. Po dokončení restartování bude obnoveno připojení k internetu všech zařízení. Pokračovat?
 Výborné
 Slabé
-Ok
+OK
 Normální
 Kvalita připojení
 Přidat uzel AiMesh
@@ -88,6 +88,12 @@ Rychlost přenosu dat
 Topologie
 Nastavení systému
 Statistics
+Detekce prostředí
+Probíhá odhad připojení trasy...
+Optimalizace uzlů
+Optimalizace více antén
+Detekce antény
+Probíhá odhad více antén...
 Powerline connection with good signal quality
 Powerline connection with weak signal quality
 Bezdrátové připojení s výbornou kvalitou signálu
@@ -151,6 +157,7 @@ Chcete-li zakázat sdílení vašich informací se společností Trend Micro př
 Určitě chcete odvolat?
 Odvolat
 Klíč v názvu
+Název hostitele je propojený s přihlašovacím účtem aplikace routeru, zaregistrujte se/odstraňte ho z aplikace routeru.
 Automaticky
 Automatic Setting
 Omezovač šířky pásma
@@ -212,6 +219,8 @@ Přeskočit
 Neznámé
 Aktualizovat v noci
 Upgrade Now
+Použít výchozí místní přihlašovací heslo
+Výchozí šifrované místní přihlašovací heslo poskytuje bezpečné přihlášení, pokud se připojujete k tomuto síťovému zařízení ASUS místně.
 Další podrobnosti najdete na webu <a style="font-weight: bolder;text-decoration: underline;color:#000000;" href="https://www.asus.com/support/" target="_blank">https://www.asus.com/support/</a>
 * Minimální paket ping zabere přibližně 128 bajtů/interval. Z tohoto důvodu spotřebuje detektor ping
 Mbajtů/měsíc
@@ -280,7 +289,10 @@ Verze firmwaru:
 * V tomto časovém pásmu je povolen letní čas.
 Systémový čas
 * Upomínka: Vaše systémové hodiny nebyly synchronizovány se serverem NTP.
+Čas systému routeru zatím ještě nebyl synchronizován se serverem NTP. Synchronizuje automaticky hned po připojení.
 Hostovaná síť
+Jak najít %@
+%@ lze najít na štítku na zadní nebo spodní straně zařízení ASUS.
 Použijte prosím port mezi 1024-65535.
 Because of security and compatibility concerns,  IE8 / IE9 / IE10 are no longer supported.
 Things might be bound to broken and perhaps unusable.
@@ -359,6 +371,8 @@ Bezpečné heslo musí mít délku alespoň 8 znaků a musí obsahovat kombinaci
 Propagovat kromě uživatelského DNS IP adresu routeru
 Typ Připojení WAN
 Použít následující adresu IP:
+Místní přihlášení
+Nastavením jména a hesla zamezíte neoprávněnému přístupu k síťovému zařízení ASUS.
 Alespoň dva znaky. Lze použít pouze alfanumerické znaky, podtržítko a pomlčku. První znak nesmí být pomlčka - nebo podtržítko _.
 Můžete rovněž stáhnout aplikaci [ASUS Lyra] pro připojení dodatečných zařízení Lyra k vašemu prvnímu zařízení Lyra.
 Nyní můžete stisknout &quot;párovací tlačítko&quot; vašeho prvního a druhého zařízení Lyra pro nastavení dalšího zařízení Lyra.
@@ -474,6 +488,8 @@ Slabé
 Dobré
 Silné
 Velmi silné
+Místní přihlašovací heslo
+Heslo WiFi
 Kód PIN není správný. Zadejte správný kód PIN a znovu připojte adaptér USB. Pokud se chyba bude opakovat, vypněte a zapněte funkci kódu PIN a opakujte akci.
 Telefonní číslo
 Access Number
@@ -672,6 +688,7 @@ Zadejte síťový klíč mezi 8 a 63 znaky (písmena, číslice nebo kombinace) 
 Zadejte síťový klíč mezi 8 a 63 znaky (písmena, číslice nebo kombinace). Výchozí nastavení zabezpečení bezdrátové sítě je WPA2-Personal AES.
 Separate 2.4 GHz and 5 GHz
 Separate 2.4 GHz, 5 GHz and 6 GHz
+Hlavní bezdrátová síť byla nastavena.
 Název účtu nemůže být prázdný.
 Pole Uživatelské jméno/Heslo nemohou být prázdná.
 Nastavení účtu ISP
@@ -822,6 +839,7 @@ Zvyšte maximální hodnotu pro odpojení od internetu.
 Nové připojování k internetu.
 Kontaktujte správce sítě.
 Klepnutím zde přejdete na stránku nastavení
+<a>Kliknutím</a> upravíte.
 Kde můžete zkontrolovat a nakonfigurovat svá nastavení sami.
 Pokud problém přetrvává, ručně změňte nastavení připojení.
 Obnovte WAN.
@@ -906,8 +924,8 @@ For faster video streaming experience including Youtube, Netflix and Spotify, et
 Proházení webu
 Tento režim je vhodný pro běžné procházení webu a k eliminaci latence sítě během přenášení souborů.
 Learn-From-Home
-Choose this mode for a smooth streaming of online video-learning experience.This category includes Coursera, Khan, Udemy, TED, edX, etc.
-Choose this mode to ensure a smooth agile online conferencing experience.This category includes VoIP, instant messaging, mail service, etc.
+Choose this mode for a smooth streaming of online video-learning experience. This category includes Coursera, Khan, Udemy, TED, edX, etc.
+Choose this mode to ensure a smooth agile online conferencing experience. This category includes VoIP, instant messaging, mail service, etc.
 Nový účet nemá práva pro čtení/zápis.
 Přidat nový účet
 Nová složka má výchozí přístupová práva pro čtení/zápis.
@@ -1515,6 +1533,7 @@ Jméno hostitele poskytnuté vašim ISP:
 Prosím zadejte název serveru nebo IP adresu VPN serveru.
 Toto pole je určeno pro jméno hostitele RT-AX53U. Obvykle je vyžadováno vaším ISP.
 Nastavit maximální limit šířky pásma pro příjem. 0 znamená žádné omezení šířky pásma.
+Zpět
 Zakázat
 Zakázat
 Povolit
@@ -1527,8 +1546,10 @@ nastavení WAN
 Schopnost
 Captcha
 Prosím zadejte captcha.
+Pokud ji chcete povolit, <a id = \"setting_link\" target=\"_blank\" style=\"text-decoration:underline;\">zde</a> změníte nastavení.
 Zkontrolujte, zda je ethernetový/síťový kabel správně připojen
 Směrovač vyhledává aktualizace firmwaru na serveru ASUS.
+Vyberte jiné možnosti a zkuste to znovu.
 Neshromažďuje o uživatelích žádné údaje a řídí se švýcarským zákonem na ochranu osobních údajů.
 Jméno klienta
 Ikona
@@ -1635,6 +1656,7 @@ Russia
 Singapore
 The United States
 Kanada
+Vytvořit účet
 Vytvořit účet zdarma
 CTF 2. stupně není podporováno standardy PPPoE, PPTP nebo L2TP. Chcete-li přepnout na CTF 1. úrovně, klikněte na tlačítko Potvrdit.
 Povolit HW Accelerator
@@ -1942,7 +1964,7 @@ Problém s nestabilním připojením
 K bezdrátové síti se nelze připojit
 Zvolte popis, který nejlépe vyjadřuje výkon vaší služby DSL
 Kontaktní Metoda
-Vaše země / oblast
+Vaše oblast
 Zrušte záznam ladění
 Diagnostika vyladí probíhající záznam protokolu
 Délka vyladění probíhajícího záznamu protokolu
@@ -2246,22 +2268,30 @@ Vytvořit nový
 Kopírovat jiný
 Host celkem
 hosté
+Zajistěte plánovaný nebo jednorázový přístup k síti.
+Doporučeno pro nákupní centra, posilovny nebo přátele.
 Omezení přístupu
 Pouze přístup k internetu
 Použít stejná nastavení jako
 Firemní síť
 Vlastní síť
+Zaměstnanec
 Nastavte bezpečnou a zabezpečenou síť
+Kancelář pro udělování oprávnění oddělením
 Vytvořte si rychle hostovanou síť
 Síť IoT
 Vytvořte si snadno samostatnou síť pro zařízení IoT
+Doporučeno pro sledovací zařízení, hlasovou asistenci, svítidla, kamery u zvonků, chytré zámky a snímače.
 Dětská síť
 Zajistěte bezpečný přístup k internetu pro děti
 Hostovaný portál
-Vytvořte hostovaný portál nebo síť Wi-Fi pro Facebook
+Vytvořte hostovaný portál
+Vytvořit přihlašovací portál pro digitální marketing.
+Doporučeno pro restaurace, hotel nebo food truck.
 Typ portálu
 Síť VPN
 Vytvořte si bezpečné připojení k internetu
+Vytvořte si zabezpečené připojení k internetu prostřednictvím VPN. Doporučeno pro práci z domu, kanceláře poboček.
 Tento profil VPN je zakázaný. Přejděte na stránku nastavení serveru VPN a aktivujte ho.
 Kliknutím na možnost [ Přejít na nastavení ] níže přejete na stránku nastavení VPN.
 Toto nastavení nelze vybrat, pokud používáte jiný vytvořený profil.
@@ -2269,8 +2299,15 @@ Domácí síť
 Není k dispozici žádný profil VPN. Kliknutím na možnost [Přejít na nastavení] níže přejdete na stránku nastavení pro VPN a vytváření.
 Přidat síť
 Seznam profilů
+Naplánovaná síť
 Vybrat definovanou síť
+Vytvořte si síť podle scénáře
+Síť podle vlastní definice
+Průzkumník scénářů
 Plánování Wi-Fi
+Naplánujte si denní nebo týdenní online čas pro bezdrátovou síť.
+Doporučeno pro dálkové studovny, třídy nebo děti.
+Nastavit úroveň přístupu pro různé uživatele za účelem zvýšení zabezpečení sítě.
 Verze hardwaru
 Help
 Nápověda nabízí příručky a informace o využití funkcí routeru. Klikněte na
@@ -2282,6 +2319,7 @@ Vysoké
 Nejvyšší
 Paket nejvyšší priority
 hodiny
+POSTUP NASTAVENÍ
 Připojení k Internetu se nezdařilo. Zkuste to prosím znovu nebo zkontrolujte nastavení vašeho účtu u vašeho poskytovatele Internetu (ISP).
 Vyberte umístění vašeho ISP.
 Umístění
@@ -2322,7 +2360,7 @@ Chcete-li ručně spárovat směrovač ASUS s asistentem IFTTT, zkopírujte a vl
 Zvolte z existujících apletů nebo si vytvořte vlastní na webu <a id="ifttt_applet_link">Kanál směrovače ASUS</a>
 <a id="ifttt_signin">Přihlaste se</a> ke svému účtu IFTTT.
 Začněte žít automatizovaně se směrovačem ASUS a příkazy IFTTT!
-Začínáme:
+Začínáme :
 v
 Router se nemůže připojit k serveru ASUS a ověřit dostupnost aktualizací. Stáhněte si nejnovější firmware ze stránky podpory produktů ASUS nebo proveďte ruční aktualizaci.
 Pásmo
@@ -2447,6 +2485,9 @@ IPv6 nastavení LAN
 Native
 OCN Virtual Connect
 v6plus
+Pokud byste je chtěli používat, řiďte se rozmezím portů v %0$@ a změňte číslo portu těchto funkcí podle vyhovujícího rozmezí.
+Nastavení související s porty mohou mít problém s nesprávným zadáním v aktuálním rozmezí portů %2$@.
+K problému s nesprávným zadáním portů může dojít ve zvláštním rozmezí portů %3$@. Nebude ovlivněn internet, ale následující nastavení související s portem. Pokud byste je chtěli používat, řiďte se rozmezím portů v <a target='_self' style='text-decoration:underline;' href='Main_IPV6Status_Content.asp'>IPv6 Log</a> a změňte číslo portu těchto funkcí podle vyhovujícího rozmezí.
 IPv6 délka předpony
 Přenos všesměrového vysílání IPv4
 Statická IPv6
@@ -2631,7 +2672,7 @@ Pokud seznam filtru MAC obsahuje položky, klepnutím na Apply (Použít) je ods
 Příručka
 Ručně přiřadit
 Město
-Země/Kraj
+Kraj
 Pro nastavení připojení PTM bude pravděpodobně zapotřebí VLAN ID. Neměňte VLAN ID, pokud vás k tomu váš ISP nevyzve.
 Tato Rychlá konfigurace vás provede rychlou konfigurací nastavení WAN RT-AX53U. Vyberte vaší zemi a název ISP z rozevíracího seznamu, klepněte na Next (Další) a zadejte nezbytné informace. Podle potřeby požádejte vašeho poskytovatele služeb Internetu (ISP) o informace o nastavení vašeho připojení DSL.
 Pro nakonfigurování ATM PVC je zapotřebí identifikátor virtuální cesty (VPI) a identifikátor virtuálního kanálu (VCI). Neměňte čísla VPI a VCI, pokud vám k tomu nedá váš ISP pokyn.
@@ -2641,6 +2682,8 @@ Poznámka:
 Rychlé ruční nastavení
 Refer to the RT-AX53U WAN settings. If you want to add a new setting, follow the onscreen instructions. If you want to modify the previous setting, please go to [Advanced Setting] -> [WAN] -> [Internet Connection] page.
 Výrobce
+Aktualizace MAP
+Opětovné přiřazení pravidla MAP potrvá 1–2 minuty. Během aktualizace se všechna zařízení odpojí od internetu.
 Maximální omezení šířky pásma
 Nastavit maximální limit šířky pásma pro odesílání.
 Max. počet počítačů
@@ -2692,6 +2735,7 @@ Upgrade firmwaru modemu 4G se nezdařil. Vyčkejte chvíli, dokud se router nere
 Pro upgrade modulu jste nahráli nesprávný firmware. Vyberte správný a spusťte upgrade znovu!
 Firmware 4G modemu
 Informace o mobilním širokopásmovém modemu
+Použít telefon jako modem
 Verze softwaru modemu
 Je vyžadován kód PIN.
 Je vyžadován kód PIN2.
@@ -2822,7 +2866,9 @@ Cíl
 Sledovat směrování k hostiteli
 Wake on LAN
 Probudit
+O funkci
 K dispozici je nová funkce
+Popis funkce
 Název nové složky
 Nový firmware modemu
 Další stránka
@@ -2837,6 +2883,7 @@ Chcete-li používat WPS, zapněte WiFi.
 Chcete-li aktivovat WPS, změňte metodu ověření na WPA2 nebo WPA-automaticky.
 Pokud chcete povolit funkci WPS, musíte nejdříve zakázat možnost skrytí identifikátoru SSID.
 Note: New patch will be updated regularly, please keep your firmware stay up to date.
+Upozornění
 Položka oznámení
 Počet klientů
 Přejděte na <a href="https://iplookup.asus.com/nslookup.php" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">https://iplookup.asus.com/nslookup.php</a> a vyhledejte statickou adresu pro použití službou ASUS DDNS.
@@ -2924,6 +2971,7 @@ Mapování portů podporuje rozhraní IPTV WAN pro specifický port LAN. Můžet
 Enable Port Mapping (Povolit mapování portů)
 Port LAN
 Port SSH
+Stav portu
 Rychlost připojení na těchto portech lze zvýšit.
 Pro řešení potíží využijte následující výsledky/tipy.
 Co je třeba ověřit
@@ -2933,6 +2981,9 @@ Starší zařízení může rychlost připojení zpomalit.
 Znovu u svého poskytovatele internetových služeb ověřte tarif internetových služeb.
 Vyměňte kabel sítě Ethernet za #ETHCABLE nebo novější.
 Tento port je pro
+Konfigurace %1$@ jako %2$@ deaktivuje funkci \"%3$@\", chcete pokračovat?
+Tato funkce je neaktivní, protože %1$@ má konfiguraci jako %2$@.
+%1$@ a %2$@ nelze nakonfigurovat jako stejný port.
 Tato stránka ukazuje stav předávání portů. Některé programy P2P používají protokol UPnP pro otevření portu a číslo portu je zobrazeno na této stránce.
 RT-AX53U rozpoznal typ připojení PPPoE. Pokud ano, zadejte uživatelské jméno/heslo a klepněte na Apply (Použít).<br>Pokud ne, klepněte na Manual Setting (Ruční nastavení) a nastavte znovu.
 Zadejte uživatelské jméno/heslo přidělené vaším poskytovatelem internetových služeb (ISP) a klepněte na tlačítko Další.
@@ -2994,6 +3045,7 @@ Registrace produktu
 Poskytovatel
 zapouzdření
 Režim zapouzdření
+Veřejný klíč
 Nabízet
 Opravdu chcete odstranit tento PVC?
 Upravit PVC
@@ -3086,6 +3138,20 @@ Duplicitní nebo stejná nastavení VPI a VCI.
 Systém se právě restartuje! Prosím vyčkejte, budete přesměrováni na domovskou stránku RT-AX53U.
 měřítko
 Vyhledávání
+Kancelář pobočky
+Učebna
+Kavárna
+Dobíjecí stanice EV
+Přátelé
+Hotel
+Nákupní centrum
+Vzdálená studovna
+Chytrá domácnost
+Restaurace
+Děti
+Hlasový asistent
+Sledovací zařízení
+Práce z domu
 vteřiny
 Úroveň zabezpečení
 Vybrat vše
@@ -3128,7 +3194,7 @@ Click on this checkbox if you want to share the config file for debugging. Since
 Nastavení
 Klikněte <a id="redirect_to_setup">zde</a> a upravte. Další podrobnosti najdete v <a id="redirect_to_FAQ">těchto odpovědích na časté dotazy</a>.
 Nastavte svůj uzel
-Place your RT-AX53U router and node(s) in the same room and at least 1 meter apart during the setup process.
+Během nastavení umístěte router a uzly RT-AX53U do stejné místnosti a alespoň 1 metr od sebe.
 Zachovejte zapnuté napájení a pohotovost pro systémová nastavení.
 Název zařízení
 Zvolte správná nastavení jazyka, která jsou vhodná pro vaše kódování souborů.
@@ -3279,6 +3345,10 @@ System adjustment
 Temperature unit
 Fan speed
 Umožňuje změnit heslo pro přihlášení ke směrovači, časové pásmo a nastavení serveru NTP.
+Kromě hlavní sítě můžete vytvářet další vlastní sítě pro různé účely.
+Vlastní síť je oddělená od hlavní síťové domény a poskytuje bezpečnější připojení.
+V každé vlastní síti můžete nastavit různé metody šifrování, plány, oprávnění, AiMesh, omezení šířky pásma atd. pro vytvoření uceleného síťového prostředí.
+Chcete přidat další bezdrátovou síť pro speciální účely?
 Základní nastavení
 LAN
 Různé
@@ -3453,6 +3523,7 @@ Odinstalování
 K dispozici je aktualizace online
 Upgradování
 Šířka pásma pro odesílání
+Konfigurace nahrávání
 Priorita odesílání
 Odeslaná data/s
 Odeslaná data
@@ -3515,6 +3586,10 @@ Nová podsíť
 Bez příznaku
 S příznakem
 Přepsat
+Tento port využívá %@.
+Izolace portů
+Profil VLAN
+Nastavení ovládání přepínače VLAN
 Tato hodnota musí být vyšší než
 Tato hodnota musí být nižší než
 Client will use VPN to access
@@ -3556,7 +3631,7 @@ Vlastní konfigurace
 RT-AX53U automaticky vygeneruje soubor .ovpn klíčem Certifikační autority. Všem uživatelům připojujícím se k serveru OpenVPN nyní můžete poskytnout soubor .ovpn s uživatelským jménem a heslem.
 Chcete-li změnit nastavení serveru OpenVPN, přejděte na Pokročilá Nastavení
 Můžete změnit výchozí nastavení serveru OpenVPN a poskytnout upravený soubor OPVN pro konkrétní typ připojení.
-If your WAN IP address is dynamic, please click <a href="http://ZVDOMAIN_NAMEVZ/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
+If your WAN IP address is dynamic, please click <a href="/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
 Přidělit z DHCP
 Šifrovací šifra
 Konflikt směrování! <p>Zkontrolujte nastavení IP adresy klienta na stránce Pokročilá nastavení nebo v tabulce směrování v Protokolu systému.
@@ -3655,18 +3730,40 @@ Opdatering mislykkedes. Prøv igen.
 Alle dine VPN-klienter genopretter forbindelse efter klik på Anvend. Vil du fortsætte?
 Understøttede IKE-version
 Klik her for at angive DDNS.
+* VPN pro WiFi se již používá.
+Jak nastavit server WireGuard®?
+Jak nastavit VPN typu site to site s WireGuard®?
+Jak nastavit klienta WireGuard® ve VPN Fusion?
+Ověřování sítě VPN
+Klientský certifikát
+Klientský klíč
+Seznam odvolaných certifikátů
+Maximální počet souběžných aktivních připojení VPN je omezen na 2. Před aktivací dalšího připojení VPN deaktivujte jedno stávající připojení.
+Systém dokáže aktivovat pouze jedno připojení Surfshark současně. Před aktivací dalšího připojení Surfshark deaktivujte jedno připojení.
+Výchozí připojení
 Klientu služby VPN (Virtual Private Network) často používají připojení k serveru VPN pro bezpečný přístup k soukromým prostředkům přes veřejnou síť.
 Některá zařízení, jakou jsou set-top boxy, chytré TV a Blu-ray přehrávače nepodporují software VPN.
 Funkce ASUSWRT VPN poskytuje přístup VPN ke všem zařízením, aniž byste museli instalovat software služby VPN na každé z nich.
+Adresa koncového bodu
+Port koncového bodu
+Zabezpečení v online světě je na prvním místě.
+Povolené IP adresy
 Změňte podsíť LAN routeru, podrobné informace najdete v části <a target='_blank'>Nejčastější dotazy</a>.
+Trvalé zachování připojení
 Klient / Partner ze sítě na síť
 Klient IPSec VPN umožňuje RT-AX53U připojit se k IPSec serveru / klientu ze sítě na síť nebo přímé vzájemné připojení zařízení způsobem Peer-to-Peer.
 Jako příklad pro vysvětlení sítě Peer-to-Peer si vezměme dva RT-AX53U. Nejdřív je třeba vytvořit peer profil IPSec na této stránce, poté vytvořit dalšího peera na jiné RT-AX53U s odpovídajícími konfiguracemi.
+Profil
+Použít pro všechna zařízení
+Přiřadit zařízení k tomuto profilu
+Odstranit profil
+Vyberte jiný profil VPN pro zrušení výchozí sítě WAN pro internet.
 Chcete-li spustit připojení VPN, řiďte se kroky níže:
 Přidejte profil
 Vyberte typ připojení VPN
 Zadejte informace k ověření VPN od vašeho poskytovatele služby VPN a poté se připojte-
 Klient VPN
+Partnerský uzel
 Když používáte klienta VPN s připojením PPPoE, váš router se automaticky restartuje, aby deaktivoval akceleraci NAT. Opravdu chcete pokračovat?
 Překážka
 Nakonfigurujte nastavení ethernetové sítě WAN zařízení RT-AX53U.
@@ -3730,18 +3827,19 @@ Enable Ping to Internet
 Volba TCP MSS
 bajtů
 VLAN ID
-Agregace WAN kombinuje dvě síťová připojení pro zvýšení rychlosti vaší sítě WAN na 2 Gb/s. Připojte port WAN vaše směrovače a port LAN 4 k portům LAN vašeho modemu (použijte dva kabely se stejnými specifikacemi). <a id="wanAgg_faq" target="_blank" style="color:#FFCC00;text-decoration:underline;">Agregace WAN – odpovědi na časté dotazy</a>
+Agregace WAN
+Agregace WAN kombinuje dvě síťová připojení pro zvýšení rychlosti vaší sítě WAN na 2 Gb/s. Připojte port #WAN vaše směrovače a port LAN 4 k portům LAN vašeho modemu (použijte dva kabely se stejnými specifikacemi). <a id="wanAgg_faq" target="_blank" style="color:#FFCC00;text-decoration:underline;">Agregace WAN – odpovědi na časté dotazy</a>
 Povolit agregaci WAN
 Ve vašem směrovači je aktivována funkce duální WAN. Aktivací agregace WAN bude deaktivována funkce duální WAN. Opravdu chcete pokračovat?
 Ve vašem směrovači je aktivována funkce agregace WAN. Aktivací funkce duální WAN bude deaktivována funkce agregace WAN. Opravdu chcete pokračovat?
 Funkce agregace WAN používá port LAN 4 vašeho směrovače. Aktivací funkce IPTV bude deaktivována funkce agregace WAN. Opravdu chcete pokračovat?
 Funkce IPTV používá port LAN 4 vašeho směrovače. Aktivací agregace WAN bude deaktivována funkce IPTV. Opravdu chcete pokračovat?
 Ve vašem směrovači jsou aktivovány obě funkce duální WAN a IPTV. Aktivací funkce agregace WAN budou deaktivovány funkce duální WAN a IPTV, aby se zabránilo konfliktům portů. Opravdu chcete pokračovat?
-Zkontrolujte, zda jsou k připojení portu WAN vašeho směrovače a portu LAN vašeho modemu použity dva kabely se stejnou specifikací.
+Zkontrolujte, zda jsou k připojení portu #WAN vašeho směrovače a portu LAN vašeho modemu použity dva kabely se stejnou specifikací.
 Zkontrolujte, zda jsou k připojení portu LAN 4 vašeho směrovače a portu LAN vašeho modemu použity dva kabely se stejnou specifikací.
 Chcete-li aktivovat funkci agregace WAN, přejděte na stránku <a href="Advanced_WAN_Content.asp" style="color:#FFCC00;text-decoration:underline;">WAN - připojení k internetu</a>.
 Pokud se agregaci WAN nepodaří nastavit, zkuste to znovu podle následujících pokynů.
-Ujistěte se, zda jsou porty LAN modemu připojené k síti WAN routeru a LAN 4 pomocí kabelů.
+Ujistěte se, zda jsou porty LAN modemu připojené k síti #WAN routeru a LAN 4 pomocí kabelů.
 Zkontrolujte, zda je ve vašem modemu aktivován standard 802.3ad
 Ověřte, zda používáte dva kabely se stejnou specifikací (buď gigabit a gigabit nebo 10/100 a 10/100 Mb/s)
 Restartujte svůj router
@@ -3756,6 +3854,7 @@ WiFi Proxy
 WiFi radar
 Nastavení umožňují konfigurovat parametry WiFi radaru.
 Seznam blokování roamingu
+Wi-Fi Share
 Průzkum sítě WiFi
 Průzkum sítě WiFi vyhledá všechny sítě WiFi ve vašem prostředí.
 Statistika bezdrátového kanálu
@@ -4116,7 +4215,7 @@ Soubor s obrázkem z úvodní webové stránky nemůže být prázdný.
 Vítá vás
 Přečetl/a jsem si a souhlasím s <span id='terms_service_hyperlink'>Podmínkami služby </span>
 Pokračovat
-Připojení k vícero VPN
+Fúze VPN
 umožňuje připojení k vícero serverům VPN současně a přiřazení zařízení pro připojení k různým tunelům VPN. Některá zařízení jako set-top boxy, chytré TV a Blu-ray přehrávače nepodporují software VPN. Tato funkce poskytuje přístup VPN k takovým zařízením v domácí síti bez nutnosti instalace softwaru VPN, zatímco váš smartphone zůstává připojen k internetu, nikoli k VPN.
 U Gamer připojení VPN působí proti DDoS útokům tak, aby nedošlo k odpojení vaší PC hry nebo streamu od herních serverů. Vybudování připojení VPN může také změnit vaši IP adresu na region, kde se nachází herní server, pro zlepšení vašeho ping na herní servery.
 Pro zahájení prosím postupujte podle kroků níže:
@@ -4243,7 +4342,10 @@ Znovu neupozorňovat
 *Aktuální přihlašovací heslo není správné!
 HTTPS je relativně bezpečnější protokol pro přístup k webu. Důrazně doporučujeme otevírat stránku nastavení routeru ASUS prostřednictvím protokolu HTTPS.
 Pokračujte kliknutím sem.
+Naskenováním QR kódu se připojíte
+Pomocí tohoto telefonu naskenujte tento QR kód a připojte se k bezplatné Wi-Fi
 Více podrobností získáte naskenováním QR kódu.
+Ručně se připojit k síti
 Chcete přesto otevírat stránku nastavení prostřednictvím <span>protokolu HTTP</span>?
 Při používání protokolu HTTPS se může zobrazit výše uvedená zpráva s upozorněním pro ověření identity zařízení podle požadavků prohlížeče.
 Propojení mezi prohlížečem a stránkou nastavení routeru ASUS (ZVDOMAIN_NAMEVZ) zůstává navzdory této zprávě s upozorněním bezpečné.

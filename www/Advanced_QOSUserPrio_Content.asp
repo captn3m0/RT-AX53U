@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#842#> - <#2655#></title>
+<title><#860#> - <#2698#></title>
 <link rel="stylesheet" type="text/css" href="/index_style.css">
 <link rel="stylesheet" type="text/css" href="/form_style.css">
 <script type="text/javascript" src="/js/jquery.js"></script>
@@ -22,10 +22,10 @@ var qos_irates = '<% nvram_get("qos_irates"); %>';
 function initial(){
 show_menu();
 if(bwdpi_support){
-document.getElementById('content_title').innerHTML = "<#2655#> - <#1911#>";
+document.getElementById('content_title').innerHTML = "<#2698#> - <#1933#>";
 }
 else{
-document.getElementById('content_title').innerHTML = "<#378#> - QoS";
+document.getElementById('content_title').innerHTML = "<#392#> - QoS";
 }
 init_changeScale("qos_obw");
 init_changeScale("qos_ibw");
@@ -73,7 +73,7 @@ var upload_bw_max = eval("document.form.upload_bw_max_"+j);
 var upload_bw_min = eval("document.form.upload_bw_min_"+j);
 var download_bw_max = eval("document.form.download_bw_max_"+j);
 if(parseInt(upload_bw_max.value) < parseInt(upload_bw_min.value)){
-alert("<#3008#>");
+alert("<#3060#>");
 upload_bw_max.focus();
 return false;
 }
@@ -112,7 +112,7 @@ return false;
 if(document.form.qos_max_transferred_x_0.value.length > 0
 && document.form.qos_max_transferred_x_0.value < document.form.qos_min_transferred_x_0.value){
 document.form.qos_max_transferred_x_0.focus();
-alert("<#3517#> "+document.form.qos_min_transferred_x_0.value);
+alert("<#3592#> "+document.form.qos_min_transferred_x_0.value);
 return false;
 }
 return true;
@@ -214,10 +214,10 @@ return false;
 <td align="right" >
 <div style="margin-top:5px;">
 <select onchange="switchPage(this.options[this.selectedIndex].value)" class="input_option">
-<!--option><#3261#></option-->
-<option value="1"><#899#></option>
-<option value="2"><#3012#></option>
-<option value="3" selected><#3011#></option>
+<!--option><#3327#></option-->
+<option value="1"><#917#></option>
+<option value="2"><#3064#></option>
+<option value="3" selected><#3063#></option>
 </select>
 </div>
 </td>
@@ -230,15 +230,15 @@ return false;
 </tr>
 <tr>
 <td style="font-style: italic;font-size: 14px;">
-<div class="formfontdesc"><#3502#></div>
-<div class="formfontdesc" id="is_qos_enable_desc" style="color:#FFCC00;"><#3503#></div>
+<div class="formfontdesc"><#3573#></div>
+<div class="formfontdesc" id="is_qos_enable_desc" style="color:#FFCC00;"><#3574#></div>
 </td>
 </tr>
 <tr><td>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><div><#3110#></div></td>
+<td colspan="2"><div><#3176#></div></td>
 </tr>
 </thead>
 <tr>
@@ -249,17 +249,17 @@ return false;
 <table width="100%" border="0" cellpadding="4" cellspacing="0" style="font-size:12px; border-collapse: collapse;border:0;">
 <thead>
 <tr>
-<td colspan="4" ><#3454#></td>
+<td colspan="4" ><#3524#></td>
 </tr>
 <tr style="height: 55px;">
-<th style="width:22%;line-height:15px;color:#FFFFFF;"><#3455#></th>
-<th style="width:25%;line-height:15px;color:#FFFFFF;"><a href="javascript:void(0);" onClick="openHint(20,3);"><div class="table_text"><#2659#></div></a></th>
-<th style="width:26%;line-height:15px;color:#FFFFFF;"><a href="javascript:void(0);" onClick="openHint(20,4);"><div class="table_text"><#2643#></div></a></th>
-<th style="width:27%;line-height:15px;color:#FFFFFF;"><#1679#></th>
+<th style="width:22%;line-height:15px;color:#FFFFFF;"><#3526#></th>
+<th style="width:25%;line-height:15px;color:#FFFFFF;"><a href="javascript:void(0);" onClick="openHint(20,3);"><div class="table_text"><#2702#></div></a></th>
+<th style="width:26%;line-height:15px;color:#FFFFFF;"><a href="javascript:void(0);" onClick="openHint(20,4);"><div class="table_text"><#2686#></div></a></th>
+<th style="width:27%;line-height:15px;color:#FFFFFF;"><#1701#></th>
 </tr>
 </thead>
 <tr>
-<th style="width:22%;line-height:15px;"><#2281#></th>
+<th style="width:22%;line-height:15px;"><#2318#></th>
 <td align="center">
 <select name="upload_bw_min_0" class="input_option" id="upload_bw_min_0" onchange="gen_options();"></select>
 <span style="color:white">%</span>
@@ -273,7 +273,7 @@ return false;
 </td>
 </tr>
 <tr>
-<th style="width:22%;line-height:15px;"><#2280#></th>
+<th style="width:22%;line-height:15px;"><#2317#></th>
 <td align="center">
 <select name="upload_bw_min_1" class="input_option" id="upload_bw_min_1" onchange="gen_options();"></select>
 <span style="color:white">%</span>
@@ -287,7 +287,7 @@ return false;
 </td>
 </tr>
 <tr>
-<th style="width:22%;line-height:15px;"><#2648#></th>
+<th style="width:22%;line-height:15px;"><#2691#></th>
 <td align="center">
 <select name="upload_bw_min_2" class="input_option" id="upload_bw_min_2" onchange="gen_options();"></select>
 <span style="color:white">%</span>
@@ -301,7 +301,7 @@ return false;
 </td>
 </tr>
 <tr>
-<th style="width:22%;line-height:15px;"><#2626#></th>
+<th style="width:22%;line-height:15px;"><#2667#></th>
 <td align="center">
 <select name="upload_bw_min_3" class="input_option" id="upload_bw_min_3" onchange="gen_options();"></select>
 <span style="color:white">%</span>
@@ -315,7 +315,7 @@ return false;
 </td>
 </tr>
 <tr>
-<th style="width:22%;line-height:15px;"><#2627#></th>
+<th style="width:22%;line-height:15px;"><#2668#></th>
 <td align="center">
 <select name="upload_bw_min_4" class="input_option" id="upload_bw_min_4" onchange="gen_options();"></select>
 <span style="color:white">%</span>
@@ -334,16 +334,16 @@ return false;
 <table width="100%" border="0" cellpadding="4" cellspacing="0" style="font-size:12px; border-collapse: collapse;border:0;">
 <thead>
 <tr>
-<td colspan="3"><#1791#></td>
+<td colspan="3"><#1813#></td>
 </tr>
 <tr style="height: 55px;">
-<th style="width:31%;line-height:15px;color:#FFFFFF;"><#1794#></th>
-<th style="width:37%;line-height:15px;color:#FFFFFF;"><a href="javascript:void(0);" onClick="openHint(20,5);"><div class="table_text"><#2643#></div></a></th>
-<th style="width:32%;line-height:15px;color:#FFFFFF;"><#1679#></th>
+<th style="width:31%;line-height:15px;color:#FFFFFF;"><#1816#></th>
+<th style="width:37%;line-height:15px;color:#FFFFFF;"><a href="javascript:void(0);" onClick="openHint(20,5);"><div class="table_text"><#2686#></div></a></th>
+<th style="width:32%;line-height:15px;color:#FFFFFF;"><#1701#></th>
 </tr>
 </thead>
 <tr>
-<th style="width:31%;line-height:15px;"><#2281#></th>
+<th style="width:31%;line-height:15px;"><#2318#></th>
 <td align="center">
 <select name="download_bw_max_0" class="input_option" id="download_bw_max_0" onchange="gen_options();"></select>
 <span style="color:white">%</span>
@@ -353,7 +353,7 @@ return false;
 </td>
 </tr>
 <tr>
-<th style="width:31%;line-height:15px;"><#2280#></th>
+<th style="width:31%;line-height:15px;"><#2317#></th>
 <td align="center">
 <select name="download_bw_max_1" class="input_option" id="download_bw_max_1" onchange="gen_options();"></select>
 <span style="color:white">%</span>
@@ -363,7 +363,7 @@ return false;
 </td>
 </tr>
 <tr>
-<th style="width:31%;line-height:15px;"><#2648#></th>
+<th style="width:31%;line-height:15px;"><#2691#></th>
 <td align="center">
 <select name="download_bw_max_2" class="input_option" id="download_bw_max_2" onchange="gen_options();"></select>
 <span style="color:white">%</span>
@@ -373,7 +373,7 @@ return false;
 </td>
 </tr>
 <tr>
-<th style="width:31%;line-height:15px;"><#2626#></th>
+<th style="width:31%;line-height:15px;"><#2667#></th>
 <td align="center">
 <select name="download_bw_max_3" class="input_option" id="download_bw_max_3" onchange="gen_options();"></select>
 <span style="color:white">%</span>
@@ -383,7 +383,7 @@ return false;
 </td>
 </tr>
 <tr>
-<th style="width:31%;line-height:15px;"><#2627#></th>
+<th style="width:31%;line-height:15px;"><#2668#></th>
 <td align="center">
 <select name="download_bw_max_4" class="input_option" id="download_bw_max_4" onchange="gen_options();"></select>
 <span style="color:white">%</span>
@@ -404,7 +404,7 @@ return false;
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable" style="margin-top:8px;">
 <thead>
 <tr>
-<td><#2282#><!-- &nbsp;&nbsp;&nbsp;&nbsp;( <#2987#> ) -->
+<td><#2319#><!-- &nbsp;&nbsp;&nbsp;&nbsp;( <#3038#> ) -->
 <a id="packet_table_display_id" style="margin-left:490px;display:none;" onclick='bw_crtl_display("packet_table_display_id", "packet_table");'>-</a>
 </td>
 </tr>
@@ -414,7 +414,7 @@ return false;
 <div id="packet_table">
 <table width="100%" border="0" cellpadding="4" cellspacing="0">
 <tr><td colspan="5" style="font-size:12px; border-collapse: collapse;border:0;">
-<span><#2987#></span>
+<span><#3038#></span>
 </td>
 </tr>
 <tr>
@@ -447,7 +447,7 @@ return false;
 </td></tr>
 <tr><td>
 <div class="apply_gen">
-<input name="button" type="button" class="button_gen" onClick="applyRule()" value="<#196#>"/>
+<input name="button" type="button" class="button_gen" onClick="applyRule()" value="<#203#>"/>
 </div>
 </td></tr>
 <tr><td>
@@ -455,11 +455,11 @@ return false;
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#1506#></td>
+<td colspan="2"><#1524#></td>
 </tr>
 </thead>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(20, 2);"><#3454#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(20, 2);"><#3524#></a></th>
 <td>
 <input type="text" maxlength="10" id="qos_obw" name="qos_obw" onKeyPress="return validator.isNumber(this,event);" class="input_15_table" value="<% nvram_get("qos_obw"); %>" onblur="gen_options();" autocorrect="off" autocapitalize="off">
 <select id="qos_obw_scale" class="input_option" style="width:87px;" onChange="changeScale('qos_obw');">
@@ -469,7 +469,7 @@ return false;
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(20, 2);"><#1791#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(20, 2);"><#1813#></a></th>
 <td>
 <input type="text" maxlength="10" id="qos_ibw" name="qos_ibw" onKeyPress="return validator.isNumber(this,event);" class="input_15_table" value="<% nvram_get("qos_ibw"); %>" onblur="gen_options();" autocorrect="off" autocapitalize="off">
 <select id="qos_ibw_scale" class="input_option" style="width:87px;" onChange="changeScale('qos_ibw');">

@@ -7,7 +7,7 @@
 <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
-<link rel="icon" href="images/favicon.png"><title><#842#> - <#2159#></title>
+<link rel="icon" href="images/favicon.png"><title><#860#> - <#2181#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="usp_style.css">
@@ -196,15 +196,15 @@ var gameList = '<% nvram_get("rog_clientlist"); %>'.replace(/&#60/g, "<");
 function genGameList(){
 var list_array = gameList.split('<');
 var code = '';
-code += '<thead><tr><td colspan="4"><#2201#>&nbsp;(<#2615#>&nbsp;64)</td></tr></thead>';
+code += '<thead><tr><td colspan="4"><#2223#>&nbsp;(<#2656#>&nbsp;64)</td></tr></thead>';
 code += '<tr>';
-code += '<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);"><#1532#> (<#2954#>)</a></th>';
-code += '<th><#2614#></th>';
+code += '<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);"><#1553#> (<#3005#>)</a></th>';
+code += '<th><#2655#></th>';
 code += '</tr>';
 code += '<tr>';
 code += '<td width="40%">';
 code += '<input type="text" class="input_20_table" maxlength="17" id="client" style="margin-left:-12px;width:255px;" onKeyPress="return validator.isHWAddr(this,event)" onClick="hideClients_Block();" autocorrect="off" autocapitalize="off" placeholder="ex: <% nvram_get("lan_hwaddr"); %>">';
-code += '<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#3096#>">';
+code += '<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#3162#>">';
 code += '<div id="ClientList_Block_PC" class="clientlist_dropdown" style="margin-left:138px;"></div>';
 code += '</td>';
 code += '<td width="10%">';
@@ -243,16 +243,16 @@ var mac = $('#client').val();
 var list_array = gameList.split('<');
 var maximum = '64';
 if(mac == ''){
-alert("<#320#>");
+alert("<#332#>");
 return false;
 }
 if(list_array.length > maximum){
-alert("<#2483#> " + maximum + " <#2484#>");
+alert("<#2524#> " + maximum + " <#2525#>");
 return false;
 }
 for(i=1; i<list_array.length; i++){
 if(list_array[i] == mac){
-alert("<#2476#>");
+alert("<#2517#>");
 return false;
 }
 }
@@ -429,12 +429,12 @@ document.form.submit();
 <div id="Loading" class="popup_bg"></div>
 <div id="hiddenMask" class="popup_bg" style="z-index:999;">
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center"></table>
-<!--[if lte IE 6.5.]><script>alert("<#1359#>");</script><![endif]-->
+<!--[if lte IE 6.5.]><script>alert("<#1377#>");</script><![endif]-->
 </div>
 <div id="gameList_block" style="display:none">
 <div style="display:flex;justify-content: space-between;align-items: center;">
 <div>
-<input type="button" class="button_gen" value="<#196#>" onclick="applyRule();">
+<input type="button" class="button_gen" value="<#203#>" onclick="applyRule();">
 </div>
 <div style="width:28px;height:28px;background-image:url('images/New_ui/cancel.svg');cursor:pointer" onclick="hideGameListField();"></div>
 </div>
@@ -493,10 +493,10 @@ document.form.submit();
 <tbody>
 <tr>
 <td style="width:200px">
-<div style="padding: 5px 0;font-size:20px;"><#2198#></div>
+<div style="padding: 5px 0;font-size:20px;"><#2220#></div>
 </td>
 <td colspan="2">
-<div style="padding: 5px 10px;font-size:20px;color:#FFCC66"><#2199#></div>
+<div style="padding: 5px 10px;font-size:20px;color:#FFCC66"><#2221#></div>
 </td>
 </tr>
 <tr>
@@ -509,8 +509,8 @@ document.form.submit();
 <div style="width:85px;height: 85px;background-image: url('images/New_ui/GameBoost_gamePriority.svg');background-size: 100%;"></div>
 </td>
 <td style="width:400px;height:120px;">
-<div style="font-size:16px;color:#949393;padding-left:10px;"><#2200#></div>
-<div onclick="showGameListField();" class="btn" style="margin: 12px 0;width:100px;height:40px;line-height: 40px;text-align: center;border-radius: 5px;font-size:18px;"><#1643#></div>
+<div style="font-size:16px;color:#949393;padding-left:10px;"><#2222#></div>
+<div onclick="showGameListField();" class="btn" style="margin: 12px 0;width:100px;height:40px;line-height: 40px;text-align: center;border-radius: 5px;font-size:18px;"><#1665#></div>
 </td>
 <td>
 <div class="switch" style="margin:auto;width:100px;height:40px;text-align:center;line-height:40px;font-size:18px">
@@ -529,10 +529,10 @@ document.form.submit();
 <tr style="height:50px;"></tr>
 <tr>
 <td style="width:200px">
-<div style="padding: 5px 0;font-size:20px;"><#2218#></div>
+<div style="padding: 5px 0;font-size:20px;"><#2240#></div>
 </td>
 <td colspan="2">
-<div style="padding: 5px 10px;font-size:20px;color:#FFCC66"><#2219#></div>
+<div style="padding: 5px 10px;font-size:20px;color:#FFCC66"><#2241#></div>
 </td>
 </tr>
 <tr>
@@ -545,7 +545,7 @@ document.form.submit();
 <div style="width:85px;height: 85px;background-image: url('images/New_ui/GameBoost_mobileGame.svg');background-size: 100%;"></div>
 </td>
 <td style="width:400px;height:120px;">
-<div style="font-size:16px;color:#949393;padding-left:10px;"><#2220#></div>
+<div style="font-size:16px;color:#949393;padding-left:10px;"><#2242#></div>
 </td>
 <td>
 <div style="display:flex;align-items: center;">
@@ -574,7 +574,7 @@ document.form.submit();
 <div style="padding: 5px 0;font-size:20px;">Open NAT</div>
 </td>
 <td colspan="2">
-<div style="padding: 5px 10px;font-size:20px;color:#FFCC66"><#2221#></div>
+<div style="padding: 5px 10px;font-size:20px;color:#FFCC66"><#2243#></div>
 </td>
 </tr>
 <tr>
@@ -587,16 +587,16 @@ document.form.submit();
 <div style="width:85px;height: 85px;background-image: url('images/New_ui/GameBoost_openNAT.svg');background-size: 100%;"></div>
 </td>
 <td style="width:400px;height:120px;">
-<div style="font-size:16px;color:#949393;padding-left:10px;"><#2222#></div>
+<div style="font-size:16px;color:#949393;padding-left:10px;"><#2244#></div>
 </td>
 <td>
-<div class="btn" style="margin:auto;width:100px;height:40px;text-align:center;line-height:40px;font-size:18px;cursor:pointer;border-radius:5px;" onclick="location.href='GameProfile.asp';"><#1521#></div>
+<div class="btn" style="margin:auto;width:100px;height:40px;text-align:center;line-height:40px;font-size:18px;cursor:pointer;border-radius:5px;" onclick="location.href='GameProfile.asp';"><#1540#></div>
 </td>
 </tr>
 <tr style="height:50px;"></tr>
 <tr id='wtfast_1' style="display:none">
 <td style="width:200px">
-<div style="padding: 5px 0;font-size:20px;"><#2174#></div>
+<div style="padding: 5px 0;font-size:20px;"><#2196#></div>
 </td>
 <td colspan="2">
 <div style="padding: 5px 10px;font-size:20px;color:#FFCC66">WTFast GPN</div>
@@ -612,15 +612,15 @@ document.form.submit();
 <img style="padding-right:10px;;" src="/images/New_ui/GameBoost_WTFast.png" >
 </td>
 <td style="width:400px;height:120px;">
-<div style="font-size:16px;color:#949393;padding-left:10px;"><#2171#></div>
+<div style="font-size:16px;color:#949393;padding-left:10px;"><#2193#></div>
 </td>
 <td>
-<div class="btn" style="margin:auto;width:100px;height:40px;text-align:center;line-height:40px;font-size:18px;cursor:pointer;border-radius:5px;" onclick="location.href='Advanced_WTFast_Content.asp';"><#1521#></div>
+<div class="btn" style="margin:auto;width:100px;height:40px;text-align:center;line-height:40px;font-size:18px;cursor:pointer;border-radius:5px;" onclick="location.href='Advanced_WTFast_Content.asp';"><#1540#></div>
 </td>
 </tr>
 <tr id="qmacc_1" style="margin-top: 50px; display: none;">
 <td style="width:200px">
-<div style="padding: 5px 0;font-size:20px;"><#2174#></div>
+<div style="padding: 5px 0;font-size:20px;"><#2196#></div>
 </td>
 <td colspan="2">
 <div style="padding: 5px 10px;font-size:20px;color:#FFCC66">腾讯网游加速器</div>
@@ -639,7 +639,7 @@ document.form.submit();
 <div style="font-size:16px;color:#949393;padding-left:10px; padding-top: 5px; padding-bottom: 10px;">腾讯网游加速器——腾讯官方出品的海外网络加速工具。一机畅玩全平台游戏（PC、手游和主机），独享金融级专线，节点全球覆盖，有效解决游戏中出现的延迟、卡顿、丢包等问题，全方位满足用户在各种网络情况下的游戏体验。让你随时开黑，游戏快人一步。</div>
 </td>
 <td>
-<div class="btn" style="margin:auto;width:100px;height:40px;text-align:center;line-height:40px;font-size:18px;cursor:pointer;border-radius:5px;" onclick="location.href='GameBoost_Tencent.asp';"><#1521#></div>
+<div class="btn" style="margin:auto;width:100px;height:40px;text-align:center;line-height:40px;font-size:18px;cursor:pointer;border-radius:5px;" onclick="location.href='GameBoost_Tencent.asp';"><#1540#></div>
 </td>
 </tr>
 </tbody>

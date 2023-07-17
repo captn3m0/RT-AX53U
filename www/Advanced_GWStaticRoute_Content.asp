@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#842#> - <#392#></title>
+<title><#860#> - <#406#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="device-map/device-map.css">
@@ -38,7 +38,7 @@ if(j != item_num-2)
 tmp_value += ">";
 }
 }
-if(tmp_value == "<"+"<#2410#>" || tmp_value == "<")
+if(tmp_value == "<"+"<#2448#>" || tmp_value == "<")
 tmp_value = "";
 document.form.sr_rulelist.value = tmp_value;
 if(based_modelid == "MAP-AC1300" || based_modelid == "MAP-AC2200" || based_modelid == "VZW-AC1300" || based_modelid == "MAP-AC1750")
@@ -61,7 +61,7 @@ return false;
 function GWStatic_validate_duplicate(o, v, l, off){
 for(var i = 0; i < o.length; i++){
 if(entry_cmp(o[i][off].toLowerCase(), v.toLowerCase(), l) == 0){
-alert("<#2476#>");
+alert("<#2517#>");
 return true;
 }
 }
@@ -81,21 +81,21 @@ document.form.sr_enable_x[0].checked = true;
 var rule_num = document.getElementById('sr_rulelist_table').rows.length;
 var item_num = document.getElementById('sr_rulelist_table').rows[0].cells.length;
 if(rule_num >= upper){
-alert("<#2483#> " + upper + " <#2484#>");
+alert("<#2524#> " + upper + " <#2525#>");
 return false;
 }
 if(document.form.sr_ipaddr_x_0.value==""){
-alert("<#320#>");
+alert("<#332#>");
 document.form.sr_ipaddr_x_0.focus();
 document.form.sr_ipaddr_x_0.select();
 return false;
 }else if(document.form.sr_netmask_x_0.value==""){
-alert("<#320#>");
+alert("<#332#>");
 document.form.sr_netmask_x_0.focus();
 document.form.sr_netmask_x_0.select();
 return false;
 }else if(document.form.sr_gateway_x_0.value==""){
-alert("<#320#>");
+alert("<#332#>");
 document.form.sr_gateway_x_0.focus();
 document.form.sr_gateway_x_0.select();
 return false;
@@ -120,7 +120,7 @@ break;
 }
 }
 if(wrong_netmask == 1){
-alert(netmask_obj.value+" <#334#>");
+alert(netmask_obj.value+" <#346#>");
 netmask_obj.value = default_netmask;
 netmask_obj.focus();
 netmask_obj.select();
@@ -130,7 +130,7 @@ if(item_num >=2){
 for(i=0; i<rule_num; i++){
 if(document.form.sr_ipaddr_x_0.value == document.getElementById('sr_rulelist_table').rows[i].cells[0].innerHTML
 && document.form.sr_gateway_x_0.value == document.getElementById('sr_rulelist_table').rows[i].cells[2].innerHTML){
-alert("<#2476#>");
+alert("<#2517#>");
 document.form.sr_ipaddr_x_0.value="";
 document.form.sr_ipaddr_x_0.focus();
 document.form.sr_ipaddr_x_0.select();
@@ -180,7 +180,7 @@ var sr_rulelist_row = sr_rulelist_array.split('&#60');
 var code = "";
 code +='<table width="100%" border="1" cellspacing="0" cellpadding="4" align="center" class="list_table" id="sr_rulelist_table">';
 if(sr_rulelist_row.length == 1)
-code +='<tr><td style="color:#FFCC00;" colspan="6"><#2410#></td></tr>';
+code +='<tr><td style="color:#FFCC00;" colspan="6"><#2448#></td></tr>';
 else{
 for(var i = 1; i < sr_rulelist_row.length; i++){
 code +='<tr id="row'+i+'">';
@@ -256,43 +256,43 @@ document.getElementById("pull_arrow").style.display ="";
 <tr>
 <td bgcolor="#4D595D" valign="top" >
 <div>&nbsp;</div>
-<div class="formfonttitle"><#389#> - <#392#></div>
+<div class="formfonttitle"><#403#> - <#406#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#3058#></div>
+<div class="formfontdesc"><#3110#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#3281#></td>
+<td colspan="2"><#3351#></td>
 </tr>
 </thead>
 <tr>
-<th><#3057#></th>
+<th><#3109#></th>
 <td>
-<input type="radio" value="1" name="sr_enable_x" class="input" onclick="return change_common_radio(this, 'RouterConfig', 'sr_enable_x', '1')" <% nvram_match("sr_enable_x", "1", "checked"); %>><#187#>
-<input type="radio" value="0" name="sr_enable_x" class="input" onclick="return change_common_radio(this, 'RouterConfig', 'sr_enable_x', '0')" <% nvram_match("sr_enable_x", "0", "checked"); %>><#186#>
+<input type="radio" value="1" name="sr_enable_x" class="input" onclick="return change_common_radio(this, 'RouterConfig', 'sr_enable_x', '1')" <% nvram_match("sr_enable_x", "1", "checked"); %>><#194#>
+<input type="radio" value="0" name="sr_enable_x" class="input" onclick="return change_common_radio(this, 'RouterConfig', 'sr_enable_x', '0')" <% nvram_match("sr_enable_x", "0", "checked"); %>><#193#>
 </td>
 </tr>
 </table>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table">
 <thead>
 <tr>
-<td colspan="6" id="GWStatic"><#3056#>&nbsp;(<#2615#>&nbsp;32)</td>
+<td colspan="6" id="GWStatic"><#3108#>&nbsp;(<#2656#>&nbsp;32)</td>
 </tr>
 </thead>
 <tr>
-<th><a href="javascript:void(0);" onClick="openHint(6,1);"><div class="table_text"><#3060#></div></a></th>
-<th><a href="javascript:void(0);" onClick="openHint(6,2);"><div class="table_text"><#3061#></div></a></th>
-<th><a href="javascript:void(0);" onClick="openHint(6,3);"><div class="table_text"><#3059#></div></a></th>
-<th><a href="javascript:void(0);" onClick="openHint(6,4);"><div class="table_text"><#3062#></div></a></th>
-<th><a href="javascript:void(0);" onClick="openHint(6,5);"><div class="table_text"><#3676#></div></a></th>
-<th><#2614#></th>
+<th><a href="javascript:void(0);" onClick="openHint(6,1);"><div class="table_text"><#3112#></div></a></th>
+<th><a href="javascript:void(0);" onClick="openHint(6,2);"><div class="table_text"><#3113#></div></a></th>
+<th><a href="javascript:void(0);" onClick="openHint(6,3);"><div class="table_text"><#3111#></div></a></th>
+<th><a href="javascript:void(0);" onClick="openHint(6,4);"><div class="table_text"><#3114#></div></a></th>
+<th><a href="javascript:void(0);" onClick="openHint(6,5);"><div class="table_text"><#3773#></div></a></th>
+<th><#2655#></th>
 </tr>
 <tr>
 <td width="20%">
 <input type="text" class="input_15_table" maxlength="15" name="sr_ipaddr_x_0" onKeyPress="return validator.isIPAddr(this, event)" autocorrect="off" autocapitalize="off">
 <td width="20%"><input type="text" maxlength="15" class="input_15_table" name="sr_netmask_x_0" onKeyPress="return validator.isIPAddr(this, event)" autocorrect="off" autocapitalize="off"></td>
 <td width="28%"><input type="text" class="input_15_table" maxlength="15" name="sr_gateway_x_0" style="margin-left:-22px;width:160px;" onKeyPress="return validator.isIPAddr(this, event)" onClick="hideClients_Block();" autocorrect="off" autocapitalize="off">
-<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;" onclick="pullLANIPList(this);" title="<#3095#>">
+<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;" onclick="pullLANIPList(this);" title="<#3161#>">
 <div id="ClientList_Block_PC" class="clientlist_dropdown" style="margin-left:7px;"></div>
 </td>
 <td width="8%"><input type="text" maxlength="3" class="input_3_table" name="sr_matric_x_0" onKeyPress="return validator.isNumber(this, event);" autocorrect="off" autocapitalize="off"></td>
@@ -312,7 +312,7 @@ document.getElementById("pull_arrow").style.display ="";
 </table>
 <div id="sr_rulelist_Block"></div>
 <div class="apply_gen">
-<input name="button" type="button" class="button_gen" onclick="applyRule();" value="<#196#>"/>
+<input name="button" type="button" class="button_gen" onclick="applyRule();" value="<#203#>"/>
 </div>
 </td>
 </tr>

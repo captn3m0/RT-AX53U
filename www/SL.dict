@@ -88,6 +88,12 @@ Hitrost podatkov
 Topologija
 Nastavitve sistema
 Statistični podatki
+Zaznavanje okolja
+Ocenjevanje povezave poti ...
+Optimiziranje vozlišč
+Optimizacija raznovrstnosti anten
+Odkrivanje antene
+Ocena raznovrstnosti anten ...
 Powerline connection with good signal quality
 Powerline connection with weak signal quality
 Brezžična povezava z odlično kakovostjo signala
@@ -151,6 +157,7 @@ Prosimo, upoštevajte, da bo podjetje Trend Micro zbiralo vaše podatke prek zgo
 Ali ste prepričani, da želite odstopiti?
 Odstop
 Vnesite ime
+Ime gostitelja je povezano s prijavnim računom aplikacije Router. Registrirajte ga/izbrišite iz aplikacije Router.
 Samodejno
 Samodejna nastavitev
 Omejevalnik pasovne širine
@@ -212,6 +219,8 @@ Preskoči
 Neznana naprava
 Nadgradnja ponoči
 Upgrade Now
+Uporabi privzeto geslo lokalne prijave
+Privzeto šifrirano geslo lokalne prijave omogoča varen postopek prijave, če se s to omrežno napravo ASUS povezujete lokalno.
 Dodatne podrobnosti najdete na spletnem mestu <a style="font-weight: bolder;text-decoration: underline;color:#000000;" href="https://www.asus.com/support/" target="_blank">https://www.asus.com/support/</a>
 *Najmanjši paket za preverjanje dosegljivosti porabi približno 128 bajtov na interval. Detektor za preverjanje dosegljivosti bo zato porabil
 MB na mesec
@@ -280,7 +289,10 @@ Različica vdelane programske opreme:
 * Za ta časovni pas je omogočen prehod na poletni čas.
 Sistemski čas
 * Opomnik: sistemski čas je treba sinhronizirati s strežnikom NTP.
+Sistemski čas usmerjevalnika še ni sinhroniziran s strežnikom NTP. Po vzpostavitvi internetne povezave se bo sinhroniziral samodejno.
 Omrežje za goste
+Kako najti %@
+%@ lahko najdete na nalepki na zadnji/spodnji strani naprave ASUS.
 Uporabite vrata med 1024–65535.
 Brskalniki Internet Explorer 8, Internet Explorer 9 in Internet Explorer 10 niso več podprti zaradi težav, povezanih z varnostjo in združljivostjo.
 Stvari so morda vezane na poškodovane in morda neuporabne nastavitve.
@@ -359,6 +371,8 @@ Varno geslo mora vsebovati najmanj 8 znakov, ki so sestavljeni iz kombinacije ve
 Poleg uporabniško podanega DNS oglašuj tudi IP usmerjevalnika
 Vrsta povezave s prostranim omrežjem
 Uporabi naslednji IP naslov:
+Lokalna prijava
+Nastavite uporabniško ime in geslo lokalne prijave, da preprečite nepooblaščen dostop do omrežne naprave ASUS.
 Vsaj dva znaka. Dovoljeni so samo alfanumerični znaki, podčrtaj in pomišljaj. Prvi znak ne sme biti pomišljaj (-) ali podčrtaj (_).
 Prenesete lahko tudi [ASUS Lyra] za povezavo dodatnih naprav Lyra z vašo prvo napravo Lyra.
 Zdaj lahko pritisnete &quot;Pair button&quot; (gumb za seznanjanje) prve in druge naprave Lyra, da nastavite naslednjo napravo Lyra.
@@ -474,6 +488,8 @@ Zelo šibko
 Dobro
 Močno
 Zelo močno
+Geslo lokalne prijave
+Geslo za WiFi
 Koda PIN ni pravilna. Vnesite pravilno kodo PIN in znova priključite vmesnik USB. Če še vedno pride do iste napake, izklopite in znova vklopite kodo PIN ter poskusite znova.
 Telefonska številka
 Številka za dostop
@@ -672,6 +688,7 @@ Vnesite omrežni ključ, ki vsebuje od 8 do 63 znakov (črke, številke ali komb
 Vnesite omrežni ključ, ki vsebuje od 8 do 63 znakov (črke, številke ali kombinacijo črk in številk). Varnost brezžične povezave je privzeto nastavljena na WPA2-Personal AES.
 Separate 2.4 GHz and 5 GHz
 Separate 2.4 GHz, 5 GHz and 6 GHz
+Glavno brezžično omrežje je nastavljeno.
 Polje z imenom računa ne sme biti prazno.
 Polji z uporabniškim imenom in geslom ne smeta biti prazni.
 Nastavitev računa pri ponudniku internetnih storitev
@@ -822,6 +839,7 @@ Povišajte najvišjo dovoljeno omejitev za prekinitev internetne povezave.
 Ponovno vzpostavite internetno povezavo.
 Obrnite se na skrbnika omrežja.
 Kliknite tukaj, da odprete stran z nastavitvami
+Za spremembo <a>kliknite tukaj</a>.
 Nastavitve si lahko ogledate in jih konfigurirate sami.
 Če težave ne morete odpraviti, ročno spremenite nastavitve povezave.
 Vklopite omrežje WAN.
@@ -906,8 +924,8 @@ For faster video streaming experience including Youtube, Netflix and Spotify, et
 Brskanje po spletu
 Ta način je primeren za splošno brskanje po spletu in preprečevanje omrežne zakasnitve pri prenosu datotek.
 Learn-From-Home
-Choose this mode for a smooth streaming of online video-learning experience.This category includes Coursera, Khan, Udemy, TED, edX, etc.
-Choose this mode to ensure a smooth agile online conferencing experience.This category includes VoIP, instant messaging, mail service, etc.
+Choose this mode for a smooth streaming of online video-learning experience. This category includes Coursera, Khan, Udemy, TED, edX, etc.
+Choose this mode to ensure a smooth agile online conferencing experience. This category includes VoIP, instant messaging, mail service, etc.
 Nov račun nima pravic za branje/pisanje.
 Dodaj nov račun
 Privzete pravice za dostop za novo mapo so branje/pisanje.
@@ -1515,6 +1533,7 @@ Ime gostitelja, ki ga zagotoviti ponudnik internetnih storitev:
 Če je vaša vrsta povezave WAN PPTP ali L2TP, vnesite ime ali naslov IP strežnika VPN.
 V to polje vnesete ime gostitelja usmerjevalnika RT-AX53U. To ime običajno zahteva ponudnik internetnih storitev.
 Nastavite omejitev največje pasovne širine za prenos. 0 pomeni, da pasovna širina ni omejena.
+Nazaj
 Onemogoči
 Onemogočeno
 Omogočeno
@@ -1527,8 +1546,10 @@ Nastavitev omrežja WAN
 Zmogljivost
 Captcha
 Vnesite znake, prikazane na sliki Captcha.
+Če jo želite omogočiti, lahko <a id = \"setting_link\" target=\"_blank\" style=\"text-decoration:underline;\">tukaj</a> spremenite nastavitve.
 Previte, ali je ethernetni/omrežni kabel pravilno priključen.
 Usmerjevalnik v strežniku ASUS preverja, ali je na voljo posodobitev vdelane programske opreme.
+Izberite druge možnosti in poskusite znova.
 Ne zbira podatkov o uporabnikih in jo ureja švicarska zakonodaja o zasebnosti.
 Ime odjemalca
 Ikono
@@ -1635,6 +1656,7 @@ Russia
 Singapore
 The United States
 Kanada
+Ustvari račun
 Ustvarite brezplačni račun
 CTF na ravni 2 ni podprt za povezavo PPPoE, PPTP ali L2TP. Če želite preklopiti na CTF na ravni 1, kliknite »Potrdi«.
 Omogoči pospeševanje strojne opreme
@@ -1942,7 +1964,7 @@ Težava zaradi nestabilne povezave
 Z brezžičnim omrežjem se ni mogoče povezati
 Izberite možnost, ki najbolje opisuje učinkovitost delovanja storitve DSL
 Kontaktna metoda
-Vaša država / regija
+Vaša regija
 Prekliči zajem iskanja napak
 V teku je beleženje diagnostičnega dnevnika iskanja napak
 Trajanje beleženja diagnostičnega dnevnika iskanja napak
@@ -2246,22 +2268,30 @@ Ustvari novo
 Kopiraj drugo
 Skupaj gosti
 gosti
+Zagotovite omrežje z načrtovanim ali enkratnim dostopom.
+Priporoča se za nakupovalna središča, fitnes centre ali prijatelje.
 Omejitev dostopa
 Le dostop do interneta
 Uporabi isto nastavitev kot
 Poslovno omrežje
 Prilagojeno omrežje
+Uslužbenec
 Nastavite varno in zaščiteno omrežje
+Pisarna, ki dodeljuje dovoljenja oddelkom
 Hitro izdelajte gostujoče omrežje
 Omrežje IoT
 Enostavno ločite omrežje za svoje naprave IoT
+Priporoča se za nadzorne naprave, glasovnega pomočnika, osvetljavo, vratno kamero, pametno ključavnico in tipala.
 Omrežje za otroke
 Poskrbite, da bodo otroci varno dostopali do interneta
 Gostujoč portal
-Izdelajte gostujoč portal ali Wi-Fi s prijavo prek Facebooka
+Izdelajte gostujoč portal
+Ustvarite zaprt portal za digitalni marketing.
+Priporoča se za restavracije, hotele ali potujoče kuhinje.
 Vrsta portala
 Omrežje VPN
 Vzpostavite varno internetno povezavo
+Vzpostavite varno internetno povezavo prek omrežja VPN. Priporoča se za delo od doma in podružnične pisarne.
 Ta profil VPN je onemogočen. Odprite stran za nastavitev strežnika VPN in ga omogočite.
 Stran za nastavitev strežnika VPN odprete tako, da spodaj kliknete »Pojdi na nastavitev«.
 Te nastavitve ne morete izbrati, če uporabljate profil, ki ga je ustvaril drug uporabnik.
@@ -2269,8 +2299,15 @@ Domače omrežje
 Trenutno ni nobenega profila VPN. Spodaj kliknite [Pojdi na nastavitev], da odprete stran z nastavitvijo omrežja VPN in ustvarite omrežje.
 Dodaj omrežje
 Seznam profilov
+Načrtovano omrežje
 Izberite definirano omrežje
+Ustvarite omrežje, ki temelji na vašem scenariju
+Samodejno definirano omrežje
+Raziskovalec scenarijev
 Razporejanje za WiFi
+Načrtujte dnevni ali tedenski čas v spletu za brezžično omrežje.
+Priporoča se za oddaljeno učenje, učilnice ali otroke.
+Nastavite raven dostopa za različne načine uporabe, da izboljšate varnost omrežja.
 Različica strojne opreme
 Pomoč
 V pomoči najdete nasvete in informacije o uporabi funkcij usmerjevalnika. Kliknite
@@ -2282,6 +2319,7 @@ Visoka
 Najvišja
 Paket z najvišjo prioriteto
 h
+KAKO NASTAVITI
 Povezave z internetom ni mogoče vzpostaviti. Znova vnesite informacije ali znova preverite podatke računa pri svojem ponudniku internetnih storitev.
 Izberite lokacijo ponudnika internetnih storitev.
 Lokacija
@@ -2322,7 +2360,7 @@ ASUS Router in IFTTT lahko ročnoseznanite tako, da kopirate in prilepite spodnj
 Izbirajte izmed obstoječih apletov ali ustvarite svojeaplete na <a id="ifttt_applet_link">ASUS Router Channel</a>.
 Prijavite se <a id="ifttt_signin">Prijava</a> v račun IFTTT.
 Zaženi samodejne ukaze z aplikacijo ASUS Router in IFTTT!
-Začni:
+Začni :
 v
 Usmerjevalnik se ne more povezati s strežnikom ASUS, da bi preveril, ali je na voljo posodobitev vdelane programske opreme. Najnovejšo vdelano programsko opremo prenesite s spletnega mesta ASUS za podporo izdelku in izvedite ročno posodobitev.
 Pas
@@ -2447,6 +2485,9 @@ Nastavitev omrežja LAN IPv6
 Native
 OCN Virtual Connect
 v6plus
+Če jih želite uporabiti, glejte uporaben obseg vrat v %0$@ in spremenite številko vrat za te funkcije v ujemajoč se obseg.
+V nastavitvah, povezanih z vrati, se lahko v trenutnem obsegu vrat %2$@ pojavi težava zaradi neujemanja.
+Težava zaradi neujemanja vrat se lahko pojavi v posebnem obsegu vrat %3$@. To ne vpliva na internet, pač pa na naslednje nastavitve, povezane z vrati. Če jih želite uporabiti, glejte uporaben obseg vrat v <a target='_self' style='text-decoration:underline;' href='Main_IPV6Status_Content.asp'>IPv6 Log</a> in spremenite številko vrat za te funkcije v ujemajoč se obseg.
 Dolžina predpone IPv6
 Posredovanje Anycast za IPv4
 Statični IPv6
@@ -2631,7 +2672,7 @@ Uporabi protokol LPR za skupno rabo tiskanja
 Ročno
 Ročno dodeli
 Mesto
-Država/regija
+Regija
 Za nastavitev povezave PTM boste morda potrebovali ID za VLAN. ID za VLAN spremenite le, če vam tako naroči ponudnik internetnih storitev.
 Ta vodnik za hitro nastavitev vas vodi skozi hitro konfiguracijo nastavitev omrežja WAN usmerjevalnika RT-AX53U. Na spustnem seznamu izberite državo in ime ponudnika internetnih storitev, kliknite »Naprej« in vnesite potrebne informacije. Za informacije o nastavitvah povezave DSL se po potrebi obrnite na ponudnika internetnih storitev (ISP).
 Za nastavitev načina ATM PVC potrebuje VPI (identifikator navidezne poti) in VCI (identifikator navideznega kanala). Številke VPI in VCI spremenite le, če vam tako naroči ponudnik internetnih storitev.
@@ -2641,6 +2682,8 @@ Obvestilo:
 Hitra ročna nastavitev
 Oglejte si nastavitve omrežja WAN usmerjevalnika RT-AX53U. Če želite dodati novo nastavitev, upoštevajte navodila na zaslonu. Če želite spremeniti prejšnjo nastavitev, izberite [Dodatne nastavitve] -> [WAN] -> [Internetna povezava].
 Proizvajalec
+Posodobi MAP
+Predodelitev pravila MAP bo trajala od ene do dve minuti. Med posodabljanjem se bo internetna povezava vseh povezanih naprav prekinila.
 Omejitev največje pasovne širine
 Nastavite omejitev največje pasovne širine za nalaganje
 Največje število računalnikov
@@ -2692,6 +2735,7 @@ Vdelane programske opreme modema 4G ni bilo mogoče nadgraditi. Počakajte trenu
 Naložili ste napačno različico vdelane programske opreme za nadgradnjo modula. Izberite pravo in ponovite nadgradnjo.
 Vdelana programska oprema modema 4G
 Informacije o modemu za mobilni širokopasovni dostop
+Uporabi telefon kot modem
 Različica programske opreme modema
 Koda PIN je obvezna.
 Koda PIN2 je obvezna.
@@ -2822,7 +2866,9 @@ Cilj
 Sledi poti do gostitelja
 Prebudi prek omrežja LAN
 Prebudi
+O funkciji
 Na voljo je nova funkcija
+Opis funkcije
 Ime nove mape
 Nova vdelana programska oprema modema
 Naslednja stran
@@ -2837,6 +2883,7 @@ ni navedeno
 Če želite omogočiti WPS, spremenite način preverjanja pristnosti na WPA2 ali WPA-Auto.
 Če želite omogočiti WPS, morate najprej onemogočiti skritje niza SSID.
 Opomba: Novi popravek bo redno posodobljen. Redno posodabljajte vdelano programsko opremo.
+Obvestilo
 Element obvestila
 Številka odjemalca
 Če storitev ASUS DDNS ne morete uporabljati, obiščite spletno mesto <a href="https://iplookup.asus.com/nslookup.php" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">https://iplookup.asus.com/nslookup.php</a>, da odprete naslov IP interneta za uporabo te storitve.
@@ -2924,6 +2971,7 @@ Preslikava vrat podpira vmesnik IPTV WAN za določena vrata LAN. Izberite ustrez
 Omogoči preslikavo vrat
 LAN Vrata
 SSH Vrata
+Stanje priključka
 Hitrost povezave pri teh vratih je mogoče izboljšati.
 Glejte naslednje rezultate/nasvete za odpravljanje težav.
 Preverite naslednje
@@ -2933,6 +2981,9 @@ Starejša naprava lahko upočasnjuje vašo hitrost povezave.
 Pri svojem ponudniku internetnih storitev še enkrat preverite svoj paket storitev.
 Zamenjajte ethernetni kabel z #ETHCABLE ali novejšim.
 Ta vrata so za
+Če konfigurirate %1$@ kot %2$@, boste onemogočili funkcijo \"%3$@\". Ste prepričani, da želite nadaljevati?
+Ta funkcija je onemogočena, ker je %1$@ konfiguriran kot %2$@.
+%1$@ in %2$@ ni mogoče konfigurirati kot istega priključka.
 Na tej strani je prikazano stanje posredovanja vrat. Nekateri programi P2P uporabljajo protokol UPnP za odpiranje vrat, številka vrat pa je prikazana na tej strani.
 Usmerjevalnik RT-AX53U je zaznal, da je vrsta povezave povezava PPPoE. Če je to pravilna vrsta povezave, vnesite uporabniško ime in geslo ter kliknite »Uporabi«.<br>Če to ni pravilna vrsta povezave, kliknite »Ročna nastavitev«, da jo nastavite znova.
 Vnesite uporabniško ime in geslo, ki ju je posredoval ponudnik internetnih storitev (ISP), in nato kliknite »Naprej«.
@@ -2994,6 +3045,7 @@ Registracija izdelka
 Ponudnik
 Enkapsulacija
 Način enkapsulacije
+Javni ključ
 Potisni
 Ali res želite izbrisati ta PVC?
 Uredi PVC
@@ -3086,6 +3138,20 @@ Podvojene ali enake nastavitve za VPI in VCI.
 Sistem se znova zaganja. Počakajte, da vas preusmerimo na domačo stran usmerjevalnika RT-AX53U.
 Prilagajanje velikosti
 Pregledovanje
+Podružnica
+Učilnica
+Kavarna
+Polnilna postaja za električna vozila
+Prijatelji
+Hotel
+Nakupovalno središče
+Študij na daljavo
+Pametni dom
+Restavracija
+Otroci
+Glasovni pomočnik
+Nadzorne naprave
+Delo od doma
 s
 Varnostna raven
 Izberi vse
@@ -3128,7 +3194,7 @@ Click on this checkbox if you want to share the config file for debugging. Since
 Nastavitve
 Kliknite <a id="redirect_to_setup">tukaj</a> da spremenite. Za več informacij si oglejte to <a id="redirect_to_FAQ">pogosto vprašanje</a>.
 Namestitev vozlišča
-Place your RT-AX53U router and node(s) in the same room and at least 1 meter apart during the setup process.
+Med postopkom nastavitve postavite usmerjevalnik RT-AX53U in vozlišča v isto sobo in vsaj en meter narazen.
 Za nastavitve sistema naj bo napajanje vklopljeno, naprava pa naj bo v stanju pripravljenosti.
 Ime naprave
 Izberite pravilne jezikovne nastavitve, ki so primerne za kodiranje datoteke.
@@ -3279,6 +3345,10 @@ System adjustment
 Temperature unit
 Fan speed
 Spremenite geslo za prijavo v usmerjevalnik, časovni pas in nastavitve strežnika NTP.
+Ločeno od glavnega omrežja lahko ustvarite dodatno samodejno definirano omrežje za različne namene.
+Samodejno definirano omrežje je ločeno od domene glavnega omrežja in zagotavlja varnejšo povezavo.
+V vsakem samodejno definiranem omrežju lahko nastavite različne načine šifriranja, urnike, dovoljenja, AiMesh, omejitve pasovne širine in drugo, da vzpostavite celostno omrežno okolje.
+Ali želite dodati dodatno brezžično omrežje za posebno uporabo?
 Osnovna konfiguracija
 Lokalno omrežje
 Razno
@@ -3453,6 +3523,7 @@ Odstranjevanje
 Na voljo je posodobitev v spletu
 Posodabljanje ...
 Pasovna širina za nalaganje
+Naloži konfiguracijo
 Prioriteta nalaganja
 Poslani podatki na sekundo
 Poslani podatki
@@ -3515,6 +3586,10 @@ Novo podomrežje
 Neoznačeno
 Označeno
 Preklic
+Ta vrata uporablja %@.
+Osamitev vrat
+Profil VLAN
+Nastavitve za kontrolnik preklopa VLAN
 Ta vrednost mora biti večja od
 Ta vrednost mora biti nižšia od
 Client will use VPN to access
@@ -3556,7 +3631,7 @@ Konfiguracija po meri
 Usmerjevalnik RT-AX53U bo samodejno ustvaril datoteko .ovpn s ključem overitelja digitalnih potrdil. Datoteko .ovpn z uporabniškim imenom in geslom lahko posredujete vsem uporabnikom, ki vzpostavljajo povezavo s strežnikom OpenVPN.
 Če želite spremeniti nastavitve strežnika OpenVPN, obiščite Dodatne nastavitve
 Privzete nastavitve strežnika OpenVPN lahko spremenite tako, da zagotovite datoteko OPVN po meri za določeno vrsto povezave.
-Če je naslov IP vašega omrežja WAN dinamičen, kliknite <a href="http://ZVDOMAIN_NAMEVZ/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">tukaj</a>, da nastavite DDNS.
+Če je naslov IP vašega omrežja WAN dinamičen, kliknite <a href="/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">tukaj</a>, da nastavite DDNS.
 Dodeli iz strežnika DHCP
 Šifra šifriranja
 Spor z usmerjanjem. <p>Na strani z dodatnimi nastavitvami si oglejte nastavitve naslova IP odjemalca ali pa si oglejte tabelo za usmerjanje v dnevniku sistema.
@@ -3655,18 +3730,40 @@ Posodobitev ni uspela. Poskusite znova.
 Ko kliknete »Uporabi«, bodo vsi odjemalci VPN znova vzpostavili povezavo. Ali ste prepričani, da želite nadaljevati?
 Podprta različica IKE
 za nastavitev DDNS kliknite tukaj.
+* WiFi za VPN je že v uporabi.
+How to set up WireGuard® server?
+How to set up site to site VPN with WireGuard®?
+How to set up WireGuard® client in VPN Fusion?
+Preverjanje pristnosti VPN
+Potrdilo odjemalca
+Ključ odjemalca
+Seznam preklicanih potrdil
+Največje število hkratnih aktivnih povezav VPN je omejeno na dva. Preden aktivirate novo povezavo VNP, deaktivirajte obstoječo.
+Sistem lahko hkrati aktivira eno povezavo Surfshark. Preden aktivirate novo povezavo Surfshark, deaktivirajte drugo.
+Privzeta povezava
 Odjemalci VPN (navidezno zasebno omrežje) se pogosto uporabljajo za vzpostavitev povezave s strežnikom VPN, ki omogoča varen dostop do zasebnih sredstev prek javnega omrežja.
 Nekatere naprave, kot so TV-komunikatorji, pametni televizorji in predvajalniki diskov Blu-ray, ne podpirajo programske opreme VPN.
 Funkcija VPN usmerjevalnika ASUSWRT zagotavlja dostop do omrežja VPN vsem napravam v domačem omrežju, pri tem pa vam ni treba namestiti programske opreme VPN v posamezno napravo.
+Naslov končne točke
+Vrata končne točke
+Ker je vaša spletna varnost na prvem mestu.
+Dovoljeni naslovi IP
 Spremenite podmrežo LAN usmerjevalnika. Za podrobne informacije glejte to <a target='_blank'>Pogosto zastavljeno vprašanje</a>.
+Vztrajen Keepalive
 Net-to-Net Client/Peer (Net-to-net odjemalec/enakovredno vozlišče)
 Odjemalec IPSec VPN omogoča RT-AX53U povezavo s strežnikom/odjemalcem Net-to-Net IPSec oziroma omogoča, da se naprave neposredno povežejo na način omrežja enakovrednih računalnikov.
 Za primer vzemimo uporabo dveh RT-AX53U, s čimer bomo pojasnili omrežje enakovrednih računalnikov. Najprej morate na tej strani ustvariti profil enakovrednih IPSec, nato na RT-AX53U ustvarite še en enakovredno vozlišče s pripadajočimi konfiguracijami.
+Profil
+Uporabi za vse naprave.
+Dodeli naprave temu profilu
+Izbriši profil
+Izberite drug profil VPN, da prekličete privzeti internetni WAN.
 Če želite ustvariti povezavo VPN, upoštevajte spodnja navodila:
 Dodajte profil
 Izberite vrsto povezave VPN
 Vnesite podatke o preverjanju pristnosti omrežja VPN, ki vam jih je zagotovil ponudnik omrežja VPN, in nato vzpostavite povezavo.
 Odjemalec VPN
+Enakovreden
 Kadar uporabljate a odjemalca VPN s povezavo PPPoE, se bo vaš usmerjevalnik samodejno ponovno zagnal, da to onemogoči pospeševanje NAT. Ste prepričani, da želite nadaljevati?
 Ovira
 Konfigurirajte nastavitve ethernetnega omrežja WAN usmerjevalnika RT-AX53U.
@@ -3730,18 +3827,19 @@ Omogoči preverjanje dosegljivosti interneta
 Možnost MSS za TCP
 bajtov
 ID omrežja VLAN
-Združevanje omrežij WAN združi dve omrežni povezavi, da poveča hitrost omrežja WAN na 2 Gb/s. Priključek WAN in priključek LAN 4 na usmerjevalniku priključite na priključka LAN na modemu (obvezno uporabite kabla z enakimi specifikacijami). <a id="wanAgg_faq" target="_blank" style="color:#FFCC00;text-decoration:underline;">Pogosta vprašanja o združevanju omrežij WAN</a>
+Združevanje omrežij WAN
+Združevanje omrežij WAN združi dve omrežni povezavi, da poveča hitrost omrežja WAN na 2 Gb/s. Priključek #WAN in priključek LAN 4 na usmerjevalniku priključite na priključka LAN na modemu (obvezno uporabite kabla z enakimi specifikacijami). <a id="wanAgg_faq" target="_blank" style="color:#FFCC00;text-decoration:underline;">Pogosta vprašanja o združevanju omrežij WAN</a>
 Omogoči združevanje WAN
 V vašem usmerjevalniku je omogočen dvojni WAN. Če omogočite združevanje omrežij WAN, boste onemogočili dvojni WAN. Ali res želite nadaljevati?
 V vašem usmerjevalniku je omogočeno združevanje omrežij WAN. Če omogočite dvojni WAN, boste onemogočili združevanje omrežij WAN. Ali res želite nadaljevati?
 Združevanje omrežij WAN uporablja priključek LAN 4 vašega usmerjevalnika. Če omogočite IPTV, boste onemogočili združevanje omrežij WAN. Ali res želite nadaljevati?
 IPTV uporablja priključek LAN 4 vašega usmerjevalnika. Če omogočite združevanje omrežij WAN, boste onemogočili IPTV. Ali res želite nadaljevati?
 V vašem usmerjevalniku sta omogočena dvojni WAN in IPTV. Če omogočite združevanje omrežij WAN, bosta dvojni WAN in IPTV zaradi preprečitve spora na priključku onemogočena. Ali res želite nadaljevati?
-Prepričajte se, da sta priključek WAN na usmerjevalniku in priključek LAN na modemu priključena s kabloma z enakimi specifikacijami.
+Prepričajte se, da sta priključek #WAN na usmerjevalniku in priključek LAN na modemu priključena s kabloma z enakimi specifikacijami.
 Prepričajte se, da sta priključek LAN 4 na usmerjevalniku in priključek LAN na modemu priključena s kabloma z enakimi specifikacijami.
 Če želite omogočiti združevanje omrežij WAN, odprite stran z <a href="Advanced_WAN_Content.asp" style="color:#FFCC00;text-decoration:underline;">nastavitvami internetne povezave WAN</a>.
 Če funkcije združevanja omrežja WAN ni mogoče nastaviti, upoštevajte ta navodila in poskusite znova.
-Prepričajte se, da so vrata LAN modema kabelsko že povezana z omrežjem WAN in LAN 4 usmerjevalnika.
+Prepričajte se, da so vrata LAN modema kabelsko že povezana z omrežjem #WAN in LAN 4 usmerjevalnika.
 Prepričajte se, da je za modem omogočena funkcija 802.3ad
 Preverite, ali uporabljate kabla z istimi specifikacijami (gigabitni in gigabitni oziroma 10/100 in 10/100 Mb/s)
 Ponovno zaženite usmerjevalnik
@@ -3756,6 +3854,7 @@ WiFi Proxy
 Radar za omrežja WiFi
 S temi nastavitvami lahko konfigurirate parametre radarja za omrežja WiFi.
 Seznam blokiranj za gostovanje
+Deljenje povezave Wi-Fi
 Iskanje omrežij WiFi na mestu
 Iskanje omrežij WiFi na mestu odkrije vsa omrežja WiFi v vašem okolju.
 Statistični podatki brezžičnega kanala
@@ -4116,7 +4215,7 @@ Slikovna datoteka pozdravne spletne strani ne more biti prazna.
 Dobrodošli v
 Prebral(-a) sem <span id='terms_service_hyperlink'>pogoje storitve</span> in se strinjam z njimi
 Nadaljuj
-Večkratna povezava VPN
+Funkcija VPN Fusion
 vam omogoča hkratno povezavo več strežnikov VPN ter dodeljevanje odjemalnih naprav za povezavo z različnimi tuneli VPN. Nekatere naprave, kot so Set-top Box, pametni TV in predvajalniki Blu-ray, ne podpirajo programske opreme VPN. Ta funkcija omogoča dostop VPN do takšnih naprav v domačem omrežju, ne da bi bilo treba namestiti programsko opremo VPN, medtem ko vaš pametni telefon ostane povezan z internetom in ne povezavo VPN.
 Pri igranju igric povezava VPN izklopi napade DDoS,da prepreči, da bi se prekinila povezava med vašim računalnikom ali pretokom in igralnimi strežniki. Vzpostavitev povezave VPN vam omogoča tudi enostavno spreminjanje naslova IP v regijo, kjer se nahaja igralni strežnik, da bi izboljšali svoj ping do igralnih strežnikov.
 Za začetek sledite spodnjim korakom:
@@ -4243,7 +4342,10 @@ Ne opomni me več
 *Vaše trenutno prijavno geslo ni pravilno.
 HTTPS je relativno bolj zaščiten protokol za spletni dostop. Predlagamo, da za vnos strani z nastavitvijo usmerjevalnika ASUS uporabite protokol HTTPS.
 Za nadaljevanje kliknite tukaj.
+Za povezavo skenirajte kodo QR
+S telefonom skenirajte to kodo QR in se povežite v brezplačno omrežje Wi-Fi
 Za dodatne podrobnosti skenirajte kodo QR.
+Ročno se povežite v omrežje
 Ali želite do strani z nastavitvijo še vedno dostopiti prek <span>protokola HTTP</span>?
 Če uporabljate protokol HTTPS, se lahko prikaže opozorilno sporočilo, ki vas lahko obvesti o težavi brskalnika z varnostnim potrdilom.
 Povezava med brskalnikom in stranjo z nastavitvijo usmerjevalnika ASUS (ZVDOMAIN_NAMEVZ) je kljub temu opozorilnemu sporočilu varna.

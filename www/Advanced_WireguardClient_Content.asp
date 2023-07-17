@@ -7,7 +7,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#842#> - WireGuard Client</title>
+<title><#860#> - WireGuard Client</title>
 <link rel="stylesheet" href="index_style.css">
 <link rel="stylesheet" href="form_style.css">
 <script src="/state.js"></script>
@@ -78,7 +78,7 @@ document.chg_wgc.submit();
 <table id="WgcBasicTable" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#3281#></td>
+<td colspan="2"><#3351#></td>
 </tr>
 </thead>
 <tr id="wgc_unit_field" class="rept ew">
@@ -96,15 +96,15 @@ document.chg_wgc.submit();
 <tr id="wgc_enable">
 <th>Enable WireGuard</th>
 <td>
-<input type="radio" value="1" name="wgc_enable" class="input" <% nvram_match("wgc_enable", "1", "checked"); %>><#187#></input>
-<input type="radio" value="0" name="wgc_enable" class="input" <% nvram_match("wgc_enable", "0", "checked"); %>><#186#></input>
+<input type="radio" value="1" name="wgc_enable" class="input" <% nvram_match("wgc_enable", "1", "checked"); %>><#194#></input>
+<input type="radio" value="0" name="wgc_enable" class="input" <% nvram_match("wgc_enable", "0", "checked"); %>><#193#></input>
 </td>
 </tr>
 <tr id="wgc_nat">
-<th><#1872#></th>
+<th><#1894#></th>
 <td>
-<input type="radio" value="1" name="wgc_nat" class="input" <% nvram_match("wgc_nat", "1", "checked"); %>><#187#></input>
-<input type="radio" value="0" name="wgc_nat" class="input" <% nvram_match("wgc_nat", "0", "checked"); %>><#186#></input>
+<input type="radio" value="1" name="wgc_nat" class="input" <% nvram_match("wgc_nat", "1", "checked"); %>><#194#></input>
+<input type="radio" value="0" name="wgc_nat" class="input" <% nvram_match("wgc_nat", "0", "checked"); %>><#193#></input>
 </td>
 </tr>
 </table>
@@ -172,7 +172,7 @@ document.chg_wgc.submit();
 </tr>
 </table>
 <div class="apply_gen" id="apply_btn">
-<input class="button_gen" onclick="applyRule();" type="button" value="<#196#>"/>
+<input class="button_gen" onclick="applyRule();" type="button" value="<#203#>"/>
 </div>
 <table id="WgcLogTable" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable" style="display:none">
 <tr>
@@ -181,7 +181,7 @@ document.chg_wgc.submit();
 <textarea class="textarea_ssh_table" style="width:99%; font-family:'Courier New', Courier, mono; font-size:13px;" cols="63" rows="25" readonly="readonly" wrap=off><% nvram_dump("wgc.log",""); %></textarea>
 </div>
 <div class="apply_gen">
-<input type="button" onClick="location.reload();" value="<#1668#>" class="button_gen">
+<input type="button" onClick="location.reload();" value="<#1690#>" class="button_gen">
 </div>
 </td>
 </tr>

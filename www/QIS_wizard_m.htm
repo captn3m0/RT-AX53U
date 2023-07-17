@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="icon" href="images/favicon.png">
-<title><#842#> - Quickly Internet Setup</title>
+<title><#860#> - Quickly Internet Setup</title>
 <link rel="stylesheet" type="text/css" href="css/icon-qis.css">
 <style>
 body{
@@ -426,7 +426,7 @@ result_of_detectWAN = result;
 }
 function gotoIndex(){
 if(w_Setting_tmp == '0'){
-alert("<#601#>");
+alert("<#617#>");
 location.href = '/QIS_wizard_m.htm?flag=wireless';
 }
 else
@@ -458,9 +458,9 @@ document.getElementById('loading_block1').style.display = "none";
 document.getElementById('loading_block2').style.display = "none";
 document.getElementById('loading_block3').style.display = "";
 /*if(findasus_support){
-document.getElementById('loading_block3').innerHTML = "<div><#437#></div>";
+document.getElementById('loading_block3').innerHTML = "<div><#451#></div>";
 }else{*/
-document.getElementById('loading_block3').innerHTML = "<div><#370#>.<#349#></div>";
+document.getElementById('loading_block3').innerHTML = "<div><#384#>.<#361#></div>";
 }
 },
 success: function(){
@@ -508,19 +508,19 @@ function uploadSetting(){
 var file_obj = document.form.file;
 var file_obj_name = file_obj.value.toUpperCase();
 if(file_obj_name == ""){
-alert("<#320#>");
+alert("<#332#>");
 file_obj.focus();
 }
 else if(file_obj_name.length < 6 ||
 file_obj_name.lastIndexOf(".CFG") < 0 ||
 file_obj_name.lastIndexOf(".CFG") != (file_obj_name.length)-4){
-alert("<#3123#>");
+alert("<#3189#>");
 file_obj.focus();
 }
 else{
 stopFlag = 1;
 parent.document.getElementById('proceeding_img_text').style.display = "";
-parent.document.getElementById('connHint').innerHTML = "<#3109#>";
+parent.document.getElementById('connHint').innerHTML = "<#3175#>";
 document.form.action = "/upload.cgi";
 document.form.enctype = "multipart/form-data";
 document.form.submit();
@@ -533,7 +533,7 @@ document.form.submit();
 <body style="margin:0" onload="QIS_load_body();">
 <noscript>
 <div class="popup_bg" style="visibility:visible; z-index:999;">
-<div style="margin:200px auto; width:300px; background-color:#006699; color:#FFFFFF; line-height:150%; border:3px solid #FFF; padding:5px;"><#431#></p></div>
+<div style="margin:200px auto; width:300px; background-color:#006699; color:#FFFFFF; line-height:150%; border:3px solid #FFF; padding:5px;"><#445#></p></div>
 </div>
 </noscript>
 <div id="LoadingBar" class="popup_bar_bg" style="display:none">
@@ -544,7 +544,7 @@ document.form.submit();
 <span id="proceeding_img_text" style="display:none;"></span>
 <div id="proceeding_img"></div>
 </div>
-<div id="connHint" style="margin:5px auto; width:85%;"><#112#> <span style="font-weight:bolder;" id="stassid"></span></div>
+<div id="connHint" style="margin:5px auto; width:85%;"><#118#> <span style="font-weight:bolder;" id="stassid"></span></div>
 </td>
 </tr>
 </table>
@@ -554,7 +554,7 @@ document.form.submit();
 <table cellpadding="5" cellspacing="0" id="loadingBlock" class="loadingBlock" align="center">
 <tr>
 <td width="20%" height="80" align="center"><img src="/images/loading.gif"></td>
-<td><span id="proceeding_main_txt"><#371#></span><span id="proceeding_txt" style="color:#FFFFCC;"></span></td>
+<td><span id="proceeding_main_txt"><#385#></span><span id="proceeding_txt" style="color:#FFFFCC;"></span></td>
 </tr>
 </table>
 <!--[if lte IE 6.5]><iframe class="hackiframe"></iframe><![endif]-->
@@ -563,14 +563,14 @@ document.form.submit();
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center">
 <tr>
 <td>
-<div class="drword" id="drword"><#371#> <#368#>...
+<div class="drword" id="drword"><#385#> <#382#>...
 <br/>
-<div id="disconnect_hint" style="display:none;"><#369#></div>
+<div id="disconnect_hint" style="display:none;"><#383#></div>
 <br/>
 </div>
 <div id="wireless_client_detect" style="margin-left:10px;position:absolute;display:none;width:400px;">
 <img src="images/loading.gif">
-<div style="margin:-55px 0 0 75px;"><#692#></div>
+<div style="margin:-55px 0 0 75px;"><#709#></div>
 </div>
 <div id="alertImg" class="drImg"><img src="images/alertImg.png"></div>
 <div style="height:100px; "></div>
@@ -581,21 +581,21 @@ document.form.submit();
 <!--[if !lte IE 6]>-->
 <!--div class="banner1" align="center">
 <img src="images/New_ui/asustitle.png" width="218" height="54" align="left">
-<span class="modelName_top" style="margin-top:20px;"><#843#></span>
+<span class="modelName_top" style="margin-top:20px;"><#861#></span>
 </div-->
 <!--<![endif]-->
 <!--[if lte IE 6]>
 <div class="banner1" align="center">
 <img src="images/New_ui/asustitle_ie6.png" width="218" height="54" align="left">
-<span class="modelName_top" style="margin-top:20px;"><#843#></span>
+<span class="modelName_top" style="margin-top:20px;"><#861#></span>
 </div>
 <![endif]-->
 <!--td style="width:218px;*width:263px;" valign="top">
-<div class="m_qis_r" style="margin-left: 15px;margin-top: -160px;cursor:pointer;" onclick="gotoIndex();"><table><tbody><tr><td><div class="_index"></div></td><td><div><#208#></div></td></tr></tbody></table></div>
-<div class="lefttabhead" style="margin-left:15px;" id="option0"><table width="192px" height="37px"><tbody><tr><td><#635#></td></tr></tbody></table></div>
-<div class="lefttabmid" id="t1" style="margin-left:15px;"><table height="52px"><tbody><tr><td><img style="margin-left:3px;" border="0" src="/images/qis/qisStep1.png"></td><td><div class="qismenu"><#632#></div></td></tr></tbody></table></div>
-<div class="lefttabmid" id="t2" style="margin-left:15px;"><table height="52px"><tbody><tr><td><img style="margin-left:3px;" border="0" src="/images/qis/qisStep2.png"></td><td><div class="qismenu"><#633#></div></td></tr></tbody></table></div>
-<div class="lefttabmid" id="t3" style="margin-left:15px;"><table height="52px"><tbody><tr><td><img style="margin-left:3px;" border="0" src="/images/qis/qisStep3.png"></td><td><div class="qismenu"><#634#></div></td></tr></tbody></table></div>
+<div class="m_qis_r" style="margin-left: 15px;margin-top: -160px;cursor:pointer;" onclick="gotoIndex();"><table><tbody><tr><td><div class="_index"></div></td><td><div><#215#></div></td></tr></tbody></table></div>
+<div class="lefttabhead" style="margin-left:15px;" id="option0"><table width="192px" height="37px"><tbody><tr><td><#651#></td></tr></tbody></table></div>
+<div class="lefttabmid" id="t1" style="margin-left:15px;"><table height="52px"><tbody><tr><td><img style="margin-left:3px;" border="0" src="/images/qis/qisStep1.png"></td><td><div class="qismenu"><#648#></div></td></tr></tbody></table></div>
+<div class="lefttabmid" id="t2" style="margin-left:15px;"><table height="52px"><tbody><tr><td><img style="margin-left:3px;" border="0" src="/images/qis/qisStep2.png"></td><td><div class="qismenu"><#649#></div></td></tr></tbody></table></div>
+<div class="lefttabmid" id="t3" style="margin-left:15px;"><table height="52px"><tbody><tr><td><img style="margin-left:3px;" border="0" src="/images/qis/qisStep3.png"></td><td><div class="qismenu"><#650#></div></td></tr></tbody></table></div>
 <div id="apn_div" style="margin-left:15px; margin-top: 50px; display:none">
 <div style="margin-left:31px; font-size:12px; font-weight:bold; text-shadow:1px 1px 0px black;">Auto APN Progressing</div>
 <div id="apn_bar_container">
@@ -706,9 +706,9 @@ margin-left: -100%;
 <li>
 <div style="margin: 0 10px;padding:13px 5px;font-size:1.2em;color:#A8CBF4;border-bottom:1px solid #4C545E;">Operation Mode</div>
 <ul style="list-style:none;padding:0 10px;">
-<li id="menu_rt" style="padding:13px 0 13px 20px;border-bottom:1px solid #4C545E;" onclick="switch_operation_mode('1')"><#444#></li>
-<li id="menu_ap" style="padding:13px 0 13px 20px;border-bottom:1px solid #4C545E;" onclick="switch_operation_mode('3')"><#438#></li>
-<li id="menu_mb" style="padding:13px 0 13px 20px;border-bottom:1px solid #4C545E;display:none" onclick="switch_operation_mode('4')"><#446#></li>
+<li id="menu_rt" style="padding:13px 0 13px 20px;border-bottom:1px solid #4C545E;" onclick="switch_operation_mode('1')"><#458#></li>
+<li id="menu_ap" style="padding:13px 0 13px 20px;border-bottom:1px solid #4C545E;" onclick="switch_operation_mode('3')"><#452#></li>
+<li id="menu_mb" style="padding:13px 0 13px 20px;border-bottom:1px solid #4C545E;display:none" onclick="switch_operation_mode('4')"><#460#></li>
 </ul>
 </li>
 <li >

@@ -26,10 +26,10 @@ this.ddns_hostname_title = this.ddns_hostname_x.substring(0, this.ddns_hostname_
 if(this.ddns_hostname_x != '' && this.ddns_hostname_title)
 document.getElementById("DDNSName").value = this.ddns_hostname_title;
 else
-document.getElementById("DDNSName").value = "<#152#>";
+document.getElementById("DDNSName").value = "<#158#>";
 }
 else{
-document.getElementById("DDNSName").value = "<#152#>";
+document.getElementById("DDNSName").value = "<#158#>";
 }
 switch_ddns();
 top.ASUS_EULA.config(go_next_page, function(){});
@@ -75,7 +75,7 @@ if(this.ddns_return_code != 'no_change'){
 var ddnsHint = getDDNSState(this.ddns_return_code, this.ddns_hostname_x, this.ddns_old_name);
 if(ddnsHint != ""){
 if(this.ddns_return_code == 'Time-out')
-show_alert_block("<#2534#>");
+show_alert_block("<#2575#>");
 else
 show_alert_block(ddnsHint);
 }
@@ -119,13 +119,13 @@ function validate_ddns_hostname(o){
 dot = 0;
 s = o.value;
 if(s == ""){
-show_alert_block("<#674#>");
+show_alert_block("<#691#>");
 return false;
 }
 var unvalid_start=new RegExp("^[0-9].*", "gi");
 if(unvalid_start.test(s) )
 {
-show_alert_block("<#2546#>");
+show_alert_block("<#2587#>");
 return false;
 }
 if(!validator.string(o)){
@@ -136,12 +136,12 @@ c = s.charCodeAt(i);
 if(c == 46){
 ++dot;
 if(dot > 0){
-show_alert_block("<#2546#>");
+show_alert_block("<#2587#>");
 return false;
 }
 }
 if(!validator.hostNameChar(c)){
-show_alert_block("<#2535#> '"+s.charAt(i)+"' !");
+show_alert_block("<#2576#> '"+s.charAt(i)+"' !");
 return false;
 }
 }
@@ -185,7 +185,7 @@ check_return_code();
 });
 }
 function cleandef(){
-if(document.form.DDNSName.value == "<#152#>")
+if(document.form.DDNSName.value == "<#158#>")
 document.form.DDNSName.value = "";
 }
 function apply_eula_check(){
@@ -226,13 +226,13 @@ go_next_page();
 </td>
 </tr>
 <tr>
-<td align="left" class="formfonttitle" style="padding-left:20px;" height="72"><#3232#></td>
+<td align="left" class="formfonttitle" style="padding-left:20px;" height="72"><#3298#></td>
 </tr>
 <tr>
 <td>
 <div style="margin-left:20px;">
 <p><input type="radio" name="check_asus_ddns" id="c1" onClick="switch_ddns();" checked>
-<label for="c1"><#1707#></label>
+<label for="c1"><#1729#></label>
 </p>
 <br/>
 <div id="ddnsname_input" class="aidiskdesc" style="display:none;">
@@ -243,7 +243,7 @@ go_next_page();
 </div>
 <br/>
 <p><input type="radio" name="check_asus_ddns" id="c2" onClick="switch_ddns();" >
-<label for="c2"><#2790#></label>
+<label for="c2"><#2834#></label>
 </p>
 </div>
 </td>
@@ -256,8 +256,8 @@ go_next_page();
 <tr valign="bottom">
 <td width="20%">
 <div class="apply_gen" style="margin-top:30px">
-<input type="button" id="prevButton" value="<#205#>" onclick="go_pre_page();" class="button_gen">
-<input type="button" id="nextButton" value="<#204#>" onclick="apply_eula_check();"class="button_gen">
+<input type="button" id="prevButton" value="<#212#>" onclick="go_pre_page();" class="button_gen">
+<input type="button" id="nextButton" value="<#211#>" onclick="apply_eula_check();"class="button_gen">
 <img id="loadingIcon" style="display:none;margin-top:7px" src="/images/InternetScan.gif"></span>
 </div>
 </td>

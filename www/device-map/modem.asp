@@ -27,15 +27,15 @@ parent.location.href = "/Advanced_Modem_Content.asp";
 <table width="95%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="table1px">
 <tr>
 <td style="padding:5px 10px 0px 15px;">
-<p class="formfonttitle_nwm"><#2763#>:</p>
+<p class="formfonttitle_nwm"><#2807#>:</p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px; color:#FFFFFF;" id="disk_model_name"></p>
 <div style="margin-top:5px;" class="line_horizontal"></div>
 </td>
 </tr>
 <tr>
 <td height="50" style="padding:10px 15px 0px 15px;">
-<p class="formfonttitle_nwm" style="float:left;width:138px;"><#2232#></p>
-<input type="button" name="btn_Hspda" class="button_gen" onclick="goHspdaWizard();" value="<#1521#>">
+<p class="formfonttitle_nwm" style="float:left;width:138px;"><#2254#></p>
+<input type="button" name="btn_Hspda" class="button_gen" onclick="goHspdaWizard();" value="<#1540#>">
 <div style="margin-top:5px;" class="line_horizontal"></div>
 </td>
 </tr>

@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#842#> - <#412#></title>
+<title><#860#> - <#426#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="usp_style.css">
@@ -143,7 +143,7 @@ var operation_array = {
 "value" : "1"
 },
 "label" : {
-"text" : (amesh_support && ameshRouter_support) ? "<#445#>" : "<#444#>"
+"text" : (amesh_support && ameshRouter_support) ? "<#459#>" : "<#458#>"
 },
 "mode" : "1",
 "express" : "0",
@@ -159,7 +159,7 @@ var operation_array = {
 "value" : "3"
 },
 "label" : {
-"text" : (amesh_support && ameshRouter_support) ? "<#439#>" : "<#438#>"
+"text" : (amesh_support && ameshRouter_support) ? "<#453#>" : "<#452#>"
 },
 "mode" : "3",
 "express" : "0",
@@ -175,7 +175,7 @@ var operation_array = {
 "value" : "2"
 },
 "label" : {
-"text" : "<#459#>"
+"text" : "<#473#>"
 },
 "mode" : "2",
 "express" : "0",
@@ -191,7 +191,7 @@ var operation_array = {
 "value" : "2"
 },
 "label" : {
-"text" : "<#461#>"
+"text" : "<#475#>"
 },
 "mode" : "2",
 "express" : "1",
@@ -207,7 +207,7 @@ var operation_array = {
 "value" : "2"
 },
 "label" : {
-"text" : "<#463#>"
+"text" : "<#477#>"
 },
 "mode" : "2",
 "express" : "2",
@@ -223,7 +223,7 @@ var operation_array = {
 "value" : "4"
 },
 "label" : {
-"text" : "<#446#>"
+"text" : "<#460#>"
 },
 "mode" : "4",
 "express" : "0",
@@ -239,7 +239,7 @@ var operation_array = {
 "value" : "5"
 },
 "label" : {
-"text" : "<#1037#>"
+"text" : "<#1055#>"
 },
 "mode" : "5",
 "express" : "0",
@@ -327,12 +327,12 @@ document.form.appendChild(NewInput);
 function saveMode(){
 if(sw_mode_orig == document.form.sw_mode.value){
 if(document.form.sw_mode.value != 2){
-alert("<#843#> <#2846#>");
+alert("<#861#> <#2893#>");
 return false;
 }
 else{ //Repeater, Express Way 2.4 GHz, Express Way 5 GHz
 if(wlc_express_orig == document.form.wlc_express.value){
-alert("<#843#> <#2846#>");
+alert("<#861#> <#2893#>");
 return false;
 }
 }
@@ -414,14 +414,14 @@ document.getElementById('routerSSID').style.height="370px";
 }
 if(wl_info.band5g_2_support || wl_info.band6g_support){
 if(band6g_support){
-document.getElementById("5g2_title").innerHTML = '6 GHz - <#722#>';
+document.getElementById("5g2_title").innerHTML = '6 GHz - <#739#>';
 }
 document.getElementById("wl_unit_field_4").style.display = "";
 document.getElementById("wl_unit_field_5").style.display = "";
 document.getElementById("wl_unit_field_6").style.display = "";
-document.getElementById("wl_unit_field_1_1").innerHTML = '5 GHz-1 - <#722#>';
-document.getElementById("syncCheckbox").innerHTML = "<#630#>";
-document.getElementById("syncCheckbox_5_2").innerHTML = "<#631#>";
+document.getElementById("wl_unit_field_1_1").innerHTML = '5 GHz-1 - <#739#>';
+document.getElementById("syncCheckbox").innerHTML = "<#646#>";
+document.getElementById("syncCheckbox_5_2").innerHTML = "<#647#>";
 document.getElementById('routerSSID').style.height="520px";
 document.getElementById("smart_connect_table").style.display="";
 document.getElementById('routerSSID').style.height="620px";
@@ -548,17 +548,17 @@ $("#Unplug-hint").css("display", "none");
 if(express == 1){ //Express Way 2.4 GHz
 $("#sw_mode2_0_radio").prop('checked', true);
 document.form.wlc_express.value = 1;
-$("#mode_desc").html("<#460#><br/><span style=\"color:#FC0\"><#1724#></span>");
+$("#mode_desc").html("<#474#><br/><span style=\"color:#FC0\"><#1746#></span>");
 }
 else if(express == 2){ //Express Way 5 GHz
 $("#sw_mode2_1_radio").prop('checked', true);
 document.form.wlc_express.value = 2;
-$("#mode_desc").html("<#462#><br/><span style=\"color:#FC0\"><#1724#></span>");
+$("#mode_desc").html("<#476#><br/><span style=\"color:#FC0\"><#1746#></span>");
 }
 else{ // Repeater
 $("#sw_mode2_radio").prop('checked', true);
 document.form.wlc_express.value = 0;
-$("#mode_desc").html("<#456#><br/><span style=\"color:#FC0\"><#1724#></span>");
+$("#mode_desc").html("<#470#><br/><span style=\"color:#FC0\"><#1746#></span>");
 }
 }
 else if(mode == '3'){ // AP mode
@@ -576,18 +576,18 @@ else if(based_modelid == "RP-AC53" && tcode == "UK/01")
 url = "/images/New_ui/ap_UK.jpg";
 $("#Senario").css({"height": height, "background": "url(" + url + ") center no-repeat", "margin": "auto", "margin-bottom": "30px"});
 /*if(findasus_support){
-$("#mode_desc").html("<#435#><br/><span style=\"color:#FC0\"><#437#></span>");
+$("#mode_desc").html("<#449#><br/><span style=\"color:#FC0\"><#451#></span>");
 }else{*/
 var desc = "";
 if(amesh_support && ameshRouter_support) {
-desc += "<#436#>";
+desc += "<#450#>";
 desc += "<br>";
 desc += "<#46#>";
 desc += "<br>";
-desc += "<span style=\"color:#FC0\"><#1726#></span>";
+desc += "<span style=\"color:#FC0\"><#1748#></span>";
 }
 else
-desc = "<#435#><br/><span style=\"color:#FC0\"><#1725#></span>";
+desc = "<#449#><br/><span style=\"color:#FC0\"><#1747#></span>";
 $("#mode_desc").html(desc);
 clearTimeout(id_WANunplungHint);
 $("#Unplug-hint").css("display", "none");
@@ -596,13 +596,13 @@ $("input[name=sw_mode_radio][value=3]").prop('checked', true);
 else if(mode == '4'){ // Media Bridge
 document.form.sw_mode.value = 4;
 document.form.wlc_express.value = 0;
-var pstaDesc = "<#447#>";
-pstaDesc += "<#448#>";
-pstaDesc += "<#449#>";
-pstaDesc += "<#450#>";
-pstaDesc += "<#451#>";
-pstaDesc += "<br><#452#>";
-pstaDesc += "<br/><span style=\"color:#FC0\"><#1727#></span>";
+var pstaDesc = "<#461#>";
+pstaDesc += "<#462#>";
+pstaDesc += "<#463#>";
+pstaDesc += "<#464#>";
+pstaDesc += "<#465#>";
+pstaDesc += "<br><#466#>";
+pstaDesc += "<br/><span style=\"color:#FC0\"><#1749#></span>";
 var url = "/images/New_ui/mb.jpg";
 var height = "305px";
 if(odmpid == "RT-AC66U_B1" || odmpid == "RT-AC1750_B1" || odmpid == "RT-N66U_C1" || odmpid == "RT-AC1900U" || odmpid == "RT-AC67U")
@@ -641,12 +641,12 @@ else
 $("#Senario").css({"height": "", "background": "url(/images/New_ui/rt.jpg) center no-repeat", "margin": "auto", "margin-bottom": "30px"});
 var desc = "";
 if(amesh_support && ameshRouter_support) {
-desc += "<#443#>";
+desc += "<#457#>";
 desc += "<br>";
 desc += "<#46#>";
 }
 else
-desc = "<#442#>";
+desc = "<#456#>";
 $("#mode_desc").html(desc);
 $("input[name=sw_mode_radio][value=1]").prop('checked', true);
 }
@@ -700,7 +700,7 @@ document.getElementById("wl_unit_field_3").style.display = "";
 document.getElementById("wl_unit_field_4").style.display = "";
 document.getElementById("wl_unit_field_5").style.display = "";
 document.getElementById("wl_unit_field_6").style.display = "";
-document.getElementById("wl0_desc_name").innerHTML = "2.4 GHz - <#722#>";
+document.getElementById("wl0_desc_name").innerHTML = "2.4 GHz - <#739#>";
 document.getElementById("wl0_ssid").onkeyup = function(){Sync_2ghz(2);};
 document.getElementById("wl0_wpa_psk").onkeyup = function(){Sync_2ghz(2);};
 document.getElementById('routerSSID').style.height="620px";
@@ -715,7 +715,7 @@ document.form.smart_connect_x.value = 0;
 <table cellpadding="4" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center">
 <tr>
 <td>
-<div class="drword" id="drword"><#371#> <#368#>...
+<div class="drword" id="drword"><#385#> <#382#>...
 <br/>
 <br/>
 </div>
@@ -769,7 +769,7 @@ document.form.smart_connect_x.value = 0;
 <td>
 <table style="margin-left:30px; margin-top:20px;">
 <td style="font-style:normal;font-size:13px;font-weight:bold;" >
-<input type="radio" value="1" id="smart_connect_t" name="smart_connect_t" class="input" onclick="return change_smart_con(this.value)" <% nvram_match("smart_connect_x", "1", "checked"); %>><#778#>
+<input type="radio" value="1" id="smart_connect_t" name="smart_connect_t" class="input" onclick="return change_smart_con(this.value)" <% nvram_match("smart_connect_x", "1", "checked"); %>><#795#>
 </td>
 </tr>
 <tr>
@@ -783,21 +783,21 @@ document.form.smart_connect_x.value = 0;
 </table>
 <table class="QISform_wireless" width="400" border=0 align="center" cellpadding="5" cellspacing="0">
 <tr>
-<div class="description_down"><#712#></div>
+<div class="description_down"><#729#></div>
 </tr>
 <tr>
-<div class="QISGeneralFont" align="left"><#669#></div>
+<div class="QISGeneralFont" align="left"><#685#></div>
 </tr>
 <tr>
 <div style="width: 640px; *width: 640px; height: 2px;margin:5px;*margin-left:-5px;" class="splitLine"></div>
 </tr>
 <tr>
-<th width="180" id="wl0_desc_name">2.4GHz - <#722#></th>
+<th width="180" id="wl0_desc_name">2.4GHz - <#739#></th>
 <td class="QISformtd"></td>
 </tr>
 <tr>
 <th width="180">
-<span onmouseout="return nd();" onclick="openHint(0, 22);" style="cursor:help;"><#562#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span>
+<span onmouseout="return nd();" onclick="openHint(0, 22);" style="cursor:help;"><#578#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span>
 </th>
 <td class="QISformtd">
 <input type="text" id="wl0_ssid" name="wl0_ssid" onkeypress="return validator.isString(this, event);" onkeyup="Sync_2ghz(2);" style="height:25px;" class="input_32_table" maxlength="32" value="" disabled="disabled" autocorrect="off" autocapitalize="off">
@@ -805,21 +805,21 @@ document.form.smart_connect_x.value = 0;
 </tr>
 <tr id="wl_unit_field_0">
 <th width="180">
-<span onmouseout="return nd();" onclick="openHint(0, 23);" style="cursor:help;"><#427#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span>
+<span onmouseout="return nd();" onclick="openHint(0, 23);" style="cursor:help;"><#441#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span>
 </th>
 <td class="QISformtd">
 <input id="wl0_wpa_psk" name="wl0_wpa_psk" type="password" onBlur="switchType(this,false);" onFocus="switchType(this,true);" value="" onkeyup="Sync_2ghz(2);" style="height:25px;" class="input_32_table" maxlength="65" disabled="disabled" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr id="wl_unit_field_1">
-<th id="wl_unit_field_1_1" width="180">5GHz - <#722#> </th>
+<th id="wl_unit_field_1_1" width="180">5GHz - <#739#> </th>
 <td class="QISformtd">
-<input type="checkbox" id="sync_with_2ghz" name="sync_with_2ghz" class="input" onclick="setTimeout('Sync_2ghz(2);',0);" checked="checked"><span id="syncCheckbox"><#629#></span>
+<input type="checkbox" id="sync_with_2ghz" name="sync_with_2ghz" class="input" onclick="setTimeout('Sync_2ghz(2);',0);" checked="checked"><span id="syncCheckbox"><#645#></span>
 </td>
 </tr>
 <tr id="wl_unit_field_2">
 <th width="180">
-<span onmouseout="return nd();" onclick="openHint(0, 22);" style="cursor:help;"><#562#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span>
+<span onmouseout="return nd();" onclick="openHint(0, 22);" style="cursor:help;"><#578#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span>
 </th>
 <td class="QISformtd">
 <input type="text" id="wl1_ssid" name="wl1_ssid" onkeypress="return validator.isString(this, event);" onkeyup="Sync_2ghz(5);" style="height:25px;" class="input_32_table" maxlength="32" value="" disabled="disabled" autocorrect="off" autocapitalize="off">
@@ -827,39 +827,39 @@ document.form.smart_connect_x.value = 0;
 </tr>
 <tr id="wl_unit_field_3">
 <th width="180">
-<span onmouseout="return nd();" onclick="openHint(0, 23);" style="cursor:help;"><#427#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span>
+<span onmouseout="return nd();" onclick="openHint(0, 23);" style="cursor:help;"><#441#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span>
 </th>
 <td class="QISformtd">
 <input id="wl1_wpa_psk" name="wl1_wpa_psk" type="password" onBlur="switchType(this,false);" onFocus="switchType(this,true);" value="" onkeyup="Sync_2ghz(5);" style="height:25px;" class="input_32_table" maxlength="65" disabled="disabled" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr id="wl_unit_field_4" style="display:none;">
-<th id="5g2_title" width="180">5 GHz-2 - <#722#> </th>
+<th id="5g2_title" width="180">5 GHz-2 - <#739#> </th>
 <td class="QISformtd" id="wl_unit_field_4_2">
-<input type="checkbox" id="sync_with_5ghz" name="sync_with_5ghz" tabindex="8" class="input" onclick="setTimeout('Sync_5ghz(2);',0);" checked="checked"><span id="syncCheckbox_5_2"><#629#></span>
+<input type="checkbox" id="sync_with_5ghz" name="sync_with_5ghz" tabindex="8" class="input" onclick="setTimeout('Sync_5ghz(2);',0);" checked="checked"><span id="syncCheckbox_5_2"><#645#></span>
 </td>
 </tr>
 <tr id="wl_unit_field_5" style="display:none;">
-<th width="180"><span onmouseout="return nd();" onclick="openHint(0, 22);" style="cursor:help;"><#562#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span></th>
+<th width="180"><span onmouseout="return nd();" onclick="openHint(0, 22);" style="cursor:help;"><#578#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span></th>
 <td class="QISformtd">
 <input type="text" id="wl2_ssid" name="wl2_ssid" tabindex="9" onkeypress="return validator.isString(this, event);" onkeyup="Sync_5ghz(5);" style="height:25px;" class="input_32_table" maxlength="32" value="" disabled="disabled" autocorrect="off" autocapitalize="off"/>
 </td>
 </tr>
 <tr id="wl_unit_field_6" style="display:none;">
-<th width="180"><span onmouseout="return nd();" onclick="openHint(0, 23);" style="cursor:help;"><#427#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span></th>
+<th width="180"><span onmouseout="return nd();" onclick="openHint(0, 23);" style="cursor:help;"><#441#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span></th>
 <td class="QISformtd">
 <input id="wl2_wpa_psk" name="wl2_wpa_psk" tabindex="10" type="password" onBlur="switchType(this, false);" onFocus="switchType(this, true);" value="" disabled="disabled" onkeyup="Sync_5ghz(5);" style="height:25px;" class="input_32_table" maxlength="64" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
 <td colspan="2">
-<div class="QISGeneralFont" ><#670#></div>
+<div class="QISGeneralFont" ><#686#></div>
 </td>
 </tr>
 </table>
 <div style="margin-top:20px;text-align:center;background-color:#2B373B">
-<input type="button" value="<#199#>" class="button_gen" onclick="cancel_SSID_Block();">
-<input type="button" id="btn_next_step" value="<#196#>" class="button_gen" onclick="applyRule();">
+<input type="button" value="<#206#>" class="button_gen" onclick="cancel_SSID_Block();">
+<input type="button" id="btn_next_step" value="<#203#>" class="button_gen" onclick="applyRule();">
 </div>
 </div>
 <table class="content" align="center" cellpadding="0" cellspacing="0">
@@ -878,9 +878,9 @@ document.form.smart_connect_x.value = 0;
 <tr bgcolor="#4D595D" valign="top">
 <td>
 <div>&nbsp;</div>
-<div class="formfonttitle"><#410#> - <#412#></div>
+<div class="formfonttitle"><#424#> - <#426#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#441#></div>
+<div class="formfontdesc"><#455#></div>
 </td>
 </tr>
 <tr bgcolor="#4D595D" valign="top" style="height:15%">
@@ -897,10 +897,10 @@ document.form.smart_connect_x.value = 0;
 <tr bgcolor="#4D595D" valign="top" style="height:70%">
 <td>
 <div id="Senario" >
-<div id="Unplug-hint" style="border:2px solid red; background-color:#FFF; padding:3px;margin:0px 0px 0px 150px;width:250px; position:absolute; display:block; display:none;"><#829#></div>
+<div id="Unplug-hint" style="border:2px solid red; background-color:#FFF; padding:3px;margin:0px 0px 0px 150px;width:250px; position:absolute; display:block; display:none;"><#847#></div>
 </div>
 <div class="apply_gen">
-<input name="button" type="button" class="button_gen" onClick="saveMode();" value="<#1666#>">
+<input name="button" type="button" class="button_gen" onClick="saveMode();" value="<#1688#>">
 </div>
 </td>
 </tr>

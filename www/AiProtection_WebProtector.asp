@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#842#> - <#1210#></title>
+<title><#860#> - <#1228#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="device-map/device-map.css">
@@ -187,7 +187,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#352#>";
+document.getElementById("check_mac").innerHTML="<#364#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else if(flag ==2){
@@ -195,7 +195,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#313#>";
+document.getElementById("check_mac").innerHTML="<#325#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else{
@@ -215,13 +215,13 @@ var apps_filter_row = apps_filter.split("<");
 var apps_filter_col = "";
 var upper = MaxRule_bwdpi_wrs>0?MaxRule_bwdpi_wrs:16;
 if(apps_filter.split("<").length >= upper){
-alert("<#2483#> " + upper + " <#2484#>");
+alert("<#2524#> " + upper + " <#2525#>");
 document.form.PC_devicename.focus();
 document.form.PC_devicename.select();
 return false;
 }
 if(document.form.PC_devicename.value == ""){
-alert("<#320#>");
+alert("<#332#>");
 document.form.PC_devicename.focus();
 return false;
 }
@@ -242,14 +242,14 @@ for(var i=0;i<apps_filter_row.length;i++){
 if(apps_filter_row[i] != "") {
 apps_filter_col = apps_filter_row[i].split(">");
 if(apps_filter_col[1].toUpperCase() == document.form.PC_devicename.value.toUpperCase()){
-alert("<#2476#>");
+alert("<#2517#>");
 document.form.PC_devicename.value = "";
 return false;
 }
 }
 }
 if(blank_category == 0){
-alert("<#1308#>");
+alert("<#1326#>");
 return false;
 }
 if(apps_filter == ""){
@@ -284,38 +284,38 @@ document.form.PC_devicename.value = "";
 genMain_table();
 }
 function genMain_table(){
-var category_name = ["<#1211#>", "<#1226#>", "<#1229#>", "<#1233#>"];
-var sub_category_name = [["<#1213#>", "<#1214#>", "<#1215#>"],
-["<#1216#>", "<#1217#>", "<#1218#>", "<#1219#>", "<#1220#>"],
-["<#1231#>", "<#1232#>"],
-["<#1234#>", "<#1235#>", "<#1236#>"]];
-var category_desc = ["<#1212#>",
-"<#1227#>",
-"<#1230#>",
-"<#1237#>"];
+var category_name = ["<#1229#>", "<#1244#>", "<#1247#>", "<#1251#>"];
+var sub_category_name = [["<#1231#>", "<#1232#>", "<#1233#>"],
+["<#1234#>", "<#1235#>", "<#1236#>", "<#1237#>", "<#1238#>"],
+["<#1249#>", "<#1250#>"],
+["<#1252#>", "<#1253#>", "<#1254#>"]];
+var category_desc = ["<#1230#>",
+"<#1245#>",
+"<#1248#>",
+"<#1255#>"];
 var apps_filter_row = apps_filter.split("<");
 var code = "";
 var clientListEventData = [];
 code += '<table width="100%" border="1" cellspacing="0" cellpadding="4" align="center" class="FormTable_table" id="mainTable_table">';
 code += '<thead><tr>';
-code += '<td colspan="5"><#1622#>&nbsp;(<#2615#>&nbsp;'+MaxRule_bwdpi_wrs+')</td>';
+code += '<td colspan="5"><#1643#>&nbsp;(<#2656#>&nbsp;'+MaxRule_bwdpi_wrs+')</td>';
 code += '</tr></thead>';
 code += '<tbody>';
 code += '<tr>';
-code += '<th width="5%" height="30px" title="<#3090#>">';
+code += '<th width="5%" height="30px" title="<#3156#>">';
 code += '<input id="selAll" type="checkbox" onclick="selectAll(this, 0);" value="">';
 code += '</th>';
-code += '<th width="40%"><#1532#> (<#2954#>)</th>';
-code += '<th width="40%"><#1221#></th>';
-code += '<th width="10%"><#2614#></th>';
+code += '<th width="40%"><#1553#> (<#3005#>)</th>';
+code += '<th width="40%"><#1239#></th>';
+code += '<th width="10%"><#2655#></th>';
 code += '</tr>';
 code += '<tr id="main_element">';
-code += '<td style="border-bottom:2px solid #000;" title="<#3846#>/<#1517#>">';
+code += '<td style="border-bottom:2px solid #000;" title="<#3945#>/<#1536#>">';
 code += '<input type="checkbox" checked="">';
 code += '</td>';
 code += '<td style="border-bottom:2px solid #000;">';
 code += '<input type="text" maxlength="17" style="margin-left:10px;float:left;width:255px;" class="input_20_table" name="PC_devicename" onkeypress="return validator.isHWAddr(this,event)" onclick="hideClients_Block();" placeholder="ex: <% nvram_get("lan_hwaddr"); %>" autocorrect="off" autocapitalize="off">';
-code += '<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" onclick="pullLANIPList(this);" title="<#3093#>">';
+code += '<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" onclick="pullLANIPList(this);" title="<#3159#>">';
 code += '<div id="ClientList_Block_PC" class="clientlist_dropdown" style="margin-top:25px;margin-left:10px;"></div>';
 code += '</td>';
 code += '<td style="border-bottom:2px solid #000;text-align:left;">';
@@ -335,7 +335,7 @@ code += '</td>';
 code += '<td style="border-bottom:2px solid #000;"><input class="add_btn" type="button" onclick="addRow_main(this)" value=""></td>';
 code += '</tr>';
 if(apps_filter == ""){
-code += '<tr><td style="color:#FFCC00;" colspan="10"><#2410#></td></tr>';
+code += '<tr><td style="color:#FFCC00;" colspan="10"><#2448#></td></tr>';
 }
 else{
 for(var k=0;k< apps_filter_row.length;k++){
@@ -380,7 +380,7 @@ deviceType = 0;
 deviceVender = "";
 }
 code += '<tr>';
-code += '<td title="<#3846#>/<#1517#>">';
+code += '<td title="<#3945#>/<#1536#>">';
 if(apps_filter_col[0] == 1)
 code += '<input type="checkbox" checked>';
 else
@@ -497,7 +497,7 @@ if(i != category_array.length -1)
 apps_filter_temp += ">";
 }
 if(blank_category == 0){
-alert("<#1308#>");
+alert("<#1326#>");
 return false;
 }
 }
@@ -514,7 +514,7 @@ document.form.action_script.value += ";apply_amaslib";
 if(document.form.wrs_enable.value == "1") {
 var apps_filter_row = "";
 if(document.form.PC_devicename.value != ""){
-alert("<#315#>");
+alert("<#327#>");
 return false;
 }
 if(apps_filter != ""){
@@ -582,7 +582,7 @@ apps_rulelist += ">";
 document.form.wrs_rulelist.value = wrs_rulelist;
 document.form.wrs_app_rulelist.value = apps_rulelist;
 if(ctf_disable == 0 && ctf_fa_mode == 2){
-if(!confirm("<#1640#>")){
+if(!confirm("<#1662#>")){
 return false;
 }
 else{
@@ -677,14 +677,14 @@ var code = "";
 if(document.form.current_page.value == "ParentalControl.asp"){
 code += '<span class="clicked">Time Limits</span>';
 code += '<a href="AiProtection_WebProtector.asp">';
-code += "<span style=\"margin-left:10px\" class=\"click\"><#1210#></span>";
+code += "<span style=\"margin-left:10px\" class=\"click\"><#1228#></span>";
 code += '</a>';
 }
 else{
 code += '<a href="ParentalControl.asp">';
 code += '<span class="click">Time Limits</span>';
 code += '</a>';
-code += "<span style=\"margin-left:10px\" class=\"clicked\"><#1210#></span>";
+code += "<span style=\"margin-left:10px\" class=\"clicked\"><#1228#></span>";
 }
 document.getElementById('switch_menu').innerHTML = code;
 }
@@ -729,7 +729,7 @@ applyRule();
 <div id="Loading" class="popup_bg"></div>
 <div id="hiddenMask" class="popup_bg" style="z-index:999;">
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center"></table>
-<!--[if lte IE 6.5]><script>alert("<#1359#>");</script><![endif]-->
+<!--[if lte IE 6.5]><script>alert("<#1377#>");</script><![endif]-->
 </div>
 <iframe name="hidden_frame" id="hidden_frame" width="0" height="0" frameborder="0"></iframe>
 <form method="post" name="form" action="/start_apply.htm" target="hidden_frame">
@@ -768,16 +768,16 @@ applyRule();
 <table width="730px">
 <tr>
 <td align="left">
-<div class="formfonttitle" style="width:400px"><#468#> - <#1210#></div>
+<div class="formfonttitle" style="width:400px"><#482#> - <#1228#></div>
 </td>
 <td style="display:none;">
 <div id="switch_menu" style="margin:-20px 0px 0px 0px;">
 <div style="width:168px;height:30px;border-top-left-radius:8px;border-bottom-left-radius:8px;" class="block_filter_pressed">
-<table class="block_filter_name_table_pressed"><tr><td style="line-height:13px;"><#1210#></td></tr></table>
+<table class="block_filter_name_table_pressed"><tr><td style="line-height:13px;"><#1228#></td></tr></table>
 </div>
 <a href="ParentalControl.asp">
 <div style="width:160px;height:30px;margin:-32px 0px 0px 168px;border-top-right-radius:8px;border-bottom-right-radius:8px;" class="block_filter">
-<table class="block_filter_name_table"><tr><td style="line-height:13px;"><#3288#></td></tr></table>
+<table class="block_filter_name_table"><tr><td style="line-height:13px;"><#3358#></td></tr></table>
 </div>
 </a>
 </div>
@@ -794,15 +794,15 @@ applyRule();
 </td>
 <td>&nbsp;&nbsp;</td>
 <td style="font-size: 14px;">
-<span><#1222#></span>
+<span><#1240#></span>
 <ol>
-<li><#1223#></li>
-<li><#1224#></li>
-<li><#1225#></li>
+<li><#1241#></li>
+<li><#1242#></li>
+<li><#1243#></li>
 </ol>
-<span><#1228#></span>
+<span><#1246#></span>
 <div>
-<a id="faq" href="" style="text-decoration:underline;" target="_blank"><#468#> FAQ</a>
+<a id="faq" href="" style="text-decoration:underline;" target="_blank"><#482#> FAQ</a>
 </div>
 </td>
 </tr>
@@ -811,7 +811,7 @@ applyRule();
 <br>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
-<th><#1210#></th>
+<th><#1228#></th>
 <td>
 <div align="center" class="left" style="width:94px; float:left; cursor:pointer;" id="radio_web_restrict_enable"></div>
 <div class="iphone_switch_container" style="height:32px; width:74px; position: relative; overflow: hidden">
@@ -850,7 +850,7 @@ function(){
 <td valign="top" align="center">
 <div id="mainTable" style="margin-top:10px;"></div>
 <div id="ctrlBtn" style="text-align:center;margin-top:20px;">
-<input class="button_gen" type="button" onclick="applyRule();" value="<#196#>">
+<input class="button_gen" type="button" onclick="applyRule();" value="<#203#>">
 <div style="width:96px;height:44px;position:absolute;bottom:5px;right:5px;background-image:url('images/New_ui/TrendMirco_logo.svg');background-size: 100%;"></div>
 </div>
 </td>

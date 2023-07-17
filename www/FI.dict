@@ -88,6 +88,12 @@ Tiedonsiirtonopeus
 Topologia
 Järjestelmäasetukset
 Tilastotiedot
+Ympäristön tunnistaminen
+Arvioidaan reittiyhteyttä...
+Optimoidaan solmu(j)a
+Antennidiversiteetin optimointi
+Antennin havaitseminen
+Arvioidaan antennimonidiversiteettiä...
 Powerline connection with good signal quality
 Powerline connection with weak signal quality
 Langaton yhteys, jolla erinomainen signaalin laatu
@@ -151,6 +157,7 @@ Jos haluat ottaa pois käytöstä tietojesi jakamisen Trend Micron kanssa seuraa
 Haluatko varmasti peruuttaa?
 Peruuta
 Näppäile nimi
+Isäntänimi on sidottu reititinsovelluksen kirjautumistiliin. Rekisteröi se tai poista se reititinsovelluksesta.
 Autom
 Automatic Setting
 Kaistanleveyden rajoitin
@@ -212,6 +219,8 @@ Ohita
 Tuntematon laite
 Päivitä yöllä
 Upgrade Now
+Käytä oletusarvoista paikallisen kirjautumistunnuksen salasanaa
+Oletusarvoinen salattu paikallisen kirjautumistunnuksen salasana mahdollistaa suojatun kirjautumisprosessin, kun muodostat yhteyden tähän ASUS-verkkolaitteeseen paikallisesti.
 Katso lisätietoja osoitteesta <a style="font-weight: bolder;text-decoration: underline;color:#000000;" href="https://www.asus.com/support/" target="_blank">https://www.asus.com/support/</a>
 * Minimi ping-paketti kuluttaa noin 128 tavua jaksoa kohti. Sen mukaisesti ping-tunnistin kuluttaa
 Mtavua kuukaudessa
@@ -280,7 +289,10 @@ Laiteohjelmistoversio:
 * Kesäaika on käytössä tällä aikavyöhykkeellä.
 Järjestelmän kellonaika
 * Muistutus: Järjestelmäsi aikaa ei ole synkronoitu NTP-palvelimen kanssa.
+Reitittimesi järjestelmäaikaa ei ole vielä synkronoitu NTP-palvelimen kanssa. Se synkronoidaan automaattisesti, kun internetyhteys muodostetaan.
 Vierasverkko
+Miten etsitään %@
+%@ löytyy ASUS-laitteesi takaosan/pohjan tarrasta.
 Käytä porttia välillä 1024-65535.
 Because of security and compatibility concerns,  IE8 / IE9 / IE10 are no longer supported.
 Things might be bound to broken and perhaps unusable.
@@ -359,6 +371,8 @@ Turvallisessa salasanassa on oltava vähintään 8 merkkiä ja siinä on oltava 
 Ilmoita reitittimen IP-osoite käyttäjäkohtaisen DNS:n lisäksi
 WAN-yhteystyyppi
 Käytä seuraavaa IP-osoitetta:
+Paikallinen kirjautumistunnus
+Määritä paikallisen kirjautumistunnuksen käyttäjänimi ja salasana, jotta kukaan ei voi käyttää ASUS-verkkolaitettasi ilman lupaa.
 Vähintään kaksi merkkiä. Vain aakkosnumeeriset merkit, alaviiva ja yhdysviiva ovat sallittuja merkkejä. Ensimmäinen merkki ei voi olla yhdysviiva (-) tai alaviiva (_).
 Voit myös ladata [ASUS Lyra]-järjestelmän liittääksesi lisää Lyra-laitteita ensimmäiseen Lyra-laitteeseen.
 Voit nyt painaa ensimmäisen ja toisen Lyrasi &quot;Pariutuspainiketta&quot; asettaaksesi toisen Lyran.
@@ -474,6 +488,8 @@ Heikko
 Hyvä
 Vahva
 Hyvin vahva
+Paikallinen kirjautumistunnuksen salasana
+WiFi-salasana
 PIN-koodi ei ole oikea. Anna oikea PIN-koodi ja yhdistä USB-sovitin uudelleen. Jos sama virhe toistuu, kytke PIN-kooditoiminto pois päältä, kytke se uudelleen päälle ja yritä uudelleen.
 Puhelinnumero
 Access Number
@@ -672,6 +688,7 @@ Anna verkkoavain, jossa on 8 ja 63 merkkiä (kirjaimia, numeroita tai yhdistelm�
 Anna verkkoavain, jossa on 8 ja 63 merkkiä (kirjaimia, numeroita tai yhdistelmä). Langattoman verkon oletussuojausasetus on WPA2-Personal AES.
 Separate 2.4 GHz and 5 GHz
 Separate 2.4 GHz, 5 GHz and 6 GHz
+Langaton pääverkko on määritetty.
 Tilinimi ei voi olla tyhjä.
 Käyttäjänimi/Salasana-kentät eivät voi olla tyhjiä.
 ISP-tilin asetus
@@ -822,6 +839,7 @@ Nosta verkkoyhteyden katkaisu maksimiin.
 Verkkoyhteyden uudelleenyhdistäminen.
 Ota yhteyttä verkkovastaavaasi.
 Napsauta tässä siirtyäksesi asetussivulle
+Muokkaa <a>napsauttamalla tätä.</a>
 Tarkista ja määritä asetus itse.
 Jos ongelma ei poistu, muuta yhteysasetukset manuaalisesti.
 Uudista WAN.
@@ -906,8 +924,8 @@ For faster video streaming experience including Youtube, Netflix and Spotify, et
 Web-surffailu
 Tämä tila sopii yleiseen web-selailuun ja verkkoviiveen välttämiseen tiedostonsiirron aikana.
 Learn-From-Home
-Choose this mode for a smooth streaming of online video-learning experience.This category includes Coursera, Khan, Udemy, TED, edX, etc.
-Choose this mode to ensure a smooth agile online conferencing experience.This category includes VoIP, instant messaging, mail service, etc.
+Choose this mode for a smooth streaming of online video-learning experience. This category includes Coursera, Khan, Udemy, TED, edX, etc.
+Choose this mode to ensure a smooth agile online conferencing experience. This category includes VoIP, instant messaging, mail service, etc.
 Uudella tilillä ei ole luku/kirjoitus-käyttöoikeudet.
 Lisää uusi tili
 Uuden kansion oletuskäyttöoikeudet ovat luku/kirjoitus.
@@ -1515,6 +1533,7 @@ Internet-palveluntarjoajan toimittama isäntänimi:
 Jos WAN-yhteystyyppisi on PPTP tai L2TP, anna palvelimen nimi tai VPN-palvelimen palvelin-IP-osoite.
 Tässä kentässä voi RT-AX53U-palvelimelle antaa isäntänimen. Yleensä internet-palveluntarjoaja kysyy sitä.
 0 tarkoittaa, ettei kaistanleveydellä ole rajaa.
+Takaisin
 Pois käytöstä
 Pois käytöstä
 Käytössä
@@ -1527,8 +1546,10 @@ WAN-asetuksiin
 Ominaisuus
 Kuvavarmennus
 Syötä kuvavarmennus.
+Jos haluat ottaa sen käyttöön, muuta asetukset <a id = \"setting_link\" target=\"_blank\" style=\"text-decoration:underline;\">täältä</a>.
 Varmista, että Ethernet-/verkkokaapeli on liitetty oikein
 Reititin tarkistaa, onko ASUS-palvelimella laiteohjelmistopäivityksiä.
+Valitse muut asetukset ja yritä uudelleen.
 Ei kerää mitään tietoja käyttäjistä, ja sen käyttöön sovelletaan Sveitsin yksityisyydensuojalakia.
 Asiakkaan nimi
 Kuvaketta
@@ -1635,6 +1656,7 @@ Russia
 Singapore
 The United States
 Kanada
+Luo tili
 Luo ilmainen tili
 Taso 2 CTF ei ole tuettu PPPoE:sä, PPTP:ssä tai L2TP:ssä. Vaihtaaksesi Taso 1 CTF:ään, napsauta Vahvista.
 Otetaanko HW Accelerator
@@ -1942,7 +1964,7 @@ Epävakaa yhteysongelma
 Langattomaan verkkoon ei voi muodostaa yhteyttä
 Valitse mikä vaihtoehto kuvaa parhaiten DSL-laitteesi suorituskykyä
 Yhteydenottotapa
-Maa / alue
+Alue
 Peruuta virheenkorjauksen sieppaus
 Diagnostiikka-virheenkorjauslokin sieppaus käynnissä
 Diagnostiikan virheenkorjauslokin sieppauksen kesto
@@ -2246,22 +2268,30 @@ Luo uusi
 Kopioi toinen
 Vieraita yhteensä
 vieraita
+Muodosta ajoitettuun käyttöoikeuteen tai kertapääsyyn perustuva verkko.
+Suositellaan ostoskeskuksiin, kuntosaleille tai ystävien välille.
 Käyttöraja
 Vain internet-käyttö
 Käytä samaa asetusta kuin
 Yritysverkko
 Mukautettu verkko
+Työntekijä
 Luo turvallinen ja suojattu verkko
+Toimisto, joka antaa oikeudet osastoille
 Luo nopeasti vierailijaverkko
 IoT-verkko
 Erota helposti verkko IoT-laitteitasi varten
+Suositellaan valvontalaitteille, puheohjaukselle, valaisimille, ovikellokameralle, älylukitukselle ja antureille.
 Lasten verkko
 Varmista internetyhteyden turvallisuus lapsille
 Vierailijaportaali
-Luo vierailijaportaali tai Facebook-Wi-Fi
+Luo vierailijaportaali
+Luo vahtisivu digitaalimarkkinointia varten
+Suositellaan ravintoloille, hotelleille tai liikkuville ravintoloille
 Portaalin tyyppi
 VPN-verkko
 Luo suojattu internetyhteys
+Muodosta suojattu internetyhteys VPN:n avulla. Suositellaan etätöihin ja haarakonttoreihin.
 Tämä VPN-profiili on pois käytöstä. Siirry VPN-palvelimen asetussivulle ja ota se käyttöön.
 Siirry VPN-asetussivulle napsauttamalla [ Siirry asetuksiin ] alla.
 Tätä asetusta ei voi valita, kun käytetään jonkun muun luomaa profiilia.
@@ -2269,8 +2299,15 @@ Kotiverkko
 Nyt ei ole VPN-profiilia. Siirry VPN-asetussivulle napsauttamalla [Siirry asetuksiin] alla ja luo se.
 Lisää verkko
 Profiililuettelo
+Ajoitettu verkko
 Valitse määritetty verkko
+Luo skenaarioosi perustuva verkko
+Itse määritetty verkko
+Skenaarioiden tarkastelu
 Wi-Fi-ajoitus
+Suunnittele langattoman verkon päivittäinen tai viikoittainen verkkoaika.
+Suositellaan etäopiskeluun, luokkahuoneisiin tai lapsille.
+Määritä käyttöoikeustaso monenlaisia käyttöjä varten verkon tietoturvan parantamiseksi.
 Laiteohjelmistoversio
 Help
 Saat Ohjeista ohjeita ja tietoja reitittimen toimintojen käyttämisestä. Napsauta
@@ -2282,6 +2319,7 @@ Korkea
 Korkein
 Korkeimman ensisijaisuuden paketti
 tuntia
+KÄYTTÖÖNOTTO
 Internet-yhteys epäonnistui. Yritä uudelleen tai tarkista tiliasetuksesi internet-palveluntarjoajaltasi (ISP).
 Valitse internet-palveluntarjoajasi sijainti.
 Sijainti
@@ -2322,7 +2360,7 @@ Pariuttaaksesi manuaalisesti ASUS-reitittimen IFTTT kanssa, kopioi ja liitä all
 Valitse olemassa olevista appleteista tai luo omia appletteja <a id="ifttt_applet_link">ASUS-reititinkanavalla</a>
 <a id="ifttt_signin">Kirjaudu sisään</a> IFTTT-tilillesi.
 Käynnistä automaatioelämä ASUS-reitittimellä ja IFTTT:llä!
-Näin pääset alkuun:
+Aloittaminen :
 kohdassa
 Reititin ei voi muodostaa yhteyttä ASUS-palvelimeen laiteohjelmiston päivityksen tarkistamista varten. Lataa viimeisin laiteohjelmisto ASUS-tuotetukisivustosta ja tee manuaalinen päivitys.
 Bändi
@@ -2447,6 +2485,9 @@ IPv6 LAN-asetus
 Native
 OCN Virtual Connect
 v6plus
+Jos haluat käyttää niitä, katso käytettävä porttialue %0$@ -sovelluksesta ja muuta näiden ominaisuuksien portin numero sopivalle alueelle.
+Porttiin liittyvissä asetuksissa voi ilmetä epävastaavuusongelma nykyisellä %2$@:n porttialueella.
+%3$@:n erikoisporttialueella voi tapahtua porttien epävastaavuusongelma. Se ei vaikuta internetiisi, vaan vain seuraaviin portteihin liittyviin asetuksiin. Jos haluat käyttää niitä, katso käytettävä porttialue <a target='_self' style='text-decoration:underline;' href='Main_IPV6Status_Content.asp'>IPv6 Log</a> -sovelluksesta ja muuta näiden ominaisuuksien portin numero sopivalle alueelle.
 IPv6-etuliitteen pituus
 IPv4 Anycast -välitys
 Staattinen IPv6
@@ -2631,7 +2672,7 @@ Jos MACin suodatinluettelossa on merkintöjä, poista merkinnät napsauttamalla 
 Manuaalinen
 Määritä manuaalisesti
 Kaupunki
-Maa/Alue
+Alue
 Saatat tarvita VLAN-tunnusta PTM-yhteyden asettamiseksi. Älä muuta VLAN ID -tunnusta, ellei palveluntarjoaja kehota tekemään niin.
 Quick Setup -asennuksen avulla voit määrittää nopeasti RT-AX53U WAN-asetukset. Valitse maa ja Internet-palveluntarjoajan nimi avattavasta luettelosta, napsauta Seuraava ja syötä tarvittavat tiedot. Ota tarvittaessa yhteyttä Internet-palveluntarjoajaan DSL-yhteysasetusta koskevien tietojen saamiseksi.
 ATM PVC -yhteyttä varten tarvitset virtuaalipolun tunnisteen (Virtual Path Identifier, VPI) ja virtuaalikanavan tunnisteen (Virtual Channel Identifier, VCI). Älä muuta VPI- ja VCI-numeroita ellei Internet-palveluntarjoajasi kehota tekemään niin.
@@ -2641,6 +2682,8 @@ Huomautus:
 Manuaalinen pika-asetus
 Katso RT-AX53U-laitteen WAN-asetukset. Jos haluat lisätä uuden asetuksen, seuraa näytöllä olevia ohjeita. Jos haluat muuttaa edellistä asetusta, avaa [Lisäasetukset] -> [WAN] -> [Internet-yhteys].
 Valmistaja
+Päivitä KARTTA
+KARTTASÄÄNNÖN uudelleen määrittämisessä kestää 1–2 minuuttia Kaikkien yhdistettyjen laitteidesi internetyhteys katkeaa päivityksen ajaksi.
 Maksimikaistanleveysraja
 Aseta enimmäisraja kaistanleveydelle palvelimelle ladattaessa.
 Tietokoneiden enimmäismäärä
@@ -2692,6 +2735,7 @@ LTE-kaista
 Latasit väärän laiteohjelmiston moduulin päivittämiseksi. Valitse oikea ja päivitä uudelleen!
 4G-modeemin laiteohjelmisto
 Mobiililaajakaistamodeemin tiedot
+Käytä puhelinta modeemina
 Modeemin ohjelmistoversio
 PIN-koodi vaaditaan.
 PIN2-koodi vaaditaan.
@@ -2822,7 +2866,9 @@ Kohde
 Jäljitä reitti isäntään
 Herätys lähiverkon kautta
 Herätä
+Tietoja ominaisuudesta
 Uusi ominaisuus käytettävissä
+Ominaisuuden kuvaus
 Uusi kansion nimi
 Uusi modeemin laiteohjelmisto
 Seuraava sivu
@@ -2837,6 +2883,7 @@ Kytke WiFi päälle käyttääksesi WPS-toimintoa.
 Ottaaksesi WPS-toiminnon käyttöön, muuta todennusmenetelmäksi WPA2 tai WPA-Auto.
 Jos haluat ottaa WPS:n käyttöön, sinun on ensin poistettava SSID:n piilottaminen käytöstä.
 Note: New patch will be updated regularly, please keep your firmware stay up to date.
+Ilmoitus
 Ilmoituskohde
 Asiakaslaitteiden määrä
 Siirry osoitteeseen <a href="https://iplookup.asus.com/nslookup.php" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">https://iplookup.asus.com/nslookup.php</a> etsiäksesi staattisen osoitteen ASUS DDNS -palvelun käyttämiseksi.
@@ -2924,6 +2971,7 @@ Porttimääritys sallii tietyn LAN-portin IPTV WAN -liittymän. Voit valita sopi
 Ota porttimääritys käyttöön
 LAN-portti
 SSH-portti
+Portin tila
 Näiden porttien yhteysnopeutta voidaan parantaa.
 Katso seuraavat tulokset/vianmääritysvinkit.
 Tarkistettavat seikat
@@ -2933,6 +2981,9 @@ Vanha laite voi hidastaa yhteysnopeutta.
 Tarkista internetpalveluntarjoajasi kanssa solmimasi palvelusopimus.
 Vaihda Ethernet-kaapelisi tyypin #ETHCABLE kaapeliin tai uudempaan.
 Tämä portti on kohteelle
+Kun %1$@ määritetään porttina %2$@, \”%3$@\”-toiminto poistetaan käytöstä; haluatko varmasti jatkaa?
+Tämä toiminto on pois käytöstä, koska %1$@ on määritetty kohteena %2$@.
+Porttia %1$@ ja %2$@ ei voi määrittää samaksi portiksi.
 Tällä sivulla näytetään portinsiirtotila. Jotkut P2P-ohjelmat käyttävät UpnP-protokollaa portin avaamiseen ja porttinumero näkyy tällä sivulla.
 RT-AX53U on tunnistanut yhteystyypin PPPoE. Jos yhteystyyppi on oikea, syötä käyttäjänimi/salasana ja napsauta Käytä.<br>Jos yhteystyyppi ei ole oikea, napsauta Manuaalinen asetus ja määritä yhteystyyppi uudelleen.
 Näppäile internet-palveluntajoajalta (ISP) saamasi käyttäjänimi/salasana ja napsauta Seuraava.
@@ -2994,6 +3045,7 @@ Tuotteen rekisteröinti
 Tarjoaja
 Kapselointi
 Kapselointitapa
+Julkinen avain
 Push
 Haluatko varmasti poistaa tämän PVC:n?
 Muokkaa PVC:tä
@@ -3086,6 +3138,20 @@ Kaksinkertaiset tai samat VPI- Ja VCI-asetukset.
 Järjestelmä käynnistyy nyt uudelleen! Odota. Sinut ohjataan uudelleen RT-AX53U-kotisivulle.
 Skaalaa
 Etsitään
+Haarakonttori
+Luokkahuone
+Kahvila
+Sähköauton latausasema
+Ystävät
+Hotelli
+Ostoskeskus
+Etäopiskelu
+Älykoti
+Ravintola
+Lapset
+Puheavustus
+Valvontalaitteet
+Kotona työskenteleminen
 sekuntia
 Suojaustaso
 Valitse kaikki
@@ -3128,7 +3194,7 @@ Click on this checkbox if you want to share the config file for debugging. Since
 Asetukset
 Napsauta <a id="redirect_to_setup">tässä</a> mukauttaaksesi. Katso lisätietoja tästä <a id="redirect_to_FAQ">Usein kysyttyä -osasta</a>.
 Aseta solmu
-Place your RT-AX53U router and node(s) in the same room and at least 1 meter apart during the setup process.
+Aseta RT-AX53U -reitittimesi ja solmusi samaan huoneeseen ja vähintään 1 metrin päähän toisistaan asennusprosessin ajaksi.
 Pidä virta päällä ja valmiustilassa järjestelmän asetusta varten.
 Laitenimi
 Valitse oikeat, tiedostojen koodaukselle sopivat kieliasetukset.
@@ -3279,6 +3345,10 @@ System adjustment
 Temperature unit
 Fan speed
 Muuta reitittimen kirjautumissalasana-, aikavyöhyke- ja NTP-palvelinasetukset.
+Pääverkon lisäksi voit luoda ylimääräisen itse määritellyn verkon erilaisiin tarkoituksiin.
+Itse määritelty verkko on erillään pääverkon toimialueesta ja tarjoaa suojatumman yhteyden.
+Itse määritellyssä verkossa voit määrittää erilaisia salaustapoja, aikatauluja, oikeuksia, AiMeshin, kaistanleveysrajoituksia jne. saavuttaaksesi kattavan verkkoympäristön.
+Haluatko lisätä ylimääräisen langattoman verkon erikoiskäyttöä varten?
 Perusmääritys
 LAN
 Muut
@@ -3453,6 +3523,7 @@ Poistetaan asennusta
 Online-päivitys on käytettävissä
 Päivittää...
 Lähetyskaistanleveys
+Lataa konfiguraatio palvelimelle
 Ensisijaisuus palvelimelle lataamisessa
 Dataa lähetetty/sekuntia
 Dataa lähetetty
@@ -3515,6 +3586,10 @@ Uusi aliverkko
 Tunnisteeton
 Tunnisteellinen
 Ohita
+%@ käyttää tätä porttia / näitä portteja.
+Portin eristys
+VLAN-profiili
+VLAN-kytkimen hallinta-asetukset
 Tämän arvon tulee olla suurempi kuin
 Tämän arvon tulee olla pienempi kuin
 Client will use VPN to access
@@ -3556,7 +3631,7 @@ Mukautettu määritys
 RT-AX53U luo automaattisesti .ovpn-tiedoston, jossa on Sertifiointivaltuutusavain. Voit tarjota .ovpn-tiedoston, jossa on käyttäjätunnus ja salasana, kaikille käyttäjille, jotka on yhdistetty OpenVPN-palvelimeen.
 Voit muuttaa OpenVPN-palvelimen asetuksia siirtymällä kohtaan Lisäasetukset
 Voit muuttaa OpenVPN-palvelimen oletusasetuksia tarjotaksesi mukautetun OPVN-tiedoston määrätylle yhteystyypille.
-If your WAN IP address is dynamic, please click <a href="http://ZVDOMAIN_NAMEVZ/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
+If your WAN IP address is dynamic, please click <a href="/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
 Varaa DHCP:stä
 Salaus
 Reititys ristiriita! <p>Tarkista asiakkaan IP-osoiteasetukset Lisäasetukset-sivulta tai tarkista reititystaulukko Järjestelmälokista.
@@ -3655,18 +3730,40 @@ Päivitys epäonnistui. Yritä uudelleen.
 Kaikki VPN-asiakkaasi muodostavat uudelleen yhteyden, kun olet valinnut Käytä. Haluatko varmasti jatkaa?
 Tuettu IKE-versio
 aseta DDNS napsauttamalla tätä.
+* VPN WiFi on jo käytössä.
+How to set up WireGuard® server?
+How to set up site to site VPN with WireGuard®?
+How to set up WireGuard® client in VPN Fusion?
+VPN-todennus
+Asiakasvarmenne
+Asiakkaan avain
+Varmenteen kumoamisluettelo
+Samanaikaisesti aktiivisten VPN-yhteyksien enimmäismäärä on rajoitettu kahteen. Ole hyvä ja poista yksi olemassa olevista VPN-yhteyksistä käytöstä ennen uuden aktivointia.
+Järjestelmä voi aktivoida yhden Surfshark-yhteyden kerrallaan. Poista nykyinen Surfshark-yhteys käytöstä ennen uuden aktivointia.
+Oletusyhteys
 VPN (Virtual Private Network) -asiakkaat on usein yhdistetty VPN-palvelimeen yksityisten resurssien käyttämiseksi turvallisesti julkisessa verkossa.
 Eräät laitteen, kuten digisovittimen, äly-TV:t ja Blu-ray-soittimet eivät tue VPN-ohjelmistoa.
 ASUSWRT VPN -ominaisuus tarjoaa VPN-yhteyden kaikille kotiverkon laitteille tarvitsematta asentaa VPN-ohjelmistoa kaikkiin laitteisiin.
+Päätepisteen osoite
+Päätepisteen portti
+Koska turvallisuutesi verkossa on tärkeintä.
+Sallitut IP-osoitteet
 Muuta reitittimesi LAN-aliverkkoa; katso <a target='_blank'>usein kysytyistä kysymyksistä</a> tarkemmat tiedot.
+Pysyvä voimassaolon ylläpito
 Verkosta verkkoon Asiakas/Vertainen
 IPSec VPN -asiakas antaa RT-AX53U:n muodostaa yhteyden Verkosta verkkoon IPSec-palvelimen/asiakkaan kanssa tai antaa laitteiden muodostaa yhteyden suoraan keskenään Vertaiselta vertaiselle -tavalla.
 Tässä käytetään kahta RT-AX53U:tä esimerkkinä Vertaiselta vertaiselle- verkon selittämiseen. Sinun on ensin luotava IPSec-vertaisprofiili tällä sivulla ja luotava sitten toinen vertainen toisella RT-AX53U:llä vastaavilla määrityksillä.
+Profiili
+Käytä kaikissa laitteissa
+Yhdistä laitteita tähän profiiliin
+Poista profiili
+Valitse toinen VPN-profiili oletusarvoisen internetin WANin peruuttamiseksi.
 Käynnistä VPN-yhteys seuraavien vaiheiden mukaisesti:
 Lisää profiili
 Valitse VPN-yhteystyyppi
 Syötä VPN-toimittajalta saamasi VPN-varmennustiedot ja muodosta sitten yhteys.
 VPN-asiakas
+Vertaiskäyttäjä
 Jos käytät VPN-asiakasta ja PPPoE-yhteyttä, reitittimesi käynnistetään uudelleen, jotta NAT-kiihdytys poistetaan käytöstä. Haluatko varmasti jatkaa?
 Este
 Määritä RT-AX53U:n Ethernet WAN -asetukset.
@@ -3730,18 +3827,19 @@ Enable Ping to Internet
 TCP MSS -valinta
 tavua
 VLAN-tunnus
-WAN-aggregaatio yhdistää kaksi verkkoyhteyttä, jolloin WANin nopeus nousee jopa 2 Gbps:ään. Yhdistä reitittimen WAN-portti ja LAN 4-portti modeemin LAN-portteihin (varmista, että käytät kahta kaapelia, joiden tekniset ominaisuudet ovat samat). <a id="wanAgg_faq" target="_blank" style="color:#FFCC00;text-decoration:underline;">WAN-aggregaatio Usein kysytyt kysymykset</a>
+WAN-yhteyksien yhdistäminen
+WAN-aggregaatio yhdistää kaksi verkkoyhteyttä, jolloin WANin nopeus nousee jopa 2 Gbps:ään. Yhdistä reitittimen #WAN-portti ja LAN 4-portti modeemin LAN-portteihin (varmista, että käytät kahta kaapelia, joiden tekniset ominaisuudet ovat samat). <a id="wanAgg_faq" target="_blank" style="color:#FFCC00;text-decoration:underline;">WAN-aggregaatio Usein kysytyt kysymykset</a>
 Ota WAN-aggregaatio käyttöön
 Kaksois-WAN on aktivoituna reitittimessä. WAN-aggregaation aktivointi poistaa kaksois-WANin käytöstä. Haluatko varmasti jatkaa?
 WAN-aggregaatio on aktivoituna reitittimessä. Kaksois-WANin aktivointi poistaa WAN-aggregaation käytöstä. Haluatko varmasti jatkaa?
 WAN-aggregaatio käyttää reitittimen LAN 4 -porttia. IPTV:n aktivointi poistaa WAN-aggregaation käytöstä. Haluatko varmasti jatkaa?
 IPTV käyttää reitittimen LAN 4 -porttia. WAN-aggregaation aktivointi poistaa IPTV:n käytöstä. Haluatko varmasti jatkaa?
 Sekä kaksois-WAN että IPTV ovat aktivoituina reitittimessä. WAN-aggregaation aktivointi poistaa kaksois-WANin ja IPTV:n käytöstä porttien ristiriitojen välttämiseksi. Haluatko varmasti jatkaa?
-Varmista, että reitittimen WAN-portti ja modeemin LAN-portti on yhdistetty kahdella kaapelilla, joiden spesifikaatio on sama.
+Varmista, että reitittimen #WAN-portti ja modeemin LAN-portti on yhdistetty kahdella kaapelilla, joiden spesifikaatio on sama.
 Varmista, että reitittimen LAN 4 -portti ja modeemin LAN-portti on yhdistetty kahdella kaapelilla, joiden tekniset ominaisuudet ovat samat.
 Kun haluat ottaa WAN-aggregaation käyttöön, mene sivulle <a href="Advanced_WAN_Content.asp" style="color:#FFCC00;text-decoration:underline;">WAN-Internet Connection (WAN-Internet-yhteys)</a>.
 Jos WAN-aggregaation käyttöönotto ei onnistu, yritä uudelleen seuraavien vaiheiden avulla.
-Varmista, että modeemin LAN-portit on jo yhdistetty reitittimen WAN- ja LAN 4 -portteihin kaapeleilla.
+Varmista, että modeemin LAN-portit on jo yhdistetty reitittimen #WAN- ja LAN 4 -portteihin kaapeleilla.
 Varmista, että 802.3ad on aktivoitu modeemistasi
 Varmista, että kaapelit ovat teknisiltä ominaisuuksiltaan samanlaiset (molemmat joko gigabit- tai 10/100 Mbps -tyyppiä)
 Käynnistä reititin uudelleen
@@ -3756,6 +3854,7 @@ WiFi Proxy
 WiFi-tutka
 Asetukset mahdollistavat WiFi-tutkan parametrien määrittämisen.
 Verkkovierailujen sulkulista
+Wi-Fin jakaminen
 WiFi-sivustotutkimus
 WiFi-sivustotutkimus löytää kaikki WiFi-verkot ympäristössäsi.
 Langattoman kanavan tilastot
@@ -4116,7 +4215,7 @@ Aloitus-web-sivun kuvatiedosto ei voi olla tyhjä.
 Tervetuloa
 Olen lukenut ja hyväksyn <span id='terms_service_hyperlink'>palveluehdot</span>
 Jatka
-Useita VPN-yhteyksiä
+VPN Fusion
 mahdollistaa yhteyden luomisen useisiin VPN-palvelimiin samanaikaisesti ja asiakaslaitteen määrittämisen muodostamaan yhteyden eri VPN-käytäviin. Eräät laitteen, kuten digisovittimen, äly-TV:t ja Blu-ray-soittimet eivät tue VPN-ohjelmistoa. Tämä ominaisuus tarjoaa VPN-käytön tällaisille laitteille lähiverkossa ilman VPN-ohjelmiston asentamista älypuhelimen ollessa yhdistettynä internetiin, ei VPN:ään.
 Pelaajilla VPN-yhteys suojaa DDoS-hyökkäyksiltä ja estää PC-pelin tai virtautuksen katkeamisen pelipalvelimilta. VPN-yhteyden rakentaminen voi myös yksinkertaisesti muuttaa IP-osoitteesi alueelle, jossa pelipalvelin sijaitsee, pelipalvelimiin kohdistuvan ping-toiminnan parantamiseksi.
 Aloita seuraavien ohjeiden mukaisesti:
@@ -4243,7 +4342,10 @@ Kytke virta
 *Nykyinen kirjautumissalasanasi on väärä!
 HTTPS on suhteellisesti paremmin suojattu verkkoyhteysprotokolla. Suosittelemme vahvasti siirtymistä ASUS-reitittimen asetussivulle HTTPS-protokollalla.
 Jatka napsauttamalla tätä.
+Skannaa QR-koodi yhdistääksesi
+Käytä puhelinta tämän QR-koodin skannaamiseen ja ilmaiseen Wi-Fiin yhdistämiseen
 Skannaa QR-koodi, niin saat lisätietoja
+Muodosta verkkoyhteys manuaalisesti
 Haluatko edelleen siirtyä asetussivulle <span>HTTP-protokollalla</span>?
 Kun käytetään HTTPS-protokollaa, näyttöön voi tulla varoitusilmoitus, joka ilmoittaa suojausvarmennetta koskevasta ongelmasta selaimessa.
 Selaimen ja ASUS-reitittimen asetussivun (ZVDOMAIN_NAMEVZ) välinen yhteys pysyy suojattuna huolimatta tästä varoitusilmoituksesta.

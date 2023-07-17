@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#842#> - <#418#></title>
+<title><#860#> - <#432#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script language="JavaScript" type="text/javascript" src="/state.js"></script>
@@ -94,14 +94,14 @@ GenContent();
 <tr bgcolor="#4D595D">
 <td valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#747#> - <#418#></div>
+<div class="formfonttitle"><#764#> - <#432#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#3963#></div>
+<div class="formfontdesc"><#4062#></div>
 <div style="margin-top:8px">
 <textarea id="wl_log" cols="63" rows="30" class="textarea_ssh_table" style="width:99%;font-family:'Courier New', Courier, mono; font-size:13px;" readonly="readonly" wrap="off"></textarea>
 </div>
 <div class="apply_gen">
-<input type="button" onClick="location.reload();" value="<#1668#>" class="button_gen" >
+<input type="button" onClick="location.reload();" value="<#1690#>" class="button_gen" >
 </div>
 </td>
 </tr>

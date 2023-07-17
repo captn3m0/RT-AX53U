@@ -26,12 +26,12 @@ showtext(document.getElementById("printerModel"), parent.usbPorts[parent.current
 if(parent.usbPorts[parent.currentUsbPort].deviceName != ""
 && parent.usbPorts[parent.currentUsbPort].serialNum == "<% nvram_get("u2ec_serial"); %>")
 {
-showtext(document.getElementById("printerStatus"), '<#1655#>');
+showtext(document.getElementById("printerStatus"), '<#1677#>');
 document.getElementById("printer_button").style.display = "";
 document.getElementById("button_descrition").style.display = "";
 }
 else{
-showtext(document.getElementById("printerStatus"), '<#1652#>');
+showtext(document.getElementById("printerStatus"), '<#1674#>');
 document.getElementById("printer_button").style.display = "none";
 document.getElementById("button_descrition").style.display = "none";
 }
@@ -70,22 +70,22 @@ document.form.submit();
 <table width="95%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="table1px">
 <tr>
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#2980#></p>
+<p class="formfonttitle_nwm"><#3031#></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="printerModel"></p>
 <div style="margin-top:5px;" class="line_horizontal"></div>
 </td>
 </tr>
 <tr>
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm"><#2986#></p>
+<p class="formfonttitle_nwm"><#3037#></p>
 <p style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;" id="printerStatus"></p>
 <div style="margin-top:5px;" class="line_horizontal"></div>
 </td>
 </tr>
 <tr id="printer_button" style="display:none;">
 <td style="padding:5px 10px 5px 15px;">
-<p class="formfonttitle_nwm" id="monoP" style="width:138px;"><#2985#></p>
-<input id="monoBtn" type="button" class="button_gen" value="<#3846#>" onclick="cleanTask();">
+<p class="formfonttitle_nwm" id="monoP" style="width:138px;"><#3036#></p>
+<input id="monoBtn" type="button" class="button_gen" value="<#3945#>" onclick="cleanTask();">
 <p id="monoDesc" style="padding-left:10px; margin-top:3px; background-color:#444f53; line-height:20px;"><% nvram_get("mfp_ip_monopoly"); %></p>
 <div style="margin-top:5px;" class="line_horizontal"></div>
 </td>
@@ -93,17 +93,17 @@ document.form.submit();
 </table>
 <div id="button_descrition" style="display:none;padding:5px 0px 5px 25px;">
 <ul style="font-size:11px; font-family:Arial; color:#FFF; padding:0px; margin:0px; list-style:outside; line-height:150%;">
-<li><#2978#> <a id="faq" href="" target="_blank" style="text-decoration:underline;">FAQ</a></li>
+<li><#3029#> <a id="faq" href="" target="_blank" style="text-decoration:underline;">FAQ</a></li>
 <li>
-<a id="faq1" href="" target="_blank" style="text-decoration:underline;"><#1408#> FAQ</a>
+<a id="faq1" href="" target="_blank" style="text-decoration:underline;"><#1426#> FAQ</a>
 <br>
-<a href="http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Printer.zip" style="text-decoration:underline;font-weight:bolder;color:#FC0"><#1795#></a>
+<a href="http://dlcdnet.asus.com/pub/ASUS/LiveUpdate/Release/Wireless/Printer.zip" style="text-decoration:underline;font-weight:bolder;color:#FC0"><#1817#></a>
 </li>
 <li>
-<a id="faq2" href="" target="_blank" style="text-decoration:underline;"><#2628#> FAQ (Windows)</a>
+<a id="faq2" href="" target="_blank" style="text-decoration:underline;"><#2669#> FAQ (Windows)</a>
 </li>
 <li>
-<a id="faq3" href="" target="_blank" style="text-decoration:underline;"><#2628#> FAQ (MAC)</a>
+<a id="faq3" href="" target="_blank" style="text-decoration:underline;"><#2669#> FAQ (MAC)</a>
 </li>
 </ul>
 </div>

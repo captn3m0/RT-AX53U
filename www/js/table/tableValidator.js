@@ -44,11 +44,11 @@ invalid_char += _value.charAt(i);
 }
 }
 if(invalid_char != "")
-return'<#343#>" '+ invalid_char +'" !';
+return'<#355#>" '+ invalid_char +'" !';
 if(_value) {
 for(var i = 0; i < keywordArray.length; i++) {
 if( _value.indexOf(keywordArray[i]) >= 0) {
-return keywordArray + " <#2478#>";
+return keywordArray + " <#2519#>";
 }
 }
 }
@@ -119,7 +119,7 @@ _value = $.trim(_value);
 _$obj.val(_value);
 if(_value == "") {
 if(_$obj.hasClass("valueMust"))
-hintMsg = "<#320#>";
+hintMsg = "<#332#>";
 else
 hintMsg = HINTPASS;
 }
@@ -172,7 +172,7 @@ _value = $.trim(_value);
 _$obj.val(_value);
 if(_value == "") {
 if(_$obj.hasClass("valueMust"))
-hintMsg = "<#320#>";
+hintMsg = "<#332#>";
 else
 hintMsg = HINTPASS;
 }
@@ -183,11 +183,11 @@ var PortRange = _value;
 var rangere = new RegExp("^([0-9]{1,5})\:([0-9]{1,5})$", "gi");
 if(rangere.test(PortRange)) {
 if(parseInt(RegExp.$1) >= parseInt(RegExp.$2)) {
-hintMsg = _value + " <#2489#>";
+hintMsg = _value + " <#2530#>";
 }
 else{
 if(!eachPort(RegExp.$1, mini, maxi) || !eachPort(RegExp.$2, mini, maxi)) {
-hintMsg = "<#338#> " + mini + " <#339#> " + maxi;
+hintMsg = "<#350#> " + mini + " <#351#> " + maxi;
 }
 else
 hintMsg = HINTPASS;
@@ -195,7 +195,7 @@ hintMsg = HINTPASS;
 }
 else{
 if(!tableValid_range(_value, mini, maxi)) {
-hintMsg = "<#338#> " + mini + " <#339#> " + maxi;
+hintMsg = "<#350#> " + mini + " <#351#> " + maxi;
 }
 else
 hintMsg = HINTPASS;
@@ -249,7 +249,7 @@ _value = $.trim(_value);
 _$obj.val(_value);
 if(_value == "") {
 if(_$obj.hasClass("valueMust"))
-hintMsg = "<#320#>";
+hintMsg = "<#332#>";
 else
 hintMsg = HINTPASS;
 }
@@ -260,11 +260,11 @@ var PortRange = _value;
 var rangere = new RegExp("^([0-9]{1,5})\:([0-9]{1,5})$", "gi");
 if(rangere.test(PortRange)) {
 if(parseInt(RegExp.$1) >= parseInt(RegExp.$2)) {
-hintMsg = _value + " <#2489#>";
+hintMsg = _value + " <#2530#>";
 }
 else{
 if(!eachPort(RegExp.$1, mini, maxi) || !eachPort(RegExp.$2, mini, maxi)) {
-hintMsg = "<#338#> " + mini + " <#339#> " + maxi;
+hintMsg = "<#350#> " + mini + " <#351#> " + maxi;
 }
 else
 hintMsg = HINTPASS;
@@ -272,7 +272,7 @@ hintMsg = HINTPASS;
 }
 else{
 if(!tableValid_range(_value, mini, maxi)) {
-hintMsg = "<#338#> " + mini + " <#339#> " + maxi;
+hintMsg = "<#350#> " + mini + " <#351#> " + maxi;
 }
 else
 hintMsg = HINTPASS;
@@ -337,7 +337,7 @@ _value = $.trim(_value);
 _$obj.val(_value);
 if(_value == "") {
 if(_$obj.hasClass("valueMust"))
-hintMsg = "<#320#>";
+hintMsg = "<#332#>";
 else
 hintMsg = HINTPASS;
 }
@@ -345,7 +345,7 @@ else {
 var mini = 1;
 var maxi = 65535;
 if(!tableValid_range(_value, mini, maxi)) {
-hintMsg = "<#338#> " + mini + " <#339#> " + maxi;
+hintMsg = "<#350#> " + mini + " <#351#> " + maxi;
 }
 else
 hintMsg = HINTPASS;
@@ -426,7 +426,7 @@ _value = _value.toLowerCase();
 _$obj.val(_value);
 if(_value == "") {
 if(_$obj.hasClass("valueMust"))
-hintMsg = "<#320#>";
+hintMsg = "<#332#>";
 else
 hintMsg = HINTPASS;
 }
@@ -444,12 +444,12 @@ hintMsg = HINTPASS;
 _$obj.val(tableValid_decimalToIPAddr(ipNum));
 }
 else {
-hintMsg = _value + " <#334#>";
+hintMsg = _value + " <#346#>";
 }
 }
 else{ // IP plus netmask
 if(_value.split("/").length > 2) {
-hintMsg = _value + " <#334#>";
+hintMsg = _value + " <#346#>";
 }
 else {
 var ip_tmp = _value.split("/")[0];
@@ -457,16 +457,16 @@ var mask_tmp = parseInt(_value.split("/")[1]);
 ipNum = tableValid_ipAddrToIPDecimal(ip_tmp);
 if(ipNum > startIPAddr && ipNum < endIPAddr) {
 if(mask_tmp == "" || isNaN(mask_tmp))
-hintMsg = _value + " <#334#>";
+hintMsg = _value + " <#346#>";
 else if(mask_tmp == 0 || mask_tmp > 32)
-hintMsg = _value + " <#334#>";
+hintMsg = _value + " <#346#>";
 else {
 hintMsg = HINTPASS;
 _$obj.val(tableValid_decimalToIPAddr(ipNum) + "/" + mask_tmp);
 }
 }
 else {
-hintMsg = _value + " <#334#>";
+hintMsg = _value + " <#346#>";
 }
 }
 }
@@ -521,7 +521,7 @@ _value = $.trim(_value);
 _$obj.val(_value);
 if(_value == "") {
 if(_$obj.hasClass("valueMust"))
-hintMsg = "<#320#>";
+hintMsg = "<#332#>";
 else
 hintMsg = HINTPASS;
 }
@@ -529,9 +529,9 @@ else {
 var hwaddr = new RegExp("(([a-fA-F0-9]{2}(\:|$)){6})", "gi");
 var legal_hwaddr = new RegExp("(^([a-fA-F0-9][aAcCeE02468])(\:))", "gi"); // for legal MAC, unicast & globally unique (OUI enforced)
 if(!hwaddr.test(_value))
-hintMsg = "<#352#>";
+hintMsg = "<#364#>";
 else if(!legal_hwaddr.test(_value))
-hintMsg = "<#313#>";
+hintMsg = "<#325#>";
 else
 hintMsg = HINTPASS;
 }
@@ -606,16 +606,16 @@ _value = $.trim(_value);
 _$obj.val(_value);
 if(_value == "") {
 if(_$obj.hasClass("valueMust"))
-hintMsg = "<#320#>";
+hintMsg = "<#332#>";
 else
 hintMsg = HINTPASS;
 }
 else {
 var ipformat = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
 if(!_value.match(ipformat))
-hintMsg = _value + " <#334#>";
+hintMsg = _value + " <#346#>";
 else if(!validate_dhcp_range(_value))
-hintMsg = _value + " <#334#>";
+hintMsg = _value + " <#346#>";
 else
 hintMsg = HINTPASS;
 }
@@ -679,14 +679,14 @@ _value = $.trim(_value);
 _$obj.val(_value);
 if(_value == "") {
 if(_$obj.hasClass("valueMust"))
-hintMsg = "<#320#>";
+hintMsg = "<#332#>";
 else
 hintMsg = HINTPASS;
 }
 else {
 var ipformat = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
 if(!_value.match(ipformat))
-hintMsg = _value + " <#334#>";
+hintMsg = _value + " <#346#>";
 else
 hintMsg = HINTPASS;
 }

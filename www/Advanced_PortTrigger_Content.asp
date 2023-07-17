@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#842#> - <#395#></title>
+<title><#860#> - <#409#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="/js/table/table.css">
@@ -51,7 +51,7 @@ showautofw_rulelist();
 function well_known_apps(){
 wItem = new Array(new Array("Quicktime 4 Client", "554", "TCP", "6970:32000", "UDP"),new Array("Real Audio", "7070", "TCP", "6970:7170", "UDP"));
 free_options(document.form.TriggerKnownApps);
-add_option(document.form.TriggerKnownApps, "<#725#>", "User Defined", 1);
+add_option(document.form.TriggerKnownApps, "<#742#>", "User Defined", 1);
 for (i = 0; i < wItem.length; i++){
 add_option(document.form.TriggerKnownApps, wItem[i][0], wItem[i][0], 0);
 }
@@ -92,7 +92,7 @@ var filterCurrentEditRuleArray = autofw_rulelist_array;
 validDuplicateFlag = tableRuleDuplicateValidation[tableApi._attr.ruleDuplicateValidation](currentEditRuleArray, filterCurrentEditRuleArray);
 if(!validDuplicateFlag) {
 document.form.TriggerKnownApps.selectedIndex = 0;
-alert("<#2476#>");
+alert("<#2517#>");
 return false;
 }
 autofw_rulelist_array.push(currentEditRuleArray);
@@ -108,7 +108,7 @@ function showautofw_rulelist(){
 var tableStruct = {
 data: autofw_rulelist_array,
 container: "tableContainer",
-title: "<#2395#>",
+title: "<#2433#>",
 capability: {
 add: true,
 del: true,
@@ -116,23 +116,23 @@ clickEdit: true
 },
 header: [
 {
-"title" : "<#2379#>",
+"title" : "<#2417#>",
 "width" : "26%"
 },
 {
-"title" : "<#2382#>",
+"title" : "<#2420#>",
 "width" : "22%"
 },
 {
-"title" : "<#2403#>",
+"title" : "<#2441#>",
 "width" : "10%"
 },
 {
-"title" : "<#2381#>",
+"title" : "<#2419#>",
 "width" : "22%"
 },
 {
-"title" : "<#2403#>",
+"title" : "<#2441#>",
 "width" : "10%"
 }
 ],
@@ -140,31 +140,31 @@ createPanel: {
 inputs : [
 {
 "editMode" : "text",
-"title" : "<#2379#>",
+"title" : "<#2417#>",
 "maxlength" : "18",
 "valueMust" : false,
 "validator" : "description"
 },
 {
 "editMode" : "text",
-"title" : "<#2382#>",
+"title" : "<#2420#>",
 "maxlength" : "11",
 "validator" : "portRange"
 },
 {
 "editMode" : "select",
-"title" : "<#2403#>",
+"title" : "<#2441#>",
 "option" : {"TCP" : "TCP", "UDP" : "UDP"}
 },
 {
 "editMode" : "text",
-"title" : "<#2381#><div class=\"setup_info_icon\" style=\"display:none;margin-left:185px;\"></div>",
+"title" : "<#2419#><div class=\"setup_info_icon\" style=\"display:none;margin-left:185px;\"></div>",
 "maxlength" : "11",
 "validator" : "portRangeS46"
 },
 {
 "editMode" : "select",
-"title" : "<#2403#>",
+"title" : "<#2441#>",
 "option" : {"TCP" : "TCP", "UDP" : "UDP"}
 },
 ],
@@ -221,7 +221,7 @@ function trigger_validate_duplicate(o, v, l, off){
 for(var i = 0; i < o.length; i++)
 {
 if(entry_cmp(o[i][1].toLowerCase(), v.toLowerCase(), l) == 0){
-alert("<#2476#>");
+alert("<#2517#>");
 return false;
 }
 }
@@ -262,38 +262,38 @@ return true;
 <tr>
 <td bgcolor="#4D595D" valign="top" >
 <div>&nbsp;</div>
-<div class="formfonttitle"><#393#> - <#395#></div>
+<div class="formfonttitle"><#407#> - <#409#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#2394#></div>
+<div class="formfontdesc"><#2432#></div>
 <div class="formfontdesc" style="margin-top:-10px;">
-<a id="faq" href="" target="_blank" style="font-family:Lucida Console;text-decoration:underline;"><#395#>&nbspFAQ</a>
+<a id="faq" href="" target="_blank" style="font-family:Lucida Console;text-decoration:underline;"><#409#>&nbspFAQ</a>
 </div>
-<div class="formfontdesc" id="lb_note" style="color:#FFCC00; display:none;"><#2604#></div>
+<div class="formfontdesc" id="lb_note" style="color:#FFCC00; display:none;"><#2645#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 <thead>
 <tr>
-<td colspan="6"><#3281#></td>
+<td colspan="6"><#3351#></td>
 </tr>
 </thead>
 <tr>
-<th colspan="2"><#2380#></th>
+<th colspan="2"><#2418#></th>
 <td colspan="4">
-<input type="radio" value="1" name="autofw_enable_x" class="content_input_fd" onClick="return change_common_radio(this, 'IPConnection', 'autofw_enable_x', '1')" <% nvram_match("autofw_enable_x", "1", "checked"); %>><#187#>
-<input type="radio" value="0" name="autofw_enable_x" class="content_input_fd" onClick="return change_common_radio(this, 'IPConnection', 'autofw_enable_x', '0')" <% nvram_match("autofw_enable_x", "0", "checked"); %>><#186#>
+<input type="radio" value="1" name="autofw_enable_x" class="content_input_fd" onClick="return change_common_radio(this, 'IPConnection', 'autofw_enable_x', '1')" <% nvram_match("autofw_enable_x", "1", "checked"); %>><#194#>
+<input type="radio" value="0" name="autofw_enable_x" class="content_input_fd" onClick="return change_common_radio(this, 'IPConnection', 'autofw_enable_x', '0')" <% nvram_match("autofw_enable_x", "0", "checked"); %>><#193#>
 </td>
 </tr>
 <tr>
-<th colspan="2"align="right" id="autofw_rulelist"><#2397#></th>
+<th colspan="2"align="right" id="autofw_rulelist"><#2435#></th>
 <td colspan="4">
 <select name="TriggerKnownApps" class="input_option" onChange="change_wizard(this);">
-<option value="User Defined"><#725#></option>
+<option value="User Defined"><#742#></option>
 </select>
 </td>
 </tr>
 </table>
 <div id="tableContainer"></div>
 <div class="apply_gen">
-<input name="button" type="button" class="button_gen" onclick="applyRule();" value="<#196#>"/>
+<input name="button" type="button" class="button_gen" onclick="applyRule();" value="<#203#>"/>
 </div>
 </td>
 </tr>

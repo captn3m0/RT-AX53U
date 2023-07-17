@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#842#> - <#2650#></title>
+<title><#860#> - <#2693#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script language="JavaScript" type="text/javascript" src="/state.js"></script>
@@ -34,6 +34,13 @@ display: none;
 cursor: pointer;
 text-decoration: underline;
 }
+.loadingIcon {
+background: url('/images/InternetScan.gif') center no-repeat;
+width: 33px;
+height: 33px;
+background-size: contain;
+display: inline-block;
+}
 </style>
 <script>
 var usb_status_last_time = false;
@@ -51,12 +58,13 @@ var wl2_radio_orig = httpApi.nvramGet(["wl2_radio"], true).wl2_radio;
 var wl0_timesched_orig = httpApi.nvramGet(["wl0_timesched"], true).wl0_timesched;
 var wl1_timesched_orig = httpApi.nvramGet(["wl1_timesched"], true).wl1_timesched;
 var wl2_timesched_orig = httpApi.nvramGet(["wl2_timesched"], true).wl2_timesched;
-var within_hour = "<#2016#>";
+var within_hour = "<#2038#>";
 var updated_within_hour = within_hour.replace('%@', '1'); //<1
-var several_hour = "<#2017#>";
+var several_hour = "<#2039#>";
 var updated_several_hour = several_hour.replace('%2$@', '3'); //1-3
-var several_hours = "<#2018#>";
+var several_hours = "<#2040#>";
 var updated_several_hours = several_hour.replace('%1$@', '3').replace('%2$@', '12'); //3-12
+var fb_state = httpApi.nvramGet(["fb_state"], true).fb_state;
 function initial(){
 show_menu();
 if(dsl_support){
@@ -95,6 +103,14 @@ if(dblog_support)
 init_diag_feature();
 else {
 $(".dblog_support_class").remove();
+}
+if(fb_state == "2"){
+$('html, body').hide();
+redirect();
+}
+else if(fb_state == "0"){
+disbled_feedback_filed(0);
+detect_fb_state();
 }
 if(false){
 $("#fb_email_provider_field").show();
@@ -141,17 +157,21 @@ $("#call_link").attr({"href": call_href});
 }
 function gen_contact_sel(){
 infolist = new Array();
-infolist.push(["<#725#> ...","No_selected"]);
-infolist.push(["<#1987#>","phone"]);
+infolist.push(["<#742#> ...","No_selected"]);
+infolist.push(["<#2009#>","phone"]);
 infolist.push(["QQ","qq"]);
-infolist.push(["<#3750#>","wechat"]);
+infolist.push(["<#3848#>","wechat"]);
 for(var i = 0; i < infolist.length; i++){
 document.form.fb_contact_type.options[i] = new Option(infolist[i][0], infolist[i][1]);
 }
 }
-function check_wan_state(){
-if(sw_mode != 3 && document.getElementById("connect_status").className == "connectstatusoff"){
-document.getElementById("fb_desc_disconnect").style.display = "";
+/*
+* option status:
+* 0: feedback proceeding
+* 1: wan disconnect
+*/
+function disbled_feedback_filed(status){
+document.form.eula_checkbox.disabled = true;
 document.form.fb_country.disabled = true;
 document.form.fb_email.disabled = true;
 document.form.fb_serviceno.disabled = true;
@@ -163,6 +183,18 @@ document.form.fb_ptype.disabled = true;
 document.form.fb_pdesc.disabled = true;
 document.form.fb_comment.disabled = true;
 document.form.btn_send.disabled = true;
+if(status == 0){
+$(".dblog_disabled_status").find("input, textarea, button, select").attr("disabled", true);
+$("#apply_button").css("display", "none");
+$("#loadingIcon").css("display", "");
+}
+else if(status == 1){
+document.getElementById("fb_desc_disconnect").style.display = "";
+}
+}
+function check_wan_state(){
+if(sw_mode != 3 && document.getElementById("connect_status").className == "connectstatusoff"){
+disbled_feedback_filed(1);
 if(dsl_support){
 document.form.fb_ISP.disabled = true;
 document.form.fb_Subscribed_Info.disabled = true;
@@ -200,13 +232,13 @@ setTimeout("check_wan_state();", 3000);
 }
 function gen_ptype_list(url){
 ptypelist = new Array();
-ptypelist.push(["<#725#> ...", "No_selected"]);
-ptypelist.push(["<#1992#>", "Setting_Problem"]);
-ptypelist.push(["<#1936#>", "Connection_or_Speed_Problem"]);
-ptypelist.push(["<#1928#>", "Compatibility_Problem"]);
-ptypelist.push(["<#1996#>", "Suggestion"]);
-ptypelist.push(["<#2007#>", "Technical_Support"]);
-ptypelist.push(["<#897#>", "Other_Problem"]);
+ptypelist.push(["<#742#> ...", "No_selected"]);
+ptypelist.push(["<#2014#>", "Setting_Problem"]);
+ptypelist.push(["<#1958#>", "Connection_or_Speed_Problem"]);
+ptypelist.push(["<#1950#>", "Compatibility_Problem"]);
+ptypelist.push(["<#2018#>", "Suggestion"]);
+ptypelist.push(["<#2029#>", "Technical_Support"]);
+ptypelist.push(["<#915#>", "Other_Problem"]);
 free_options(document.form.fb_ptype);
 document.form.fb_ptype.options.length = ptypelist.length;
 for(var i = 0; i < ptypelist.length; i++){
@@ -221,105 +253,105 @@ var ptype = obj.value;
 desclist = new Array();
 url_group = new Array();
 timelist = new Array();
-desclist.push(["<#725#> ...","No_selected"]);
+desclist.push(["<#742#> ...","No_selected"]);
 url_group.push(["select"]);//false value
 if(ptype == "Setting_Problem"){
-desclist.push(["<#491#>","QIS"]);
+desclist.push(["<#507#>","QIS"]);
 url_group.push(["QIS"]);
-desclist.push(["<#380#>","Network Map"]);
+desclist.push(["<#394#>","Network Map"]);
 url_group.push(["index"]);
-desclist.push(["<#282#>","Guest Network"]);
+desclist.push(["<#292#>","Guest Network"]);
 url_group.push(["Guest_network"]);
-desclist.push(["<#1287#>","AiProtection"]);
+desclist.push(["<#1305#>","AiProtection"]);
 url_group.push(["AiProtection"]);
-desclist.push(["<#898#>","Adaptive QoS"]); //5
+desclist.push(["<#916#>","Adaptive QoS"]); //5
 url_group.push(["AdaptiveQoS"]);
-desclist.push(["<#1911#>","Traditional QoS"]);
+desclist.push(["<#1933#>","Traditional QoS"]);
 url_group.push(["AiProtection"]);
-desclist.push(["<#891#>","Gaming"]);
+desclist.push(["<#909#>","Gaming"]);
 url_group.push(["GameBoost"]);
-desclist.push(["<#3331#>/<#378#>","Traffic Analyzer/Manager"]);
+desclist.push(["<#3401#>/<#392#>","Traffic Analyzer/Manager"]);
 url_group.push(["TrafficMonitor"]);
-desclist.push(["<#468#>","Parental Ctrl"]);
+desclist.push(["<#482#>","Parental Ctrl"]);
 url_group.push(["ParentalControl"]);
-desclist.push(["<#379#>","USB Application"]); //10
+desclist.push(["<#393#>","USB Application"]); //10
 url_group.push(["APP_", "AiDisk", "aidisk", "mediaserver", "PrinterServer", "TimeMachine"]);
 desclist.push(["AiCloud","AiCloud"]);
 url_group.push(["cloud"]);
 desclist.push(["AiMesh","AiMesh"]);
 url_group.push(["AiMesh"]);
-desclist.push(["<#382#>","Wireless"]);
+desclist.push(["<#396#>","Wireless"]);
 url_group.push(["ACL", "WAdvanced", "Wireless", "WMode", "WSecurity", "WWPS"]);
-desclist.push(["<#393#>","WAN"]);
+desclist.push(["<#407#>","WAN"]);
 url_group.push(["WAN_", "PortTrigger", "VirtualServer", "Exposed", "NATPassThrough"]);
-desclist.push(["<#221#>","Dual WAN"]); //15
+desclist.push(["<#230#>","Dual WAN"]); //15
 url_group.push(["WANPort"]);
-desclist.push(["<#389#>","LAN"]);
+desclist.push(["<#403#>","LAN"]);
 url_group.push(["LAN", "DHCP", "GWStaticRoute", "IPTV", "SwitchCtrl"]);
-desclist.push(["<#403#>/<#3490#>","USB dongle"]);
+desclist.push(["<#417#>/<#3561#>","USB dongle"]);
 url_group.push(["Modem"]);
-desclist.push(["<#1785#>","DM"]);
+desclist.push(["<#1807#>","DM"]);
 url_group.push(["DownloadMaster"]);//false value
-desclist.push(["<#398#>","DDNS"]);
+desclist.push(["<#412#>","DDNS"]);
 url_group.push(["DDNS"]);
 desclist.push(["IPv6","IPv6"]); //20
 url_group.push(["IPv6"]);
 desclist.push(["VPN","VPN"]);
 url_group.push(["VPN"]);
-desclist.push(["<#404#>","Firewall"]);
+desclist.push(["<#418#>","Firewall"]);
 url_group.push(["Firewall", "KeywordFilter", "URLFilter"]);
-desclist.push(["<#410#>","Administration"]);
+desclist.push(["<#424#>","Administration"]);
 url_group.push(["OperationMode", "System", "SettingBackup"]);
-desclist.push(["<#747#>","System Log"]);
+desclist.push(["<#764#>","System Log"]);
 url_group.push(["System"]);
-desclist.push(["<#2805#>","Network Tools"]); //25
+desclist.push(["<#2849#>","Network Tools"]); //25
 url_group.push(["Status_"]);
-desclist.push(["<#3020#>","Rescue"]);
+desclist.push(["<#3072#>","Rescue"]);
 url_group.push(["Rescue"]);//false value
-desclist.push(["<#1932#>","Other Devices"]);
+desclist.push(["<#1954#>","Other Devices"]);
 url_group.push(["Other_Device"]);//false value
-desclist.push(["<#3749#>","Fail to access"]);
+desclist.push(["<#3847#>","Fail to access"]);
 url_group.push(["GUI"]);//false value
-desclist.push(["<#414#>","FW update"]);
+desclist.push(["<#428#>","FW update"]);
 url_group.push(["FirmwareUpgrade"]);
 if(isSupport("Instant_Guard")){
-desclist.push(["<#4225#>","Instant Guard"]); //30
+desclist.push(["<#4324#>","Instant Guard"]); //30
 url_group.push(["Instant_Guard"]);
 }
 }
 else if(ptype == "Connection_or_Speed_Problem"){
-desclist.push(["<#1937#>","Wireless speed"]);
-desclist.push(["<#1938#>","Wired speed"]);
-desclist.push(["<#1940#>","Unstable connection"]);
-desclist.push(["<#1939#>","Router reboot"]);
-desclist.push(["<#1941#>","Wireless disconnected"]);
+desclist.push(["<#1959#>","Wireless speed"]);
+desclist.push(["<#1960#>","Wired speed"]);
+desclist.push(["<#1962#>","Unstable connection"]);
+desclist.push(["<#1961#>","Router reboot"]);
+desclist.push(["<#1963#>","Wireless disconnected"]);
 }
 else if(ptype == "Compatibility_Problem"){
-desclist.push(["<#1931#>","modem"]);
-desclist.push(["<#1933#>","other router"]);
-desclist.push(["<#1929#>","OS or Application"]);
-desclist.push(["<#1934#>","printer"]);
-desclist.push(["<#1935#>","USB modem"]);
-desclist.push(["<#1930#>","external hardware disk"]);
-desclist.push(["<#1932#>","network devices"]);
+desclist.push(["<#1953#>","modem"]);
+desclist.push(["<#1955#>","other router"]);
+desclist.push(["<#1951#>","OS or Application"]);
+desclist.push(["<#1956#>","printer"]);
+desclist.push(["<#1957#>","USB modem"]);
+desclist.push(["<#1952#>","external hardware disk"]);
+desclist.push(["<#1954#>","network devices"]);
 }
 else if(ptype == "Suggestion"){
 desclist.splice(0,1);
-desclist.push(["<#1999#>","Translation"]);
-desclist.push(["<#2000#>","UI/UX"]);
-desclist.push(["<#1997#>","Current Feature"]);
-desclist.push(["<#1998#>","New Feature Request"]);
+desclist.push(["<#2021#>","Translation"]);
+desclist.push(["<#2022#>","UI/UX"]);
+desclist.push(["<#2019#>","Current Feature"]);
+desclist.push(["<#2020#>","New Feature Request"]);
 }
 else if(ptype == "Technical_Support"){
 desclist.splice(0,1);
-desclist.push(["<#2005#>","tech_ASUS"]);
-desclist.push(["<#2003#>","tech_Amazon"]);
-desclist.push(["<#2006#>","tech_iOS"]);
-desclist.push(["<#2004#>","tech_Android"]);
+desclist.push(["<#2027#>","tech_ASUS"]);
+desclist.push(["<#2025#>","tech_Amazon"]);
+desclist.push(["<#2028#>","tech_iOS"]);
+desclist.push(["<#2026#>","tech_Android"]);
 }
 else{ //Other_Problem
 desclist.splice(0,1);
-desclist.push(["<#897#>","others"]);
+desclist.push(["<#915#>","others"]);
 }
 if(ptype == "Setting_Problem" && url){
 for(var i = 0; i < url_group.length; i++){
@@ -341,14 +373,14 @@ free_options(document.form.fb_when_occur);
 $(".when_occur_tr").css("display", "none");
 if(ptype == "Setting_Problem" || ptype == "Compatibility_Problem"){
 $(".when_occur_tr").css("display", "");
-timelist.push(["<#725#> ...","No_selected"]);
-timelist.push(["<#2015#>","Just Now"]);
+timelist.push(["<#742#> ...","No_selected"]);
+timelist.push(["<#2037#>","Just Now"]);
 timelist.push([updated_within_hour,"Within 1 hour"]);
 timelist.push([updated_several_hour,"1 - 3 hour(s) ago"]);
 timelist.push([updated_several_hours,"3 - 12 hours ago"]);
-timelist.push(["<#2019#>","Today"]);
-timelist.push(["<#2020#>","Recently"]);
-timelist.push(["<#2021#>","I don’t recall"]);
+timelist.push(["<#2041#>","Today"]);
+timelist.push(["<#2042#>","Recently"]);
+timelist.push(["<#2043#>","I don’t recall"]);
 for(var i = 0; i < timelist.length; i++){
 document.form.fb_when_occur.options[i] = new Option(timelist[i][0], timelist[i][1]);
 }
@@ -363,14 +395,14 @@ free_options(document.form.fb_when_occur);
 $(".when_occur_tr").css("display", "none");
 if(obj.value == "Wireless speed" || obj.value == "Wired speed" || obj.value == "Unstable connection" || obj.value == "Router reboot" || obj.value == "Wireless disconnected"){
 $(".when_occur_tr").css("display", "");
-timelist.push(["<#725#> ...","No_selected"]);
-timelist.push(["<#2015#>","Just Now"]);
+timelist.push(["<#742#> ...","No_selected"]);
+timelist.push(["<#2037#>","Just Now"]);
 timelist.push([updated_within_hour,"Within 1 hour"]);
 timelist.push([updated_several_hour,"1 - 3 hour(s) ago"]);
 timelist.push([updated_several_hours,"3 - 12 hours ago"]);
-timelist.push(["<#2019#>","Today"]);
-timelist.push(["<#2020#>","Recently"]);
-timelist.push(["<#2021#>","I don’t recall."]);
+timelist.push(["<#2041#>","Today"]);
+timelist.push(["<#2042#>","Recently"]);
+timelist.push(["<#2043#>","I don’t recall."]);
 for(var i = 0; i < timelist.length; i++){
 document.form.fb_when_occur.options[i] = new Option(timelist[i][0], timelist[i][1]);
 }
@@ -380,16 +412,16 @@ free_options(document.form.fb_which_band);
 $(".which_band_tr").css("display", "none");
 if(obj.value == "Wireless speed" || obj.value == "Wireless disconnected"){
 $(".which_band_tr").css("display", "");
-bandlist.push(["<#725#> ...","No_selected"]);
+bandlist.push(["<#742#> ...","No_selected"]);
 bandlist.push(["2.4GHz","2.4GHz"]);
 bandlist.push(["5GHz","5GHz"]);
 bandlist.push(["5GHz-1","5GHz-1"]);
 bandlist.push(["5GHz-2","5GHz-2"]);
 bandlist.push(["6GHz","6GHz"]);
-bandlist.push(["<#1395#>","All"]);
-bandlist.push(["<#1976#>","I am not sure"]);
-bandlist.push(["<#1977#>","Issue with the main router"]);
-bandlist.push(["<#1978#>","Issue with node(s)"]);
+bandlist.push(["<#1413#>","All"]);
+bandlist.push(["<#1998#>","I am not sure"]);
+bandlist.push(["<#1999#>","Issue with the main router"]);
+bandlist.push(["<#2000#>","Issue with node(s)"]);
 for(var i = 0; i < bandlist.length; i++){
 document.form.fb_which_band.options[i] = new Option(bandlist[i][0], bandlist[i][1]);
 }
@@ -398,18 +430,18 @@ free_options(document.form.fb_unstable_conn);
 $(".unstable_conn_tr").css("display", "none");
 if(obj.value == "Unstable connection"){
 $(".unstable_conn_tr").css("display", "");
-unstablelist.push(["<#725#> ...","No_selected"]);
-unstablelist.push(["<#1974#>","All WiFi"]);
+unstablelist.push(["<#742#> ...","No_selected"]);
+unstablelist.push(["<#1996#>","All WiFi"]);
 unstablelist.push(["2.4GHz","2.4GHz"]);
 unstablelist.push(["5GHz","5GHz"]);
 unstablelist.push(["5GHz-1","5GHz-1"]);
 unstablelist.push(["5GHz-2","5GHz-2"]);
 unstablelist.push(["6GHz","6GHz"]);
 unstablelist.push(["WAN","WAN"]);
-unstablelist.push(["<#1975#>","Both WiFi and WAN"]);
-unstablelist.push(["<#1976#>","I am not sure"]);
-unstablelist.push(["<#1977#>","Issue with the main router"]);
-unstablelist.push(["<#1978#>","Issue with node(s)"]);
+unstablelist.push(["<#1997#>","Both WiFi and WAN"]);
+unstablelist.push(["<#1998#>","I am not sure"]);
+unstablelist.push(["<#1999#>","Issue with the main router"]);
+unstablelist.push(["<#2000#>","Issue with node(s)"]);
 for(var j = 0; j < unstablelist.length; j++){
 document.form.fb_unstable_conn.options[j] = new Option(unstablelist[j][0], unstablelist[j][1]);
 }
@@ -418,7 +450,7 @@ if(obj.value == "Router reboot" && reboot_schedule_enable_orig == 1){
 $("#occur_hint").show()
 .css("text-decoration", "underline")
 .css("cursor", "pointer")
-.html("<br>- <#1924#>")
+.html("<br>- <#1946#>")
 .click( function(){ redirect_page("reboot_schedule_enable_x"); } );
 $("#occur_hint2").hide();
 }
@@ -429,7 +461,7 @@ if((wl0_timesched_orig == 1 && wl_info.band2g_support)
 $("#occur_hint").show()
 .css("text-decoration", "underline")
 .css("cursor", "pointer")
-.html("<br>- <#1925#>")
+.html("<br>- <#1947#>")
 .click( function(){ redirect_page("wl_timesched"); } );
 }
 if((wl0_radio_orig == 0 && wl_info.band2g_support)
@@ -438,7 +470,7 @@ if((wl0_radio_orig == 0 && wl_info.band2g_support)
 $("#occur_hint2").show()
 .css("text-decoration", "underline")
 .css("cursor", "pointer")
-.html("<br>- <#1926#>")
+.html("<br>- <#1948#>")
 .click( function(){ redirect_page("wl_radio"); } );
 }
 }
@@ -487,7 +519,7 @@ document.location.href = "Feedback_Info.asp";
 }
 function applyRule(){
 if(!document.form.eula_checkbox.checked){
-alert('<#2010#>');
+alert('<#2032#>');
 return false;
 }
 /*if(document.form.feedbackresponse.value == "3"){
@@ -518,7 +550,7 @@ document.form.fb_attach_iptables.value = 0;
 document.form.fb_availability.value = (document.form.fb_availability.value=="No_selected")?"":document.form.fb_availability.value;
 }
 if(document.form.fb_email.value == ""){
-if(!confirm("<#1962#>")){
+if(!confirm("<#1984#>")){
 document.form.fb_email.focus();
 return false;
 }
@@ -529,21 +561,21 @@ var chk_fb_email = document.form.fb_email.value;
 if(document.form.fb_email.value.includes(dstr,0))
 chk_fb_email = document.form.fb_email.value.substring(dstr.length, document.form.fb_email.value.length);
 if(!isEmail(chk_fb_email)){
-alert("<#1961#>");
+alert("<#1983#>");
 document.form.fb_email.focus();
 return false;
 }
 }
 if(is_CN_sku){
 if(document.form.fb_contact_type.value != "No_selected" && document.form.fb_phone.value.length == 0){
-alert("<#320#>");
+alert("<#332#>");
 document.form.fb_phone.focus();
 return false;
 }
 if(document.form.fb_contact_type.value == "phone"){
 if(!validator.phone_CN(document.form.fb_phone, "both"))
 {
-alert("<#1988#>");
+alert("<#2010#>");
 document.form.fb_phone.focus();
 return false;
 }
@@ -551,7 +583,7 @@ return false;
 else if(document.form.fb_contact_type.value == "qq"){
 if(!validator.qq(document.form.fb_phone))
 {
-alert("<#1969#>");
+alert("<#1991#>");
 document.form.fb_phone.focus();
 return false;
 }
@@ -570,7 +602,7 @@ var re_valid = 0;
 document.form.fb_tech_account.disabled = "";
 document.form.fb_tech_account.value = "";
 if(document.form.fb_serviceno.value == "" || document.form.fb_serviceno.value.length == 0){
-alert("<#320#>");
+alert("<#332#>");
 document.form.fb_serviceno.focus();
 return false;
 }
@@ -579,7 +611,7 @@ if(!re_asus.test(document.form.fb_serviceno.value)){
 re_valid++;
 }
 if(re_valid > 0){
-alert("<#333#>");
+alert("<#345#>");
 document.form.fb_serviceno.focus();
 return false;
 }
@@ -589,7 +621,7 @@ else if(document.form.fb_pdesc.value == "tech_Amazon" || document.form.fb_pdesc.
 document.form.fb_serviceno.disabled = "";
 document.form.fb_serviceno.value = "";
 if(document.form.fb_tech_account.value == "" || document.form.fb_tech_account.value.length == 0){
-alert("<#320#>");
+alert("<#332#>");
 document.form.fb_tech_account.focus();
 return false;
 }
@@ -622,7 +654,7 @@ return $(this).val();
 }).get();
 var dblog_service = 0;
 if(service_list_checked.length == 0) {
-alert("<#1956#>");
+alert("<#1978#>");
 return false;
 }
 for(var idx in service_list_checked){
@@ -668,12 +700,12 @@ cnt.value = upper - field.value.length;
 function change_dsl_diag_enable(value) {
 if(value) {
 if(allUsbStatus.search("storage") == "-1"){
-alert("USB disk required in order to store the debug log, please plug-in a USB disk to <#843#> and Enable DSL Line Diagnostic again.");/*untranslated*/
+alert("USB disk required in order to store the debug log, please plug-in a USB disk to <#861#> and Enable DSL Line Diagnostic again.");/*untranslated*/
 document.form.dslx_diag_enable[1].checked = true;
 return;
 }
 else{
-alert("<#1950#> <#1948#>");
+alert("<#1972#> <#1970#>");
 }
 showhide("dslx_diag_duration",1);
 }
@@ -694,19 +726,19 @@ var days = Math.floor(dblog_remaining / 60 / 60 / 24);
 var hours = Math.floor(dblog_remaining / 60 / 60 % 24);
 var minutes = Math.floor(dblog_remaining / 60 % 60);
 var seconds = Math.floor(dblog_remaining % 60);
-var remaining_time_str = "<#2770#> : ";
+var remaining_time_str = "<#2814#> : ";
 if(dblog_remaining == 0) {
 remaining_time_str += "0" + " " + "(Prepare data...)"; //Untranslated
 return remaining_time_str;
 }
 if(days)
-remaining_time_str += days + " <#1690#> ";
+remaining_time_str += days + " <#1712#> ";
 if(hours)
-remaining_time_str += hours + " <#2283#> ";
+remaining_time_str += hours + " <#2320#> ";
 if(minutes)
-remaining_time_str += minutes + " <#2661#> ";
+remaining_time_str += minutes + " <#2704#> ";
 if(seconds)
-remaining_time_str += seconds + " <#3088#> ";
+remaining_time_str += seconds + " <#3154#> ";
 return remaining_time_str;
 };
 $(".dblog_remaining_text").html(transformTime(dblog_remaining));
@@ -719,7 +751,7 @@ $(".dblog_remaining_text").html(transformTime(dblog_remaining));
 }
 }, 1000);
 var dblog_service = parseInt('<% nvram_get("dblog_service"); %>');
-var dblog_service_mapping = ["", "WiFi", "<#1785#>", "<#780#>", "AiMesh"];
+var dblog_service_mapping = ["", "WiFi", "<#1807#>", "<#797#>", "AiMesh"];
 var dblog_service_text = "";
 for(var i = 1; dblog_service != 0 && i <= 4; i++) {
 if(dblog_service & 1) {
@@ -767,16 +799,16 @@ if(dblog_enable == "1") {
 $(".dblog_item_tr").css("display", "");
 if(usb_support) {
 if(allUsbStatus.search("storage") == "-1")
-alert("<#1949#>");
+alert("<#1971#>");
 else {
 if($("input[name=dblog_tousb_cb]").prop("checked"))
-alert("<#1950#>");
+alert("<#1972#>");
 else
-alert("<#1949#>");
+alert("<#1971#>");
 }
 }
 else
-alert("<#1949#>");
+alert("<#1971#>");
 }
 else {
 $(".dblog_item_tr").css("display", "none");
@@ -826,13 +858,13 @@ return sec;
 var selectOption = {};
 var baseOption = {};
 if(hnd_ax_675x_support) {
-selectOption = {"1 <#2283#>" : hour_to_sec(1)};
+selectOption = {"1 <#2320#>" : hour_to_sec(1)};
 }
 if(usb_support && $("input[name=dblog_tousb_cb]").prop("checked")) {
-baseOption = { "12 <#2283#>" : hour_to_sec(12), "1 <#1690#>" : hour_to_sec(24), "2 <#1690#>" : hour_to_sec(48), "3 <#1690#>" : hour_to_sec(72) };
+baseOption = { "12 <#2320#>" : hour_to_sec(12), "1 <#1712#>" : hour_to_sec(24), "2 <#1712#>" : hour_to_sec(48), "3 <#1712#>" : hour_to_sec(72) };
 }
 else {
-baseOption = { "6 <#2283#>" : hour_to_sec(6), "12 <#2283#>" : hour_to_sec(12), "24 <#2283#>" : hour_to_sec(24) };
+baseOption = { "6 <#2320#>" : hour_to_sec(6), "12 <#2320#>" : hour_to_sec(12), "24 <#2320#>" : hour_to_sec(24) };
 }
 Object.assign(selectOption, baseOption);
 $.each(selectOption, function(item, value) {
@@ -853,7 +885,7 @@ $inputHtml2.attr({"name" : "dblog_service_list"});
 $inputHtml2.val(_value);
 $inputHtml2.click(function() {
 if(this.checked) {
-if(!confirm("<#2013#>")){
+if(!confirm("<#2035#>")){
 $(".dblog_service_item.dhd").children().prop("checked", false);
 }
 }
@@ -865,11 +897,11 @@ return $labelHtml2;
 };
 if($("input[name=dblog_service_list_all]").prop("checked")) {
 if(dhdlog_support && $(".dblog_service_item.wifi").length > 0 && $(".dblog_service_item.dhd").length == 0){
-$(".dblog_service_item.wifi").after(gen_appendix_option(16, "<#2012#>", "dhd"));
+$(".dblog_service_item.wifi").after(gen_appendix_option(16, "<#2034#>", "dhd"));
 }
 $("input[name=dblog_service_list]").prop("checked", true);
 if(dhdlog_support && $(".dblog_service_item.dhd").children().prop("checked")) {
-if(!confirm("<#2013#>")){
+if(!confirm("<#2035#>")){
 $(".dblog_service_item.all").children().prop("checked", false);
 $(".dblog_service_item.dhd").children().prop("checked", false);
 }
@@ -901,7 +933,7 @@ $inputHtml.val(_value);
 $inputHtml.click(function() {
 if(dhdlog_support && _text=="WiFi"){
 if(this.checked) {
-$(".dblog_service_item.wifi").after(gen_appendix_option(16, "<#2012#>", "dhd"));
+$(".dblog_service_item.wifi").after(gen_appendix_option(16, "<#2034#>", "dhd"));
 }
 else{
 $(".dblog_service_item.dhd").remove();
@@ -923,7 +955,7 @@ $inputHtml2.attr({"name" : "dblog_service_list"});
 $inputHtml2.val(_value);
 $inputHtml2.click(function() {
 if(this.checked) {
-if(!confirm("<#2013#>")){
+if(!confirm("<#2035#>")){
 $(".dblog_service_item.dhd").children().prop("checked", false);
 }
 }
@@ -942,9 +974,9 @@ if($(".dblog_service_item.noUSB").length > 0)
 $(".dblog_service_item.noUSB").remove();
 if($("input[name=dblog_tousb_cb]").prop("checked")) {
 if(media_support)
-$(".dblog_service_item.all").after(gen_service_option(4, "<#780#>", "noUSB"));
+$(".dblog_service_item.all").after(gen_service_option(4, "<#797#>", "noUSB"));
 if(!nodm_support)
-$(".dblog_service_item.all").after(gen_service_option(2, "<#1785#>", "noUSB"));
+$(".dblog_service_item.all").after(gen_service_option(2, "<#1807#>", "noUSB"));
 }
 }
 if($(".dblog_service_item.wifi").length == 0)
@@ -1024,14 +1056,14 @@ interval_retry++;
 }
 function show_google_auth_status(_status) {
 $("#oauth_google_hint").show();
-var auth_status_hint = "<#1422#>";
+var auth_status_hint = "<#1440#>";
 document.form.fb_email.value = "";
 switch(_status) {
 case "0" :
-auth_status_hint = "<#544#>";
+auth_status_hint = "<#560#>";
 break;
 case "1" :
-auth_status_hint = "<#1421#>";
+auth_status_hint = "<#1439#>";
 var googleAuthInfo = httpApi.nvramGet(["oauth_google_user_email"], true);
 document.form.fb_email.value = googleAuthInfo.oauth_google_user_email;
 break;
@@ -1065,6 +1097,13 @@ setTimeout("redirect()", 1000);
 }
 });
 }
+function detect_fb_state(){
+var fb_state = httpApi.nvramGet(["fb_state"], true).fb_state;
+if(fb_state == "0")
+setTimeout("detect_fb_state();", 5000);
+else
+top.location.href="Advanced_Feedback.asp";
+}
 </script>
 </head>
 <body onload="initial();" onunLoad="return unload_body();" class="bg">
@@ -1073,7 +1112,7 @@ setTimeout("redirect()", 1000);
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center">
 <tr>
 <td>
-<div class="drword" id="drword" style="height:110px;"><#371#> <#683#>...
+<div class="drword" id="drword" style="height:110px;"><#385#> <#700#>...
 <br/>
 <br/>
 </div>
@@ -1126,20 +1165,20 @@ setTimeout("redirect()", 1000);
 <tr>
 <td bgcolor="#4D595D" valign="top" >
 <div>&nbsp;</div>
-<div class="formfonttitle"><#410#> - <#2650#></div>
+<div class="formfonttitle"><#424#> - <#2693#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div id="fb_desc0" class="formfontdesc" style="display:none;"><#1957#></div>
-<div id="fb_desc1" class="formfontdesc" style="display:none;"><#1958#></div>
-<div id="fb_desc_disconnect" class="formfontdesc hint-color" style="display:none;"><#1959#> <a class="hint-color" href="mailto:router_feedback@asus.com?Subject=<%nvram_get("productid");%>" target="_top">router_feedback@asus.com</a></div>
+<div id="fb_desc0" class="formfontdesc" style="display:none;"><#1979#></div>
+<div id="fb_desc1" class="formfontdesc" style="display:none;"><#1980#></div>
+<div id="fb_desc_disconnect" class="formfontdesc hint-color" style="display:none;"><#1981#> <a class="hint-color" href="mailto:router_feedback@asus.com?Subject=<%nvram_get("productid");%>" target="_top">router_feedback@asus.com</a></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
-<th width="30%"><#1944#> *</th>
+<th width="30%"><#1966#> *</th>
 <td>
 <input type="text" name="fb_country" maxlength="30" class="input_25_table" value="" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><#1972#> *</th>
+<th><#1994#> *</th>
 <td>
 <input type="text" name="fb_ISP" maxlength="40" class="input_25_table" value="" autocorrect="off" autocapitalize="off">
 </td>
@@ -1150,7 +1189,7 @@ setTimeout("redirect()", 1000);
 </td>
 </tr>
 <tr id="fb_email_provider_field" style="display: none;">
-<th><#2993#></th>
+<th><#3044#></th>
 <td>
 <div style="float:left;">
 <select class="input_option" name="fb_email_provider" onChange="change_fb_email_provider(this);">
@@ -1166,71 +1205,71 @@ setTimeout("redirect()", 1000);
 </td>
 </tr>
 <tr>
-<th><#1960#> *</th>
+<th><#1982#> *</th>
 <td>
 <input type="text" name="fb_email" maxlength="50" class="input_25_table" value="" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
-<th><#1943#> *</th>
+<th><#1965#> *</th>
 <td>
 <select class="input_option" name="fb_contact_type"></select>
 <input type="text" name="fb_phone" maxlength="50" class="input_25_table" value="" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><#1963#> *</th>
+<th><#1985#> *</th>
 <td>
-<input type="checkbox" class="input" name="attach_syslog" id="attach_syslog_id"><label for="attach_syslog_id"><#747#></label>&nbsp;&nbsp;&nbsp;
-<input type="checkbox" class="input" name="attach_cfgfile" id="attach_cfgfile_id"><label for="attach_cfgfile_id"><#1991#></label>&nbsp;&nbsp;&nbsp;
-<span id="attach_iptables_span" style="color:#FFFFFF;"><input type="checkbox" class="input" name="attach_iptables" id="attach_iptables_id"><label for="attach_iptables_id"><#1971#></label></span>
-<span id="attach_modem_span" style="color:#FFFFFF;"><input type="checkbox" class="input" name="attach_modemlog" id="attach_modemlog_id"><label for="attach_modemlog_id"><#1922#></label></span>
-<input type="checkbox" class="input" name="attach_wlanlog" id="attach_wlanlog_id"><label for="attach_wlanlog_id"><#2011#></label>
+<input type="checkbox" class="input" name="attach_syslog" id="attach_syslog_id"><label for="attach_syslog_id"><#764#></label>&nbsp;&nbsp;&nbsp;
+<input type="checkbox" class="input" name="attach_cfgfile" id="attach_cfgfile_id"><label for="attach_cfgfile_id"><#2013#></label>&nbsp;&nbsp;&nbsp;
+<span id="attach_iptables_span" style="color:#FFFFFF;"><input type="checkbox" class="input" name="attach_iptables" id="attach_iptables_id"><label for="attach_iptables_id"><#1993#></label></span>
+<span id="attach_modem_span" style="color:#FFFFFF;"><input type="checkbox" class="input" name="attach_modemlog" id="attach_modemlog_id"><label for="attach_modemlog_id"><#1944#></label></span>
+<input type="checkbox" class="input" name="attach_wlanlog" id="attach_wlanlog_id"><label for="attach_wlanlog_id"><#2033#></label>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(25,11);"><#1953#> *</a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(25,11);"><#1975#> *</a></th>
 <td>
-<input type="radio" name="dslx_diag_enable" class="input" value="1" onclick="change_dsl_diag_enable(1);"><#187#>
-<input type="radio" name="dslx_diag_enable" class="input" value="0" onclick="change_dsl_diag_enable(0);" checked><#186#>
+<input type="radio" name="dslx_diag_enable" class="input" value="1" onclick="change_dsl_diag_enable(1);"><#194#>
+<input type="radio" name="dslx_diag_enable" class="input" value="0" onclick="change_dsl_diag_enable(0);" checked><#193#>
 <br>
-<span id="storage_ready" class="hint-color" style="display:none;">* <#3488#></span>
-<span id="be_lack_storage" class="hint-color" style="display:none;">* <#2830#></span>
+<span id="storage_ready" class="hint-color" style="display:none;">* <#3559#></span>
+<span id="be_lack_storage" class="hint-color" style="display:none;">* <#2876#></span>
 </td>
 </tr>
 <tr id="dslx_diag_duration">
-<th><#1947#> *</th>
+<th><#1969#> *</th>
 <td>
 <select class="input_option" name="dslx_diag_duration">
-<option value="0" selected><#153#></option>
-<option value="3600">1 <#2283#></option>
-<option value="18000">5 <#2283#></option>
-<option value="43200">12 <#2283#></option>
-<option value="86400">24 <#2283#></option>
-<option value="172800">48 <#2283#></option>
+<option value="0" selected><#160#></option>
+<option value="3600">1 <#2320#></option>
+<option value="18000">5 <#2320#></option>
+<option value="43200">12 <#2320#></option>
+<option value="86400">24 <#2320#></option>
+<option value="172800">48 <#2320#></option>
 </select>
 </td>
 </tr>
 <tr class="dblog_support_class">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(34, 1);"><#1954#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(34, 1);"><#1976#></a></th>
 <td>
 <div class="dblog_disabled_status">
-<input type='radio' name='dblog_enable' id='dblog_status_en' value="1" onclick="diag_change_dblog_status();"><label for='dblog_status_en'><#187#></label>
-<input type='radio' name='dblog_enable' id='dblog_status_dis' value="0" onclick="diag_change_dblog_status();" checked><label for='dblog_status_dis'><#186#></label>
-<label class="storeUSBHint hint-color"><input type="checkbox" name="dblog_tousb_cb" value="1" onclick="diag_change_storeUSB();" checked><#1955#></label>
-<span class="noUSBHint hint-color">* <#2830#></span>
+<input type='radio' name='dblog_enable' id='dblog_status_en' value="1" onclick="diag_change_dblog_status();"><label for='dblog_status_en'><#194#></label>
+<input type='radio' name='dblog_enable' id='dblog_status_dis' value="0" onclick="diag_change_dblog_status();" checked><label for='dblog_status_dis'><#193#></label>
+<label class="storeUSBHint hint-color"><input type="checkbox" name="dblog_tousb_cb" value="1" onclick="diag_change_storeUSB();" checked><#1977#></label>
+<span class="noUSBHint hint-color">* <#2876#></span>
 </div>
 <div class="dblog_enabled_status">
-<span>* <#1946#></span>
+<span>* <#1968#></span>
 <br>
-<span class="dblog_stop_text" onclick="dblog_stop();"><#1945#></span>
+<span class="dblog_stop_text" onclick="dblog_stop();"><#1967#></span>
 </div>
 </td>
 </tr>
 <tr class="dblog_item_tr dblog_support_class">
-<th><#1951#></th>
+<th><#1973#></th>
 <td class="dblog_item_td">
 <div class="dblog_disabled_status">
-<label class="dblog_service_item all"><input type="checkbox" name="dblog_service_list_all" onclick="diag_change_service_list_all();"><#1395#></label>
+<label class="dblog_service_item all"><input type="checkbox" name="dblog_service_list_all" onclick="diag_change_service_list_all();"><#1413#></label>
 </div>
 <div class="dblog_enabled_status">
 <span class="dblog_service_text"></span>
@@ -1238,7 +1277,7 @@ setTimeout("redirect()", 1000);
 </td>
 </tr>
 <tr class="dblog_item_tr dblog_support_class">
-<th><#1947#></th>
+<th><#1969#></th>
 <td>
 <div class="dblog_disabled_status">
 <select class="input_option" name="dblog_duration"></select>
@@ -1249,40 +1288,40 @@ setTimeout("redirect()", 1000);
 </td>
 </tr>
 <tr>
-<th><#1942#></th>
+<th><#1964#></th>
 <td>
 <select class="input_option" name="fb_availability">
-<option value="No_selected"><#725#> ...</option>
-<option value="Stable_connection"><#1993#></option>
-<option value="Occasional_interruptions"><#1985#></option>
-<option value="Frequent_interruptions"><#1970#></option>
-<option value="Unavailable"><#2008#></option>
+<option value="No_selected"><#742#> ...</option>
+<option value="Stable_connection"><#2015#></option>
+<option value="Occasional_interruptions"><#2007#></option>
+<option value="Frequent_interruptions"><#1992#></option>
+<option value="Unavailable"><#2030#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th><#1990#></th>
+<th><#2012#></th>
 <td>
 <select class="input_option" name="fb_ptype" onChange="Reload_pdesc(this);">
 </select>
 </td>
 </tr>
 <tr>
-<th><#1989#></th>
+<th><#2011#></th>
 <td>
 <select class="input_option" name="fb_pdesc" onChange="Change_pdesc(this);">
 </select>
 </td>
 </tr>
 <tr class="which_band_tr" style="display:none;">
-<th><a class="hintstyle" href="javascript:void(0);" onClick=""><#2022#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick=""><#2044#></a></th>
 <td>
 <select class="input_option" name="fb_which_band" onChange="">
 </select>
 </td>
 </tr>
 <tr class="when_occur_tr" style="display:none;">
-<th><a class="hintstyle" href="javascript:void(0);" onClick=""><#2014#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick=""><#2036#></a></th>
 <td>
 <select class="input_option" name="fb_when_occur" onChange="">
 </select>
@@ -1291,31 +1330,31 @@ setTimeout("redirect()", 1000);
 </td>
 </tr>
 <tr class="unstable_conn_tr" style="display:none;">
-<th><a class="hintstyle" href="javascript:void(0);" onClick=""><#1973#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick=""><#1995#></a></th>
 <td>
 <select class="input_option" name="fb_unstable_conn" onChange="">
 </select>
 </td>
 </tr>
 <tr style="display:none;">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(34,2);"><#1420#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(34,2);"><#1438#></a></th>
 <td>
 <input type="text" name="fb_serviceno" maxlength="32" class="input_20_table" placeholder="E1234567890-1234" value="" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr style="display:none;">
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(34,3);"><#2002#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(34,3);"><#2024#></a></th>
 <td>
 <input type="text" name="fb_tech_account" maxlength="64" class="input_32_table" value="" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
 <th>
-<#1927#> *
+<#1949#> *
 </th>
 <td>
 <textarea name="fb_comment" maxlength="2000" cols="55" rows="8" class="textarea_ssh_table" style="font-family:'Courier New', Courier, mono; font-size:13px;" onKeyDown="textCounter(this,document.form.msglength,2000);" onKeyUp="textCounter(this,document.form.msglength,2000)"></textarea>
-<span class="hint-color"><#1979#> : </span>
+<span class="hint-color"><#2001#> : </span>
 <input type="text" class="input_6_table" name="msglength" id="msglength" maxlength="4" value="2000" autocorrect="off" autocapitalize="off" readonly>
 </td>
 </tr>
@@ -1323,16 +1362,17 @@ setTimeout("redirect()", 1000);
 <td colspan="2">
 <div>
 <div style="float: left;"><input type="checkbox" name="eula_checkbox"/></div>
-<div id="eula_content" style="margin-left: 20px;"><#2009#></div>
+<div id="eula_content" style="margin-left: 20px;"><#2031#></div>
 </div>
-<input class="button_gen" style="margin-left: 305px; margin-top:5px;" name="btn_send" onclick="applyRule()" type="button" value="<#1524#>"/>
+<input id="apply_button" class="button_gen" style="margin-left: 305px; margin-top:5px;" name="btn_send" onclick="applyRule()" type="button" value="<#1543#>"/>
+<div id="loadingIcon" style="display:none;"><div class="loadingIcon" style="float: left; margin-left: 305px; margin-top:5px;"></div><div style="float: left; margin-left: 15px; margin-top:10px;"><span class="hint-color"><#387#>...</span></div></div>
 </td>
 </tr>
 <tr>
 <td colspan="2">
-<strong><#2146#></strong>
+<strong><#2168#></strong>
 <ul>
-<li><#1984#><br><a id="call_link" style="font-weight: bolder;text-decoration:underline;cursor:pointer;" href="" target="_blank">https://www.asus.com/support/CallUs/</a></li>
+<li><#2006#><br><a id="call_link" style="font-weight: bolder;text-decoration:underline;cursor:pointer;" href="" target="_blank">https://www.asus.com/support/CallUs/</a></li>
 </ul>
 </td>
 </tr>

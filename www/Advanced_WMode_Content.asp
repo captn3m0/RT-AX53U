@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#842#> - <#385#></title>
+<title><#860#> - <#399#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <style>
@@ -65,7 +65,7 @@ show_menu();
 regen_band(document.form.wl_unit);
 if(lantiq_support){
 checkWLReady();
-var mode_desc = ["<#3860#>"];
+var mode_desc = ["<#3959#>"];
 var mode_value = ["2"];
 add_options_x2(document.form.wl_mode_x, mode_desc, mode_value, "2");
 }
@@ -94,7 +94,7 @@ document.getElementById("submitBtn").style.display = "none";
 document.getElementById("wds_list_title_field").style.display = "none";
 document.getElementById("wds_list_add_delete_field").style.display = "none";
 document.getElementById("wds_list_add_field").style.display = "none";
-document.getElementById("repeaterModeHint_desc").innerHTML = "<#1664#>";
+document.getElementById("repeaterModeHint_desc").innerHTML = "<#1686#>";
 document.getElementById("repeaterModeHint").style.display = "";
 }
 else{
@@ -127,7 +127,7 @@ var wl_wdslist_row = wl_wdslist_array.split('&#60');
 var code = "";
 code +='<table width="100%" border="1" cellspacing="0" cellpadding="4" align="center" class="list_table" id="wl_wdslist_table">';
 if(wl_wdslist_row.length == 1){
-code +='<tr><td style="color:#FFCC00;"><#2410#></td>';
+code +='<tr><td style="color:#FFCC00;"><#2448#></td>';
 }
 else{
 for(var i = 1; i < wl_wdslist_row.length; i++){
@@ -155,11 +155,11 @@ function addRow(obj, upper){
 var rule_num = document.getElementById('wl_wdslist_table').rows.length;
 var item_num = document.getElementById('wl_wdslist_table').rows[0].cells.length;
 if(rule_num >= upper){
-alert("<#2483#> " + upper + " <#2484#>");
+alert("<#2524#> " + upper + " <#2525#>");
 return false;
 }
 if(obj.value==""){
-alert("<#320#>");
+alert("<#332#>");
 obj.focus();
 obj.select();
 return false;
@@ -171,7 +171,7 @@ return false;
 for(i=0; i<rule_num; i++){
 for(j=0; j<item_num-1; j++){
 if(obj.value.toLowerCase() == document.getElementById('wl_wdslist_table').rows[i].cells[j].innerHTML.toLowerCase()){
-alert("<#2476#>");
+alert("<#2517#>");
 return false;
 }
 }
@@ -197,7 +197,7 @@ if(j != item_num-2)
 tmp_value += ">";
 }
 }
-if(tmp_value == "<"+"<#2410#>" || tmp_value == "<"){
+if(tmp_value == "<"+"<#2448#>" || tmp_value == "<"){
 tmp_value = "";
 }
 document.form.wl_wdslist.value = tmp_value;
@@ -266,7 +266,7 @@ code += wds_aplist[i][1];
 code += ' </div></a>';
 }
 }
-code += '<div style="text-decoration:underline;font-weight:bolder;" onclick="rescan();"><#1402#></div>';
+code += '<div style="text-decoration:underline;font-weight:bolder;" onclick="rescan();"><#1420#></div>';
 }
 else{
 code += '<div style="width:98px"><img height="15px" style="margin-left:5px;margin-top:2px;" src="/images/InternetScan.gif"></div>';
@@ -297,7 +297,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<br><br><#352#>";
+document.getElementById("check_mac").innerHTML="<br><br><#364#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else if(flag == 2){
@@ -305,7 +305,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<br><br><#313#>";
+document.getElementById("check_mac").innerHTML="<br><br><#325#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else{
@@ -387,28 +387,28 @@ $("#lantiq_ready").hide();
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#382#> - <#385#></div>
+<div class="formfonttitle"><#396#> - <#399#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#3799#></div>
-<div class="formfontdesc hint-color"><#921#></div>
+<div class="formfontdesc"><#3898#></div>
+<div class="formfontdesc hint-color"><#939#></div>
 <div class="formfontdesc hint-color" style="margin-left:28px;">
-<#3800#>&nbsp;<#3801#><br><#3128#>
+<#3899#>&nbsp;<#3900#><br><#3194#>
 </div>
-<div class="formfontdesc"><#3802#>
+<div class="formfontdesc"><#3901#>
 <ol>
-<li><#3803#></li>
-<li><#3804#></li>
-<li><#3805#></li>
-<li><#3806#></li>
+<li><#3902#></li>
+<li><#3903#></li>
+<li><#3904#></li>
+<li><#3905#></li>
 </ol>
 </div>
-<div id="wl_bw_hint" class="hint-color" style="font-size:13px;margin-left:28px;"><#3807#></div>
-<div id="wl_ch_hint" class="hint-color" style="font-size:13px;margin-left:28px;"><#3808#></div>
+<div id="wl_bw_hint" class="hint-color" style="font-size:13px;margin-left:28px;"><#3906#></div>
+<div id="wl_ch_hint" class="hint-color" style="font-size:13px;margin-left:28px;"><#3907#></div>
 <div id="lantiq_ready" style="display:none;margin-left:5px;font-size:13px;">Wireless is setting...</div>
 <table id="MainTable1" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#3281#></td>
+<td colspan="2"><#3351#></td>
 </tr>
 </thead>
 <tr id="wl_2g_mac">
@@ -430,53 +430,53 @@ $("#lantiq_ready").hide();
 </td>
 </tr>
 <tr id="wl_unit_field">
-<th><#2327#></th>
+<th><#2365#></th>
 <td>
 <select name="wl_unit" class="input_option" onChange="change_wl_unit();"></select>
 </td>
 </tr>
 <tr id="repeaterModeHint" style="display:none;">
-<td id="repeaterModeHint_desc" colspan="2" class="hint-color" style="height:30px;" align="center"><#467#></td>
+<td id="repeaterModeHint_desc" colspan="2" class="hint-color" style="height:30px;" align="center"><#481#></td>
 </tr>
 <tr id="wds_mode_field">
 <th align="right">
 <a class="hintstyle" href="javascript:void(0);" onClick="openHint(1,1);">
-<#3857#></a>
+<#3956#></a>
 </th>
 <td>
 <select name="wl_mode_x" class="input_option" onChange="change_wireless_bridge(this.value);">
-<option value="0" <% nvram_match("wl_mode_x", "0","selected"); %>><#3858#></option>
-<option value="1" <% nvram_match("wl_mode_x", "1","selected"); %>><#3859#></option>
-<option value="2" <% nvram_match("wl_mode_x", "2","selected"); %>><#3860#></option>
+<option value="0" <% nvram_match("wl_mode_x", "0","selected"); %>><#3957#></option>
+<option value="1" <% nvram_match("wl_mode_x", "1","selected"); %>><#3958#></option>
+<option value="2" <% nvram_match("wl_mode_x", "2","selected"); %>><#3959#></option>
 </select>
 </td>
 </tr>
 <tr id=wds_wdsapply_field>
 <th align="right">
 <a class="hintstyle" href="javascript:void(0);" onClick="openHint(1,3);">
-<#3874#>
+<#3973#>
 </a>
 </th>
 <td>
-<input type="radio" value="1" name="wl_wdsapply_x" class="input" <% nvram_match("wl_wdsapply_x", "1", "checked"); %>><#187#>
-<input type="radio" value="0" name="wl_wdsapply_x" class="input" <% nvram_match("wl_wdsapply_x", "0", "checked"); %>><#186#>
+<input type="radio" value="1" name="wl_wdsapply_x" class="input" <% nvram_match("wl_wdsapply_x", "1", "checked"); %>><#194#>
+<input type="radio" value="0" name="wl_wdsapply_x" class="input" <% nvram_match("wl_wdsapply_x", "0", "checked"); %>><#193#>
 </td>
 </tr>
 </table>
 <table id="MainTable2" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable_table">
 <thead>
 <tr id="wds_list_title_field">
-<td colspan="4"><#3827#>&nbsp;(<#2615#>&nbsp;4)</td>
+<td colspan="4"><#3926#>&nbsp;(<#2656#>&nbsp;4)</td>
 </tr>
 </thead>
 <tr id="wds_list_add_delete_field">
-<th width="80%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);"><#3827#></th>
-<th class="edit_table" width="20%"><#2614#></th>
+<th width="80%"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);"><#3926#></th>
+<th class="edit_table" width="20%"><#2655#></th>
 </tr>
 <tr id="wds_list_add_field">
 <td width="80%">
 <input type="text" style="margin-left:220px;float:left;" maxlength="17" class="input_macaddr_table" name="wl_wdslist_0" onKeyPress="return validator.isHWAddr(this,event)" autocorrect="off" autocapitalize="off">
-<img style="float:left;" id="pull_arrow" height="14px;" src="/images/arrow-down.gif" onclick="pullLANIPList(this);" title="<#3091#>" onmouseover="over_var=1;" onmouseout="over_var=0;">
+<img style="float:left;" id="pull_arrow" height="14px;" src="/images/arrow-down.gif" onclick="pullLANIPList(this);" title="<#3157#>" onmouseover="over_var=1;" onmouseout="over_var=0;">
 <div id="WDSAPList" class="WDSAPList">
 <div style="width:98px">
 <img height="15px" style="margin-left:5px;margin-top:2px;" src="/images/InternetScan.gif">
@@ -490,7 +490,7 @@ $("#lantiq_ready").hide();
 </table>
 <div id="wl_wdslist_Block"></div>
 <div class="apply_gen">
-<input class="button_gen" id="submitBtn" onclick="applyRule()" type="button" value="<#196#>" />
+<input class="button_gen" id="submitBtn" onclick="applyRule()" type="button" value="<#203#>" />
 </div>
 </td>
 </tr>

@@ -47,7 +47,7 @@ var wpa_mode_5_2 = '<% nvram_get("wl2_wpa_mode"); %>';
 if(parent.tmo_support)
 var theUrl = "cellspot.router";
 else
-var theUrl = "<#844#>";
+var theUrl = "<#862#>";
 var timezones = {
 "UTC12": "(GMT-12:00)",
 "UTC11": "(GMT-11:00)",
@@ -200,21 +200,21 @@ if(webs_state_error == "1"){
 progressBar = 100;
 document.getElementById('progress_bar_no').innerHTML = "100%";
 document.getElementById("updateProgress").style.width = "100%";
-document.getElementById("liveUpdateResult").innerHTML = "<#2326#>";
+document.getElementById("liveUpdateResult").innerHTML = "<#2364#>";
 document.getElementById("newFWgraded").style.display = "";
 return false;
 }else if(webs_state_error == "2"){
 progressBar = 100;
 document.getElementById('progress_bar_no').innerHTML = "100%";
 document.getElementById("updateProgress").style.width = "100%";
-document.getElementById("liveUpdateResult").innerHTML = "Memory space is NOT enough to upgrade on internet. Please wait for rebooting.<br><#2136#>"; /* untranslated */ /* Need to fine tune error cases */
+document.getElementById("liveUpdateResult").innerHTML = "Memory space is NOT enough to upgrade on internet. Please wait for rebooting.<br><#2158#>"; /* untranslated */ /* Need to fine tune error cases */
 document.getElementById("newFWgraded").style.display = "";
 return false;
 }else if(webs_state_error == "3"){
 progressBar = 100;
 document.getElementById('progress_bar_no').innerHTML = "100%";
 document.getElementById("updateProgress").style.width = "100%";
-document.getElementById("liveUpdateResult").innerHTML = "<#270#><br><#2136#>";
+document.getElementById("liveUpdateResult").innerHTML = "<#279#><br><#2158#>";
 document.getElementById("newFWgraded").style.display = "";
 }
 if(webs_state_upgrade == ""){ //after reboot
@@ -280,7 +280,7 @@ if(parent.yadns_support && parent.yadns_stage == 2) {
 parent.yadns_stage++;
 checkIsNewFirmware();
 }
-parent.document.title = "<#842#> - <#677#>";
+parent.document.title = "<#860#> - <#694#>";
 if(gobi_support){
 $("#ssid5_block")[0].style.display = "none";
 $("#key5_block")[0].style.display = "none";
@@ -724,11 +724,11 @@ $("#key5_2")[0].innerHTML = handle_show_str(decodeURIComponent(shown_str));
 }
 if(parent.dualWAN_support){
 if(first_wanlink_type() == "dhcp")
-var wanlink_type_conv = "<#167#>";
+var wanlink_type_conv = "<#174#>";
 else if(first_wanlink_type() == "pppoe" || first_wanlink_type() == "PPPOE" )
 var wanlink_type_conv = "PPPoE";
 else if(first_wanlink_type() == "static")
-var wanlink_type_conv = "<#168#>";
+var wanlink_type_conv = "<#175#>";
 else if(first_wanlink_type() == "pptp")
 var wanlink_type_conv = "PPTP";
 else if(first_wanlink_type() == "l2tp")
@@ -737,11 +737,11 @@ else
 var wanlink_type_conv = first_wanlink_type();
 if(parent.wans_dualwan_array[1] != "none"){
 if(secondary_wanlink_type() == "dhcp")
-var secondary_wanlink_type_conv = "<#167#>";
+var secondary_wanlink_type_conv = "<#174#>";
 else if(secondary_wanlink_type() == "pppoe" || secondary_wanlink_type() == "PPPOE" )
 var secondary_wanlink_type_conv = "PPPoE";
 else if(secondary_wanlink_type() == "static")
-var secondary_wanlink_type_conv = "<#168#>";
+var secondary_wanlink_type_conv = "<#175#>";
 else if(secondary_wanlink_type() == "pptp")
 var secondary_wanlink_type_conv = "PPTP";
 else if(secondary_wanlink_type() == "l2tp")
@@ -752,11 +752,11 @@ var secondary_wanlink_type_conv = secondary_wanlink_type();
 }
 else{
 if(wanlink_type() == "dhcp")
-var wanlink_type_conv = "<#167#>";
+var wanlink_type_conv = "<#174#>";
 else if(wanlink_type() == "pppoe" || wanlink_type() == "PPPOE" )
 var wanlink_type_conv = "PPPoE";
 else if(wanlink_type() == "static")
-var wanlink_type_conv = "<#168#>";
+var wanlink_type_conv = "<#175#>";
 else if(wanlink_type() == "pptp")
 var wanlink_type_conv = "PPTP";
 else if(wanlink_type() == "l2tp")
@@ -767,14 +767,14 @@ var wanlink_type_conv = wanlink_type();
 if(parent.dualWAN_support){
 if(gobi_support){
 if(wanlink_type_conv == "USB Modem")
-wanlink_type_conv = "<#2744#>";
+wanlink_type_conv = "<#2788#>";
 document.getElementById("wantype").innerHTML = wanlink_type_conv;
 if(parent.wans_dualwan_array[1] != "none"){
 document.getElementById("wantype2").style.display = "";
 document.getElementById("wanstatus2").style.display = "";
 document.getElementById("wanip2").style.display = "";
 if(secondary_wanlink_type_conv == "USB Modem")
-secondary_wanlink_type_conv = "<#2744#>";
+secondary_wanlink_type_conv = "<#2788#>";
 document.getElementById("wantype2").innerHTML = secondary_wanlink_type_conv;
 }
 }
@@ -793,7 +793,7 @@ $("#wlcip")[0].innerHTML = reIP;
 chkRepeaterConState();
 $(".reItem").css("display", "none");
 $(".wlcItem").css("display", "");
-document.getElementById("tdWlcItem").innerHTML = "<#459#>";
+document.getElementById("tdWlcItem").innerHTML = "<#473#>";
 }
 else if(sw_mode == "4") {
 $("#wlcssid")[0].innerHTML = decodeURIComponent('<% nvram_char_to_ascii("", "wlc_ssid"); %>');
@@ -802,7 +802,7 @@ chkMBConState();
 $(".reItem").css("display", "none");
 $(".wlcItem").css("display", "");
 $(".wlItem").css("display", "none");
-document.getElementById("tdWlcItem").innerHTML = "<#446#>";
+document.getElementById("tdWlcItem").innerHTML = "<#460#>";
 }
 else{
 if(parent.dualWAN_support){
@@ -811,29 +811,29 @@ document.getElementById("wanip").innerHTML = first_wanlink_ipaddr();
 if(wanlink_ipaddr() != "0.0.0.0"){
 if(wans_mode == "fb" || wans_mode == "fo"){
 if( wan_primary == "wan0" )
-document.getElementById("wanstatus1").innerHTML = "<#728#>";
+document.getElementById("wanstatus1").innerHTML = "<#745#>";
 else
-document.getElementById("wanstatus1").innerHTML = "<#730#>";
+document.getElementById("wanstatus1").innerHTML = "<#747#>";
 }
 else //Load-balance
-document.getElementById("wanstatus1").innerHTML = "<#728#>";
+document.getElementById("wanstatus1").innerHTML = "<#745#>";
 }
 else
-document.getElementById("wanstatus1").innerHTML = "<#729#>";
+document.getElementById("wanstatus1").innerHTML = "<#746#>";
 if(parent.wans_dualwan_array[1] != "none"){
 document.getElementById("wanip2").innerHTML = secondary_wanlink_ipaddr();
 if(secondary_wanlink_ipaddr() != "0.0.0.0"){
 if(wans_mode == "fb" || wans_mode == "fo"){
 if( wan_primary == "wan1" )
-document.getElementById("wanstatus2").innerHTML = "<#728#>";
+document.getElementById("wanstatus2").innerHTML = "<#745#>";
 else
-document.getElementById("wanstatus2").innerHTML = "<#730#>";
+document.getElementById("wanstatus2").innerHTML = "<#747#>";
 }
 else //Load-balance
-document.getElementById("wanstatus2").innerHTML = "<#728#>";
+document.getElementById("wanstatus2").innerHTML = "<#745#>";
 }
 else
-document.getElementById("wanstatus2").innerHTML = "<#729#>";
+document.getElementById("wanstatus2").innerHTML = "<#746#>";
 }
 }
 else{
@@ -858,12 +858,12 @@ $(".wanItem").css("display", "none");
 $("#nextButton").css("display", "none");
 if(parent.isStatic){
 $("#lanip")[0].innerHTML = parent.staticIP;
-document.getElementById("applyBtn").innerHTML = "<div style='text-align:left;margin-left:70px;'><br/><br/><#3085#><br><#347#>&nbsp;" + parent.staticIP + "&nbsp;<#348#></div>";
+document.getElementById("applyBtn").innerHTML = "<div style='text-align:left;margin-left:70px;'><br/><br/><#3137#><br><#359#>&nbsp;" + parent.staticIP + "&nbsp;<#360#></div>";
 setTimeout(startQuery, 80000);
 }
 else{
-$("#lanip")[0].innerHTML = "<#167#>";
-document.getElementById("applyBtn").innerHTML = "<div style='text-align:left;margin-left:75px;'><br/><br/><#1725#></div>";
+$("#lanip")[0].innerHTML = "<#174#>";
+document.getElementById("applyBtn").innerHTML = "<div style='text-align:left;margin-left:75px;'><br/><br/><#1747#></div>";
 }
 }
 }
@@ -983,7 +983,7 @@ else if(window.sidebar && window.sidebar.addPanel)
 window.sidebar.addPanel(sTitle, 'http://'+reIP, "");
 else{
 addBookmarkForBrowser = function(){
-alert("<#178#>");
+alert("<#185#>");
 }
 }
 }
@@ -1039,7 +1039,7 @@ systime_millsec += (-client_timezone*60000);
 document.getElementById('change_tz').innerHTML = timezones[system_timezone_dut];*/
 if(system_timezone_dut.search("DST") >= 0){
 document.getElementById('dstzone').style.display = "";
-document.getElementById('dstzone').innerHTML = "<#279#>";
+document.getElementById('dstzone').innerHTML = "<#288#>";
 }
 }
 function showclock(){
@@ -1065,10 +1065,10 @@ setTimeout("chkRepeaterConState();", 1000);
 },
 success: function(response){
 if(wlc_state == 2) {
-$("#wlcstate")[0].innerHTML = "<#101#>";
+$("#wlcstate")[0].innerHTML = "<#107#>";
 }
 else{
-$("#wlcstate")[0].innerHTML = "<span style='color:#FC0;text-decoration:underline;cursor:pointer;' onclick=\"javascript:parent.location.href=\'http://'+ theUrl +'/QIS_wizard_m.htm?flag=sitesurvey_rep\';\"><#99#></span>";
+$("#wlcstate")[0].innerHTML = "<span style='color:#FC0;text-decoration:underline;cursor:pointer;' onclick=\"javascript:parent.location.href=\'http://'+ theUrl +'/QIS_wizard_m.htm?flag=sitesurvey_rep\';\"><#105#></span>";
 }
 }
 });
@@ -1083,10 +1083,10 @@ setTimeout("chkMBConState();", 1000);
 },
 success: function(response){
 if(wlc_state == 1) {
-$("#wlcstate")[0].innerHTML = "<#101#>";
+$("#wlcstate")[0].innerHTML = "<#107#>";
 }
 else{
-$("#wlcstate")[0].innerHTML = "<span style='color:#FC0;text-decoration:underline;cursor:pointer;' onclick=\"javascript:parent.location.href=\'http://'+ theUrl +'/QIS_wizard_m.htm?flag=sitesurvey_mb\';\"><#99#></span>";
+$("#wlcstate")[0].innerHTML = "<span style='color:#FC0;text-decoration:underline;cursor:pointer;' onclick=\"javascript:parent.location.href=\'http://'+ theUrl +'/QIS_wizard_m.htm?flag=sitesurvey_mb\';\"><#105#></span>";
 }
 }
 });
@@ -1118,31 +1118,31 @@ color: #FFF;
 <input type="hidden" name="time_zone_x" value="<% nvram_get("time_zone_x"); %>" disabled>
 <input type="hidden" name="time_zone" value="<% nvram_get("time_zone"); %>" disabled>
 <div>
-<div style="font-size:1em;padding:10px 0 10px 15px;text-align:left;"><#560#></div>
+<div style="font-size:1em;padding:10px 0 10px 15px;text-align:left;"><#576#></div>
 <div style="margin:0 15px;">
 <div>
-<div>2.4 GHz - <#562#></div>
+<div>2.4 GHz - <#578#></div>
 <div id="ssid_2" style="padding: 5px 0;color:#279FD9"></div>
-<div><#427#></div>
+<div><#441#></div>
 <div id="key2" style="padding: 5px 0;color:#279FD9"></div>
 </div>
 <div id="5g_field" style="display:none">
-<div>5 GHz - <#562#></div>
+<div>5 GHz - <#578#></div>
 <div id="ssid_5" style="padding: 5px 0;color:#279FD9"></div>
-<div><#427#></div>
+<div><#441#></div>
 <div id="key5" style="padding: 5px 0;color:#279FD9"></div>
 </div>
 <div id="5g_2_field" style="display:none">
-<div>5 GHz-2 - <#562#></div>
+<div>5 GHz-2 - <#578#></div>
 <div id="ssid_5_2" style="padding: 5px 0;color:#279FD9"></div>
-<div><#427#></div>
+<div><#441#></div>
 <div id="key5_2" style="padding: 5px 0;color:#279FD9"></div>
 </div>
 </div>
 <div style="position:fixed;bottom:36px;width:100%;height:50px;background:rgb(34,34,34);z-index:2;">
 <div id="apply_button" style="width:100%;height:100%;display:table">
 <div id="nextButton" style="display:table-cell;width:100%;height:100%;line-height:50px;;text-align:center;background-color:#279FD9" onclick="redirect_index();">
-<div style="font-size:1em;color:#FFF;"><#1656#></div>
+<div style="font-size:1em;color:#FFF;"><#1678#></div>
 </div>
 </div>
 <div id="loadingIcon" style="width:100%;height:100%;text-align:center;margin-top:20px;display:none;"><img src="/images/InternetScan.gif"></div>

@@ -5,7 +5,7 @@
 <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-<title><#842#> - <#776#> : <#2653#></title>
+<title><#860#> - <#793#> : <#2696#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="tmmenu.css">
@@ -109,7 +109,7 @@ ref.initX();
 var faq_href = "https://nw-dlcdnet.asus.com/support/forward.html?model=&type=Faq&lang="+ui_lang+"&kw=&num=158";
 document.getElementById("faq0").href = faq_href;
 if(bwdpi_support){
-document.getElementById('content_title').innerHTML = "<#776#>";
+document.getElementById('content_title').innerHTML = "<#793#>";
 }
 document.getElementById('traffic_unit').value = getTrafficUnit();
 }
@@ -187,15 +187,15 @@ initCommon(1, 0, 0, 1);
 <table width="100%" >
 <tr>
 <td class="formfonttitle" align="left">
-<div id="content_title" style="margin-top:5px;"><#378#> - <#776#></div>
+<div id="content_title" style="margin-top:5px;"><#392#> - <#793#></div>
 </td>
 <td>
 <div align="right">
 <select onchange="switchPage(this.options[this.selectedIndex].value)" class="input_option" style="margin-top:8px;">
-<!--option><#3261#></option-->
-<option value="1"><#2652#></option>
-<option value="2" selected><#2653#></option>
-<option value="3"><#2654#></option>
+<!--option><#3327#></option-->
+<option value="1"><#2695#></option>
+<option value="2" selected><#2696#></option>
+<option value="3"><#2697#></option>
 </select>
 </div>
 </td></tr></table>
@@ -206,22 +206,22 @@ initCommon(1, 0, 0, 1);
 </tr>
 <tr>
 <td height="30" align="left" valign="middle" >
-<div class="formfontcontent"><p class="formfontcontent"><#3343#></p></div>
+<div class="formfontcontent"><p class="formfontcontent"><#3413#></p></div>
 </td>
 </tr>
 <tr>
 <td align="left" valign="middle">
 <table width="95%" border="1" align="left" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="DescTable" style="font-size:12px; border: 1px solid #000000; border-collapse: collapse;">
-<tr><th class="tm_title_bg" style="color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px;padding-left: 10px; border-collapse: collapse;" width="16%"></th><th class="tm_title_bg" style="color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px;border-collapse: collapse;" width="26%"><#2329#></th><th class="tm_title_bg" style="color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px;border-collapse: collapse;" width="29%"><#3313#></th><th class="tm_title_bg" style="color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px;border-collapse: collapse;" width="29%"><#3314#></th></tr>
-<tr><th class="tm_title_bg" style="color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px; border-collapse: collapse;"><#3305#></th><td style="color:#FF9000;padding-left: 10px;border-collapse: collapse;"><#3306#></td><td style="color:#3CF;padding-left: 10px;border-collapse: collapse;"><#3307#></td><td style="color:#3CF;padding-left: 10px;border-collapse: collapse;"><#3308#></td></tr>
-<tr><th class="tm_title_bg" style="color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px;border-collapse: collapse;"><#3312#></th><td style="color:#3CF;padding-left: 10px;border-collapse: collapse;"><#3309#></td><td style="color:#FF9000;padding-left: 10px; border-collapse: collapse;"><#3310#></td><td style="color:#FF9000;padding-left: 10px;border-collapse: collapse;"><#3311#></td></tr>
+<tr><th class="tm_title_bg" style="color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px;padding-left: 10px; border-collapse: collapse;" width="16%"></th><th class="tm_title_bg" style="color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px;border-collapse: collapse;" width="26%"><#2367#></th><th class="tm_title_bg" style="color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px;border-collapse: collapse;" width="29%"><#3383#></th><th class="tm_title_bg" style="color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px;border-collapse: collapse;" width="29%"><#3384#></th></tr>
+<tr><th class="tm_title_bg" style="color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px; border-collapse: collapse;"><#3375#></th><td style="color:#FF9000;padding-left: 10px;border-collapse: collapse;"><#3376#></td><td style="color:#3CF;padding-left: 10px;border-collapse: collapse;"><#3377#></td><td style="color:#3CF;padding-left: 10px;border-collapse: collapse;"><#3378#></td></tr>
+<tr><th class="tm_title_bg" style="color:#FFFFFF; font-weight:normal; line-height:15px; height: 30px; text-align:left; font-size:12px; padding-left: 10px;border-collapse: collapse;"><#3382#></th><td style="color:#3CF;padding-left: 10px;border-collapse: collapse;"><#3379#></td><td style="color:#FF9000;padding-left: 10px; border-collapse: collapse;"><#3380#></td><td style="color:#FF9000;padding-left: 10px;border-collapse: collapse;"><#3381#></td></tr>
 </table>
 </td>
 </tr>
 <tr>
 <td>
 <div style="display:flex;align-items: center;margin: 4px 0;">
-<div><#3086#></div>
+<div><#3138#></div>
 <div style="margin-left: 24px;">
 <select class="input_option" id="traffic_unit" onchange="setUnit(this.value);">
 <option value="0">KB</option>
@@ -235,8 +235,8 @@ initCommon(1, 0, 0, 1);
 </tr>
 <tr>
 <td height="30" align="left" valign="middle" >
-<div class="formfontcontent"><p><#3344#></p></div>
-<div class="formfontcontent"><p><a id="faq0" href="" target="_blank" style="font-weight: bolder;text-decoration:underline;"><#776#> FAQ</a></p></div>
+<div class="formfontcontent"><p><#3414#></p></div>
+<div class="formfontcontent"><p><a id="faq0" href="" target="_blank" style="font-weight: bolder;text-decoration:underline;"><#793#> FAQ</a></p></div>
 </td>
 </tr>
 <tr>
@@ -262,10 +262,10 @@ initCommon(1, 0, 0, 1);
 <td>
 <table width="730px" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable_NWM" style="margin-top:0px;margin-left:-1px;*margin-left:-10px;margin-left:-12px \9;">
 <tr>
-<th style="text-align:center;width:160px;"><#1677#></th>
-<th style="text-align:center;width:160px;"><#1426#></th>
-<th style="text-align:center;width:160px;"><#2646#></th>
-<th style="text-align:center;width:160px;"><#3315#></th>
+<th style="text-align:center;width:160px;"><#1699#></th>
+<th style="text-align:center;width:160px;"><#1444#></th>
+<th style="text-align:center;width:160px;"><#2689#></th>
+<th style="text-align:center;width:160px;"><#3385#></th>
 </tr>
 <tr>
 <td style="text-align:center;font-weight: bold; background-color:#111;"><div id="rx-current"></div></td>

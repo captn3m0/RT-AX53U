@@ -73,7 +73,7 @@ dataType: 'script',
 error: function(xhr){
 --RetryCountDown_fail;
 if(RetryCountDown_fail < 1){
-alert("<#217#>!");
+alert("<#226#>!");
 refreshpage();
 }
 else
@@ -90,14 +90,14 @@ return true;
 }
 if(wanstate == -1 || wanstate == 0 || wanstate == 1){
 if(wanauxstate == 3 && wanstate == 1){ // PPP_AUTH_FAIL
-alert("<#695#>");
+alert("<#712#>");
 redirect_page("internet_account");
 return true;
 }
 else
 --RetryCountDown;
 if(RetryCountDown < 1){
-if(confirm("<#520#>")){
+if(confirm("<#536#>")){
 RetryCountDown = 5;
 getWANStatus();
 }
@@ -183,14 +183,14 @@ color: #FFF;
 <input type="hidden" name="action_wait" value="">
 <input type="hidden" name="preferred_lang" value="<% nvram_get("preferred_lang"); %>">
 <div>
-<div style="font-size:1em;padding:10px 0 10px 15px;text-align:left;"><#679#></div>
+<div style="font-size:1em;padding:10px 0 10px 15px;text-align:left;"><#696#></div>
 <div style="margin-left:15px;">
 <div>
 <div style="display:table-cell;">
 <img style="width:20px;" src="../images/InternetScan.gif" ></span>
 </div>
 <div style="display:table-cell;padding-left:10px;">
-<div ><#682#></div>
+<div ><#699#></div>
 </div>
 </div>
 </div>

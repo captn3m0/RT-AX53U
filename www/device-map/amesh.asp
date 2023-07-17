@@ -75,7 +75,7 @@ var html = "";
 switch(_supportType) {
 case "central_led" :
 html += "<div style='margin-top:10px;'>";
-html += "<div class='aimesh_node_setting_info_title'><#4152#></div>";
+html += "<div class='aimesh_node_setting_info_title'><#4251#></div>";
 html += "<div class='aimesh_node_setting_info_content'>";
 html += "<div id='led_slider' class='led_slider'></div>";
 html += "<div id='led_text'></div>";
@@ -86,7 +86,7 @@ break;
 case "lp55xx_led" :
 case "ctrl_led" :
 html += "<div style='margin-top:10px;'>";
-html += "<div class='aimesh_node_setting_info_title'><#4178#></div>";
+html += "<div class='aimesh_node_setting_info_title'><#4277#></div>";
 html += "<div class='aimesh_node_setting_info_content'>";
 html += "<div align='center' style='float:left;cursor:pointer;' id='led_radio'></div>";
 html += "</div>";
@@ -191,7 +191,7 @@ gen_current_onboardinglist(get_cfg_clientlist, get_wclientlist, get_wiredclientl
 }
 else {
 $('#onBoarding_block').empty();
-$('#onBoarding_block').append("<div class='amesh_no_data'><#2410#></div>");
+$('#onBoarding_block').append("<div class='amesh_no_data'><#2448#></div>");
 if(typeof parent.show_AMesh_status !== 'undefined' && $.isFunction(parent.show_AMesh_status))
 parent.show_AMesh_status(0, 1);
 }
@@ -316,7 +316,7 @@ else {
 parent.$("#amesh_connect_msg").find(".quality_ok").css("display", "");
 parent.$("#amesh_connect_msg").find(".quality_weak").css("display", "none");
 }
-parent.$("#amesh_connect_msg").find(".amesh_hint_text.amesh_hint_title").html("<#1038#>");
+parent.$("#amesh_connect_msg").find(".amesh_hint_text.amesh_hint_title").html("<#1056#>");
 }
 });
 });
@@ -475,7 +475,7 @@ alias = _onboardingList[idx].config.misc.cfg_alias;
 }
 }
 }
-var location_text = "<#1074#>";
+var location_text = "<#1092#>";
 var specific_location = aimesh_location_arr.filter(function(item, index, _array){
 return (item.value == alias);
 })[0];
@@ -547,7 +547,7 @@ node_location_text = location_text.substring(0, 20) + "..";
 }
 code += "<span class='amesh_node_content'>" + htmlEnDeCode.htmlEncode(node_location_text) + "</span>";
 code += "</div>";
-code += "<div class='amesh_router_info_text'><#2130#>: ";
+code += "<div class='amesh_router_info_text'><#2152#>: ";
 var re_client_num = 0;
 if(online == "1" && AiMeshTotalClientNum[mac] != undefined) {
 re_client_num = AiMeshTotalClientNum[mac];
@@ -564,7 +564,7 @@ code += "<div class='band_block'><span class=" + bandClass + ">" + wireless_band
 code += "</div>";
 }
 else {
-code += "<div class='amesh_title offline' onclick='show_offline_msg(event);'><#1540#></div>";
+code += "<div class='amesh_title offline' onclick='show_offline_msg(event);'><#1561#></div>";
 }
 code += "</div>";
 code += "</div>";
@@ -583,7 +583,7 @@ download_cloud_icon(model_info, device_id, "onBoarding_block");
 }
 /* Update ameshNumber start */
 if($('#onBoarding_block').children().length == 0) {
-$('#onBoarding_block').append("<div class='amesh_no_data'><#2410#></div>");
+$('#onBoarding_block').append("<div class='amesh_no_data'><#2448#></div>");
 if(typeof parent.show_AMesh_status !== 'undefined' && $.isFunction(parent.show_AMesh_status))
 parent.show_AMesh_status(0, 1);
 }
@@ -885,7 +885,7 @@ $connectHtml.addClass("amesh_popup_bg");
 $connectHtml.css("display", "none");
 $connectHtml.attr({"onselectstart" : "return false"});
 $connectHtml.appendTo(parent.$('body'));
-var result_text = "<#1108#>";
+var result_text = "<#1126#>";
 var $amesh_hint_text = $('<div>');
 $amesh_hint_text.addClass("amesh_hint_text");
 $amesh_hint_text.css("text-align", "center");
@@ -896,7 +896,7 @@ $amesh_action_bg.addClass("amesh_action_bg");
 $connectHtml.append($amesh_action_bg);
 var $amesh_cancel = $('<input/>');
 $amesh_cancel.addClass("button_gen");
-$amesh_cancel.attr({"type" : "button", "value" : "<#1665#>"});
+$amesh_cancel.attr({"type" : "button", "value" : "<#1687#>"});
 $amesh_action_bg.append($amesh_cancel);
 $amesh_cancel.click(
 function() {
@@ -929,9 +929,9 @@ $clearHtml.css("clear", "both");
 $connectHtml.append($clearHtml);
 var $amesh_hint_text = $('<div>');
 $amesh_hint_text.addClass("amesh_hint_text amesh_hint_title");
-var hint_text = "<#1038#>";
+var hint_text = "<#1056#>";
 if(nodeNotReady)
-hint_text = "<#1039#>";
+hint_text = "<#1057#>";
 $amesh_hint_text.html(hint_text);
 if(nodeNotReady)
 $amesh_hint_text.find(".amesh_device_info").html("(" + labelMac + ")");
@@ -946,7 +946,7 @@ $amesh_device_info.css("display", "none");
 $connectHtml.append($amesh_device_info);
 var $amesh_quality_text = $('<div>');
 $amesh_quality_text.addClass("amesh_hint_text amesh_quality_text quality_weak");
-$amesh_quality_text.html("<#1032#>");
+$amesh_quality_text.html("<#1050#>");
 $connectHtml.append($amesh_quality_text);
 var $amesh_action_bg = $('<div>');
 $amesh_action_bg.addClass("amesh_action_bg");
@@ -954,7 +954,7 @@ $connectHtml.append($amesh_action_bg);
 var $amesh_wait_search_text = $('<div>');
 $amesh_wait_search_text.addClass("amesh_hint_text amesh_quality_text wait_search");
 $amesh_wait_search_text.css("display", "none");
-$amesh_wait_search_text.html("<#1031#>");
+$amesh_wait_search_text.html("<#1049#>");
 $amesh_wait_search_text.find("#newReMac").html(labelMac);
 $amesh_action_bg.append($amesh_wait_search_text);
 var enable_wps_flag = false;
@@ -963,7 +963,7 @@ if(_ob_path == "1" && wps_enable == "0"){
 if(isSupport("wps_method_ob")){
 var $amesh_wps_text = $('<div>');
 $amesh_wps_text.addClass("amesh_hint_text");
-var hint_text = "<#3764#>";
+var hint_text = "<#3863#>";
 $amesh_wps_text.html(hint_text);
 $connectHtml.find(".amesh_action_bg").before($amesh_wps_text);
 }
@@ -973,7 +973,7 @@ enable_wps_flag = true;
 var $amesh_cancel = $('<input/>');
 $amesh_cancel.addClass("button_gen quality_ok cancel");
 $amesh_cancel.css("margin-right", "5px");
-$amesh_cancel.attr({"type" : "button", "value" : "<#199#>"});
+$amesh_cancel.attr({"type" : "button", "value" : "<#206#>"});
 $amesh_action_bg.append($amesh_cancel);
 $amesh_cancel.click(
 function() {
@@ -986,7 +986,7 @@ document.onboardingLED_form.submit();
 );
 var $amesh_apply = $('<input/>');
 $amesh_apply.addClass("button_gen quality_ok");
-$amesh_apply.attr({"type" : "button", "value" : "<#196#>"});
+$amesh_apply.attr({"type" : "button", "value" : "<#203#>"});
 $amesh_action_bg.append($amesh_apply);
 $amesh_apply.click(
 function() {
@@ -1035,9 +1035,9 @@ if(Object.keys(postData).length){
 if(auth_flag){
 var $amesh_wpa3_text = $('<div>');
 $amesh_wpa3_text.addClass("amesh_hint_text");
-var auth_change_str = "* <#921#> <#1011#>".replace("WPA3-personal", current_auth).replace("WPA2/WPA3-personal", changeTo_auth);
+var auth_change_str = "* <#939#> <#1029#>".replace("WPA3-personal", current_auth).replace("WPA2/WPA3-personal", changeTo_auth);
 $amesh_wpa3_text.append($("<div>").html(auth_change_str).css("color", "#FC0"));
-$amesh_wpa3_text.append($("<div>").html("<#1012#>"));
+$amesh_wpa3_text.append($("<div>").html("<#1030#>"));
 $amesh_wpa3_text.find("#wpa3FaqLink").attr("target", "_blank").css({"color": "#FC0", "text-decoration": "underline"});
 $amesh_wpa3_text.find("#wpa3FaqLink").attr("href", faq_href);
 $connectHtml.find(".amesh_action_bg").before($amesh_wpa3_text);
@@ -1045,9 +1045,9 @@ $connectHtml.find(".amesh_action_bg").before($amesh_wpa3_text);
 if(enable_wps_flag){
 var $amesh_wps_text = $('<div>');
 $amesh_wps_text.addClass("amesh_hint_text");
-var hint_text = "<#1018#>";
+var hint_text = "<#1036#>";
 hint_text += "<br>";
-hint_text += "<#3764#>";
+hint_text += "<#3863#>";
 $amesh_wps_text.html(hint_text);
 $connectHtml.find(".amesh_action_bg").before($amesh_wps_text);
 }
@@ -1072,7 +1072,7 @@ connectingDevice(_reMac, _newReMac);
 var $amesh_ok = $('<input/>');
 $amesh_ok.addClass("button_gen quality_weak");
 $amesh_ok.css("margin-right", "5px");
-$amesh_ok.attr({"type" : "button", "value" : "<#1665#>"});
+$amesh_ok.attr({"type" : "button", "value" : "<#1687#>"});
 $amesh_action_bg.append($amesh_ok);
 $amesh_ok.click(
 function() {
@@ -1129,13 +1129,13 @@ $successResult1.addClass("amesh_successResult");
 $successResult1.attr({"id" : "amesh_successResult_1"});
 $connectResultHtml.append($successResult1);
 result_text = "";
-result_text += "<#1040#>";
+result_text += "<#1058#>";
 result_text += "<br>";
-result_text += "<#1041#>";
+result_text += "<#1059#>";
 result_text += "<br>";
-result_text += "1. <#1042#>";
+result_text += "1. <#1060#>";
 result_text += "<br>";
-result_text += "2. <#1043#>";
+result_text += "2. <#1061#>";
 $successResult1.addClass("amesh_hint_text");
 $successResult1.html(result_text);
 $successResult1.find(".amesh_device_info").html(handle_ui_model_name(_model_name, _ui_model_name) + " (" + labelMac + ")");
@@ -1145,7 +1145,7 @@ $successResult2.attr({"id" : "amesh_successResult_2"});
 $connectResultHtml.append($successResult2);
 var $successResult2_text = $('<div>');
 result_text = "";
-result_text = "<#1044#>";
+result_text = "<#1062#>";
 $successResult2_text.addClass("amesh_hint_text");
 $successResult2_text.html(result_text);
 $successResult2.append($successResult2_text);
@@ -1174,8 +1174,8 @@ $aimesh_illustration_bg.append(gen_icon("ethernet_lan"));
 $aimesh_illustration_bg.append(gen_icon("ethernet_wan"));
 $aimesh_illustration_bg.append(gen_text("LAN - WAN", "lan_to_wan"));
 $aimesh_illustration_bg.append(gen_text("Modem", "modem"));
-$aimesh_illustration_bg.append(gen_text("<#1109#>", "backhaul_router"));
-$aimesh_illustration_bg.append(gen_text("<#1037#>", "backhaul_node"));
+$aimesh_illustration_bg.append(gen_text("<#1127#>", "backhaul_router"));
+$aimesh_illustration_bg.append(gen_text("<#1055#>", "backhaul_node"));
 }
 else{
 $aimesh_illustration_bg.append(gen_icon("router_back for_dsl"));
@@ -1184,7 +1184,7 @@ $aimesh_illustration_bg.append(gen_icon("ethernet_lan for_dsl"));
 $aimesh_illustration_bg.append(gen_icon("ethernet_wan for_dsl"));
 $aimesh_illustration_bg.append(gen_text("LAN - WAN", "lan_to_wan for_dsl"));
 $aimesh_illustration_bg.append(gen_text("AiMesh xDSL modem router", "backhaul_router for_dsl")); /*Untranslated*/
-$aimesh_illustration_bg.append(gen_text("<#1037#>", "backhaul_node for_dsl"));
+$aimesh_illustration_bg.append(gen_text("<#1055#>", "backhaul_node for_dsl"));
 }
 var $amesh_clear_bg = $('<div>');
 $amesh_clear_bg.css("clear", "both");
@@ -1192,13 +1192,13 @@ $aimesh_illustration_bg.append($amesh_clear_bg);
 }
 else {
 var result_text = "";
-result_text += "<#1033#>";
+result_text += "<#1051#>";
 result_text += "<ol style='margin:0;padding-left:17px;'>";
-result_text += "<li><#1034#></li>";
-result_text += "<li><#1035#></li>";
-result_text += "<li><#1103#></li>";
-result_text += "<li><#1036#></li>";
-result_text += "<li><#1024#></li>";
+result_text += "<li><#1052#></li>";
+result_text += "<li><#1053#></li>";
+result_text += "<li><#1121#></li>";
+result_text += "<li><#1054#></li>";
+result_text += "<li><#1042#></li>";
 result_text += "</ol>";
 var $amesh_hint_text = $('<div>');
 $amesh_hint_text.addClass("amesh_hint_text");
@@ -1211,7 +1211,7 @@ $amesh_action_bg.addClass("amesh_action_bg");
 $connectResultHtml.append($amesh_action_bg);
 var $amesh_cancel = $('<input/>');
 $amesh_cancel.addClass("button_gen");
-$amesh_cancel.attr({"type" : "button", "value" : "<#1665#>"});
+$amesh_cancel.attr({"type" : "button", "value" : "<#1687#>"});
 $amesh_action_bg.append($amesh_cancel);
 $amesh_cancel.click(
 function() {
@@ -1236,24 +1236,24 @@ $searchFailHtml.css("display", "none");
 $searchFailHtml.attr({"onselectstart" : "return false"});
 $searchFailHtml.appendTo(parent.$('body'));
 var result_text = "";
-result_text = "<#1020#>";
+result_text = "<#1038#>";
 result_text += "<br>";
 if(ameshRouter_support && ameshNode_support)
 result_text += "a. ";
 if(ameshRouter_support) {
-result_text += "<#1021#>";
-result_text += "<div style='margin-left: 20px;'>1. <#1022#></div>";
-result_text += "<div style='margin-left: 20px;'>2. <#1023#></div>";
-result_text += "<div style='margin-left: 20px;'>3. <#1024#></div>";
-result_text += "<div style='margin-left: 20px;'>4. <#1025#></div>";
+result_text += "<#1039#>";
+result_text += "<div style='margin-left: 20px;'>1. <#1040#></div>";
+result_text += "<div style='margin-left: 20px;'>2. <#1041#></div>";
+result_text += "<div style='margin-left: 20px;'>3. <#1042#></div>";
+result_text += "<div style='margin-left: 20px;'>4. <#1043#></div>";
 }
 if(ameshRouter_support && ameshNode_support)
 result_text += "b. ";
 if(ameshNode_support){
-result_text += "<#1026#>";
-result_text += "<div style='margin-left: 20px;'>1. <#1027#></div>";
-result_text += "<div style='margin-left: 20px;'>2. <#1028#></div>";
-result_text += "<div style='margin-left: 20px;'>3. <#1029#></div>";
+result_text += "<#1044#>";
+result_text += "<div style='margin-left: 20px;'>1. <#1045#></div>";
+result_text += "<div style='margin-left: 20px;'>2. <#1046#></div>";
+result_text += "<div style='margin-left: 20px;'>3. <#1047#></div>";
 }
 var $amesh_hint_text = $('<div>');
 $amesh_hint_text.addClass("amesh_hint_text");
@@ -1282,15 +1282,15 @@ $aimesh_illustration_bg.append(gen_icon("router"));
 $aimesh_illustration_bg.append(gen_icon("router_right"));
 $aimesh_illustration_bg.append(gen_icon("wifi"));
 $aimesh_illustration_bg.append(gen_text("Modem", "modem"));
-$aimesh_illustration_bg.append(gen_text("<#1109#>", "router"));
-$aimesh_illustration_bg.append(gen_text("<#1037#>", "node"));
+$aimesh_illustration_bg.append(gen_text("<#1127#>", "router"));
+$aimesh_illustration_bg.append(gen_text("<#1055#>", "node"));
 }
 else{
 $aimesh_illustration_bg.append(gen_icon("router for_dsl"));
 $aimesh_illustration_bg.append(gen_icon("router_right for_dsl"));
 $aimesh_illustration_bg.append(gen_icon("wifi for_dsl"));
 $aimesh_illustration_bg.append(gen_text("AiMesh xDSL modem router", "router for_dsl")); /*Untranslated*/
-$aimesh_illustration_bg.append(gen_text("<#1037#>", "node for_dsl"));
+$aimesh_illustration_bg.append(gen_text("<#1055#>", "node for_dsl"));
 }
 var $amesh_clear_bg = $('<div>');
 $amesh_clear_bg.css("clear", "both");
@@ -1300,7 +1300,7 @@ $amesh_action_bg.addClass("amesh_action_bg");
 $searchFailHtml.append($amesh_action_bg);
 var $amesh_cancel = $('<input/>');
 $amesh_cancel.addClass("button_gen");
-$amesh_cancel.attr({"type" : "button", "value" : "<#1665#>"});
+$amesh_cancel.attr({"type" : "button", "value" : "<#1687#>"});
 $amesh_action_bg.append($amesh_cancel);
 $amesh_cancel.click(
 function() {
@@ -1362,7 +1362,7 @@ $resetHtml.attr({"onselectstart" : "return false"});
 $resetHtml.appendTo(parent.$('body'));
 var $amesh_hint_text = $('<div>');
 $amesh_hint_text.addClass("amesh_hint_text");
-$amesh_hint_text.html("<#1069#>");
+$amesh_hint_text.html("<#1087#>");
 $resetHtml.append($amesh_hint_text);
 var $amesh_device_info = $('<div>');
 $amesh_device_info.addClass("amesh_hint_text amesh_device_info");
@@ -1378,12 +1378,12 @@ $amesh_device_info.html(device_info);
 $resetHtml.append($amesh_device_info);
 var $amesh_hint_text = $('<div>');
 $amesh_hint_text.addClass("amesh_hint_text");
-$amesh_hint_text.html("<#1070#>");
+$amesh_hint_text.html("<#1088#>");
 $resetHtml.append($amesh_hint_text);
 if(_online == "0"){
 var $amesh_hint_text = $('<div>');
 $amesh_hint_text.addClass("amesh_hint_text amesh_quality_text");
-$amesh_hint_text.html("* <#1071#>");
+$amesh_hint_text.html("* <#1089#>");
 $resetHtml.append($amesh_hint_text);
 }
 var $amesh_action_bg = $('<div>');
@@ -1392,7 +1392,7 @@ $resetHtml.append($amesh_action_bg);
 var $amesh_cancel = $('<input/>');
 $amesh_cancel.addClass("button_gen");
 $amesh_cancel.css("margin-right", "5px");
-$amesh_cancel.attr({"type" : "button", "value" : "<#199#>"});
+$amesh_cancel.attr({"type" : "button", "value" : "<#206#>"});
 $amesh_action_bg.append($amesh_cancel);
 $amesh_cancel.click(
 function() {
@@ -1401,7 +1401,7 @@ initial_amesh_obj();
 );
 var $amesh_apply = $('<input/>');
 $amesh_apply.addClass("button_gen");
-$amesh_apply.attr({"type" : "button", "value" : "<#1665#>"});
+$amesh_apply.attr({"type" : "button", "value" : "<#1687#>"});
 $amesh_action_bg.append($amesh_apply);
 $amesh_apply.click(
 function() {
@@ -1430,11 +1430,11 @@ $maxnumHtml.appendTo(parent.$('body'));
 var $amesh_hint_text = $('<div>');
 $amesh_hint_text.addClass("amesh_hint_text");
 var hint = "";
-hint += "<#1182#>";
+hint += "<#1200#>";
 hint += "<br>";
-hint += "<#1183#> <#1184#>".replace("#RE_MAXNUM", cfg_re_maxnum);
+hint += "<#1201#> <#1202#>".replace("#RE_MAXNUM", cfg_re_maxnum);
 hint += "<br>";
-hint += "<#1185#>";
+hint += "<#1203#>";
 $amesh_hint_text.html(hint);
 $maxnumHtml.append($amesh_hint_text);
 var $amesh_action_bg = $('<div>');
@@ -1442,7 +1442,7 @@ $amesh_action_bg.addClass("amesh_action_bg");
 $maxnumHtml.append($amesh_action_bg);
 var $amesh_ok = $('<input/>');
 $amesh_ok.addClass("button_gen");
-$amesh_ok.attr({"type" : "button", "value" : "<#1665#>"});
+$amesh_ok.attr({"type" : "button", "value" : "<#1687#>"});
 $amesh_action_bg.append($amesh_ok);
 $amesh_ok.click(
 function() {
@@ -1527,7 +1527,7 @@ code += "<div class='amesh_router_icon card'></div>";
 code += "</div>";
 code += "</div>";
 code += "<div style='float:left;width:70%;margin-top:17px;'>";
-code += "<div class='aimesh_node_static_info_title'><#1073#></div>";
+code += "<div class='aimesh_node_static_info_title'><#1091#></div>";
 code += "<div class='aimesh_node_static_info_content' style='width:55%;'>";
 code += "<div class='aimesh_node_select_text_combine'>";
 code += "<select id='aimesh_node_location_select' class='aimesh_node_select_text_combine_select'></select>";
@@ -1539,7 +1539,7 @@ code += "<div class='amesh_interface_icon static_info'></div>";
 code += "</div>";
 code += "<div id='aimesh_node_location_hint' class='aimesh_node_location_hint'></div>";
 code += "<div class='clear_both'></div>";
-code += "<div class='aimesh_node_static_info_title'><#290#></div>";
+code += "<div class='aimesh_node_static_info_title'><#302#></div>";
 code += "<div id='aimesh_node_ipaddr' class='aimesh_node_static_info_content'></div>";
 code += "<div class='aimesh_node_static_info_title moreconfig'><span id='aimesh_node_moreconfig' class='text_hyperlink'></span></div>";
 code += "</div>";
@@ -1548,32 +1548,32 @@ code += "</div>";
 code += "<div class='clientList_line aimesh_node_line_bg aimesh_node_setting_line'></div>";
 code += "<div class='aimesh_node_setting_bg'>";
 code += "<div>";
-code += "<div class='aimesh_node_setting_info_title'><#367#></div>";
+code += "<div class='aimesh_node_setting_info_title'><#381#></div>";
 code += "<div id='aimesh_node_macaddr' class='aimesh_node_setting_info_content'></div>";
 code += "<div class='clear_both'></div>";
 code += "</div>";
 code += "<div style='margin-top:10px;'>";
-code += "<div class='aimesh_node_setting_info_title'><#1059#></div>";
+code += "<div class='aimesh_node_setting_info_title'><#1077#></div>";
 code += "<select id='aimesh_node_connection_priority' class='aimesh_node_input_select'>";
-code += "<option value='3' class='aimesh_node_input_select_option'><#153#></option>";
-code += "<option value='2' class='aimesh_node_input_select_option'><#1049#></option>";
+code += "<option value='3' class='aimesh_node_input_select_option'><#160#></option>";
+code += "<option value='2' class='aimesh_node_input_select_option'><#1067#></option>";
 code += "</select>";
-code += "<div id='aimesh_node_connection_priority_hint' class='aimesh_node_setting_info_content'><#1664#></div>";
+code += "<div id='aimesh_node_connection_priority_hint' class='aimesh_node_setting_info_content'><#1686#></div>";
 code += "<div class='clear_both'></div>";
 code += "</div>";
 code += "<div style='margin-top:10px;'>";
-code += "<div class='aimesh_node_setting_info_title'><#192#></div>";
+code += "<div class='aimesh_node_setting_info_title'><#199#></div>";
 code += "<div class='aimesh_node_setting_info_content'><span id='aimesh_node_connection_type' class='text_hyperlink'></span></div>";
 code += "<div class='clear_both'></div>";
 code += "</div>";
 code += "<div style='margin-top:10px;'>";
-code += "<div class='aimesh_node_setting_info_title'><#2139#></div>";
+code += "<div class='aimesh_node_setting_info_title'><#2161#></div>";
 code += "<div class='aimesh_node_setting_info_content'><span id='aimesh_node_fw_version' class='text_hyperlink'></span></div>";
 code += "<div class='clear_both'></div>";
 code += "</div>";
 code += "<div id='aimesh_node_usb_app_bg' style='margin-top:10px;'>";
-code += "<div class='aimesh_node_setting_info_title'><#381#></div>";
-code += "<div class='aimesh_node_setting_info_content'><span id='aimesh_node_usb_app' class='text_hyperlink'><#379#></span></div>";
+code += "<div class='aimesh_node_setting_info_title'><#395#></div>";
+code += "<div class='aimesh_node_setting_info_content'><span id='aimesh_node_usb_app' class='text_hyperlink'><#393#></span></div>";
 code += "<div class='clear_both'></div>";
 code += "</div>";
 var led_status = led_control.status(node_info);
@@ -1584,10 +1584,10 @@ code += "<div class='clientList_line aimesh_node_line_bg'></div>";
 code += "<div class='aimesh_node_info_bg'>";
 code += "<table id='aimesh_node_client_tb' width='100%' border='1' align='center' cellpadding='0' cellspacing='0' class='FormTable_table'>";
 code += "<tr id='aimesh_node_client_header_tr' height='30px'>";
-code += "<th class='IE8HACK' width=" + aimesh_node_client_info_width[0] + "><#1533#></th>";
-code += "<th class='aimesh_node_client_item' width=" + aimesh_node_client_info_width[1] + " data-clickID='client_name'><#2872#></th>";
-code += "<th class='aimesh_node_client_item' width=" + aimesh_node_client_info_width[2] + " data-clickID='client_ip'><#3526#></th>";
-code += "<th class='aimesh_node_client_item' width=" + aimesh_node_client_info_width[3] + " data-clickID='client_interface'><#3676#></th>";
+code += "<th class='IE8HACK' width=" + aimesh_node_client_info_width[0] + "><#1554#></th>";
+code += "<th class='aimesh_node_client_item' width=" + aimesh_node_client_info_width[1] + " data-clickID='client_name'><#2919#></th>";
+code += "<th class='aimesh_node_client_item' width=" + aimesh_node_client_info_width[2] + " data-clickID='client_ip'><#3601#></th>";
+code += "<th class='aimesh_node_client_item' width=" + aimesh_node_client_info_width[3] + " data-clickID='client_interface'><#3773#></th>";
 code += "</tr>";
 code += "</table>";
 code += "</div>";
@@ -1617,7 +1617,7 @@ alias = node_info.config.misc.cfg_alias;
 var specific_location = aimesh_location_arr.filter(function(item, index, _array){
 return (item.value == alias);
 })[0];
-var location_text = "<#1074#>";
+var location_text = "<#1092#>";
 if(specific_location != undefined)
 location_text = specific_location.text;
 else
@@ -1703,7 +1703,7 @@ $conn_priority_select_obj.attr("disabled", false);
 }
 }
 $popupBgHtml.find("#aimesh_node_fw_version").html(node_info.fwver.split("-")[0]);
-$popupBgHtml.find("#aimesh_node_moreconfig").html("<#2768#>");
+$popupBgHtml.find("#aimesh_node_moreconfig").html("<#2812#>");
 if(!node_capability.usb)
 $popupBgHtml.find("#aimesh_node_usb_app_bg").remove();
 /* settup value end */
@@ -1756,14 +1756,14 @@ $popupBgHtml.find("#aimesh_node_location_input").focus();
 $popupBgHtml.find("#aimesh_node_location_input").select();
 };
 if(node_location_text.length == 0){
-show_valid_hint("<#320#>");
+show_valid_hint("<#332#>");
 return false;
 }
 var block_chars_array = ["\""];
 var block_chars_hint = "";
 for(var i = 0; i < block_chars_array.length; i++) {
 if(node_location_text.indexOf(block_chars_array[i]) >= 0)
-block_chars_hint = block_chars_array[i] + " <#2478#>";
+block_chars_hint = block_chars_array[i] + " <#2519#>";
 }
 if(block_chars_hint != "") {
 show_valid_hint(block_chars_hint);
@@ -1777,7 +1777,7 @@ return false;
 }
 }
 else if(!parent.validator.haveFullWidthChar($obj[0])) {
-show_valid_hint("<#333#>");
+show_valid_hint("<#345#>");
 return false;
 }
 $popupBgHtml.find("#aimesh_node_location_hint").css("display", "none");
@@ -1786,7 +1786,7 @@ return true;
 };
 if(validAiMeshLocation()) {
 var location_value = $(this).val();
-var location_text = "<#1074#>";
+var location_text = "<#1092#>";
 var specific_location = aimesh_location_arr.filter(function(item, index, _array){
 return (item.value == location_value);
 })[0];
@@ -1837,7 +1837,7 @@ parent.window.location.href = "/Advanced_FirmwareUpgrade_Content.asp";
 $popupBgHtml.find("#aimesh_node_moreconfig").click(
 function() {
 if(node_info.online == "1" && re_path > 0) {
-var moreConfig = ($popupBgHtml.find(".aimesh_node_setting_bg").css("display") == "none") ? "<#1648#>" : "<#2768#>";
+var moreConfig = ($popupBgHtml.find(".aimesh_node_setting_bg").css("display") == "none") ? "<#1670#>" : "<#2812#>";
 $popupBgHtml.find("#aimesh_node_moreconfig").html(moreConfig);
 var display_state = $popupBgHtml.find(".aimesh_node_setting_bg").css("display");
 if(display_state == "none") {
@@ -1850,7 +1850,7 @@ $popupBgHtml.find(".aimesh_node_setting_line").slideUp(200);
 }
 }
 else
-alert("<#1186#>");
+alert("<#1204#>");
 }
 );
 if(node_capability.usb){
@@ -1879,7 +1879,7 @@ if(led_status.support) {
 switch(led_status.support) {
 case "central_led":
 var color_table = ["#c6dafc", "#7baaf7", "#4285f4", "#3367d6"];
-var led_table = ["<#1648#>", "<#2626#>", "<#2648#>", "<#2280#>"];
+var led_table = ["<#1670#>", "<#2667#>", "<#2691#>", "<#2317#>"];
 parent.$("#edit_amesh_client_block").find("#led_text").html(led_table[led_status.value]);
 parent.$("#edit_amesh_client_block").find("#led_slider").slider({
 orientation: "horizontal",
@@ -1986,18 +1986,18 @@ $offlineHtml.attr({"onselectstart" : "return false"});
 $offlineHtml.appendTo(parent.$('body'));
 var $amesh_hint_text = $('<div>');
 $amesh_hint_text.addClass("amesh_hint_text");
-$amesh_hint_text.html("<#1102#> :");
+$amesh_hint_text.html("<#1120#> :");
 $offlineHtml.append($amesh_hint_text);
 var $amesh_hint_content = $('<div>');
 $amesh_hint_content.addClass("amesh_hint_text");
 $amesh_hint_content.css("margin-left", "auto");
 $offlineHtml.append($amesh_hint_content);
 var $msg_item = $('<ol>');
-var msg_text = "<li><#1103#></li>";
-msg_text += "<li><#1104#></li>";
-msg_text += "<li><#1105#></li>";
-msg_text += "<li><#1106#></li>";
-msg_text += "<li><#1107#></li>";
+var msg_text = "<li><#1121#></li>";
+msg_text += "<li><#1122#></li>";
+msg_text += "<li><#1123#></li>";
+msg_text += "<li><#1124#></li>";
+msg_text += "<li><#1125#></li>";
 $msg_item.html(msg_text);
 $amesh_hint_content.append($msg_item);
 var $amesh_action_bg = $('<div>');
@@ -2005,7 +2005,7 @@ $amesh_action_bg.addClass("amesh_action_bg");
 $offlineHtml.append($amesh_action_bg);
 var $amesh_ok = $('<input/>');
 $amesh_ok.addClass("button_gen");
-$amesh_ok.attr({"type" : "button", "value" : "<#1665#>"});
+$amesh_ok.attr({"type" : "button", "value" : "<#1687#>"});
 $amesh_action_bg.append($amesh_ok);
 $amesh_ok.click(
 function() {
@@ -2050,7 +2050,7 @@ $changeTypeHintHtml.attr({"onselectstart" : "return false"});
 $changeTypeHintHtml.appendTo(parent.$('body'));
 var $changeTypeHintText = $('<div>');
 var result_text = "";
-result_text = "<#1044#>";
+result_text = "<#1062#>";
 $changeTypeHintText.addClass("amesh_hint_text");
 $changeTypeHintText.html(result_text);
 $changeTypeHintHtml.append($changeTypeHintText);
@@ -2079,8 +2079,8 @@ $aimesh_illustration_bg.append(gen_icon("ethernet_lan"));
 $aimesh_illustration_bg.append(gen_icon("ethernet_wan"));
 $aimesh_illustration_bg.append(gen_text("LAN - WAN", "lan_to_wan"));
 $aimesh_illustration_bg.append(gen_text("Modem", "modem"));
-$aimesh_illustration_bg.append(gen_text("<#1109#>", "backhaul_router"));
-$aimesh_illustration_bg.append(gen_text("<#1037#>", "backhaul_node"));
+$aimesh_illustration_bg.append(gen_text("<#1127#>", "backhaul_router"));
+$aimesh_illustration_bg.append(gen_text("<#1055#>", "backhaul_node"));
 }
 else{
 $aimesh_illustration_bg.append(gen_icon("router_back for_dsl"));
@@ -2089,7 +2089,7 @@ $aimesh_illustration_bg.append(gen_icon("ethernet_lan for_dsl"));
 $aimesh_illustration_bg.append(gen_icon("ethernet_wan for_dsl"));
 $aimesh_illustration_bg.append(gen_text("LAN - WAN", "lan_to_wan for_dsl"));
 $aimesh_illustration_bg.append(gen_text("AiMesh xDSL modem router", "backhaul_router for_dsl")); /*Untranslated*/
-$aimesh_illustration_bg.append(gen_text("<#1037#>", "backhaul_node for_dsl"));
+$aimesh_illustration_bg.append(gen_text("<#1055#>", "backhaul_node for_dsl"));
 }
 var $amesh_clear_bg = $('<div>');
 $amesh_clear_bg.css("clear", "both");
@@ -2099,7 +2099,7 @@ $amesh_action_bg.addClass("amesh_action_bg");
 $changeTypeHintHtml.append($amesh_action_bg);
 var $amesh_close = $('<input/>');
 $amesh_close.addClass("button_gen");
-$amesh_close.attr({"type" : "button", "value" : "<#1648#>"});
+$amesh_close.attr({"type" : "button", "value" : "<#1670#>"});
 $amesh_action_bg.append($amesh_close);
 $amesh_close.click(
 function() {
@@ -2178,7 +2178,7 @@ sorterApi.drawBorder(parent.$("#edit_amesh_client_block .aimesh_node_info_bg #ai
 function gen_AiMesh_node_client(_nodeClient_array) {
 var nodeClientHtml = "";
 if(_nodeClient_array.length == 0)
-nodeClientHtml = "<tr class='aimesh_node_client_tr'><td style='color:#FFCC00;' colspan='" + aimesh_node_client_list_colspan + "'><#2410#></td></tr>";
+nodeClientHtml = "<tr class='aimesh_node_client_tr'><td style='color:#FFCC00;' colspan='" + aimesh_node_client_list_colspan + "'><#2448#></td></tr>";
 else {
 for(var i = 0; i < _nodeClient_array.length; i += 1) {
 var nodeClientObj = _nodeClient_array[i];
@@ -2218,7 +2218,7 @@ nodeClientHtml += "<div class='clientIcon_no_hover " + icon_type + " aimesh_node
 nodeClientHtml += "</td>";
 var client_name = (nodeClientObj.nickName == "") ? nodeClientObj.name : nodeClientObj.nickName;
 nodeClientHtml += "<td width='" + aimesh_node_client_info_width[1] + ";'style='word-wrap:break-word; word-break:break-all;'>" + client_name + "</td>";
-var nodeIP = (nodeClientObj.ip == "offline") ? "<#4151#>" : nodeClientObj.ip;
+var nodeIP = (nodeClientObj.ip == "offline") ? "<#4250#>" : nodeClientObj.ip;
 nodeClientHtml += "<td width='" + aimesh_node_client_info_width[2] + "'>" + nodeIP + "</td>";
 var rssi = 0;
 if(nodeClientObj.isWL == "0")
@@ -2235,7 +2235,7 @@ nodeClientHtml += "</td>";
 nodeClientHtml += "</tr>";
 }
 if(nodeClientHtml == "")
-nodeClientHtml = "<tr class='aimesh_node_client_tr'><td style='color:#FFCC00;' colspan='" + aimesh_node_client_list_colspan + "'><#2410#></td></tr>";
+nodeClientHtml = "<tr class='aimesh_node_client_tr'><td style='color:#FFCC00;' colspan='" + aimesh_node_client_list_colspan + "'><#2448#></td></tr>";
 }
 return nodeClientHtml;
 }
@@ -2278,16 +2278,16 @@ if(_node_info.online == "1" && handle_re_path(_node_info.re_path) > 0){
 if(_node_info.re_path == "1" || _node_info.re_path == "16" || _node_info.re_path == "32" || _node_info.re_path == "64") {
 var real_port_type = gen_real_port_type(_node_info);
 if(real_port_type.type == "eth"){
-component.text = "<#3313#>";
+component.text = "<#3383#>";
 component.icon = "<div class='radioIcon radio_wired'></div>";
 }
 else if(real_port_type.type == "plc"){
-component.text = "<#4227#>";
+component.text = "<#4326#>";
 component.icon = "<div class='radioIcon radio_plc'></div>";
 }
 }
 else {
-component.text = "<#3314#>";
+component.text = "<#3384#>";
 var bandClass = (navigator.userAgent.toUpperCase().match(/CHROME\/([\d.]+)/)) ? "band_txt_chrome" : "band_txt";
 var wireless_band = 0;
 var wireless_band_array = ["2.4G", "5G", "6G"];
@@ -2309,7 +2309,7 @@ component.icon += "<div class='band_block'><span class=" + bandClass + ">" + wir
 }
 }
 else{
-component.text = "<#217#>";
+component.text = "<#226#>";
 component.icon = "";
 }
 return component;
@@ -2386,7 +2386,7 @@ option.text = _text;
 option.conn_type = _conn_type;
 return JSON.parse(JSON.stringify(option));
 };
-option_array.push(gen_option_attr("3", ((_eap_flag) ? "<#153#> (<#1054#>)" : "<#153#>"), "auto"));
+option_array.push(gen_option_attr("3", ((_eap_flag) ? "<#160#> (<#1072#>)" : "<#160#>"), "auto"));
 var port_mapping = [{value:"1", text:"WAN"}, {value:"2", text:"LAN"}];//Def
 var interface_mapping = [{value:"1", text:"Ethernet"}, {value:"2", text:"WiFi"}, {value:"3", text:"Powerline"}];//Type
 var eth_rate_mapping = [{value:"1", text:"10M"}, {value:"2", text:"100M"}, {value:"3", text:"1G"}, {value:"4", text:"2.5G"}, {value:"5", text:"5G"},
@@ -2456,7 +2456,7 @@ conn_prio_type += " " + if_text;
 if(port_idx >= 1)
 conn_prio_type += port_idx;
 }
-var option_text = (_eap_flag) ? "<#1064#>" : "<#1063#>";
+var option_text = (_eap_flag) ? "<#1082#>" : "<#1081#>";
 option_text = option_text.replace("#CONNPRIOTYPE", conn_prio_type);
 var option_conn_type = conn_type;
 if(_eap_flag && conn_type == "wifi")
@@ -2467,7 +2467,7 @@ option_array.push(gen_option_attr(option_value, option_text, option_conn_type));
 }
 }
 if(option_array.length == 1)
-option_array.push(gen_option_attr("2", ((_eap_flag) ? "<#1053#>" : "<#1049#>"), "eth"));
+option_array.push(gen_option_attr("2", ((_eap_flag) ? "<#1071#>" : "<#1067#>"), "eth"));
 return option_array;
 }
 function handle_re_path(_re_path){
@@ -2520,8 +2520,8 @@ return ((isNaN(result)) ? 0 : result);
 <table width="95%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="table1px" style="margin-bottom:5px;display:;">
 <tr>
 <td colspan="2">
-<div class="amesh_title"><#1016#></div>
-<div class="amesh_title amesh_content"><#1019#></div>
+<div class="amesh_title"><#1034#></div>
+<div class="amesh_title amesh_content"><#1037#></div>
 </td>
 </tr>
 <tr id="ready_onBoarding_table" style="display:none;">
@@ -2531,22 +2531,22 @@ return ((isNaN(result)) ? 0 : result);
 </tr>
 <tr>
 <td width="50%">
-<div class="amesh_title amesh_help" onclick="scenario();"><#1017#></div>
+<div class="amesh_title amesh_help" onclick="scenario();"><#1035#></div>
 </td>
 <td width="50%" height="32px;" style="text-align:center;">
-<input id="searchReadyOnBoarding" type="button" class="button_gen" value="<#1672#>" onClick="searchReadyOnBoarding();">
+<input id="searchReadyOnBoarding" type="button" class="button_gen" value="<#1694#>" onClick="searchReadyOnBoarding();">
 <div id="amesh_loadingIcon" class="amesh_loadingIcon" style="display:none;"></div>
 </td>
 </tr>
 <tr>
 </table>
 <div class="amesh_node_title">
-<#1072#>
+<#1090#>
 </div>
 <table width="95%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="table1px">
 <tr>
 <td>
-<div id="onBoarding_block"><div class='amesh_no_data'><#2410#></div></div>
+<div id="onBoarding_block"><div class='amesh_no_data'><#2448#></div></div>
 </td>
 </tr>
 <tr>

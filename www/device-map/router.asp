@@ -7,7 +7,7 @@
 <meta http-equiv="Expires" CONTENT="-1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="images/favicon.png">
-<title><#380#> - <#382#></title>
+<title><#394#> - <#396#></title>
 <link rel="stylesheet" href="../NM_style.css" type="text/css">
 <link rel="stylesheet" href="../form_style.css" type="text/css">
 <link rel="stylesheet" href="../css/networkMap.css" type="text/css">
@@ -141,12 +141,12 @@ function getInterface(){
 wlInterface = []; // initialize
 var _temp = new Array();
 var typeObj = {
-'triBandSmartConnect': [['0', '<#3170#>', '0']],
+'triBandSmartConnect': [['0', '<#3236#>', '0']],
 'dualBand6GHzSmartConnect': [['0', '2.4 / 5 GHz', '0'], ['2', '6 GHz', '2']],
-'dualBandSmartConnect': [['0', '<#3169#>', '0']],
+'dualBandSmartConnect': [['0', '<#3235#>', '0']],
 'triBand5GHzSmartConnect': [['0', '2.4 GHz', '0'], ['1', '5GHz Smart Connect', '1']],
-'triBandMeshSmartConnect': [['0', '<#3169#>', '0'], ['2', '5 GHz-2', '2']],
-'triBand6GHzMeshSmartConnect': [['0', '<#3169#>', '0'], ['2', '6 GHz', '2']],
+'triBandMeshSmartConnect': [['0', '<#3235#>', '0'], ['2', '5 GHz-2', '2']],
+'triBand6GHzMeshSmartConnect': [['0', '<#3235#>', '0'], ['2', '6 GHz', '2']],
 'lyraHide': [['0', 'Wireless', '0']],
 '2.4G': [['0', '2.4 GHz', '0']],
 '5GDualBand': [['1', '5 GHz', '1']],
@@ -223,8 +223,8 @@ var code = '';
 var _temp = '';
 if(isSwMode('mb')){
 code += '<div class="unit-block">';
-code += '<div class="info-title"><#105#></div>';
-code += '<div class="button-right"><input type="button" class="button_gen" value="<#602#>" onclick="gotoSiteSurvey();"></div>';
+code += '<div class="info-title"><#111#></div>';
+code += '<div class="button-right"><input type="button" class="button_gen" value="<#618#>" onclick="gotoSiteSurvey();"></div>';
 code += '</div>';
 $('#wl_settings_field').html(code);
 $('#apply_button').hide();
@@ -238,7 +238,7 @@ $('#smart_connect_field').show();
 var smartConnectType_ori = nvram['smart_connect_x'];
 if(smartConnectType_ori != '0'){
 code += '<div class="info-block">';
-code += '<div class="info-title"><#3167#></div>';
+code += '<div class="info-title"><#3233#></div>';
 code += '<div><select id="smart_connect_x" class="input_option" onchange="updateVariable(this.id, value)"></select></div>';
 code += '</div>';
 }
@@ -282,16 +282,16 @@ break;
 }
 }
 code += '<div class="info-block">';
-code += '<div class="info-title"><#562#></div>';
+code += '<div class="info-title"><#578#></div>';
 code += '<div><input type="text" class="input-size-25" id="wl'+ unit +'_ssid" oninput="updateVariable(this.id, value, false)" maxlength="33" autocomplete="off" autocorrect="off" autocapitalize="off"></div>';
 code += '</div>';
 if(!system.lyraHideSupport){
 code += '<div class="info-block">';
-code += '<div class="info-title"><#3782#></div>';
+code += '<div class="info-title"><#3881#></div>';
 code += '<div><select id="wl'+ unit +'_auth_mode_x" class="input_option" onchange="updateVariable(this.id, value)">'+ _temp +'</select></div>';
 code += '</div>';
 code += '<div id="wl'+ unit +'_no_wp3_hint" class="wpa3_hint" style="display:none;">';
-code += '<span><#1010#> <a id="wl'+ unit +'_wpa3FaqLink" class="faq-link" target="_blank" href="">FAQ</a></span>';
+code += '<span><#1028#> <a id="wl'+ unit +'_wpa3FaqLink" class="faq-link" target="_blank" href="">FAQ</a></span>';
 code += '</div>';
 }
 var _authMode = variable['wl'+ unit +'_auth_mode_x'];
@@ -300,13 +300,13 @@ var wepEncryption = variable['wl'+ unit +'_wep_x'];
 if(_authMode == 'psk' || _authMode == 'psk2' || _authMode == 'sae' || _authMode == 'pskpsk2' || _authMode == 'psk2sae' || _authMode == 'owe' || _authMode == 'openowe'){
 if(!system.lyraHideSupport){
 code += '<div class="info-block">';
-code += '<div class="info-title"><#854#></div>';
+code += '<div class="info-title"><#872#></div>';
 code += '<div><select id="wl'+ unit +'_crypto" class="input_option" onchange="updateVariable(this.id, value)"></select></div>';
 code += '</div>';
 }
 if(_authMode != 'owe' && _authMode != 'openowe'){
 code += '<div class="info-block">';
-code += '<div class="info-title"><#3964#></div>';
+code += '<div class="info-title"><#4063#></div>';
 code += '<div><input type="text" class="input-size-25" id="wl'+ unit +'_wpa_psk" oninput="updateVariable(this.id, value, false)"></div>';
 code += '</div>';
 }
@@ -314,22 +314,22 @@ code += '</div>';
 else if(_authMode == 'shared' || (_authMode == 'open' && nmode_x == '2')){
 if(_authMode == 'shared' || (_authMode == 'open' && wepEncryption != '0')){
 code += '<div class="info-block">';
-code += '<div class="info-title"><#3844#></div>';
+code += '<div class="info-title"><#3943#></div>';
 code += '<div><select id="wl'+ unit +'_wep_x" class="input_option" onchange="updateVariable(this.id, value)"></select></div>';
 code += '</div>';
 code += '<div class="info-block">';
-code += '<div class="info-title"><#850#></div>';
+code += '<div class="info-title"><#868#></div>';
 code += '<div><select id="wl'+ unit +'_key" class="input_option" onchange="updateVariable(this.id, value)"></select></div>';
 code += '</div>';
 code += '<div class="info-block">';
-code += '<div class="info-title"><#851#></div>';
+code += '<div class="info-title"><#869#></div>';
 code += '<div><input id="wl'+ unit +'_wep_key" type="text" class="input-size-25" oninput="updateVariable(this.id, value, false)"></div>';
 code += '</div> ';
 }
 }
 else if(_authMode == 'wpa' || _authMode == 'wpa2' || _authMode == 'wpawpa2'){
 code += '<div class="info-block">';
-code += '<div class="info-title"><#854#></div>';
+code += '<div class="info-title"><#872#></div>';
 code += '<div><select id="wl'+ unit +'_crypto" class="input_option" onchange="updateVariable(this.id, value)"></select></div>';
 code += '</div>';
 }
@@ -364,19 +364,19 @@ var code = '';
 var _smart_connect_x = variable['smart_connect_x']
 if(system.band5g2Support){
 if(dwb_info.mode == '1'){
-_optionArray = [['<#848#>', '0'], ['<#3169#>', '1']];
+_optionArray = [['<#866#>', '0'], ['<#3235#>', '1']];
 }
 else{
 if(isSupport("wifi6e")){
-_optionArray = [['<#848#>', '0'], ['<#3170#>', '1'], ['<#3169#>', '3']];
+_optionArray = [['<#866#>', '0'], ['<#3236#>', '1'], ['<#3235#>', '3']];
 }
 else{
-_optionArray = [['<#848#>', '0'], ['<#3170#>', '1'], ['5GHz Smart Connect', '2']];
+_optionArray = [['<#866#>', '0'], ['<#3236#>', '1'], ['5GHz Smart Connect', '2']];
 }
 }
 }
 else{
-_optionArray = [['<#848#>', '0'], ['<#3169#>', '1']];
+_optionArray = [['<#866#>', '0'], ['<#3235#>', '1']];
 }
 for(var i=0; i<_optionArray.length; i++){
 code += '<option value="'+ _optionArray[i][1] +'">'+ _optionArray[i][0] +'</option>';
@@ -415,7 +415,7 @@ var authObj = {
 'wifiNewCertNoWPA3': [['Open System', 'open'], ['Shared Key', 'shared'], ['WPA2-Personal', 'psk2'], ['WPA-Auto-Personal', 'pskpsk2'], ['WPA2-Enterprise', 'wpa2'], ['WPA-Auto-Enterprise', 'wpawpa2'], ['Radius with 802.1x', 'radius']],
 'normalWithWPA3': [['Open System', 'open'], ['WPA2-Personal', 'psk2'], ['WPA3-Personal', 'sae'], ['WPA/WPA2-Personal', 'pskpsk2'], ['WPA2/WPA3-Personal', 'psk2sae'], ['WPA2-Enterprise', 'wpa2'], ['WPA/WPA2-Enterprise', 'wpawpa2']],
 'normalWithoutWPA3': [['Open System', 'open'], ['WPA2-Personal', 'psk2'], ['WPA-Auto-Personal', 'pskpsk2'], ['WPA2-Enterprise', 'wpa2'], ['WPA-Auto-Enterprise', 'wpawpa2']],
-'6G': [['<#4232#>', 'owe'], ['WPA3-Personal', 'sae']],
+'6G': [['<#4331#>', 'owe'], ['WPA3-Personal', 'sae']],
 'normalWithWPA3OWE': [['Open System', 'open'], ['Enhanced OPEN Transition', 'openowe'], ['WPA2-Personal', 'psk2'], ['WPA3-Personal', 'sae'], ['WPA/WPA2-Personal', 'pskpsk2'], ['WPA2/WPA3-Personal', 'psk2sae'], ['WPA2-Enterprise', 'wpa2'], ['WPA/WPA2-Enterprise', 'wpawpa2']]
 }
 if(sw_mode == '2' || (system.modelName == 'RT-AC87U' && unit == '1')){
@@ -492,6 +492,9 @@ auth_array = authObj['normalWithWPA3'];
 else{
 auth_array = authObj['normalWithoutWPA3'];
 }
+}
+if(is_KR_sku){ //remove Open System
+auth_array = auth_array.filter(subArr => subArr[1] !== 'open');
 }
 if(isSupport("amas") && isSupport("amasRouter") && (isSwMode("rt") || isSwMode("ap"))){
 var re_count = httpApi.hookGet("get_cfg_clientlist", true).length;
@@ -824,7 +827,7 @@ return false;
 var wpaKey = obj.value;
 var is_common_string = parent.check_common_string(wpaKey, 'wpa_key');
 if(is_common_string){
-if(!confirm("<#316#>")){
+if(!confirm("<#328#>")){
 obj.focus();
 return false;
 }
@@ -865,8 +868,8 @@ return true;
 </script>
 <div class="main-block">
 <div class="display-flex flex-a-center">
-<div id="wireless_tab" class="tab-block tab-click" onclick="switchTab(this.id)"><#382#></div>
-<div id="status_tab" class="tab-block" onclick="switchTab(this.id)"><#731#></div>
+<div id="wireless_tab" class="tab-block tab-click" onclick="switchTab(this.id)"><#396#></div>
+<div id="status_tab" class="tab-block" onclick="switchTab(this.id)"><#748#></div>
 <div id="light_effect_tab" class="tab-block"style="display:none;" onclick="switchTab(this.id)">Aura RGB</div></div>
 <div id="assassin_mode" class="unit-block" style="display:none;">
 <div class="display-flex flex-a-center flex-j-spaceB">
@@ -894,7 +897,7 @@ return true;
 <div id="smart_connect_field" class="unit-block" style="display:none;"></div>
 <div id="wl_settings_field"></div>
 <div id="apply_button" class="button">
-<input type="button" class="button_gen" value="<#196#>" onclick="apply();">
+<input type="button" class="button_gen" value="<#203#>" onclick="apply();">
 </div>
 </div>
 </body>

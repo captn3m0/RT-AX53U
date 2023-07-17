@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#842#> - <#1432#></title>
+<title><#860#> - <#1450#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="usp_style.css">
@@ -176,7 +176,7 @@ var loop_count = 0;
 httpApi.updateClientList();
 setTimeout(function(){
 if(loop_count >= 60) {
-$("#sortable").html("<div style='text-align:center;color:#FFCC00'><#2410#></div>");
+$("#sortable").html("<div style='text-align:center;color:#FFCC00'><#2448#></div>");
 return false;
 }
 if(totalClientNum.online != 0)
@@ -677,7 +677,7 @@ code +='</td>';
 code +='</tr>';
 }
 if(code == ""){
-code = "<tr><td colspan='3' style='text-align:center;color:#FFCC00'><div style='padding:5px 0px;border-top:solid 1px #333;'><#1431#></div></td></tr>";
+code = "<tr><td colspan='3' style='text-align:center;color:#FFCC00'><div style='padding:5px 0px;border-top:solid 1px #333;'><#1449#></div></td></tr>";
 }
 $(apps_field).empty();
 $(apps_field).append(code);
@@ -1473,17 +1473,17 @@ return value;
 <table width="100%">
 <tr>
 <td class="formfonttitle" align="left">
-<div><#2655#> - <#1432#></div>
+<div><#2698#> - <#1450#></div>
 </td>
 <td >
 <div style="display:flex;align-items: center;">
-<div style="font-size: 14px;margin-right:8px;"><#3218#></div>
+<div style="font-size: 14px;margin-right:8px;"><#3284#></div>
 <div>
 <select class="input_option" id="traffic_unit" onchange="setUnit(this.value);">
 <option value="100">100 Mbps</option>
 <option value="1000">1 Gbps</option>
 <option value="10000">10 Gbps</option>
-<option value="0" selected><#153#></option>
+<option value="0" selected><#160#></option>
 </select>
 </div>
 </div>
@@ -1493,7 +1493,7 @@ return value;
 <table align="right">
 <tr>
 <td>
-<div class="formfonttitle" style="margin-bottom:0px;margin-left:50px;" title="<#1428#>"><#1430#></div>
+<div class="formfonttitle" style="margin-bottom:0px;margin-left:50px;" title="<#1446#>"><#1448#></div>
 </td>
 <td >
 <div align="center" class="left" style="width:94px; float:left; cursor:pointer;" id="apps_analysis_enable"></div>
@@ -1527,7 +1527,7 @@ switch_control(0);
 <table style="width:99%;">
 <tr>
 <td id="upload_unit" style="width:50%;">
-<div style="margin:-10px 0 5px 70px;font-size:16px;text-align:center;"><#3454#></div>
+<div style="margin:-10px 0 5px 70px;font-size:16px;text-align:center;"><#3524#></div>
 <div style="position:absolute;margin:12px 0px 0px 112px;font-size:16px;display:none;"></div>
 <div style="position:absolute;margin:-8px 0px 0px 222px;font-size:16px;display:none;"></div>
 <div style="position:absolute;margin:50px 0px 0px 300px;font-size:16px;display:none;"></div>
@@ -1538,7 +1538,7 @@ switch_control(0);
 <div id="indicator_upload" class="transition_style" style="background-image:url('images/New_ui/indicator.png');position:absolute;height:100px;width:50px;background-repeat:no-repeat;margin:-110px 0px 0px 194px;"></div>
 </td>
 <td id="download_unit">
-<div style="margin:-10px 0 5px -55px;font-size:16px;text-align:center;"><#1791#></div>
+<div style="margin:-10px 0 5px -55px;font-size:16px;text-align:center;"><#1813#></div>
 <div style="position:absolute;margin:12px 0px 0px 88px;font-size:16px;display:none;"></div>
 <div style="position:absolute;margin:-6px 0px 0px 203px;font-size:16px;display:none;"></div>
 <div style="position:absolute;margin:50px 0px 0px 275px;font-size:16px;display:none;"></div>
@@ -1560,12 +1560,12 @@ switch_control(0);
 <tr>
 <td colspan="2">
 <div style="display:flex;align-items: center;justify-content: flex-end;margin-right:8px;">
-<div style="font-size:14px;margin-right:8px;"><#3086#></div>
+<div style="font-size:14px;margin-right:8px;"><#3138#></div>
 <div>
 <select class="input_option" id="scale_unit" onchange="setScale(this.value);">
 <option value="0">Kb</option>
 <option value="1">Mb</option>
-<option value="9"><#153#></option>
+<option value="9"><#160#></option>
 </select>
 </div>
 </div>
@@ -1576,7 +1576,7 @@ switch_control(0);
 <div style="cursor:pointer;width:113px;border-radius:10px;text-align:center;box-shadow:0px 2px black;" onclick="show_clients()">
 <table>
 <tr>
-<td><div class="qos_tab" style="width:110px;border-radius:10px;"><#3148#></div></td>
+<td><div class="qos_tab" style="width:110px;border-radius:10px;"><#3214#></div></td>
 </tr>
 </table>
 </div>
@@ -1590,7 +1590,7 @@ switch_control(0);
 <table>
 <tr>
 <td style="width:25px;"><div style="width:12px;height:12px;border-radius:10px;background-color:#F01F09;margin-left:5px;"></div></td>
-<td><#2281#></td>
+<td><#2318#></td>
 </tr>
 </table>
 </div>
@@ -1600,7 +1600,7 @@ switch_control(0);
 <table>
 <tr>
 <td style="width:25px;"><div style="width:12px;height:12px;border-radius:10px;background-color:#F08C09;margin-left:5px;"></div></td>
-<td><#2280#></td>
+<td><#2317#></td>
 </tr>
 </table>
 </div>
@@ -1610,7 +1610,7 @@ switch_control(0);
 <table>
 <tr>
 <td style="width:25px;"><div style="width:12px;height:12px;border-radius:10px;background-color:#F3DD09;margin-left:5px;"></div></td>
-<td><#2648#></td>
+<td><#2691#></td>
 </tr>
 </table>
 </div>
@@ -1620,7 +1620,7 @@ switch_control(0);
 <table>
 <tr>
 <td style="width:25px;"><div style="width:12px;height:12px;border-radius:10px;background-color:#7A797A;margin-left:5px;"></div></td>
-<td><#3117#></td>
+<td><#3183#></td>
 </tr>
 </table>
 </div>
@@ -1630,7 +1630,7 @@ switch_control(0);
 <table>
 <tr>
 <td style="width:25px;"><div style="width:12px;height:12px;border-radius:10px;background-color:#58CCED;margin-left:5px;"></div></td>
-<td><#2627#></td>
+<td><#2668#></td>
 </tr>
 </table>
 </div>
@@ -1658,10 +1658,10 @@ switch_control(0);
 <tr>
 <td>
 <div style="margin:0 0 0 12px;width:200px;">
-<a id="faq" href="" style="text-decoration:underline;" target="_blank"><#1432#> FAQ</a>
+<a id="faq" href="" style="text-decoration:underline;" target="_blank"><#1450#> FAQ</a>
 </div>
 <div style=" *width:136px;margin:5px 0px 0px 300px;" class="titlebtn" align="center" onClick="applyRule();">
-<span><#196#></span>
+<span><#203#></span>
 </div>
 </td>
 </tr>

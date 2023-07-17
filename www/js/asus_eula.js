@@ -12,7 +12,7 @@ return ASUS_EULA;
 "agree": function(eula_type){
 if($("#ASUS_EULA_enable").is(":visible")){
 if($("#ASUS_EULA_enable").prop("checked") === false){
-alert("<#129#>");
+alert("<#135#>");
 $("#ageHint").css({"color": "#FC0"});
 return false;
 }

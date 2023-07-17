@@ -88,6 +88,12 @@ PHY 速率
 拓樸
 系統設定
 統計
+環境偵測
+預估連線路徑中...
+最佳化節點
+天線方向最佳化
+天線偵測
+預估天線方向中...
 Powerline connection with good signal quality
 Powerline connection with weak signal quality
 無線連線訊號強
@@ -151,6 +157,7 @@ IP 設定更新成功，即將為您導回設定頁面。
 請確認是否關閉？
 關閉資料傳送
 請輸入名稱
+該主機名稱已綁定於路由器應用程式的登錄賬號，請從路由器應用程式中註銷或刪除
 自動
 自動設定
 頻寬限制
@@ -212,6 +219,8 @@ RT-AX53U 的位址已改變為
 未知名稱的裝置
 夜間升級
 立即更新
+使用預設的本地端登入密碼
+當您於本地端連線至您的華碩網路裝置，預設加密的本地端登入密碼提供安全的登入流程
 要了解更多資訊，請參考 <a style="font-weight: bolder;text-decoration: underline;color:#000000;" href="https://www.asus.com/support/" target="_blank">https://www.asus.com/support/</a>
 * 一個最小的 PING 訊框每個間隔會消耗約 128 位元組（byte）的數據流量。 因此，PING 監測將消耗
 MB /每月
@@ -280,7 +289,10 @@ IP 位址被更新。若此步驟花費了超過兩分鐘的時間，請按照�
 *此時區已開啟日光節約時間。
 系統時間
 * 提醒：您的系統時間未與 NTP 伺服器同步。
+您的路由器系統時間尚未與NTP服務器同步，連接互聯網後，它會自動同步。
 訪客網路
+如何找到%@
+%@ 可以在您華碩裝置的背面或下方貼紙上找到
 請使用埠號 1024-65535。
 由於安全性及相容性考量，IE8 / IE9 / IE10 已停止支援。
 使用舊版 Internet Explorer 開啟這個網頁，可能會有網頁內容不正確的情況發生。
@@ -359,6 +371,8 @@ RT-AX53U 的 LAN 子網路遮罩。預設值為 255.255.255.0。
 除了使用者指定的 DNS 之外，也會通告路由器的 IP
 WAN 連線類型
 使用下列的 IP 位址連線：
+本地端登入
+設定本機登入使用者名稱和密碼，以防止他人未經授權擅自存取您的 ASUS 網路裝置。
 至少 2 個字元。僅限使用英數字元、底線和破折號。第一個字元不能是破折號 - 或底線 _。
 您也可以下載 [ASUS Lyra] 將額外的 Lyra 裝置連線至第一台 Lyra。
 現在，您可以按下第一台和第二台 Lyra 上的 &quot;配對按鈕&quot; 以設定另外一台 Lyra 裝置。
@@ -441,7 +455,7 @@ AP 模式下的 AiMesh 路由器將透過網路線連線至另一台無線路由
 選擇運作模式
 RT-AX53U 支援多種運作模式，以滿足不同需求。請選擇您所需的模式。
 在無線路由器模式中，RT-AX53U 透過 PPPoE、DHCP、PPTP、L2TP 或靜態 IP 連接至網際網路，並且將無線網路分享至 LAN 用戶端或裝置。在此模式中，NAT、防火牆與 DHCP 伺服器預設為開啟。此模式適用於 SOHO 與一般家庭使用者。若您是第一次使用，或您目前未使用任何有線/無線路由器時，請選擇此模式。
-AiMesh 路由器模式為具有 AiMesh 功能的傳統模式，可透過 PPPoE、DHCP，PPTP、L2TP 或固定 IP 連線至網際網路。網路連線成功後，路由器將與 LAN 用戶端或裝置共享無線網絡。此模式預設啟用 NAT、防火牆和 DHCP 伺服器。同時也支援 UPnP 和動態 DNS，為 SOHO 和家庭使用者帶來便利。若您第一次使用華碩無線路由器，或者您目前沒有使用任何有線/無線路由器，請選擇此模式。
+AiMesh 路由器模式為具有 AiMesh 功能的傳統模式，可透過 PPPoE、DHCP，PPTP、L2TP 或固定 IP 連線至網際網路。網路連線成功後，路由器將與 LAN 用戶端或裝置共享無線網路。此模式預設啟用 NAT、防火牆和 DHCP 伺服器。同時也支援 UPnP 和動態 DNS，為 SOHO 和家庭使用者帶來便利。若您第一次使用華碩無線路由器，或者您目前沒有使用任何有線/無線路由器，請選擇此模式。
 無線路由器(預設)
 無線路由器模式 / AiMesh 路由器模式（預設）
 多媒體橋接器( Media Bridge )
@@ -474,6 +488,8 @@ RT-AX53U 透過無線網路連線至您的主要路由器、存取點或公共�
 好
 強
 很強
+本地端登入密碼
+WiFi 密碼
 PIN 碼不正確。請輸入正確的 PIN 碼，並重新連接3G/4G USB 無線網路卡。若問題仍然存在，請先關閉 PIN 碼功能，接著再次開啟重試。
 電話號碼
 Access Number
@@ -672,6 +688,7 @@ Enterprise-grade Security - ASUS AiProtection provides advanced protection for a
 輸入一個網路金鑰，介於 8~63 個字元組合。 預設無線加密模式為 WPA2–Personal AES。
 個別設定 2.4 GHz 和 5 GHz
 個別設定 2.4 GHz、5 GHz 和 6 GHz
+主要的無線網路已經設定完成。
 用戶名稱不能空白！
 使用者名稱 / 密碼區域不能為空白。
 ISP 帳號設定
@@ -822,6 +839,7 @@ PPPoE 驗證失敗
 正在重新連線至網際網路。
 請聯絡您的網路管理員。
 點擊這裡進入設定頁面
+<a>點擊這裡</a>進行修改。
 您能在這裡自行檢查和調整您的設定。
 若問題依然存在，請手動更改連接設定。
 恢復遠端連線。
@@ -859,7 +877,7 @@ WPA 加密
 建立您的 Lyra 登入帳號。使用者名稱與密碼將會用來登入與管理您的 Lyra 網路。
 要使用華碩 Lyra，需要你同意
 歡迎使用 Lyra
-創建新的網路
+建立新的網路
 或著登入目前連線的 Lyra 網路
 ASUS 隱私權條款
 ASUS 使用條款
@@ -906,8 +924,8 @@ For faster video streaming experience including Youtube, Netflix and Spotify, et
 網上瀏覽
 此模式適合一般的網頁瀏覽，在檔案傳輸時避免網路延遲。
 Learn-From-Home
-Choose this mode for a smooth streaming of online video-learning experience.This category includes Coursera, Khan, Udemy, TED, edX, etc.
-Choose this mode to ensure a smooth agile online conferencing experience.This category includes VoIP, instant messaging, mail service, etc.
+Choose this mode for a smooth streaming of online video-learning experience. This category includes Coursera, Khan, Udemy, TED, edX, etc.
+Choose this mode to ensure a smooth agile online conferencing experience. This category includes VoIP, instant messaging, mail service, etc.
 新增帳號的預設權限不可讀寫。
 新增帳號
 新增資料夾的預設權限可讀寫。
@@ -1515,6 +1533,7 @@ Trend Micro 為您提供更加穩固進階的安全解決方案。點選<a href=
 若您使用 PPTP 或 L2TP 連線，則需要輸入 VPN 伺服器的名稱或位址。
 本欄可讓您提供 RT-AX53U 所使用的主機名稱。通常是您 ISP 業者要求的名稱。
 設定單一使用者可以使用的最大頻寬。0代表對頻寬沒有限制。
+返回
 關閉
 未啟用
 已啟用
@@ -1527,8 +1546,10 @@ Trend Micro 為您提供更加穩固進階的安全解決方案。點選<a href=
 功能
 驗證碼
 請輸入驗證碼
+如果您想啟用此功能，請檢查<a id = \"setting_link\" target=\"_blank\" style=\"text-decoration:underline;\">這裡</a>來變更設定。
 確保乙太網路線已正確連接
 路由器正在檢查華碩伺服器以查看韌體更新。
+請選擇其他選項，然後再試一次。
 不會收集有關使用者的資訊，並遵守瑞士隱私權法的規定。
 客戶名稱
 圖示
@@ -1635,7 +1656,8 @@ ASUS 裝置
 新加坡
 美國
 加拿大
-創建免費帳號
+建立帳戶
+建立免費帳號
 PPPoE、PPTP 或 L2TP 協定下不支援二級 CTF。要更改為一級 CTF，請點選「確認」。
 啟動 HW Accelerator
 開啟 AiProtection 後系統會自動重啟，使功能正常運作。請按一下「套用」來啟用此功能或按一下「取消」返回頁面。
@@ -1942,7 +1964,7 @@ USB 數據機
 無法連接到無線網路
 選擇最能描述您的 DSL 服務效能的項目
 聯絡方式
-您的國家 / 地區
+您的地區
 取消獲取偵錯紀錄
 正在獲取系統偵錯診斷紀錄
 獲取偵錯診斷紀錄階段
@@ -2246,22 +2268,30 @@ AiMesh 上的訪客網路
 複製其他設定
 訪客總數
 訪客
+提供排定或一次性存取網路。
+推薦用於購物中心、健身房或與朋友相聚。
 存取限定
 僅允許存取網際網路
 使用相同設定
 企業網路
 客製化網路
+員工
 架設安全無虞的網路
+辦公室對部門指定權限
 快速建立訪客網路
 IoT 網路
 輕鬆分隔 IoT 裝置的網路
+建議使用於監視設備、語音助手、燈具、門鈴攝影機、智能鎖和傳感器。
 兒童網路
 確保孩童上網安全
 訪客入口網站
-建立訪客入口網站或 Facebook WiFi
+建立訪客入口網站
+創建數位行銷的強制門戶
+建議使用於餐廳、旅館或美食貨車。
 入口網站類型
 VPN 網路
 建立安全的網際網路連線
+通過VPN建立一個安全的互聯網連接。建議用於居家辦公以及分支辦事處。
 此 VPN 設定檔已停用。請進入 VPN 伺服器設定頁面並加以啟用。
 按一下下方的「前往設定」進入VPN 設定頁面。
 由其他建立的設定檔使用時無法選取此設定。
@@ -2269,8 +2299,15 @@ VPN 網路
 目前沒有 VPN 設定檔。按一下下方的 [前往設定] 進入 VPN 設定頁面，然後建立設定檔。
 新增網路
 設定檔清單
-選擇已定義的網路
+排定網路
+選擇自定義網路
+依使用情境創建網路
+自定義網絡
+情境探索者
 WiFi 排程
+計劃每日或每週無線網路的上網時間
+推薦用於遠距學習、課堂或兒童。
+建立不同使用級別以加強網路安全
 硬體版本
 Help
 在說明功能中，我們為一些艱澀或進階的功能提供導引與解釋，而這些詞彙會以
@@ -2282,6 +2319,7 @@ Help
 最高
 最高優先級封包
 時
+如何設定
 與網際網路連線失敗。 請重試或者與您的網路服務業者 (ISP) 確認您的帳戶設定。
 請選擇您的 ISP 所在地區。
 所在地區
@@ -2322,7 +2360,7 @@ If I am playing a game, then boost the game speed
 從已存在的 Applets 中選擇一個或在 <a id="ifttt_applet_link">ASUS Router Channel</a> 中建立一個屬於您自己的小程式
 <a id="ifttt_signin">登入</a> 您的 IFTTT 帳號。
 使用華碩路由器與 IFTTT 開啟您的自動化生活吧！
-開始：
+開始使用：
 在
 路由器無法連接到 ASUS 伺服器檢查韌體更新。請從 ASUS 產品支援網站下載最新韌體，然後進行手動更新。
 頻段
@@ -2447,6 +2485,9 @@ IPv6 區域網路設定
 Native
 OCN Virtual Connect
 v6plus
+如果您想使用這些設定，請參考「%0$@」中的可用連接埠範圍，並將這些功能的連接埠號碼更改為相符的範圍。
+目前 %2$@ 連接埠範圍內的連接埠相關設定可能會出現不相符的問題。
+在 %3$@ 的特殊連接埠範圍下可能會出現連接埠不相符的問題。 雖然這不會影響到您的網際網路，但會影響以下連接埠相關設定。 如果您想使用這些設定，請參考「<a target='_self' style='text-decoration:underline;' href='Main_IPV6Status_Content.asp'>IPv6 Log</a>」中的可用連接埠範圍，並將這些功能的連接埠號碼更改為相符的範圍。
 IPv6 前綴長度
 IPv4 選撥中繼
 固定 IPv6
@@ -2631,7 +2672,7 @@ Download and install SSL certificate on your browser to trust accessing your loc
 使用說明
 手動指定
 城市
-國家/地區
+地區
 您可能需要 VLAN ID 來設置 PTM 連接。若非您的網路電信業者（ISP）要求您變更 VLAN ID，請勿擅自變更。
 此快速設定可引導您快速進行 RT-AX53U WAN 設定。請從清單中選擇您所在的國家/地區與使用的網路服務業者，點選 下一步，並輸入必要的資訊。如有必要，諮詢您的網路服務業者以獲取有關 DSL 連線設定的相關資訊。
 您需要虛擬路徑識別碼（VPI）與虛擬通道識別碼（VCI）來設定 ATM PVC。除非您的網路服務業者要求，否則請不要更改 VPI 與 VCI 號碼。
@@ -2641,6 +2682,8 @@ Download and install SSL certificate on your browser to trust accessing your loc
 快速手動設定
 Refer to the RT-AX53U WAN settings. If you want to add a new setting, follow the onscreen instructions. If you want to modify the previous setting, please go to [Advanced Setting] -> [WAN] -> [Internet Connection] page.
 製造商
+更新 MAP 規則
+這需要1-2分鐘來重新指派MAP規則。在更新期間，所有連接的設備將失去網路連接。
 最大頻寬限制
 設定單一使用者可以使用的最大頻寬。
 最多可新增電腦
@@ -2692,6 +2735,7 @@ LTE 頻段
 您上傳了錯誤的韌體來升級模組。請選擇正確的韌體並再次升級！
 4G 數據機韌體
 行動寬頻數據機資訊
+將手機當成數據機使用
 數據機軟體版本
 需要 PIN 碼。
 需要 PIN2 碼。
@@ -2822,7 +2866,9 @@ To check station's wireless status around AiMesh nodes
 至主機的追蹤路由
 透過網路（LAN）喚醒
 喚醒
+關於功能
 新功能上線
+功能描述
 新資料夾名稱
 新數據機韌體
 下一頁
@@ -2837,6 +2883,7 @@ To check station's wireless status around AiMesh nodes
 要啟用 WPS 需要將身份驗證方式改為 WPA2 或者 WPA-Auto。
 如果您想啟用 WPS，請先停用隱藏 SSID。
 Note: New patch will be updated regularly, please keep your firmware stay up to date.
+提示
 提示項目
 用戶端數量
 如果您遇到華碩 DDNS 服務無法使用的問題，請前往 <a href="https://iplookup.asus.com/nslookup.php" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">https://iplookup.asus.com/nslookup.php</a> 網站取得您的實體 IP 位置以進行使用
@@ -2924,6 +2971,7 @@ RADIUS 用戶端
 開啟埠映射
 LAN 連接埠
 SSH 連接埠
+連接埠狀態
 這些連接埠上的連線速度可以提高。
 請參考以下結果/提示進行疑難排解作業。
 請檢查以下各項
@@ -2933,6 +2981,9 @@ SSH 連接埠
 請洽 ISP 再次檢查您的網路服務方案。
 請改用 #ETHCABLE 或更高規格的線材來取代網路線。
 此連接埠用於
+將 %1$@ 設為 %2$@ 時，會停用 \"%3$@\" 功能。是否要繼續？
+此功能已停用，因為 %1$@ 被設為 %2$@。
+不能將 %1$@ 和 %2$@ 設為相同的連接埠。
 此頁顯示虛擬伺服器通訊埠轉發狀態。一些 P2P 程式會使用 UPnP 協定以開啟通訊埠，並且通訊埠名稱在此頁上顯示。
 RT-AX53U 偵測到連線類型為 PPPoE。若是，請輸入使用者名稱/密碼並點選 套用。<br>若不是，請點選 手動設定 以重新設定。
 請輸入您的網際網路服務供應商（ISP）提供的使用者名稱 / 密碼並點選 下一步。
@@ -2994,6 +3045,7 @@ PPTP 選項
 供應商
 封裝
 封裝模式
+公鑰
 推送
 您確定要刪除此 PVC 嗎？
 編輯 PVC
@@ -3086,6 +3138,20 @@ VPI 與 VCI 設定相同。
 系統正在重新啟動中！請稍候，我們將為您導至 RT-AX53U 的首頁。
 顯示單位
 掃描中
+分公司
+教室
+咖啡店
+充電站
+朋友
+飯店
+購物中心
+遠距學習
+智能家居
+餐廳
+兒童
+語音助手
+監視設備
+居家辦公
 秒
 無線安全層級
 全選
@@ -3128,7 +3194,7 @@ Service Unit
 設定
 點選<a id="redirect_to_setup">此處</a>進行設定；更多資訊，請參考 <a id="redirect_to_FAQ">「常見問題解答」</a>。
 設定節點
-Place your RT-AX53U router and node(s) in the same room and at least 1 meter apart during the setup process.
+在安裝過程中，請將您的 RT-AX53U 路由器和節點放在同一房室且至少相距 1 公尺。
 設定系統時，請保持路由器處於通電及待機狀態。
 裝置名稱
 依據磁碟內檔名的編碼，選擇適合FTP伺服器的語系。
@@ -3279,6 +3345,10 @@ System adjustment
 Temperature unit
 Fan speed
 更換路由器登錄密碼，時區與 NTP 伺服器設定。
+除了主要網絡外，您可以創建額外的自定義網絡以用於不同的目的。
+自定義網絡與主要網絡域分離，提供更安全的連接。
+在每個自定義網路中，您可以設置不同的加密方法、時間表、權限、AiMesh、帶寬限制等，以實現全面的網路環境。
+你想新增一個特殊使用的無線網路嗎？
 基本設定
 區域網路
 其他
@@ -3453,6 +3523,7 @@ Traffic Analyzer 可分析網路流量並將結果以直覺式的曲線圖方式
 有可用更新
 更新中
 上傳頻寬
+上傳設定
 上傳優先順序
 資料傳送量/秒
 已傳送的資料
@@ -3515,6 +3586,10 @@ USB 功能未開啟
 未標記
 已標記
 覆寫
+此連接埠正由「%@」使用中。
+連接埠隔離
+VLAN 設定檔
+VLAN 交換器控制設定
 此設定值須高於
 此設定值須低於
 客戶端使用 VPN 訪問網域
@@ -3556,7 +3631,7 @@ IP / 路由衝突
 RT-AX53U 將自動生成一個帶有憑證金鑰的 .ovpn 檔案。您可以將使用者名稱和密碼伴隨.ovpn 檔案提供給所有連接到 .ovpn 伺服器的使用者。
 要更改 OpenVPN 伺服器設定，請進入進階設定
 您可以變更 OpenVPN 伺服器的預設設定，為特定的連接類型提供一個自訂 .ovpn 檔案。
-若您的 WAN IP 地址為動態 IP，請點擊 <a href="http://ZVDOMAIN_NAMEVZ/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">這裡</a> 進行 DDNS 設定。
+若您的 WAN IP 地址為動態 IP，請點擊 <a href="/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">這裡</a> 進行 DDNS 設定。
 從 DHCP 指定
 加密密碼
 路由衝突! <p>請在進階設定頁面查看用戶端 IP 位址設定或在系統日誌中查看路由表。
@@ -3647,7 +3722,7 @@ Issue from
 Issue to
 更新憑證
 網路設定已改變, 請更新憑證
-基於網路安全，證書有效期為六年。假如證書已過期或您的網絡設定有所更改，請點擊“更新”按鈕。請於更新憑證後，下載新的憑證並安裝在您的VPN客戶端中。
+基於網路安全，證書有效期為六年。假如證書已過期或您的網路設定有所更改，請點擊“更新”按鈕。請於更新憑證後，下載新的憑證並安裝在您的VPN客戶端中。
 Windows設定
 手機設定
 已成功更新憑證, 請下載新憑證並安裝於您的VPN客戶端裝置
@@ -3655,18 +3730,40 @@ Windows設定
 所有的VPN客戶端裝置將重新連線，您確定要繼續嗎?
 支援的IKE版本
 請點擊以設定DDNS
+* VPN WiFi 正在使用中。
+如何設定 WireGuard® VPN 伺服器?
+如何使用 WireGuard® 設定點對點 VPN ?
+如何在 VPN Fusion (多 VPN 連線) 設定 WireGuard® VPN 用戶端?
+VPN 驗證
+用戶端憑證
+用戶端金鑰
+憑證撤銷清單
+由於同時啟用的 VPN 連線數量上限為 2，所以請先停用其中一個 VPN 連線，再啟用另一個。
+系統一次只能啟用一個 Surfshark 連線。請在啟用另一個連線之前，先關閉使用中的 Surfshark 連線。
+預設連線
 VPN（虛擬私人網路，Virtual Private Network）用戶端通常用來連接到 VPN 伺服器，以安全地透過公共網路存取私人資源。
 有些裝置，如機上盒、智慧型電視機與藍光播放機等，不支援 VPN 軟體。
 ASUSWRT VPN 功能為家用網路內的所有裝置提供 VPN 存取，而無需在每台裝置上安裝 VPN 軟體。
+端點位址
+端點連接埠
+因為您的上網安全是第一優先考量。
+允許的 IP 位址
 請變更您路由器的 LAN 子網路，如需詳細資訊，請參閱<a target='_blank'>常見問題</a>。
+持續保持連線
 Net-to-Net 用戶端 / 對等
 IPSec VPN 用戶端 (發起方) 允許 RT-AX53U 連線至 Net-to-Net IPSec 伺服器 / 用戶端 (響應方)，或 BRT-AC828 裝置直接透過 Peer-to-Peer 的方式彼此連線。
 讓我們以兩台 RT-AX53U 的使用為例，來解釋對等網路。您首先需要在本頁面建立一個 IPSec Peer 設定檔，然後在另一台 RT-AX53U 上建立另一組Peer設定檔並作相對應的配置調整。
+設定檔
+套用至所有裝置
+指派裝置給此設定檔
+刪除設定檔
+請選擇其他 VPN 設定檔，以取消網際網路預設 WAN。
 要開啟 VPN 連接，請按照以下步驟操作：
 新增設定檔
 選擇 VPN 連接類型
 輸入由 VPN 提供商提供的 VPN 驗證資訊，然後連接。
 VPN 用戶端
+對等端
 當您的 VPN 用戶端使用 PPPoE 連線時，路由器將會自動重啟，以關閉 NAT 加速。確定繼續？
 障礙
 設定 RT-AX53U 的乙太網路設定。
@@ -3730,18 +3827,19 @@ EAP-TLS
 TCP MSS 選項
 字元組
 VLAN ID
-WAN Aggregation 融合了兩條網路連線，將您的 WAN 傳送速度提高至 2Gbps。請使用同一規格的兩條網路線將路由器的 WAN 連接埠和 LAN 4 連接埠分別連接至數據機的 LAN 連接埠。 <a id="wanAgg_faq" target="_blank" style="color:#FFCC00;text-decoration:underline;">WAN Aggregation FAQ</a>
+WAN 聚合
+WAN Aggregation 融合了兩條網路連線，將您的 WAN 傳送速度提高至 2Gbps。請使用同一規格的兩條網路線將路由器的 #WAN 連接埠和 LAN 4 連接埠分別連接至數據機的 LAN 連接埠。 <a id="wanAgg_faq" target="_blank" style="color:#FFCC00;text-decoration:underline;">WAN Aggregation FAQ</a>
 啟用 WAN 聚合
 已啟用路由器的雙 WAN 功能，啟用 WAN Aggregation 將關閉雙 WAN 功能。確認繼續嗎？
 已啟用路由器的 WAN Aggregation 功能，啟用雙 WAN 將關閉 WAN Aggregation。確認繼續嗎？
 WAN Aggregation 正在使用路由器的 LAN 4 連接埠，啟用 IPTV 將自動關閉 WAN Aggregation。確認繼續嗎？
 IPTV 正在使用路由器的 LAN 4 連接埠，啟用 WAN Aggregation 將自動關閉 IPTV。確認繼續嗎？
 您的路由器已啟用雙 WAN 和 IPTV，啟用 WAN Aggregation 將關閉雙 WAN 和 IPTV 以避免端口衝突。確認繼續嗎？
-請確認已使用同一規格的兩條網路線連接路由器的 WAN 連接埠和數據機的 LAN 連接埠。
+請確認已使用同一規格的兩條網路線連接路由器的 #WAN 連接埠和數據機的 LAN 連接埠。
 請確認已使用同一規格的兩條網路線連接路由器的 LAN 4 連接埠和數據機的 LAN 連接埠。
 欲啟用 WAN Aggregation，請至 <a href="Advanced_WAN_Content.asp" style="color:#FFCC00;text-decoration:underline;">WAN-網際網路連線</a> 頁面。
 若尚未成功設置WAN Aggregation，請參考下列步驟檢查您的設置是否正確
-請確定已使用網路線，將數據機的 LAN 連接埠連接至無線路由器的 WAN 和 LAN 4 連接埠。
+請確定已使用網路線，將數據機的 LAN 連接埠連接至無線路由器的 #WAN 和 LAN 4 連接埠。
 請確認您的數據機已啟用802.3ad
 請確認您使用的兩條網路線為相同規格(Gigagit+Gigabit或10/100+10/100Mbps)
 請重啟您的路由器
@@ -3756,6 +3854,7 @@ WiFi Proxy
 WiFi Radar（WiFi雷達）
 設定功能可讓您設定WiFi Radar的各種參數。
 漫遊封鎖清單
+WiFi 分享
 WiFi 無線偵測
 WiFi 無線偵測可查找到您所處環境中所有的WiFi網路。
 無線信道統計
@@ -4116,7 +4215,7 @@ Free WiFi 可讓您輕鬆建立訪客網路，並推廣您的品牌以及行銷�
 歡迎
 我已閱讀並同意 <span id='terms_service_hyperlink'>服務條款</span>
 繼續
-多個 VPN 連線
+VPN Fusion
 可讓您同時連線至多個 VPN 伺服器，並指定您的用戶端裝置連線至不同的 VPN 隧道。某些裝置，如機頂盒、智慧型電視及藍光播放器不支援 VPN 軟體。此功能讓您無需安裝 VPN 軟體即可在家庭網路中透過 VPN 存取用戶端裝置，而您的智慧型裝置則不是透過 VPN 連線，而是仍然透過一般網路連線。
 對於玩家來說， VPN 連線能夠抵禦 DDoS 攻擊以保障 PC 遊戲或錄影正常進行，而不會與遊戲伺服器中斷連線。建立 VPN 連線還能夠將您的 IP 位址更改至遊戲伺服器的位址，以優化遊戲伺服器的 Ping 回應時間。
 請依照下列步驟設定：
@@ -4243,7 +4342,10 @@ Enhanced Open
 *目前的登入密碼錯誤！
 HTTPS 是相對安全的 Web 存取通訊協定。我們極力建議您透過 HTTPS 通訊協定進入 ASUS 路由器設定頁面。
 按這裡繼續。
+掃描QR code以連接
+使用手機掃描此QR碼，連接到免費的WiFi。
 掃描 QR Code 顯示更多詳情。
+手動連接網路
 還是想透過 <span>HTTP 通訊協定</span>進入設定頁面嗎？
 使用 HTTPS 通訊協定時，可能會顯示警告訊息，指出安全性憑證由瀏覽器所核發。
 儘管有此警告訊息，您的瀏覽器和 ASUS 路由器設定頁面 (ZVDOMAIN_NAMEVZ) 之間的連接仍然安全。

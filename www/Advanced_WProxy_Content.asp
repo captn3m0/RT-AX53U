@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#842#> - <#3754#></title>
+<title><#860#> - <#3852#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="other.css">
@@ -40,7 +40,7 @@ document.form.submit();
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center">
 <tr>
 <td>
-<div class="drword" id="drword"><#371#> <#368#>...
+<div class="drword" id="drword"><#385#> <#382#>...
 <br/>
 <br/>
 </div>
@@ -80,12 +80,12 @@ document.form.submit();
 <tr>
 <td bgcolor="#4D595D" valign="top" height="360px">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#382#> - <#3754#></div>
+<div class="formfonttitle"><#396#> - <#3852#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#3752#></div>
+<div class="formfontdesc"><#3850#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr id="wl_unit_field" class="rept" style="display:none">
-<th><#2327#></th>
+<th><#2365#></th>
 <td>
 <select name="wl_unit" class="input_option" onChange="change_wl_unit();">
 <option class="content_input_fd" value="0" <% nvram_match("wl_unit", "0","selected"); %>>2.4GHz</option>
@@ -94,16 +94,16 @@ document.form.submit();
 </td>
 </tr>
 <tr>
-<th><a><#3753#></a></th>
+<th><a><#3851#></a></th>
 <td>
-<input type="radio" name="wifipxy_enable_2" class="input" value="1" onclick="enable_wifipxy('1')" <% nvram_match("wlc0_wifipxy", "1", "checked"); %>><#187#>
-<input type="radio" name="wifipxy_enable_2" class="input" value="0" onclick="enable_wifipxy('0')" <% nvram_match("wlc0_wifipxy", "0", "checked"); %>><#186#>
+<input type="radio" name="wifipxy_enable_2" class="input" value="1" onclick="enable_wifipxy('1')" <% nvram_match("wlc0_wifipxy", "1", "checked"); %>><#194#>
+<input type="radio" name="wifipxy_enable_2" class="input" value="0" onclick="enable_wifipxy('0')" <% nvram_match("wlc0_wifipxy", "0", "checked"); %>><#193#>
 <span id="wifipxy_enable_prompt" style="display:none;">(Only support 2.4GHz)</span>
 </td>
 </tr>
 </table>
 <div class="apply_gen">
-<input class="button_gen" onclick="applyRule()" type="button" value="<#196#>"/>
+<input class="button_gen" onclick="applyRule()" type="button" value="<#203#>"/>
 </div>
 </td>
 </tr>

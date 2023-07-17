@@ -88,6 +88,12 @@ Débit de données
 Topologie
 Paramètres système
 Statistiques
+Détection de l&#39;environnement
+Estimation de la connexion de la route...
+Optimisation de nœud(s)
+Optimisation de la diversité des antennes
+Détection d&#39;antenne
+Estimation de la diversité des antennes...
 Powerline connection with good signal quality
 Powerline connection with weak signal quality
 Connexion sans fil avec un signal excellent.
@@ -151,6 +157,7 @@ Si vous souhaitez désactiver le partage de vos informations avec Trend Micro vi
 Êtes-vous sûr de vouloir vous retirer ?
 Retirer
 Saisissez le nom.
+Le nom d&#39;hôte a été lié au compte de connexion de l&#39;application Routeur, veuillez l&#39;enregistrer/le supprimer de l&#39;application Routeur.
 Auto
 Automatic Setting
 Limiteur de bande passante
@@ -212,6 +219,8 @@ Sauter
 Périphérique inconnu
 Mise à niveau de nuit
 Upgrade Now
+Utiliser le mot de passe de connexion locale par défaut
+Le mot de passe de connexion locale crypté par défaut offre un processus de connexion sécurisé lorsque vous vous connectez localement à ce périphérique de mise en réseau ASUS.
 Pour plus de détails, rendez-vous sur <a style="font-weight: bolder;text-decoration: underline;color:#000000;" href="https://www.asus.com/support/" target="_blank">https://www.asus.com/support/</a>
 * Un paquet ping minimum consomme environ 128 bytes par intervalle. Par conséquent, le détecteur de ping consommera
 Mo par mois
@@ -280,7 +289,10 @@ Version du firmware:
 * L'heure d'été est activée pour ce fuseau horaire.
 Heure du système
 * Rappel : l'heure du système n'a pas été synchronisée avec un serveur NTP.
+L&#39;heure système de votre routeur n&#39;a pas encore été synchronisée avec le serveur NTP. Il se synchronisera automatiquement une fois connecté à Internet.
 Réseau invité
+Comment trouver %@
+%@ se trouve sur l&#39;étiquette située à l&#39;arrière/en bas de votre périphérique ASUS.
 Veuillez choisir un port sur la plage 1024-65535.
 Because of security and compatibility concerns,  IE8 / IE9 / IE10 are no longer supported.
 Things might be bound to broken and perhaps unusable.
@@ -359,6 +371,8 @@ Un mot de passe sécurisé doit être composé d'au moins 8 caractères, soit un
 Annoncez l'IP du routeur en plus du DNS spécifié par l'utilisateur
 Type de connexion au réseau étendu
 Utiliser l'adresse IP suivante:
+Connexion locale
+Modifiez le nom de connexion et le mot de passe pour empêcher tout accès non autorisé à votre routeur sans fil ASUS.
 Au moins deux caractères. Seuls les caractères alphanumériques, le trait de soulignement et le symbole de tiret sont acceptés. Le premier caractère ne peut pas être un tiret - ou un trait de soulignement _.
 Vous pouvez également télécharger [ASUS Lyra] pour connecter des appareils Lyra supplémentaires à votre premier appareil Lyra.
 Vous pouvez maintenant appuyer sur le &quot;Bouton d'association&quot; de votre premier et deuxième appareil Lyra pour configurer un autre appareil Lyra.
@@ -474,6 +488,8 @@ Faible
 Normal
 Fort
 Très fort
+Mot de passe de connexion locale
+Mot de passe WiFi
 Le code PIN est incorrect. Veuillez ressaisir le code PIN et reconnecter l'adaptateur USB. Si le problème persiste, désactivez puis réactivez la fonction d'authentification par code PIN.
 Numéro de téléphone
 Access Number
@@ -672,6 +688,7 @@ Entrez une clé réseau composée de 8 à 63 caractères (lettres, chiffres ou u
 Entrez une clé réseau composée de 8 à 63 caractères (lettres, chiffres ou une combinaison des deux). La méthode de chiffrement par défaut du routeur est WPA2-Personal AES.
 Separate 2.4 GHz and 5 GHz
 Separate 2.4 GHz, 5 GHz and 6 GHz
+Le réseau sans fil principal a été configuré.
 Le nom du Compte est obligatoire.
 Les champs réservés au mot de passe et au nom d'utilisateur ne peuvent pas être laissés vides.
 Paramètres du compte Fournisseur d'accès à Internet
@@ -822,6 +839,7 @@ Augmentez votre valeur maximale de coupure Internet.
 Reconnexion à Internet.
 Veuillez contacter votre administrateur réseau.
 Cliquez ici pour accéder à la page de configuration
+<a>Cliquez ici</a> pour modifier.
 De vérifier par vous-même la configuration.
 Si le problème persiste, modifiez manuellement les paramètres.
 Renouveler le WAN
@@ -906,8 +924,8 @@ For faster video streaming experience including Youtube, Netflix and Spotify, et
 Navigation sur Internet
 Ce mode est idéal pour la navigation internet basique et pour éviter la latence du réseau lors d'un transfert de fichiers.
 Learn-From-Home
-Choose this mode for a smooth streaming of online video-learning experience.This category includes Coursera, Khan, Udemy, TED, edX, etc.
-Choose this mode to ensure a smooth agile online conferencing experience.This category includes VoIP, instant messaging, mail service, etc.
+Choose this mode for a smooth streaming of online video-learning experience. This category includes Coursera, Khan, Udemy, TED, edX, etc.
+Choose this mode to ensure a smooth agile online conferencing experience. This category includes VoIP, instant messaging, mail service, etc.
 Le nouveau compte pas de posséder des droits de lecture / écriture.
 Ajouter un nouveau compte
 Les droits d'accès par défaut pour un nouveau dossier sont: lecture / écriture.
@@ -1515,6 +1533,7 @@ Nom d'hôte fourni par votre fournisseur d'accès à Internet:
 Si votre connexion au réseau étendu est de type PPTP ou L2TP, veuillez saisir le nom du serveur ou l\'adresse IP du serveur VPN.
 Ce champ vous permet de donner un nom d\'hôte au RT-AX53U. Ce nom d\'hôte est généralement demandé par votre fournisseur d\'accès à Internet.
 Définir la bande passante limite maximum de transfert pour. 0 indique aucune limite.
+Retour
 Désactiver
 Désactivé
 Activé
@@ -1527,8 +1546,10 @@ Paramètres WAN
 Capacité
 Captcha
 Veuillez entrer le captcha
+Si vous souhaitez l'activer, veuillez cliquer <a id = \"setting_link\" target=\"_blank\" style=\"text-decoration:underline;\">ici</a> pour modifier les paramètres.
 Vérifiez que le câble Ethernet / réseau est branché correctement
 Le routeur interroge le serveur ASUS sur la disponibilité d'une mise à jour de firmware.
+Veuillez choisir d'autres options et réessayer.
 Ne recueille aucune information sur les utilisateurs et est régi par la loi suisse sur la protection de la vie privée.
 Nom du client
 Icône
@@ -1635,6 +1656,7 @@ Russia
 Singapore
 The United States
 Canada
+Créer un compte
 Créez un compte gratuit
 Le CTF niveau 2 n'est pas supporté sous PPPoE, PPTP, ou L2TP. Pour passer au CTF niveau 1, veuillez cliquer sur Valider.
 Activer le HW Accelerator
@@ -1942,7 +1964,7 @@ Problème de connexion instable
 Impossible de se connecter au réseau sans fil
 Description de votre connexion DSL
 Méthode de contact
-Votre pays / région
+Votre région
 Annuler la capture de débogage
 Capture du journal de débogage de diagnostic en cours
 Durée de capture du journal de débogage de diagnostic
@@ -2246,22 +2268,30 @@ Nouveau
 Copier les autres paramètres
 Nombre total d'invités
 invités
+Fournir un accès planifié ou ponctuel au réseau.
+Recommandé pour les centres commerciaux, les gymnases ou les amis.
 Limite d'accès
 Accès internet uniquement
 Utiliser les mêmes paramètres que
 Réseau d'entreprises
 Réseau personnalisé
+Employé
 Mettre en place un réseau sûr et sécurisé
+L&#39;attribution des autorisations aux départements par le bureau
 Créez rapidement un réseau d'invités
 Réseau IoT
 Séparer facilement un réseau pour vos appareils IoT
+Recommandé pour les appareils de surveillance, l&#39;assistance vocale, les luminaires, la caméra de sonnette, le verrou intelligent et les capteurs.
 Réseau pour enfants
 Assurer la sécurité de l'accès à l'internet pour les enfants
 Portail des invités
-Créez un portail invité ou un Facebook Wi-Fi
+Créez un portail invité
+Créer un portail captif pour le marketing numérique.
+Recommandé pour un restaurant, un hôtel ou un camion de nourriture.
 Type de portail
 Réseau VPN
 Établir une connexion Internet sécurisée
+Établir une connexion Internet sécurisée via VPN. Recommandé pour le travail à domicile et les succursales.
 Ce profil VPN est désactivé. Veuillez accéder à la page de configuration du serveur VPN et l'activer.
 Cliquez sur « Réglage de l'accès » ci-dessous pour accéder à la page de configuration du VPN.
 Ce paramètre ne peut pas être sélectionné lors de l'utilisation d'un autre profil créé.
@@ -2269,8 +2299,15 @@ Réseau domestique
 Il n&#39;y a pas de profil VPN pour l’instant. Cliquez sur [Réglage de l&#39;accès] ci-dessous pour accéder à la page de configuration du VPN et passer à la création.
 Ajouter un réseau
 Liste des profils
+Réseau planifié
 Choisir un réseau défini
+Créer un réseau basé sur votre scénario.
+Réseau auto-défini
+Explorateur de scénarios
 Planification du Wi-Fi
+Planifier le temps en ligne quotidien ou hebdomadaire pour le réseau sans fil.
+Recommandé pour l&#39;étude à distance, la salle de classe ou les enfants.
+Configurer des niveaux d&#39;accès pour diverses utilisations afin d&#39;améliorer la sécurité du réseau.
 Version du matériel
 Help
 Le fichier d'Aide vous fournit des directives et des informations concernant les différentes fonctions du routeur.
@@ -2282,6 +2319,7 @@ Hexadécimal
 La plus haute
 Paquets à haute priorité
 Heures
+MÉTHODE DE CONFIGURATION
 La connexion Internet a échoué. Essayez à nouveau ou vérifiez les paramètres de votre compte avec votre fournisseur d'accès Internet (FAI).
 Sélectionnez la zone géographique couverte par votre fournisseur d'accès à Internet.
 Emplacement
@@ -2322,7 +2360,7 @@ Pourappairermanuellement le routeur ASUS avec IFTTT, veuillez copier-coller le c
 Choisissez parmi les applets existantes ou créez vos propres applets sur <a id="ifttt_applet_link">Canal Routeur ASUS</a>
 <a id="ifttt_signin">Connexion</a> à votre compte IFTTT.
 Commencez à profiter de l'automatisation avec le routeur ASUS et IFTTT !
-Démarrer :
+Commencer :
 Dans
 Le routeur ne peut pas se connecter au serveur ASUS pour vérifier la mise à jour du firmware. Veuillez télécharger le dernier firmware sur le site de support technique ASUS et effectuez la mise à jour manuellement.
 Bande
@@ -2447,6 +2485,9 @@ Paramètres réseau local IPv6
 Native
 OCN Virtual Connect
 v6plus
+Si vous souhaitez les utiliser, veuillez vous référer à la plage de ports utilisables dans %0$@, et modifier le numéro de port de ces fonctions pour qu'il corresponde à la plage.
+Les paramètres liés au port peuvent rencontrer un problème de non-concordance dans la gamme de ports %2$@ actuelle.
+Un problème de non-concordance des ports peut se produire dans la plage de ports spéciaux de %3$@. Cela n\'affectera pas votre Internet mais les paramètres suivants liés au port. Si vous souhaitez les utiliser, veuillez vous référer à la plage de ports utilisables dans <a target='_self' style='text-decoration:underline;' href='Main_IPV6Status_Content.asp'>IPv6 Log</a>, et modifier le numéro de port de ces fonctions pour qu\'il corresponde à la plage.
 Longueur de préfixe IPv6
 Relais Anycast IPv4
 Adresse IPv6 statique
@@ -2631,7 +2672,7 @@ Si le tableau de filtrage d'adresses MAC contient des entrées, cliquez sur Appl
 Mode d'emploi
 Manuel
 Ville
-Pays/Région
+Région
 Un identifiant VLAN peut être requis pour la configuration d'une connexion PTM. Ne modifiez l'identifiant VLAN que si cela est requis par votre FAI.
 La page de configuration rapide vous permet de paramétrer en toute simplicité les paramètres WAN du routeur RT-AX53U. Sélectionnez votre pays et votre FAI (Fournisseur d'accès à Internet) dans le menu déroulant, cliquez sur Suivant, puis entrez les informations nécessaires. Si nécessaire, contactez votre FAI pour obtenir les paramètres DSL appropriés.
 Vous devez d'abord déterminer les valeurs VPI et VCI avant de pouvoir utiliser la fonction ATM PVC. Ne modifiez pas les valeurs VPI et VCI sauf si votre FAI vous le demande.
@@ -2641,6 +2682,8 @@ Remarque:
 Configuration manuelle rapide
 Refer to the RT-AX53U WAN settings. If you want to add a new setting, follow the onscreen instructions. If you want to modify the previous setting, please go to [Advanced Setting] -> [WAN] -> [Internet Connection] page.
 Fabricant
+Mettre à jour le MAP
+Il faudra 1-2 minutes pour réassigner la règle MAP. Tous vos appareils connectés perdront la connexion internet pendant la mise à jour.
 Limite de bande passante maximum
 Définir la bande passante limite maximum de transfert pour.
 Nombre maximum d'ordinateurs
@@ -2692,6 +2735,7 @@ Bande LTE
 Vous avez téléchargé un mauvais firmware pour mettre à niveau le module. Veuillez sélectionner le bon et relancer la mise à niveau !
 Firmware du modem 4G
 Informations sur le modem haut débit mobile
+Utiliser le téléphone comme modem
 Version du logiciel du modem
 Un code PIN est requis.
 Un code PIN2 est requis.
@@ -2822,7 +2866,9 @@ Cible
 Suivi de chemin d'hôte
 Éveil par appel réseau (WoL)
 Réveiller
+À propos de la fonctionnalité
 Nouvelle fonctionnalité disponible
+Description de fonctionnalités
 Nom du nouveau dossier
 Nouveau firmware du modem
 Page suivante
@@ -2837,6 +2883,7 @@ Activer le WiFi pour faire fonctionner le WPS.
 Pour activer le WPS, changez la méthode d'authentification pour WPA2 ou WPA-Auto.
 Si vous souhaitez activer WPS, vous devez d'abord désactiver le masquage du SSID.
 Note: New patch will be updated regularly, please keep your firmware stay up to date.
+Remarque
 Élément de notification
 Nombre de clients
 Rendez-vous sur <a href="https://iplookup.asus.com/nslookup.php" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">https://iplookup.asus.com/nslookup.php</a> pour rechercher une adresse statique à utiliser pour le service ASUS DDNS.
@@ -2924,6 +2971,7 @@ Le Mappage de port supporte l'interface IPTV WAN pour un port spécifique du ré
 Activer le mappage de port
 Port réseau
 Port SSH
+Statut du port
 La vitesse de connexion sur ces ports peut être améliorée.
 Veuillez vous référer aux résultats/conseils suivants pour résoudre les problèmes.
 Choses à vérifier
@@ -2933,6 +2981,9 @@ Un appareil plus ancien peut ralentir votre vitesse de connexion.
 Vérifiez votre forfait Internet avec le FAI.
 Remplacez votre câble Ethernet par #ETHCABLE ou plus récent.
 Port utilisé pour
+Configurer %1$@ comme %2$@ désactivera la fonction « %3$@ » ; êtes-vous sûr de vouloir continuer ?
+Cette fonction est désactivée, car %1$@ est configuré comme %2$@.
+%1$@ et %2$@ ne peuvent pas être configurés comme le même port.
 Cette page affiche l'état de la redirection de port ainsi que d'autres informations de port pour les programmes P2P utilisant le protocole UPnP.
 Le RT-AX53U a détecté votre connexion comme étant de type PPPoE. Si c'est le cas, veuillez entrer votre nom d'utilisateur et mot de passe et cliquer sur Appliquer.<br>Sinon, veuillez configurer votre connexion manuellement.
 Veuillez entre le nom d'utilisateur et le mot de passe fournis par votre FAI, puis cliquez sur Suivant.
@@ -2994,6 +3045,7 @@ Enregistrement du produit
 Fournisseur
 Encapsulation
 Mode d'encapsulation
+Clé publique
 Forcer
 Souhaitez-vous supprimer ce PVC ?
 Éditer PVC
@@ -3086,6 +3138,20 @@ Valeurs VPI et VCI identiques ou dupliquées.
 Veuillez patienter durant le redémarrage du système! Vous serez ensuite redirigé sur la page d'accueil du RT-AX53U.
 échelle
 Analyse
+Bureau de succursale
+Salle de classe
+Café
+borne de recharge électrique
+Amis
+Hôtel
+Centre commercial
+Étude à distance
+Maison intelligente
+Restaurant
+Enfants
+Assistance vocale
+Dispositifs de surveillance
+Travailler à la maison
 Secondes
 Niveau de sécurité
 Sélectionner tous
@@ -3128,7 +3194,7 @@ Click on this checkbox if you want to share the config file for debugging. Since
 Paramètres
 Cliquez <a id="redirect_to_setup">ici</a> pour modifier. Veuillez consulter la <a id="redirect_to_FAQ">FAQ</a> pour plus de détails.
 Configurez votre nœud
-Place your RT-AX53U router and node(s) in the same room and at least 1 meter apart during the setup process.
+Placez votre routeur RT-AX53U et le ou les nœuds dans la même pièce et à une distance d’au moins 1 mètre lors du processus de configuration.
 Gardez vos appareils sous tension et en attente pendant la configuration du système.
 Nom du périphérique
 Sélectionnez les paramètres de langue correct pour votre encodage de fichier.
@@ -3279,6 +3345,10 @@ System adjustment
 Temperature unit
 Fan speed
 Modification du mot de passe de connexion, de fuseau horaire et des paramètres de serveur NTP.
+En dehors du réseau principal, vous pouvez créer des réseau défini par l&#39;utilisateur par vous-même pour différentes fins.
+Réseau défini par l&#39;utilisateur est séparé du domaine principal du réseau et offre une connexion plus sécurisée.
+Dans chaque réseau défini par l&#39;utilisateur, vous pouvez configurer différentes méthodes de chiffrement, horaires, autorisations, AiMesh, restrictions de bande passante, etc., pour créer un environnement réseau complet.
+Voulez-vous ajouter un réseau sans fil supplémentaire pour une utilisation spéciale ?
 Configuration de base
 Réseau local
 Divers
@@ -3453,6 +3523,7 @@ Désinstallation
 Une mise à jour est disponible
 Mise à jour
 Bande passante montante
+Télécharger la configuration
 Priorité de transfert
 Données envoyées/Sec
 Données envoyées
@@ -3515,6 +3586,10 @@ Nouveau sous-réseau
 Non balisé
 Balisé
 Substitution
+Ce(s) port(s) est(sont) utilisé(s) par %@.
+Isolation des ports
+Profil VLAN
+Paramètres de contrôle du commutateur VLAN
 L&#39;adresse IP doit être supérieure à
 L&#39;adresse IP doit être inférieure à
 Client will use VPN to access
@@ -3556,7 +3631,7 @@ Configuration personnalisée
 Le RT-AX53U génèrera un fichier .ovpn à partir de la clé de l'Autorité de Certificate. Vous pouvez fournir le fichier .ovpn ainsi qu'un nom d'utilisateur et mot de passe à tous les clients se connectant au serveur OpenVPN.
 Pour modifier les paramètres du serveur OpenVPN, allez dans Paramètres Avancés
 Vous pouvez modifier  les paramètres par défaut du serveur OpenVPN afin de fournir un fichier .ovpn dédié à un type de connexion spécifique.
-If your WAN IP address is dynamic, please click <a href="http://ZVDOMAIN_NAMEVZ/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
+If your WAN IP address is dynamic, please click <a href="/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
 Allocation DHCP
 Chiffrage
 Routing conflict! <p>Please check the client's IP address settings from the Paramètres avancés page or check the routing table on System log.
@@ -3655,18 +3730,40 @@ Mise à jour de la certificate réussie, téléchargez la nouvelle certificate e
 Tous vos clients VPN se reconnecteront après avoir cliqué sur Appliquer. Voulez-vous vraiment continuer ?
 Version IKE prise en charge
 veuillez cliquer ici pour définir le DDNS.
+* Le VPN WiFi est déjà en cours d&#39;utilisation.
+Comment configurer le serveur WireGuard® ?
+Comment configurer un VPN de site à site avec WireGuard® ?
+Comment configurer le client WireGuard® dans VPN Fusion ?
+Authentification VPN
+Certificat client
+Clé client
+Liste de révocation de certificats
+Le nombre maximum de connexions VPN actives simultanément est limité à 2. Désactivez une connexion VPN existante avant d&#39;en activer une autre.
+Le système peut activer une seule connexion Surfshark à la fois. Désactivez la connexion Surfshark actuelle avant d&#39;activer une autre.
+Connexion par défaut
 Les clients VPN sont souvent utilisés pour établir une connexion à des ressources privées localisées sur un réseau public.
 Certains appareils (ex : décodeurs, smart TV et lecteur Blu-ray) ne prennent pas en charge les logiciels VPN.
 La fonctionnalité VPN du microprogramme ASUSWRT offre un accès VPN à tous les appareils faisant parti d'un réseau domestique sans avoir à installer de logiciel VPN sur chaque appareil.
+Adresse de point d&#39;extrémité
+Port de point d&#39;extrémité.
+Parce que votre sécurité en ligne passe avant tout.
+Adresses IP autorisées
 Veuillez modifier le sous-réseau LAN de votre routeur ; veuillez vous reporter à cette <a target='_blank'>FAQ</a> pour des informations détaillées.
+Maintien de connexion persistant
 Client/Peer Net-to-Net
 Le client VPN IPSec permet à RT-AX53U de se connecter à un serveur/client IPSec Net-to-Net ou aux périphériques de se connecter directement entre eux de façon Peer-to-Peer.
 Prenons pour exemple l'utilisation de deux RT-AX53U pour expliquer le fonctionnement du réseau Peer-to-Peer. Vous devez d'abord créer un profil peer IPSec sur cette page, puis créer un autre peer sur l'autre modèle RT-AX53U avec les configurations correspondantes.
+Profil
+S&#39;applique à tous les appareils
+Attribuer des appareils à ce profil
+Supprimer le profil
+Sélectionnez un autre profil VPN pour annuler le WAN par défaut d&#39;Internet.
 Suivez les instructions suivantes pour démarrer une connexion VPN :
 Ajoutez un profil
 Sélectionnez un type de connexion VPN
 Entrez les informations d'authentification fournies par votre fournisseur de service VPN.
 Client VPN
+Pair
 Lorsque vous utilisez un client VPN avec une connexion PPPoE, votre routeur redémarre automatiquement afin de désactiver l’accélération NAT. Êtes-vous sûr de vouloir continuer ?
 Barrière
 Configurer les paramètres Ethernet WAN de RT-AX53U.
@@ -3730,18 +3827,19 @@ Enable Ping to Internet
 Options TCP MSS
 octets
 Identifiant VLAN
-L'agrégation WAN combine deux connexions réseau pour augmenter la vitesse de votre réseau étendu (WAN) jusqu'à 2 Gb/s. Connectez le port WAN et le port LAN 4 de votre routeur aux ports LAN de votre modem (veillez à utiliser deux câbles de même spécification). <a id="wanAgg_faq" target="_blank" style="color:#FFCC00;text-decoration:underline;">FAQ sur l'agrégation WAN</a>
+Agrégation WAN
+L'agrégation WAN combine deux connexions réseau pour augmenter la vitesse de votre réseau étendu (WAN) jusqu'à 2 Gb/s. Connectez le port #WAN et le port LAN 4 de votre routeur aux ports LAN de votre modem (veillez à utiliser deux câbles de même spécification). <a id="wanAgg_faq" target="_blank" style="color:#FFCC00;text-decoration:underline;">FAQ sur l'agrégation WAN</a>
 Activer l’agrégation WAN
 Le double WAN est activé sur votre routeur. L'activation de l'agrégation WAN désactive le double WAN. Êtes-vous sûr(e) de vouloir continuer ?
 L'agrégation WAN est activée sur votre routeur. L'activation du double WAN désactive l'agrégation WAN. Êtes-vous sûr(e) de vouloir continuer ?
 L'agrégation WAN utilise le port LAN 4 de votre routeur. L'activation de l'IPTV désactive l'agrégation WAN. Êtes-vous sûr(e) de vouloir continuer ?
 L'IPTV utilise le port LAN 4 de votre routeur. L'activation de l'agrégation WAN désactive l'IPTV. Êtes-vous sûr(e) de vouloir continuer ?
 Le double WAN et l'IPTV sont activés sur votre routeur. L'activation de l'agrégation WAN désactive le double WAN et l'IPTV afin d'éviter les conflits de ports. Êtes-vous sûr(e) de vouloir continuer ?
-Vérifiez que le port WAN de votre routeur et le port LAN de votre modem ont été connectés à l'aide de deux câbles de même spécification.
+Vérifiez que le port #WAN de votre routeur et le port LAN de votre modem ont été connectés à l'aide de deux câbles de même spécification.
 Vérifiez que le port LAN 4 de votre routeur et le port LAN de votre modem ont été connectés à l'aide de deux câbles de même spécification.
 Pour activer l'agrégation WAN, accédez à la page de <a href="Advanced_WAN_Content.asp" style="color:#FFCC00;text-decoration:underline;">connexion WAN-Internet</a>.
 Si la configuration de l'agrégation WAN échoue, suivez les étapes ci-dessous pour réessayer.
-Assurez-vous que les ports LAN de votre modem sont déjà connectés au WAN et au LAN 4 de votre routeur à l'aide de câbles.
+Assurez-vous que les ports LAN de votre modem sont déjà connectés au #WAN et au LAN 4 de votre routeur à l'aide de câbles.
 Assurez-vous que votre modem a activé 802.3ad
 Confirmez que vous utilisez deux câbles avec les mêmes spécifications (gigabit et gigabit ou 10 / 100 et 10 / 100 Mb/s)
 Redémarrez votre routeur
@@ -3756,6 +3854,7 @@ WiFi Proxy
 WiFi Radar
 Les paramètres vous permettent de configurer WiFi Radar.
 Liste de blocage d'itinérance
+Partage WiFi
 Enquête site WiFi
 L'enquête site WiFi détecte tous les réseaux WiFi dans votre environnement.
 Statistiques canal sans fil
@@ -4116,7 +4215,7 @@ Le fichier image de la page internet de démarrage ne peut pas être vide.
 Bienvenue sur
 J'ai lu et j'accepte les <span id='terms_service_hyperlink'>Conditions d'utilisation</span>
 Continuer
-Connexion de plusieurs VPN
+VPN Fusion
 vous permet de vous connecter à plusieurs serveurs VPN simultanément et d'affecter vos périphériques clients afin qu'ils se connectent à différents tunnels VPN. Certains périphériques tels que les "set-top box", les téléviseurs Smart ainsi que les lecteurs Blu-ray ne prennent pas en charge les logiciels VPN. Cette fonctionnalité fournit un accès VPN à de tels périphériques lorsqu'ils sont situés dans un réseau domestique, sans devoir installer de logiciel VPN, alors que votre smartphone reste connecté à Internet sans VPN.
 Pour les gamers, la connexion VPN neutralise les attaques de déni de service distribué (DDoS) pour empêcher votre jeu PC ou votre streaming de se déconnecter des serveurs de jeu. Établir une connexion VPN peut aussi tout simplement changer votre adresse IP et la remplacer par une adresse située dans la région où se trouve le serveur de jeu afin d'améliorer votre ping vers les serveurs de jeu.
 Pour commencer, suivez les instructions ci-dessous :
@@ -4243,7 +4342,10 @@ Ne plus me le rappeller
 *Votre mot de passe actuel est incorrect !
 HTTPS est un protocole d'accès Web relativement plus sécurisé. Nous vous suggérons fortement d'accéder à la page de configuration du routeur ASUS via le protocole HTTPS.
 Cliquez ici pour continuer.
+Scannez le code QR pour se connecter
+Utilisez le téléphone pour scanner ce code QR et connectez-vous au WiFi gratuit.
 Scannez le code QR pour plus de détails.
+Se connecter manuellement au réseau
 Vous souhaitez toujours accéder à la page de configuration avec le <span>protocole HTTP</span> ?
 Lors de l'utilisation du protocole HTTPS, un message d'avertissement peut s'afficher pour informer de la délivrance du certificat de sécurité par votre navigateur.
 La connexion entre votre navigateur et la page de configuration du routeur ASUS (ZVDOMAIN_NAMEVZ) reste sécurisée malgré ce message d'avertissement.

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
-<title><#842#> - <#2654#></title>
+<title><#860#> - <#2697#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="tmmenu.css">
@@ -45,10 +45,10 @@ rows = 0;
 block = '';
 gn = 0;
 grid = '<table width="730px" class="FormTable_NWM">';
-grid += "<tr><th style=\"height:30px;\"><#1682#></th>";
-grid += "<th><#3305#></th>";
-grid += "<th><#3312#></th>";
-grid += "<th><#3315#></th></tr>";
+grid += "<tr><th style=\"height:30px;\"><#1704#></th>";
+grid += "<th><#3375#></th>";
+grid += "<th><#3382#></th>";
+grid += "<th><#3385#></th></tr>";
 for (i = 0; i < daily_history.length; ++i) {
 h = daily_history[i];
 if (h[0] >= lastt) {
@@ -60,7 +60,7 @@ lastu += h[2];
 }
 }
 if(rows == 0)
-grid +='<tr><td style="color:#FFCC00;" colspan="4"><#2410#></td></tr>';
+grid +='<tr><td style="color:#FFCC00;" colspan="4"><#2448#></td></tr>';
 E('bwm-daily-grid').innerHTML = grid + '</table>';
 E('last-dn').innerHTML = rescale(lastd);
 E('last-up').innerHTML = rescale(lastu);
@@ -79,7 +79,7 @@ initDate('ymd');
 daily_history.sort(cmpHist);
 redraw();
 if(bwdpi_support){
-document.getElementById('content_title').innerHTML = "<#776#>";
+document.getElementById('content_title').innerHTML = "<#793#>";
 }
 }
 function switchPage(page){
@@ -127,15 +127,15 @@ return false;
 <tr><td><table width=100%" >
 <tr>
 <td class="formfonttitle" align="left">
-<div id="content_title" style="margin-top:5px;"><#378#> - <#776#></div>
+<div id="content_title" style="margin-top:5px;"><#392#> - <#793#></div>
 </td>
 <td>
 <div align="right">
 <select class="input_option" style="width:120px" onchange="switchPage(this.options[this.selectedIndex].value)">
-<!--option><#3261#></option-->
-<option value="1"><#2652#></option>
-<option value="2"><#2653#></option>
-<option value="3" selected><#2654#></option>
+<!--option><#3327#></option-->
+<option value="1"><#2695#></option>
+<option value="2"><#2696#></option>
+<option value="3" selected><#2697#></option>
 </select>
 </div>
 </td>
@@ -149,12 +149,12 @@ return false;
 <table width="730" border="1" align="left" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#3281#></td>
+<td colspan="2"><#3351#></td>
 </tr>
 </thead>
 <tbody>
 <tr class='even'>
-<th width="40%"><#1682#></th>
+<th width="40%"><#1704#></th>
 <td>
 <select class="input_option" style="width:130px" onchange='changeDate(this, "ymd")' id='dafm'>
 <option value=0>yyyy-mm-dd</option>
@@ -165,7 +165,7 @@ return false;
 </td>
 </tr>
 <tr class='even'>
-<th width="40%"><#3086#></th>
+<th width="40%"><#3138#></th>
 <td>
 <select style="width:70px" class="input_option" onchange='changeScale(this)' id='scale'>
 <option value=0>KB</option>
@@ -188,13 +188,13 @@ return false;
 <table width="730" border="1" align="left" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable" >
 <thead>
 <tr>
-<td colspan="2" id="TriggerList" style="text-align:left;"><#2596#> <span style="color:#FFF;background-color:transparent;" id='last-dates'></span></td>
+<td colspan="2" id="TriggerList" style="text-align:left;"><#2637#> <span style="color:#FFF;background-color:transparent;" id='last-dates'></span></td>
 </tr>
 </thead>
 <tbody>
-<tr class='even'><th width="40%"><#3305#></th><td id='last-dn'>-</td></tr>
-<tr class='odd'><th width="40%"><#3312#></th><td id='last-up'>-</td></tr>
-<tr class='footer'><th width="40%"><#3315#></th><td id='last-total'>-</td></tr>
+<tr class='even'><th width="40%"><#3375#></th><td id='last-dn'>-</td></tr>
+<tr class='odd'><th width="40%"><#3382#></th><td id='last-up'>-</td></tr>
+<tr class='footer'><th width="40%"><#3385#></th><td id='last-total'>-</td></tr>
 </tbody>
 </table>
 </td>

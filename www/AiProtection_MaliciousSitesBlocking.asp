@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#842#> - <#1284#></title>
+<title><#860#> - <#1302#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script type="text/javascript" src="/state.js"></script>
@@ -190,7 +190,7 @@ success: function(response){
 var code = ""
 mals_count = event_count.mals_n;
 code += mals_count;
-code += '<span style="font-size: 16px;padding-left: 5px;"><#1276#></span>';
+code += '<span style="font-size: 16px;padding-left: 5px;"><#1294#></span>';
 $("#mals_count").html(code);
 }
 });
@@ -258,7 +258,7 @@ code += '</div>';
 code += '</div>';
 }
 if(code == ''){
-code += '<div style="font-size:16px;text-align:center;margin-top:70px;color:#FC0"><#1209#></div>';
+code += '<div style="font-size:16px;text-align:center;margin-top:70px;color:#FC0"><#1227#></div>';
 }
 $("#vp_bar_table").html(code);
 }
@@ -375,14 +375,14 @@ return this;
 function generateDetailTable(dataObj){
 var code = '';
 code += '<div style="font-size:14px;font-weight:bold;border-bottom: 1px solid #797979">';
-code += '<div style="display:table-cell;width:180px;padding-right:5px;"><#1761#></div>';
-code += '<div style="display:table-cell;width:80px;padding-right:5px;"><#1207#></div>';
-code += '<div style="display:table-cell;width:170px;padding-right:5px;"><#1206#></div>';
-code += '<div style="display:table-cell;width:200px;padding-right:5px;"><#1205#></div>';
+code += '<div style="display:table-cell;width:180px;padding-right:5px;"><#1783#></div>';
+code += '<div style="display:table-cell;width:80px;padding-right:5px;"><#1225#></div>';
+code += '<div style="display:table-cell;width:170px;padding-right:5px;"><#1224#></div>';
+code += '<div style="display:table-cell;width:200px;padding-right:5px;"><#1223#></div>';
 code += '<div style="display:table-cell;width:50px;padding-right:5px;"></div>';
 code += '</div>';
 if(dataObj == ""){
-code += '<div style="text-align:center;font-size:16px;color:#FC0;margin-top:90px;"><#2410#></div>';
+code += '<div style="text-align:center;font-size:16px;color:#FC0;margin-top:90px;"><#2448#></div>';
 }
 else{
 for(i=0; i<Object.keys(dataObj).length; i++){
@@ -401,7 +401,7 @@ if(clientList[dataObj[eventID].source[0]]){
 _name = clientList[dataObj[eventID].source[0]].name;
 }
 code += '<div style="display:table-cell;width:170px;height:30px;vertical-align:middle;padding-right:5px;">'+ _name +'</div>';
-code += '<div style="display:table-cell;width:200px;height:30px;vertical-align:middle;padding-right:5px;text-decoration:underline;cursor:pointer;" title="<#1316#>" onclick="checkEventSafe(\''+ dataObj[eventID].destination[0] +'\');">'+ dataObj[eventID].destination[0] +'</div>';
+code += '<div style="display:table-cell;width:200px;height:30px;vertical-align:middle;padding-right:5px;text-decoration:underline;cursor:pointer;" title="<#1334#>" onclick="checkEventSafe(\''+ dataObj[eventID].destination[0] +'\');">'+ dataObj[eventID].destination[0] +'</div>';
 code += '<div style="display:table-cell;width:50px;padding-right:5px;vertical-align:middle" onclick="quickAddWhitelist(\''+ dataObj[eventID].destination[0] +'\')"><img src="images/New_ui/add.svg" style="width:21px;height:21px;"></div>';
 code += '</div>';
 }
@@ -450,7 +450,7 @@ applyRule();
 var reboot_confirm=0;
 function applyRule(){
 if(ctf_disable == 0 && ctf_fa_mode == 2){
-if(!confirm("<#1640#>")){
+if(!confirm("<#1662#>")){
 return false;
 }
 else{
@@ -499,7 +499,7 @@ document.form.wrs_mals_t.value = timestamp.toString().substring(0, 10);
 applyRule();
 }
 function showEraseConfirm(){
-$('#model_name').html("<#843#>");
+$('#model_name').html("<#861#>");
 cal_panel_block("erase_confirm", 0.25);
 $('#erase_confirm').fadeIn(300);
 }
@@ -514,23 +514,23 @@ function addWhitelist(){
 var _url = $("#newDomain").val();
 $('#domainErrMessage').hide();
 if(_url == ''){
-$('#domainErrMessage').html('<#1199#>');
+$('#domainErrMessage').html('<#1217#>');
 $('#domainErrMessage').show();
 return false;
 }
 if(!validator.domainName_flag(_url) && !validator.ipv4_addr(_url)){
-$('#domainErrMessage').html('<#1202#>');
+$('#domainErrMessage').html('<#1220#>');
 $('#domainErrMessage').show();
 return false;
 }
 if(whitelist.data.length >= 64){
-$('#domainErrMessage').html('<#1201#>');
+$('#domainErrMessage').html('<#1219#>');
 $('#domainErrMessage').show();
 return false;
 }
 for(i=0;i<whitelist.data.length;i++){
 if(_url == whitelist.data[i]){
-$('#domainErrMessage').html('<#1200#>');
+$('#domainErrMessage').html('<#1218#>');
 $('#domainErrMessage').show();
 return false;
 }
@@ -656,15 +656,15 @@ $('#query_list').hide();
 <div id="Loading" class="popup_bg"></div>
 <div id="erase_confirm" class="confirm">
 <div style="margin: 16px 24px;font-size:24px;"><span id="model_name"></span> : </div>
-<div style="margin: 16px 24px;font-size:16px;"><#1204#></div>
+<div style="margin: 16px 24px;font-size:16px;"><#1222#></div>
 <div style="display:flex;justify-content: flex-end;margin: 36px 24px;">
-<div class="confirm-button" onclick="hideConfirm();"><#199#></div>
-<div class="confirm-button" onclick="eraseDatabase();"><#1665#></div>
+<div class="confirm-button" onclick="hideConfirm();"><#206#></div>
+<div class="confirm-button" onclick="eraseDatabase();"><#1687#></div>
 </div>
 </div>
 <div id="hiddenMask" class="popup_bg" style="z-index:999;">
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center"></table>
-<!--[if lte IE 6.5.]><script>alert("<#1359#>");</script><![endif]-->
+<!--[if lte IE 6.5.]><script>alert("<#1377#>");</script><![endif]-->
 </div>
 <iframe name="hidden_frame" id="hidden_frame" width="0" height="0" frameborder="0"></iframe>
 <form method="post" name="form" action="/start_apply.htm" target="hidden_frame">
@@ -701,7 +701,7 @@ $('#query_list').hide();
 <table width="730px">
 <tr>
 <td align="left">
-<span class="formfonttitle"><#1287#> - <#1284#></span>
+<span class="formfonttitle"><#1305#> - <#1302#></span>
 </td>
 </tr>
 </table>
@@ -711,7 +711,7 @@ $('#query_list').hide();
 <table width="700px" style="margin-left:25px;">
 <tr>
 <td style="font-size:14px;">
-<div><#1283#></div>
+<div><#1301#></div>
 </td>
 </tr>
 </table>
@@ -720,7 +720,7 @@ $('#query_list').hide();
 <div style="display:table;margin: 10px 15px">
 <div style="display:table-cell;width:370px;height:350px;">
 <div style="display:table-row">
-<div style="font-size:16px;margin:0 0 5px 5px;text-align:center"><#1203#></div>
+<div style="font-size:16px;margin:0 0 5px 5px;text-align:center"><#1221#></div>
 </div>
 <div id="vulner_table" style="background-color:#444f53;width:350px;height:340px;border-radius: 10px;display:table-cell;position:relative;">
 <div id="bar_shade" style="position:absolute;width:330px;height:330px;background-color:#505050;opacity:0.6;margin:5px;display:none"></div>
@@ -737,17 +737,17 @@ $('#query_list').hide();
 </div>
 </div>
 <div style="height:240px;margin-top:0px;">
-<div style="text-align:center;font-size:16px;"><#1302#></div>
+<div style="text-align:center;font-size:16px;"><#1320#></div>
 <div id="vp_bar_table" style="height:235px;margin: 0 10px;border-radius:10px;overflow:auto"></div>
 </div>
 </div>
 </div>
 <div style="display:table-cell;width:370px;height:350px;padding-left:10px;">
-<div style="font-size:16px;margin:0 0 5px 5px;text-align:center;"><#1191#></div>
+<div style="font-size:16px;margin:0 0 5px 5px;text-align:center;"><#1209#></div>
 <div style="background-color:#444f53;width:350px;height:340px;border-radius: 10px;display:table-cell;padding-left:10px;position:relative">
 <div id="chart_shade" style="position:absolute;width:350px;height:330px;background-color:#505050;opacity:0.6;margin:5px 0 5px -5px;display:none"></div>
 <div>
-<div style="display:inline-block;margin:5px 10px"><#1276#></div>
+<div style="display:inline-block;margin:5px 10px"><#1294#></div>
 </div>
 <div style="width:90%">
 <div>
@@ -759,21 +759,21 @@ $('#query_list').hide();
 </div>
 <div style="margin: 0 24px;">
 <div style="display:flex;justify-content: space-between;align-content: center;">
-<div style="text-align:center;font-size:16px;"><#1208#></div>
+<div style="text-align:center;font-size:16px;"><#1226#></div>
 <div style="display: flex;">
-<div style="margin: 0 8px;"><div id="save_icon" class="icon-container icon-save" title="<#1666#>" onclick="download(csvContent, 'MaliciousSitesBlocking.csv', 'data:text/csv;charset=utf-8');"></div></div>
-<div style="margin: 0 8px;"><div id="delete_icon" class="icon-container icon-delete" onclick="showEraseConfirm();" title="<#1649#>"></div></div>
+<div style="margin: 0 8px;"><div id="save_icon" class="icon-container icon-save" title="<#1688#>" onclick="download(csvContent, 'MaliciousSitesBlocking.csv', 'data:text/csv;charset=utf-8');"></div></div>
+<div style="margin: 0 8px;"><div id="delete_icon" class="icon-container icon-delete" onclick="showEraseConfirm();" title="<#1671#>"></div></div>
 <div style="margin: 0 8px;"><div id="edit_icon" class="icon-container icon-edit" onclick="showWhitelistField();" title="Manage Whitelist"></div></div>
 </div>
 </div>
 <div id="whitelistField" style="position: absolute;width:600px;height:650px;background-color: rgba(47,62,68,1);margin:-350px 0 0 35px;z-index:30;padding: 32px 24px 24px 24px;display:none;">
 <div style="display:flex;justify-content: space-between;align-items: center;">
-<div style="font-size: 24px;"><#3751#></div>
+<div style="font-size: 24px;"><#3849#></div>
 <div onclick="hideWhitelistField();"><img src="images/New_ui/icon_close.svg" alt="" style="width:32px;height:32px;cursor:pointer;"></div>
 </div>
-<div style="color: #CCCCCC;font-size: 16px;margin: 12px 0 24px 0;"><#1285#></div>
+<div style="color: #CCCCCC;font-size: 16px;margin: 12px 0 24px 0;"><#1303#></div>
 <div>
-<div style="font-size: 14px;padding: 0 0 2px 4px;"><#1286#></div>
+<div style="font-size: 14px;padding: 0 0 2px 4px;"><#1304#></div>
 <div>
 <input id="newDomain" style="font-size: 14px;" type="text" maxlength="32" size="22" class="input_32_table" autocomplete="off" autocorrect="off" autocapitalize="off">
 <ul id="query_list" class="query_list"></ul>
@@ -781,12 +781,12 @@ $('#query_list').hide();
 <div id="domainErrMessage" style="color: #FC0;margin: 4px 0 2px 4px;"></div>
 </div>
 <div style="margin: 12px 0;text-align: right;">
-<input type="button" class="button_gen" value="<#1643#>" onclick="addWhitelist();">
+<input type="button" class="button_gen" value="<#1665#>" onclick="addWhitelist();">
 </div>
 <div style="width:100%;" class="line_horizontal"></div>
 <div style="margin-top:24px;">
-<span style="font-size: 24px;padding-right:12px;"><#3751#></span>
-<span style="font-size: 14px;"><#2809#>: <b id="list_count">0</b> (<#2615#>&nbsp;64)</span>
+<span style="font-size: 24px;padding-right:12px;"><#3849#></span>
+<span style="font-size: 14px;"><#2853#>: <b id="list_count">0</b> (<#2656#>&nbsp;64)</span>
 </div>
 <div id="whitelistTable" style="overflow: auto;height:420px;"></div>
 </div>
@@ -795,10 +795,10 @@ $('#query_list').hide();
 <div id="info_shade" style="position:absolute;width:710px;height:490px;background-color:#4b3b3b;opacity:0.6;margin:5px;display:none"></div>
 <div id="detail_info_table" style="padding: 10px 15px;">
 <div style="font-size:14px;font-weight:bold;border-bottom: 1px solid #797979">
-<div style="display:table-cell;width:180px;padding-right:5px;"><#1761#></div>
-<div style="display:table-cell;width:80px;padding-right:5px;"><#1207#></div>
-<div style="display:table-cell;width:170px;padding-right:5px;"><#1206#></div>
-<div style="display:table-cell;width:200px;padding-right:5px;"><#1205#></div>
+<div style="display:table-cell;width:180px;padding-right:5px;"><#1783#></div>
+<div style="display:table-cell;width:80px;padding-right:5px;"><#1225#></div>
+<div style="display:table-cell;width:170px;padding-right:5px;"><#1224#></div>
+<div style="display:table-cell;width:200px;padding-right:5px;"><#1223#></div>
 <div style="display:table-cell;width:50px;padding-right:5px;"></div>
 </div>
 </div>

@@ -33,7 +33,7 @@ var original_switch_wantag = '<% nvram_get("switch_wantag"); %>';
 var odmpid = '<% nvram_get("odmpid"); %>';
 <% start_autodet(); %>
 function QKinternettype_load_body(){
-parent.document.title = "<#842#> - <#710#>";
+parent.document.title = "<#860#> - <#727#>";
 /*if('<% nvram_get("autodet_state"); %>' != "2" && '<% nvram_get("autodet_auxstate"); %>' != "6"){
 document.getElementById("wd3").style.display = "";
 document.getElementById("wd4").style.display = "";
@@ -103,7 +103,7 @@ if(parent.get_internet_type_reducedmode() == "enable" &&
 (document.applyForm.x_WANType[3].checked == false &&
 document.applyForm.x_WANType[4].checked == false
 )){
-alert("<#711#>");
+alert("<#728#>");
 return false;
 }
 if(document.applyForm.x_WANType[1].checked == true){
@@ -387,7 +387,7 @@ return true;
 var stage = 0;
 function next_step(flag){
 if( !document.applyForm.wan_type[0].checked && !document.applyForm.wan_type[1].checked){
-alert("<#709#>");
+alert("<#726#>");
 return false;
 }
 if(flag == 0){
@@ -397,7 +397,7 @@ document.getElementById('dialUp_desc').style.display = "none";
 document.getElementById('non_dialUp_tr').style.display = "none";
 document.getElementById('non_dialUp_desc').style.display = "none";
 document.getElementById('previous_button').style.display = "";
-document.getElementById('title_desc').innerHTML = "<#709#>";
+document.getElementById('title_desc').innerHTML = "<#726#>";
 if(document.applyForm.wan_type[0].checked){ // dial-up
 document.applyForm.wan_proto.value = "pppoe";
 parent.document.QKform.wan_dhcpenable_x.value = 1;
@@ -477,7 +477,7 @@ document.getElementById('non_dialUp_tr').style.display = "";
 document.getElementById('non_dialUp_desc').style.display = "";
 document.getElementById('specialISP_tr').style.display = "none";
 document.getElementById('previous_button').style.display = "none";
-document.getElementById('title_desc').innerHTML = "<#624#>";
+document.getElementById('title_desc').innerHTML = "<#640#>";
 if(document.getElementById("image_field").className == "static_image"){
 if(odmpid == "RT-AC66U_B1" || odmpid == "RT-AC1750_B1" || odmpid == "RT-N66U_C1" || odmpid == "RT-AC1900U" || odmpid == "RP-AC1900" || odmpid == "RT-AC67U")
 document.getElementById("image_field").className = "non_dialUp_RT-AC66U_V2";
@@ -594,24 +594,24 @@ color:#FFF;
 }
 </style>
 <div>
-<div style="font-size:1em;padding:10px 0 10px 15px;text-align:left;"><#624#></div>
-<div id="wan_unplug" style="color:#FC0;font-size:1em;margin: 0 15px;display:none">* <#829#></div>
+<div style="font-size:1em;padding:10px 0 10px 15px;text-align:left;"><#640#></div>
+<div id="wan_unplug" style="color:#FC0;font-size:1em;margin: 0 15px;display:none">* <#847#></div>
 <div id="phase1_div">
 <div id="dialUp_tr" style="font-size:1em;color:#B8D8FF;margin:10px 0 10px 15px;">Need Username and Password?</div>
-<div style="width:90%;max-width:400px;height:50px;border-radius:5px;margin: 15px auto;text-align:center;line-height:50px;background:rgba(108,108,108,0.8);" onclick="dialUP_next();"><#187#></div>
-<!--div style="font-size:1em;color:#B8D8FF;margin:10px 0 10px 15px;"><#625#></div-->
-<div style="width:90%;max-width:400px;height:50px;border-radius:5px;margin: 15px auto;text-align:center;line-height:50px;background:rgba(108,108,108,0.8);" onclick="switch_dhcp();"><#186#></div>
+<div style="width:90%;max-width:400px;height:50px;border-radius:5px;margin: 15px auto;text-align:center;line-height:50px;background:rgba(108,108,108,0.8);" onclick="dialUP_next();"><#194#></div>
+<!--div style="font-size:1em;color:#B8D8FF;margin:10px 0 10px 15px;"><#641#></div-->
+<div style="width:90%;max-width:400px;height:50px;border-radius:5px;margin: 15px auto;text-align:center;line-height:50px;background:rgba(108,108,108,0.8);" onclick="switch_dhcp();"><#193#></div>
 </div>
 <div id="phase2_div" style="display:none">
-<div style="font-size:1em;color:#B8D8FF;margin:10px 0 10px 15px;"><#626#></div>
-<div style="width:90%;max-width:400px;height:50px;border-radius:5px;margin: 15px auto;text-align:center;line-height:50px;background:rgba(108,108,108,0.8);" onclick="dhcp_next();"><#167#> (DHCP)</div>
-<div style="font-size:1em;color:#B8D8FF;margin:10px 0 10px 15px;"><#166#></div>
-<div style="width:90%;max-width:400px;height:50px;border-radius:5px;margin: 15px auto;text-align:center;line-height:50px;background:rgba(108,108,108,0.8);" onclick="staticIP_next();"><#168#></div>
+<div style="font-size:1em;color:#B8D8FF;margin:10px 0 10px 15px;"><#642#></div>
+<div style="width:90%;max-width:400px;height:50px;border-radius:5px;margin: 15px auto;text-align:center;line-height:50px;background:rgba(108,108,108,0.8);" onclick="dhcp_next();"><#174#> (DHCP)</div>
+<div style="font-size:1em;color:#B8D8FF;margin:10px 0 10px 15px;"><#173#></div>
+<div style="width:90%;max-width:400px;height:50px;border-radius:5px;margin: 15px auto;text-align:center;line-height:50px;background:rgba(108,108,108,0.8);" onclick="staticIP_next();"><#175#></div>
 </div>
 <div id="footer" style="display:none;position:fixed;bottom:36px;width:100%;height:50px;background:rgb(34,34,34);z-index:2;">
 <div style="width:100%;height:100%;display:table">
 <div style="display:table-cell;width:50%;vertical-align:middle;text-align:center;" onclick="back_main();">
-<div style="font-size:1em;color:#7E8593"><#205#></div>
+<div style="font-size:1em;color:#7E8593"><#212#></div>
 </div>
 </div>
 </div>
@@ -620,7 +620,7 @@ color:#FFF;
 <table width="100%">
 <tr>
 <td align="left">
-<div class="description_down"><#709#></div>
+<div class="description_down"><#726#></div>
 </td>
 </tr>
 </table>
@@ -633,45 +633,45 @@ color:#FFF;
 <table style="width:400px;margin-top:-50px;">
 <tr>
 <td colspan="2">
-<div id="title_desc" style="font-size:14px;margin-bottom:30px;"><#624#></div>
+<div id="title_desc" style="font-size:14px;margin-bottom:30px;"><#640#></div>
 </td>
 </tr>
 <tr id="dialUp_tr">
 <td align="center"><input type="radio" id="dialUp_yes" name="wan_type" value="0" onClick="switch_dialUp_type(this)" onKeyPress=""></td>
-<td class="wan_type_title"><label for="dialUp_yes"><#187#></label></td>
+<td class="wan_type_title"><label for="dialUp_yes"><#194#></label></td>
 </tr>
 <tr height="40px" id="dialUp_desc">
 <td align="center"></td>
-<td valign="top"><span class="wan_type_dec"><#627#></span></td>
+<td valign="top"><span class="wan_type_dec"><#643#></span></td>
 </tr>
 <tr id="non_dialUp_tr">
 <td align="center"><input type="radio" id="non_dialUp" name="wan_type" value="1"onClick="switch_dialUp_type(this)" onKeyPress=""></td>
-<td class="wan_type_title"><label for="non_dialUp"><#186#></label></td>
+<td class="wan_type_title"><label for="non_dialUp"><#193#></label></td>
 </tr>
 <tr height="40px" id="non_dialUp_desc">
 <td align="center"></td>
-<td valign="top"><span class="wan_type_dec"><#625#></span></td>
+<td valign="top"><span class="wan_type_dec"><#641#></span></td>
 </tr>
 <tr id="dhcp_tr" style="display:none">
 <td align="center">
 <input type="radio" id="non_dialUp_dhcp" name="dhcp_type" value="0" tabindex="1" onClick="switch_dhcp_type(this)" onKeyPress="">
 </td>
 <td class="wan_type_title">
-<label for="non_dialUp_dhcp"><#167#> (DHCP)</label>
+<label for="non_dialUp_dhcp"><#174#> (DHCP)</label>
 </td>
 </tr>
 <tr id="dhcp_desc" style="display:none;height:40px;">
 <td align="center"></td>
-<td valign="top"><span class="wan_type_dec"><#626#></span></td>
+<td valign="top"><span class="wan_type_dec"><#642#></span></td>
 </tr>
 <tr style="height:10px;"></tr>
 <tr id="static_tr" style="display:none">
 <td align="center"><input type="radio" id="non_dialUp_static" name="dhcp_type" value="1" tabindex="2" onClick="switch_dhcp_type(this)" onKeyPress=""></td>
-<td class="wan_type_title"><label for="non_dialUp_static"><#168#></label></td>
+<td class="wan_type_title"><label for="non_dialUp_static"><#175#></label></td>
 </tr>
 <tr id="static_desc" style="display:none;height:40px;">
 <td align="center"></td>
-<td valign="top"><span class="wan_type_dec"><#166#></span></td>
+<td valign="top"><span class="wan_type_dec"><#173#></span></td>
 </tr>
 <tr id="specialISP_tr" style="display:none">
 <td align="center">
@@ -679,15 +679,15 @@ color:#FFF;
 </td>
 <td>
 <label for="specialisp">
-<span class="QISGeneralFont" style="margin-left:0px;font-style:normal;color:#66CCFF;font-size:12px;font-weight:bolder;"><#485#></span>
+<span class="QISGeneralFont" style="margin-left:0px;font-style:normal;color:#66CCFF;font-size:12px;font-weight:bolder;"><#501#></span>
 </label>
 </td>
 </tr>
 <tr>
 <td align="center" colspan="2">
 <div class="apply_gen">
-<input type="button" id="previous_button" value="<#205#>" onclick="previous_step(stage);" class="button_gen" width="70px" align="center" style="display:none">
-<input type="button" value="<#204#>" onclick="next_step(stage);" class="button_gen" width="70px" align="center">
+<input type="button" id="previous_button" value="<#212#>" onclick="previous_step(stage);" class="button_gen" width="70px" align="center" style="display:none">
+<input type="button" value="<#211#>" onclick="next_step(stage);" class="button_gen" width="70px" align="center">
 </div>
 </td>
 </tr>
@@ -695,16 +695,16 @@ color:#FFF;
 </td>
 <td style="height:400px;background:#444F52;border-radius:10px;">
 <div id="image_field" class="image_field"></div>
-<div id="isp_card_desc" style="padding:15px;display:none;line-height:15px;"><#618#></div>
-<div id="static_ip_desc" style="padding:15px;display:none;line-height:15px;"><#623#></div>
-<div id="dhcp_scenario_1" style="position:absolute;margin:-335px 0 0 20px;font-size:12px;display:none"><#621#></div>
-<div id="dhcp_scenario_2" style="position:absolute;margin:-165px 0 0 20px;font-size:12px;display:none"><#622#></div>
+<div id="isp_card_desc" style="padding:15px;display:none;line-height:15px;"><#634#></div>
+<div id="static_ip_desc" style="padding:15px;display:none;line-height:15px;"><#639#></div>
+<div id="dhcp_scenario_1" style="position:absolute;margin:-335px 0 0 20px;font-size:12px;display:none"><#637#></div>
+<div id="dhcp_scenario_2" style="position:absolute;margin:-165px 0 0 20px;font-size:12px;display:none"><#638#></div>
 <div id="sparcial_ISP_field" style="text-align:center;width:300px;display:none">
 <div style="line-height:25px;height:300px;">
 <span>
-<p style="color:#66CCFF;"><#724#></p>
+<p style="color:#66CCFF;"><#741#></p>
 <select name="switch_wantag" class="input_option" onChange="ISP_Profile_Selection(this.value)">
-<option value="none" <% nvram_match( "switch_wantag", "none", "selected"); %>><#848#></option>
+<option value="none" <% nvram_match( "switch_wantag", "none", "selected"); %>><#866#></option>
 <option value="unifi_home" <% nvram_match( "switch_wantag", "unifi_home", "selected"); %>>Unifi-Home</option>
 <option value="unifi_biz" <% nvram_match( "switch_wantag", "unifi_biz", "selected"); %>>Unifi-Business</option>
 <option value="singtel_mio" <% nvram_match( "switch_wantag", "singtel_mio", "selected"); %>>Singtel-MIO</option>
@@ -712,7 +712,7 @@ color:#FFF;
 <option value="m1_fiber" <% nvram_match("switch_wantag", "m1_fiber", "selected"); %>>M1-Fiber</option>
 <option value="maxis_fiber" <% nvram_match("switch_wantag", "maxis_fiber", "selected"); %>>Maxis-Fiber</option>
 <option value="maxis_fiber_sp" <% nvram_match("switch_wantag", "maxis_fiber_sp", "selected"); %>>Maxis-Fiber-Special</option>
-<option value="manual" <% nvram_match( "switch_wantag", "manual", "selected"); %>><#375#></option>
+<option value="manual" <% nvram_match( "switch_wantag", "manual", "selected"); %>><#389#></option>
 </select>
 </span>
 <span id="wan_iptv_x">
@@ -722,7 +722,7 @@ color:#FFF;
 <p><span style="color:#66CCFF;">VoIP Port: </span><b>LAN3</b></p>
 </span>
 <span id="wan_internet_x">
-<p style="margin-top:5px;color:#66CCFF;"><#2329#>:</p>
+<p style="margin-top:5px;color:#66CCFF;"><#2367#>:</p>
 <p style="font-size:10px;">
 VID:<input type="text" name="switch_wan0tagid" class="input_6_table" maxlength="4" value="<% nvram_get( "switch_wan0tagid"); %>" autocorrect="off" autocapitalize="off">
 PRIO:<input type="text" name="switch_wan0prio" class="input_6_table" maxlength="1" value="<% nvram_get( "switch_wan0prio"); %>" autocorrect="off" autocapitalize="off">
@@ -748,8 +748,8 @@ PRIO:<input type="text" name="switch_wan2prio" class="input_6_table" maxlength="
 </tr>
 <tr>
 <td colspan="2">
-<div style="color:#FC0;font-size:14px;margin-top:10px;"><#628#></div>
-<div id="wan_unplug" style="color:#FC0;font-size:14px;margin-top:10px;display:none">* <#829#></div>
+<div style="color:#FC0;font-size:14px;margin-top:10px;"><#644#></div>
+<div id="wan_unplug" style="color:#FC0;font-size:14px;margin-top:10px;display:none">* <#847#></div>
 </td>
 </tr>
 </table>

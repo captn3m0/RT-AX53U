@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#842#> - <#893#></title>
+<title><#860#> - <#911#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="usp_style.css">
@@ -116,9 +116,9 @@ match = 0;
 }
 var code = "";
 code += "<tr>";
-code += "<th style='width:20%;text-align:left'><#874#></th>";
-code += "<th style='width:30%;text-align:left'><#2954#> / <#1532#></th>";
-code += "<th style='width:50%;text-align:left'><#1789#></th>";
+code += "<th style='width:20%;text-align:left'><#892#></th>";
+code += "<th style='width:30%;text-align:left'><#3005#> / <#1553#></th>";
+code += "<th style='width:50%;text-align:left'><#1811#></th>";
 code += "</tr>";
 for(var i=0; i<data_array.length; i++){
 var thisLog = {
@@ -329,7 +329,7 @@ export_CSV(all_array);
 get_history(mac, page);
 }
 function export_CSV(export_array) {
-var data = [["<#874#>", "<#367#>", "<#1532#>".replace(/&#39;/g, "'"), "<#1789#>"]];
+var data = [["<#892#>", "<#381#>", "<#1553#>".replace(/&#39;/g, "'"), "<#1811#>"]];
 var tempArray = new Array();
 var setArray = function(array) {
 for(var i = 0; i < array.length; i += 1) {
@@ -423,14 +423,14 @@ download(csvContent, 'Web_History.csv', 'data:text/csv;charset=utf-8');
 <tr>
 <td bgcolor="#4D595D" colspan="3" valign="top">
 <div>&nbsp;</div>
-<div id="content_title" class="formfonttitle"><#2655#> - <#893#></div>
+<div id="content_title" class="formfonttitle"><#2698#> - <#911#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
 <div class="formfontdesc">
-<#894#>
+<#912#>
 </div>
 <div style="margin:5px">
 <table style="margin-left:0px;" width="95%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
-<th><#893#></th>
+<th><#911#></th>
 <td>
 <div align="center" class="left" style="width:94px; float:left; cursor:pointer;" id="bwdpi_wh_enable"></div>
 <script type="text/javascript">
@@ -449,7 +449,7 @@ switch_control(0);
 <div id="log_field">
 <div style="margin:10px 5px">
 <select id="clientListOption" class="input_option" name="clientList" onchange="getWebHistory(this.value, '1');">
-<option value="all" selected><#1396#></option>
+<option value="all" selected><#1414#></option>
 </select>
 <label style="margin: 0 5px 0 20px;visibility:hidden;cursor:pointer" id="previous_button" onclick="change_page('previous', document.getElementById('clientListOption').value);">Previous</label>
 <input class="input_3_table" value="1" id="current_page"></input>
@@ -459,9 +459,9 @@ switch_control(0);
 <table style="width:100%" id="log_table"></table>
 </div>
 <div class="apply_gen">
-<input class="button_gen" onClick="httpApi.cleanLog('web_history', updateWebHistory);" type="button" value="<#1647#>" >
-<input class="button_gen" onClick="getWebHistory(document.form.clientList.value, '1')" type="button" value="<#1668#>">
-<input class="button_gen" onClick="exportWebHistoryLog()" type="button" value="<#1520#>" >
+<input class="button_gen" onClick="httpApi.cleanLog('web_history', updateWebHistory);" type="button" value="<#1669#>" >
+<input class="button_gen" onClick="getWebHistory(document.form.clientList.value, '1')" type="button" value="<#1690#>">
+<input class="button_gen" onClick="exportWebHistoryLog()" type="button" value="<#1539#>" >
 </div>
 </div>
 </td>

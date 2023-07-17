@@ -88,6 +88,12 @@ Veri hızı
 Topoloji
 Sistem Ayarları
 İstatistikler
+Çevre Algılama
+Rota bağlantısı tahmini yapılıyor...
+Düğüm Optimizasyonu
+Anten Çeşitliliği Optimizasyonu
+Anten Tespiti
+Anten çeşitliliği tahmini yapılıyor...
 Powerline connection with good signal quality
 Powerline connection with weak signal quality
 Sinyal kalitesi çok iyi olan kablosuz bağlantı
@@ -151,6 +157,7 @@ Bilgilerinizi aşağıdaki işlevler aracılığıyla Trend Micro ile paylaşmay
 Vazgeçmek istediğinizden emin misiniz?
 Vazgeç
 Adı girin
+Ana bilgisayar adı, Yönlendirici uygulamasının oturum açma hesabına bağlanmıştır, lütfen onu Yönlendirici uygulamasında kaydedin/uygulamasından silin.
 Otomatik
 Automatic Setting
 Bant Genişliği Sınırlayıcı
@@ -212,6 +219,8 @@ Geç
 Bilinmeyen Aygıt
 Geceleyin Yükseltin
 Upgrade Now
+Varsayılan Yerel Oturum Açma Parolasını kullanın
+Varsayılan şifreli Yerel Oturum Açma Parolası, bu ASUS ağ cihazına yerel olarak bağlandığınızda güvenli bir oturum açma işlemi sağlar.
 Daha fazla ayrıntı için, lütfen <a style="font-weight: bolder;text-decoration: underline;color:#000000;" href="https://www.asus.com/support/" target="_blank">https://www.asus.com/support/</a> adresini ziyaret edin
 * En küçük ping paketi, aralık başına yaklaşık 128 byte kullanır. Bundan dolayı, ping algılayıcıay başına
 MByte tüketir
@@ -280,7 +289,10 @@ Donanım Yazılımı Sürümü:
 * Bu saat diliminde yaz saati uygulaması etkin.
 Sistem Saati
 * Anımsatıcı: Sistem saatiniz, bir NTP sunucusuyla eşitlenmemiş.
+Yönlendiricinizin sistem saati henüz NTP sunucusuyla senkronize edilmemiş. İnternete bağlanıldığında otomatik olarak senkronize edilecektir.
 Misafir Ağı
+%@ nasıl bulunur
+%@, ASUS cihazınızın arkasındaki/altındaki etikette bulunabilir.
 Lütfen 1024-65535 arası bir bağlantı noktası kullanın.
 Because of security and compatibility concerns,  IE8 / IE9 / IE10 are no longer supported.
 Things might be bound to broken and perhaps unusable.
@@ -359,6 +371,8 @@ Güvenli bir parola en az 8 karakter uzunluğunda olmalı ve büyük harf, küç
 Kullanıcı tanımlı DNS'ye ek olarak yönlendiricinin IP'sini tanıtın
 WAN Bağlantı Türü
 Aşağıdaki IP adresini kullan:
+Yerel Oturum Açma
+ASUS ağ cihazınıza yetkisiz erişimi önlemek için Yerel Oturum Açma kullanıcı adını ve parolasını ayarlayın.
 En az iki karakter. Yalnızca alfanumerik karakterler, alt çizgi ve kısa çizgi sembolü kabul edilir. İlk karakter kısa çizgi - veya alt çizgi _ olamaz.
 Ayrıca [ASUS Lyra]'yı indirerek ilk Lyra'nıza ek Lyra aygıtları da bağlayabilirsiniz.
 Başka bir Lyra ayarlamak için ilk ve ikinci Liyra'nızın &quot;Eşleştir butonu&quot;'na şimdi basabilirsiniz.
@@ -474,6 +488,8 @@ Zayıf
 İyi
 Güçlü
 Çok Güçlü
+Yerel Oturum Açma Parolası
+WiFi parolası
 PIN kodu doğru değil. Lütfen doğru PIN kodunu girin ve USB adaptörünü tekrar bağlayın. Aynı hatayla karşılaşmaya devam ederseniz, PIN kodu işlevini kapatın, cihazı açıp tekrar deneyin.
 Telefon Numarası
 Access Number
@@ -672,6 +688,7 @@ Kablosuz ağının tanımlanmasına yardımcı olmak için benzersiz bir ad veya
 8 ve 63 karakter arasında bir ağ anahtarı girin (harf, sayı veya her ikisi). Varsayılan kablosuz güvenlik ayarı WPA2-Personal AES'dir.
 Separate 2.4 GHz and 5 GHz
 Separate 2.4 GHz, 5 GHz and 6 GHz
+Ana kablosuz ağ ayarlandı.
 Hesap adı boş bırakılamaz.
 Kullanıcı Adı/Parola alanları boş olamaz.
 ISS Hesap Ayarı
@@ -822,6 +839,7 @@ Toplam trafik limitinize ulaşıldı ve internet bağlantınız geçici olarak d
 Internet'e yeniden bağlanıyor.
 Lütfen ağ yöneticiniz ile temasa geçin.
 Kurulum sayfasına gitmek için buraya tıklayın
+<a>Değiştirmek için</a> buraya tıklayın.
 Ayarınızı kendiniz kontrol edip yapılandırabilirsiniz.
 Sorun devam ederse, bağlantı ayarlarını elle değiştirin.
 WAN\'ı yenileyin.
@@ -906,8 +924,8 @@ For faster video streaming experience including Youtube, Netflix and Spotify, et
 Web'de Gezinme
 Bu mod, genel web gezintisi ve dosya aktarma sırasında ağ gecikmesini önleme için uygundur.
 Learn-From-Home
-Choose this mode for a smooth streaming of online video-learning experience.This category includes Coursera, Khan, Udemy, TED, edX, etc.
-Choose this mode to ensure a smooth agile online conferencing experience.This category includes VoIP, instant messaging, mail service, etc.
+Choose this mode for a smooth streaming of online video-learning experience. This category includes Coursera, Khan, Udemy, TED, edX, etc.
+Choose this mode to ensure a smooth agile online conferencing experience. This category includes VoIP, instant messaging, mail service, etc.
 Yeni hesap hiçbir okuma / yazma erişim hakları vardır.
 Yeni hesap ekle
 Yeni klasörün varsayılan erişim hakları okuma/yazmadır.
@@ -1515,6 +1533,7 @@ ISS tarafından sağlanan Ana Bilgisayar Adı:
 WAN bağlantı türünüz PPTP veya L2TP ise, lütfen VPN sunucusunun sunucu adı veta sunucu IP'sini girin.
 Bu alan size RT-AX53U ana bilgisayar adını verir. Genellikle ISS'nız tarafından istenir.
 0, bant genişliği sınırı olmadığını anlamına gelir.
+Geri
 Devre Dışı Bırak
 Devredışı
 Etkin
@@ -1527,8 +1546,10 @@ WAN ayarına
 Kapasite
 Güvenlik kodu
 Lütfen güvenlik kodunu girin.
+Etkinleştirmek isterseniz ayarları değiştirmek için lütfen <a id = \"setting_link\" target=\"_blank\" style=\"text-decoration:underline;\">burayı</a> kontrol edin.
 Ethernet/Ağkablosunun düzgün biçimde takılıolduğundan emin olun
 Yönlendirici aygıt yazılımı güncellemesi için ASUS sunucusunu kontrol ediyor.
+Lütfen diğer seçenekleri belirleyip tekrar deneyin.
 Kullanıcılarla ilgili bilgi toplamaz ve İsviçre gizlilik yasalarına tabidir.
 İstemci Adı
 Ikon
@@ -1635,6 +1656,7 @@ Russia
 Singapore
 The United States
 Kanada
+Hesap oluştur
 Ücretsiz Bir Hesap Oluşturun
 Düzey 2 CTF, PPPoE, PPTP veya L2TP altında desteklenmiyor. Düzey 1 CTF olarak değiştirmek için lütfen Onayla düğmesine tıklayın.
 HW Accelerator etkinleştirilsin mi
@@ -1942,7 +1964,7 @@ Kararsız bağlantı problemi
 Kablosuz ağa bağlanılamadı
 DSL hizmetinizin performansını en iyi açıklayan seçeneği belirtin
 Iletişim yöntemi
-Ülkeniz / Bölgeniz
+Bölgeniz
 Hata ayıklama yakalamayı iptal et
 Tanılayıcı hata ayıklama günlüğü yakalama devam ediyor
 Tanılayıcı hata ayıklama günlüğü yakalama süresi
@@ -2246,22 +2268,30 @@ Yeni Oluştur
 Başka kopyala
 Toplam Misafir
 misafir
+Planlı veya tek seferlik ağ erişimi sağlayın.
+Alışveriş merkezleri, spor salonları veya arkadaşlar için önerilir.
 Erişim sınırı
 Yalnızca Internet erişimi
 Aynı ayarları kullan:
 İş Ağı
 Özel Ağ
+Çalışan
 Emniyetli ve güvenli ağ kurun
+Departmanlara ofis atama izni
 Hızlı bir şekilde konuk ağı oluşturun
 IoT Ağı
 IoT cihazlarınız için bir ağı kolayca ayırın
+İzleme cihazları, sesli yardım, aydınlatma armatürleri, kapı kamerası, akıllı kilit ve sensörler için önerilir.
 Çocuk Ağı
 Çocuklar için internet erişimini güvenli hale getirin
 Konuk Portalı
-Bir konuk portalı veya Facebook WiFi oluşturun
+Bir konuk portalı oluşturun
+Dijital pazarlama için sabit portal oluştur.
+Restoranlar, oteller veya gıda kamyonları için önerilir
 Portal Türü
 VPN Ağı
 Daha güvenli bir internet bağlantısı kurun
+VPN üzerinden daha güvenli bir İnternet bağlantısı kurun. Evden çalışanlar ve şube çalışanları için önerilir.
 Bu VPN profili devre dışı bırakıldı. Lütfen VPN Sunucusu ayar sayfasına gidin ve etkinleştirin.
 VPN ayar sayfasına gitmek için aşağıdaki [ Ayarlara Git ] öğesine tıklayın.
 Bu ayar, oluşturulan diğer profil tarafından kullanılırken seçilemez.
@@ -2269,8 +2299,15 @@ Ev Ağı
 Şu anda bir VPN profili bulunamadı. VPN ayarları sayfasına gitmek için aşağıdaki [Ayarlara Git] öğesine tıklayın ve oluşturun.
 Ağ ekle
 Profil Listesi
+Planlanmış Ağ
 Tanımlı bir ağ seçin
+Senaryonuza göre bir ağ oluşturun
+Otomatik Tanımlı Ağ
+Senaryo Gezgini
 WiFi Zamanlama
+Kablosuz ağ için günlük veya haftalık çevrimiçi zamanı planlayın.
+Uzaktan çalışma, sınıflar veya çocuklar için önerilir.
+Ağ güvenliğini artırmak için çeşitli kullanımlar için erişim düzeyi ayarlayın.
 Donanım sürümü
 Help
 Yardım, yönlendirici işlevlerini kullanmayla ilgili size rehberlik ve bilgi sağlar. Yardım almak
@@ -2282,6 +2319,7 @@ Yüksek
 En yüksek
 En Yüksek Öncelik paketi
 saat
+NASIL KURULUR
 Internet bağlantısıbaşarısız. Lütfen tekrar deneyin veya Internet servis sağlayıcınızla (ISS) hesap ayarlarınızıkontrol edin.
 Lütfen ISP'nizin yerini seçiniz.
 Yer
@@ -2322,7 +2360,7 @@ ASUS Yönlendiriciyi IFTTT ile elle eşleştirmek için, lütfen aşağıdaki et
 <a id="ifttt_applet_link">ASUS Yönlendirici Kanalında</a> var olan applet'ler arasından seçim yapın veya kendi applet'lerinizi oluşturun.
 IFTTT hesabınızda <a id="ifttt_signin">oturum açın</a>.
 ASUS Yönlendirici ve IFTTT ile otomatikleştirilmiş bir hayat başlatın!
-Başlayın:
+Başla :
 içinde
 Bu yönlendirici aygıt yazılımı güncellemesini kontrol etmek üzere ASUS sunucusuna bağlanamıyor.Lütfen ASUS Ürün Destek Sitesi&#39;nden en son aygıt yazılımını indirin  üzerinden manuel olarak yapın.
 Bant
@@ -2447,6 +2485,9 @@ IPv6 Yerel Ağ Ayarı
 Native
 OCN Virtual Connect
 v6plus
+Bunları kullanmak istiyorsanız; lütfen %0$@ içindeki kullanılabilir port aralığına bakın ve bu özelliklerin portunu eşleşen aralıkla değiştirin.
+Portla ilgili ayarlar, geçerli %2$@ port aralığında uyumsuzluk sorunuyla karşılaşabilir.
+%3$@ özel port aralığı altında port uyuşmazlığı sorunu oluşabilir. Bu durum internetinizi değil ilgili port ayarlarını etkileyecektir. Bunları kullanmak istiyorsanız; lütfen <a target='_self' style='text-decoration:underline;' href='Main_IPV6Status_Content.asp'>IPv6 Log</a> içindeki kullanılabilir port aralığına bakın ve bu özelliklerin portunu eşleşen aralıkla değiştirin.
 IPv6 Önayar Uzunluğu
 IPv4 Her Noktaya Yayın
 Statik IPv6
@@ -2631,7 +2672,7 @@ Eğer MAC filter listesinde giriş varsa, Apply (Uygula) üzerine tıklayarak bu
 Kılavuz
 Elle ata
 Şehir
-Ülke/Bölge
+Bölge
 PTM bağlantısını ayarlamak için VLAN ID’ye gereksiniminiz olabilir. ISS’niz yapmanızı istemedikçe VLAN ID’yi değiştirmeyin.
 Bu Hızlı Kurulum size hızlı RT-AX53U WAN ayarları yapılandırmasında rehberlik edecektir, lütfen açılır listeden ülkenizi ve ISP adınızı seçin, İleri'ye tıklayın ve gerekli bilgileri girin. Gerekirse, DSL bağlantınız hakkında bilgi için İnternet Hizmet Sağlayıcınız (ISP) ile iletişim kurun.
 ATM PVC'yi kurmak için Sanal Yol Tanımlayıcısına (VPI) ve Sanal Kanal Tanımlayıcısına (VCI) ihtiyacınız vardır. ISP'niz bunu yapmanızı istemediği sürece VPI ve VCI numaralarını değiştirmeyin.
@@ -2641,6 +2682,8 @@ Duyuru:
 Hızlı Manuel Ayar
 RT-AX53U WAN ayarlarına bakınız. Eğer yeni bir ayar eklemek isterseniz, ekranda verilen talimatları izleyin. Önceki ayarı değiştirmek isterseniz, lütfen [Advanced Setting (Gelişmiş Ayar)] -> [WAN] -> [Internet Connection (İnternet Bağlantısı)] sayfasına gidiniz.
 Üretici
+MAP&#39;yi Güncelle
+MAP kuralının yeniden atanması 1-2 dakika sürer. Güncelleme sırasında tüm bağlı cihazlarınızın internet bağlantısı kesilecektir.
 Maksimum Bant Genişliği Sınırı
 Maksimum yükleme bant genişliği sınırını ayarlayın.
 En Fazla Bilgisayar
@@ -2692,6 +2735,7 @@ LTE Bandı
 Modülü güncellemek için yanlış üretici yazılımı yüklediniz. Lütfen doğrusunu seçip tekrar güncelleyin!
 4G Modem Üretici Yazılımı
 Mobil Geniş Bant Modem Bilgileri
+Telefonu modem olarak kullan
 Modem yazılım sürümü
 PIN kodu gerekli.
 PIN2 kodu gerekli.
@@ -2822,7 +2866,9 @@ Hedef
 Ana bilgisayara iz yolu
 LAN’da Uyandır
 Uyandır
+Özellik Hakkında
 Yeni özellik var
+Özellik Açıklaması
 Yeni Klasör Adı
 Yeni Üretici Yazılımı
 Sonraki sayfa
@@ -2837,6 +2883,7 @@ WPS özelliğini çalıştırmak için WiFi işlevini açın.
 WPS özelliğini etkinleştirmek için, kimlik doğrulama yöntemini WPA2 veya WPA-Otomatik olarak değiştirin.
 WPS’i etkinleştirmek istiyorsanız, ilk olarak SSID gizlemeyi devre dışı bırakmalısınız.
 Note: New patch will be updated regularly, please keep your firmware stay up to date.
+Bildirim
 Bildirim Öğesi
 İstemci sayısı
 ASUS DDNS hizmetini kullanmak amacıyla bir statik adres aramak için <a href="https//iplookup.asus.com/nslookup.php" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">https://iplookup.asus.com/nslookup.php</a> adresine gidin.
@@ -2924,6 +2971,7 @@ Bağlantı Noktası Eşleştirme belirli LAN bağlantı noktası IPTV WAN arabir
 Port Haritalamayı Etkinleştir
 LAN Portu
 SSH Portu
+Port Durumu
 Bu bağlantı noktasındaki/noktalarındaki bağlantı hızı iyileştirilebilir.
 Sorun gidermek için lütfen aşağıdaki sonuçlara/ipuçlarına bakın.
 Kontrol edilecek şeyler
@@ -2933,6 +2981,9 @@ Eski bir cihaz bağlantı hızınızı yavaşlatabilir.
 Lütfen ISP ile internet hizmeti planınızı bir kez daha kontrol edin.
 Ethernet kablonuzu #ETHCABLE veya daha yenisiyle değiştirin.
 Bu bağlantı noktası
+%1$@ öğesini %2$@ olarak yapılandırmak, \"%3$@\" işlevini devre dışı bırakacaktır, devam etmek istediğinize emin misiniz?
+%1$@, %2$@ olarak yapılandırıldığından bu işlev devre dışı.
+%1$@ ve %2$@ aynı port olarak yapılandırılamaz.
 Bu sayfa ayrıntılı port yönlendirme durumunu gösterir. Bazı P2P programları portu açmak için UPnP protokolü kullanırlar ve port numarası bu sayfada gösterilir.
 RT-AX53U, bağlantı türünün PPPoE olduğunu algıladı. Eğer evet'se, lütfen kullanıcı adını/parolayı girin ve Apply (Uygula)'ya tıklayın. <br>Eğer değilse, lütfen Manual Setting (Manuel Ayar)'a tekrar tıklayarak ayarlayın.
 Lütfen Internet Servis Sağlayıcınızın (ISS) verdiği kullanıcı adını/şifreyi girip İleri öğesine tıklayın.
@@ -2994,6 +3045,7 @@ Düşük
 Sağlayıcı
 Kapsülleme
 Kapsülleme Modu
+Açık Anahtar
 İt
 Bu PVC'yi silmek istediğinizden emin misiniz?
 PVC Düzenle
@@ -3086,6 +3138,20 @@ Kopya veya aynı VPI ve VCI ayarları.
 Sistem şimdi yeniden başlatılıyor! Lütfen bekleyin, RT-AX53U ana sayfasına yeniden yönlendireceğiz.
 ölçek
 Taranıyor
+Şube
+Sınıf
+Kahve dükkanı
+EV (elektrikli araç) şarj istasyonu
+Arkadaşlar
+Otel
+Alışveriş merkezi
+Uzaktan çalışma
+Akıllı ev
+Restoran
+Çocuklar
+Sesli yardım
+Gözetim cihazları
+Evden çalışma
 saniye
 Güvenlik düzeyi
 Tümünü seç
@@ -3128,7 +3194,7 @@ Click on this checkbox if you want to share the config file for debugging. Since
 Ayarlar
 Değiştirmek için <a id="redirect_to_setup">Buraya</a> tıklayın. Daha fazla bilgi için lütfen bu <a id="redirect_to_FAQ">SSS bölümüne</a> bakın.
 Düğümünüzü Ayarlama
-Place your RT-AX53U router and node(s) in the same room and at least 1 meter apart during the setup process.
+Kurulum işlemi sırasında lütfen RT-AX53U yönlendiricinizi ve düğümü/düğümleri aynı odaya en az 1 metre ara bırakarak yerleştirin.
 Gücü açık tutun ve sistem ayarları için bekleyin.
 Aygıt Adı
 Dosya şifrelemeniz için uygun olan doğru dil ayarlarını seçin.
@@ -3279,6 +3345,10 @@ System adjustment
 Temperature unit
 Fan speed
 Yönlendirici oturum açma parolasını, zaman dilimini ve NTP sunucu ayarlarını değiştirin.
+Ana ağ dışında farklı amaçlar için ilave kendinden tanımlı ağ oluşturabilirsiniz.
+Kendinden tanımlı ağ, ana ağ etki alanından ayrılır ve daha güvenli bir bağlantı sağlar.
+Her kendinden tanımlı ağda kapsamlı bir ağ ortamı elde etmek için farklı şifreleme yöntemleri, programlar, izinler, AiMesh, bant genişliği kısıtlamaları vb. ayarlayabilirsiniz.
+Özel kullanım için ek kablosuz ağ eklemek ister misiniz?
 Temel Yapılandırma
 Yerel Ağ
 Çeşitli
@@ -3453,6 +3523,7 @@ Yükleme kaldırılıyor
 Bir çevrimiçi güncelleme var
 Yükseltiliyor...
 Yükleme Bant Genişliği
+Yükleme Konfigürasyonu
 Yükleme Önceliği
 Gönderilen Veri/Sn.
 Gönderilen Veri
@@ -3515,6 +3586,10 @@ Yeni Alt Ağ
 Etiketlenmemiş
 Etiketlenmiş
 Geçersiz Kıl
+Bu port(lar) %@ tarafından kullanılıyor.
+Port İzolasyonu
+VLAN Profili
+VLAN Anahtarı Kontrol Ayarları
 Bu değer şundan büyük olmalıdır
 Bu değer şundan daha düşük olmalıdır
 Client will use VPN to access
@@ -3556,7 +3631,7 @@ IP/Yönlendirme çakışması
 RT-AX53U, Sertifika Yetkisi anahtarıyla bir .ovpn dosyasını otomatik olarak oluşturacaktır. .ovpn dosyasını, OpenVPN sunucusuna bağlanan tüm kullanıcılara bir kullanıcı adı ve şifresiyle sağlayabilirsiniz.
 OpenVPN sunucu ayarlarını değiştirmek için şuraya gidin Gelişmiş Ayar
 Belirli bir bağlantı türü için özel bir OPVN dosyası sağlamak amacıyla OpenVPN sunucusunun varsayılan ayarlarını değiştirebilirsiniz.
-If your WAN IP address is dynamic, please click <a href="http://ZVDOMAIN_NAMEVZ/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
+If your WAN IP address is dynamic, please click <a href="/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
 DHCP’den ayır
 Şifreleme anahtarı
 Yönlendirme çakışması! <p>Lütfen Gelişmiş Ayar sayfasından istemcinin IP adresi ayarlarını veya System (Sistem) günlüğünde yönlendirme tablosunu kontrol edin.
@@ -3655,18 +3730,40 @@ Güncelleme hatası, lütfen tekrar deneyin.
 Uygula seçeneğine tıkladıktan sonra tüm VPN istemcileriniz tekrar bağlanacaktır. Devan etmek istediğinize emin misiniz?
 Desteklenen IKE sürümü
 DDNS’yi ayarlamak için lütfen buraya tıklayın.
+* VPN WiFi zaten kullanımda.
+WireGuard® sunucusu nasıl kurulur?
+WireGuard® ile siteden siteye VPN nasıl kurulur?
+VPN Fusion'da WireGuard® sunucusu nasıl kurulur?
+VPN kimlik doğrulama
+Müşteri Sertifikası
+Müşteri Anahtarı
+Sertifika İptal Listesi
+Aynı anda etkin VPN bağlantı sayısı en fazla 2 ile sınırlıdır. Lütfen başka bir bağlantı etkinleştirmeden önce mevcut bir VPN bağlantısını devre dışı bırakın.
+Sistem bir seferde bir Surfshark bağlantısını etkinleştirebilir. Başka bir bağlantıyı etkinleştirmeden önce mevcut Surfshark bağlantısını devre dışı bırakın.
+Varsayılan Bağlantı
 Genel bir ağ üzerinden özel kaynaklara güvenli biçimde erişmek amacıyla bir VPN sunucusuna bağlanmak için sıklıkla VPN (Sanal Özel Ağ) istemcileri kullanılır.
 Set üstü cihazlar, akıllı televizyonlar ve Blu-ray çalarlar gibi bazı aygıtlar VPN yazılımını desteklemez.
 ASUSWRT VPN özelliği, her bir aygıta VPN yazılımı kurmak zorunda kalmadan ev ağındaki tüm aygıtlara VPN erişimi sağlar.
+Uç Nokta Adresi
+Uç Nokta Portu
+Çünkü çevrimiçi güvenliğiniz önceliklidir.
+İzin verilen IP&#39;ler
 Lütfen yönlendiricinizin LAN alt ağını değiştirin, ayrıntılı bilgi için lütfen bu <a target='_blank'>SSS</a> sayfasına bakın.
+Sürekli Canlı Tutma
 Ağdan Ağa İstemci / Eş
 IPSec VPN İstemcisi, RT-AX53U aygıtının bir Ağdan Ağa IPSec Sunucusuna / İstemcisine bağlanmasına veya aygıtların, Eşler Arası yoluyla doğrudan birbirlerine bağlanmalarına olanak tanır.
 Eşler Arası ağını açıklamak için örnek olarak iki tane RT-AX53U kullanımını ele alalım. Önce bu sayfada bir IPSec eş profili, ardından karşılık gelen yapılandırmalarla diğer RT-AX53U aygıtında başka bir eş oluşturmanız gerekir.
+Profil
+Tüm cihazlara uygula
+Cihazları bu profile ata
+Profili Sil
+Lütfen varsayılan internet geniş alan ağını iptal etmek için başka bir VPN profili seçin.
 Bir VPN bağlantısı başlatmak için lütfen aşağıdaki adımları izleyin:
 Profil ekleyin
 Bir VPN bağlantısı türü seçin
 VPN sağlayıcınız tarafından verilen VPN kimlik doğrulama bilgilerini girip bağlanın.
 VPN İstemcisi
+Eş
 Bir PPPoE bağlantısı olan bir VPN istemcisini kullanırken, NAT Hızlandırmayı devre dışı bırakmak için yönlendiriciniz otomatik olarak yeniden başlayacaktır. Devam etmek istediğine emin misin?
 Engel
 RT-AX53U Ethernet WAN ayarlarınıyapılandırın.
@@ -3730,18 +3827,19 @@ Enable Ping to Internet
 TCP MSS Seçeneği
 byte
 VLAN ID
-WAN Toplama, WAN hızınızı 2 Gbps'ye kadar artırmak için iki ağ bağlantısını birleştirir. Yönlendiricinizin WAN bağlantı noktasını ve LAN 4 bağlantı noktasını modeminizin LAN bağlantı noktasına bağlayın (aynı özelliklerde iki kablo kullandığınızdan emin olun). <a id="wanAgg_faq" target="_blank" style="color:#FFCC00;text-decoration:underline;">WAN Toplama SSS</a>
+WAN birleştirme
+WAN Toplama, WAN hızınızı 2 Gbps'ye kadar artırmak için iki ağ bağlantısını birleştirir. Yönlendiricinizin #WAN bağlantı noktasını ve LAN 4 bağlantı noktasını modeminizin LAN bağlantı noktasına bağlayın (aynı özelliklerde iki kablo kullandığınızdan emin olun). <a id="wanAgg_faq" target="_blank" style="color:#FFCC00;text-decoration:underline;">WAN Toplama SSS</a>
 WAN Toplamasını Etkinleştir
 Yönlendiricinizde Çift WAN etkin. WAN Toplamasını etkinleştirmek Dual WAN'ı devre dışı bırakacaktır. Devam etmek istediğine emin misin?
 Yönlendiricinizde WAN Toplama etkin. Çift WAN'ın etkinleştirilmesi WAN Toplamayı devre dışı bırakacaktır. Devam etmek istediğine emin misin?
 WAN Toplama, yönlendiricinizin LAN 4 bağlantı noktasını kullanıyor. IPTV'ninn etkinleştirilmesi WAN Toplamayı devre dışı bırakacaktır. Devam etmek istediğine emin misin?
 IPTV, yönlendiricinizin LAN 4 bağlantı noktasını kullanıyor. WAN Toplamasını etkinleştirmek IPTV'yi devre dışı bırakacaktır. Devam etmek istediğine emin misin?
 Yönlendiricinizde hem Çift WAN hem de IPTV etkindir. WAN Toplamayı etkinleştirmek, bağlantı noktası karmaşasını önlemek için Çift WAN ve IPTV'yi devre dışı bırakacaktır. Devam etmek istediğine emin misin?
-Yönelticinizin WAN bağlantı noktasının ve modeminizin LAN bağlantı noktasının aynı özelliklere sahip iki kabloyla bağlandığından emin olun.
+Yönelticinizin #WAN bağlantı noktasının ve modeminizin LAN bağlantı noktasının aynı özelliklere sahip iki kabloyla bağlandığından emin olun.
 Yönelticinizin LAN 4 bağlantı noktasının ve modeminizin LAN bağlantı noktasının aynı özelliklere sahip iki kabloyla bağlandığından emin olun.
 WAN Toplamasını etkinleştirmek için <a href="Advanced_WAN_Content.asp" style="color:#FFCC00;text-decoration:underline;">WAN-İnternet</a> Bağlantısı sayfasına gidin.
 WAN Birleştirme kurulumu başarılı olmazsa, lütfen tekrar denemek için aşağıdaki adımları izleyin.
-Modeminizin LAN portlarının yönlendiricinizin WAN ve LAN 4 konumuna kablo ile bağlanmış olduğundan emin olun.
+Modeminizin LAN portlarının yönlendiricinizin #WAN ve LAN 4 konumuna kablo ile bağlanmış olduğundan emin olun.
 Modeminizin 802.3ad’i etkinleştirdiğinden emin olun
 Aynı özellikte iki kablo kullandığınızı doğrulayın (gigabit & gigabit veya 10/100& 10/100Mbps)
 Yönlendiricinizi yeniden başlatın
@@ -3756,6 +3854,7 @@ WiFi Proxy
 WiFi Radarı
 Ayarlar, WiFi Radarı parametrelerini yapılandırmanıza olanak tanır.
 Dolaşım Engelleme Listesi
+WiFi Paylaşımı
 WiFi Araştırma
 WiFi Araştırma, ortamınızdaki tüm WiFi ağlarını bulur.
 Kablosuz Kanalı İstatistikleri
@@ -4116,7 +4215,7 @@ Giriş web sayfasının görüntü dosyası boş olamaz.
 Hoş Geldiniz
 <span id='terms_service_hyperlink'>Hizmet Hükümleri</span> içeriğini okudum ve kabul ediyorum
 Devam
-Çoklu VPN Bağlantısı
+VPN Fusion
 birden fazla VPN sunucusuna aynı anda bağlanmanıza ve istemci aygıtlarınızı farklı VPN tünellerine bağlanmak üzere atamanıza olanak tanır. Set üstü aygıtlar, akıllı televizyonlar ve Blu-ray oynatıcılar gibi bazı aygıtlar VPN yazılımını desteklemez. Bu özellik, akıllı telefonunuz VPN'ye değil Internet'e bağlı olmaya devam ederken, VPN yazılımı yüklemek zorunda kalmadan bir ev ağındaki bu tür aygıtlara VPN erişimi sağlar.
 Oyuncular açısından, VPN bağlantısı, bilgisayar oyununun veya akışın oyun sunucularıyla bağlantısının kesilmesini önlemek için DDoS saldırılarına karşı koyar. Bir VPN bağlantısı oluşturmak, oyun sunucularına yönelik ping durumunuzu iyileştirmek için, IP adresinizi oyun sunucusunun bulunduğu bölgeye de değiştirebilir.
 Başlamak için lütfen aşağıdaki adımları izleyin:
@@ -4243,7 +4342,10 @@ Tekrar hatırlatma
 *Mevcut oturum açma parolanız hatalı!
 HTTPS, nispeten daha güvenli bir web erişim protokolüdür. ASUS yönlendirici ayar sayfasına HTTPS protokolü aracılığıyla girmenizi şiddetle öneririz.
 Devam etmek için buraya tıklayın.
+Bağlanmak İçin QR Kod Tara
+Telefonu kullanarak bu QR kodu tarayın ve ücretsiz WiFi’ye bağlanın
 Daha fazla detay için kare kodu taratın.
+Ağa manuel olarak bağlanın
 Hala <span>HTTP protokolü</span> ile ayar sayfasına erişmek istiyor musunuz?
 HTTPS protokolünü kullanırken, tarayıcınız güvenlik sertifikası sorununu bildirmek üzere bir uyarı mesajı görüntüleyebilir.
 Tarayıcınız ve ASUS yönlendirici ayar sayfası (ZVDOMAIN_NAMEVZ) arasındaki bağlantı, bu uyarı mesajına rağmen güvenli kalır.

@@ -157,14 +157,14 @@ create_server_list();
 function change_speedTestBtn(type){
 if(type == "go"){
 $("#speedTest_btn").removeClass().addClass("speedTest_btn_normal");
-$("#speedTest_btn_text").text("<#2337#>");
+$("#speedTest_btn_text").text("<#2375#>");
 $("#speedTest_btn").css("pointer-events", "auto");
 $("#speed_level_btn").css("pointer-events", "auto");
 go_btn_type = "go";
 }
 else if(type == "testing"){
 $("#speedTest_btn").removeClass().addClass("speedTest_btn_press");
-$("#speedTest_btn_text").text("<#2338#>");
+$("#speedTest_btn_text").text("<#2376#>");
 $("#speedTest_btn").css("pointer-events", "none");
 $("#speed_level_btn").css("pointer-events", "none");
 go_btn_type = "testing";
@@ -342,7 +342,7 @@ setTimeout("get_speedTest_result();", 200);
 }
 }
 function error_handling(error_status){//2: wan disconnected 3: timeout 4: error 5:unknown
-var error_msg = "<#2375#>"
+var error_msg = "<#2413#>"
 set_ookla_state(error_status);
 reset_speedTest_div();
 change_speedTestBtn("go");
@@ -365,58 +365,58 @@ var speed = parseInt(download_speed);
 $("#speed_level_title").removeClass().addClass("speed_level_title");
 $("#speed_level_text").removeClass().addClass("speed_level_text");
 if(speed < 6){
-$("#speed_level_text").text("<#2367#>");
+$("#speed_level_text").text("<#2405#>");
 $("#speed_level_icon").removeClass().addClass("speed_icon_normal_s");
 $("#speed_level_btn").removeClass().addClass("speed_level_normal");
-$("#speed_level_text2").text("<#2367#>");
+$("#speed_level_text2").text("<#2405#>");
 $("#speed_level_icon2").removeClass().addClass("speed_icon_normal_l");
-$("#level_desc_title").text("<#2368#>");
-$("#level_desc").text("<#2369#>");
+$("#level_desc_title").text("<#2406#>");
+$("#level_desc").text("<#2407#>");
 }
 else if(speed >= 6 && speed <= 50){
-$("#speed_level_text").text("<#2364#>");
+$("#speed_level_text").text("<#2402#>");
 $("#speed_level_icon").removeClass().addClass("speed_icon_white speed_icon_good_white");
 $("#speed_level_btn").removeClass().addClass("speed_level_good");
-$("#speed_level_text2").text("<#2364#>");
+$("#speed_level_text2").text("<#2402#>");
 $("#speed_level_icon2").removeClass().addClass("speed_result_level_icon speed_icon_good");
-$("#level_desc_title").text("<#2365#>");
-$("#level_desc").text("<#2366#>");
+$("#level_desc_title").text("<#2403#>");
+$("#level_desc").text("<#2404#>");
 }
 else if(speed >= 51 && speed <= 100){
-$("#speed_level_text").text("<#2361#>");
+$("#speed_level_text").text("<#2399#>");
 $("#speed_level_icon").removeClass().addClass("speed_icon_white speed_icon_great_white");
 $("#speed_level_btn").removeClass().addClass("speed_level_great");
-$("#speed_level_text2").text("<#2361#>");
+$("#speed_level_text2").text("<#2399#>");
 $("#speed_level_icon2").removeClass().addClass("speed_result_level_icon speed_icon_great");
-$("#level_desc_title").text("<#2362#>");
-$("#level_desc").text("<#2363#>");
+$("#level_desc_title").text("<#2400#>");
+$("#level_desc").text("<#2401#>");
 }
 else if(speed >= 101 && speed <= 250){
-$("#speed_level_text").text("<#2358#>");
+$("#speed_level_text").text("<#2396#>");
 $("#speed_level_icon").removeClass().addClass("speed_icon_white speed_icon_fast_white");
 $("#speed_level_btn").removeClass().addClass("speed_level_fast");
-$("#speed_level_text2").text("<#2358#>");
+$("#speed_level_text2").text("<#2396#>");
 $("#speed_level_icon2").removeClass().addClass("speed_result_level_icon speed_icon_fast");
-$("#level_desc_title").text("<#2359#>");
-$("#level_desc").text("<#2360#>");
+$("#level_desc_title").text("<#2397#>");
+$("#level_desc").text("<#2398#>");
 }
 else if(speed >= 251 && speed <= 900){
-$("#speed_level_text").text("<#2355#>");
+$("#speed_level_text").text("<#2393#>");
 $("#speed_level_icon").removeClass().addClass("speed_icon_white speed_icon_super_white");
 $("#speed_level_btn").removeClass().addClass("speed_level_super");
-$("#speed_level_text2").text("<#2355#>");
+$("#speed_level_text2").text("<#2393#>");
 $("#speed_level_icon2").removeClass().addClass("speed_result_level_icon speed_icon_super");
-$("#level_desc_title").text("<#2356#>");
-$("#level_desc").text("<#2357#>");
+$("#level_desc_title").text("<#2394#>");
+$("#level_desc").text("<#2395#>");
 }
 else if(speed >= 901){
-$("#speed_level_text").text("<#2352#>");
+$("#speed_level_text").text("<#2390#>");
 $("#speed_level_icon").removeClass().addClass("speed_icon_white speed_icon_ultra_white");
 $("#speed_level_btn").removeClass().addClass("speed_level_ultra");
-$("#speed_level_text2").text("<#2352#>");
+$("#speed_level_text2").text("<#2390#>");
 $("#speed_level_icon2").removeClass().addClass("speed_result_level_icon speed_icon_ultra");
-$("#level_desc_title").text("<#2353#>");
-$("#level_desc").text("<#2354#>");
+$("#level_desc_title").text("<#2391#>");
+$("#level_desc").text("<#2392#>");
 }
 }
 function show_history_results(){
@@ -523,7 +523,7 @@ $("<div>")
 .appendTo(pingContainerObj);
 $("<div>")
 .addClass("ping_title")
-.html("<#2342#>")
+.html("<#2380#>")
 .appendTo(latencyContainer);
 var latencyValue =
 $("<div>")
@@ -535,7 +535,7 @@ $("<div>")
 .appendTo(latencyValue);
 $("<div>")
 .addClass("ping_unit")
-.html("<#2349#>")
+.html("<#2387#>")
 .appendTo(latencyValue);
 var jitterContainer =
 $("<div>")
@@ -543,7 +543,7 @@ $("<div>")
 .appendTo(pingContainerObj);
 $("<div>")
 .addClass("ping_title")
-.html("<#2343#>")
+.html("<#2381#>")
 .appendTo(jitterContainer);
 var jitterValue =
 $("<div>")
@@ -555,7 +555,7 @@ $("<div>")
 .appendTo(jitterValue);
 $("<div>")
 .addClass("ping_unit")
-.html("<#2349#>")
+.html("<#2387#>")
 .appendTo(jitterValue);
 var packetloss = "0.00";
 if(typeof history_obj.packetLoss != "undefined")
@@ -567,7 +567,7 @@ $("<div>")
 .appendTo(pingContainerObj);
 $("<div>")
 .addClass("ping_title")
-.html("<#2344#>")
+.html("<#2382#>")
 .appendTo(packetLossContainer);
 var lossValue =
 $("<div>")
@@ -774,7 +774,7 @@ success: function() {
 }
 function show_alert_message(msg){
 if (typeof msg == "undefined") {
-var tmp_str = "<#2374#>";
+var tmp_str = "<#2412#>";
 $("#alert_str").removeClass().addClass("alert_text_withImg");
 $("#alert_str").html(tmp_str);
 $("#alert_img").removeClass().addClass("wan_disconn normal_show");
@@ -891,7 +891,7 @@ var selectedId = "server_check_"+cur_server_id;
 var selectedObj = $(document.getElementById(selectedId));
 selectedObj.removeClass("server_list_check");
 }
-$("#last_host").text("<#153#>");
+$("#last_host").text("<#160#>");
 $("#last_location").css("display", "none");
 }
 }
@@ -909,16 +909,16 @@ $("#hiddenMask").css("display", "none");
 <div class="container">
 <div class="function_desc">
 <div class="function_container">
-<div class="function_title_pc"><div><#2334#></div></div>
+<div class="function_title_pc"><div><#2372#></div></div>
 <div class="function_title_m">
 <div class="info_close"><div class="close_icon" style="margin-top: 10px;" onclick="close_info();"></div></div>
-<div class="info_title"><#1749#></div>
+<div class="info_title"><#1771#></div>
 </div>
 <div class="split-Line"></div>
 <div class="content_div info_content">
 <div class="desc_div">
 <div class="description-bar">
-<div style="margin-bottom: 5px;"><#2335#></div>
+<div style="margin-bottom: 5px;"><#2373#></div>
 </div>
 </div>
 <div class="speedtest_logo"></div>
@@ -927,8 +927,8 @@ $("#hiddenMask").css("display", "none");
 </div>
 <div class="normal_show">
 <div id="notification_str" class="wan_notice">
-<div><#2370#></div>
-<div onclick="show_alert_message();" style="text-decoration:underline; cursor: pointer;"><#2371#></div>
+<div><#2408#></div>
+<div onclick="show_alert_message();" style="text-decoration:underline; cursor: pointer;"><#2409#></div>
 </div>
 </div>
 <div class="speedTest_div">
@@ -956,14 +956,14 @@ $("#hiddenMask").css("display", "none");
 <div class="sub_server_container" style="height: 30px;">
 <div class="server_brick_container"><div class="server_list_brick"></div></div>
 <div style="flex-grow: 1; display: flex; align-items: center; justify-content: space-between;" onclick="chose_auto_server();">
-<div class="sub_server_title" style="width: 75%;"><#153#></div>
+<div class="sub_server_title" style="width: 75%;"><#160#></div>
 <div id="auto_server_check" style="margin-right: 8px;"></div>
 </div>
 </div>
 <div class="sub_server_container">
 <div class="server_brick_container"><div class="server_list_brick"></div></div>
 <div style="flex-grow: 1; display: flex; flex-direction: column;">
-<div class="sub_server_title"><#2373#></div>
+<div class="sub_server_title"><#2411#></div>
 <div id="server_list"></div>
 </div>
 </div>
@@ -973,7 +973,7 @@ $("#hiddenMask").css("display", "none");
 </div>
 <div class="go_speed_container">
 <div class="speedTest_btn_container">
-<div id="speedTest_btn" class="speedTest_btn_normal" style="display: flex; justify-content: center;" onclick ="start_speedTest();" title="<#2337#>"><div id="speedTest_btn_text" style="width: 110px; overflow: hidden; text-overflow: ellipsis;"><#2337#></div></div>
+<div id="speedTest_btn" class="speedTest_btn_normal" style="display: flex; justify-content: center;" onclick ="start_speedTest();" title="<#2375#>"><div id="speedTest_btn_text" style="width: 110px; overflow: hidden; text-overflow: ellipsis;"><#2375#></div></div>
 </div>
 <div class="mobile_show">
 <div id="wan_disconn_hint" style="width: 100%; height: 50px; display: flex; justify-content: center;" onclick="show_alert_message();"><div class="wan_notice_m"><div class="notice_icon"></div><div style="margin: 0 10px;">WAN Disconnected</div></div></div>
@@ -982,27 +982,27 @@ $("#hiddenMask").css("display", "none");
 <div class="speedResult_container">
 <div style="width: 60%; height: 15px;">
 <div class="download_result_icon">
-<span class="download_upload_text"><#2340#></span>
+<span class="download_upload_text"><#2378#></span>
 </div>
 </div>
 <div class="test_result"><div id="download_test_result">--</div></div>
-<div style="width: 60%; height: 15px; color:#B2BBC1"><#2348#></div>
+<div style="width: 60%; height: 15px; color:#B2BBC1"><#2386#></div>
 </div>
 <div class="speedResult_container">
 <div style="width: 60%; height: 15px;">
 <div class="upload_result_icon">
-<span class="download_upload_text"><#2341#></span>
+<span class="download_upload_text"><#2379#></span>
 </div>
 </div>
 <div class="test_result"><div id="upload_test_result">--</div></div>
-<div style="width: 60%; height: 15px; color:#B2BBC1"><#2348#></div>
+<div style="width: 60%; height: 15px; color:#B2BBC1"><#2386#></div>
 </div>
 </div>
 </div>
 <div class="level_ping_div">
 <div class="speed_level_div">
 <div id="speed_level_btn" class="speed_level_default" style="display: flex; align-items: center;" onclick="show_speed_level_detail();">
-<div id="speed_level_title" class="speed_level_title_default"><#2339#></div>
+<div id="speed_level_title" class="speed_level_title_default"><#2377#></div>
 <div id="speed_level_text"></div>
 <div id="speed_level_icon"></div>
 <div class="speed_level_more"></div>
@@ -1010,47 +1010,47 @@ $("#hiddenMask").css("display", "none");
 </div>
 <div class="ping_result_div">
 <div class="ping_result_sub_div">
-<div class="ping_result_title"><div><#2342#></div></div><div class="ping_value_container"><div id="ping_result_latency" class="ping_result_value">--</div></div><div class="ping_result_unit"><div><#2349#></div></div>
+<div class="ping_result_title"><div><#2380#></div></div><div class="ping_value_container"><div id="ping_result_latency" class="ping_result_value">--</div></div><div class="ping_result_unit"><div><#2387#></div></div>
 </div>
 <div class="ping_result_sub_div">
-<div class="ping_result_title"><div><#2343#></div></div><div class="ping_value_container"><div id="ping_result_jitter" class="ping_result_value">--</div></div><div class="ping_result_unit"><div><#2349#></div></div>
+<div class="ping_result_title"><div><#2381#></div></div><div class="ping_value_container"><div id="ping_result_jitter" class="ping_result_value">--</div></div><div class="ping_result_unit"><div><#2387#></div></div>
 </div>
 <div id="packet_loss_div" class="ping_result_sub_div">
-<div class="ping_result_title"><div><#2344#></div></div><div class="ping_value_container"><div id="packet_loss_result" class="ping_result_value">--</div></div><div class="ping_result_unit">%</div>
+<div class="ping_result_title"><div><#2382#></div></div><div class="ping_value_container"><div id="packet_loss_result" class="ping_result_value">--</div></div><div class="ping_result_unit">%</div>
 </div>
 </div>
 </div>
 </div>
-<div class="ookla_info"><div class="info_icon mobile_show" onclick="open_info();"></div><div><#2336#></div></div>
+<div class="ookla_info"><div class="info_icon mobile_show" onclick="open_info();"></div><div><#2374#></div></div>
 <div id="speed_level_detail" class="speed_level_detail speedTest_div">
 <div class="detail_speed_level">
 <div class="last_test_container">
 <div class="detail_title">
-<div><#2350#></div>
+<div><#2388#></div>
 </div>
 <div class="detail_last_test_div">
 <div id="speedtest_result_timestamp" style="height: 36px; font-size: 18px; margin-top: 15px;"></div>
 <div class="speedtest_result_div_small">
 <div style="height: 15px;">
 <div class="download_result_icon">
-<span class="download_upload_text"><#2340#></span>
+<span class="download_upload_text"><#2378#></span>
 </div>
 </div>
 <div id="download_test_result2" class="detail_downup_text">--</div>
-<div style="height: 15px; margin-left: 22px; color:#B2BBC1"><#2348#></div>
+<div style="height: 15px; margin-left: 22px; color:#B2BBC1"><#2386#></div>
 </div>
 <div class="speedtest_result_div_small">
 <div style="height: 15px;">
 <div class="upload_result_icon">
-<span class="download_upload_text"><#2341#></span>
+<span class="download_upload_text"><#2379#></span>
 </div>
 </div>
 <div id="upload_test_result2" class="detail_downup_text">--</div>
-<div style="height: 15px; margin-left: 22px; color:#B2BBC1"><#2348#></div>
+<div style="height: 15px; margin-left: 22px; color:#B2BBC1"><#2386#></div>
 </div>
 </div>
 <div class="detail_level_desc_div">
-<div class="speed_level_rating"><#2351#></div>
+<div class="speed_level_rating"><#2389#></div>
 <div style="height: 70px; display: flex; align-items: center;">
 <div id="speed_level_text2" class="speed_level_text2"></div>
 <div id="speed_level_icon2"></div>
@@ -1074,66 +1074,66 @@ $("#hiddenMask").css("display", "none");
 <div class="speed_level_range">0 - 5</div>
 </div>
 <div class="speed_level_rainbow_bar" style=""></div>
-<div style="text-align: right;"><#2348#></div>
+<div style="text-align: right;"><#2386#></div>
 </div>
 <div style="width: 85%; float: left;">
 <div>
 <div class="speed_level_desc_icon speed_icon_ultra"></div>
 <div class="speed_level_desc_div" style="border-top: #4C5B65 solid 1px;">
-<div class="speed_level_desc_level"><#2352#></div>
+<div class="speed_level_desc_level"><#2390#></div>
 <div class="speed_level_desc_detail">
-<div class="speed_level_desc_title"><#2353#></div>
-<div class="speed_level_desc_font"><#2354#></div>
+<div class="speed_level_desc_title"><#2391#></div>
+<div class="speed_level_desc_font"><#2392#></div>
 </div>
 </div>
 </div>
 <div>
 <div class="speed_level_desc_icon speed_icon_super"></div>
 <div class="speed_level_desc_div">
-<div class="speed_level_desc_level"><#2355#></div>
+<div class="speed_level_desc_level"><#2393#></div>
 <div class="speed_level_desc_detail">
-<div class="speed_level_desc_title"><#2356#></div>
-<div class="speed_level_desc_font"><#2357#></div>
+<div class="speed_level_desc_title"><#2394#></div>
+<div class="speed_level_desc_font"><#2395#></div>
 </div>
 </div>
 </div>
 <div>
 <div class="speed_level_desc_icon speed_icon_fast"></div>
 <div class="speed_level_desc_div">
-<div class="speed_level_desc_level"><#2358#></div>
+<div class="speed_level_desc_level"><#2396#></div>
 <div class="speed_level_desc_detail">
-<div class="speed_level_desc_title"><#2359#></div>
-<div class="speed_level_desc_font"><#2360#></div>
+<div class="speed_level_desc_title"><#2397#></div>
+<div class="speed_level_desc_font"><#2398#></div>
 </div>
 </div>
 </div>
 <div>
 <div class="speed_level_desc_icon speed_icon_great"></div>
 <div class="speed_level_desc_div">
-<div class="speed_level_desc_level"><#2361#></div>
+<div class="speed_level_desc_level"><#2399#></div>
 <div class="speed_level_desc_detail">
-<div class="speed_level_desc_title"><#2362#></div>
-<div class="speed_level_desc_font"><#2363#></div>
+<div class="speed_level_desc_title"><#2400#></div>
+<div class="speed_level_desc_font"><#2401#></div>
 </div>
 </div>
 </div>
 <div>
 <div class="speed_level_desc_icon speed_icon_good"></div>
 <div class="speed_level_desc_div">
-<div class="speed_level_desc_level"><#2364#></div>
+<div class="speed_level_desc_level"><#2402#></div>
 <div class="speed_level_desc_detail">
-<div class="speed_level_desc_title"><#2365#></div>
-<div class="speed_level_desc_font"><#2366#></div>
+<div class="speed_level_desc_title"><#2403#></div>
+<div class="speed_level_desc_font"><#2404#></div>
 </div>
 </div>
 </div>
 <div>
 <div class="speed_level_desc_icon speed_icon_normal"></div>
 <div class="speed_level_desc_div">
-<div class="speed_level_desc_level"><#2367#></div>
+<div class="speed_level_desc_level"><#2405#></div>
 <div class="speed_level_desc_detail">
-<div class="speed_level_desc_title"><#2368#></div>
-<div class="speed_level_desc_font"><#2369#></div>
+<div class="speed_level_desc_title"><#2406#></div>
+<div class="speed_level_desc_font"><#2407#></div>
 </div>
 </div>
 </div>
@@ -1145,12 +1145,12 @@ $("#hiddenMask").css("display", "none");
 </div>
 </div>
 </div>
-<div id="history_desc" class="history_desc"><div class="history_icon"></div><div style="height: 30px; line-height: 30px; margin-left: 10px;"><#2345#></div></div>
+<div id="history_desc" class="history_desc"><div class="history_icon"></div><div style="height: 30px; line-height: 30px; margin-left: 10px;"><#2383#></div></div>
 <div id="speedTest_history_div" class="speedTest_div">
 <div id="function_row">
 <div id="history_delete" class="history_delete" onclick="delete_history();"></div>
 <div style="display: flex; justify-content: space-around; align-items: center;">
-<div id="history_item_range" class="history_item_range"><span id="item_range_str"></span>&nbsp;<#2346#></div>
+<div id="history_item_range" class="history_item_range"><span id="item_range_str"></span>&nbsp;<#2384#></div>
 <div class="left_arrow" onclick="previous_history_page();"></div>
 <div class="right_arrow" onclick="next_history_page();"></div>
 </div>
@@ -1161,43 +1161,43 @@ $("#hiddenMask").css("display", "none");
 </div>
 <div class="history_container history_title">
 <div class="time_speed_container">
-<div class="history_timestamp_div"><#1761#></div>
+<div class="history_timestamp_div"><#1783#></div>
 <div class="history_downup_div">
 <div class="downup_title_container">
 <div class="download_icon"></div>
-<div><#2340#></div>
+<div><#2378#></div>
 </div>
-<div>(<#2348#>)</div>
+<div>(<#2386#>)</div>
 </div>
 <div class="history_downup_div">
 <div class="downup_title_container">
 <div class="upload_icon"></div>
-<div><#2341#></div>
+<div><#2379#></div>
 </div>
-<div>(<#2348#>)</div>
+<div>(<#2386#>)</div>
 </div>
 </div>
 <div class="ping_container">
 <div class="history_ping_div">
-<div><#2342#></div>
-<div>(<#2349#>)</div>
+<div><#2380#></div>
+<div>(<#2387#>)</div>
 </div>
 <div class="history_jitter_div">
-<div><#2343#></div>
-<div>(<#2349#>)</div>
+<div><#2381#></div>
+<div>(<#2387#>)</div>
 </div>
 <!--div class="history_loss_div">
-<div><#2344#></div>
+<div><#2382#></div>
 <div>(%)</div>
 </div-->
 </div>
 </div>
 <div class="history_container history_title_m">
 <div class="time_speed_container">
-<div class="history_timestamp_div"><#1761#></div>
+<div class="history_timestamp_div"><#1783#></div>
 <div class="history_downup_div">
 <div class="downup_title_container">
-<div><#2334#>(<#2348#>)</div>
+<div><#2372#>(<#2386#>)</div>
 </div>
 </div>
 <div id="history_delete_m" class="history_delete" onclick="delete_history();"></div>
@@ -1211,7 +1211,7 @@ $("#hiddenMask").css("display", "none");
 <div class="alert_close"><div class="close_icon alert_notification_close" onclick='hide_alert_message();'></div></div>
 <div class="notice_title_container">
 <div class="notice_icon normal_show" style="margin-left: 15px;"></div>
-<div class="alert_header"><#2372#></div>
+<div class="alert_header"><#2410#></div>
 </div>
 <div class="content_div notice_content_m">
 <div id="alert_str"></div>

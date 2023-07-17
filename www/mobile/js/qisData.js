@@ -39,6 +39,10 @@ var wanObj = {
 "ocnvc": {
 "ipv6_service": "ipv6pt"
 },
+"wan46": {
+"wan_proto": "",
+"ipv6_service": "ipv6pt"
+},
 "vpn": {
 "wan_heartbeat_x": ""
 },
@@ -240,6 +244,9 @@ var systemVariable = {
 "detwanResult": {
 "wanType": "",
 "isIPConflict": false,
+},
+"detwan46Result": {
+"wan46State": ""
 },
 "isNewFw": 0,
 "newFwVersion": "",

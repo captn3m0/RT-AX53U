@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 <meta name="viewport" content="width=device-width, target-densitydpi=device-dpi, initial-scale=1, user-scalable=no">
-<title><#842#> - <#635#></title>
+<title><#860#> - <#651#></title>
 <link rel="stylesheet" href="./mobile/css/jquery.mobile.css"></link>
 <link rel="stylesheet" href="./mobile/css/qis.css"></link>
 <link rel="stylesheet" href="./mobile/css/icon.css"></link>
@@ -41,8 +41,8 @@ installPages("amasAddNodePages");
 document.querySelector("meta[name=viewport]").setAttribute(
 'content', 'width=' + verge.viewportW() + ', target-densitydpi=device-dpi, initial-scale=' + (0.5*verge.viewportW())/375 + ', maximum-scale=1, user-scalable=no'
 );
-$("#welcomeTitle").html("<#860#>".replace("Lyra", "<#843#>").replace("BLUE_CAVE", "BLUE CAVE"));
-$("#welcome_button").html("<#861#>".replace(" Lyra ", ""));
+$("#welcomeTitle").html("<#878#>".replace("Lyra", "<#861#>").replace("BLUE_CAVE", "BLUE CAVE"));
+$("#welcome_button").html("<#879#>".replace(" Lyra ", ""));
 $(".secureInput").click(checkPasswd);
 $("div[data-role='page']").append("<div class='footerPadding'></div>");
 $(".headerBar").html(Get_Component_Header());
@@ -59,6 +59,7 @@ var initNvram = httpApi.nvramGet([
 "x_Setting",
 "preferred_lang",
 "territory_code",
+"ipv6_service",
 "reboot_time",
 "lan_ipaddr",
 "wlc_dpsta",
@@ -132,13 +133,14 @@ systemVariable.rcSupport = initNvram.rc_support;
 systemVariable.isDefault = (function(){return (initNvram.x_Setting == '0' || initNvram.x_Setting == '') ? true : false;})();
 systemVariable.uiLanguage = initNvram.preferred_lang;
 systemVariable.territoryCode = initNvram.territory_code;
+systemVariable.ipv6Service = initNvram.ipv6_service;
 systemVariable.rebootTime = initNvram.reboot_time;
 systemVariable.lanIpaddr = initNvram.lan_ipaddr;
 systemVariable.CoBrand = initNvram.CoBrand;
 systemVariable.forceChangePw = (httpApi.hookGet("check_pw") == '1') ? true : false;
 systemVariable.linkLnternet = httpApi.isConnected();
 systemVariable.maxPasswordLen = getSupportNum("MaxLen_http_passwd");
-systemVariable.keepDefpsk = (systemVariable.productid == "RT-AX53U" && isSupport("defpsk") && isSku("JP")) ? true : false;
+systemVariable.keepDefpsk = isSupport("defpsk") ;
 httpApi.log("tcode", systemVariable.territoryCode, systemVariable.qisSession)
 if(isSupport("2p5G_LWAN"))
 systemVariable.originWansExtwan = httpApi.nvramGet(["wans_extwan"]).wans_extwan;
@@ -196,6 +198,9 @@ case "amas_addNode":
 systemVariable.amas_newWindow_addNode = true;
 setTimeout(goTo.amasearch, 50);
 break;
+case "changePass":
+goTo.login();
+break;
 default:
 goTo.Welcome();
 break;
@@ -203,7 +208,7 @@ break;
 if(initNvram.isError) setTimeout(arguments.callee, 1000);
 }, 500);
 $("#uiLanguage").load("/mobile/pages/uiLanguage.html", function(){
-$('#selected_lang').html("<#869#>");
+$('#selected_lang').html("<#887#>");
 });
 });
 </script>
@@ -244,11 +249,11 @@ $('#selected_lang').html("<#869#>");
 <div id="welcome_button" onclick="apply.welcome();"></div>
 </div>
 <div style="margin:auto;width:600px;text-align:center;">
-<a href="#" class="advSetting" onclick="goTo.advSetting()"><#381#></a>
+<a href="#" class="advSetting" onclick="goTo.advSetting()"><#395#></a>
 </div>
 <div class="tos tosSupport">
 <input id="tosCheckbox" type="checkbox" />
-<span id="tosTitle"><#141#>&nbsp;</span>
+<span id="tosTitle"><#147#>&nbsp;</span>
 <a href="#" onclick="goTo.AsusPP()">ASUS Privacy Policy</a>,
 <a href="#" onclick="goTo.AsusToS()">ASUS Terms of Use</a> &
 <a href="#" onclick="goTo.TMToS()">Trend Micro End User License Agreement</a>.
@@ -260,18 +265,18 @@ $('#selected_lang').html("<#869#>");
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div>
-<div class="titleMain"><#3129#></div>
+<div class="titleMain"><#3195#></div>
 </div>
 </div>
 <div class="table_td">
 <div class="pageDesc">
 <div>
-<div class="descSteps"><#3219#></div>
-<div style="font-weight: normal;" id="setupNode_step1_desc"><#3130#></div>
+<div class="descSteps"><#3285#></div>
+<div style="font-weight: normal;" id="setupNode_step1_desc"><#3196#></div>
 </div>
 <div style="margin-top: 20px;">
-<div class="descSteps"><#3220#></div>
-<div style="font-weight: normal;"><#3131#></div>
+<div class="descSteps"><#3286#></div>
+<div style="font-weight: normal;"><#3197#></div>
 </div>
 <div style="text-align: center;">
 <div><img id="product_location" width="504" src="/images/product_location.png"></div>
@@ -279,17 +284,17 @@ $('#selected_lang').html("<#869#>");
 </div>
 <div>
 <div class="footer_desktop" style="margin-top:0px;">
-<div class="desktop_abortBtn" onclick="abort.prelink()"><#205#></div>
-<div class="desktop_applyBtn" onclick="apply.prelink()"><#204#></div>
+<div class="desktop_abortBtn" onclick="abort.prelink()"><#212#></div>
+<div class="desktop_applyBtn" onclick="apply.prelink()"><#211#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort" style="width:50%" onclick='abort.prelink()'>
-<div class="mobile_abortBtn"><#205#></div>
+<div class="mobile_abortBtn"><#212#></div>
 </td>
 <td class="mobileApply" onclick="apply.prelink()">
-<div class="mobile_applyBtn"><#204#></div>
+<div class="mobile_applyBtn"><#211#></div>
 </td>
 </tr>
 </table>
@@ -303,8 +308,8 @@ $('#selected_lang').html("<#869#>");
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div>
-<div class="titleMain"><#2329#></div>
-<div class="titleSub"><#411#></div>
+<div class="titleMain"><#2367#></div>
+<div class="titleSub"><#425#></div>
 </div>
 </div>
 <div class="table_td">
@@ -324,12 +329,12 @@ $('#selected_lang').html("<#869#>");
 </div>
 </div>
 <div style="height: 50px" class="amasNoWAN"></div>
-<div class="pageDesc"><#441#></div>
+<div class="pageDesc"><#455#></div>
 <div>
 <div class="selectorTopContainer">
 <div class="selectorContainer">
 <div class="selectorContainerDiv">
-<div class="selectBar" onclick="apply.changeOpMode()"><#440#></div>
+<div class="selectBar" onclick="apply.changeOpMode()"><#454#></div>
 <div class="narrowContainer">
 <div class="icon_arrow_right" style="width:20px;height:32px;"></div>
 </div>
@@ -338,13 +343,13 @@ $('#selected_lang').html("<#869#>");
 </div>
 </div>
 <div style="height: 50px"></div>
-<div class="pageDesc"><#3124#></div>
+<div class="pageDesc"><#3190#></div>
 <div>
 <div class="selectorTopContainer" id="settingProfileBar">
 <div class="selectorContainer">
 <div class="selectorContainerDiv">
 <div class="selectBar">
-<label for="setting_profile"><#1675#></label>
+<label for="setting_profile"><#1697#></label>
 <div style="display:none">
 <input id="setting_profile" type="file" name="file" class="input" style="display:none" onchange="apply.upload();" />
 </div>
@@ -358,13 +363,13 @@ $('#selected_lang').html("<#869#>");
 </div>
 <div>
 <div class="footer_desktop">
-<div class="desktop_abortBtn" onclick='abort.advSetting()'><#205#></div>
+<div class="desktop_abortBtn" onclick='abort.advSetting()'><#212#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort" style="width:100%;" onclick='abort.advSetting()'>
-<div class="mobile_abortBtn"><#205#></div>
+<div class="mobile_abortBtn"><#212#></div>
 </td>
 </tr>
 </table>
@@ -378,8 +383,8 @@ $('#selected_lang').html("<#869#>");
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div>
-<div class="titleMain"><#2329#></div>
-<div class="titleSub"><#411#></div>
+<div class="titleMain"><#2367#></div>
+<div class="titleSub"><#425#></div>
 </div>
 </div>
 <div class="table_td">
@@ -399,13 +404,13 @@ $('#selected_lang').html("<#869#>");
 </div>
 </div>
 <div style="height: 50px"></div>
-<div class="pageDesc"><#3124#></div>
+<div class="pageDesc"><#3190#></div>
 <div>
 <div class="selectorTopContainer" id="settingProfileBarDSL">
 <div class="selectorContainer">
 <div class="selectorContainerDiv">
 <div class="selectBar">
-<label for="setting_profile"><#1675#></label>
+<label for="setting_profile"><#1697#></label>
 <div style="display:none">
 <input id="setting_profile_dsl" type="file" name="file" class="input" style="display:none" onchange="apply.upload();" />
 </div>
@@ -419,13 +424,13 @@ $('#selected_lang').html("<#869#>");
 </div>
 <div>
 <div class="footer_desktop">
-<div class="desktop_abortBtn" onclick='abort.advSetting()'><#205#></div>
+<div class="desktop_abortBtn" onclick='abort.advSetting()'><#212#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort" style="width:100%;" onclick='abort.advSetting()'>
-<div class="mobile_abortBtn"><#205#></div>
+<div class="mobile_abortBtn"><#212#></div>
 </td>
 </tr>
 </table>
@@ -435,21 +440,23 @@ $('#selected_lang').html("<#869#>");
 </div>
 </div>
 <div id="login_name" data-role="page" class="qisBackground">
+<div class="qis_container">
 <div class="headerBar"></div>
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div>
-<div class="titleMain"><#1663#></div>
-<div class="titleSub"><#3500#> / <#481#></div>
-<div class="titleSub"><#3127#></div>
+<div class="titleMain"><#1685#></div>
+<div class="titleSub"><#3571#> / <#497#></div>
+<div class="titleSub"><#3193#></div>
 </div>
 </div>
 <div class="table_td">
-<div id="login_desc" class="pageDesc"><#591#></div>
+<div id="login_desc" class="pageDesc"><#607#></div>
+<div id="login_passwd_KR" class="pageDesc_passwd_KR" style="display:none;"><#349#></div>
 <div id="login_field">
 <div>
 <div class="inputTitleContainer">
-<div class="inputTitle"><#719#></div>
+<div id="http_username_title" class="inputTitle"><#736#></div>
 </div>
 <div class="inputContainer">
 <input id="http_username" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="32" class="textInput" data-role="none" value="" data-clear-btn="true" />
@@ -457,36 +464,68 @@ $('#selected_lang').html("<#869#>");
 </div>
 <div>
 <div class="inputTitleContainer">
-<div class="inputTitle"><#469#></div>
+<div class="inputTitle"><#483#></div>
 <div class="secureInput icon_eye_close" for="http_passwd http_passwd_confirm"></div>
 </div>
 <div class="inputContainer">
-<input id="http_passwd" type="password" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="33" class="textInput" data-role="none" value="" data-clear-btn="true" onkeyup="chkPass('httpd', this.value); check_password_length(this);"/>
+<input id="http_passwd" type="password" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="33" class="textInput" data-role="none" value="" data-clear-btn="true" onkeyup="chkPass(this.value, 'http_passwd'); check_password_length(this);"/>
 </div>
 </div>
-<div>
+<div id="http_passwd_confirm_container">
 <div class="inputTitleContainer">
-<div class="inputTitle"><#470#></div>
+<div class="inputTitle"><#484#></div>
 </div>
 <div class="inputContainer">
 <input id="http_passwd_confirm" type="password" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="33" class="textInput" data-role="none" value="" data-clear-btn="true" />
 </div>
 </div>
+<div class="labelContainer defpassSupport">
+<label for="defpass_checkbox" class="labelInput"><#221#></label>
+<input type="checkbox" id="defpass_checkbox" data-mini="true"/>
+<div class="inputTitle" style="margin-left:70px;margin-top:-16px;font-size:1.2em;display:flex;"><#222#></div>
+<div id="local_login_title_container" class="defpass_guideline_title_container">
+<div>
+<div class="icon_excl_mark"><div>i</div></div>
+</div>
+<div>
+<div data-component="title_text"></div>
+</div>
+</div>
+</div>
 <div class="footer_desktop">
-<div class="desktop_abortBtn btn_login_abort" onclick='abort.login()'><#205#></div>
-<div class="desktop_applyBtn btn_login_apply" onclick="apply.login();"><#204#></div>
+<div class="desktop_abortBtn btn_login_abort" onclick='abort.login()'><#212#></div>
+<div class="desktop_applyBtn btn_login_apply" onclick="apply.login();"><#211#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort btn_login_abort" style="width:50%" onclick='abort.login()'>
-<div class="mobile_abortBtn"><#205#></div>
+<div class="mobile_abortBtn"><#212#></div>
 </td>
 <td class="mobileApply btn_login_apply" onclick="apply.login();">
-<div class="mobile_applyBtn btn_login_apply"><#204#></div>
+<div class="mobile_applyBtn btn_login_apply"><#211#></div>
 </td>
 </tr>
 </table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden_mask popup_element"></div>
+<div class="popup_container popup_element defpass qisView">
+<div>
+<div class="title_container">
+<div class="title">Local Login Password</div><div id="local_login_guideline_close" class="icon_close_btn"></div>
+</div>
+<div class="content_container">
+<div class="defpass_guideline_container">
+<div class="image_container">
+<div class="image_local_login"></div>
+</div>
+<div class="desc_container">
+<div id="local_login_guideline_desc"></div>
+</div>
 </div>
 </div>
 </div>
@@ -497,30 +536,30 @@ $('#selected_lang').html("<#869#>");
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div>
-<div class="titleMain"><#2329#></div>
-<div class="titleSub"><#632#></div>
+<div class="titleMain"><#2367#></div>
+<div class="titleSub"><#648#></div>
 </div>
 </div>
 <div class="table_td">
 <div class="pageDesc">
-<div><#4144#></div>
-<div><#568#></div>
+<div><#4243#></div>
+<div><#584#></div>
 </div>
 <div id="resetModemContainer">
 <div class="unplug" id="resetModem"></div>
 </div>
 <div class="footer_desktop">
-<div class="desktop_abortBtn" onclick='abort.resetModem()'><#680#></div>
-<div class="desktop_applyBtn" onclick="apply.manual();"><#375#></div>
+<div class="desktop_abortBtn" onclick='abort.resetModem()'><#697#></div>
+<div class="desktop_applyBtn" onclick="apply.manual();"><#389#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort" style="width:50%" onclick='abort.resetModem()'>
-<div class="mobile_abortBtn"><#680#></div>
+<div class="mobile_abortBtn"><#697#></div>
 </td>
 <td class="mobileApply" onclick="apply.manual();">
-<div class="mobile_applyBtn"><#375#></div>
+<div class="mobile_applyBtn"><#389#></div>
 </td>
 </tr>
 </table>
@@ -533,13 +572,13 @@ $('#selected_lang').html("<#869#>");
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div>
-<div class="titleMain"><#2329#></div>
-<div class="titleSub"><#681#></div>
+<div class="titleMain"><#2367#></div>
+<div class="titleSub"><#698#></div>
 </div>
 </div>
 <div class="table_td">
 <div class="pageDesc">
-<div><#682#></div>
+<div><#699#></div>
 </div>
 <div class="cssload-bellContainer">
 <div class="cssload-bell">
@@ -561,13 +600,13 @@ $('#selected_lang').html("<#869#>");
 </div>
 </div>
 <div class="footer_desktop">
-<div class="desktop_applyBtn" onclick="apply.manual()"><#375#></div>
+<div class="desktop_applyBtn" onclick="apply.manual()"><#389#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileApply" onclick="apply.manual()">
-<div class="mobile_applyBtn"><#375#></div>
+<div class="mobile_applyBtn"><#389#></div>
 </td>
 </tr>
 </table>
@@ -580,13 +619,13 @@ $('#selected_lang').html("<#869#>");
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div>
-<div class="titleMain"><#2329#></div>
-<div class="titleSub"><#681#></div>
+<div class="titleMain"><#2367#></div>
+<div class="titleSub"><#698#></div>
 </div>
 </div>
 <div class="table_td">
 <div class="pageDesc">
-<div><#682#></div>
+<div><#699#></div>
 </div>
 <strong><span class="pageDesc" id="LED_state" style="color:#FFCC00;display:none;"></span></strong>
 <div class="cssload-bellContainer">
@@ -609,13 +648,13 @@ $('#selected_lang').html("<#869#>");
 </div>
 </div>
 <div class="footer_desktop">
-<div class="desktop_applyBtn" onclick="goTo.Manual()"><#375#></div>
+<div class="desktop_applyBtn" onclick="goTo.Manual()"><#389#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileApply" onclick="goTo.Manual()">
-<div class="mobile_applyBtn"><#375#></div>
+<div class="mobile_applyBtn"><#389#></div>
 </td>
 </tr>
 </table>
@@ -628,18 +667,18 @@ $('#selected_lang').html("<#869#>");
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div>
-<div class="titleMain"><#2329#></div>
-<div class="titleSub"><#411#></div>
+<div class="titleMain"><#2367#></div>
+<div class="titleSub"><#425#></div>
 </div>
 </div>
 <div class="table_td">
-<div class="pageDesc"><#441#></div>
+<div class="pageDesc"><#455#></div>
 <div>
 <div class="selectorTopContainer">
 <div class="selectorContainer routerSupport">
 <div class="selectorContainerDiv">
 <div class="selectBar" onclick="goTo.rtMode()">
-<#444#>
+<#458#>
 </div>
 <div class="narrowContainer">
 <div class="icon_arrow_right" style="width:20px;height:32px;"></div>
@@ -649,7 +688,7 @@ $('#selected_lang').html("<#869#>");
 <div class="selectorContainer repeaterSupport">
 <div class="selectorContainerDiv">
 <div class="selectBar" onclick="goTo.rpMode()">
-<#459#>
+<#473#>
 </div>
 <div class="narrowContainer">
 <div class="icon_arrow_right" style="width:20px;height:32px;"></div>
@@ -659,7 +698,7 @@ $('#selected_lang').html("<#869#>");
 <div class="selectorContainer apSupport">
 <div class="selectorContainerDiv">
 <div class="selectBar" onclick="goTo.apMode()">
-<#438#>
+<#452#>
 </div>
 <div class="narrowContainer">
 <div class="icon_arrow_right" style="width:20px;height:32px;"></div>
@@ -669,7 +708,7 @@ $('#selected_lang').html("<#869#>");
 <div class="selectorContainer pstaSupport">
 <div class="selectorContainerDiv">
 <div class="selectBar" onclick="goTo.mbMode()">
-<#446#>
+<#460#>
 </div>
 <div class="narrowContainer">
 <div class="icon_arrow_right" style="width:20px;height:32px;"></div>
@@ -688,13 +727,13 @@ AiMesh
 </div>
 </div>
 <div class="footer_desktop">
-<div class="desktop_abortBtn" onclick='abort.opMode()'><#205#></div>
+<div class="desktop_abortBtn" onclick='abort.opMode()'><#212#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort" style="width:100%;" onclick='abort.opMode()'>
-<div class="mobile_abortBtn"><#205#></div>
+<div class="mobile_abortBtn"><#212#></div>
 </td>
 </tr>
 </table>
@@ -708,13 +747,13 @@ AiMesh
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div>
-<div class="titleMain"><#2329#></div>
-<div class="titleSub"><#632#></div>
+<div class="titleMain"><#2367#></div>
+<div class="titleSub"><#648#></div>
 </div>
 </div>
 <div class="table_td">
 <div class="pageDesc" id="noWan_desc">
-<#510#>
+<#526#>
 </div>
 <div>
 <div id="noWanContainer">
@@ -724,17 +763,17 @@ AiMesh
 <div><img id="noWanUsb" width="504" src="/images/WANunplug_usb.png"></div>
 </div>
 <div class="footer_desktop">
-<div class="desktop_abortBtn" onclick="abort.nowan()"><#205#></div>
-<div id="desktop_manual_applyBtn" class="desktop_applyBtn" onclick=""><#375#></div>
+<div class="desktop_abortBtn" onclick="abort.nowan()"><#212#></div>
+<div id="desktop_manual_applyBtn" class="desktop_applyBtn" onclick=""><#389#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort" style="width:50%" onclick='abort.nowan()'>
-<div class="mobile_abortBtn"><#205#></div>
+<div class="mobile_abortBtn"><#212#></div>
 </td>
 <td class="mobileApply" onclick="">
-<div id="mobile_manual_applyBtn" class="mobile_applyBtn"><#375#></div>
+<div id="mobile_manual_applyBtn" class="mobile_applyBtn"><#389#></div>
 </td>
 </tr>
 </table>
@@ -748,18 +787,18 @@ AiMesh
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div>
-<div class="titleMain"><#2329#></div>
-<div class="titleSub"><#192#></div>
+<div class="titleMain"><#2367#></div>
+<div class="titleSub"><#199#></div>
 </div>
 </div>
 <div class="table_td">
-<div class="pageDesc"><#624#></div>
+<div class="pageDesc"><#640#></div>
 <div>
 <div class="selectorTopContainer" id="test">
 <div class="selectorContainer">
 <div class="selectorContainerDiv" onclick="goTo.dailIP()">
 <div class="selectBar">
-<#187#>
+<#194#>
 </div>
 <div class="narrowContainer">
 <div class="icon_arrow_right" style="width:20px;height:32px;"></div>
@@ -771,7 +810,7 @@ AiMesh
 <div class="selectorContainer">
 <div class="selectorContainerDiv">
 <div class="selectBar" onclick="goTo.autoIP()">
-<#186#>
+<#193#>
 </div>
 <div class="narrowContainer">
 <div class="icon_arrow_right" style="width:20px;height:32px;"></div>
@@ -782,13 +821,13 @@ AiMesh
 </div>
 <div>
 <div class="footer_desktop">
-<div class="desktop_abortBtn" onclick='abort.wan()'><#205#></div>
+<div class="desktop_abortBtn" onclick='abort.wan()'><#212#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort" style="width:100%;" onclick='abort.wan()'>
-<div class="mobile_abortBtn"><#205#></div>
+<div class="mobile_abortBtn"><#212#></div>
 </td>
 </tr>
 </table>
@@ -802,18 +841,18 @@ AiMesh
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div>
-<div class="titleMain"><#2329#></div>
-<div class="titleSub"><#676#></div>
+<div class="titleMain"><#2367#></div>
+<div class="titleSub"><#693#></div>
 </div>
 </div>
 <div class="table_td">
-<div class="pageDesc"><#485#></div>
+<div class="pageDesc"><#501#></div>
 <div>
 <div class="selectorTopContainer" id="test">
 <div class="selectorContainer">
 <div class="selectorContainerDiv" onclick="goTo.IPTV()">
 <div class="selectBar">
-<#187#>
+<#194#>
 </div>
 <div class="narrowContainer">
 <div class="icon_arrow_right" style="width:20px;height:32px;"></div>
@@ -825,7 +864,7 @@ AiMesh
 <div class="selectorContainer">
 <div class="selectorContainerDiv">
 <div class="selectBar" onclick="goTo.wirelessWithoutIPTV();">
-<#186#>
+<#193#>
 </div>
 <div class="narrowContainer">
 <div class="icon_arrow_right" style="width:20px;height:32px;"></div>
@@ -836,13 +875,13 @@ AiMesh
 </div>
 <div>
 <div class="footer_desktop">
-<div class="desktop_abortBtn" onclick='abort.specialISP()'><#205#></div>
+<div class="desktop_abortBtn" onclick='abort.specialISP()'><#212#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort" style="width:100%;" onclick='abort.specialISP()'>
-<div class="mobile_abortBtn"><#205#></div>
+<div class="mobile_abortBtn"><#212#></div>
 </td>
 </tr>
 </table>
@@ -856,18 +895,18 @@ AiMesh
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div>
-<div class="titleMain"><#2329#></div>
-<div class="titleSub"><#192#></div>
+<div class="titleMain"><#2367#></div>
+<div class="titleSub"><#199#></div>
 </div>
 </div>
 <div class="table_td">
-<div class="pageDesc" id="connTypeDesc"><#642#></div>
+<div class="pageDesc" id="connTypeDesc"><#658#></div>
 <div>
 <div class="selectorTopContainer">
 <div class="selectorContainer autoIP">
 <div class="selectorContainerDiv">
 <div class="selectBar" onclick="goTo.DHCP()">
-<#167#>
+<#174#>
 </div>
 <div class="narrowContainer">
 <div class="icon_arrow_right" style="width:20px;height:32px;"></div>
@@ -887,7 +926,7 @@ PPPoE
 <div class="selectorContainer autoIP">
 <div class="selectorContainerDiv">
 <div class="selectBar" onclick="goTo.Static()">
-<#168#>
+<#175#>
 </div>
 <div class="narrowContainer">
 <div class="icon_arrow_right" style="width:20px;height:32px;"></div>
@@ -897,7 +936,7 @@ PPPoE
 <div class="selectorContainer v6plus">
 <div class="selectorContainerDiv">
 <div class="selectBar" onclick="goTo.V6PLUS()">
-<#2448#>
+<#2486#>
 </div>
 <div class="narrowContainer">
 <div class="icon_arrow_right" style="width:20px;height:32px;"></div>
@@ -907,7 +946,7 @@ PPPoE
 <div class="selectorContainer ocnvc">
 <div class="selectorContainerDiv">
 <div class="selectBar" onclick="goTo.OCNVC()">
-<#2447#>
+<#2485#>
 </div>
 <div class="narrowContainer">
 <div class="icon_arrow_right" style="width:20px;height:32px;"></div>
@@ -945,24 +984,24 @@ L2TP
 </div>
 <div id= "wan_iptv_checkbox">
 <div id="iptv_check_container" class="labelContainer iptv">
-<label for="iptv_checkbox" class="labelInput"><#485#></label>
+<label for="iptv_checkbox" class="labelInput"><#501#></label>
 <input type="checkbox" id="iptv_checkbox" value="1" data-mini="true" />
 </div>
 </div>
 <div id= "dhcp_option_checkbox">
 <div id="dhcp_option_check_container" class="labelContainer dhcp_option">
-<label for="wan_dhcp_option_checkbox" class="labelInput"><#2429#></label>
+<label for="wan_dhcp_option_checkbox" class="labelInput"><#2467#></label>
 <input type="checkbox" id="wan_dhcp_option_checkbox" value="1" data-mini="true" />
 </div>
 </div>
 <div class="footer_desktop">
-<div class="desktop_abortBtn" onclick='abort.wan()'><#205#></div>
+<div class="desktop_abortBtn" onclick='abort.wan()'><#212#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort" style="width:100%;" onclick='abort.wan()'>
-<div class="mobile_abortBtn"><#205#></div>
+<div class="mobile_abortBtn"><#212#></div>
 </td>
 </tr>
 </table>
@@ -976,18 +1015,18 @@ L2TP
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div>
-<div class="titleMain"><#2329#></div>
-<div class="titleSub"><#192#></div>
+<div class="titleMain"><#2367#></div>
+<div class="titleSub"><#199#></div>
 </div>
 </div>
 <div class="table_td">
-<div class="pageDesc" id="connTypeDesc"><#359#></div>
+<div class="pageDesc" id="connTypeDesc"><#371#></div>
 <div>
 <div class="selectorTopContainer">
 <div class="selectorContainer">
 <div class="selectorContainerDiv">
 <div class="selectBar" onclick="apply.WAN1G();">
-<#3718#>
+<#3815#>
 </div>
 <div class="narrowContainer">
 <div class="icon_arrow_right" style="width:20px;height:32px;"></div>
@@ -997,7 +1036,7 @@ L2TP
 <div class="selectorContainer LWAN_2p5G">
 <div class="selectorContainerDiv">
 <div class="selectBar" onclick="apply.WAN2p5G();">
-2.5G <#3674#>
+2.5G <#3771#>
 </div>
 <div class="narrowContainer">
 <div class="icon_arrow_right" style="width:20px;height:32px;"></div>
@@ -1007,7 +1046,7 @@ L2TP
 <div class="selectorContainer LWAN_10G">
 <div class="selectorContainerDiv">
 <div class="selectBar" onclick="apply.WAN10G();">
-10G <#3674#>
+10G <#3771#>
 </div>
 <div class="narrowContainer">
 <div class="icon_arrow_right" style="width:20px;height:32px;"></div>
@@ -1027,7 +1066,7 @@ L2TP
 <div class="selectorContainer modem">
 <div class="selectorContainerDiv">
 <div class="selectBar" onclick="apply.WANModem();">
-<#403#>
+<#417#>
 </div>
 <div class="narrowContainer">
 <div class="icon_arrow_right" style="width:20px;height:32px;"></div>
@@ -1036,13 +1075,13 @@ L2TP
 </div>
 </div>
 <div class="footer_desktop">
-<div class="desktop_abortBtn" onclick='abort.wan()'><#205#></div>
+<div class="desktop_abortBtn" onclick='abort.wan()'><#212#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort" style="width:100%;" onclick='abort.wan()'>
-<div class="mobile_abortBtn"><#205#></div>
+<div class="mobile_abortBtn"><#212#></div>
 </td>
 </tr>
 </table>
@@ -1056,18 +1095,18 @@ L2TP
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div>
-<div class="titleMain"><#2329#></div>
-<div class="titleSub"><#2658#></div>
+<div class="titleMain"><#2367#></div>
+<div class="titleSub"><#2701#></div>
 </div>
 </div>
 <div class="table_td">
-<div class="pageDesc"><#355#></div>
+<div class="pageDesc"><#367#></div>
 <div>
 <div class="selectorTopContainer">
 <div class="selectorContainer">
 <div class="selectorContainerDiv">
 <div class="selectBar" onclick="goTo.vpnDHCP()">
-<#167#>
+<#174#>
 </div>
 <div class="narrowContainer">
 <div class="icon_arrow_right" style="width:20px;height:32px;"></div>
@@ -1077,7 +1116,7 @@ L2TP
 <div class="selectorContainer">
 <div class="selectorContainerDiv">
 <div class="selectBar" onclick="goTo.vpnStatic()">
-<#2631#>
+<#2672#>
 </div>
 <div class="narrowContainer">
 <div class="icon_arrow_right" style="width:20px;height:32px;"></div>
@@ -1086,13 +1125,13 @@ L2TP
 </div>
 </div>
 <div class="footer_desktop">
-<div class="desktop_abortBtn" onclick='abort.getIp()'><#205#></div>
+<div class="desktop_abortBtn" onclick='abort.getIp()'><#212#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort" style="width:100%;" onclick='abort.getIp()'>
-<div class="mobile_abortBtn"><#205#></div>
+<div class="mobile_abortBtn"><#212#></div>
 </td>
 </tr>
 </table>
@@ -1106,16 +1145,16 @@ L2TP
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div>
-<div class="titleMain"><#2329#></div>
-<div class="titleSub"><#676#></div>
+<div class="titleMain"><#2367#></div>
+<div class="titleSub"><#693#></div>
 </div>
 </div>
 <div class="table_td">
-<div id="pppoe_desc" class="pageDesc"><#619#></div>
+<div id="pppoe_desc" class="pageDesc"><#635#></div>
 <div id="pppoe_field">
 <div>
 <div class="inputTitleContainer">
-<div class="inputTitle"><#3500#></div>
+<div class="inputTitle"><#3571#></div>
 </div>
 <div class="inputContainer">
 <input id="wan_pppoe_username" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="64" class="textInput pppInput" data-role="none" value="" data-clear-btn="true" />
@@ -1123,7 +1162,7 @@ L2TP
 </div>
 <div>
 <div class="inputTitleContainer">
-<div class="inputTitle"><#481#></div>
+<div class="inputTitle"><#497#></div>
 <div class="secureInput icon_eye_close" for="wan_pppoe_passwd"></div>
 </div>
 <div class="inputContainer">
@@ -1132,7 +1171,7 @@ L2TP
 </div>
 <div id="vpnServerContainer" style="display:none">
 <div class="inputTitleContainer">
-<div class="inputTitle"><#170#></div>
+<div class="inputTitle"><#177#></div>
 </div>
 <div class="inputContainer">
 <input id="wan_heartbeat_x" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="64" class="textInput pppInput" data-role="none" value="" data-clear-btn="true" />
@@ -1140,17 +1179,17 @@ L2TP
 </div>
 <div id="pppoe_iptv_checkbox"></div>
 <div class="footer_desktop">
-<div class="desktop_abortBtn" onclick='abort.pppoe()'><#205#></div>
-<div class="desktop_applyBtn" onclick="apply.pppoe();"><#204#></div>
+<div class="desktop_abortBtn" onclick='abort.pppoe()'><#212#></div>
+<div class="desktop_applyBtn" onclick="apply.pppoe();"><#211#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort" style="width:50%" onclick='abort.pppoe()'>
-<div class="mobile_abortBtn"><#205#></div>
+<div class="mobile_abortBtn"><#212#></div>
 </td>
 <td class="mobileApply" onclick="apply.pppoe();">
-<div class="mobile_applyBtn"><#204#></div>
+<div class="mobile_applyBtn"><#211#></div>
 </td>
 </tr>
 </table>
@@ -1164,16 +1203,16 @@ L2TP
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div>
-<div class="titleMain"><#2329#></div>
-<div class="titleSub"><#168#></div>
+<div class="titleMain"><#2367#></div>
+<div class="titleSub"><#175#></div>
 </div>
 </div>
 <div class="table_td">
-<div class="pageDesc"><#623#></div>
+<div class="pageDesc"><#639#></div>
 <div>
 <div>
 <div class="inputTitleContainer">
-<div class="inputTitle"><#290#></div>
+<div class="inputTitle"><#302#></div>
 </div>
 <div class="inputContainer">
 <input id="static_ipaddr" class="textInput staticInput" data-role="none" onkeypress="return validator.isIPAddr(this, event);" maxlength="15" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
@@ -1181,7 +1220,7 @@ L2TP
 </div>
 <div>
 <div class="inputTitleContainer">
-<div class="inputTitle"><#312#></div>
+<div class="inputTitle"><#324#></div>
 </div>
 <div class="inputContainer">
 <input id="static_subnet" class="textInput staticInput" data-role="none" onkeypress="return validator.isIPAddr(this, event);" maxlength="15" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
@@ -1189,7 +1228,7 @@ L2TP
 </div>
 <div>
 <div class="inputTitleContainer">
-<div class="inputTitle"><#310#></div>
+<div class="inputTitle"><#322#></div>
 </div>
 <div class="inputContainer">
 <input id="static_gateway" class="textInput staticInput" data-role="none" onkeypress="return validator.isIPAddr(this, event);" maxlength="15" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
@@ -1197,7 +1236,7 @@ L2TP
 </div>
 <div>
 <div class="inputTitleContainer">
-<div class="inputTitle"><#294#></div>
+<div class="inputTitle"><#306#></div>
 </div>
 <div class="inputContainer">
 <input id="static_dns1" class="textInput staticInput" data-role="none" onkeypress="return validator.isIPAddr(this, event);" maxlength="15" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
@@ -1205,24 +1244,24 @@ L2TP
 </div>
 <div>
 <div class="inputTitleContainer">
-<div class="inputTitle"><#296#></div>
+<div class="inputTitle"><#308#></div>
 </div>
 <div class="inputContainer">
 <input id="static_dns2" class="textInput staticInput" data-role="none" onkeypress="return validator.isIPAddr(this, event);" maxlength="15" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
 </div>
 </div>
 <div class="footer_desktop">
-<div class="desktop_abortBtn" onclick='abort.static()'><#205#></div>
-<div class="desktop_applyBtn" onclick="apply.static();"><#204#></div>
+<div class="desktop_abortBtn" onclick='abort.static()'><#212#></div>
+<div class="desktop_applyBtn" onclick="apply.static();"><#211#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort" style="width:50%" onclick='abort.static()'>
-<div class="mobile_abortBtn"><#205#></div>
+<div class="mobile_abortBtn"><#212#></div>
 </td>
 <td class="mobileApply" onclick="apply.static();">
-<div class="mobile_applyBtn"><#204#></div>
+<div class="mobile_applyBtn"><#211#></div>
 </td>
 </tr>
 </table>
@@ -1236,16 +1275,16 @@ L2TP
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div>
-<div class="titleMain"><#2329#></div>
-<div class="titleSub"><#703#></div>
+<div class="titleMain"><#2367#></div>
+<div class="titleSub"><#720#></div>
 </div>
 </div>
 <div class="table_td">
-<div class="pageDesc"><#485#></div>
+<div class="pageDesc"><#501#></div>
 <div>
 <div>
 <div class="inputTitleContainer">
-<div class="inputTitle"><#724#></div>
+<div class="inputTitle"><#741#></div>
 </div>
 <div class="inputContainer" id="switchWanTagContainer">
 </div>
@@ -1269,7 +1308,7 @@ L2TP
 <div id="iptv_manual">
 <div>
 <div class="inputTitleContainer">
-<div class="inputTitle"><#2329#></div>
+<div class="inputTitle"><#2367#></div>
 </div>
 <div class="inputContainer">
 <div class="ui-grid-a">
@@ -1316,7 +1355,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <div id="iptv_wanSetup">
 <div>
 <div class="inputTitleContainer">
-<div class="inputTitle"><#290#></div>
+<div class="inputTitle"><#302#></div>
 </div>
 <div class="inputContainer">
 <input id="iptv_ipaddr" class="textInput" data-role="none" onkeypress="return validator.isIPAddr(this, event);" maxlength="15" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
@@ -1324,7 +1363,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div>
 <div class="inputTitleContainer">
-<div class="inputTitle"><#312#></div>
+<div class="inputTitle"><#324#></div>
 </div>
 <div class="inputContainer">
 <input id="iptv_netmask" class="textInput" data-role="none" onkeypress="return validator.isIPAddr(this, event);" maxlength="15" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
@@ -1332,7 +1371,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div>
 <div class="inputTitleContainer">
-<div class="inputTitle"><#310#></div>
+<div class="inputTitle"><#322#></div>
 </div>
 <div class="inputContainer">
 <input id="iptv_gateway" class="textInput" data-role="none" onkeypress="return validator.isIPAddr(this, event);" maxlength="15" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
@@ -1340,7 +1379,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div>
 <div class="inputTitleContainer">
-<div class="inputTitle"><#294#></div>
+<div class="inputTitle"><#306#></div>
 </div>
 <div class="inputContainer">
 <input id="iptv_dns1" class="textInput" data-role="none" onkeypress="return validator.isIPAddr(this, event);" maxlength="15" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
@@ -1348,7 +1387,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div>
 <div class="inputTitleContainer">
-<div class="inputTitle"><#296#></div>
+<div class="inputTitle"><#308#></div>
 </div>
 <div class="inputContainer">
 <input id="iptv_dns2" class="textInput" data-role="none" onkeypress="return validator.isIPAddr(this, event);" maxlength="15" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
@@ -1356,18 +1395,18 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div>
 <div class="inputTitleContainer">
-<div class="inputTitle"><#2940#></div>
+<div class="inputTitle"><#2991#></div>
 </div>
 <div class="inputContainer">
 <select id="iptv_auth_mode" class="optionInput">
-<option value=""><#848#></option>
+<option value=""><#866#></option>
 <option value="8021x-md5">802.1x MD5</option>
 </select>
 </div>
 </div>
 <div class="iptv_pppoe_setting">
 <div class="inputTitleContainer">
-<div class="inputTitle"><#3500#></div>
+<div class="inputTitle"><#3571#></div>
 </div>
 <div class="inputContainer">
 <input id="iptv_pppoe_username" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="64" class="textInput" data-role="none" value="" data-clear-btn="true" />
@@ -1375,7 +1414,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div class="iptv_pppoe_setting">
 <div class="inputTitleContainer">
-<div class="inputTitle"><#481#></div>
+<div class="inputTitle"><#497#></div>
 <div class="secureInput icon_eye_close" for="iptv_pppoe_passwd"></div>
 </div>
 <div class="inputContainer">
@@ -1384,17 +1423,17 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 </div>
 <div class="footer_desktop">
-<div class="desktop_abortBtn" onclick='abort.iptv()'><#205#></div>
-<div class="desktop_applyBtn" onclick="apply.iptv();"><#204#></div>
+<div class="desktop_abortBtn" onclick='abort.iptv()'><#212#></div>
+<div class="desktop_applyBtn" onclick="apply.iptv();"><#211#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort" style="width:50%" onclick='abort.iptv()'>
-<div class="mobile_abortBtn"><#205#></div>
+<div class="mobile_abortBtn"><#212#></div>
 </td>
 <td class="mobileApply" onclick="apply.iptv();">
-<div class="mobile_applyBtn"><#204#></div>
+<div class="mobile_applyBtn"><#211#></div>
 </td>
 </tr>
 </table>
@@ -1408,16 +1447,16 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div>
-<div class="titleMain"><#2329#></div>
-<div class="titleSub"><#2429#></div>
+<div class="titleMain"><#2367#></div>
+<div class="titleSub"><#2467#></div>
 </div>
 </div>
 <div class="table_td">
-<div class="pageDesc"><#2429#></div>
+<div class="pageDesc"><#2467#></div>
 <div>
 <div>
 <div class="inputTitleContainer">
-<div class="inputTitle"><#1734#> (<#2817#> 60)</div>
+<div class="inputTitle"><#1756#> (<#2861#> 60)</div>
 </div>
 <div class="inputContainer">
 <input id="wan_vendorid" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="126" class="textInput pppInput" data-role="none" value="" data-clear-btn="true" />
@@ -1425,7 +1464,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div>
 <div class="inputTitleContainer">
-<div class="inputTitle"><#1735#> (<#2817#> 61)</div>
+<div class="inputTitle"><#1757#> (<#2861#> 61)</div>
 </div>
 <div class="inputContainer">
 <input type="checkbox" id="wan_clientid_type" name="wan_clientid_type" onclick="showDiableDHCPclientID(this);" class="labelInput"><label for="wan_clientid_type" class="labelInput">IAID/DUID</label><br>
@@ -1434,17 +1473,17 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 </div>
 <div class="footer_desktop">
-<div class="desktop_abortBtn" onclick='abort.wan_dhcp_option()'><#205#></div>
-<div class="desktop_applyBtn" onclick="apply.wan_dhcp_option();"><#204#></div>
+<div class="desktop_abortBtn" onclick='abort.wan_dhcp_option()'><#212#></div>
+<div class="desktop_applyBtn" onclick="apply.wan_dhcp_option();"><#211#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort" style="width:50%" onclick='abort.wan_dhcp_option()'>
-<div class="mobile_abortBtn"><#205#></div>
+<div class="mobile_abortBtn"><#212#></div>
 </td>
 <td class="mobileApply" onclick="apply.wan_dhcp_option();">
-<div class="mobile_applyBtn"><#204#></div>
+<div class="mobile_applyBtn"><#211#></div>
 </td>
 </tr>
 </table>
@@ -1457,16 +1496,16 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div>
-<div class="titleMain"><#2329#></div>
-<div class="titleSub"><#2744#></div>
+<div class="titleMain"><#2367#></div>
+<div class="titleSub"><#2788#></div>
 </div>
 </div>
 <div class="table_td">
-<div class="pageDesc" id="sim_desc"><#2708#></div>
+<div class="pageDesc" id="sim_desc"><#2752#></div>
 <div>
 <div id="pin_setting" class="dongle">
 <div class="inputTitleContainer">
-<div class="inputTitle"><span id="sim_input_title"><#2895#></span>&nbsp;&nbsp;<span style="font-size: 0.75em;">(<#2717#>: <span id="remaing_num"></span>)</span></div>
+<div class="inputTitle"><span id="sim_input_title"><#2942#></span>&nbsp;&nbsp;<span style="font-size: 0.75em;">(<#2761#>: <span id="remaing_num"></span>)</span></div>
 <div class="secureInput icon_eye_close" for="sim_pincode"></div>
 </div>
 <div class="inputContainer">
@@ -1475,17 +1514,17 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 </div>
 <div class="footer_desktop">
-<div class="desktop_abortBtn" onclick='abort.simpin()'><#205#></div>
-<div id="pin_apply" class="desktop_applyBtn sim_pin_apply" onclick="apply.simpin();"><#196#></div>
+<div class="desktop_abortBtn" onclick='abort.simpin()'><#212#></div>
+<div id="pin_apply" class="desktop_applyBtn sim_pin_apply" onclick="apply.simpin();"><#203#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort" style="width:50%" onclick='abort.simpin()'>
-<div class="mobile_abortBtn"><#205#></div>
+<div class="mobile_abortBtn"><#212#></div>
 </td>
 <td class="mobileApply" onclick="apply.simpin();">
-<div id="pin_mobileApply" class="mobile_applyBtn sim_pin_apply"><#196#></div>
+<div id="pin_mobileApply" class="mobile_applyBtn sim_pin_apply"><#203#></div>
 </td>
 </tr>
 </table>
@@ -1499,18 +1538,18 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div>
-<div class="titleMain"><#2329#></div>
-<div class="titleSub"><#2744#></div>
+<div class="titleMain"><#2367#></div>
+<div class="titleSub"><#2788#></div>
 </div>
 </div>
 <div id="lock_selection" class="table_td">
-<div class="pageDesc" id="connTypeDesc"><#2730#></div>
+<div class="pageDesc" id="connTypeDesc"><#2774#></div>
 <div>
 <div class="selectorTopContainer">
 <div class="selectorContainer autoIP">
 <div class="selectorContainerDiv">
 <div class="selectBar" onclick="goTo.PUK()">
-<#2747#>
+<#2791#>
 </div>
 <div class="narrowContainer">
 <div class="icon_arrow_right" style="width:20px;height:32px;"></div>
@@ -1520,7 +1559,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <div class="selectorContainer dailIP">
 <div class="selectorContainerDiv">
 <div class="selectBar" onclick="goTo.Wireless()">
-<#210#>
+<#217#>
 </div>
 <div class="narrowContainer">
 <div class="icon_arrow_right" style="width:20px;height:32px;"></div>
@@ -1529,13 +1568,13 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 </div>
 <div class="footer_desktop">
-<div class="desktop_abortBtn" onclick='abort.simunblock()'><#205#></div>
+<div class="desktop_abortBtn" onclick='abort.simunblock()'><#212#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort" style="width:100%;" onclick='abort.simunblock()'>
-<div class="mobile_abortBtn"><#205#></div>
+<div class="mobile_abortBtn"><#212#></div>
 </td>
 </tr>
 </table>
@@ -1549,16 +1588,16 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div>
-<div class="titleMain"><#2329#></div>
-<div class="titleSub"><#2744#></div>
+<div class="titleMain"><#2367#></div>
+<div class="titleSub"><#2788#></div>
 </div>
 </div>
 <div class="table_td">
-<div class="pageDesc"><#2713#></div>
+<div class="pageDesc"><#2757#></div>
 <div>
 <div class="dongle">
 <div class="inputTitleContainer">
-<div class="inputTitle"><#2712#></span>&nbsp;&nbsp;<span style="font-size: 0.75em;">(<#2717#>: <span id="puk_remaing_num"></span>)</span></div>
+<div class="inputTitle"><#2756#></span>&nbsp;&nbsp;<span style="font-size: 0.75em;">(<#2761#>: <span id="puk_remaing_num"></span>)</span></div>
 <div class="secureInput icon_eye_close" for="sim_puk"></div>
 </div>
 <div class="inputContainer">
@@ -1568,7 +1607,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div id="new_pin_div" class="dongle">
 <div class="inputTitleContainer">
-<div class="inputTitle"><#2701#></div>
+<div class="inputTitle"><#2745#></div>
 <div class="secureInput icon_eye_close" for="new_pincode"></div>
 </div>
 <div class="inputContainer">
@@ -1577,17 +1616,17 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 </div>
 <div class="footer_desktop">
-<div class="desktop_abortBtn" onclick='abort.simpuk()'><#205#></div>
-<div class="desktop_applyBtn sim_puk_apply" onclick="apply.simpuk();"><#204#></div>
+<div class="desktop_abortBtn" onclick='abort.simpuk()'><#212#></div>
+<div class="desktop_applyBtn sim_puk_apply" onclick="apply.simpuk();"><#211#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort" style="width:50%" onclick='abort.simpuk()'>
-<div class="mobile_abortBtn"><#205#></div>
+<div class="mobile_abortBtn"><#212#></div>
 </td>
 <td class="mobileApply" onclick="apply.simpuk();">
-<div class="mobile_applyBtn sim_puk_apply"><#204#></div>
+<div class="mobile_applyBtn sim_puk_apply"><#211#></div>
 </td>
 </tr>
 </table>
@@ -1601,39 +1640,39 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div>
-<div class="titleMain"><#2329#></div>
-<div class="titleSub"><#403#></div>
+<div class="titleMain"><#2367#></div>
+<div class="titleSub"><#417#></div>
 </div>
 </div>
 <div class="table_td">
-<div class="pageDesc"><#2291#></div>
+<div class="pageDesc"><#2329#></div>
 <div>
 <div>
 <div class="inputTitleContainer">
-<div class="inputTitle"><#3099#></div>
+<div class="inputTitle"><#3165#></div>
 </div>
 <div class="inputContainer">
 <select id="modem_android" class="optionInput">
-<option value="0"><#403#></option>
-<option value="1"><#1399#></option>
+<option value="0"><#160#></option>
+<option value="1">Legacy</option>
 </select>
 </div>
 </div>
 <div class="dongle">
 <div class="inputTitleContainer">
-<div class="inputTitle"><#1404#></div>
+<div class="inputTitle"><#1422#></div>
 </div>
 <div class="inputContainer">
 <select id="modem_autoapn" class="optionInput">
 <option value="1">Automatic</option>
-<option value="0"><#375#></option>
+<option value="0"><#389#></option>
 </select>
 </div>
 </div>
 <div style="display:none" class="dongle modem_manual">
 <div id="modem_country_container">
 <div class="inputTitleContainer">
-<div class="inputTitle"><#2286#></div>
+<div class="inputTitle"><#2324#></div>
 </div>
 <div class="inputContainer">
 <select id="modem_country" class="optionInput"></select>
@@ -1641,7 +1680,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div id="modem_isp_container">
 <div class="inputTitleContainer">
-<div class="inputTitle"><#2297#></div>
+<div class="inputTitle"><#2335#></div>
 </div>
 <div class="inputContainer">
 <select id="modem_isp" class="optionInput"></select>
@@ -1649,7 +1688,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div id="modem_enable_container">
 <div class="inputTitleContainer">
-<div class="inputTitle"><#403#></div>
+<div class="inputTitle"><#417#></div>
 </div>
 <div class="inputContainer">
 <select id="modem_enable" class="optionInput">
@@ -1662,7 +1701,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div id="modem_apn_container">
 <div class="inputTitleContainer">
-<div class="inputTitle"><#2302#></div>
+<div class="inputTitle"><#2340#></div>
 </div>
 <div class="inputContainer">
 <input id="modem_apn" class="textInput" data-role="none" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
@@ -1670,7 +1709,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div id="modem_dialnum_container">
 <div class="inputTitleContainer">
-<div class="inputTitle"><#2289#></div>
+<div class="inputTitle"><#2327#></div>
 </div>
 <div class="inputContainer">
 <input id="modem_dialnum" class="textInput" data-role="none" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
@@ -1678,7 +1717,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div>
 <div class="inputTitleContainer">
-<div class="inputTitle"><#3500#></div>
+<div class="inputTitle"><#3571#></div>
 </div>
 <div class="inputContainer">
 <input id="modem_user" class="textInput" data-role="none" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
@@ -1686,7 +1725,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div>
 <div class="inputTitleContainer">
-<div class="inputTitle"><#481#></div>
+<div class="inputTitle"><#497#></div>
 </div>
 <div class="inputContainer">
 <input id="modem_pass" class="textInput" data-role="none" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
@@ -1695,11 +1734,11 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div class="dongle">
 <div class="inputTitleContainer">
-<div class="inputTitle"><#2940#></div>
+<div class="inputTitle"><#2991#></div>
 </div>
 <div class="inputContainer">
 <select id="modem_authmode" class="optionInput">
-<option value="0"><#848#></option>
+<option value="0"><#866#></option>
 <option value="1">PAP</option>
 <option value="2">CHAP</option>
 <option value="3">PAP / CHAP</option>
@@ -1708,7 +1747,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div class="dongle">
 <div class="inputTitleContainer">
-<div class="inputTitle"><#2895#></div>
+<div class="inputTitle"><#2942#> <span style="font-size: 0.8em;">(Optional)</span></div>
 <div class="secureInput icon_eye_close" for="modem_pincode"></div>
 </div>
 <div class="inputContainer">
@@ -1725,32 +1764,31 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div>
 <div class="inputTitleContainer">
-<div class="inputTitle">USB MTU</div>
-</div>
+<div class="inputTitle">USB MTU <span style="font-size: 0.8em;">(Optional)</span></div></div>
 <div class="inputContainer">
 <input id="modem_mtu" class="textInput" data-role="none" data-clear-btn="true" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="5" />
 </div>
 </div>
 <div class="dongle">
 <div class="inputTitleContainer">
-<div class="inputTitle"><#2303#></div>
+<div class="inputTitle"><#2341#></div>
 </div>
 <div class="inputContainer">
 <select id="Dev3G" class="optionInput"></select>
 </div>
 </div>
 <div class="footer_desktop">
-<div class="desktop_abortBtn" onclick='abort.modem()'><#205#></div>
-<div class="desktop_applyBtn" onclick="apply.modem();"><#204#></div>
+<div class="desktop_abortBtn" onclick='abort.modem()'><#212#></div>
+<div class="desktop_applyBtn" onclick="apply.modem();"><#211#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort" style="width:50%" onclick='abort.modem()'>
-<div class="mobile_abortBtn"><#205#></div>
+<div class="mobile_abortBtn"><#212#></div>
 </td>
 <td class="mobileApply" onclick="apply.modem();">
-<div class="mobile_applyBtn"><#204#></div>
+<div class="mobile_applyBtn"><#211#></div>
 </td>
 </tr>
 </table>
@@ -1764,18 +1802,18 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div>
-<div class="titleMain"><#2329#></div>
-<div class="titleSub"><#350#></div>
+<div class="titleMain"><#2367#></div>
+<div class="titleSub"><#362#></div>
 </div>
 </div>
 <div class="table_td">
-<div class="pageDesc"><#355#></div>
+<div class="pageDesc"><#367#></div>
 <div>
 <div class="selectorTopContainer">
 <div class="selectorContainer">
 <div class="selectorContainerDiv">
 <div class="selectBar" onclick="goTo.lanDHCP()">
-<#167#>
+<#174#>
 </div>
 <div class="narrowContainer">
 <div class="icon_arrow_right" style="width:20px;height:32px;"></div>
@@ -1785,7 +1823,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <div class="selectorContainer">
 <div class="selectorContainerDiv">
 <div class="selectBar" onclick="goTo.lanStatic()">
-<#2631#>
+<#2672#>
 </div>
 <div class="narrowContainer">
 <div class="icon_arrow_right" style="width:20px;height:32px;"></div>
@@ -1794,13 +1832,13 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 </div>
 <div class="footer_desktop">
-<div class="desktop_abortBtn" onclick='abort.getLanIp()'><#205#></div>
+<div class="desktop_abortBtn" onclick='abort.getLanIp()'><#212#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort" style="width:100%;" onclick='abort.getLanIp()'>
-<div class="mobile_abortBtn"><#205#></div>
+<div class="mobile_abortBtn"><#212#></div>
 </td>
 </tr>
 </table>
@@ -1814,16 +1852,16 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div>
-<div class="titleMain"><#2329#></div>
-<div class="titleSub"><#168#></div>
+<div class="titleMain"><#2367#></div>
+<div class="titleSub"><#175#></div>
 </div>
 </div>
 <div class="table_td">
-<div class="pageDesc"><#623#></div>
+<div class="pageDesc"><#639#></div>
 <div>
 <div>
 <div class="inputTitleContainer">
-<div class="inputTitle"><#290#></div>
+<div class="inputTitle"><#302#></div>
 </div>
 <div class="inputContainer">
 <input id="static_lan_ipaddr" class="textInput lanStaticInput" data-role="none" onkeypress="return validator.isIPAddr(this, event);" maxlength="15" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
@@ -1831,7 +1869,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div>
 <div class="inputTitleContainer">
-<div class="inputTitle"><#312#></div>
+<div class="inputTitle"><#324#></div>
 </div>
 <div class="inputContainer">
 <input id="static_lan_subnet" class="textInput lanStaticInput" data-role="none" onkeypress="return validator.isIPAddr(this, event);" maxlength="15" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
@@ -1839,7 +1877,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div>
 <div class="inputTitleContainer">
-<div class="inputTitle"><#310#></div>
+<div class="inputTitle"><#322#></div>
 </div>
 <div class="inputContainer">
 <input id="static_lan_gateway" class="textInput lanStaticInput" data-role="none" onkeypress="return validator.isIPAddr(this, event);" maxlength="15" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
@@ -1847,7 +1885,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div>
 <div class="inputTitleContainer">
-<div class="inputTitle"><#294#></div>
+<div class="inputTitle"><#306#></div>
 </div>
 <div class="inputContainer">
 <input id="static_lan_dns1" class="textInput lanStaticInput" data-role="none" onkeypress="return validator.isIPAddr(this, event);" maxlength="15" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
@@ -1855,24 +1893,24 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div>
 <div class="inputTitleContainer">
-<div class="inputTitle"><#296#></div>
+<div class="inputTitle"><#308#></div>
 </div>
 <div class="inputContainer">
 <input id="static_lan_dns2" class="textInput lanStaticInput" data-role="none" onkeypress="return validator.isIPAddr(this, event);" maxlength="15" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
 </div>
 </div>
 <div class="footer_desktop">
-<div class="desktop_abortBtn" onclick='abort.lanStatic()'><#205#></div>
-<div class="desktop_applyBtn" onclick="apply.lanStatic();"><#204#></div>
+<div class="desktop_abortBtn" onclick='abort.lanStatic()'><#212#></div>
+<div class="desktop_applyBtn" onclick="apply.lanStatic();"><#211#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort" style="width:50%" onclick='abort.lanStatic()'>
-<div class="mobile_abortBtn"><#205#></div>
+<div class="mobile_abortBtn"><#212#></div>
 </td>
 <td class="mobileApply" onclick="apply.lanStatic();">
-<div class="mobile_applyBtn"><#204#></div>
+<div class="mobile_applyBtn"><#211#></div>
 </td>
 </tr>
 </table>
@@ -1885,29 +1923,29 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <div class="headerBar"></div>
 <div class="tableContainer">
 <div class="desktop_left_field">
-<div class="titleMain"><#2329#></div>
-<div class="titleSub"><#3827#></div>
+<div class="titleMain"><#2367#></div>
+<div class="titleSub"><#3926#></div>
 </div>
 <div class="table_td">
 <div id="siteSurvey_search">
-<div class="pageDesc"><#4154#></div>
+<div class="pageDesc"><#4253#></div>
 <div id="siteSurveyLoading" class="selectorTopContainer"></div>
 </div>
 <div id="siteSurvey_fail">
-<div class="pageDesc"><#107#></div>
+<div class="pageDesc"><#113#></div>
 <div class="selectorTopContainer ">
 <div class="cssload-bellContainer">
-<div class="siteSurveyRescan icon_rescan" onclick="goTo.siteSurvey();" title="<#602#>"></div>
+<div class="siteSurveyRescan icon_rescan" onclick="goTo.siteSurvey();" title="<#618#>"></div>
 </div>
 </div>
 <div class="footer_desktop">
-<div class="desktop_abortBtn" onclick='abort.siteSurvey()'><#205#></div>
+<div class="desktop_abortBtn" onclick='abort.siteSurvey()'><#212#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort" style="width:50%;" onclick='abort.siteSurvey()'>
-<div class="mobile_abortBtn"><#205#></div>
+<div class="mobile_abortBtn"><#212#></div>
 </td>
 </tr>
 </table>
@@ -1920,11 +1958,11 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <div class="headerBar"></div>
 <div class="tableContainer">
 <div class="desktop_left_field">
-<div class="titleMain"><#2329#></div>
-<div class="titleSub"><#3827#></div>
+<div class="titleMain"><#2367#></div>
+<div class="titleSub"><#3926#></div>
 </div>
 <div class="table_td">
-<div class="pageDesc"><#541#></div>
+<div class="pageDesc"><#557#></div>
 <div>
 <div class="ap_title_container">
 <div class="icon_rescan ap_title_icon" onclick='goTo.siteSurvey();'></div>
@@ -1933,17 +1971,17 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div id="apList" class="selectorTopContainer"></div>
 <div class="footer_desktop">
-<div class="desktop_abortBtn" onclick='abort.papList()'><#205#></div>
-<div class="desktop_applyBtn" onclick="goTo.wlcManual();"><#375#></div>
+<div class="desktop_abortBtn" onclick='abort.papList()'><#212#></div>
+<div class="desktop_applyBtn" onclick="goTo.wlcManual();"><#389#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort" style="width:50%;" onclick='abort.papList()'>
-<div class="mobile_abortBtn"><#205#></div>
+<div class="mobile_abortBtn"><#212#></div>
 </td>
 <td class="mobileApply" onclick="goTo.wlcManual();">
-<div class="mobile_applyBtn"><#375#></div>
+<div class="mobile_applyBtn"><#389#></div>
 </td>
 </tr>
 </table>
@@ -1956,7 +1994,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <table>
 <tr>
 <td>
-<div class="ap_sort_text"><#609#></div></div>
+<div class="ap_sort_text"><#625#></div></div>
 </td>
 <td>
 <div class="ap_sort_icon_background" onclick="sortAP('alpha', 'down')">
@@ -1976,7 +2014,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </tr>
 <tr>
 <td>
-<div class="ap_sort_text"><#610#></div></div>
+<div class="ap_sort_text"><#626#></div></div>
 </td>
 <td>
 <div class="ap_sort_icon_background" onclick="sortAP('signal', 'top')">
@@ -1996,7 +2034,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </tr>
 <tr id="sortByBand">
 <td>
-<div class="ap_sort_text"><#611#></div>
+<div class="ap_sort_text"><#627#></div>
 </td>
 <td>
 <div class="ap_sort_icon_background" onclick="sortAP('band', 'top')">
@@ -2016,15 +2054,15 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <div class="headerBar"></div>
 <div class="tableContainer">
 <div class="desktop_left_field">
-<div class="titleMain"><#2329#></div>
-<div class="titleSub"><#427#></div>
+<div class="titleMain"><#2367#></div>
+<div class="titleSub"><#441#></div>
 </div>
 <div class="table_td">
-<div class="pageDesc"><#3770#></div>
+<div class="pageDesc"><#3869#></div>
 <div id="wlc_field">
 <div class="manual_pap_setup" id="manual_pap_setup-band">
 <div class="inputTitleContainer">
-<div class="inputTitle"><#2327#></div>
+<div class="inputTitle"><#2365#></div>
 </div>
 <div class="inputContainer">
 <select id="wlc_band_manual" class="optionInput"></select>
@@ -2032,7 +2070,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div class="manual_pap_setup" id="manual_pap_setup-ssid">
 <div class="inputTitleContainer">
-<div class="inputTitle"><#562#></div>
+<div class="inputTitle"><#578#></div>
 </div>
 <div class="inputContainer">
 <input id="wlc_ssid_manual" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="32" class="textInput" data-role="none" value="" data-clear-btn="true" />
@@ -2040,7 +2078,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div class="manual_pap_setup" id="manual_pap_setup-authmode">
 <div class="inputTitleContainer">
-<div class="inputTitle"><#3782#></div>
+<div class="inputTitle"><#3881#></div>
 </div>
 <div class="inputContainer">
 <select id="wlc_auth_mode_manual" class="optionInput">
@@ -2050,13 +2088,13 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <option value="psk2" selected>WPA2-Personal</option>
 </select>
 <div class="inputTitle hint_yellow" id="manual_pap_setup-nmode_hint">
-<#3954#>
+<#4053#>
 </div>
 </div>
 </div>
 <div class="manual_pap_setup" id="manual_pap_setup-crypto">
 <div class="inputTitleContainer">
-<div class="inputTitle"><#854#></div>
+<div class="inputTitle"><#872#></div>
 </div>
 <div class="inputContainer">
 <select id="wlc_crypto_manual" class="optionInput">
@@ -2067,11 +2105,11 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div class="manual_pap_setup" id="manual_pap_setup-wep">
 <div class="inputTitleContainer">
-<div class="inputTitle"><#3844#></div>
+<div class="inputTitle"><#3943#></div>
 </div>
 <div class="inputContainer">
 <select id="wlc_wep_manual" class="optionInput">
-<option value="0"><#848#></option>
+<option value="0"><#866#></option>
 <option value="1">WEP-64bits</option>
 <option value="2">WEP-128bits</option>
 </select>
@@ -2079,7 +2117,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div class="manual_pap_setup" id="manual_pap_setup-key-index">
 <div class="inputTitleContainer">
-<div class="inputTitle"><#850#></div>
+<div class="inputTitle"><#868#></div>
 </div>
 <div class="inputContainer">
 <select id="wlc_key_index_manual" class="optionInput">
@@ -2092,7 +2130,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div id="manual_pap_setup-key">
 <div class="inputTitleContainer">
-<div class="inputTitle"><#563#></div>
+<div class="inputTitle"><#579#></div>
 <div class="secureInput icon_eye_close" for="wlc_wifiKey"></div>
 </div>
 <div class="inputContainer">
@@ -2101,17 +2139,17 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 </div>
 <div class="footer_desktop">
-<div class="desktop_abortBtn" onclick='abort.wlcKey();'><#205#></div>
-<div class="desktop_applyBtn" onclick="apply.wlcKey();"><#204#></div>
+<div class="desktop_abortBtn" onclick='abort.wlcKey();'><#212#></div>
+<div class="desktop_applyBtn" onclick="apply.wlcKey();"><#211#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort" style="width:50%" onclick='abort.wlcKey();'>
-<div class="mobile_abortBtn"><#205#></div>
+<div class="mobile_abortBtn"><#212#></div>
 </td>
 <td class="mobileApply" onclick="apply.wlcKey();">
-<div class="mobile_applyBtn"><#204#></div>
+<div class="mobile_applyBtn"><#211#></div>
 </td>
 </tr>
 </table>
@@ -2120,39 +2158,69 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 </div>
 <div id="wireless_setting" data-role="page" class="qisBackground">
+<div class="qis_container">
 <div class="headerBar"></div>
 <div class="tableContainer">
 <div class="desktop_left_field">
-<div class="titleMain"><#382#></div>
-<div class="titleSub"><#3127#></div>
+<div class="titleMain"><#396#></div>
+<div class="titleSub"><#3193#></div>
 </div>
 <div class="table_td">
-<div class="pageDesc"><#669#></div>
+<div class="pageDesc"><#685#></div>
 <div id="wlInputField"></div>
 <div class="labelContainer dualbandSupport bandStreeringSupport">
-<label for="wireless_checkbox" class="labelInput"><#672#></label>
+<label for="wireless_checkbox" class="labelInput"><#688#></label>
 <input type="checkbox" id="wireless_checkbox" data-mini="true"/>
 </div>
-<div id="wifi6e_legacy_hint" class="hint_yellow" style="padding:30px;margin-top:6px;display:none"><#4234#> <#4235#></div>
+<div id="wifi6e_legacy_hint" class="hint_yellow" style="padding:30px;margin-top:6px;display:none"><#4333#> <#4334#></div>
 <div class="labelContainer" id="syncSSID" style="display:none;">
-<label for="wireless_sync_checkbox" class="labelInput"><#629#></label>
+<label for="wireless_sync_checkbox" class="labelInput"><#645#></label>
 <input type="checkbox" id="wireless_sync_checkbox" data-mini="true"/>
 </div>
+<div class="labelContainer defpskSupport">
+<div id="wifi_conn_title_container" class="defpass_guideline_title_container">
+<div>
+<div class="icon_excl_mark"><div>i</div></div>
+</div>
+<div>
+<div data-component="title_text"></div>
+</div>
+</div>
+</div>
 <div class="footer_desktop">
-<div class="desktop_abortBtn" id="wireless_abortBtn" onclick='abort.wireless();'><#205#></div>
-<div class="desktop_applyBtn btn_wireless_apply" onclick="apply.wireless();"><#196#></div>
+<div class="desktop_abortBtn" id="wireless_abortBtn" onclick='abort.wireless();'><#212#></div>
+<div class="desktop_applyBtn btn_wireless_apply" onclick="apply.wireless();"><#203#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort" id="wireless_mobile_abortBtn" style="width:50%" onclick='abort.wireless();'>
-<div class="mobile_abortBtn"><#205#></div>
+<div class="mobile_abortBtn"><#212#></div>
 </td>
 <td class="mobileApply" onclick="apply.wireless();">
-<div class="mobile_applyBtn btn_wireless_apply"><#196#></div>
+<div class="mobile_applyBtn btn_wireless_apply"><#203#></div>
 </td>
 </tr>
 </table>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden_mask popup_element"></div>
+<div class="popup_container popup_element defpass qisView">
+<div>
+<div class="title_container">
+<div class="title">WiFi Connection</div><div id="wifi_conn_guideline_close" class="icon_close_btn"></div>
+</div>
+<div class="content_container">
+<div class="defpass_guideline_container">
+<div class="image_container">
+<div class="image_wifi_conn"></div>
+</div>
+<div class="desc_container">
+<div id="wifi_conn_guideline_desc"></div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -2162,16 +2230,16 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div>
-<div class="titleMain"><#414#></div>
+<div class="titleMain"><#428#></div>
 </div>
 </div>
 <div class="table_td">
-<div class="pageDesc"><#259#></div>
-<!--div class="pageDesc forceUpgrade"><#4143#></div-->
+<div class="pageDesc"><#268#></div>
+<!--div class="pageDesc forceUpgrade"><#4242#></div-->
 <div>
 <div>
 <div class="inputTitleContainer">
-<div class="inputTitle"><#98#></div>
+<div class="inputTitle"><#104#></div>
 </div>
 <div class="inputContainer">
 <input id="newVersion" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="textInput" data-role="none" disabled />
@@ -2179,17 +2247,17 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 </div>
 <div class="footer_desktop">
-<div class="desktop_abortBtn" id="desktop_abortBtn_update" onclick='abort.update();'><#199#></div>
-<div class="desktop_applyBtn btn_upgrade_apply" id="desktop_applyBtn_update" onclick="apply.update();"><#1674#></div>
+<div class="desktop_abortBtn" id="desktop_abortBtn_update" onclick='abort.update();'><#206#></div>
+<div class="desktop_applyBtn btn_upgrade_apply" id="desktop_applyBtn_update" onclick="apply.update();"><#1696#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort" style="width:50%" onclick='abort.update();'>
-<div class="mobile_abortBtn" id="mobile_abortBtn_update"><#199#></div>
+<div class="mobile_abortBtn" id="mobile_abortBtn_update"><#206#></div>
 </td>
 <td class="mobileApply" onclick="apply.update();">
-<div class="mobile_applyBtn btn_upgrade_apply" id="mobile_applyBtn_update"><#1674#></div>
+<div class="mobile_applyBtn btn_upgrade_apply" id="mobile_applyBtn_update"><#1696#></div>
 </td>
 </tr>
 </table>
@@ -2202,12 +2270,12 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div>
-<div class="titleMain"><#414#></div>
+<div class="titleMain"><#428#></div>
 </div>
 </div>
 <div class="table_td">
 <div class="pageDesc">
-<div><#372#></div>
+<div><#386#></div>
 </div>
 <div>
 <div>
@@ -2237,13 +2305,13 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 <div id="upgradeBtn" style="display:none">
 <div class="footer_desktop" class="display:none">
-<div class="desktop_applyBtn" onclick="goTo.Finish()"><#204#></div>
+<div class="desktop_applyBtn" onclick="goTo.Finish()"><#211#></div>
 </div>
 <div class="footer_mobile" class="display:none">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileApply" onclick="goTo.Finish()">
-<div class="mobile_applyBtn"><#204#></div>
+<div class="mobile_applyBtn"><#211#></div>
 </td>
 </tr>
 </table>
@@ -2257,12 +2325,12 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div>
-<div class="titleMain"><#1675#></div>
+<div class="titleMain"><#1697#></div>
 </div>
 </div>
 <div class="table_td">
 <div class="pageDesc">
-<div><#3109#></div>
+<div><#3175#></div>
 </div>
 <div class="loadingBarContainer">
 <div class="loadingBar" id="profileLoadingBar"></div>
@@ -2275,32 +2343,32 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div>
-<div class="titleMain"><#558#></div>
+<div class="titleMain"><#574#></div>
 </div>
 </div>
 <div class="table_td">
-<div class="pageDesc"><#684#></div> <!-- #Congratulations# &nbsp; -->
+<div class="pageDesc"><#701#></div> <!-- #Congratulations# &nbsp; -->
 <div class="pageDesc">
 <div class="descSteps">Step 1</div>
-<div id="stepText1"><#218#></div>
+<div id="stepText1"><#227#></div>
 </div>
 <div>
 <div id="wirelessFinishFiled"></div>
 </div>
 <div class="pageDesc">
 <div class="descSteps">Step 2</div>
-<div id="stepText2"><#4145#></div>
+<div id="stepText2"><#4244#></div>
 </div>
-<div id="wifi6e_legacy_hint_summary" class="hint_yellow" style="display:none">*Note: <#4236#></div>
+<div id="wifi6e_legacy_hint_summary" class="hint_yellow" style="display:none">*Note: <#4335#></div>
 <div id="finishButton" style="display:none">
 <div class="footer_desktop">
-<div class="desktop_applyBtn" onclick="goTo.leaveQIS();"><#691#></div>
+<div class="desktop_applyBtn" onclick="goTo.leaveQIS();"><#708#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileApply" onclick="goTo.leaveQIS();">
-<div class="mobile_applyBtn"><#691#></div>
+<div class="mobile_applyBtn"><#708#></div>
 </td>
 </tr>
 </table>
@@ -2309,6 +2377,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 </div>
 </div>
+<div id="wan46_page" data-role="page" class="qisBackground"></div>
 <div id="ppp_cfg_page" data-role="page" class="qisBackground"></div>
 <div id="mer_cfg_page" data-role="page" class="qisBackground"></div>
 <div id="dsl_iptv_setting" data-role="page" class="qisBackground"></div>
@@ -2330,30 +2399,30 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <div class="tableContainer">
 <div class="desktop_left_field">
 <div>
-<div class="titleMain"><#558#></div>
+<div class="titleMain"><#574#></div>
 </div>
 </div>
 <div class="table_td">
 <div class="pageDesc">
 <#26#>
 <br/>
-<#1030#>
+<#1048#>
 <div class="amasIconContainer">
 <div><img src="images\New_ui\amesh\Amesh_button_light.png"></div>
 </div>
 </div>
 <div class="footer_desktop">
-<div class="desktop_abortBtn" onclick='abort.amasbundle();'><#1657#></div>
-<div class="desktop_applyBtn" onclick="goTo.amasearch();"><#1672#></div>
+<div class="desktop_abortBtn" onclick='abort.amasbundle();'><#1679#></div>
+<div class="desktop_applyBtn" onclick="goTo.amasearch();"><#1694#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort" style="width:50%" onclick='abort.amasbundle();'>
-<div class="mobile_abortBtn"><#1657#></div>
+<div class="mobile_abortBtn"><#1679#></div>
 </td>
 <td class="mobileApply" onclick="goTo.amasearch();">
-<div class="mobile_applyBtn"><#1672#></div>
+<div class="mobile_applyBtn"><#1694#></div>
 </td>
 </tr>
 </table>
@@ -2374,8 +2443,8 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <div class="headerBar"></div>
 <div class="tableContainer">
 <div class="desktop_left_field">
-<div class="titleMain"><#2329#></div>
-<div class="titleSub"><#4153#></div>
+<div class="titleMain"><#2367#></div>
+<div class="titleSub"><#4252#></div>
 </div>
 <div class="table_td">
 <div class="pageDesc"><#56#> :</div>
@@ -2402,13 +2471,13 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 </div>
 </div>
 <div class="footer_desktop">
-<div class="desktop_abortBtn" onclick='abort.siteSurvey()'><#205#></div>
+<div class="desktop_abortBtn" onclick='abort.siteSurvey()'><#212#></div>
 </div>
 <div class="footer_mobile">
 <table style="width:100%;" cellpadding="0" cellspacing="0">
 <tr>
 <td class="mobileAbort" style="width:50%;" onclick='abort.siteSurvey()'>
-<div class="mobile_abortBtn"><#205#></div>
+<div class="mobile_abortBtn"><#212#></div>
 </td>
 </tr>
 </table>
@@ -2420,17 +2489,17 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <div class="headerBar"></div>
 <div class="tableContainer">
 <div class="desktop_left_field">
-<div class="titleMain"><#2329#></div>
-<div class="titleSub"><#3980#></div>
+<div class="titleMain"><#2367#></div>
+<div class="titleSub"><#4079#></div>
 </div>
 <div class="table_td">
-<div class="pageDesc"><#3981#></div>
-<div class="pageDesc"><#3994#></div>
+<div class="pageDesc"><#4080#></div>
+<div class="pageDesc"><#4093#></div>
 <div class="selectorTopContainer">
 <div class="selectorContainer routerSupport">
 <div class="selectorContainerDiv">
 <div class="selectBar" onclick="apply.yadnsEnable();">
-<#187#>
+<#194#>
 </div>
 <div class="narrowContainer">
 <div class="icon_arrow_right" style="width:20px;height:32px;"></div>
@@ -2440,7 +2509,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <div class="selectorContainer routerSupport">
 <div class="selectorContainerDiv">
 <div class="selectBar" onclick="apply.yadnsSafe();">
-<#187#>. <#3993#>
+<#194#>. <#4092#>
 </div>
 <div class="narrowContainer">
 <div class="icon_arrow_right" style="width:20px;height:32px;"></div>
@@ -2450,7 +2519,7 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <div class="selectorContainer repeaterSupport">
 <div class="selectorContainerDiv">
 <div class="selectBar" onclick="apply.yadnsDisable();">
-<#186#>
+<#193#>
 </div>
 <div class="narrowContainer">
 <div class="icon_arrow_right" style="width:20px;height:32px;"></div>
@@ -2466,6 +2535,35 @@ PRIO: <input class="textInput textInputIptv" id="voip_prio" data-role="none" typ
 <div style="display: flex;justify-content: center;">
 <div class="GD-bg"></div>
 <div class="GD-logo"></div>
+</div>
+</div>
+</div>
+<div id="phone_as_modem" data-role="page" class="qisBackground">
+<div class="headerBar"></div>
+<div class="tableContainer">
+<div class="desktop_left_field">
+<div>
+<div class="titleMain"><#2367#></div>
+<div class="titleSub">Use the phone as modem</div></div>
+</div>
+<div class="table_td">
+<div id="phone_as_modem_instructions" style="margin-left: 70px;"></div>
+<div class="footer_desktop">
+<div class="desktop_abortBtn" onclick="abort.wan();"><#212#></div>
+<div id="desktop_manual_applyBtn" class="desktop_applyBtn" onclick="goTo.Wireless();"><#211#></div>
+</div>
+<div class="footer_mobile">
+<table style="width:100%;" cellpadding="0" cellspacing="0">
+<tr>
+<td class="mobileAbort" style="width:50%" onclick='abort.wan();'>
+<div class="mobile_abortBtn"><#212#></div>
+</td>
+<td class="mobileApply" onclick="goTo.Wireless();">
+<div id="mobile_manual_applyBtn" class="mobile_applyBtn"><#211#></div>
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 </div>

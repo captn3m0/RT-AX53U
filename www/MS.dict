@@ -66,7 +66,7 @@ Maklumat tidak tersedia. Sila kemas kini perisian tegar penghala anda ke versi t
 Melakukan but semula pada penghala anda akan menyebabkan semua peranti bersambung hilang ketersambungan Internet. Semua peranti akan mendapat semula ketersambungan Internet selepas melengkapkan proses but semula. Teruskan?
 Hebat
 Lemah
-Ok
+OK
 Normal
 Kualiti Sambungan
 Tambah Nod AiMesh
@@ -88,6 +88,12 @@ Kadar data
 Topologi
 Tetapan Sistem
 Statistik
+Environment Detection
+Estimating the route connection…
+Optimizing Node(s)
+Antenna Diversity Optimizing
+Antenna Detection
+Estimating antenna diversity…..
 Powerline connection with good signal quality
 Powerline connection with weak signal quality
 Sambungan wayarles dengan kualiti isyarat hebat
@@ -151,6 +157,7 @@ Jika anda mahu menyahdayakan perkongsian maklumat anda dengan Trend Micro meneru
 Adakah anda pasti mahu menarik balik?
 Tarik Balik
 Masukkan nama
+The host name has been bound to the login account of the Router app, please register/delete it from the Router app.
 Auto
 Automatic Setting
 Pengehad Lebar Jalur
@@ -212,6 +219,8 @@ Langkau
 Peranti Tidak Diketahui
 Naik Taraf Pada Malam
 Upgrade Now
+Use default Local Login Password
+The default encrypted Local Login Password provides a secure login process when you connect to this ASUS networking device locally.
 Untuk butiran lanjut, sila lawati <a style="font-weight: bolder;text-decoration: underline;color:#000000;" href="https://www.asus.com/support/" target="_blank">https://www.asus.com/support/</a>
 * Paket ping minimum menggunakan lebih kurang 128 bait bagi satu selang. Oleh itu, pengesan ping akan menggunakan
 MBait bagi sebulan
@@ -280,7 +289,10 @@ Versi Perisian Tegar:
 * Masa jimat-siang didayakan dalam zon masa ini.
 Masa Sistem
 * Peringatan: Masa sistem anda belum disegerakkan dengan pelayan NTP.
+Your router&#39;s system time has not been synchronized with the NTP server yet. It will automatically synchronize once connected to the Internet.
 Tetamu Rangkaian
+How to find %@
+%@ can be found on the label at the back/bottom of your ASUS device.
 Sila gunakan port antara 1024-65535.
 Because of security and compatibility concerns,  IE8 / IE9 / IE10 are no longer supported.
 Things might be bound to broken and perhaps unusable.
@@ -359,6 +371,8 @@ Kata laluan selamat perlu sekurang-kurangnya 8 aksara dan mengandungi gabungan h
 Iklankan IP penghala selain DNS yang ditentukan pengguna
 Jenis Sambungan WAN
 Gunakan alamat IP berikut:
+Local Login
+Set up Local Login username and password to prevent unauthorized access to your ASUS networking device.
 Sekurang-kurangnya dua aksara. Hanya aksara abjad angka, garis bawah, dan simbol tanda sempang diterima. Aksara pertama tidak boleh menjadi tanda sempang - atau garis bawah _ .
 Anda boleh memuat turun [ASUS Lyra] untuk menyambungkan peranti Lyra tambahan ke Lyra pertama anda.
 Kini anda boleh menekan &quot;Butang berpasangan&quot; bagi Lyra pertama dan kedua anda untuk menyediakan Lyra lain.
@@ -474,6 +488,8 @@ Lemah
 Baik
 Kuat
 Sangat Kuat
+Local Login Password
+WiFi Password
 Kod PIN tidak betul. Sila masukkan kod PIN yang betul dan sambung semula penyesuai USB. Jika anda masih menghadapi ralat yang sama, matikan fungsi kod PIN, kemudian hidupkannya dan cuba semula.
 Nombor Telefon
 Access Number
@@ -672,6 +688,7 @@ Memasukkan kata kunci jaringan antara 8 dan 63 karakter (huruf, angka atau kombi
 Memasukkan kata kunci jaringan antara 8 dan 63 karakter (huruf, angka atau kombinasi). Pengaturan keamanan nirkabel standar adalah WPA2-Personal AES.
 Separate 2.4 GHz and 5 GHz
 Separate 2.4 GHz, 5 GHz and 6 GHz
+The main wireless network has been set.
 Nama akaun tidak boleh kosong.
 Medan Nama Pengguna/Kata Laluan tidak boleh kosong.
 Seting Akaun ISP
@@ -822,6 +839,7 @@ Naikkan nilai maks penentu Internet anda.
 Menyambung semula ke Internet.
 Sila hubungi pentadbir rangkaian anda.
 Klik di sini untuk pergi ke halaman persediaan
+<a>Click here</a> to modify.
 Anda boleh memeriksa dan mengkonfigurasi seting anda dengan sendiri.
 Jika masalah masih terus berlaku, tukar tetapan sambungan secara manual.
 Perbaharui semula WAN.
@@ -906,8 +924,8 @@ For faster video streaming experience including Youtube, Netflix and Spotify, et
 Melayari Web
 Mod ini sesuai untuk pelayaran web umum dan mengelakkan kependaman rangkaian sewaktu pemindahan fail.
 Learn-From-Home
-Choose this mode for a smooth streaming of online video-learning experience.This category includes Coursera, Khan, Udemy, TED, edX, etc.
-Choose this mode to ensure a smooth agile online conferencing experience.This category includes VoIP, instant messaging, mail service, etc.
+Choose this mode for a smooth streaming of online video-learning experience. This category includes Coursera, Khan, Udemy, TED, edX, etc.
+Choose this mode to ensure a smooth agile online conferencing experience. This category includes VoIP, instant messaging, mail service, etc.
 Akaun baru telah tidak membaca/menulis hak akses.
 Tambah akaun baru
 Hak akses lalai untuk folder baru adalah baca/tulis.
@@ -1515,6 +1533,7 @@ Nama Hos diberikan oleh ISP:
 Jika jenis sambungan WAN anda adalah PPTP atau L2TP, Sila masukkan nama pelayan atau pelayan ip bagi pelayan VPN.
 Medan ini membenarkan anda untuk memberikan nama hos untuk RT-AX53U. Ia biasanya diminta oleh ISP anda.
 Tetapkan had jalur lebar maksimum. 0 bermakna tiada had jalur lebar.
+Back
 Nyahdayakan
 Dinyahdayakan
 Didayakan
@@ -1527,8 +1546,10 @@ tetapan WAN
 Keupayaan
 Captcha
 Sila masukkan captcha.
+If you want to enable it, please check <a id = \"setting_link\" target=\"_blank\" style=\"text-decoration:underline;\">here</a> to change settings.
 Pastikan bahawa Ethernet/kabel rangkaian disambungkan dengan betul
 Penghala sedang memeriksa pelayan ASUS untuk kemas kini perisian tegar.
+Please choose other options and try again.
 Tidak mengumpul maklumat tentang pengguna, dan dikawal oleh undang-undang privasi Switzerland.
 Nama Klien
 Ikon
@@ -1635,6 +1656,7 @@ Russia
 Singapore
 The United States
 Kanada
+Create an account
 Cipta Akaun Percuma
 CTF Tahap 2 tidak disokong di bawah PPPoE, PPTP atau L2TP. Untuk mengubah ke CTF Tahap 1, sila klik Sah.
 Mendayakan HW Accelerator
@@ -1942,7 +1964,7 @@ Masalah sambungan yang tidak stabil
 Tidak dapat menyambung ke rangkaian wayarles
 Pilih pilihan mana yang terbaik menerangkan prestasi perkhidmatan DSL anda
 Kaedah hubungan
-Negara / Wilayah anda
+Wilayah anda
 Batalkan tangkapan nyahpepijat
 Tangkapan log nyahpepijat diagnostik sedang berjalan
 Tempoh tangkapan log nyahpepijat diagnostik
@@ -2246,22 +2268,30 @@ Cipta Baharu
 Salin lain
 Jumlah Tetamu
 tetamu
+Provide scheduled or one time access network.
+Recommended for shopping mall, gym, or friends.
 Had akses
 Akses Internet sahaja
 Gunakan tetapan sama seperti
 Business Network
 Customized Network
+Employee
 Set up safe and secure network
+Office assigning permission to departments
 Quickly build a guest network
 IoT Network
 Easily separate a network for your IoT devices
+Recommended for surveillance devices, voice assistance, light fixtures, doorbell cam, smart lock, and sensors.
 Kid's Network
 Ensure Internet access safety for kid
 Guest Portal
-Build a guest portal or Facebook WiFi
+Build a guest portal
+Create captive portal for digital marketing.
+Recommended for restaurant, hotel, or food truck.
 Portal Type
 VPN Network
 Establish a secure internet connection
+Establish a secure Internet connection through VPN. Recommended for work-from-home, branch office.
 This VPN profile is disabled. Please go to VPN Server setting page and enable it.
 Click [ Go Setting ] below to VPN setting Page.
 This setting cannot be selected while using by the other created profile.
@@ -2269,8 +2299,15 @@ Home Network
 There is no VPN profile now. Click [Go Setting] below to VPN setting page and create.
 Add a Network
 Profile List
+Scheduled Network
 Choose a defined network
+Create a network based on your scenario
+Self-defined Network
+Scenarios Explorer
 WiFi Scheduling
+Plan the daily or weekly online time for wireless network.
+Recommended for remote study, classroom, or children.
+Set up access level for diverse uses to enhance network security.
 Versi perkakasan
 Help
 Bantuan memberikan anda panduan dan maklumat mengenai menggunakan fungsi penghala. Klik
@@ -2282,6 +2319,7 @@ Tinggi
 Tertinggi
 Paket Prioriti Tertinggi
 jam
+HOW TO SETUP
 Sambungan Internet gagal. Sila cuba lagi atau semak tetapan akaun anda dengan pembekal perkhidmatan Internet (ISP) anda.
 Sila pilih lokasi ISP anda.
 Lokasi
@@ -2322,7 +2360,7 @@ Untuk menjadikan Penghala ASUS berpasangan dengan IFTTT secara manual, sila sali
 Pilih daripada applet sedia ada atau cipta applet anda sendiri pada <a id="ifttt_applet_link">Saluran Penghala ASUS</a>
 <a id="ifttt_signin">Daftar masuk</a> ke akaun IFTTT anda.
 Mulakan kehidupan automasi dengan Penghala ASUS dan IFTTT!
-Bermula :
+Get Start :
 dalam
 Penghala tidak dapat menyambung ke pelayan ASUS untuk memeriksa kemas kini firmware. Sila muat turun firmware terkini dari Tapak Sokongan Produk ASUS dan lakukan peningkatan secara manual.
 Band
@@ -2447,6 +2485,9 @@ Tetapan LAN IPv6
 Native
 OCN Virtual Connect
 v6plus
+If you would like to use them, please refer to usable port range in %0$@, and alter the port number of these features to matching range.
+Port related settings may encounter mismatch issue in current %2$@ port range.
+Port mismatch issue may occur under the special port range of %3$@. It will not affect your internet but the following port related settings. If you would like to use them, please refer to usable port range in <a target='_self' style='text-decoration:underline;' href='Main_IPV6Status_Content.asp'>IPv6 Log</a>, and alter the port number of these features to matching range.
 Panjang Awalan IPv6
 Geganti Siar Jiran IPv4
 IPv6 Statik
@@ -2631,7 +2672,7 @@ Jika terdapat entri pada senarai tapis MAC, klik Apply (Gunakan) untuk memadamka
 Manual
 Tugaskan secara manual
 Bandar
-Negara/Rantau
+Rantau
 Anda mungkin memerlukan VLAN ID untuk menyediakan sambungan PTM. Jangan tukar VLAN ID kecuali ISP anda mengarahkan anda untuk melakukannya.
 Persediaan Pantas ini membantu anda untuk segera mengkonfigurasi tetapan WAN RT-AX53U. Sila pilih negara anda dan nama ISP daripada senarai jatuh turun, klik Next (Seterusnya), dan masukkan maklumat yang diperlukan. Hubungi Internet Service Provider (Pembekal Khidmat Internet) (ISP) untuk maklumat mengenai tetapan sambungan DSL anda, jika perlu.
 Anda memerlukan Virtual Path Identifier (Pengecam Laluan Maya) (VPI) dan Virtual Channel Identifier (Pengecam Saluran Maya) (VCI) untuk menyediakan ATM PVC. Jangan mengubah nombor VPI dan VCI melainkan ISP anda mengarahkan anda berbuat sedemikian.
@@ -2641,6 +2682,8 @@ Perhatian:
 Tetapan Manual Pantas
 Refer to the RT-AX53U WAN settings. If you want to add a new setting, follow the onscreen instructions. If you want to modify the previous setting, please go to [Advanced Setting] -> [WAN] -> [Internet Connection] page.
 Pengilang
+Update MAP
+It will take 1-2 minutes to reassign MAP rule. All your connected devices will lose internet connection during the update.
 Had Lebar Jalur Maksimum
 Tetapkan had jalur lebar maksimum.
 Maksimum Komputer
@@ -2692,6 +2735,7 @@ Gagal menaik taraf perisian tegar modem 4G. Sila tunggu sebentar sehingga pengha
 Anda memuat naik perisian tegar yang salah untuk menaik taraf modul. Sila pilih yang betul dan naik taraf semula!
 Perisian Tegar Modem 4G
 Maklumat Modem Jalur Lebar Mudah Alih
+Use the phone as modem
 Versi perisian modem
 Kod PIN diperlukan.
 Kod PIN2 diperlukan.
@@ -2822,7 +2866,9 @@ Sasaran
 Jejaki hala ke hos
 Hidupkan LAN
 Bangunkan
+About Feature
 Ciri baharu tersedia
+Feature Description
 Nama Folder Baru
 Perisian Tegar Modem Baharu
 Halaman seterusnya
@@ -2837,6 +2883,7 @@ Hidupkan WiFi untuk mengendalikan WPS.
 Untuk mendayakan WPS, ubah kaedah pengesahan kepada WPA2 atau WPA-Auto.
 Jika anda ingin mendayakan WPS, anda perlu mematikan SSID terlebih dahulu.
 Note: New patch will be updated regularly, please keep your firmware stay up to date.
+Notice
 Item Pemberitahuan
 Number of client
 Pergi ke <a href="https://iplookup.asus.com/nslookup.php" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">https://iplookup.asus.com/nslookup.php</a> untuk mencari alamat statik bagi digunakan untuk perkhidmatan DDNS ASUS.
@@ -2924,6 +2971,7 @@ Pemetaan Port menyokong antara muka IPTV WAN kepada port LAN yang tertentu. Anda
 Dayakan Pemetaan Port
 Port LAN
 Port SSH
+Status Port
 Kelajuan sambungan pada port ini boleh ditambah baik.
 Sila rujuk hasil/petua berikut untuk menyelesaikan masalah.
 Perkara yang perlu diperiksa
@@ -2933,6 +2981,9 @@ Peranti yang lebih lama boleh memperlahankan kelajuan sambungan anda.
 Periksa semula rancangan perkhidmatan internet anda dengan ISP.
 Gantikan kabel Ethernet anda dengan #ETHCABLE atau yang lebih baharu.
 Port ini adalah untuk
+Configure %1$@ as %2$@ will disable \"%3$@\" function, are you sure to continue?
+This function is disabled because %1$@ is configured as %2$@.
+%1$@ and %2$@ cannot be configured as the same port.
 Halaman ini menunjukkan status pemajuan port. Beberapa program P2P menggunakan protocol UPnP untuk membuka port dan nombor port yang ditunjukkan pada halaman ini.
 RT-AX53U telah mengecam jenis sambungan adalah PPPoE. Jika ya, sila masukkan nama pengguna/kata laluan dan klik Apply (Gunakan).<br>Jika tidak, sila klik, Manual Setting (Tetapan Manual) untuk menetapkan semula.
 Sila masukkan nama pengguna/kata laluan yang telah diberikan oleh Pembekal Perkhidmatan Internet (ISP) anda dan klik Seterusnya.
@@ -2994,6 +3045,7 @@ Pendaftaran Produk
 Penyedia
 Kurungan
 Mod Kurungan
+Public Key
 Tekan
 Adakah anda pasti anda mahu memadam PVC ini?
 Edit PVC
@@ -3086,6 +3138,20 @@ Pendua atau tetapan VPI dan VCI yang sama.
 Sistem sedang memulakan semula sekarang! Sila tunggu dan kami akan mengarahkan semula ke laman utama RT-AX53U.
 Skala
 Mengimbas
+Branch office
+Classroom
+Coffee shop
+EV charging station
+Friends
+Hotel
+Shopping mall
+Remote study
+Smart home
+Restaurant
+Children
+Voice assistance
+Surveillance devices
+Work from home
 saat
 Tahap keselamatan
 Pilih semua
@@ -3279,6 +3345,10 @@ System adjustment
 Temperature unit
 Fan speed
 Ubah kata laluan log masuk penghala, zon masa, dan tetapan pelayan NTP.
+Apart from the main network, you can create additional self-defined network for different purposes.
+The self-defined network is separated from the main network domain and providing more secure connection.
+In each self-defined network, you can set up different encryption methods, schedules, permissions, AiMesh, bandwidth restrictions, etc., to achieve a comprehensive network environment.
+Do you want to add an additional wireless network for special use?
 Konfigurasi Asas
 LAN
 Pelbagai
@@ -3453,6 +3523,7 @@ Menyahpasang
 Kemas kini dalam talian tersedia
 Menaik taraf...
 Muat Naik Lebar Jalur
+Upload Config
 Prioriti Muat Naik
 Data Dihantar/Saat
 Data Dihantar
@@ -3515,6 +3586,10 @@ Subnet Baharu
 Tidak Bertag
 Bertag
 Batal
+This port(s) is using by %@.
+Port Isolation
+VLAN Profile
+VLAN Switch Control Settings
 Nilai ini perlu lebih tinggi daripada
 Nilai ini perlu lebih rendah daripada
 Client will use VPN to access
@@ -3556,7 +3631,7 @@ Suaikan Konfigurasi
 RT-AX53U akan secara automatik menjana fail .ovpn dengan kekunci Kebenaran Pensijilan. Anda boleh memberikan fail .ovpn dengan nama pengguna dan kata laluan kepada semua pengguna yang menyambung kepada pelayan OpenVPN.
 Untuk menukar tetapan pelayan OpenVPN, pergi ke Seting Lanjutan
 Anda boleh menukar tetapan lalai pelayan OpenVPN untuk memberikan fail OPVN tersuai untuk jenis sambungan khusus.
-If your WAN IP address is dynamic, please click <a href="http://ZVDOMAIN_NAMEVZ/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
+If your WAN IP address is dynamic, please click <a href="/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
 Peruntukkan daripada DHCP
 Sifer penyulitan
 Konflik penghalaan! <p>Sila semak tetapan alamat IP klien daripada laman Seting Lanjutan atau semak jadual penghalaan pada log Sistem.
@@ -3655,18 +3730,40 @@ Kemas kini gagal, sila cuba lagi.
 Semua klien VPN anda akan menyambung semula selepas mengklik guna. Adakah anda pasti untuk teruskan?
 Versi IKE yang disokong
 sila klik di sini untuk menetapkan DDNS.
+* VPN WiFi is already in use.
+How to set up WireGuard® server?
+How to set up site to site VPN with WireGuard®?
+How to set up WireGuard® client in VPN Fusion?
+VPN authentication
+Client Certificate
+Client Key
+Certificate Revocation List
+As the maximum number of concurrent active VPN connections is limited to 2. Please deactivate one existing VPN connection before activating another.
+The system can activate one Surfshark connection at a time. Please deactivate one Surfshark connection before activating another.
+Default Connection
 Klien (Rangkaian Persendirian Maya) kerap digunakan untuk menyambungkan pelayan VPN untuk mengakses sumber persendirian dengan selamat pada rangkaian awam.
 Sesetengah peranti seperti kotak set-top, TV pintar dan pemain Blu-ray tidak menyokong perisian VPN.
 Ciri ASUSWRT VPN memberikan akses VPN ke semua peranti dalam rangkaian rumah tanpa perlu memasang perisian VPN pada setiap peranti.
+Endpoint Address
+Endpoint Port
+Because your online security comes first.
+Allowed IPs
 Sila tukar subnet LAN penghala anda, sila rujuk <a target='_blank'>Soalan Lazim</a> ini untuk maklumat terperinci.
+Persistent Keepalive
 KIien / Rakan Net ke Net
 Klien VPN IPSec membolehkan RT-AX53U menyambung ke Pelayan / Klien IPSec Net ke Net atau membolehkan peranti menyambung secara terus antara satu sama lain dengan cara Rakan ke Rakan.
 Mari ambil penggunaan dua RT-AX53U sebagai contoh untuk menjelaskan rangkaian Rakan ke Rakan. Anda perlu mencipta dahulu profil rakan IPSec pada halaman ini, kemudian mencipta rakan lain pada RT-AX53U lain dengan konfigurasi yang sepadan.
+Profile
+Apply to all devices
+Assign devices to this profile
+Delete Profile
+Please select another VPN profile to cancel the internet default WAN.
 Untuk memulakan sambungan VPN, sila ikuti langkah di bawah:
 Tambah profil
 Pilih jenis sambungan VPN
 Masukkan maklumat pengesahan VPN yang diberikan oleh penyedia VPN anda, kemudian, sambungkan.
 Klien VPN
+Peer
 Apabila anda menggunakan klien VPN dengan sambungan PPPoE, penghala anda akan dibut semula secara automatik untuk menyahdayakan Pecutan NAT. Adakah anda pasti ingin teruskan?
 Sekatan
 Konfigurasikan tetapan WAN Ethernet bagi RT-AX53U.
@@ -3730,18 +3827,19 @@ Enable Ping to Internet
 Pilihan TCP MSS
 bait
 VLAN ID
-Pengagregatan WAN menggabungkan dua sambungan rangkaian untuk meningkatkan kelajuan WAN anda sehingga 2Gbps. Sambungkan port WAN penghala anda dan port LAN 4 ke port LAN modem anda (pastikan anda menggunakan dua kabel yang mempunyai spesifikasi sama). <a id="wanAgg_faq" target="_blank" style="color:#FFCC00;text-decoration:underline;">Soalan Lazim Pengagregatan WAN</a>
+WAN aggregation
+Pengagregatan WAN menggabungkan dua sambungan rangkaian untuk meningkatkan kelajuan WAN anda sehingga 2Gbps. Sambungkan port #WAN penghala anda dan port LAN 4 ke port LAN modem anda (pastikan anda menggunakan dua kabel yang mempunyai spesifikasi sama). <a id="wanAgg_faq" target="_blank" style="color:#FFCC00;text-decoration:underline;">Soalan Lazim Pengagregatan WAN</a>
 Dayakan Pengagregatan WAN
 WAN Dual penghala anda telah didayakan. Mendayakan Pengagregatan WAN akan menyahdayakan WAN Dual. Adakah anda pasti ingin teruskan?
 Pengagregatan WANN penghala anda telah didayakan. Mendayakan WAN Dual akan menyahdayakan Pengagregatan WAN. Adakah anda pasti ingin teruskan?
 Pengagregatan WAN menggunakan port LAN 4 penghala anda. Mendayakan IPTV akan menyahdayakan Pengagregatan WAN. Adakah anda pasti ingin teruskan?
 IPTV menggunakan port LAN 4 penghala anda. Mendayakan Pengagregatan WAN akan menyahdayakan IPTV. Adakah anda pasti ingin teruskan?
 Kedua-dua WAN Dual dan IPTV penghala anda telah didayakan. Mendayakan Pengagregatan WAN akan menyahdayakan WAN Dual dan IPTV bagi mengelak konflik port. Adakah anda pasti ingin teruskan?
-Pastikan port WAN penghala anda dan port LAN modem anda telah disambungkan menggunakan dua kabel yang mempunyai spesifikasi sama.
+Pastikan port #WAN penghala anda dan port LAN modem anda telah disambungkan menggunakan dua kabel yang mempunyai spesifikasi sama.
 Pastikan port LAN 4 penghala anda dan port LAN modem anda telah disambungkan menggunakan dua kabel yang mempunyai spesifikasi sama.
 Untuk mendayakan Pengagregatan WAN, pergi ke <a href="Advanced_WAN_Content.asp" style="color:#FFCC00;text-decoration:underline;">halaman Sambungan WAN-Internet</a>.
 Jika penyediaan Pengagregatan WAN tidak berjaya, sila ikut langkah-langkah di bawah untuk mencuba semula.
-Pastikan port LAN modem anda sudah disambungkan ke WAN penghala anda dan LAN 4 dengan kabel.
+Pastikan port LAN modem anda sudah disambungkan ke #WAN penghala anda dan LAN 4 dengan kabel.
 Pastikan modem anda telah mendayakan 802.3ad
 Sahkan bahawa anda menggunakan dua kabel dengan spesifikasi yang sama (sama ada gigabit & gigabit atau 10/100& 10/100Mbps)
 But semula penghala anda
@@ -3756,6 +3854,7 @@ WiFi Proxy
 Radar WiFi
 Tetapan membolehkan anda membuat konfigurasi parameter Radar WiFi.
 Senarai Sekatan Perayauan
+WiFi Share
 Tinjauan Tapak WiFi
 Tinjauan tapak WiFi meneroka semua rangkaian WiFi dalam persekitaran anda.
 Statistik Saluran Tanpa Wayar
@@ -4116,7 +4215,7 @@ Fail imej halaman web percikan tidak boleh kosong.
 Selamat datang ke
 Saya telah membaca dan bersetuju dengan <span id='terms_service_hyperlink'>Terma Perkhidmatan</span>
 Teruskan
-Berbilang Sambungan VPN
+Gabungan VPN
 membenarkan anda menyambung ke berbilang pelayan VPN secara serentak dan menugaskan peranti klien anda untuk menyambung ke terowong VPN yang berbeza. Sesetengah peranti seperti kotak set-atas, TV pintar dan pemain Blu-ray tidak menyokong perisian VPN. Ciri ini menyediakan akses VPN ke peranti sedemikian dalam rangkaian rumah tanpa perlu memasang perisian VPN, manakala telefon pintar anda kekal bersambung ke Internet dan bukannya VPN.
 Untuk Pemain, sambungan VPN mengurangkan serangan DDoS untuk menghalang permainan PC anda atau strim anda daripada terputus sambungan dengan pelayan permainan. Membina sambungan VPN juga boleh sahaja mengubah alamat IP anda ke rantau di mana terletaknya pelayan permainan, bagi meningkatkan ping anda ke pelayan permainan.
 Untuk bermula, sila ikuti langkah-langkah di bawah:
@@ -4243,7 +4342,10 @@ Jangan ingatkan saya lagi
 *Kata laluan log masuk semasa anda tidak betul!
 HTTPS ialah protokol akses web yang lebih selamat. Kami amat menyarankan untuk masuk ke halaman tetapan penghala ASUS melalui protokol HTTPS.
 Klik di sini untuk meneruskan.
+Scan QR Code to Connect
+Use the phone to scan this QR code and connect to free WiFi
 Imbas kod QR untuk maklumat lebih lanjut.
+Manually connect to network
 Masih mahu mengakses halaman tetapan dengan <span>protokol HTTP</span>?
 Semasa menggunakan protokol HTTPS, mesej amaran mungkin dipaparkan untuk memaklumkan sijil keselamatan yang dikeluarkan oleh pelayar anda.
 Sambungan antara pelayar anda dan halaman tetapan penghala ASUS (ZVDOMAIN_NAMEVZ) kekal selamat walaupun terdapat mesej amaran ini.

@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#842#> - <#400#></title>
+<title><#860#> - <#414#></title>
 <link rel="stylesheet" type="text/css" href="/index_style.css">
 <link rel="stylesheet" type="text/css" href="/form_style.css">
 <link rel="stylesheet" type="text/css" href="/aidisk/AiDisk_style.css">
@@ -97,11 +97,11 @@ $("#trPMGroup").css("display", "block");
 else
 $("#trAccount").css("display", "block");
 if(get_manage_type(PROTOCOL)){
-document.getElementById("loginMethod").innerHTML = "<#972#>";
+document.getElementById("loginMethod").innerHTML = "<#990#>";
 document.getElementById("accountMask").style.display = "none";
 }
 else{
-document.getElementById("loginMethod").innerHTML = "<#971#>";
+document.getElementById("loginMethod").innerHTML = "<#989#>";
 document.getElementById("accountMask").style.display = "block";
 $("#accountMask").css("height", ($("#shareStatus").height() + $(".AiDiskTable").height()));
 }
@@ -122,13 +122,13 @@ var status;
 var confirm_str_on, confirm_str_off;
 if(protocol == "cifs"){
 status = this.NN_status;
-confirm_str_off= "<#1613#>"; //"<#1615#>"+ By Viz 2011.09
-confirm_str_on = "<#1617#>";
+confirm_str_off= "<#1634#>"; //"<#1636#>"+ By Viz 2011.09
+confirm_str_on = "<#1638#>";
 }
 else if(protocol == "ftp"){
 status = this.FTP_status;
-confirm_str_off = "<#1614#>";
-confirm_str_on = "<#1618#>";
+confirm_str_off = "<#1635#>";
+confirm_str_on = "<#1639#>";
 }
 switch(status){
 case 1:
@@ -165,7 +165,7 @@ if(protocol != "cifs" && protocol != "ftp")
 return;
 switch(get_manage_type(protocol)){
 case 1:
-if(confirm("<#973#>")){
+if(confirm("<#991#>")){
 document.aidiskForm.action = "/aidisk/switch_share_mode.asp";
 document.aidiskForm.protocol.value = protocol;
 document.aidiskForm.mode.value = "share";
@@ -195,7 +195,7 @@ account_group_list = this.groups;
 else
 account_group_list = this.accounts;
 if(account_group_list.length <= 0)
-account_group_menu_code += '<div class="noAccount" id="noAccount"><#2831#></div>\n'
+account_group_menu_code += '<div class="noAccount" id="noAccount"><#2877#></div>\n'
 else{
 for(var i = 0; i < account_group_list.length; ++i){
 account_group_menu_code += '<div class="userIcon" id="';
@@ -223,12 +223,12 @@ code += '<table width="190"><tr>';
 if(PROTOCOL == "cifs"){
 code += '<td width="34%" align="center">R/W</td>';
 code += '<td width="28%" align="center">R</td>';
-code += '<td width="38%" align="center"><#186#></td>';
+code += '<td width="38%" align="center"><#193#></td>';
 }else if(PROTOCOL == "ftp"){
 code += '<td width="28%" align="center">R/W</td>';
 code += '<td width="22%" align="center">W</td>';
 code += '<td width="22%" align="center">R</td>';
-code += '<td width="28%" align="center"><#186#></td>';
+code += '<td width="28%" align="center"><#193#></td>';
 }
 code += '</tr></table>';
 document.getElementById("permissionTitle").innerHTML = code;
@@ -411,7 +411,7 @@ var accounts_length = this.accounts.length;
 var maximum_account = httpApi.nvramGet(["st_max_user"]).st_max_user;
 document.getElementById("createAccountBtn").onclick = function(){
 if(accounts_length >= maximum_account) {
-alert("<#2483#> " + maximum_account + " <#2484#>");
+alert("<#2524#> " + maximum_account + " <#2525#>");
 return false;
 }
 else
@@ -429,13 +429,13 @@ changeActionButton(document.getElementById("createAccountBtn"), 'User', 'Add');
 document.getElementById("createAccountBtn").onclick = function(){};
 document.getElementById("createAccountBtn").onmouseover = function(){};
 document.getElementById("createAccountBtn").onmouseout = function(){};
-document.getElementById("createAccountBtn").title = (accounts.length < 6)?"<#911#>":"<#877#>";
+document.getElementById("createAccountBtn").title = (accounts.length < 6)?"<#929#>":"<#895#>";
 }
 if(this.accounts.length > 0 && this.selectedAccount != null && this.selectedAccount.length > 0 && this.accounts[0] != this.selectedAccount){
 changeActionButton(document.getElementById("modifyAccountBtn"), 'User', 'Mod', 0);
 document.getElementById("modifyAccountBtn").onclick = function(){
 if(!selectedAccount){
-alert("<#983#>");
+alert("<#1001#>");
 return;
 }
 popupWindow('OverlayMask','/aidisk/popModifyAccount.asp');
@@ -457,7 +457,7 @@ if(this.accounts.length > 1 && this.selectedAccount != null && this.selectedAcco
 changeActionButton(document.getElementById("deleteAccountBtn"), 'User', 'Del', 0);
 document.getElementById("deleteAccountBtn").onclick = function(){
 if(!selectedAccount){
-alert("<#983#>");
+alert("<#1001#>");
 return;
 }
 popupWindow('OverlayMask','/aidisk/popDeleteAccount.asp');
@@ -479,11 +479,11 @@ if(this.selectedPoolOrder >= 0 && this.selectedFolderOrder < 0){
 changeActionButton(document.getElementById("createFolderBtn"), 'Folder', 'Add', 0);
 document.getElementById("createFolderBtn").onclick = function(){
 if(selectedDiskOrder < 0){
-alert("<#984#>");
+alert("<#1002#>");
 return;
 }
 if(selectedPoolOrder < 0){
-alert("<#986#>");
+alert("<#1004#>");
 return;
 }
 popupWindow('OverlayMask','/aidisk/popCreateFolder.asp');
@@ -506,7 +506,7 @@ changeActionButton(document.getElementById("deleteFolderBtn"), 'Folder', 'Del', 
 changeActionButton(document.getElementById("modifyFolderBtn"), 'Folder', 'Mod', 0);
 document.getElementById("deleteFolderBtn").onclick = function(){
 if(selectedFolderOrder < 0){
-alert("<#985#>");
+alert("<#1003#>");
 return;
 }
 popupWindow('OverlayMask','/aidisk/popDeleteFolder.asp');
@@ -519,7 +519,7 @@ changeActionButton(this, 'Folder', 'Del', 0);
 };
 document.getElementById("modifyFolderBtn").onclick = function(){
 if(selectedFolderOrder < 0){
-alert("<#985#>");
+alert("<#1003#>");
 return;
 }
 popupWindow('OverlayMask','/aidisk/popModifyFolder.asp');
@@ -601,7 +601,7 @@ document.getElementById("alert_msg1").style.display = "none";
 document.form.computer_name.value = trim(document.form.computer_name.value).toUpperCase();
 }
 if(document.form.st_samba_workgroup.value.length == 0 && !lan_domain){
-alert("<#320#>");
+alert("<#332#>");
 document.form.st_samba_workgroup.focus();
 document.form.st_samba_workgroup.select();
 return false;
@@ -676,21 +676,21 @@ setTimeout('get_disk_tree();', 1000);
 <tr>
 <td>
 <div style="width: 99%; margin-top: 30px; margin-bottom: 5px;">
-<span class="formfonttitle"><#399#> - <#400#><span id="clouddiskstr"> / <#1602#></span></span>
+<span class="formfonttitle"><#413#> - <#414#><span id="clouddiskstr"> / <#1623#></span></span>
 <span id="returnBtn" class="returnBtn">
-<img onclick="go_setting('/APP_Installation.asp')" align="right" title="<#379#>" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'">
+<img onclick="go_setting('/APP_Installation.asp')" align="right" title="<#393#>" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'">
 </span>
 </div>
 <div id="splitLine" class="splitLine"></div>
-<div class="formfontdesc" style="margin-top: 10px;"><#3082#></div>
-<div id="smbv1_hint" class="formfontdesc"><#921#>&nbsp;<#3083#></div>
+<div class="formfontdesc" style="margin-top: 10px;"><#3134#></div>
+<div id="smbv1_hint" class="formfontdesc"><#939#>&nbsp;<#3135#></div>
 </td>
 </tr>
 <tr>
 <td>
 <table width="99%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
-<th><#1883#></th>
+<th><#1905#></th>
 <td>
 <div class="left" style="width:94px; float:left; cursor:pointer;" id="radio_samba_enable"></div>
 <div class="iphone_switch_container" style="height:32px; width:74px; position: relative; overflow: hidden">
@@ -708,7 +708,7 @@ switchAppStatus(PROTOCOL);
 </td>
 </tr>
 <tr id="radio_anonymous_enable_tr" style="height:60px;">
-<th><#967#></th>
+<th><#985#></th>
 <td>
 <div class="left" style="margin-top:5px;width:94px;float:left; cursor:pointer;" id="radio_anonymous_enable"></div>
 <div class="iphone_switch_container" style="display:table-cell;vertical-align:middle;height:45px;position:relative;overflow:hidden">
@@ -728,7 +728,7 @@ switchAccount(PROTOCOL);
 </tr>
 <tr>
 <th>
-<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,2);"><#3132#></a>
+<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,2);"><#3198#></a>
 </th>
 <td>
 <div><input type="text" name="computer_name" id="computer_name" class="input_20_table charToUpperCase" maxlength="15" value="<% nvram_get("computer_name"); %>" autocorrect="off" autocapitalize="on"><br/>
@@ -737,7 +737,7 @@ switchAccount(PROTOCOL);
 </tr>
 <tr>
 <th>
-<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,3);"><#3145#></a>
+<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,3);"><#3211#></a>
 </th>
 <td>
 <input type="text" name="st_samba_workgroup" id="st_samba_workgroup" class="input_20_table charToUpperCase" maxlength="15" value="<% nvram_get("st_samba_workgroup"); %>" autocorrect="off" autocapitalize="on">
@@ -745,24 +745,24 @@ switchAccount(PROTOCOL);
 </tr>
 <tr>
 <th>
-<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,1);"><#3140#></a>
+<a class="hintstyle" href="javascript:void(0);" onClick="openHint(17,1);"><#3206#></a>
 </th>
 <td>
 <input type="text" name="st_max_user" class="input_3_table" maxlength="2" value="<% nvram_get("st_max_user"); %>" onKeyPress="return validator.isNumber(this, event);" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr id="ntfs_sparse_files" style="">
-<th><#969#></th>
+<th><#987#></th>
 <td>
 <select name="usb_fs_ntfs_sparse" class="input_option">
-<option class="content_input_fd" value="0" <% nvram_match("usb_fs_ntfs_sparse", "0","selected"); %>><#3847#></option>
-<option class="content_input_fd" value="1" <% nvram_match("usb_fs_ntfs_sparse", "1","selected"); %>><#3846#></option>
+<option class="content_input_fd" value="0" <% nvram_match("usb_fs_ntfs_sparse", "0","selected"); %>><#3946#></option>
+<option class="content_input_fd" value="1" <% nvram_match("usb_fs_ntfs_sparse", "1","selected"); %>><#3945#></option>
 </select>
 </td>
 </tr>
 </table>
 <div id="apply_btn">
-<input type="button" class="button_gen" value="<#196#>" onclick="applyRule();">
+<input type="button" class="button_gen" value="<#203#>" onclick="applyRule();">
 </div>
 <div id="shareStatus">
 <div id="tableMask"></div>
@@ -772,15 +772,15 @@ switchAccount(PROTOCOL);
 <td width="25%" style="border: 1px solid #222;">
 <table align="right">
 <tr id="trAccount" style="display:none;">
-<td><div id="createAccountBtn" title="<#911#>"></div></td>
-<td><div id="deleteAccountBtn" title="<#1709#>"></div></td>
-<td><div id="modifyAccountBtn" title="<#2762#>"></div></td>
+<td><div id="createAccountBtn" title="<#929#>"></div></td>
+<td><div id="deleteAccountBtn" title="<#1731#>"></div></td>
+<td><div id="modifyAccountBtn" title="<#2806#>"></div></td>
 </tr>
 <tr id="trPMGroup" style="display:none;">
 <td>
 <select name="" id="user_type" class="input_option" onchange="switchUserType(this.value);">
-<option value="group"><#2890#></option>
-<option value="account"><#2892#></option>
+<option value="group"><#2937#></option>
+<option value="account"><#2939#></option>
 </select>
 </td>
 </tr>
@@ -789,9 +789,9 @@ switchAccount(PROTOCOL);
 <td>
 <table align="right">
 <tr>
-<td><div id="createFolderBtn" title="<#913#>"></div></td>
-<td><div id="deleteFolderBtn" title="<#1712#>"></div></td>
-<td><div id="modifyFolderBtn" title="<#2766#>"></div></td>
+<td><div id="createFolderBtn" title="<#931#>"></div></td>
+<td><div id="deleteFolderBtn" title="<#1734#>"></div></td>
+<td><div id="modifyFolderBtn" title="<#2810#>"></div></td>
 </tr>
 </table>
 </td>
@@ -808,7 +808,7 @@ switchAccount(PROTOCOL);
 <table width="480" border="0" cellspacing="0" cellpadding="0" class="FileStatusTitle">
 <tr>
 <td width="290" height="20" align="left">
-<div id="machine_name" class="machineName"><#843#></div>
+<div id="machine_name" class="machineName"><#861#></div>
 </td>
 <td>
 <div id="permissionTitle"></div>
@@ -817,7 +817,7 @@ switchAccount(PROTOCOL);
 </table>
 <div id="e0" style="font-size:10pt; margin-top:2px;"></div>
 <div style="text-align:center; margin:10px auto; border-top:1px dotted #CCC; width:95%; padding:2px;">
-<input name="changePermissionBtn" id="changePermissionBtn" type="button" value="<#1666#>" class="button_gen_dis" disabled="disabled">
+<input name="changePermissionBtn" id="changePermissionBtn" type="button" value="<#1688#>" class="button_gen_dis" disabled="disabled">
 </div>
 </td>
 </tr>

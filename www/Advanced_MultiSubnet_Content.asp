@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#842#> - Subnet Management</title>
+<title><#860#> - Subnet Management</title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="device-map/device-map.css">
@@ -170,7 +170,7 @@ code += '<td width="'+wid[1]+'%">'+ cp_netmask +'</td>';
 code += '<td width="'+wid[2]+'%">'+ ip_range[0] +'</td>';
 code += '<td width="'+wid[3]+'%">'+ ip_range[1] +'</td>';
 code += '<td width="'+wid[4]+'%">'+ cp_lease +'</td>';
-code += '<td colspan = "2">'+'<#4024#>'+'</td>';
+code += '<td colspan = "2">'+'<#4123#>'+'</td>';
 code += '</tr>';
 }
 /* Show subnet information of Free WIFI */
@@ -278,7 +278,7 @@ var index = r.parentNode.parentNode.rowIndex;
 var subnet_netmask = subnet_list_table.rows[index].cells[0].innerHTML + '/' + netmask_to_bits(subnet_list_table.rows[index].cells[1 ].innerHTML);
 var vlan_rule_index = get_vlan_rule_index(subnet_list_table.rows[index].cells[0].innerHTML);
 if(vlan_rule_index != -1){
-alert("<#425#>");
+alert("<#439#>");
 return;
 }
 subnet_rulelist_array.splice(index, 1);
@@ -433,7 +433,7 @@ alert("*Conflict with " + type + " IP: " + ipAddr + ",\n" + "Network segment is 
 function validSubnetForm() {
 var re = new RegExp('^[a-zA-Z0-9][a-zA-Z0-9\.\-]*[a-zA-Z0-9]$','gi');
 if((!re.test(document.form.tLan_domain.value) || document.form.tLan_domain.value.indexOf("asuscomm.com") > 0) && document.form.tLan_domain.value != ""){
-alert("<#333#>");
+alert("<#345#>");
 document.form.tLan_domain.focus();
 document.form.tLan_domain.select();
 return false;
@@ -451,7 +451,7 @@ return false;
 }
 }
 if(document.form.tSubnetMask.value == "") {
-alert("<#320#>");
+alert("<#332#>");
 document.form.tSubnetMask.focus();
 document.form.tSubnetMask.select();
 return false;
@@ -481,7 +481,7 @@ return false;
 if(captivePortal_support){
 var ipConflict_cp = checkIPConflict("", lanIPAddr, lanNetMask, cp_gateway, cp_netmask);
 if(ipConflict_cp.state) {
-alertMsg("<#4024#>", ipConflict_cp.ipAddr, ipConflict_cp.netLegalRangeStart, ipConflict_cp.netLegalRangeEnd);
+alertMsg("<#4123#>", ipConflict_cp.ipAddr, ipConflict_cp.netLegalRangeStart, ipConflict_cp.netLegalRangeEnd);
 return false;
 }
 }
@@ -510,7 +510,7 @@ function validate_dhcp_range(ip_obj){
 var ip_num = inet_network(ip_obj.value);
 var subnet_head, subnet_end;
 if(ip_num <= 0){
-alert(ip_obj.value+" <#334#>");
+alert(ip_obj.value+" <#346#>");
 ip_obj.value = "";
 ip_obj.focus();
 ip_obj.select();
@@ -519,7 +519,7 @@ return 0;
 subnet_head = getSubnet(document.form.tGatewayIP.value, document.form.tSubnetMask.value, "head");
 subnet_end = getSubnet(document.form.tGatewayIP.value, document.form.tSubnetMask.value, "end");
 if(ip_num <= subnet_head || ip_num >= subnet_end){
-alert(ip_obj.value+" <#334#>");
+alert(ip_obj.value+" <#346#>");
 ip_obj.value = "";
 ip_obj.focus();
 ip_obj.select();
@@ -623,7 +623,7 @@ var code = "";
 var clientListEventData = [];
 code += '<table width="100%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="dhcp_staticlist_table">';
 if(Object.keys(manually_dhcp_list_array).length == 0)
-code += '<tr><td style="color:#FFCC00;"><#2410#></td></tr>';
+code += '<tr><td style="color:#FFCC00;"><#2448#></td></tr>';
 else {
 var userIconBase64 = "NoIcon";
 var clientName, deviceType, deviceVender;
@@ -701,16 +701,16 @@ var rule_num = document.getElementById('dhcp_staticlist_table').rows.length;
 var item_num = document.getElementById('dhcp_staticlist_table').rows[0].cells.length;
 var mac_duplicate = 0, ip_duplicate = 0;
 if(rule_num >= upper){
-alert("<#2483#> " + upper + " <#2484#>");
+alert("<#2524#> " + upper + " <#2525#>");
 return false;
 }
 if(document.form.dhcp_staticmac_x_0.value ==""){
-alert("<#320#>");
+alert("<#332#>");
 document.form.dhcp_staticmac_x_0.focus();
 document.form.dhcp_staticmac_x_0.select();
 return false;
 }else if(document.form.dhcp_staticip_x_0.value ==""){
-alert("<#320#>");
+alert("<#332#>");
 document.form.dhcp_staticip_x_0.focus();
 document.form.dhcp_staticip_x_0.select();
 return false;
@@ -734,7 +734,7 @@ else if(ip_duplicate){
 document.form.dhcp_staticip_x_0.focus();
 document.form.dhcp_staticip_x_0.select();
 }
-alert("<#2476#>");
+alert("<#2517#>");
 return false;
 }
 manually_dhcp_list_array[document.form.dhcp_staticip_x_0.value.toUpperCase()] = document.form.dhcp_staticmac_x_0.value;
@@ -774,7 +774,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#352#>";
+document.getElementById("check_mac").innerHTML="<#364#>";
 document.getElementById("check_mac").style.display = "";
 obj.focus();
 obj.select();
@@ -784,7 +784,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#313#>";
+document.getElementById("check_mac").innerHTML="<#325#>";
 document.getElementById("check_mac").style.display = "";
 obj.focus();
 obj.select();
@@ -822,7 +822,7 @@ hideClients_Block();
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center">
 <tr>
 <td>
-<div class="drword" id="drword" style="height:110px;"><#371#> <#368#>...
+<div class="drword" id="drword" style="height:110px;"><#385#> <#382#>...
 <br/>
 <br/>
 </div>
@@ -865,7 +865,7 @@ hideClients_Block();
 <table border="0" align="center" cellpadding="5" cellspacing="5">
 <tr>
 <td align="left">
-<span class="formfonttitle"><#765#></span>
+<span class="formfonttitle"><#782#></span>
 <div style="width:630px; height:2px;overflow:hidden;position:relative;left:0px;top:5px;" class="splitLine"></div>
 </td>
 </tr>
@@ -874,48 +874,48 @@ hideClients_Block();
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#3281#></td>
+<td colspan="2"><#3351#></td>
 </tr>
 </thead>
 <tr>
-<th><#2507#></th>
+<th><#2548#></th>
 <td>
-<input type="radio" value="1" name="radioDHCPEnable" class="content_input_fd" checked><#187#>
-<input type="radio" value="0" name="radioDHCPEnable" class="content_input_fd"><#186#>
+<input type="radio" value="1" name="radioDHCPEnable" class="content_input_fd" checked><#194#>
+<input type="radio" value="0" name="radioDHCPEnable" class="content_input_fd"><#193#>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,2);"><#2518#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,2);"><#2559#></a></th>
 <td>
 <input type="text" maxlength="32" class="input_25_table" name="tLan_domain" value="" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><#310#></th>
+<th><#322#></th>
 <td>
 <input type="text" maxlength="15" class="input_25_table" name="tGatewayIP" onchange="checkIPLegality();" onKeyPress="return validator.isIPAddr(this,event);" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><#312#></th>
+<th><#324#></th>
 <td>
 <input type="text" maxlength="15" class="input_25_table" name="tSubnetMask" onchange="checkMaskLegality();" onKeyPress="return validator.isIPAddr(this,event);" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><#2530#></th>
+<th><#2571#></th>
 <td>
 <input type="text" maxlength="15" class="input_25_table" name="tDHCPStart" onKeyPress="return validator.isIPAddr(this,event);">
 </td>
 </tr>
 <tr>
-<th><#2528#></th>
+<th><#2569#></th>
 <td>
 <input type="text" maxlength="15" class="input_25_table" name="tDHCPEnd" onKeyPress="return validator.isIPAddr(this,event);">
 </td>
 </tr>
 <tr>
-<th><#2520#></th>
+<th><#2561#></th>
 <td>
 <input type="text" maxlength="6" class="input_25_table" name="tLeaseTime" onKeyPress="return validator.isNumber(this,event);">
 </td>
@@ -924,18 +924,18 @@ hideClients_Block();
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable" style="margin-top:8px">
 <thead>
 <tr>
-<td colspan="2"><#2578#></td>
+<td colspan="2"><#2619#></td>
 </tr>
 </thead>
 <tr>
-<th width="200"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,7);"><#2577#></a></th>
+<th width="200"><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,7);"><#2618#></a></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="dhcp_dns" value="" onKeyPress="return validator.isIPAddr(this,event)" autocorrect="off" autocapitalize="off">
 <div id="yadns_hint" style="display:none;"></div>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,8);"><#2595#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,8);"><#2636#></a></th>
 <td>
 <input type="text" maxlength="15" class="input_15_table" name="dhcp_wins" value="" onkeypress="return validator.isIPAddr(this,event)" autocorrect="off" autocapitalize="off"/>
 </td>
@@ -944,32 +944,32 @@ hideClients_Block();
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable" style="margin-top:8px;" >
 <thead>
 <tr>
-<td colspan="3"><#2523#></td>
+<td colspan="3"><#2564#></td>
 </tr>
 </thead>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,9);"><#2522#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,9);"><#2563#></a></th>
 <td colspan="2" style="text-align:left;">
-<input type="radio" value="1" name="dhcp_static" /><#187#>
-<input type="radio" value="0" name="dhcp_static" /><#186#>
+<input type="radio" value="1" name="dhcp_static" /><#194#>
+<input type="radio" value="0" name="dhcp_static" /><#193#>
 </td>
 </tr>
 </table>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table" style="margin-top:8px;">
 <thead>
 <tr>
-<td colspan="3" id="GWStatic"><#2524#>&nbsp;(<#2615#>&nbsp;<span id="max_staticIp_num" style="color:#FFF;">8</span>)</td>
+<td colspan="3" id="GWStatic"><#2565#>&nbsp;(<#2656#>&nbsp;<span id="max_staticIp_num" style="color:#FFF;">8</span>)</td>
 </tr>
 </thead>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);"><#1532#> (<#2954#>)</a></th>
-<th><#290#></th>
-<th><#2614#></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);"><#1553#> (<#3005#>)</a></th>
+<th><#302#></th>
+<th><#2655#></th>
 </tr>
 <tr>
 <td width="60%">
 <input type="text" class="input_20_table" maxlength="17" name="dhcp_staticmac_x_0" style="margin-left:-12px;width:255px;" onKeyPress="return validator.isHWAddr(this,event)" onClick="hideClients_Block();" autocorrect="off" autocapitalize="off" placeholder="ex: <% nvram_get("lan_hwaddr"); %>">
-<img id="pull_arrow" height="14px;" src="images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#3096#>">
+<img id="pull_arrow" height="14px;" src="images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#3162#>">
 <div id="ClientList_Block_PC" class="clientlist_dropdown" style="margin-left:50px;"></div>
 </td>
 <td width="30%">
@@ -987,8 +987,8 @@ hideClients_Block();
 </tr>
 </table>
 <div style="margin-top:5px;padding-bottom:10px;width:100%;text-align:center;">
-<input class="button_gen" type="button" onclick="show_subnet_edit(0);" value="<#199#>">
-<input id="saveButton" class="button_gen" type="button" onclick="" value="<#1665#>">
+<input class="button_gen" type="button" onclick="show_subnet_edit(0);" value="<#206#>">
+<input id="saveButton" class="button_gen" type="button" onclick="" value="<#1687#>">
 </div>
 </div>
 <table class="content" align="center" cellpadding="0" cellspacing="0">
@@ -1008,24 +1008,24 @@ hideClients_Block();
 <tr>
 <td bgcolor="#4D595D" valign="top" >
 <div>&nbsp;</div>
-<div class="formfonttitle"><#389#> - <#3238#></div>
+<div class="formfonttitle"><#403#> - <#3304#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#423#></div>
-<div style="margin-left:8px; margin-bottom:7px;"> <div style="font-size:12px; font-weight:800;display:table-cell;vertical-align:bottom;"><#424#>&nbsp;(<#2615#>&nbsp;8)</div><div style="display:table-cell;padding-left:6px;"><input id="add_subnet_btn" type="button" class="add_btn" onClick="add_subnet();" value=""></div></div>
+<div class="formfontdesc"><#437#></div>
+<div style="margin-left:8px; margin-bottom:7px;"> <div style="font-size:12px; font-weight:800;display:table-cell;vertical-align:bottom;"><#438#>&nbsp;(<#2656#>&nbsp;8)</div><div style="display:table-cell;padding-left:6px;"><input id="add_subnet_btn" type="button" class="add_btn" onClick="add_subnet();" value=""></div></div>
 <table width="98%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table" id="subnet_table" style="margin-top:5px;">
 <tr>
-<th style="width:19%"><#3059#></th>
-<th style="width:19%"><#312#></th>
-<th style="width:19%"><#2530#></th>
-<th style="width:19%"><#2528#></th>
-<th style="width:10%"><#2520#></th>
-<th style="width:7%"><#3002#></th>
-<th><#1649#></th>
+<th style="width:19%"><#3111#></th>
+<th style="width:19%"><#324#></th>
+<th style="width:19%"><#2571#></th>
+<th style="width:19%"><#2569#></th>
+<th style="width:10%"><#2561#></th>
+<th style="width:7%"><#3054#></th>
+<th><#1671#></th>
 </tr>
 </table>
 <div id="subnet_list_Block"></div>
 <div class="apply_gen">
-<input class="button_gen" onclick="applyRule()" type="button" value="<#196#>"/>
+<input class="button_gen" onclick="applyRule()" type="button" value="<#203#>"/>
 </div>
 </td>
 </tr>

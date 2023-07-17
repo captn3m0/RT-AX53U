@@ -7,7 +7,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#2805#> - <#2822#></title>
+<title><#2849#> - <#2866#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="/device-map/device-map.css">
@@ -38,12 +38,12 @@ setTimeout("showDropdownClientList('setClientIP', 'mac', 'all', 'ClientList_Bloc
 }
 function onSubmitCtrl(o, s) {
 if(document.form.destIP.value == ""){
-alert("<#320#>");
+alert("<#332#>");
 document.form.destIP.focus();
 return false;
 }
 if(check_hwaddr_flag(document.form.destIP, 'inner') != 0){
-alert("<#313#>");
+alert("<#325#>");
 document.form.destIP.focus();
 return false;
 }
@@ -99,7 +99,7 @@ var code = "";
 var clientListEventData = [];
 code += '<table width="100%" cellspacing="0" cellpadding="4" align="center" class="list_table" id="wollist_table">';
 if(Object.keys(manually_wol_list_array).length == 0)
-code += '<tr><td style="color:#FFCC00;"><#2410#></td></tr>';
+code += '<tr><td style="color:#FFCC00;"><#2448#></td></tr>';
 else{
 var userIconBase64 = "NoIcon";
 var clientName, deviceType, deviceVender;
@@ -170,11 +170,11 @@ function addRow_Group(upper){
 var rule_num = document.getElementById('wollist_table').rows.length;
 var item_num = document.getElementById('wollist_table').rows[0].cells.length;
 if(rule_num >= upper){
-alert("<#2483#> " + upper + " <#2484#>");
+alert("<#2524#> " + upper + " <#2525#>");
 return false;
 }
 if(document.form.wollist_macAddr.value==""){
-alert("<#320#>");
+alert("<#332#>");
 document.form.wollist_macAddr.focus();
 document.form.wollist_macAddr.select();
 return false;
@@ -186,7 +186,7 @@ return false;
 if(item_num >=2){
 for(i=0; i<rule_num; i++){
 if(manually_wol_list_array[document.form.wollist_macAddr.value.toUpperCase()] != null){
-alert("<#2476#>");
+alert("<#2517#>");
 document.form.wollist_macAddr.focus();
 document.form.wollist_macAddr.select();
 return false;
@@ -208,7 +208,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#352#>";
+document.getElementById("check_mac").innerHTML="<#364#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else if(flag ==2){
@@ -216,7 +216,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#313#>";
+document.getElementById("check_mac").innerHTML="<#325#>";
 document.getElementById("check_mac").style.display = "";
 return false;
 }else{
@@ -257,7 +257,7 @@ var tmp_value = "";
 Object.keys(manually_wol_list_array).forEach(function(key) {
 tmp_value += "<" + manually_wol_list_array[key] + ">" + key;
 });
-if(tmp_value == "<"+"<#2410#>" || tmp_value == "<")
+if(tmp_value == "<"+"<#2448#>" || tmp_value == "<")
 tmp_value = "";
 document.wolform.wollist.value = tmp_value;
 showLoading();
@@ -297,16 +297,16 @@ document.wolform.submit();
 <tr>
 <td bgcolor="#4D595D" colspan="3" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#2805#> - <#2822#></div>
+<div class="formfonttitle"><#2849#> - <#2866#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#3165#></div>
-<div class="formfontdesc"><#3166#></div>
+<div class="formfontdesc"><#3231#></div>
+<div class="formfontdesc"><#3232#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
-<th width="20%"><#2820#></th>
+<th width="20%"><#2864#></th>
 <td>
 <input type="text" class="input_20_table" maxlength="17" name="destIP" value="" placeholder="ex: <% nvram_get("lan_hwaddr"); %>" onKeyPress="return validator.isHWAddr(this,event);" autocorrect="off" autocapitalize="off">
-<input class="button_gen" id="cmdBtn" onClick="onSubmitCtrl(this, ' Refresh ')" type="button" value="<#2823#>">
+<input class="button_gen" id="cmdBtn" onClick="onSubmitCtrl(this, ' Refresh ')" type="button" value="<#2867#>">
 <img id="loadingIcon" style="display:none;" src="/images/InternetScan.gif"></span>
 </td>
 </tr>
@@ -314,17 +314,17 @@ document.wolform.submit();
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable_table" style="margin-top:8px;">
 <thead>
 <tr>
-<td colspan="2" id="GWStatic"><#2816#>&nbsp;(<#2615#>&nbsp;32)</td>
+<td colspan="2" id="GWStatic"><#2860#>&nbsp;(<#2656#>&nbsp;32)</td>
 </tr>
 </thead>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);"><#1532#> (<#2954#>)</a></th>
-<th><#2614#></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(5,10);"><#1553#> (<#3005#>)</a></th>
+<th><#2655#></th>
 </tr>
 <tr>
 <td width="80%">
 <input type="text" class="input_20_table" maxlength="17" name="wollist_macAddr" onClick="hideClients_Block();" autocorrect="off" autocapitalize="off" style="margin-left:-12px;width:255px;" onKeyPress="return validator.isHWAddr(this,event)" placeholder="ex: <% nvram_get("lan_hwaddr"); %>">
-<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#3094#>">
+<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#3160#>">
 <div id="ClientList_Block_PC" class="clientlist_dropdown"></div>
 </td>
 <td width="20%">
@@ -336,7 +336,7 @@ document.wolform.submit();
 </table>
 <div id="wollist_Block"></div>
 <div class="apply_gen">
-<input type="button" name="button" class="button_gen" onclick="applyRule();" value="<#196#>"/>
+<input type="button" name="button" class="button_gen" onclick="applyRule();" value="<#203#>"/>
 </div>
 </td>
 </tr>

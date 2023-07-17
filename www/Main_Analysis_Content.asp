@@ -7,7 +7,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#2805#> - <#2800#></title>
+<title><#2849#> - <#2844#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <style>
@@ -98,15 +98,15 @@ setTimeout("checkCmdRet();", 500);
 function hideCNT(_val){
 if(_val == "ping"){
 document.getElementById("pingCNT_tr").style.display = "";
-document.getElementById("cmdDesc").innerHTML = "<#2818#>";
+document.getElementById("cmdDesc").innerHTML = "<#2862#>";
 }
 else if(_val == "traceroute"){
 document.getElementById("pingCNT_tr").style.display = "none";
-document.getElementById("cmdDesc").innerHTML = "<#2821#>";
+document.getElementById("cmdDesc").innerHTML = "<#2865#>";
 }
 else{
 document.getElementById("pingCNT_tr").style.display = "none";
-document.getElementById("cmdDesc").innerHTML = "<#2815#>";
+document.getElementById("cmdDesc").innerHTML = "<#2859#>";
 }
 update_ntool_unit();
 }
@@ -232,12 +232,12 @@ hideClients_Block();
 <tr>
 <td bgcolor="#4D595D" colspan="3" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#2805#> - <#2800#></div>
+<div class="formfonttitle"><#2849#> - <#2844#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc" id="cmdDesc"><#2818#></div>
+<div class="formfontdesc" id="cmdDesc"><#2862#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
-<th width="20%"><#2814#></th>
+<th width="20%"><#2858#></th>
 <td>
 <select id="cmdMethod" class="input_option" name="cmdMethod" onchange="hideCNT(this.value);">
 <option value="ping" selected>Ping</option>
@@ -247,31 +247,31 @@ hideClients_Block();
 </td>
 </tr>
 <tr id="wans_ntool_unit">
-<th width="20%"><#3676#></th>
+<th width="20%"><#3773#></th>
 <td>
 <select name="wans_ntool_unit" class="input_option" onChange="update_ntool_unit();">
-<option class="content_input_fd" value="0" <% nvram_match("wans_ntool_unit", "0","selected"); %>><#1859#></option>
-<option class="content_input_fd" value="1" <% nvram_match("wans_ntool_unit", "1","selected"); %>><#1866#></option>
+<option class="content_input_fd" value="0" <% nvram_match("wans_ntool_unit", "0","selected"); %>><#1881#></option>
+<option class="content_input_fd" value="1" <% nvram_match("wans_ntool_unit", "1","selected"); %>><#1888#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th width="20%"><#2820#></th>
+<th width="20%"><#2864#></th>
 <td>
 <input type="text" class="input_32_table" name="destIP" maxlength="100" value="" placeholder="ex: www.google.com" autocorrect="off" autocapitalize="off">
-<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#3097#>" onmouseover="over_var=1;" onmouseout="over_var=0;">
+<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#3163#>" onmouseover="over_var=1;" onmouseout="over_var=0;">
 <div id="ClientList_Block_PC" class="ClientList_Block_PC"></div>
 </td>
 </tr>
 <tr id="pingCNT_tr">
-<th width="20%"><#2809#></th>
+<th width="20%"><#2853#></th>
 <td>
 <input type="text" name="pingCNT" class="input_3_table" maxlength="2" value="" onKeyPress="return validator.isNumber(this, event);" placeholder="5" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 </table>
 <div class="apply_gen">
-<span><input class="button_gen" id="cmdBtn" onClick="onSubmitCtrl(this, ' Refresh ')" type="button" value="<#2811#>"></span>
+<span><input class="button_gen" id="cmdBtn" onClick="onSubmitCtrl(this, ' Refresh ')" type="button" value="<#2855#>"></span>
 <img id="loadingIcon" style="display:none;" src="/images/InternetScan.gif">
 </div>
 <div style="margin-top:8px" id="logArea">

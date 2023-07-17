@@ -96,7 +96,7 @@ var httpds=xmldoc.getElementsByTagName("httpd");
 if (httpds!=null && httpds[0]!=null)
 {
 if($("drword")){
-$("drword").innerHTML = "<#219#><br/><br/>";
+$("drword").innerHTML = "<#228#><br/><br/>";
 }
 stopFlag_lan = 1;
 if(page_flag == "detectWAN"){

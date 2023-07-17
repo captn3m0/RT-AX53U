@@ -66,7 +66,7 @@ Informațiile nu sunt disponibile. Actualizați firmware-ul routerului la cea ma
 Repornirea routerului va face ca toate dispozitivele conectate să piardă conexiunea la internet. Toate dispozitivele vor recupera conexiunea la Internet după finalizarea procesului de repornire. Continuaţi?
 Excelentă
 Slabă
-Ok
+OK
 Normală
 Calitate conexiune
 Adăugare nod AiMesh
@@ -88,6 +88,12 @@ Rată de date
 Topologie
 Setări sistem
 Statistici
+Detectare mediu
+Se estimează conexiunea rutei...
+Optimizare Nod(uri)
+Optimizarea diversității antenelor
+Detectare antenă
+Se estimează diversitatea antenelor...
 Powerline connection with good signal quality
 Powerline connection with weak signal quality
 Conexiune wireless cu o calitate excelentă a semnalului
@@ -151,6 +157,7 @@ Daca doriți să dezactivați trimiterea informațiilor cu Trend Micro prin func
 Sigur doriţi să retrageți consimțământul?
 Retragere
 Introduceţi numele
+Numele gazdei a fost asociat cu contul de autentificare al aplicației Router, vă rugăm să îl înregistrați/ștergeți din aplicația Router.
 Automat
 Automatic Setting
 Limitare lăţime de bandă
@@ -212,6 +219,8 @@ Omiteți
 Dispozitiv necunoscut
 Upgrade în Nopții
 Upgrade Now
+Utilizați parola de Autentificare locală implicită
+Parola criptată implicită de Autentificare locală asigură un proces de conectare securizat atunci când vă conectați la acest dispozitiv de rețea ASUS la nivel local.
 Pentru detalii suplimentare, vizitaţi <a style="font-weight: bolder;text-decoration: underline;color:#000000;" href="https://www.asus.com/support/" target="_blank">https://www.asus.com/support/</a>
 * Un pachet ping de dimensiuni minime consumăaproximativ 128 de baiţi pe interval. Prin urmare, detectorul ping va consuma
 Mbaiţi pe lună
@@ -280,7 +289,10 @@ Versiune firmware:
 * Ora de vară este activată în acest fus orar.
 Oră sistem
 * Memento: Ora sistemului dvs. nu a fost sincronizată cu un server NTP.
+Ora de sistem a routerului nu a fost încă sincronizată cu serverul NTP. Se va sincroniza automat după conectare la internet.
 Reţea vizitatori
+Cum să găsiți %@
+%@ se găsește pe eticheta de pe spatele/din partea inferioară a dispozitivului dvs. ASUS.
 Utilizați un port între 1024-65535.
 Because of security and compatibility concerns,  IE8 / IE9 / IE10 are no longer supported.
 Things might be bound to broken and perhaps unusable.
@@ -359,6 +371,8 @@ O parolă puternică TREBUIE să conţină cel puţin opt caractere ce reprezint
 Menționați IP-ul routerului pe lângă DNS-ul specificat de utilizator
 Tip conexiune WAN:
 Utilizaţi următoarea adresă IP:
+Autentificare locală
+Configurați numele de utilizator și parola de Autentificare locală pentru a preveni accesul neautorizat la dispozitivul dvs. de rețea ASUS.
 Cel puțin două caractere. Sunt acceptate doar caractere alfanumerice, caracterul de subliniere și simbolul cratimă. Primul caracter nu poate fi o cratimă - sau un caracter de subliniere _.
 De asemenea, puteți descărca [ASUS Lyra] pentru a conecta dispozitive suplimentare Lyra la primul Lyra.
 Acum puteți apăsa „butonul Pair (Împerechere)” al primului și celui de-al doilea Lyra pentru a configura alt Lyra.
@@ -474,6 +488,8 @@ Slabă
 Bună
 Puternică
 Foarte puternică
+Parola de Autentificare locală
+Parolă WiFi
 Codul PIN nu este corect. Introduceţi codul PIN corect şi reconectaţi adaptorul USB. Dacă întâmpinaţi în continuare aceeaşi eroare, dezactivaţi funcţia de introducere a codului PIN şi apoi reactivaţi-o.
 Număr de telefon
 Access Number
@@ -672,6 +688,7 @@ Introduceţi o cheie de reţea care să cuprindă între 8 şi 63 de caractere (
 Introduceţi o cheie de reţea care să cuprindă între 8 şi 63 de caractere (litere, cifre sau o combinaţie între acestea). Setarea de securitate implicită pentru reţele wireless este WPA2-Personal AES.
 Separate 2.4 GHz and 5 GHz
 Separate 2.4 GHz, 5 GHz and 6 GHz
+Rețeaua wireless principală a fost setată.
 Câmpul pentru numele contului nu poate rămâne necompletat.
 Câmpurile Nume de utilizator / Parolă nu pot fi goale.
 Setare cont ISP
@@ -822,6 +839,7 @@ Ridicați valoarea maximă pentru întreruperea internetului.
 Reconectare la internet.
 Contactați administratorul de rețea.
 Faceţi clic aici pentru a accesa pagina de configurare
+<a>Faceți clic aici</a> pentru a modifica.
 Configuraţi setările.
 Dacă problema persistă, modificaţi manual setările conexiunii.
 porniţi reţeaua WAN.
@@ -906,8 +924,8 @@ For faster video streaming experience including Youtube, Netflix and Spotify, et
 Navigare pe Web
 Acest mod este potrivit pentru navigarea pe web și pentru a evita latența rețelei în timpul transferului de fișiere.
 Learn-From-Home
-Choose this mode for a smooth streaming of online video-learning experience.This category includes Coursera, Khan, Udemy, TED, edX, etc.
-Choose this mode to ensure a smooth agile online conferencing experience.This category includes VoIP, instant messaging, mail service, etc.
+Choose this mode for a smooth streaming of online video-learning experience. This category includes Coursera, Khan, Udemy, TED, edX, etc.
+Choose this mode to ensure a smooth agile online conferencing experience. This category includes VoIP, instant messaging, mail service, etc.
 Noul cont nu are drepturi de citire/scriere.
 Adăugare cont nou
 Drepturile de acces implicite pentru un folder nou permit citirea/scrierea.
@@ -1515,6 +1533,7 @@ Nume de gază furnizat de ISP:
 Dacă tipul conexiunii WAN este PPTP sau L2TP, introduceţi numele de server sau adresa IP a serverului VPN.
 Acest câmp vă permite să introduceţi un nume de gazdă pentru dispozitivul RT-AX53U. Acest nume este solicitat în general de către ISP-ul dvs.
 Setaţi limita maximă pentru lăţimea de bandă disponibilă pentru descărcare. 0 (zero) înseamnă că nu există o limită pentru lăţimea de bandă.
+Înapoi
 Dezactivare
 Dezactivat
 Activat
@@ -1527,8 +1546,10 @@ setările WAN
 Capabilitate
 Captcha
 Introduceţi captcha.
+Dacă doriți să activați, mergeți <a id = \"setting_link\" target=\"_blank\" style=\"text-decoration:underline;\">aici</a> pentru a modifica setările.
 Asiguraţi-văcăaţi conectat în mod corespunzător cablul de reţea/Ethernet
 Routerul verifică serverul ASUS pentru a detecta actualizarea de firmware.
+Alegeți alte opțiuni și încercați din nou.
 Nu colectează informații despre utilizatori și este guvernat de legile privind confidențialitate din Elveția.
 Nume client
 Pictograma
@@ -1635,6 +1656,7 @@ Russia
 Singapore
 The United States
 Canada
+Creați un cont
 Creați un cont gratuit
 CTF de nivelul 2 nu este compatibil în cazul conexiunilor de tip PPPoE, PPTP sau L2TP. Pentru a comuta la CTF de nivelul 1, faceţi clic pe Confirmare.
 Activare accelerator HW
@@ -1942,7 +1964,7 @@ Problemă de conexiune instabilă
 Conectare la rețeaua wireless imposibilă
 Alegeți opțiunea care descrie cel mai bine funcționarea serviciului dvs. DSL
 Metoda de contact
-Țara / regiunea dvs.
+Regiunea dvs.
 Anulare captură depanare
 Captură jurnal diagnosticare depanare în curs
 Durată captură jurnal diagnosticare depanare
@@ -2246,22 +2268,30 @@ Creare nou
 Copiere alt
 Total invitat
 invitați
+Asigurați acces programat sau unic în rețea.
+Recomandat pentru mall-uri, săli de sport sau prieteni.
 Limită acces
 Doar acces la internet
 Utilizați aceleași setări ca
 Rețea de afaceri
 Rețea personalizată
+Angajat
 Configurați o rețea sigură și securizată
+Birou care atribuie permisiunea departamentelor
 Creați rapid o rețea vizitator
 Rețea IoT
 Separați cu ușurință o rețea pentru dispozitivele IoT
+Recomandat pentru dispozitive de supraveghere, asistență vocală, corpuri de iluminat, camere pentru sonerie, încuietori inteligente și senzori.
 Rețea copii
 Asigurați accesul securizat al copiilor la internet
 Portal vizitator
-Creați un portal vizitator sau Facebook Wifi
+Creați un portal vizitator
+Creați un portal captiv pentru marketing digital.
+Recomandat pentru restaurante, hoteluri sau food truck.
 Tip portal
 Rețea VPN
 Stabiliți o conexiune securizată la internet
+Stabiliți o conexiune securizată la Internet prin VPN. Recomandat pentru lucrul de acasă, sucursale.
 Acest profil VPN a fost dezactivat. Accesați pagina de setări a serverului VPN și activați-l.
 Faceți clic pe [ Acces setări ] de mai jos pentru a accesa pagina de setări VPN.
 Această setare nu poate fi selectată în timp ce este utilizată de celălalt prpfil creat.
@@ -2269,8 +2299,15 @@ Rețea de domiciliu
 Acum nu există niciun profil VPN. Faceți clic pe [Acces setări] de mai jos în pagina de setare VPN și creați.
 Adăugați o rețea
 Listă de profiluri
+Rețea programată
 Alegeți o rețea definită
+Creați o rețea în funcție de nevoile dvs.
+Rețea auto-definită
+Explorator de scenarii
 Programare WiFi
+Planificați timpul de conectare online zilnic sau săptămânal pentru rețeaua wireless.
+Recomandat pentru studiu la distanță, săli de clasă sau copii.
+Pentru a îmbunătăți securitatea rețelei, configurați nivelul de acces în funcție de utilizare.
 Versiune hardware
 Help
 Secţiunea de ajutor vă oferă indicaţii şi informaţii cu privire la utilizarea funcţiilor routerului. Faceţi clic pe.
@@ -2282,6 +2319,7 @@ Ridicată
 Cea mai ridicată
 Pachetul cu cea mai mare prioritate
 ore
+CUM SĂ CONFIGURAȚI
 Conexiunea la internet nu a reuşit. Încercaţi din nou sau luaţi legătura cu furnizorul de servicii de internet (ISP) pentru verificarea setărilor contului dvs.
 Selectaţi locaţia furnizorului dvs. de servicii Internet.
 Locaţie
@@ -2322,7 +2360,7 @@ Pentru a asocia manual ruterul ASUS cu IFTTT, vă rugăm să copiați și lipiț
 Alegeți dintre appleturile existente sau creați propriile appleturi pe <a id="ifttt_applet_link">ASUS Router Channel</a>(Canal ruter ASUS)
 <a id="ifttt_signin">Conectați-vă</a> la contul IFTTT.
 Începeți o viață automatizată cu ASUS Router și IFTTT!
-Începeți:
+Începeți :
 în
 Routerul nu se poate conecta la serverul ASUS pentru a căuta actualizarea firmware. Descărcați cel mai recent firmware de pe site-ul Asistență produse ASUS și faceți actualizarea manuală.
 Bandă
@@ -2447,6 +2485,9 @@ Setare LAN IPv6
 Native
 OCN Virtual Connect
 v6plus
+Dacă doriți să le utilizați, consultați intervalul de porturi utilizabile în %0$@ și modificați numărul de porturi al acestor caracteristici în funcție de intervalul corespunzător.
+Setările legate de port pot întâmpina o problemă de neconcordanță în intervalul actual de porturi %2$@.
+Poate apărea o problemă de neconcordanță a porturilor în intervalul special de porturi %3$@. Aceasta nu va afecta internetul, ci următoarele setări legate de port. Dacă doriți să le utilizați, consultați intervalul de porturi utilizabile în <a target='_self' style='text-decoration:underline;' href='Main_IPV6Status_Content.asp'>IPv6 Log</a> și modificați numărul de porturi al acestor caracteristici în funcție de intervalul corespunzător.
 Lungime prefix IPv6
 Releu IPv4 Anycast
 IPv6 static
@@ -2631,7 +2672,7 @@ Dacă există înregistrări în lista de filtrare a adreselor MAC, faceţi clic
 Manual
 Alocare manuală
 Oraş
-Ţară/Regiune
+Regiune
 You might need the VLAN ID to set up the PTM connection. Do not change the VLAN ID unless your ISP instructs you to do so.
 Acest ghid de configurare rapidă vă permite să ajustaţi cu uşurinţă setările WAN ale dispozitivului RT-AX53U. Selectaţi ţara dvs. şi numele ISP-ului din lista verticală, faceţi clic pe Următor şi introduceţi informaţiile necesare. Contactaţi ISP-ul (furnizorul de servicii de Internet) pentru a vă obţine informaţii despre setările conexiunii DSL, dacă este necesar.
 Aveţi nevoie de identificatorul virtual al căii (Virtual Path Identifier – VPI) şi de identificatorul virtual al canalului (Virtual Channel Identifier – VCI) pentru a configura PVC al ATM. Nu modificaţi numerele VPI şi VCI decât la solicitarea ISP-ului dvs.
@@ -2641,6 +2682,8 @@ Notă:
 Setare manuală rapidă
 Se referă la setările WAN ale dispozitivului RT-AX53U WAN. Dacă doriţi să adăugaţi o nouă setare, urmaţi instrucţiunile de pe ecran. Dacă doriţi să modificaţi setarea precedentă, mergeţi la [Setări avansate] -> [WAN] -> [Conexiune la Internet].
 Producător
+Actualizare MAP
+Va dura 1-2 minute pentru a realoca regula MAP. În timpul actualizării, toate dispozitivele conectate vor pierde conexiunea la internet.
 Limită maximă lăţime de bandă:
 Setaţi limita maximă pentru lăţimea de bandă
 Număr maxim de computere
@@ -2692,6 +2735,7 @@ Eroare la upgrade firmware modem 4G. Așteptați până când routerul reporneș
 Ați încărcat un firmware greșit pentru a face upgrade la modul. Selectați-l pe cel corect și începeți din nou uprgade-ul!
 Firmware modem 4G
 Informații modem bandă largă
+Utilizați telefonul ca modem
 Versiune software modem
 Este necesar codul PIN.
 Este necesar codul PIN2.
@@ -2822,7 +2866,9 @@ Rezolvare nume
 Trace route to host (Urmărire rută la gazdă)
 Activare în LAN
 Activare
+Despre caracteristică
 Funcție nouă disponibilă
+Descrierea caracteristicii
 Nume folder nou
 Firmware nou modem
 Pagina următoare
@@ -2837,6 +2883,7 @@ Activaţi funcţia WiFi pentru a utiliza WPS.
 Pentru a activa WPS, modificaţi metoda de autentificare la WPA2 sau WPA-Auto.
 Dacă doriți să activați WPS, trebuie mai întâi să dezactivați ascunderea SSID.
 Note: New patch will be updated regularly, please keep your firmware stay up to date.
+Notificare
 Element de notificare
 Numărul clientului
 Accesaţi <a href="https://iplookup.asus.com/nslookup.php" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">https://iplookup.asus.com/nslookup.php</a> pentru a căuta o adresă statică pentru utilizare cu serviciul ASUS DDNS.
@@ -2924,6 +2971,7 @@ Maparea porturilor acceptă interfaţa WAN IPTV pentru anumite porturi din reţe
 Activare mapare porturi
 Port LAN
 Port SSH
+Stare port
 Viteza de conectare la acest(e) port(uri) poate fi îmbunătățită.
 Consultați următoarele rezultate/sugestii pentru depanare.
 Lucruri de verificat
@@ -2933,6 +2981,9 @@ Un dispozitiv mai vechi poate reduce viteza conexiunii.
 Verificați din nou planul de serviciu internet cu ISP-ul.
 Înlocuiți cablul Ethernet cu #ETHCABLE sau mai nou.
 Acest port este pentru
+Configurarea %1$@ ca %2$@ va dezactiva funcția \"%3$@\", sigur doriți să continuați?
+Această funcție este dezactivată deoarece %1$@ este configurat ca %2$@.
+%1$@ și %2$@ nu pot fi configurate ca același port.
 Această pagină prezintă starea redirecţionării porturilor. Unele programe P2P utilizează protocolul UPnP pentru a deschide portul, iar numărul portului respectiv este afişat în această pagină.
 Dispozitivul RT-AX53U a detectat că tipul conexiunii este PPPoE. Dacă este corect, introduceţi numele de utilizator/parola şi apoi faceţi clic pe Aplicare.<br>Dacă nu este corect, faceţi clic pe Setare manuală pentru a seta din nou.
 Introduceţi numele de utilizator şi parola pe care vi le-a furnizat ISP-ul dvs şi apoi faceţi clic pe Următorul.
@@ -2994,6 +3045,7 @@ Informaţii despre produs
 Furnizor
 încapsulare
 Mod încapsulare
+Cheie publică
 Transmitere
 Sigur doriţi să ştergeţi acest PVC?
 Editare PVC
@@ -3086,6 +3138,20 @@ Setări VPI şi VCI duplicate sau identice.
 Sistemul va reporni acum! Aşteptaţi cât timp vă redirecţionăm către pagina principală a dispozitivului RT-AX53U.
 Scală
 Scanare
+Sucursală
+Sală de clasă
+Cafenea
+Stație de încărcare EV
+Prieteni
+Hotel
+Centru comercial
+Studiu la distanță
+Locuință inteligentă
+Restaurant
+Copii
+Asistență vocală
+Dispozitive de supraveghere
+Telemuncă
 secunde
 Nivel securitate
 Selectare toate
@@ -3128,7 +3194,7 @@ Click on this checkbox if you want to share the config file for debugging. Since
 Setări
 Faceți clic <a id="redirect_to_setup">aici</a> pentru a modifica. Vă rugăm consultați <a id="redirect_to_FAQ">secțiunea Întrebări frecvente</a> entru mai multe detalii.
 Configurați-vă nodul
-Place your RT-AX53U router and node(s) in the same room and at least 1 meter apart during the setup process.
+În timpul procesului de configurare, așezați routerul RT-AX53U și nodurile în aceeași cameră și la cel puțin 1 m distanță.
 Păstrați alimentarea pornită și așteptați configurarea sistemului.
 Nume dispozitiv
 Alegeţi setările de limbă corecte, adecvate pentru codificarea fişierelor.
@@ -3279,6 +3345,10 @@ System adjustment
 Temperature unit
 Fan speed
 Schimbaţi parola de conectare a routerului, fusul orar şi setările serverului NTP.
+În afară de rețeaua principală, puteți crea o rețea suplimentară auto-definită pentru diferite scopuri.
+Rețeaua auto-definită este separată de domeniul principal de rețea și oferă o conexiune mai sigură.
+În fiecare rețea auto-definită, puteți configura diferite metode de criptare, programe, permisiuni, AiMesh, restricții de lățime de bandă etc., pentru a realiza un mediu de rețea cuprinzător.
+Doriți să adăugați o rețea wireless suplimentară pentru utilizare specială?
 Configuraţie de bază
 LAN
 Diverse
@@ -3453,6 +3523,7 @@ Se dezinstalează...
 O actualizare online este disponibilă
 Se face upgrade...
 Lăţime de bandă pentru încărcare
+Încărcare configurație
 Prioritate încărcare
 Date trimise/s
 Date trimise
@@ -3515,6 +3586,10 @@ Subrețea nouă
 Fără etichetă
 Cu etichetă
 Anulare
+Acest port este utilizat de %@.
+Izolare port
+Profil VLAN
+Setări control Switch VLAN
 Această valoare trebuie să fie mai mare decât
 Această valoare trebuie să fie mai mică decât
 Client will use VPN to access
@@ -3556,7 +3631,7 @@ Configuraţie personalizată
 RT-AX53U va genera automat un fişier .ovpn cu cheia autorităţii de certificare. Puteţi furniza fişierul .ovpn cu nume de utilizator şi parolă la toţi utilizatorii care se conectează la serverul OpenVPN.
 Pentru a schimba setările serverului OpenVPN, accesaţi Setări avansate
 Puteţi schimba setările implicite ale serverului OpenVPN pentru a furniza un fişier OPVN personalizat pentru un tip specific de conexiune.
-If your WAN IP address is dynamic, please click <a href="http://ZVDOMAIN_NAMEVZ/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
+If your WAN IP address is dynamic, please click <a href="/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
 Alocare de la DHCP
 Cifru criptare
 Conflict de rutare! <p>Verificați setările de adresă IP ale clientului pe pagina Setări avansate sau verificați tabelul de rutare din jurnalul de sistem.
@@ -3655,18 +3730,40 @@ Actualizare nereușită, încercați din nou.
 Toți clienții VPN se vor reconecta după ce faceți clic pe Aplicare. Sigur doriți să continuați?
 Versiune IKE suportată
 faceți clic aici pentru a configura DDNS.
+* VPN WiFi este deja utilizat.
+Cum se configurează serverul WireGuard®?
+Cum se configurează VPN de la site la site cu WireGuard®?
+Cum se configurează clientul WireGuard® în VPN Fusion?
+Autentificare VPN
+Certificat client
+Cheie client
+Listă de revocare certificate
+Numărul maxim de conexiuni VPN active simultan este limitat la 2. Vă rugăm să dezactivați o conexiune VPN existentă înainte de a activa alta.
+Sistemul poate activa o singură conexiune Surfshark la un moment dat. Vă rugăm să dezactivați o conexiune Surfshark înainte de a activa alta.
+Conexiune implicită
 Clienţii VPN (Reţea privată virtuală) sunt adesea utilizaţi pentru a se conecta la un server VPN în vederea accesării resurselor private în securitate printr-o reţea publică.
 Unele dispozitive precum decodoarele, televizoarele inteligente şi playerele Blu-ray nu acceptă software VPN.
 Caracteristica ASUSWRT VPN furnizează acces VPN la toate dispozitivele dintr-o reţea de domiciliu fără a fi necesară instalarea software-ului VPN pe fiecare dispozitiv.
+Adresă Endpoint
+Port Endpoint
+Deoarece securitatea dvs. online este prioritatea noastră.
+Adrese IP permise
 Modificați subrețeaua LAN a routerului, consultați aceste <a target='_blank'>Întrebări frecvente</a> pentru a afla mai multe.
+Keepalive persistent
 Client/peer rețea la rețea
 IPSec VPN Client pentru RT-AX53U să se conecteze la un server/client IPSec sau permite dispozitivelor să se conecteze direct între ele folosind opțiunea Peer-to-Peer (Peer la peer).
 Prezentăm în continuare două dispozitive RT-AX53U pentru a explica o rețea Peer-to-Peer (Peer la peer). Mai întâi trebuie să configurați în această pagină profilul pentru un peer IPSec, apoi să creați un alt peer pe celălalt dispozitiv RT-AX53U, folosind configurații care corespund.
+Profil
+Aplicare la toate dispozitivele
+Atribuire dispozitive la acest profil
+Ștergere profil
+Selectați alt profil VPN pentru a anula WAN-ul implicit de internet.
 Pentru a porni o conexiune VPN, urmaţi paşii de mai jos:
 Adăugaţi un profil
 Selectaţi un tip de conexiune VPN
 Introduceţi informaţiile de autentificare VPN oferite de furnizorul VPN apoi conectaţi-vă.
 Client VPN
+Pereche
 Când utilizați un client VPN cu o conexiune PPPoE, routerul dvs. va reporni automat pentru a dezactiva Accelerare NAT. Sigur doriţi să continuaţi?
 Barieră
 Configuraţi setările de reţea WAN Ethernet pentru dispozitivul RT-AX53U.
@@ -3730,18 +3827,19 @@ Enable Ping to Internet
 Opțiune TCP MSS
 octeţi
 VLAN ID
-Funcţia de agregare WAN combină două conexiuni de reţea pentru a creşte viteza WAN până la 2 Gbps. Conectaţi portul WAN şi portul LAN 4 ale routerului la porturile LAN ale modemului (asiguraţi-vă că utilizaţi două cabluri cu aceeaşi specificaţie). <a id="wanAgg_faq" target="_blank" style="color:#FFCC00;text-decoration:underline;">Întrebări frecvente despre agregarea WAN</a>
+Agregare WAN
+Funcţia de agregare WAN combină două conexiuni de reţea pentru a creşte viteza WAN până la 2 Gbps. Conectaţi portul #WAN şi portul LAN 4 ale routerului la porturile LAN ale modemului (asiguraţi-vă că utilizaţi două cabluri cu aceeaşi specificaţie). <a id="wanAgg_faq" target="_blank" style="color:#FFCC00;text-decoration:underline;">Întrebări frecvente despre agregarea WAN</a>
 Activare agregare WAN
 Routerul dvs. are activată funcţia Dual WAN. Activarea funcţiei de agregare WAN va dezactiva funcţia Dual WAN. Sigur doriţi să continuaţi?
 Routerul dvs. are activată funcţia de agregare WAN. Activarea funcţiei Dual WAN va dezactiva funcţia de agregare WAN. Sigur doriţi să continuaţi?
 Funcţia de agregare WAN utilizează portul LAN 4 al routerului. Activarea funcţiei IPTV va dezactiva funcţia de agregare WAN. Sigur doriţi să continuaţi?
 Funcţia IPTV utilizează portul LAN 4 al routerului. Activarea funcţiei de agregare WAN va dezactiva funcţia IPTV. Sigur doriţi să continuaţi?
 Routerul dvs. are activate atât funcţia Dual WAN, cât şi funcţia IPTV. Activarea funcţiei de agregare WAN va dezactiva funcţiile Dual WAN şi IPTV pentru a. preveni conflictele între porturi. Sigur doriţi să continuaţi?
-Asiguraţi-vă că portul WAN al routerului şi portul LAN al modemului au fost conectate utilizându-se două cabluri cu aceeaşi specificaţie.
+Asiguraţi-vă că portul #WAN al routerului şi portul LAN al modemului au fost conectate utilizându-se două cabluri cu aceeaşi specificaţie.
 Asiguraţi-vă că portul LAN 4 al routerului şi portul LAN al modemului au fost conectate utilizându-se două cabluri cu aceeaşi specificaţie.
 Pentru a activa funcţia de agregare WAN, accesaţi pagina <a href="Advanced_WAN_Content.asp" style="color:#FFCC00;text-decoration:underline;">Conectarea la internet prin WAN</a>.
 Dacă configurarea agregării WAN nu este reușită, urmaţi paşii de mai jos pentru a reîncerca.
-Asigurați-vă că porturile LAN de la modem sunt deja conectate cu cablu la WAN și LAN 4 de la router.
+Asigurați-vă că porturile LAN de la modem sunt deja conectate cu cablu la #WAN și LAN 4 de la router.
 Asigurați-vă că modemul dvs. a activat 802.3ad
 Confirmați că utilizaţi două cabluri cu aceeași specificație (fie gigabit și gigabit sau 10/100 și 10/100 Mbps)
 Reporniți ruterul
@@ -3756,6 +3854,7 @@ WiFi Proxy
 Radar WiFi
 Setările vă permit să configurați parametrii de Radar WiFi.
 Listă blocare roaming
+Partajare WiFi
 Verificare locație WiFi
 Verificarea locației WiFi descoperă toate rețelele WiFi din aproprierea dvs.
 Statistici canal wireless
@@ -4116,7 +4215,7 @@ Fișierul imagine pentru pagina web de întâmpinare nu poate fi necompletat.
 Bun venit la
 Am citit și sunt de acord cu <span id='terms_service_hyperlink'>Condițiile de utilizare</span>
 Continuați
-Multiple VPN Connection (Conexiuni VPN multiple)
+VPN Fusion (Fuziune VPN-uri)
 vă permite să vă conectați simultan la servere VPN multiple și să vă conectați dispozitivele client la tuneluri VPN diferite. Unele dispozitive, cum ar fi set-top boxuri, televizoare inteligente și playere Blu-ray, nu acceptă software-urile VPN. Această funcție asigură acces prin VPN pentru aceste dispozitive într-o rețea de domiciliu, fără a trebui să instalați software VPN, în timp ce smartphone-ul dvs. rămâne conectat la internet, nu la VPN.
 În modul Gamer (Jocuri), conexiunea VPN combate atacurile de tip DDoS, astfel încât PC-ul sau fluxul dvs. să nu se deconecteze de la serverele jocului. Realizarea unei conexiuni VPN vă poate ajuta și să vă schimbați cu ușurință adresa IP la regiunea în care sunt amplasate serverele jocului care vă interesează, îmbunătățind ping-ul către serverele de joc.
 Pentru a începe, urmați pașii de mai jos:
@@ -4243,7 +4342,10 @@ Nu îmi aminti din nou
 *Parola dvs. curentă de conectare este incorectă!
 HTTPS este un protocol de acces web relativ mai securizat. Sugerăm insistent să intrați în pagina de setări a routerului ASUS prin intermediul protocolului HTTPS.
 Faceți clic aici pentru a continua.
+Scanați codul QR pentru conectare
+Utilizați telefonul pentru a scana acest cod QR și pentru a vă conecta la Wi-Fi gratuit
 Scanați codul QR pentru mai multe detalii.
+Conectare manuală la rețea
 Încă doriți să accesați pagina de setări cu <span>protocolul HTTP</span>?
 Când utilizați protocolul HTTPS, un mesaj de avertizare poate fi afișat de către browserul dvs. pentru a informa asupra eliberării certificatului de securitate.
 Conexiunea dintre browserul dvs. și pagina de setări a routerului ASUS (ZVDOMAIN_NAMEVZ) rămâne securizată în ciuda acestui mesaj de avertizare.

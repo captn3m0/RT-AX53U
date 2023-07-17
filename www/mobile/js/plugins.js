@@ -23,7 +23,7 @@ jQuery.fn.showPasswordScore = function(id){
 var postfix = (id == undefined)? "": ("_"+id);
 $("<div>")
 .attr("id", "scorebarBorder"+postfix)
-.attr("title", "<#357#>")
+.attr("title", "<#369#>")
 .addClass("scorebarBorder")
 .appendTo(this.parent());
 $("<div>")
@@ -124,7 +124,7 @@ else{
 var wlArrayRet = [{"title":"2.4 GHz", "ifname":"0", "suffix": ""}];
 if(isSupport("triband")){
 if(isSupport('wifi6e')){
-document.querySelector('label[for="wireless_checkbox"]').innerHTML = '<#673#>';
+document.querySelector('label[for="wireless_checkbox"]').innerHTML = '<#689#>';
 wlArrayRet.push({"title":"5 GHz", "ifname":"1", "suffix": "_5G"});
 wlArrayRet.push({"title":"6 GHz", "ifname":"2", "suffix": "_6G"});
 }
@@ -333,11 +333,22 @@ newstring = this.charAt(s) + newstring;
 }
 return newstring;
 };
-function chkPass(flag, pwd, idx) {
+function chkPass(pwd, flag, obj, id) {
+var ttc = '<% nvram_get("territory_code"); %>';
+var isSku = function(_ptn){
+return (ttc.search(_ptn) == -1) ? false : true;
+}
 var orig_pwd = "";
-var postfix = (idx == undefined)? "": ("_" + idx);
+var postfix = (id == undefined)? "": ("_" + id);
+var oScorebarBorder = document.getElementById("scorebarBorder"+postfix);
 var oScorebar = document.getElementById("scorebar"+postfix);
-if(flag == "httpd" && (isSku("KR") || isSku("SG") || isSku("AA"))){
+var oScore = document.getElementById("score"+postfix);
+if(obj != undefined && (typeof obj == "object")){
+oScorebarBorder = $(obj)[0];
+oScorebar = $(obj).find(".strength_color")[0];
+oScore =$(obj).find(".strength_text")[0];
+}
+if(flag == "http_passwd" && (isSku("KR") || isSku("SG") || isSku("AA"))){
 oScorebar.style.display = "none";
 return;
 }
@@ -486,18 +497,47 @@ sSeqSymbol = "- " + parseInt(nSeqSymbol * nMultSeqSymbol);
 }
 /* Determine complexity based on overall score */
 if (nScore > 100) { nScore = 100; } else if (nScore < 0) { nScore = 0; }
-if (nScore >= 0 && nScore < 20) { sComplexity = "<#1275#>"; }
-else if (nScore >= 20 && nScore < 40) { sComplexity = "<#472#>"; }
-else if (nScore >= 40 && nScore < 60) { sComplexity = "<#473#>"; }
-else if (nScore >= 60 && nScore < 80) { sComplexity = "<#474#>"; }
-else if (nScore >= 80 && nScore <= 100) { sComplexity = "<#475#>"; }
+if(typeof document.forms[0] == "undefined" || (typeof document.forms[0] != "undefined" && document.form.current_page.value != "AiProtection_HomeProtection.asp")){
+if (nScore >= 0 && nScore < 20) { sComplexity = "<#1293#>"; }
+else if (nScore >= 20 && nScore < 40) { sComplexity = "<#486#>"; }
+else if (nScore >= 40 && nScore < 60) { sComplexity = "<#487#>"; }
+else if (nScore >= 60 && nScore < 80) { sComplexity = "<#488#>"; }
+else if (nScore >= 80 && nScore <= 100) { sComplexity = "<#489#>"; }
+}
+else{
+if (nScore >= 0 && nScore < 20) { sComplexity = "<a href='Advanced_Wireless_Content.asp' target='_blank'><#485#></a>"; }
+else if (nScore >= 20 && nScore < 40) { sComplexity = "<a href='Advanced_Wireless_Content.asp' target='_blank'><#486#></a>"; }
+else if (nScore >= 40 && nScore < 60) { sComplexity = "<a href='Advanced_Wireless_Content.asp' target='_blank'><#487#></a>"; }
+else if (nScore >= 60 && nScore < 80) { sComplexity = "<a href='Advanced_Wireless_Content.asp' target='_blank'><#488#></a>"; }
+else if (nScore >= 80 && nScore <= 100) { sComplexity = "<a href='Advanced_Wireless_Content.asp' target='_blank'><#489#></a>"; }
+}
 /* Display updated score criteria to client */
-$('#scorebarBorder'+postfix).css("display", "block");
+if(typeof document.forms[0] == "undefined" || (typeof document.forms[0] != "undefined" && document.form.current_page.value != "AiProtection_HomeProtection.asp")){ //for Router weakness status, Jimeing added at 2014/06/07
+oScorebarBorder.style.display = "flex";
 oScorebar.style.backgroundPosition = parseInt(nScore) + "%";
+}
+else{
+if(nScore >= 0 && nScore < 40){
+oScore.className = "status_no";
+}
+else if(nScore >= 40 && nScore <= 100){
+oScore.className = "status_yes";
+}
+}
+if(oScore == null){
 oScorebar.innerHTML = sComplexity;
 }
 else{
-chkPass("", " ", idx);
+oScore.innerHTML = sComplexity;
+}
+}
+else {
+/* Display default score criteria to client */
+if(flag == 'http_passwd'){
+chkPass(" ", 'http_passwd', obj, id);
+}
+else
+chkPass(" ", "", obj, id);
 }
 }
 function check_password_length(obj){
@@ -508,11 +548,11 @@ httpPassInput.showTextHint("");
 return;
 }
 if(password.length > systemVariable.maxPasswordLen){
-httpPassInput.showTextHint("<#323#>");
+httpPassInput.showTextHint("<#335#>");
 obj.focus();
 }
 else if(password.length > 0 && password.length < 5){
-httpPassInput.showTextHint("<#331#> <#325#>");
+httpPassInput.showTextHint("<#343#> <#337#>");
 obj.focus();
 }
 else{
@@ -526,7 +566,7 @@ if(wepType == "1"){
 if(!(wepKey.length === 5 && validator.string($obj[0])) &&
 !(wepKey.length === 10 && validator.hex($obj[0])))
 {
-$obj.showTextHint("<#345#><#852#>");
+$obj.showTextHint("<#357#><#870#>");
 status = true;
 }
 }
@@ -534,7 +574,7 @@ else if(wepType == "2"){
 if(!(wepKey.length === 13 && validator.string($obj[0])) &&
 !(wepKey.length === 26 && validator.hex($obj[0])))
 {
-$obj.showTextHint("<#345#><#853#>");
+$obj.showTextHint("<#357#><#871#>");
 status = true;
 }
 }
@@ -569,7 +609,7 @@ function hasBlank(objArray){
 $(".hint").remove();
 $.each(objArray, function(idx, $obj){
 if($obj.val() == ""){
-$obj.showTextHint("<#320#>");
+$obj.showTextHint("<#332#>");
 }
 })
 if($(".hint").length > 0) return true;
@@ -579,7 +619,7 @@ if(reserveHints != 1)
 $(".hint").remove();
 $.each(objArray, function(idx, $obj){
 if($obj.val().length > 0 && (isNaN($obj.val()) || $obj.val() < min || $obj.val() > max)){
-$obj.showTextHint('<#338#> ' + min + ' <#339#> ' + max + '.');
+$obj.showTextHint('<#350#> ' + min + ' <#351#> ' + max + '.');
 }
 })
 if($(".hint").length > 0) return true;
@@ -603,21 +643,21 @@ $('#wan_clientid').val("")
 function set_state_info(state){
 switch(state) {
 case "down":
-$("#LED_state").html("<#923#> : Link down (DSL LED Off)<br>");
+$("#LED_state").html("<#941#> : Link down (DSL LED Off)<br>");
 $("#LED_state").show();
 break;
 case "wait":
 case "wait for init":
-$("#LED_state").html("<#923#> : Wait for init (DSL LED Flashing)<br>");
+$("#LED_state").html("<#941#> : Wait for init (DSL LED Flashing)<br>");
 $("#LED_state").show();
 break;
 case "init":
 case "initializing":
-$("#LED_state").html("<#923#> : Initializing (DSL LED Flashing)<br>");
+$("#LED_state").html("<#941#> : Initializing (DSL LED Flashing)<br>");
 $("#LED_state").show();
 break;
 case "up":
-$("#LED_state").html("<#923#> : Link up (DSL LED On)<br>");
+$("#LED_state").html("<#941#> : Link up (DSL LED On)<br>");
 $("#LED_state").show();
 break;
 default:
@@ -787,7 +827,7 @@ wirelessAP["wl" + wl.ifname + "_wpa_psk"] = "";
 var __container = $("<div>").addClass("wirelessBand");
 $("<div>")
 .addClass("inputTitleContainer")
-.append($("<div>").addClass("inputTitle").html(wl.title + " <#562#>"))
+.append($("<div>").addClass("inputTitle").html(wl.title + " <#578#>"))
 .appendTo(__container)
 $("<div>")
 .addClass("inputContainer")
@@ -818,7 +858,7 @@ validator.ssidCheck($("#"+this.id));
 .appendTo(__container)
 $("<div>")
 .addClass("inputTitleContainer")
-.append($("<div>").addClass("inputTitle").html(wl.title + " <#563#>"))
+.append($("<div>").addClass("inputTitle").html(wl.title + " <#579#>"))
 .append($("<div>").addClass("secureInput icon_eye_close").attr({"for":"wireless_key_" + wl.ifname}))
 .appendTo(__container)
 $("<div>")
@@ -848,7 +888,7 @@ catch(e){
 apply.wireless();
 }
 }
-chkPass("WiFi", this.value, wl.ifname);
+chkPass(this.value, "WiFi", "", wl.ifname);
 })
 .val(decodeURIComponent(wirelessAP["wl" + wl.ifname + "_wpa_psk"]))
 )
@@ -870,9 +910,9 @@ systemVariable.ispPortDefinitions = iptvSettings.port_definitions;
 $.each(isp_profiles, function(i, isp_profile) {
 text = isp_profile.profile_name;
 if(text == "none")
-text = "<#848#>";
+text = "<#866#>";
 else if(text == "manual")
-text = "<#375#>";
+text = "<#389#>";
 if(isp_profile.switch_wantag == original_switch_wantag){
 selected = true;
 found = true;
@@ -991,6 +1031,8 @@ $(".defaultSupport").toggle(systemVariable.isDefault);
 $(".configuredSupport").toggle(!systemVariable.isDefault);
 $(".routerSupport").toggle(!isSupport("noRouter"));
 $(".apSupport").toggle(!isSupport("noAP"));
+$(".defpassSupport").toggle(isSupport("defpass"));
+$(".defpskSupport").toggle(isSupport("defpsk"));
 if(systemVariable.forceChangePw){
 systemVariable.forceChangePw = false;
 systemVariable.forceChangePwInTheEnd = true;
@@ -1464,6 +1506,9 @@ matchingResult = true;
 else
 matchingResult = false;
 break;
+case "defpsk":
+matchingResult = (ui_support["defpsk"] >= 1 && (httpApi.nvram_match_x("wifi_psk","","1").wifi_psk != "1")) ? true : false;
+break;
 default:
 matchingResult = ((ui_support[_ptn] > 0) || (systemVariable.productid.search(_ptn) !== -1)) ? true : false;
 break;
@@ -1607,12 +1652,12 @@ httpApi.log("fwInfo", JSON.stringify(fwInfo), systemVariable.qisSession)
 validator.hostNameString = function(str){
 var testResult = {
 'isError': false,
-'errReason': "<#2487#>"
+'errReason': "<#2528#>"
 }
 var re = new RegExp("^[a-zA-Z0-9][a-zA-Z0-9\-\_]+$","gi");
 testResult.isError = re.test(str) ? false : true;
 if(testResult.isError && str.length < 2)
-testResult.errReason = "<#332#>";
+testResult.errReason = "<#344#>";
 return testResult;
 };
 validator.invalidChar = function(str){
@@ -1622,12 +1667,12 @@ var testResult = {
 }
 if(str.charAt(0) == '"'){
 testResult.isError = true;
-testResult.errReason = '<#342#> ["]';
+testResult.errReason = '<#354#> ["]';
 return testResult;
 }
 else if(str.charAt(str.length - 1) == '"'){
 testResult.isError = true;
-testResult.errReason = '<#344#> ["]';
+testResult.errReason = '<#356#> ["]';
 return testResult;
 }
 else{
@@ -1639,7 +1684,7 @@ invalid_char.push(str.charAt(i));
 }
 if(invalid_char.length != 0){
 testResult.isError = true;
-testResult.errReason = "<#343#> '" + invalid_char.join('') + "' !";
+testResult.errReason = "<#355#> '" + invalid_char.join('') + "' !";
 }
 return testResult;
 }
@@ -1654,7 +1699,7 @@ if( !/[A-Za-z]/.test(str) || !/[0-9]/.test(str) || str.length < 10
 || /([A-Za-z0-9\!\"\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\[\\\]\^\_\`\{\|\}\~])\1/.test(str)
 ){
 testResult.isError = true;
-testResult.errReason = "<#337#>";
+testResult.errReason = "<#349#>";
 }
 var invalid_char = [];
 for(var i = 0; i < str.length; ++i){
@@ -1664,7 +1709,7 @@ invalid_char.push(str.charAt(i));
 }
 if(invalid_char.length != 0){
 testResult.isError = true;
-testResult.errReason = "<#343#> '" + invalid_char.join('') + "' !";
+testResult.errReason = "<#355#> '" + invalid_char.join('') + "' !";
 }
 return testResult;
 };
@@ -1748,7 +1793,7 @@ return status;
 };
 var genPAPList = function(papList, filterBand){
 var Get_Text_PAP_Title = function(){
-var title = "<#541#>";
+var title = "<#557#>";
 if(isSupport("RPMesh"))
 title = "Here are WiFi networks nearby, select one to continue.";/* untranslated */
 if(systemVariable.multiPAP.wlcOrder.length > 0){
@@ -1836,4 +1881,22 @@ clearInterval(systemVariable.interval_status);
 systemVariable.interval_status = false;
 }
 };
+function adjust_popup_container_top(_obj, _offsetHeight){
+$(_obj).css({top: ""});
+var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+var parent_scrollTop = parent.window.pageYOffset || parent.document.documentElement.scrollTop || parent.document.body.scrollTop || 0;
+if(scrollTop == 0 && parent_scrollTop != 0)
+parent_scrollTop = parent_scrollTop - 200;
+var final_scrollTop = Math.max(scrollTop, parent_scrollTop);
+if(final_scrollTop != 0){
+$(_obj).css({top: (final_scrollTop + _offsetHeight)});
+}
+}
+/* String replace &#39; with ' for dict */
+function stringSafeGet(str){
+return str.replace(new RegExp("&#39;", 'g'), "'");
+}
+var str_local_login_desc = stringSafeGet("<#374#>");
+var str_find_st = stringSafeGet("<#293#>");
+var str_HowFindPassword = stringSafeGet("<#294#>");
 

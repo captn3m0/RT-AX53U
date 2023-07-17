@@ -7,7 +7,7 @@
 <meta http-equiv="Expires" CONTENT="-1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="images/favicon.png">
-<title><#380#> - <#731#></title>
+<title><#394#> - <#748#></title>
 <link rel="stylesheet" href="../NM_style.css" type="text/css">
 <link rel="stylesheet" href="../form_style.css" type="text/css">
 <link rel="stylesheet" href="../css/networkMap.css" type="text/css">
@@ -24,7 +24,7 @@ var array_size = 46;
 var cpu_usage_array = new Array();
 var ram_usage_array = new Array();
 var color_table = ["#c6dafc", "#7baaf7", "#4285f4", "#3367d6"];
-var led_table = ["<#1517#>", "<#2990#>", "<#2648#>", "<#2280#>"];
+var led_table = ["<#1536#>", "<#3041#>", "<#2691#>", "<#2317#>"];
 $(document).ready(function(){
 if(system.INTELplatform){
 register_event();
@@ -86,7 +86,7 @@ variable = Object.assign(variable, nvram);
 function genElement(){
 var code = '';
 if(system.INTELplatform){
-code += '<div class="info-title"><#4152#></div>';
+code += '<div class="info-title"><#4251#></div>';
 code += '<div class="display-flex flex-a-center led-container">';
 code += '<div id="slider"></div>';
 code += '<div id="color_pad"></div>';
@@ -95,30 +95,30 @@ $('#led_field').html(code);
 code = ''; // initialize
 }
 var _lanIP = (variable.lan_ipaddr_t == '') ? variable.lan_ipaddr : variable.lan_ipaddr_t;
-code += '<div class="info-block"><div class="info-title"><#2504#></div><div class="info-content">'+ _lanIP +'</div></div>';
-code += '<div class="info-block"><div class="info-title"><#2895#></div><div class="info-content">'+ variable.secret_code +'</div></div>';
+code += '<div class="info-block"><div class="info-title"><#2545#></div><div class="info-content">'+ _lanIP +'</div></div>';
+code += '<div class="info-block"><div class="info-title"><#2942#></div><div class="info-content">'+ variable.secret_code +'</div></div>';
 if(variable.serial_no != ''){
-code += '<div class="info-block"><div class="info-title"><#3103#></div><div class="info-content">'+ variable.serial_no +'</div></div>';
+code += '<div class="info-block"><div class="info-title"><#3169#></div><div class="info-content">'+ variable.serial_no +'</div></div>';
 }
-code += '<div class="info-block"><div class="info-title">LAN <#367#></div><div class="info-content">'+ variable.lan_hwaddr +'</div></div>';
+code += '<div class="info-block"><div class="info-title">LAN <#381#></div><div class="info-content">'+ variable.lan_hwaddr +'</div></div>';
 if(system.band2gSupport){
-code += '<div class="info-block"><div class="info-title">2.4 GHz <#367#></div><div class="info-content">'+ variable.wl0_hwaddr +'</div></div>';
+code += '<div class="info-block"><div class="info-title">2.4 GHz <#381#></div><div class="info-content">'+ variable.wl0_hwaddr +'</div></div>';
 }
 if(system.triBandSupport){
 if(system.band6gSupport){
-code += '<div class="info-block"><div class="info-title">5 GHz <#367#></div><div class="info-content">'+ variable.wl1_hwaddr +'</div></div>';
-code += '<div class="info-block"><div class="info-title">6 GHz <#367#></div><div class="info-content">'+ variable.wl2_hwaddr +'</div></div>';
+code += '<div class="info-block"><div class="info-title">5 GHz <#381#></div><div class="info-content">'+ variable.wl1_hwaddr +'</div></div>';
+code += '<div class="info-block"><div class="info-title">6 GHz <#381#></div><div class="info-content">'+ variable.wl2_hwaddr +'</div></div>';
 }
 else{
-code += '<div class="info-block"><div class="info-title">5 GHz-1 <#367#></div><div class="info-content">'+ variable.wl1_hwaddr +'</div></div>';
-code += '<div class="info-block"><div class="info-title">5 GHz-2 <#367#></div><div class="info-content">'+ variable.wl2_hwaddr +'</div></div>';
+code += '<div class="info-block"><div class="info-title">5 GHz-1 <#381#></div><div class="info-content">'+ variable.wl1_hwaddr +'</div></div>';
+code += '<div class="info-block"><div class="info-title">5 GHz-2 <#381#></div><div class="info-content">'+ variable.wl2_hwaddr +'</div></div>';
 }
 }
 else{
-code += '<div class="info-block"><div class="info-title">5 GHz <#367#></div><div class="info-content">'+ variable.wl1_hwaddr +'</div></div>';
+code += '<div class="info-block"><div class="info-title">5 GHz <#381#></div><div class="info-content">'+ variable.wl1_hwaddr +'</div></div>';
 }
 if(system.band60gSupport){
-code += '<div class="info-block"><div class="info-title">LAN <#367#></div><div class="info-content">'+ variable.wl3_hwaddr +'</div></div>';
+code += '<div class="info-block"><div class="info-title">LAN <#381#></div><div class="info-content">'+ variable.wl3_hwaddr +'</div></div>';
 }
 $('#hw_information_field').html(code);
 if(system.yadnsSupport &&　parent.sw_mode == 1){
@@ -127,14 +127,14 @@ var yadns_enable = variable.yadns_enable_x;
 var yadns_mode = variable.yadns_mode;
 var yadns_clients = variable.yadns_clients;
 var mode = (yadns_enable != '0') ? yadns_mode : 4;
-var modeDesc = ['<#3987#>', '<#3989#>', '<#3991#>', '', '<#1518#>'];
-code += '<div class="division-block"><#3980#></div>';
+var modeDesc = ['<#4086#>', '<#4088#>', '<#4090#>', '', '<#1537#>'];
+code += '<div class="division-block"><#4079#></div>';
 code += '<div class="info-block"><div class="info-content">' + modeDesc[mode] +'</div></div>';
 for(var i=0; i<3; i++){
 if(yadns_enable != 0 && i != mode && yadns_clients[i]){
 code += '<div class="info-block">';
 code += '<div class="info-title">'+ modeDesc[i] +'</div>';
-code += '<div class="info-content"><#2130#> '+ yadns_clients[i] +'</div>';
+code += '<div class="info-content"><#2152#> '+ yadns_clients[i] +'</div>';
 code += '</div>';
 }
 }
@@ -250,7 +250,7 @@ setTimeout("detect_CPU_RAM();", 2000);
 }
 }
 function genCPUElement(){
-var code = '<div class="division-block"><#736#></div>';
+var code = '<div class="division-block"><#753#></div>';
 code += '<div>';
 for(i=0;i<core_num;i++){
 code += '<div class="display-flex flex-a-center info-block">';
@@ -292,13 +292,13 @@ code += '</svg>';
 $('#cpu_field').html(code);
 }
 function genRAMElement(){
-var code = '<div class="division-block"><#738#></div>';
+var code = '<div class="division-block"><#755#></div>';
 code += '<div>';
 code += '<div>';
 code += '<div class="display-flex flex-a-center ram-content">';
-code += '<div class="ram-text-width"><#739#></div>';
-code += '<div class="ram-text-width"><#740#></div>';
-code += '<div class="ram-text-width"><#741#></div>';
+code += '<div class="ram-text-width"><#756#></div>';
+code += '<div class="ram-text-width"><#757#></div>';
+code += '<div class="ram-text-width"><#758#></div>';
 code += '</div>';
 code += '<div class="display-flex flex-a-center ram-content">';
 code += '<div id="ram_used_info" class="ram-text-width"></div>';
@@ -360,7 +360,7 @@ var speedMapping = {
 'Q': '2.5 Gbps',
 'F': '5 Gbps',
 'T': '10 Gbps',
-'X': '<#735#>'
+'X': '<#752#>'
 };
 var parseArray = [];
 for (var prop in _array) {
@@ -393,11 +393,11 @@ $('#phy_ports').hide();
 return;
 }
 wanLanStatus = parseStrToArray(wanLanStatus);
-var code = '<div class="division-block"><#732#></div>';
+var code = '<div class="division-block"><#749#></div>';
 code += '<div>';
 code += '<div class="display-flex flex-a-center table-header">';
-code += '<div class="port-block-width table-content"><#733#></div>';
-code += '<div class="port-block-width table-content"><#731#></div>';
+code += '<div class="port-block-width table-content"><#750#></div>';
+code += '<div class="port-block-width table-content"><#748#></div>';
 code += '</div>';
 for(var i=0; i<wanLanStatus.length; i++){
 code += '<div class="display-flex flex-a-center table-body">';
@@ -413,15 +413,15 @@ setTimeout("get_ethernet_ports();", 3000);
 }
 function get_plc_ports() {
 if(based_modelid == "PL-AX56_XP4"){
-var code = '<div class="division-block"><#4227#></div>';
+var code = '<div class="division-block"><#4326#></div>';
 code += '<div>';
 code += '<div class="display-flex flex-a-center table-header">';
-code += '<div class="port-block-width table-content"><#731#></div>';
-code += '<div class="port-block-width table-content">Tx (<#2348#>)</div>';
-code += '<div class="port-block-width table-content">Rx (<#2348#>)</div>';
+code += '<div class="port-block-width table-content"><#748#></div>';
+code += '<div class="port-block-width table-content">Tx (<#2386#>)</div>';
+code += '<div class="port-block-width table-content">Rx (<#2386#>)</div>';
 code += '</div>';
 var autodet_plc_state = parseInt(httpApi.nvramGet(["autodet_plc_state"], true).autodet_plc_state);
-var status = "<#217#>";
+var status = "<#226#>";
 var tx = "--", rx = "--";
 if(autodet_plc_state >= 1){
 var autodet_plc_tx_mimo = httpApi.nvramGet(["autodet_plc_tx_mimo"], true).autodet_plc_tx_mimo;
@@ -457,8 +457,8 @@ location.href = targetPath;
 <body>
 <div class="main-block">
 <div class="display-flex flex-a-center">
-<div id="wireless_tab" class="tab-block" onclick="switchTab(this.id)"><#382#></div>
-<div id="status_tab" class="tab-block tab-click" onclick="switchTab(this.id)"><#731#></div>
+<div id="wireless_tab" class="tab-block" onclick="switchTab(this.id)"><#396#></div>
+<div id="status_tab" class="tab-block tab-click" onclick="switchTab(this.id)"><#748#></div>
 <div id="light_effect_tab" class="tab-block"style="display:none;" onclick="switchTab(this.id)">Aura RGB</div></div>
 <div id="cpu_field" class="unit-block"></div>
 <div id="ram_field" class="unit-block"></div>

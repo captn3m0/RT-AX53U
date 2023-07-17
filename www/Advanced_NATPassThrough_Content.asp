@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#842#> - NAT Pass-Through</title>
+<title><#860#> - NAT Pass-Through</title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script language="JavaScript" type="text/javascript" src="/state.js"></script>
@@ -117,61 +117,61 @@ document.form.submit();
 <tr>
 <td bgcolor="#4D595D" valign="top" >
 <div>&nbsp;</div>
-<div class="formfonttitle"><#393#> - <#426#></div>
+<div class="formfonttitle"><#407#> - <#440#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#2786#></div>
+<div class="formfontdesc"><#2830#></div>
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
-<th><#2787#></th>
+<th><#2831#></th>
 <td>
 <select name="fw_pt_pptp" class="input_option">
-<option class="content_input_fd" value="0" <% nvram_match("fw_pt_pptp", "0","selected"); %>><#1517#></option>
-<option class="content_input_fd" value="1"<% nvram_match("fw_pt_pptp", "1","selected"); %>><#3846#></option>
+<option class="content_input_fd" value="0" <% nvram_match("fw_pt_pptp", "0","selected"); %>><#1536#></option>
+<option class="content_input_fd" value="1"<% nvram_match("fw_pt_pptp", "1","selected"); %>><#3945#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th><#2781#></th>
+<th><#2825#></th>
 <td>
 <select name="fw_pt_l2tp" class="input_option">
-<option class="content_input_fd" value="0" <% nvram_match("fw_pt_l2tp", "0","selected"); %>><#1517#></option>
-<option class="content_input_fd" value="1"<% nvram_match("fw_pt_l2tp", "1","selected"); %>><#3846#></option>
+<option class="content_input_fd" value="0" <% nvram_match("fw_pt_l2tp", "0","selected"); %>><#1536#></option>
+<option class="content_input_fd" value="1"<% nvram_match("fw_pt_l2tp", "1","selected"); %>><#3945#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th><#2780#></th>
+<th><#2824#></th>
 <td>
 <select name="fw_pt_ipsec" class="input_option">
-<option class="content_input_fd" value="0" <% nvram_match("fw_pt_ipsec", "0","selected"); %>><#1517#></option>
-<option class="content_input_fd" value="1"<% nvram_match("fw_pt_ipsec", "1","selected"); %>><#3846#></option>
+<option class="content_input_fd" value="0" <% nvram_match("fw_pt_ipsec", "0","selected"); %>><#1536#></option>
+<option class="content_input_fd" value="1"<% nvram_match("fw_pt_ipsec", "1","selected"); %>><#3945#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th><#2788#></th>
+<th><#2832#></th>
 <td>
 <select name="fw_pt_rtsp" class="input_option">
-<option class="content_input_fd" value="0" <% nvram_match("fw_pt_rtsp", "0","selected"); %>><#1517#></option>
-<option class="content_input_fd" value="1"<% nvram_match("fw_pt_rtsp", "1","selected"); %>><#3846#></option>
+<option class="content_input_fd" value="0" <% nvram_match("fw_pt_rtsp", "0","selected"); %>><#1536#></option>
+<option class="content_input_fd" value="1"<% nvram_match("fw_pt_rtsp", "1","selected"); %>><#3945#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th><#2779#></th>
+<th><#2823#></th>
 <td>
 <select name="fw_pt_h323" class="input_option">
-<option class="content_input_fd" value="0" <% nvram_match("fw_pt_h323", "0","selected"); %>><#1517#></option>
-<option class="content_input_fd" value="1"<% nvram_match("fw_pt_h323", "1","selected"); %>><#3846#></option>
+<option class="content_input_fd" value="0" <% nvram_match("fw_pt_h323", "0","selected"); %>><#1536#></option>
+<option class="content_input_fd" value="1"<% nvram_match("fw_pt_h323", "1","selected"); %>><#3945#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th><#2789#></th>
+<th><#2833#></th>
 <td>
 <select name="fw_pt_sip" class="input_option" OnChange="update_sip_alg_mode_option();">
-<option class="content_input_fd" value="0" <% nvram_match("fw_pt_sip", "0","selected"); %>><#1517#></option>
-<option class="content_input_fd" value="1"<% nvram_match("fw_pt_sip", "1","selected"); %>><#3846#></option>
+<option class="content_input_fd" value="0" <% nvram_match("fw_pt_sip", "0","selected"); %>><#1536#></option>
+<option class="content_input_fd" value="1"<% nvram_match("fw_pt_sip", "1","selected"); %>><#3945#></option>
 </select>
 </td>
 </tr>
@@ -185,11 +185,11 @@ document.form.submit();
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,11);"><#2966#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(7,11);"><#3017#></a></th>
 <td>
 <select name="fw_pt_pppoerelay" class="input_option" onChange="update_pppoerelay_option();">
-<option class="content_input_fd" value="0" <% nvram_match("fw_pt_pppoerelay", "0","selected"); %>><#1517#></option>
-<option class="content_input_fd" value="1"<% nvram_match("fw_pt_pppoerelay", "1","selected"); %>><#3846#></option>
+<option class="content_input_fd" value="0" <% nvram_match("fw_pt_pppoerelay", "0","selected"); %>><#1536#></option>
+<option class="content_input_fd" value="1"<% nvram_match("fw_pt_pppoerelay", "1","selected"); %>><#3945#></option>
 </select>
 </td>
 </tr>
@@ -197,20 +197,20 @@ document.form.submit();
 <th id="pppoerelay_unit_th">PPPoE Relay interface</th>
 <td id="pppoerelay_unit_td">
 <select name="pppoerelay_unit" class="input_option">
-<option class="content_input_fd" value="0" <% nvram_match("pppoerelay_unit", "0","selected"); %>><#1859#></option>
-<option class="content_input_fd" value="1"<% nvram_match("pppoerelay_unit", "1","selected"); %>><#1866#></option>
+<option class="content_input_fd" value="0" <% nvram_match("pppoerelay_unit", "0","selected"); %>><#1881#></option>
+<option class="content_input_fd" value="1"<% nvram_match("pppoerelay_unit", "1","selected"); %>><#1888#></option>
 </select>
 </td>
 </tr>
 <tr>
-<th><#2128#><div class="setup_info_icon" style="display:none;"></div></th>
+<th><#2150#><div class="setup_info_icon" style="display:none;"></div></th>
 <td>
 <input type="text" maxlength="5" id="vts_ftpport" name="vts_ftpport" class="input_6_table" value="<% nvram_get("vts_ftpport"); %>" onkeypress="return validator.isNumber(this,event);" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 </table>
 <div class="apply_gen">
-<input class="button_gen" onclick="applyRule()" type="button" value="<#196#>"/>
+<input class="button_gen" onclick="applyRule()" type="button" value="<#203#>"/>
 </div>
 </td>
 </tr>

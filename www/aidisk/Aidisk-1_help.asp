@@ -15,7 +15,7 @@
 <tbody>
 <tr>
 <td valign="top">
-<a href="../Advanced_AiDisk_ftp.asp" target="_parent" hidefocus="true"><#399#></a>: <#968#>
+<a href="../Advanced_AiDisk_ftp.asp" target="_parent" hidefocus="true"><#413#></a>: <#986#>
 </td>
 </tr>
 </tbody>

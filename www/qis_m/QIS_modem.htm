@@ -52,7 +52,7 @@ break;
 if(dualwan_set)
 document.form.action_script.disabled = true;
 if(gobi_support){
-document.getElementById("page_desc").innerHTML = "<#2662#>"
+document.getElementById("page_desc").innerHTML = "<#2705#>"
 document.getElementById("adapter_type").style.display = "none";
 }
 }
@@ -80,7 +80,7 @@ document.form.http_passwd.disabled = false;
 }
 if(pin_opt && document.form.modem_pincode.value != ""){
 if(document.form.modem_pincode.value.search(/^\d{4,8}$/)==-1) {
-alert("<#2480#>");
+alert("<#2521#>");
 return;
 }
 }
@@ -117,7 +117,7 @@ dataType: 'script',
 error: function(xhr, textStatus){
 --RetryCountDown_fail;
 if(RetryCountDown_fail < 1){
-alert("<#217#>!");
+alert("<#226#>!");
 refreshpage();
 }
 else
@@ -133,7 +133,7 @@ connVerify("3");
 else{
 --RetryCountDown_fail;
 if(RetryCountDown_fail < 1){
-document.getElementById("retryCount").innerHTML = '<input type="button" value="<#201#>" class="button_gen" onclick="RetryCountDown_fail=10;detect3GConn();">';
+document.getElementById("retryCount").innerHTML = '<input type="button" value="<#208#>" class="button_gen" onclick="RetryCountDown_fail=10;detect3GConn();">';
 connVerify("2");
 }
 else{
@@ -266,7 +266,7 @@ modemlist = new Array(
 free_options(document.getElementById("shown_modems"));
 for(var i = 0; i < modemlist.length; i++){
 if(modemlist[i] == "AUTO")
-document.getElementById("shown_modems").options[i] = new Option("<#153#>", modemlist[i]);
+document.getElementById("shown_modems").options[i] = new Option("<#160#>", modemlist[i]);
 else
 document.getElementById("shown_modems").options[i] = new Option(modemlist[i], modemlist[i]);
 if(modemlist[i] == modem)
@@ -281,7 +281,7 @@ modemlist = new Array(
 free_options(document.getElementById("shown_modems"));
 for(var i = 0; i < modemlist.length; i++){
 if(modemlist[i] == "AUTO")
-document.getElementById("shown_modems").options[i] = new Option("<#153#>", modemlist[i]);
+document.getElementById("shown_modems").options[i] = new Option("<#160#>", modemlist[i]);
 else
 document.getElementById("shown_modems").options[i] = new Option(modemlist[i], modemlist[i]);
 if(modemlist[i] == modem)
@@ -410,7 +410,7 @@ document.form.modem_isp.options.length = document.form.modem_isp.options.length 
 if(document.form.modem_isp.options.length > 0)
 continue;
 else{
-alert("<#2287#>");
+alert("<#2325#>");
 document.form.modem_country.focus();
 document.form.modem_country.selectedIndex = countrylist.length-1;
 break;
@@ -625,18 +625,18 @@ color:#FFF;
 }
 </style>
 <div>
-<div style="font-size:1em;padding:10px 0 10px 15px;text-align:left;"><#403#></div>
-<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#2286#></div>
+<div style="font-size:1em;padding:10px 0 10px 15px;text-align:left;"><#417#></div>
+<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#2324#></div>
 <div style="margin:1px 27px 10px 15px">
 <select name="modem_country" tabindex="3" onchange="switch_modem_mode(document.form.modem_enable_option.value);reloadProfile();"><option>2222</option></select>
 </div>
 <div id="modem_isp_div">
-<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#2297#></div>
+<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#2335#></div>
 <div style="margin:1px 27px 10px 15px">
 <select id="modem_isp" name="modem_isp" tabindex="4" onchange="show_APN_list();"></select>
 </div>
 </div>
-<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#403#></div>
+<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#417#></div>
 <div style="margin:1px 27px 10px 15px">
 <select name="modem_enable_option" id="modem_enable_option" tabindex="5" onchange="switch_modem_mode(this.value);reloadProfile();">
 <option value="1" <% nvram_match("modem_enable", "1", "selected"); %>>WCDMA (UMTS)</option>
@@ -646,34 +646,34 @@ color:#FFF;
 </select>
 </div>
 <div id="modem_apn_div">
-<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#2302#></div>
+<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#2340#></div>
 <div style="margin:1px 27px 10px 15px">
 <input id="modem_apn" name="modem_apn" type="text" tabindex="6" value="" style="width:100%;height:30px;padding-left:9px;font-size:0.9em;color:#9BA7B1;background-color:rgba(28,28,28,1);border:1px solid #43474B" autocomplete="off" autocorrect="off" autocapitalize="off"/>
 </div>
-<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="display:none;position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#3094#>" onmouseover="over_var=1;" onmouseout="over_var=0;">
+<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="display:none;position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="<#3160#>" onmouseover="over_var=1;" onmouseout="over_var=0;">
 <div id="ClientList_Block_PC" class="ClientList_Block_PC"></div>
 </div>
 <div id="modem_dialnum_div">
-<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#2289#></div>
+<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#2327#></div>
 <div style="margin:1px 27px 10px 15px">
 <input id="modem_dialnum" name="modem_dialnum" type="text" tabindex="7" style="width:100%;height:30px;padding-left:9px;font-size:0.9em;color:#9BA7B1;background-color:rgba(28,28,28,1);border:1px solid #43474B" autocorrect="off" autocapitalize="off"/>
 </div>
 </div>
 <div id="modem_pincode_div">
-<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#2895#></div>
+<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#2942#></div>
 <div style="margin:1px 27px 10px 15px">
 <input id="modem_pincode" name="modem_pincode" type="password" tabindex="8" value="<% nvram_get("modem_pincode"); %>" style="width:100%;height:30px;padding-left:9px;font-size:0.9em;color:#9BA7B1;background-color:rgba(28,28,28,1);border:1px solid #43474B" maxlength="8" autocomplete="off" autocorrect="off" autocapitalize="off"/>
-<br><span id="pincode_status" style="display:none;"><#476#></span>
+<br><span id="pincode_status" style="display:none;"><#492#></span>
 </div>
 </div>
 <div id="modem_user_div">
-<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#3500#></div>
+<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#3571#></div>
 <div style="margin:1px 27px 10px 15px">
 <input id="modem_user" name="modem_user" type="text" tabindex="9" value="<% nvram_get("modem_user"); %>" onkeyup="Sync_2ghz(2);" style="width:100%;height:30px;padding-left:9px;font-size:0.9em;color:#9BA7B1;background-color:rgba(28,28,28,1);border:1px solid #43474B" autocomplete="off" autocorrect="off" autocapitalize="off"/>
 </div>
 </div>
 <div id="modem_pass_div">
-<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#481#></div>
+<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#497#></div>
 <div style="margin:1px 27px 10px 15px">
 <input id="modem_pass" name="modem_pass" type="password" tabindex="10" value="<% nvram_get("modem_pass"); %>" style="width:100%;height:30px;padding-left:9px;font-size:0.9em;color:#9BA7B1;background-color:rgba(28,28,28,1);border:1px solid #43474B" autocomplete="off" autocorrect="off" autocapitalize="off"/>
 </div>
@@ -684,38 +684,38 @@ color:#FFF;
 <input id="modem_ttlsid" name="modem_ttlsid" type="text" tabindex="11" value="<% nvram_get("modem_ttlsid"); %>" style="width:100%;height:30px;padding-left:9px;font-size:0.9em;color:#9BA7B1;background-color:rgba(28,28,28,1);border:1px solid #43474B">
 </div>
 </div>
-<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#2303#></div>
+<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#2341#></div>
 <div style="margin:1px 27px 10px 15px;margin-bottom:150px;">
 <select name="Dev3G" id="shown_modems" class="input_option" disabled="disabled"></select>
 </div>
 <div id="Conn3GRetry" style="display:none">
-<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#679#></div>
+<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#696#></div>
 <div id="retryCount" style="margin:1px 27px 10px 15px"></div>
 </div>
 <div id="Conn3GFail" style="display:none">
-<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#2284#></div>
+<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#2322#></div>
 <div style="position:fixed;bottom:36px;width:100%;height:50px;background:rgb(34,34,34);z-index:2;">
 <div style="width:100%;height:100%;display:table" id="resetField">
 <div id="skipButton" style="display:table-cell;width:50%;vertical-align:middle;text-align:center;" onclick="reset3G();">
-<div style="font-size:1em;color:#7E8593"><#1669#></div>
+<div style="font-size:1em;color:#7E8593"><#1691#></div>
 </div>
 <div id="nextButton" style="display:table-cell;width:50%;vertical-align:middle;text-align:center;background-color:#279FD9" onclick="goWireless();">
-<div style="font-size:1em;color:#FFF;"><#1669#></div>
+<div style="font-size:1em;color:#FFF;"><#1691#></div>
 </div>
 </div>
 </div>
 </div>
 <div id="IpConflict" style="display:none;">
-<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#817#></div>
-<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#800#>&nbsp;<b id="newIp"></b></div>
-<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#801#></div>
+<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#834#></div>
+<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#817#>&nbsp;<b id="newIp"></b></div>
+<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#818#></div>
 <div style="position:fixed;bottom:36px;width:100%;height:50px;background:rgb(34,34,34);z-index:2;">
 <div style="width:100%;height:100%;display:table">
 <div id="skipButton" style="display:table-cell;width:50%;vertical-align:middle;text-align:center;" onclick="goWireless();">
-<div style="font-size:1em;color:#7E8593"><#210#></div>
+<div style="font-size:1em;color:#7E8593"><#217#></div>
 </div>
 <div id="nextButton" style="display:table-cell;width:50%;vertical-align:middle;text-align:center;background-color:#279FD9" onclick="document.getElementById('loadingIcon_IpConflict').style.display='';send_setting();">
-<div style="font-size:1em;color:#FFF;"><#204#></div>
+<div style="font-size:1em;color:#FFF;"><#211#></div>
 </div>
 <div><img id="loadingIcon_IpConflict" style="display:none;" src="/images/InternetScan.gif"> </div>
 </div>
@@ -724,15 +724,15 @@ color:#FFF;
 <div style="position:fixed;bottom:36px;width:100%;height:50px;background:rgb(34,34,34);z-index:2;">
 <div style="width:100%;height:100%;display:table">
 <div id="skipButton" style="display:table-cell;width:50%;vertical-align:middle;text-align:center;" onclick="goWireless();">
-<div style="font-size:1em;color:#7E8593"><#210#></div>
+<div style="font-size:1em;color:#7E8593"><#217#></div>
 </div>
 <div id="nextButton" style="display:table-cell;width:50%;vertical-align:middle;text-align:center;background-color:#279FD9" onclick="submitForm();">
-<div style="font-size:1em;color:#FFF;"><#204#></div>
+<div style="font-size:1em;color:#FFF;"><#211#></div>
 </div>
 </div>
 <img id="loadingIcon" style="display:none;" src="/images/InternetScan.gif">
-<span id="loadingNote" style="display:none;"><#421#></span>
-<span id="loadingNote1m" style="display:none;"><#422#></span>
+<span id="loadingNote" style="display:none;"><#435#></span>
+<span id="loadingNote1m" style="display:none;"><#436#></span>
 </div>
 </div>
 </form>

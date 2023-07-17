@@ -7,7 +7,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#842#> - WireGuard Server</title>
+<title><#860#> - WireGuard Server</title>
 <link rel="stylesheet" href="index_style.css">
 <link rel="stylesheet" href="form_style.css">
 <script type="text/javascript" src="/state.js"></script>
@@ -110,7 +110,7 @@ $('#wgs_QRCode_block').hide();
 <table id="WgcBasicTable" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable">
 <thead>
 <tr>
-<td colspan="2"><#3281#></td>
+<td colspan="2"><#3351#></td>
 </tr>
 </thead>
 <tr id="wgs_unit_field" class="rept ew">
@@ -124,29 +124,29 @@ $('#wgs_QRCode_block').hide();
 <tr id="wgs_enable">
 <th>Enable WireGuard</th>
 <td>
-<input type="radio" value="1" name="wgs_enable" class="input" <% nvram_match("wgs_enable", "1", "checked"); %>><#187#></input>
-<input type="radio" value="0" name="wgs_enable" class="input" <% nvram_match("wgs_enable", "0", "checked"); %>><#186#></input>
+<input type="radio" value="1" name="wgs_enable" class="input" <% nvram_match("wgs_enable", "1", "checked"); %>><#194#></input>
+<input type="radio" value="0" name="wgs_enable" class="input" <% nvram_match("wgs_enable", "0", "checked"); %>><#193#></input>
 </td>
 </tr>
 <tr id="wgs_dns">
 <th>Allow DNS</th>
 <td>
-<input type="radio" value="1" name="wgs_dns" class="input" <% nvram_match("wgs_dns", "1", "checked"); %>><#187#></input>
-<input type="radio" value="0" name="wgs_dns" class="input" <% nvram_match("wgs_dns", "0", "checked"); %>><#186#></input>
+<input type="radio" value="1" name="wgs_dns" class="input" <% nvram_match("wgs_dns", "1", "checked"); %>><#194#></input>
+<input type="radio" value="0" name="wgs_dns" class="input" <% nvram_match("wgs_dns", "0", "checked"); %>><#193#></input>
 </td>
 </tr>
 <tr id="wgs_nat6">
 <th>IPv6 NAT</th>
 <td>
-<input type="radio" value="1" name="wgs_nat6" class="input" <% nvram_match("wgs_nat6", "1", "checked"); %>><#187#></input>
-<input type="radio" value="0" name="wgs_nat6" class="input" <% nvram_match("wgs_nat6", "0", "checked"); %>><#186#></input>
+<input type="radio" value="1" name="wgs_nat6" class="input" <% nvram_match("wgs_nat6", "1", "checked"); %>><#194#></input>
+<input type="radio" value="0" name="wgs_nat6" class="input" <% nvram_match("wgs_nat6", "0", "checked"); %>><#193#></input>
 </td>
 </tr>
 <tr id="wgs_psk">
 <th>Use Preshared Key</th>
 <td>
-<input type="radio" value="1" name="wgs_psk" class="input" <% nvram_match("wgs_psk", "1", "checked"); %>><#187#></input>
-<input type="radio" value="0" name="wgs_psk" class="input" <% nvram_match("wgs_psk", "0", "checked"); %>><#186#></input>
+<input type="radio" value="1" name="wgs_psk" class="input" <% nvram_match("wgs_psk", "1", "checked"); %>><#194#></input>
+<input type="radio" value="0" name="wgs_psk" class="input" <% nvram_match("wgs_psk", "0", "checked"); %>><#193#></input>
 </td>
 </tr>
 <tr>
@@ -213,8 +213,8 @@ $('#wgs_QRCode_block').hide();
 <tr id="wgsc_enable">
 <th>Enable Client</th>
 <td>
-<input type="radio" value="1" name="wgsc_enable" class="input" <% nvram_match("wgsc_enable", "1", "checked"); %>><#187#></input>
-<input type="radio" value="0" name="wgsc_enable" class="input" <% nvram_match("wgsc_enable", "0", "checked"); %>><#186#></input>
+<input type="radio" value="1" name="wgsc_enable" class="input" <% nvram_match("wgsc_enable", "1", "checked"); %>><#194#></input>
+<input type="radio" value="0" name="wgsc_enable" class="input" <% nvram_match("wgsc_enable", "0", "checked"); %>><#193#></input>
 </td>
 </tr>
 <tr>
@@ -244,7 +244,7 @@ $('#wgs_QRCode_block').hide();
 <tr id="wg_export_setting" style="display:none">
 <th>Export configuration file</th>
 <td>
-<input class="button_gen" type="button" value="<#1520#>" onClick="exportConfig();"/>
+<input class="button_gen" type="button" value="<#1539#>" onClick="exportConfig();"/>
 <input class="button_gen" type="button" value="QR Code" onClick="showQRCode();"/>
 </td>
 </tr>
@@ -256,7 +256,7 @@ $('#wgs_QRCode_block').hide();
 <img src='wgs_client.png'></img>
 </div>
 <div class="apply_gen" id="apply_btn">
-<input class="button_gen" onclick="applyRule();" type="button" value="<#196#>"/>
+<input class="button_gen" onclick="applyRule();" type="button" value="<#203#>"/>
 </div>
 <table id="WgsLogTable" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" class="FormTable" style="display:none">
 <tr>
@@ -265,7 +265,7 @@ $('#wgs_QRCode_block').hide();
 <textarea class="textarea_ssh_table" style="width:99%; font-family:'Courier New', Courier, mono; font-size:13px;" cols="63" rows="25" readonly="readonly" wrap=off><% nvram_dump("wgs.log",""); %></textarea>
 </div>
 <div class="apply_gen">
-<input type="button" onClick="location.reload();" value="<#1668#>" class="button_gen">
+<input type="button" onClick="location.reload();" value="<#1690#>" class="button_gen">
 </div>
 </td>
 </tr>

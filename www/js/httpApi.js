@@ -314,6 +314,9 @@ $.get("/appGet.cgi?hook=start_force_autodet()");
 "startDSLAutoDet": function(){
 $.get("/appGet.cgi?hook=start_dsl_autodet()");
 },
+"startWan46AutoDet": function(){
+$.get("/appGet.cgi?hook=restart_auto46det()");
+},
 "detwanGetRet": function(){
 var wanInfo = httpApi.nvramGet(["wan0_state_t", "wan0_sbstate_t", "wan0_auxstate_t", "autodet_state", "autodet_auxstate", "wan0_proto",
 "link_internet", "x_Setting", "usb_modem_act_sim", "link_wan"], true);
@@ -539,10 +542,51 @@ retData.wanType = wanTypeList.check;
 }
 return retData;
 },
+"detwan46GetRet": function(){
+var wanInfo = httpApi.nvramGet(["wan46det_state","link_internet","x_Setting","link_wan"], true);
+var wanTypeList = {
+"init":"INITIALIZING",
+"nolink":"NOLINK",
+"unknow":"UNKNOW",
+"v6plus":"V6PLUS",
+"hgw_v6plus":"HGW_V6PLUS",
+"ocnvc":"OCNVC"
+}
+var retData = {
+"wan46State": "",
+"isError": false
+};
+if(wanInfo.isError){
+retData.wan46State = wanTypeList.init;
+retData.isError = true;
+}
+else if(wanInfo.link_wan == "0"){
+retData.wan46State = wanTypeList.nolink;
+}
+else if(wanInfo.wan46det_state == "0"){
+retData.wan46State = wanTypeList.init;
+}
+else if(wanInfo.wan46det_state == "1"){
+retData.wan46State = wanTypeList.nolink;
+}
+else if(wanInfo.wan46det_state == "2"){
+retData.wan46State = wanTypeList.unknow;
+}
+else if(wanInfo.wan46det_state == "3"){
+retData.wan46State = wanTypeList.v6plus;
+}
+else if(wanInfo.wan46det_state == "4"){
+retData.wan46State = wanTypeList.hgw_v6plus;
+}
+else if(wanInfo.wan46det_state == "5"){
+retData.wan46State = wanTypeList.ocnvc;
+}
+return retData;
+},
 "getWanInfo": function(_index){
 var connect_proto_array = {
-"dhcp": "<#167#>",
-"static": "<#168#>",
+"dhcp": "<#174#>",
+"static": "<#175#>",
 "pppoe": "PPPoE",
 "pptp": "PPTP",
 "l2tp": "L2TP",
@@ -550,8 +594,8 @@ var connect_proto_array = {
 "ipoa": "IPoA",
 "lw4o6": "LW 4over6",
 "map-e": "MAP-E",
-"v6plus": "<#2448#>",
-"ocnvc": "<#2447#>",
+"v6plus": "<#2486#>",
+"ocnvc": "<#2485#>",
 "usb modem": "USB Modem"
 };
 var result = {
@@ -561,25 +605,31 @@ var result = {
 "proto": "",
 "proto_text": ""
 };
+var wans_info = httpApi.nvramGet(["wans_dualwan", "wans_mode"], true);
+var dualwan_enabled = (isSupport("dualwan") && wans_info.wans_dualwan.search("none") == -1) ? 1 : 0;
+var active_wan_unit = httpApi.hookGet("get_wan_unit", true);
 var wan_index = (_index == undefined) ? 0 : _index;
 if(dualwan_enabled){
-if(active_wan_unit != wan_index && (wans_mode == "fo" || wans_mode == "fb")){
+if(active_wan_unit != wan_index && (wans_info.wans_mode == "fo" || wans_info.wans_mode == "fb")){
 result.status = "standby";
-result.status_text = "<#3211#>";
+result.status_text = "<#3277#>";
 }
 else{//lb
 result.status = (httpApi.isConnected(wan_index)) ? "connected" : "disconnected";
-result.status_text = (result.status == "connected") ? "<#189#>" : "<#217#>";
+result.status_text = (result.status == "connected") ? "<#196#>" : "<#226#>";
 }
 }
 else{
 result.status = (httpApi.isConnected(wan_index)) ? "connected" : "disconnected";
-result.status_text = (result.status == "connected") ? "<#189#>" : "<#217#>";
+result.status_text = (result.status == "connected") ? "<#196#>" : "<#226#>";
 }
 if(result.status == "connected"){
 var wanInfo = httpApi.nvramGet(["wan" + wan_index + "_ipaddr", "wan" + wan_index + "_proto"], true);
 result.ipaddr = wanInfo["wan" + wan_index + "_ipaddr"];
 result.proto = wanInfo["wan" + wan_index + "_proto"];
+if(isSupport("usbX") && wans_info.wans_dualwan.split(" ")[wan_index] == "usb"){
+result.proto = "USB Modem";
+}
 if(isSupport("dsl")){
 if(wans_info.wans_dualwan.split(" ")[wan_index] == "dsl"){
 var dslInfo = httpApi.nvramGet(["dsl0_proto", "dslx_transmode"], true);
@@ -594,7 +644,7 @@ var proto_text = connect_proto_array[(result.proto).toLowerCase()];
 result.proto_text = ((proto_text != undefined) ? proto_text : result.proto);
 if(isSupport("gobi") && result.proto == "USB Modem"){
 var modem_operation = httpApi.nvramGet(["usb_modem_act_operation"], true).usb_modem_act_operation;
-result.proto_text = ((modem_operation != "") ? modem_operation : "<#2744#>");
+result.proto_text = ((modem_operation != "") ? modem_operation : "<#2788#>");
 }
 }
 }
@@ -756,23 +806,23 @@ $.get("/update_wlanlog.cgi");
 var retData = {
 "GAME_BOOST": {
 "value": 3,
-"text": "<#4157#>",
-"desc": "<#4173#>"
+"text": "<#4256#>",
+"desc": "<#4272#>"
 },
 "ACS_DFS": {
 "value": 1,
-"text": "<#3814#>",
-"desc": "<#4175#>"
+"text": "<#3913#>",
+"desc": "<#4274#>"
 },
 "LED": {
 "value": 0,
-"text": "<#4178#>",
-"desc": "<#4179#>"
+"text": "<#4277#>",
+"desc": "<#4278#>"
 },
 "AURA_RGB": {
 "value": 2,
-"text": "<#4158#>",
-"desc": "<#4159#>"
+"text": "<#4257#>",
+"desc": "<#4258#>"
 }
 };
 var productid = httpApi.nvramGet(["productid"]).productid;
@@ -781,13 +831,13 @@ delete retData.LED;
 delete retData.AURA_RGB;
 retData.AURA_SHUFFLE = {
 "value": 4,
-"text": "<#4160#>",
-"desc": "<#4161#>"
+"text": "<#4259#>",
+"desc": "<#4260#>"
 }
 retData.GEFORCE_NOW = {
 "value": 5,
-"text": "<#4176#>",
-"desc": "<#4177#>"
+"text": "<#4275#>",
+"desc": "<#4276#>"
 }
 }
 var sw_mode = (window.hasOwnProperty("qisPostData") && qisPostData.hasOwnProperty("sw_mode")) ? qisPostData.sw_mode : httpApi.nvramGet(["sw_mode"]).sw_mode;
@@ -824,9 +874,9 @@ var wlc_psta_state = httpApi.hookGet("wlc_psta_state", true);
 if(wlc_psta_state.wlc_state == "1" && wlc_psta_state.wlc_state_auth == "0")
 papStatus = get_ssid(_band);
 else if(wlc_psta_state.wlc_state == "2" && wlc_psta_state.wlc_state_auth == "1")
-papStatus = "<#100#>";
+papStatus = "<#106#>";
 else
-papStatus = "<#217#>";
+papStatus = "<#226#>";
 }
 else{
 var wlc_state = "0";
@@ -836,16 +886,16 @@ else
 wlc_state = httpApi.nvramGet(["wlc" + _band + "_state"])["wlc" + _band + "_state"];
 switch(wlc_state){
 case "0":
-papStatus = "<#217#>";
+papStatus = "<#226#>";
 break;
 case "1":
-papStatus = "<#100#>";
+papStatus = "<#106#>";
 break;
 case "2":
 papStatus = get_ssid(_band);
 break;
 default:
-papStatus = "<#217#>";
+papStatus = "<#226#>";
 break;
 }
 }
@@ -1073,7 +1123,7 @@ else
 return parseInt(enable_ftp);
 }
 },
-hint : "<#2404#>\n<#2405#>"
+hint : "<#2442#>\n<#2443#>"
 },
 port_forwarding : {
 enabled : function(){
@@ -1123,7 +1173,7 @@ break break_loop;
 }
 return state;
 },
-hint : "<#2404#>\n<#2406#>"
+hint : "<#2442#>\n<#2444#>"
 },
 conflict : function(){
 return (httpApi.ftp_port_conflict_check.usb_ftp.enabled() && httpApi.ftp_port_conflict_check.port_forwarding.enabled()) ? true : false;

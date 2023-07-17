@@ -7,7 +7,7 @@
 <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
-<link rel="icon" href="images/favicon.png"><title><#842#> - <#379#></title>
+<link rel="icon" href="images/favicon.png"><title><#860#> - <#393#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="usp_style.css">
@@ -64,7 +64,7 @@ $("#Link_to_ParentalCtrl").attr("href", "ParentalControl.asp");
 <table width="730px">
 <tr>
 <td align="left">
-<span class="formfonttitle"><#1287#></span>
+<span class="formfonttitle"><#1305#></span>
 </td>
 </tr>
 </table>
@@ -76,7 +76,7 @@ $("#Link_to_ParentalCtrl").attr("href", "ParentalControl.asp");
 </tr>
 <tr>
 <td>
-<div class="formfontdesc" style="font-size:14px;"><#1195#></div>
+<div class="formfontdesc" style="font-size:14px;"><#1213#></div>
 </td>
 </tr>
 <tr>
@@ -90,13 +90,13 @@ $("#Link_to_ParentalCtrl").attr("href", "ParentalControl.asp");
 </td>
 <td class="app_table_radius_right" style="width:350px;height:120px;">
 <div class="app_name">
-<a style="text-decoration: underline;" href="AiProtection_HomeProtection.asp"><#1240#></a>
+<a style="text-decoration: underline;" href="AiProtection_HomeProtection.asp"><#1258#></a>
 </div>
 <div class="app_desc" style="height:60px;white-space:nowrap;">
-<li><#1245#></li>
-<li><#1284#></li>
-<li><#1305#></li>
-<li><#1197#></li>
+<li><#1263#></li>
+<li><#1302#></li>
+<li><#1323#></li>
+<li><#1215#></li>
 </div>
 </td>
 </tr>
@@ -107,12 +107,12 @@ $("#Link_to_ParentalCtrl").attr("href", "ParentalControl.asp");
 </td>
 <td class="app_table_radius_right" style="width:350px;height:120px;">
 <div class="app_name">
-<a id="Link_to_ParentalCtrl" style="text-decoration: underline;" href="AiProtection_WebProtector.asp"><#468#></a>
+<a id="Link_to_ParentalCtrl" style="text-decoration: underline;" href="AiProtection_WebProtector.asp"><#482#></a>
 </div>
 <div class="app_desc" style="height:60px;">
-<li id="item_time_scheduling"><#3288#></li>
-<li id="item_filter"><#1210#></li>
-<li id="item_yandex" style="display:none;"><#3980#></li>
+<li id="item_time_scheduling"><#3358#></li>
+<li id="item_filter"><#1228#></li>
+<li id="item_yandex" style="display:none;"><#4079#></li>
 </div>
 </td>
 </tr>

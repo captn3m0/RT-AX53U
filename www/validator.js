@@ -14,23 +14,23 @@ account: function(string_obj, flag){
 var invalid_char = "";
 if(string_obj.value.charAt(0) == ' '){
 if(flag != "noalert")
-alert('<#342#> [ ]');
+alert('<#354#> [ ]');
 string_obj.value = "";
 string_obj.focus();
 if(flag != "noalert")
 return false;
 else
-return '<#342#> [&nbsp;&nbsp;&nbsp;]';
+return '<#354#> [&nbsp;&nbsp;&nbsp;]';
 }
 else if(string_obj.value.charAt(0) == '-'){
 if(flag != "noalert")
-alert('<#342#> [-]');
+alert('<#354#> [-]');
 string_obj.value = "";
 string_obj.focus();
 if(flag != "noalert")
 return false;
 else
-return '<#342#> [-]';
+return '<#354#> [-]';
 }
 for(var i = 0; i < string_obj.value.length; ++i){
 if(this.ssidChar(string_obj.value.charCodeAt(i))){
@@ -59,13 +59,13 @@ invalid_char = invalid_char+string_obj.value.charAt(i);
 }
 if(invalid_char != ""){
 if(flag != "noalert")
-alert("<#343#> ' "+invalid_char+" ' !");
+alert("<#355#> ' "+invalid_char+" ' !");
 string_obj.value = "";
 string_obj.focus();
 if(flag != "noalert")
 return false;
 else
-return "<#343#> ' "+invalid_char+" ' !";
+return "<#355#> ' "+invalid_char+" ' !";
 }
 if(flag != "noalert")
 return true;
@@ -112,7 +112,7 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_ip_input");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_ip_input").innerHTML="<#334#>";
+document.getElementById("check_ip_input").innerHTML="<#346#>";
 document.getElementById("check_ip_input").style.display = "";
 obj.value = obj.parentNode.childNodes[0].innerHTML;
 obj.focus();
@@ -144,7 +144,7 @@ return len;
 }
 var validateRange = function(v){
 if(v.value < 0 || v.value >= 256){
-alert(v.value+" <#159#>. \n<#160#> 0<#161#>255.");
+alert(v.value+" <#166#>. \n<#167#> 0<#168#>255.");
 v.focus();
 v.select();
 return false;
@@ -237,7 +237,7 @@ moveLeft_key = 0;
 }
 else{
 if(isNaN(s) && s.length >= 1 && sk != 13){
-alert("<#354#>");
+alert("<#366#>");
 o.focus();
 o.select();
 return false;
@@ -250,7 +250,7 @@ return false;
 },
 eachPort: function(o, num, min, max) {
 if(num<min || num>max) {
-alert(num + " <#335#>");
+alert(num + " <#347#>");
 return false;
 }
 else {
@@ -298,7 +298,7 @@ if(re.test(obj.value)){
 return "";
 }
 else{
-return "<#2490#>";
+return "<#2531#>";
 }
 },
 host_name: function(obj){
@@ -306,14 +306,14 @@ var re = new RegExp(/^[a-z0-9][a-z0-9-_]+$/i);
 if(re.test(obj.value))
 return "";
 else
-return "<#361#>";
+return "<#375#>";
 },
 samba_name: function(obj){
 var re = new RegExp(/^[a-z0-9][a-z0-9-_]*$/i);
 if(re.test(obj.value))
 return "";
 else
-return "<#2491#> <#2492#>";
+return "<#2532#> <#2533#>";
 },
 friendly_name: function(obj){
 var invalid_char = "";
@@ -322,7 +322,7 @@ if(obj.value.charAt(i) < ' ' || obj.value.charAt(i) > '~')
 invalid_char = invalid_char+obj.value.charAt(i);
 }
 if(invalid_char != "")
-return "<#343#> '"+invalid_char+"' !";
+return "<#355#> '"+invalid_char+"' !";
 else
 return "";
 },
@@ -331,7 +331,7 @@ var re = new RegExp(/^[a-z][a-z0-9-]*$/i);
 if(re.test(obj.value))
 return "";
 else
-return "<#2493#> <#2494#>";
+return "<#2534#> <#2535#>";
 },
 requireWANIP: function(v){
 if(v == 'wan_ipaddr_x' || v == 'wan_netmask_x' ||
@@ -355,7 +355,7 @@ else return 0;
 },
 isEmpty: function(obj) {
 if(obj.value.trim() == "") {
-alert("<#320#>");
+alert("<#332#>");
 obj.focus();
 return false;
 }
@@ -616,7 +616,7 @@ obj_name.value = ipFilterZero(ip_obj.value);
 return true;
 }
 else if(ip_num > B_class_start && ip_num < B_class_end){
-alert(ip_obj.value+" <#334#>");
+alert(ip_obj.value+" <#346#>");
 ip_obj.focus();
 ip_obj.select();
 return false;
@@ -626,7 +626,7 @@ obj_name.value = ipFilterZero(ip_obj.value);
 return true;
 }
 else{
-alert(ip_obj.value+" <#334#>");
+alert(ip_obj.value+" <#346#>");
 ip_obj.focus();
 ip_obj.select();
 return false;
@@ -716,7 +716,7 @@ return true;
 }
 }
 else if(ip_num > B_class_start && ip_num < B_class_end){
-alert(ip_mask_array[0]+" <#334#>");
+alert(ip_mask_array[0]+" <#346#>");
 ip_obj.focus();
 ip_obj.select();
 return false;
@@ -728,7 +728,7 @@ return true;
 }
 }
 else{
-alert(ip_mask_array[0]+" <#334#>");
+alert(ip_mask_array[0]+" <#346#>");
 ip_obj.focus();
 ip_obj.select();
 return false;
@@ -741,7 +741,7 @@ return true;
 }
 else{
 if(flag != 1){ //1: mute
-alert(obj.value+" <#334#>");
+alert(obj.value+" <#346#>");
 obj.focus();
 obj.select();
 }
@@ -820,7 +820,7 @@ var keyPressed = event.keyCode ? event.keyCode : event.which;
 if(keyPressed >= 0 && keyPressed <= 126)
 return true;
 else{
-alert('<#333#>');
+alert('<#345#>');
 return false;
 }
 },
@@ -832,9 +832,9 @@ return true;
 alert("It is invalid URL."); /*untranslated*/
 return false;
 },
-isValidHost: function(value) { //<#334#>
+isValidHost: function(value) { //<#346#>
 var err_count=0;
-var alert_content = "<#334#>\n<#2490#>";
+var alert_content = "<#346#>\n<#2531#>";
 var urlregex = new RegExp("^([a-zA-Z0-9\.\-]+(\:[a-zA-Z0-9\.&amp;%\$\-]+)*@)*((25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9])\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[0-9])|([a-zA-Z0-9\-]+\.)*[a-zA-Z0-9\-]+\.(com|edu|gov|int|mil|net|org|biz|arpa|info|name|pro|aero|coop|museum|[a-zA-Z]{2}))$");
 if(!urlregex.test(value)){
 err_count++;
@@ -914,7 +914,7 @@ v == 'dhcp1_start' || v=='dhcp1_end' ||
 v == 'lan_ipaddr' || v=='lan_netmask' ||
 v=='lan1_ipaddr' || v=='lan1_netmask' ||
 v == 'wl_radius_ipaddr' || v == 'hs_radius_ipaddr') {
-alert("<#320#>");
+alert("<#332#>");
 if(v == 'wan_ipaddr_x'){
 document.form.wan_ipaddr_x.value = "10.1.1.1";
 document.form.wan_netmask_x.value = "255.0.0.0";
@@ -957,7 +957,7 @@ return false;
 }
 else{
 if(noAlert != 1){
-alert(o.value+" <#334#>");
+alert(o.value+" <#346#>");
 o.value = "";
 o.focus();
 o.select();
@@ -981,7 +981,7 @@ return false;
 }
 else{
 if(noAlert != 1){
-alert(o.value + " <#334#>");
+alert(o.value + " <#346#>");
 o.value = "";
 o.focus();
 o.select();
@@ -1003,7 +1003,7 @@ if(v == 'wl_radius_ipaddr' && typeof(noAlert) != undefined && noAlert == 1){
 return false;
 }
 else{
-alert(o.value + " <#334#>");
+alert(o.value + " <#346#>");
 o.value = "";
 o.focus();
 o.select();
@@ -1016,7 +1016,7 @@ else if(this.requireWANIP(v) && (
 (v=='wan_ipaddr_x' && this.matchSubnet2(o.value, document.form.wan_netmask_x, document.form.lan_ipaddr.value, document.form.lan_netmask)) ||
 (v=='lan_ipaddr' && this.matchSubnet2(o.value, document.form.lan_netmask, document.form.wan_ipaddr_x.value, document.form.wan_netmask_x))
 )){
-alert(o.value + " <#334#>");
+alert(o.value + " <#346#>");
 if(v == 'wan_ipaddr_x'){
 document.form.wan_ipaddr_x.value = "10.1.1.1";
 document.form.wan_netmask_x.value = "255.0.0.0";
@@ -1036,7 +1036,7 @@ return false;
 }
 else if(v=='lan_netmask' || v=='lan1_netmask'){
 if(v1==255&&v2==255&&v3==255&&v4==255){
-alert(o.value + " <#334#>");
+alert(o.value + " <#346#>");
 o.value = "";
 o.focus();
 o.select();
@@ -1049,7 +1049,7 @@ else if(this.requireWANIP(v) && (
 (v=='wan_netmask_x' && this.matchSubnet2(document.form.wan_ipaddr_x.value, o, document.form.lan_ipaddr.value, document.form.lan_netmask)) ||
 (v=='lan_netmask' && this.matchSubnet2(document.form.lan_ipaddr.value, o, document.form.wan_ipaddr_x.value, document.form.wan_netmask_x))
 )){
-alert(o.value + " <#334#>");
+alert(o.value + " <#346#>");
 if (v=='wan_netmask_x'){
 document.form.wan_ipaddr_x.value = "10.1.1.1";
 document.form.wan_netmask_x.value = "255.0.0.0";
@@ -1078,7 +1078,7 @@ else if (v=='lan_ipaddr' && document.form.lan_netmask.value=="" ){
 document.form.lan_netmask.value = mask;
 }else if (v=='dhcp_start'){
 if (!this.matchSubnet(document.form.lan_ipaddr.value, document.form.dhcp_start.value, 3)){
-alert(o.value + " <#334#>");
+alert(o.value + " <#346#>");
 o.focus();
 o.select();
 return false;
@@ -1086,7 +1086,7 @@ return false;
 }
 else if (v=='dhcp_end'){
 if (!this.matchSubnet(document.form.lan_ipaddr.value, document.form.dhcp_end.value, 3)){
-alert(o.value + " <#334#>");
+alert(o.value + " <#346#>");
 o.focus();
 o.select();
 return false;
@@ -1097,7 +1097,7 @@ if(document.form.lan1_netmask.value=="") document.form.lan1_netmask.value = mask
 }
 else if (v=='dhcp1_start'){
 if (!this.matchSubnet(document.form.lan1_ipaddr.value, document.form.dhcp1_start.value, 3)){
-alert(o.value + " <#334#>");
+alert(o.value + " <#346#>");
 o.focus();
 o.select();
 return false;
@@ -1105,7 +1105,7 @@ return false;
 }
 else if (v=='dhcp1_end'){
 if (!this.matchSubnet(document.form.lan1_ipaddr.value, document.form.dhcp1_end.value, 3)){
-alert(o.value + " <#334#>");
+alert(o.value + " <#346#>");
 o.focus();
 o.select();
 return false;
@@ -1138,7 +1138,7 @@ if(o.value.length == 0){ /*Blank.*/
 if(document.getElementById(o.name+"_div")){
 document.getElementById(o.name+"_div").style.border = "2px solid #CE1E1E";
 }
-alert(o.title+"<#320#>");
+alert(o.title+"<#332#>");
 document.form.wan_ipaddr_x1.focus();
 return false;
 }
@@ -1146,7 +1146,7 @@ else if(o.value.indexOf("0") == 0){ /*首字不能為0*/
 if(document.getElementById(o.name+"_div")){
 document.getElementById(o.name+"_div").style.border = "2px solid #CE1E1E";
 }
-alert(document.form.wan_ipaddr_x.value + " <#334#>");
+alert(document.form.wan_ipaddr_x.value + " <#346#>");
 document.form.wan_ipaddr_x1.focus();
 return false;
 }
@@ -1154,19 +1154,19 @@ else if(!(IP_Validate(o))){ /*IP格式錯誤*/
 if(document.getElementById(o.name+"_div")){
 document.getElementById(o.name+"_div").style.border = "2px solid #CE1E1E";
 }
-alert(document.form.wan_ipaddr_x.value + " <#334#>");
+alert(document.form.wan_ipaddr_x.value + " <#346#>");
 document.form.wan_ipaddr_x4.focus();
 return false;
 }
 else if(IP_Validate(o)){
 if(document.form.wan_ipaddr_x1.value >= 224){
-alert("<#319#>");
+alert("<#331#>");
 document.form.wan_ipaddr_x1.focus();
 document.form.wan_ipaddr_x1.select();
 return false;
 }
 else if(document.form.wan_ipaddr_x1.value == 127){
-alert(document.form.wan_ipaddr_x1.value + "<#318#>");
+alert(document.form.wan_ipaddr_x1.value + "<#330#>");
 document.form.wan_ipaddr_x1.focus();
 document.form.wan_ipaddr_x1.select();
 return false;
@@ -1182,7 +1182,7 @@ if(o.value.length == 0){ /*Blank.*/
 if(document.getElementById(o.name+"_div")){
 document.getElementById(o.name+"_div").style.border = "2px solid #CE1E1E";
 }
-if(confirm(o.title+"<#320#>\n<#317#>")){
+if(confirm(o.title+"<#332#>\n<#329#>")){
 if((wan_ipaddr_x1 > 0) && (wan_ipaddr_x1 < 127)) o.value = "255.0.0.0";
 else if ((wan_ipaddr_x1 > 127) && (wan_ipaddr_x1 < 192)) o.value = "255.255.0.0";
 else if ((wan_ipaddr_x1 > 191) && (wan_ipaddr_x1 < 224)) o.value = "255.255.255.0";
@@ -1196,7 +1196,7 @@ else if(!(IP_Validate(o))){ /*IP格式錯誤*/
 if(document.getElementById(o.name+"_div")){
 document.getElementById(o.name+"_div").style.border = "2px solid #CE1E1E";
 }
-alert(o.value + " <#334#>");
+alert(o.value + " <#346#>");
 return false;
 }
 else if(IP_Validate(o)){
@@ -1206,7 +1206,7 @@ if(this.requireWANIP(v) && (
 if(document.getElementById(o.name+"_div")){
 document.getElementById(o.name+"_div").style.border = "2px solid #CE1E1E";
 }
-alert(o.value + " <#334#>");
+alert(o.value + " <#346#>");
 return false;
 }
 else{
@@ -1220,14 +1220,14 @@ if(!(IP_Validate(o))){ /* IP格式錯誤*/
 if(document.getElementById(o.name+"_div")){
 document.getElementById(o.name+"_div").style.border = "2px solid #CE1E1E";
 }
-alert(o.value + " <#334#>");
+alert(o.value + " <#346#>");
 return false;
 }
 else if(o.value == document.form.wan_ipaddr_x.value){
 if(document.getElementById(o.name+"_div")){
 document.getElementById(o.name+"_div").style.border = "2px solid #CE1E1E";
 }
-alert("<#291#>");
+alert("<#303#>");
 return false;
 }
 }
@@ -1239,14 +1239,14 @@ if(!(IP_Validate(o))){
 if(document.getElementById(o.name+"_div")){
 document.getElementById(o.name+"_div").style.border = "2px solid #CE1E1E";
 }
-alert(o.value + " <#334#>");
+alert(o.value + " <#346#>");
 return false;
 }
 return true;
 /*
 else if(IP_Validate(o)){
 if(split_IP[0]==255||split_IP[1]==255||split_IP[2]==255||split_IP[3]==255||split_IP[0]==0||split_IP[3]==0||split_IP[0]==127||split_IP[0]==224){
-alert(o.value +" <#334#>");
+alert(o.value +" <#346#>");
 document.getElementById(o.name+"_div").style.border = "2px solid #CE1E1E";
 return false;
 }
@@ -1292,7 +1292,7 @@ num = 0;
 }
 else{
 if ( num<0 || num>255 || (c!='.')){
-alert(o.value + " <#334#>");
+alert(o.value + " <#346#>");
 o.value = "";
 o.focus();
 o.select();
@@ -1303,7 +1303,7 @@ pos++;
 }
 }
 if (pos!=3 || num<0 || num>255){
-alert(o.value + " <#334#>");
+alert(o.value + " <#346#>");
 o.value = "";
 o.focus();
 o.select();
@@ -1324,12 +1324,12 @@ var ipPattern3 = new RegExp("(^([0-9]{1,3})\\.(\\*)\\.(\\*)\\.(\\*)$)", "gi");
 var ipPattern4 = new RegExp("(^(\\*)\\.(\\*)\\.(\\*)\\.(\\*)$)", "gi");
 var parts = obj.value.split(".");
 if(!ipPattern1.test(obj.value) && !ipPattern2.test(obj.value) && !ipPattern3.test(obj.value) && !ipPattern4.test(obj.value)){
-alert(obj.value + " <#334#>");
+alert(obj.value + " <#346#>");
 obj.focus();
 obj.select();
 return false;
 }else if(parts[0] == 0 || parts[0] > 255 || parts[1] > 255 || parts[2] > 255){
-alert(obj.value + " <#334#>");
+alert(obj.value + " <#346#>");
 obj.focus();
 obj.select();
 return false;
@@ -1393,7 +1393,7 @@ var PortRange = obj.value;
 var rangere=new RegExp("^([0-9]{1,5})\:([0-9]{1,5})$", "gi");
 if(rangere.test(PortRange)){
 if(parseInt(RegExp.$1) >= parseInt(RegExp.$2)){
-alert("<#335#>");
+alert("<#347#>");
 obj.focus();
 obj.select();
 return false;
@@ -1427,7 +1427,7 @@ num = num*10 + (c-'0');
 }
 else{
 if (num>255){
-alert(num + " <#335#>");
+alert(num + " <#347#>");
 o.focus();
 o.select();
 return false;
@@ -1436,7 +1436,7 @@ num = 0;
 }
 }
 if (num>255){
-alert(num + " <#335#>");
+alert(num + " <#347#>");
 o.focus();
 o.select();
 return false;
@@ -1447,32 +1447,32 @@ psk: function(psk_obj, wl_unit){
 var psk_length = psk_obj.value.length;
 var psk_length_trim = psk_obj.value.trim().length;
 if(psk_length < 8){
-alert("<#326#>");
+alert("<#338#>");
 psk_obj.value = "00000000";
 psk_obj.focus();
 psk_obj.select();
 return false;
 }
 if(psk_length > 64){
-alert("<#327#>");
+alert("<#339#>");
 psk_obj.focus();
 psk_obj.select();
 return false;
 }
 if(psk_length != psk_length_trim){
-alert("<#329#>");
+alert("<#341#>");
 psk_obj.focus();
 psk_obj.select();
 return false;
 }
 if(psk_length >= 8 && psk_length <= 63 && !this.string(psk_obj)){
-alert("<#327#>");
+alert("<#339#>");
 psk_obj.focus();
 psk_obj.select();
 return false;
 }
 if(psk_length == 64 && !this.hex(psk_obj)){
-alert("<#327#>");
+alert("<#339#>");
 psk_obj.focus();
 psk_obj.select();
 return false;
@@ -1484,19 +1484,19 @@ var psk_length = psk_obj.value.length;
 var psk_length_trim = psk_obj.value.trim().length;
 if(!/[A-Za-z]/.test(psk_obj.value) || !/[0-9]/.test(psk_obj.value) || psk_length < 8 || psk_length > 63
 || !/[\!\"\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\[\\\]\^\_\`\{\|\}\~]/.test(psk_obj.value)){
-alert("<#328#> <#336#>");
+alert("<#340#> <#348#>");
 psk_obj.value = "";
 psk_obj.focus();
 return false;
 }
 if(psk_length != psk_length_trim){
-alert("<#329#>");
+alert("<#341#>");
 psk_obj.focus();
 psk_obj.select();
 return false;
 }
 if(!this.string_KR(psk_obj)){
-alert("<#327#>");
+alert("<#339#>");
 psk_obj.focus();
 psk_obj.select();
 return false;
@@ -1509,7 +1509,7 @@ invalid_char = invalid_char+psk_obj.value.charAt(i);
 }
 if(invalid_char != ""){
 if(flag != "noalert")
-alert("<#343#> '"+invalid_char+"' !");
+alert("<#355#> '"+invalid_char+"' !");
 psk_obj.value = "";
 psk_obj.focus();
 return false;
@@ -1531,7 +1531,7 @@ _min = _max;
 _max = tmpNum;
 }
 if(isNaN(o.value) || o.value < _min || o.value > _max) {
-alert('<#338#> ' + _min + ' <#339#> ' + _max);
+alert('<#350#> ' + _min + ' <#351#> ' + _max);
 o.focus();
 o.select();
 return false;
@@ -1569,7 +1569,7 @@ return true;
 rangeNull: function(o, min, max, def) { //Viz add 2013.03 allow to set null
 if (o.value=="") return true;
 if(isNaN(o.value) || o.value < min || o.value > max) {
-alert('<#338#> ' + min + ' <#339#> ' + max + '.');
+alert('<#350#> ' + min + ' <#351#> ' + max + '.');
 o.value = def;
 o.focus();
 o.select();
@@ -1587,7 +1587,7 @@ return v.substring(i);
 };
 if (o.value==0) return true;
 if(isNaN(o.value) || o.value < min || o.value > max) {
-alert('<#338#> ' + min + ' <#339#> ' + max + '.');
+alert('<#350#> ' + min + ' <#351#> ' + max + '.');
 o.value = def;
 o.focus();
 o.select();
@@ -1602,7 +1602,7 @@ return true;
 },
 rangeFloat: function(o, _min, _max, def){
 if(isNaN(o.value) || o.value <= _min || o.value > _max) {
-alert('<#338#> ' + _min + ' <#339#> ' + _max + '.');
+alert('<#350#> ' + _min + ' <#351#> ' + _max + '.');
 o.value = def;
 o.focus();
 o.select();
@@ -1623,14 +1623,14 @@ return true;
 string: function(string_obj, flag){
 if(string_obj.value.charAt(0) == '"'){
 if(flag != "noalert")
-alert('<#342#> ["]');
+alert('<#354#> ["]');
 string_obj.value = "";
 string_obj.focus();
 return false;
 }
 else if(string_obj.value.charAt(string_obj.value.length - 1) == '"'){
 if(flag != "noalert"){
-alert('<#344#> ["]');
+alert('<#356#> ["]');
 }
 string_obj.value = "";
 string_obj.focus();
@@ -1645,7 +1645,7 @@ invalid_char = invalid_char+string_obj.value.charAt(i);
 }
 if(invalid_char != ""){
 if(flag != "noalert")
-alert("<#343#> '"+invalid_char+"' !");
+alert("<#355#> '"+invalid_char+"' !");
 string_obj.value = "";
 string_obj.focus();
 return false;
@@ -1659,21 +1659,21 @@ if(!/[A-Za-z]/.test(string_obj.value) || !/[0-9]/.test(string_obj.value) || stri
 || !/[\!\"\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\[\\\]\^\_\`\{\|\}\~]/.test(string_obj.value)
 || /([A-Za-z0-9\!\"\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\[\\\]\^\_\`\{\|\}\~])\1/.test(string_obj.value)
 ){
-alert("<#337#>");
+alert("<#349#>");
 string_obj.value = "";
 string_obj.focus();
 return false;
 }
 if(string_obj.value.charAt(0) == '"'){
 if(flag != "noalert")
-alert('<#342#> ["]');
+alert('<#354#> ["]');
 string_obj.value = "";
 string_obj.focus();
 return false;
 }
 else if(string_obj.value.charAt(string_obj.value.length - 1) == '"'){
 if(flag != "noalert"){
-alert('<#344#> ["]');
+alert('<#356#> ["]');
 }
 string_obj.value = "";
 string_obj.focus();
@@ -1687,7 +1687,7 @@ invalid_char = invalid_char+string_obj.value.charAt(i);
 }
 if(invalid_char != ""){
 if(flag != "noalert"){
-alert("<#343#> '"+invalid_char+"' !");
+alert("<#355#> '"+invalid_char+"' !");
 }
 string_obj.value = "";
 string_obj.focus();
@@ -1730,7 +1730,7 @@ var c; // character code
 for(var i = 0; i < o.value.length; ++i){
 c = o.value.charCodeAt(i);
 if(!groupChar(c)){
-alert('<#340#> '+o.value.charAt(i)+' <#341#>');
+alert('<#352#> '+o.value.charAt(i)+' <#353#>');
 o.focus();
 o.select();
 return false;
@@ -1744,13 +1744,13 @@ var utf8_ssid_support = (rc_support.split(" ").indexOf("utf8_ssid") == -1) ? fal
 var c; // character code
 var flag=0; // notify valid characters of SSID except space
 if(o.value==""){ // to limit null SSID
-alert('<#320#>');
+alert('<#332#>');
 o.focus();
 return false;
 }
 len = this.lengthInUtf8(o.value);
 if(len > 32){
-alert("<#324#>");
+alert("<#336#>");
 o.value = "";
 o.focus();
 o.select();
@@ -1760,7 +1760,7 @@ for(var i = 0; i < len; ++i){
 c = o.value.charCodeAt(i);
 if(!utf8_ssid_support){
 if(this.ssidChar(c)){
-alert('<#340#> '+o.value.charAt(i)+' <#341#>');
+alert('<#352#> '+o.value.charAt(i)+' <#353#>');
 o.value = "";
 o.focus();
 o.select();
@@ -1771,7 +1771,7 @@ if(c != 32)
 flag ++;
 }
 if(flag ==0){ // to limit SSID only include space
-alert('<#320#>');
+alert('<#332#>');
 return false;
 }
 return true;
@@ -1786,14 +1786,14 @@ var hintStr = "";
 ssid_obj.parent().children().remove(".hint");
 len = this.lengthInUtf8(ssid);
 if(len > 32){
-hintStr = "<#324#>";
+hintStr = "<#336#>";
 showHint = 1;
 }
 for(var i = 0; i < len; ++i){
 c = ssid.charCodeAt(i);
 if(!utf8_ssid_support){
 if(this.ssidChar(c)){
-hintStr = '<#340#> ' + ssid.charAt(i) + ' <#341#>';
+hintStr = '<#352#> ' + ssid.charAt(i) + ' <#353#>';
 showHint = 1;
 }
 }
@@ -1839,7 +1839,7 @@ o.value = "00";
 else if (p==0 || p==2)
 {
 if(o.value>23){
-alert('<#338#> 00 <#339#> 23');
+alert('<#350#> 00 <#351#> 23');
 o.value = "00";
 o.focus();
 o.select();
@@ -1850,7 +1850,7 @@ return true;
 else
 {
 if(o.value>59){
-alert('<#338#> 00 <#339#> 59');
+alert('<#350#> 00 <#351#> 59');
 o.value = "00";
 o.focus();
 o.select();
@@ -1922,14 +1922,14 @@ return false;
 return true;
 }else{ // IP plus netmask
 if(obj.value.split("/").length > 2){
-alert(obj.value + " <#334#>");
+alert(obj.value + " <#346#>");
 obj.value = "";
 obj.focus();
 obj.select();
 return false;
 }else{
 if(obj.value.split("/")[1] == "" || obj.value.split("/")[1] == 0 || obj.value.split("/")[1] > 32){
-alert(obj.value + " <#334#>");
+alert(obj.value + " <#346#>");
 obj.value = "";
 obj.focus();
 obj.select();
@@ -1960,7 +1960,7 @@ wep_type = document.getElementById(wep_type_id).value;
 wep_type = document.form.wl_wep_x.value;
 }
 var iscurrect = true;
-var str = "<#345#>";
+var str = "<#357#>";
 var wl_key_type = '<% nvram_get("wl_key_type"); %>';
 if(wep_type == "0")
 iscurrect = true; // do nothing
@@ -1978,7 +1978,7 @@ document.form.wl_key_type.value = 0; /*Lock Add 11.25 for ralink platform*/
 iscurrect = true;
 }
 else{
-str += "(<#852#>)";
+str += "(<#870#>)";
 iscurrect = false;
 }
 }
@@ -1996,7 +1996,7 @@ document.form.wl_key_type.value = 0; /*Lock Add 11.25 for ralink platform*/
 iscurrect = true;
 }
 else{
-str += "(<#853#>)";
+str += "(<#871#>)";
 iscurrect = false;
 }
 }
@@ -2014,7 +2014,7 @@ return iscurrect;
 WPAPSK: function(o){
 if(o.value.length >= 64){
 o.value = o.value.substring(0, 63);
-alert("<#346#>");
+alert("<#358#>");
 return false;
 }
 return true;

@@ -48,9 +48,9 @@ var $logo_block = $("<div>").addClass("logo_block").appendTo($content_container)
 $("<div>").addClass("logo_icon").appendTo($logo_block);
 $("<div>").addClass("logo_desc").appendTo($logo_block).html("Welcome to ASUS Router");
 var $desc_block = $("<div>").addClass("desc_block").appendTo($content_container);
-$desc_block.html("<#4243#>");
+$desc_block.html("<#4342#>");
 var $https_desc_link = $("<div>").addClass("https_desc_link").appendTo($content_container);
-$("<span>").html("<#4244#>").appendTo($https_desc_link);
+$("<span>").html("<#4343#>").appendTo($https_desc_link);
 $https_desc_link.unbind("click").click(function(e){
 e = e || event;
 e.stopPropagation();
@@ -62,11 +62,11 @@ var $scan_qr_code_block = $("<div>").addClass("scan_qr_code_block").appendTo($qr
 var $qr_code_icon = $("<div>").addClass("qr_code_icon").appendTo($scan_qr_code_block);
 var preferred_lang = '<% nvram_get("preferred_lang"); %>';
 $qr_code_icon.addClass(preferred_lang);
-var $scan_title = $("<div>").addClass("scan_title").appendTo($scan_qr_code_block).html("<#4245#>");
+var $scan_title = $("<div>").addClass("scan_title").appendTo($scan_qr_code_block).html("<#4346#>");
 var $illustration_block = $("<div>").addClass("illustration_block").appendTo($qr_code_and_icon_block);
 var $illustration = $("<div>").addClass("illustration").appendTo($illustration_block);
 var $access_http_link = $("<div>").addClass("access_http_link").appendTo($content_container);
-$access_http_link.html("<#4246#>");
+$access_http_link.html("<#4348#>");
 $access_http_link.unbind("click").click(function(e){
 e = e || event;
 e.stopPropagation();
@@ -83,21 +83,21 @@ var $popup_component = $("<div>").addClass("popup_component http_desc no_highlig
 var $content_container = $("<div>").addClass("content_container").appendTo($popup_component);
 var $desc_text_bg = $("<div>").addClass("desc_text_bg").appendTo($content_container);
 $("<div>")
-.html("<#4250#>")
+.html("<#4352#>")
 .appendTo($desc_text_bg);
 var $action_bg = $("<div>").addClass("action_bg").appendTo($content_container);
 var $cb_text_bg = $("<div>").addClass("cb_text_bg").appendTo($action_bg);
 $("<input>").attr({"type":"checkbox", "id":"https_redirect_hint"}).appendTo($cb_text_bg);
-$("<label>").attr("for","https_redirect_hint").html("<#4249#>").appendTo($cb_text_bg);
+$("<label>").attr("for","https_redirect_hint").html("<#4351#>").appendTo($cb_text_bg);
 var $btn_bg = $("<div>").addClass("btn_bg").appendTo($action_bg);
-var $btn_no = $("<div>").html("<#186#>").appendTo($btn_bg);
+var $btn_no = $("<div>").html("<#193#>").appendTo($btn_bg);
 $btn_no.unbind("click").click(function(e){
 e = e || event;
 e.stopPropagation();
 $("body").find("#https_redirect_component").removeClass("blur_effect");
 $("body").find("#http_desc_component").remove();
 });
-var $btn_yes = $("<div>").html("<#187#>").appendTo($btn_bg);
+var $btn_yes = $("<div>").html("<#194#>").appendTo($btn_bg);
 $btn_yes.unbind("click").click(function(e){
 e = e || event;
 e.stopPropagation();
@@ -115,24 +115,24 @@ var $content_container = $("<div>").addClass("content_container").appendTo($popu
 var $illustration_bg = $("<div>").addClass("illustration_bg").appendTo($content_container);
 var $desc_text_bg = $("<div>").addClass("desc_text_bg").appendTo($content_container);
 $("<div>")
-.html("<#4247#>")
+.html("<#4349#>")
 .appendTo($desc_text_bg);
 $("<div>")
-.html("<#4248#>")
+.html("<#4350#>")
 .appendTo($desc_text_bg);
 var $action_bg = $("<div>").addClass("action_bg").appendTo($content_container);
 var $cb_text_bg = $("<div>").addClass("cb_text_bg").appendTo($action_bg);
 $("<input>").attr({"type":"checkbox", "id":"https_redirect_hint"}).appendTo($cb_text_bg);
-$("<label>").attr("for","https_redirect_hint").html("<#4249#>").appendTo($cb_text_bg);
+$("<label>").attr("for","https_redirect_hint").html("<#4351#>").appendTo($cb_text_bg);
 var $btn_bg = $("<div>").addClass("btn_bg").appendTo($action_bg);
-var $btn_no = $("<div>").html("<#186#>").appendTo($btn_bg);
+var $btn_no = $("<div>").html("<#193#>").appendTo($btn_bg);
 $btn_no.unbind("click").click(function(e){
 e = e || event;
 e.stopPropagation();
 $("body").find("#https_redirect_component").removeClass("blur_effect");
 $("body").find("#popup_https_desc").remove();
 });
-var $btn_yes = $("<div>").html("<#187#>").appendTo($btn_bg);
+var $btn_yes = $("<div>").html("<#194#>").appendTo($btn_bg);
 $btn_yes.unbind("click").click(function(e){
 e = e || event;
 e.stopPropagation();

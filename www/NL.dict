@@ -66,7 +66,7 @@ Informatie niet beschikbaar. Werk de firmware van uw router bij naar de nieuwste
 Als u uw router opnieuw opstart, zullen alle aangesloten apparaten de internetverbinding verliezen. Alle apparaten zullen opnieuw met internet kunnen verbinden na het voltooien van het opnieuw opstarten. Doorgaan?
 Fantastisch
 Zwak
-Ok
+OK
 Normaal
 Kwaliteit van de verbinding
 AiMesh-knooppunt toevoegen
@@ -88,6 +88,12 @@ Gegevenssnelheid
 Topologie
 Systeeminstellingen
 Statistieken
+Omgevingsdetectie
+Bezig met schatten van de routeverbinding...
+Optimaliseren van knooppunt(en)
+Optimalisatie van antennediversiteit
+Antennedetectie
+Bezig met schatten van antennediversiteit...
 Powerline connection with good signal quality
 Powerline connection with weak signal quality
 Draadloze verbinding met fantastische signaalkwaliteit
@@ -151,6 +157,7 @@ Als u het delen van uw informatie met Trend Micro via de volgende functies wilt 
 Weet u zeker dat u wilt terugtrekken?
 Intrekken
 Voer de naam in
+De hostnaam is gekoppeld aan het aanmeldingsaccount van de Router-app. Registreer/verwijder deze uit de Router-app.
 Auto
 Automatische instelling
 Bandbreedtebeperking
@@ -212,6 +219,8 @@ Overslaan
 Onbekend apparaat
 Upgrade 's nachts
 Upgrade Now
+Standaard lokaal aanmeldingswachtwoord gebruiken
+Het standaard gecodeerde lokale aanmeldingswachtwoord biedt een veilig aanmeldingsproces wanneer u lokaal verbinding maakt met dit ASUS-netwerkapparaat.
 Voor meer details, <a style="font-weight: bolder;text-decoration: underline;color:#000000;" href="https://www.asus.com/support/" target="_blank">https://www.asus.com/support/</a>
 *Een minimum pingpakket verbruikt ongeveer 128 bytes per interval. Daarom verbruikt de pingdetector
 mbytes per maand
@@ -280,7 +289,10 @@ Firmwareversie:
 * De zomertijd is ingeschakeld in deze tijdzone.
 Systeemtijd
 * Herinnering: De systeemtijd is niet gesynchroniseerd met een NTP-server.
+De systeemtijd van uw router is nog niet gesynchroniseerd met de NTP-server. De systeemtijd wordt automatisch gesynchroniseerd bij verbinding met het internet.
 Gastnetwerk
+Hoe %@ vinden
+U vindt %@ op het label aan de achterkant/onderkant van uw ASUS-apparaat.
 Gebruik een poort tussen 1024 en 65535.
 Omwille van beveiligings- en compatibiliteitsproblemen worden IE8 / IE9 / IE10 niet langer ondersteund.
 De zaken kunnen gebroken zijn en mogelijk onbruikbaar.
@@ -359,6 +371,8 @@ Een beveiligd wachtwoord moet minstens 8 tekens lang zijn en moet een combinatie
 Adresseer de IP van de router naast de door de gebruiker gespecificeerde DNS
 WAN-verbindingstype
 Het volgende IP-adres gebruiken:
+Lokale aanmelding
+Stel de gebruikersnaam en het wachtwoord in voor lokale aanmelding om te voorkomen dat onbevoegde gebruikers toegang krijgen tot uw ASUS-netwerkapparaat.
 Ten minste twee tekens. Uitsluitend alfanumerieke tekens, onderstreepteken en het afbreekstreepje worden geaccepteerd. Het eerste teken mag geen afbreekstreepje - of onderstreepteken _ zijn.
 U kunt [ASUS Lyra] ook downloaden voor het verbinden van extra Lyra-apparaten met uw eerste Lyra.
 U kunt nu op de &quot;knop Pair (Koppelen)&quot; van uw eerste en tweede Lyra drukken om nog een Lyra in te stellen.
@@ -474,6 +488,8 @@ Zwak
 Goed
 Sterk
 Heel sterk
+Lokaal aanmeldingswachtwoord
+Wifi-wachtwoord
 Pincode niet juist. Voer de correcte PIN-code in en sluit de USB-adapter opnieuw aan. Als u nog steeds dezelfde fout aantreft, schakelt u de pincodefunctie uit en opnieuw in en probeer het opnieuw.
 Telefoonnummer
 Toegangsnummer
@@ -672,6 +688,7 @@ Voer een netwerksleutel in van 8 tot 63 tekens (letters en cijfers samen) of van
 Voer een netwerksleutel in van 8 tot 63 tekens (letters, cijfers of een combinatie). De standaard draadloze beveiligingsinstelling is WPA2-Personal AES.
 Separate 2.4 GHz and 5 GHz
 Separate 2.4 GHz, 5 GHz and 6 GHz
+Het draadloze hoofdnetwerk is ingesteld.
 De accountnaam mag niet leeg zijn.
 De velden Gebruikersnaam/wachtwoord kunnen niet leeg zijn.
 ISP-accountinstelling
@@ -822,6 +839,7 @@ Verhoog de maximale waarde voor de internetonderbreking.
 Opnieuw verbinden met internet.
 Neem contact op met de netwerkbeheerder.
 Klik hier om naar de instellingspagina te gaan.
+<a>Klik hier</a> om te wijzigen.
 U kunt de instelling zelf controleren of configureren.
 Als een probleem zich blijft voordoen, moet u de verbindingsinstellingen handmatig wijzigen.
 Schakel het WAN in.
@@ -906,8 +924,8 @@ For faster video streaming experience including Youtube, Netflix and Spotify, et
 Websurfen
 Deze modus is geschikt voor algemeen surfen en het vermijden van een vertraging van het netwerk tijdens bestandsoverdracht.
 Learn-From-Home
-Choose this mode for a smooth streaming of online video-learning experience.This category includes Coursera, Khan, Udemy, TED, edX, etc.
-Choose this mode to ensure a smooth agile online conferencing experience.This category includes VoIP, instant messaging, mail service, etc.
+Choose this mode for a smooth streaming of online video-learning experience. This category includes Coursera, Khan, Udemy, TED, edX, etc.
+Choose this mode to ensure a smooth agile online conferencing experience. This category includes VoIP, instant messaging, mail service, etc.
 De nieuwe account heeft geen lees-/schrijftoegangsrechten.
 Nieuwe account toevoegen
 De standaard toegangsrechten voor een nieuwe map zijn lezen/schrijven.
@@ -1515,6 +1533,7 @@ Hostnaam gegeven door ISP:
 Als uw WAN-verbindingstype PPTP of L2TP is, voert u de servernaam of het server-ip-adres van de VPN-server in.
 Via dit veld kunt u een hostnaam leveren voor RT-AX53U. Dit wordt doorgaans aangevraagd door uw ISP.
 Stel de maximale bandbreedtelimiet voor het downloaden in. 0 betekent dat er geen bandbreedtelimiet is.
+Terug
 Uitschakelen
 Uitgeschakeld
 Ingeschakeld
@@ -1527,8 +1546,10 @@ WAN-instelling
 Capaciteit
 Captcha
 Voer de captcha in.
+Kijk <a id = \"setting_link\" target=\"_blank\" style=\"text-decoration:underline;\">hier</a> om de instellingen te wijzigen en de functie in te schakelen.
 Controleer of de ethernet-/netwerkkabel goed is aangesloten.
 De router controleert de ASUS-server op firmware-updates.
+Kies andere opties en probeer het opnieuw.
 Verzamelt geen informatie over gebruikers en valt onder de Zwitserse privacywetgeving.
 Clientnaam
 Pictogram
@@ -1635,6 +1656,7 @@ Russia
 Singapore
 The United States
 Canada
+Een account aanmaken
 Een gratis account maken
 Niveau 2 CTF wordt niet ondersteund onder PPPoE, PPTP of L2TP. Om het niveau 1 CTF, klikt u op Confirm (Bevestigen).
 Hardwareversneller inschakelen
@@ -1942,7 +1964,7 @@ Probleem met instabiele verbinding
 Er kan geen verbinding worden gemaakt met het draadloze netwerk
 Kies welke optie het best de prestaties van uw DSL-service beschrijft
 Contact methode
-Uw land / regio
+Uw regio
 Debuglog anuleren
 Diagnostische debuglog wordt gemaakt
 Duur van diagnostische debuglog
@@ -2246,22 +2268,30 @@ Nieuw maken
 Andere kopiëren
 Totaal gast
 gasten
+Geef geplande of eenmalige toegang tot het netwerk.
+Aanbevolen voor winkelcentra, sportscholen of vrienden.
 Toegangslimiet
 Alleen internettoegang
 Gebruik dezelfde instellingen als
 Zakelijk netwerk
 Aangepast netwerk
+Medewerker
 Veilig en beveiligd netwerk instellen
+Kantoor wijst machtigingen toe aan afdelingen
 Snel een gastnetwerk maken
 IoT-netwerk
 Eenvoudig een netwerk van uw IoT-apparaten scheiden
+Aanbevolen voor bewakingsapparatuur, spraakondersteuning, verlichtingsarmaturen, deurbelcamera&#39;s, smart locks en sensoren.
 Kindernetwerk
 Veiligheid van internettoegang voor kinderen garanderen
 Gastportaal
-Een gastportaal of Facebookwifi maken
+Een gastportaal maken
+Maak een vastgezet portaal voor digitale marketing.
+Aanbevolen voor restaurants, hotels of foodtrucks.
 Portaaltype
 VPN-netwerk
 Een beveiligde netwerkverbinding maken
+Maak een veilige internetverbinding via VPN. Aanbevolen voor thuiswerken, kantoren.
 Dit VPN-profiel is uitgeschakeld. Ga naar de instellingenpagina van de VPN-server en schakel deze in.
 Klik hieronder op [ Naar instellingen ] om naar de pagina VPN-instellingen te gaan.
 Deze instelling kan niet worden geselecteerd wanneer een ander profiel wordt gebruikt.
@@ -2269,8 +2299,15 @@ Thuisnetwerk
 Er is nu geen VPN-profiel. Klik hieronder op [Naar instellingen] om naar de pagina VPN-instellingen te gaan.
 Een gastennetwerk toevoegen
 Profiellijst
+Gepland netwerk
 Kies een gedefinieerd netwerk
+Maak een netwerk op basis van uw scenario
+Zelfgedefinieerd netwerk
+Scenarioverkenner
 Wifi-planning
+Plan de dagelijkse of wekelijkse onlinetijd voor het draadloze netwerk.
+Aanbevolen voor studie op afstand, klaslokalen of kinderen.
+Stel het toegangsniveau in voor diverse toepassingen om de netwerkbeveiliging te verbeteren.
 Hardwareversie
 Help
 Help biedt u richtlijnen en informatie over het gebruik van de routerfuncties. Klik op de
@@ -2282,6 +2319,7 @@ Hoog
 Hoogst
 Het pakket met de hoogste prioriteit
 uren
+HOE INSTELLEN
 Kan geen internetverbinding maken. Voer de informatie opnieuw in of controleer uw accountgegevens met uw ISP.
 Selecteer de locatie van uw internetprovider.
 Locatie
@@ -2322,7 +2360,7 @@ Om ASUS Router handmatig te koppelen aan IFTTT, kopieert en plakt u de activerin
 Kies uit de bestaande applets of maak uw eigen applets op het <a id="ifttt_applet_link">ASUS Router-kanaal</a>
 <a id="ifttt_signin">Meld aan</a> bij uw IFTTT-account.
 Start een automatiseringsleven met ASUS Router en IFTTT!
-Aan de slag:
+Starten :
 in
 De router kan geen verbinding maken met de ASUS-server om te kijken of er een firmware-update is. Download de laatste firmware van ASUS Product Support Site en voer de update handmatig uit.
 Band
@@ -2447,6 +2485,9 @@ IPv6 LAN-instelling
 Native
 OCN Virtual Connect
 v6plus
+Als u ze wilt gebruiken, raadpleeg het bruikbare poortbereik in %0$@ en wijzig het poortnummer van deze functies naar een overeenkomend bereik.
+Poortgerelateerde instellingen kunnen een niet-overeenkomend probleem tegenkomen in het huidige poortbereik van %2$@.
+Er kan een probleem met niet-overeenkomende poorten optreden onder het speciale poortbereik van %3$@. Het heeft geen invloed op uw internet, maar op de volgende poortgerelateerde instellingen. Als u ze wilt gebruiken, raadpleeg het bruikbare poortbereik in <a target='_self' style='text-decoration:underline;' href='Main_IPV6Status_Content.asp'>IPv6 Log</a> en wijzig het poortnummer van deze functies naar een overeenkomend bereik.
 IPv6-prefixlengte
 IPv4 Anycast Relay
 Statisch IPv6
@@ -2631,7 +2672,7 @@ Als er gegevens zijn in de MAC-filterlijst, klikt u op Apply (Toepassen) om die 
 Handmatig
 Handmatig toewijzen
 Plaats
-Land/Regio
+Regio
 U hebt mogelijk de VLAN-ID nodig voor het tot stand brengen van de PTM-verbinding. Wijzig de VLAN-ID niet tenzij uw ISP u hiervoor instructies geeft.
 Deze Snelle instelling begeleidt u bij het snel configureren van de WAN-instellingen van RT-AX53U. Selecteer uw land en ISP-naam in de vervolgkeuzelijst. Klik op Next (Volgende) en voer dan de nodige informatie in. Neem contact op met uw internetprovider (ISP) voor informatie over uw DSL-verbindingsinstellingen indien dat nodig is.
 U hebt de VPI (Virtual Path Identifier) en VCI (Virtual Channel Identifier) nodig voor het instellen van de ATM PVC. Wijzig de VPI- en VCI-nummers niet tenzij uw ISP u de opdracht geeft dit te doen.
@@ -2641,6 +2682,8 @@ Opmerking:
 Snelle handmatige instelling:
 Raadpleeg de WAN-instellingen van RT-AX53U. Als u een nieuwe instelling wilt toevoegen, volgt u de instructies op het scherm. Als u de vorige instelling wilt wijzigen, gaat u naar [Advanced Setting] -> [WAN] -> pagina [Internet Connection] (Geavanceerde instelling > WAN > pagina Internetverbinding).
 Fabrikant
+MAP bijwerken
+Het duurt ongeveer 1 tot 2 minuten om deze MAP-regel opnieuw toe te wijzen. Tijdens de update wordt de internetverbinding van alle aangesloten apparaten onderbroken.
 Maximale bandbreedtelimiet
 Stel de maximale bandbreedtelimiet voor het uploaden in
 Maximum computers
@@ -2692,6 +2735,7 @@ Kon de 4G-modemfirmware niet upgraden. Wacht een moment terwijl de router opnieu
 U hebt de verkeerde firmware geüpload om de module te upgraden. Selecteer de juiste firmware en upgrade opnieuw!
 4G-modemfirmware
 Informatie over mobielebreedbandmodem
+De telefoon als modem gebruiken
 Softwareversie modem
 Pincode vereist.
 Pin2-code vereist.
@@ -2822,7 +2866,9 @@ Doel
 Route naar host traceren
 Wake on LAN
 Activeren
+Over Functie
 Nieuwe mogelijkheden beschikbaar
+Functiebeschrijving
 Nieuwe mapnaam
 Nieuwe modemfirmware
 Volgende pagina
@@ -2837,6 +2883,7 @@ Schakel WiFi in voor het bedienen van de WPS.
 Om WPS in te schakelen, wijzigt u de verificatiemethode naar WPA2 of WPA-Auto.
 U moet eerst het verbergen van de SSID uitschakelen als u WPS wilt inschakelen.
 Opmerking: De nieuwe patch wordt regelmatig bijgewerkt. Houd uw firmware up-to-date.
+Opmerking
 Meldingsitem
 Klantnummer
 Als u ASUS DDNS-services niet kunt gebruiken, gaat u naar <a href="https://iplookup.asus.com/nslookup.php" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">https://iplookup.asus.com/nslookup.php</a> om uw internet-IP-adres te gebruiken voor het gebruik van deze service.
@@ -2924,6 +2971,7 @@ Port Mapping (Poorttoewijzing) ondersteunt de IPTV WAN-interface voor een specif
 Poorttoewijzing inschakelen
 LAN-poort
 SSH-poort
+Poortstatus
 De verbindingssnelheid van deze poort(en) kan worden verbeterd.
 Raadpleeg de volgende resultaten/tips om problemen op te lossen.
 Zaken die u moet controleren
@@ -2933,6 +2981,9 @@ Een ouder apparaat kan mogelijk uw verbindingssnelheid beperken.
 Controleer uw internetserviceschema met uw ISP.
 Vervang uw ethernetkabel door #ETHCABLE of door een nieuwer exemplaar.
 Deze poort is voor
+Door %1$@ als %2$@ te configureren wordt de functie \"%3$@\" uitgeschakeld. Doorgaan?
+Deze functie is uitgeschakeld omdat %1$@ als %2$@ is geconfigureerd.
+%1$@ en %2$@ kunnen niet als dezelfde poort worden geconfigureerd.
 Deze pagina toont de status van port forwarding. Sommige P2P-programma’s gebruiken het UPnP-protocol om de poort te openen en het poortnummer wordt weergegeven op deze pagina.
 RT-AX53U heeft gedetecteerd dat het verbindingstype PPPoE is. Als dat zo is, voer dan de gebruikersnaam/het wachtwoord in en klik op Apply (Toepassen).<br>Als dat niet zo is not, klik dan op Manual Setting (Handmatige instelling) om dit opnieuw in te stellen.
 Voer de gebruikersnaam/het wachtwoord in die uw internetprovider (ISP) u heeft gegeven en klik op Next (Volgende).
@@ -2994,6 +3045,7 @@ Productregistratie
 Provider
 Inkapseling
 Ingekapselde modus
+Openbare sleutel
 Push
 Weet u zeker dat u deze PVC wilt verwijderen?
 PVC bewerken
@@ -3086,6 +3138,20 @@ Dubbele of identieke VPI- en VCI-instellingen.
 Het systeem wordt nu opnieuw opgestart. Wacht even en wij leiden u om naar de beginpagina van RT-AX53U.
 Schalen
 Scanning
+Vestgingskantoor
+Klaslokaal
+Koffiehuis
+EV-laadstation
+Vrienden
+Hotel
+Winkelcentrum
+Studie op afstand
+Smart home
+Restaurant
+Kinderen
+Spraakondersteuning
+Bewakingsapparaten
+Thuiswerken
 seconden
 Beveiligingsniveau
 Alles selecteren
@@ -3128,7 +3194,7 @@ Click on this checkbox if you want to share the config file for debugging. Since
 Instellingen
 Klik <a id="redirect_to_setup">hier</a> om te wijzigen. Raadpleeg deze <a id="redirect_to_FAQ">FAQ</a> voor meer details.
 Uw knooppunt instellen
-Place your RT-AX53U router and node(s) in the same room and at least 1 meter apart during the setup process.
+Plaats tijdens het installatieproces uw RT-AX53U router en node(s) in dezelfde ruimte en op minstens 1 meter afstand van elkaar.
 Houd de voeding ingeschakeld en stand-by voor systeeminstelling.
 Apparaatnaam
 Kies de correcte taalinstellingen die geschikt zijn voor uw bestandscodering.
@@ -3279,6 +3345,10 @@ System adjustment
 Temperature unit
 Fan speed
 Wijzig het aanmeldingswachtwoord, de tijdzone en de NTP-serverinstellingen van de router.
+U kunt naast het hoofdnetwerk een extra zelfgedefinieerd netwerk maken voor verschillende doeleinden.
+Het zelfgedefinieerde netwerk is gescheiden van het hoofdnetwerkdomein en biedt een veiligere verbinding.
+In elk zelfgedefinieerd netwerk kunt u verschillende coderingsmethoden, schema&#39;s, bevoegdheden, AiMesh, bandbreedtebeperkingen, enz. instellen om een uitgebreide netwerkomgeving te maken.
+Wilt u een extra draadloos netwerk toevoegen voor speciaal gebruik?
 Basisconfiguratie
 LAN
 Diversen
@@ -3453,6 +3523,7 @@ Verwijderen
 Er is een online update beschikbaar
 Bezig met bijwerken...
 Uploadbandbreedte
+Configuratie uploaden
 Uploadprioriteit
 Gegevens verzonden/sec
 Gegevens verzonden
@@ -3515,6 +3586,10 @@ Nieuw subnet
 Zonder label
 Met label
 Negeren
+Deze poort(en) worden gebruikt door %@.
+Poortisolatie
+VLAN-profiel
+Bedieningsinstellingen VLAN-switch
 Deze waarde moet hoger zijn dan
 Deze waarde moet lager zijn dan
 Client will use VPN to access
@@ -3556,7 +3631,7 @@ Aangepaste configuratie
 RT-AX53U zal automatisch een ovpn-bestand genereren met de sleutel van de certificeringsinstantie. U kunt het ovpn-bestand voorzien van een gebruikersnaam en wachtwoord voor alle gebruikers die verbinding maken met de OpenVPN-server.
 Om de OpenVPN-serverinstellingen te wijzigen, gaat u naar Geavanceerde instellingen
 U kunt de standaardinstellingen van de OpenVPN-server wijzigen om een aangepast OPVN-bestand op te geven voor een specifiek verbindingstype.
-Als uw WAN IP-adres dynamisch is, klikt u <a href="http://ZVDOMAIN_NAMEVZ/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">hier</a> om de DDNS in te stellen.
+Als uw WAN IP-adres dynamisch is, klikt u <a href="/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">hier</a> om de DDNS in te stellen.
 Toewijzen vanaf DHCP
 Codeersleutel
 Routingconflict! <p>Controleer de IP-adresinstellingen van de client vanaf de pagina Geavanceerde instellingen of controleer de routingtabel op het systeemlogboek.
@@ -3655,18 +3730,40 @@ Bijwerken mislukt, probeer het opnieuw.
 Al uw VPN-clients zullen opnieuw verbinding maken nadat u op Toepassen hebt geklikt. Weet u zeker dat u wilt doorgaan?
 Ondersteunde IKE-versie
 klik hier om de DDNS in te stellen.
+* VPN WiFi is al in gebruik.
+Hoe de WireGuard®-server instellen?
+Hoe stel ik een site-to-site VPN in met WireGuard®?
+Hoe installeer ik de WireGuard®-client in VPN Fusion?
+VPN-authenticatie
+Clientcertificaat
+Klantsleutel
+Lijst van certificaatintrekkingen
+Het maximaal aantal gelijktijdige actieve VPN-verbindingen is beperkt tot 2. Deactiveer een bestaande VPN-verbinding voor u een nieuwe activeert.
+Het systeem kan slechts één Surfshark-verbinding tegelijk activeren. Deactiveer de huidige Surfshark-verbinding voor u een nieuwe activeert.
+Standaardverbinding
 VPN-clients (Virtual Private Network) worden vaak gebruikt voor het verbinden met een VPN-server om toegang te krijgen tot particuliere bronnen via een openbaar netwerk.
 Sommige apparaten zoals set-topboxen, smart-tv’s en Blu-ray-spelers bieden geen ondersteuning van VPN-software.
 De ASUSWRT VPN-functie biedt VPN-toegang tot alle apparaten in een thuisnetwerk zonder dat u de VPN-software hoeft te installeren op elk apparaat.
+Eindpuntadres
+Eindpuntpoort
+Omdat uw onlineveiligheid primeert.
+Toegestane IP-adressen
 Wijzig het LAN-subnetwerk van uw router. Raadpleeg <a target='_blank'>FAQ</a> voor gedetailleerde informatie.
+Aanhoudende Keepalive
 Net-to-Net-client /-peer
 Met de IPSec VPN-client kan RT-AX53U verbinden met een Net-naar-Net IPSec-server /-client of kunnen de apparaten direct met elkaar verbinden op een peer-to-peer-manier.
 Laten we het gebruik van twee RT-AX53U nemen als een voorbeeld om het peer-to-peer-netwerk uit te leggen. U moet eerst een IPSec-peerprofiel maken op deze pagina. Mak vervoglens een andere peer op de andere RT-AX53U met overeenkomende configuraties.
+Profiel
+Toepassen op alle apparaten
+Apparaten aan dit profiel toewijzen
+Profiel verwijderen
+Selecteer een ander VPN-profiel om het standaard-WAN te annuleren.
 Om een VPN-verbinding te starten, volgt u de onderstaande stappen:
 Profiel toevoegen
 Selecteer een VPN-verbindingstype.
 Voer de VPN-verificatiegegevens in die u van uw VPN-provider hebt ontvangen en maak dan verbinding.
 VPN-client
+Peer
 Wanneer u een VPN-client met een PPPoE-verbinding gebruikt, zal uw router automatisch opnieuw opstarten om de NAT-acceleratie uit te schakelen. Weet u zeker dat u wilt doorgaan?
 Slagboom
 Configureer de ethernet WAN-instellingen van RT-AX53U.
@@ -3730,18 +3827,19 @@ Ping naar internet inschakelen
 TCP MSS-optie
 bytes
 VLAN-ID
-WAN-aggregatie combineert twee netwerkverbindingen om uw WAN-snelheid te verhogen tot 2Gbps. Sluit de WAN-poort en de LAN 4-poort van uw router aan om de LAN-poorten van uw modem (zorg dat u twee kabels met dezelfde specificatie gebruikt). <a id="wanAgg_faq" target="_blank" style="color:#FFCC00;text-decoration:underline;">FAQ WAN-aggregatie</a>
+WAN aggregation
+WAN-aggregatie combineert twee netwerkverbindingen om uw WAN-snelheid te verhogen tot 2Gbps. Sluit de #WAN-poort en de LAN 4-poort van uw router aan om de LAN-poorten van uw modem (zorg dat u twee kabels met dezelfde specificatie gebruikt). <a id="wanAgg_faq" target="_blank" style="color:#FFCC00;text-decoration:underline;">FAQ WAN-aggregatie</a>
 WAN-aggregatie inschakelen
 Dual WAN is ingeschakeld op uw router. Door WAN-aggregatie in te schakelen, wordt dual WAN uitgeschakeld. Weet u zeker dat u wilt doorgaan?
 WAN-aggregatie is ingeschakeld op uw router. Door Dual WAN in te schakelen, wordt WAN-aggregatie uitgeschakeld. Weet u zeker dat u wilt doorgaan?
 WAN-aggregatie gebruikt de LAN 4-poort van uw router. Door IPTV in te schakelen, wordt WAN-aggregatie uitgeschakeld. Weet u zeker dat u wilt doorgaan?
 IPTV gebruikt de LAN 4-poort van uw router. Door WAN-aggregatie in te schakelen, wordt IPTV uitgeschakeld. Weet u zeker dat u wilt doorgaan?
 Zowel dual WAN als IPTV zijn ingeschakeld op uw router. Door WAN-aggregatie in te schakelen, worden dual WAN en IPTV uitgeschakeld. om poortconflicten te vermijden. Weet u zeker dat u wilt doorgaan?
-Zorg dat de WAN-poort van uw router en de LAN-poort van uw modem zijn aangesloten met twee kabels met dezelfde specificatie.
+Zorg dat de #WAN-poort van uw router en de LAN-poort van uw modem zijn aangesloten met twee kabels met dezelfde specificatie.
 Zorg dat de LAN 4-poort van uw router en de LAN-poort van uw modem zijn aangesloten met twee kabels met dezelfde specificatie.
 Ga naar de pagina <a href="Advanced_WAN_Content.asp" style="color:#FFCC00;text-decoration:underline;">WAN-internetverbinding</a> om WAN-aggregatie in te schakelen.
 Als de instelling van de WAN-aggregatie mislukt, volgt u de onderstaande stappen om opnieuw te proberen.
-Zorg dat de LAN-poorten van uw modem al met kabels zijn verbonden met WAN en LAN 4 van uw router.
+Zorg dat de LAN-poorten van uw modem al met kabels zijn verbonden met #WAN en LAN 4 van uw router.
 Zorg dat uw modem 802.3ad heeft ingeschakeld
 Controleer of u twee kabels met dezelfde specificaties gebruikt (gigabit & gigabit of 10/100& 10/100Mbps)
 Start uw router opnieuw op
@@ -3756,6 +3854,7 @@ WiFi Proxy
 WiFi-radar
 Via de instellingen kunt u de parameters voor WiFi Radar configureren.
 Zwarte lijst voor roaming
+Wifi delen
 WiFi-site-overzicht
 WiFi Site survey (WiFi-site-overzicht) spoort alle WiFinetwerken in uw omgeving op.
 Statistieken draadloos kanaal
@@ -4116,7 +4215,7 @@ Het afbeeldingsbestand van de splashwebpagina kan niet leeg zijn.
 Welkom bij
 Ik heb de <span id='terms_service_hyperlink'>servicevoorwaarden</span> gelezen en ga ermee akkoord
 Doorgaan
-Meervoudige VPN-verbinding
+VPN-fusie
 maakt het mogelijk verbinding te maken met meerdere VPN-servers tegelijk en uw clientapparaten toe te wijzen voor verbinding met verschillende VPN-tunnels. Sommige apparaten zoals set-top boxen, smart TV's en Blu-ray-spelers bieden geen ondersteuning van VPN-software. Deze functie biedt VPN toegang tot dergelijke apparaten in een thuisnetwerk zonder dat u VPN-software hoeft te installeren, terwijl uw smartphone verbonden blijft met internet en niet VPN.
 Voor gamers bestrijdt de VPN-verbinding DDoS-aanvallen om te verhinderen dat de verbinding van uw pc-game of stream met de gameservers verloren gaat. Het tot stand brengen van een VPN-verbinding kunt u gewoon uw IP-adres wijzigen naar de regio waar de spelserver zich bevindt om uw ping naar gameservers te verbeteren.
 Om de starten volgt u de onderstaande stappen:
@@ -4243,7 +4342,10 @@ Vraag dit niet opnieuw.
 *Uw huidige aanmeldingswachtwoord is onjuist!
 HTTPS is een relatief beter beveiligd webtoegangsprotocol. Wij adviseren dat u de ASUS-routerinstallatiepagina via HTTPS-protocol invoert.
 Klik hier om door te gaan.
+De QR-code scannen om een verbinding te maken
+Gebruik de telefoon om deze QR-code te scannen en maak een verbinding met gratis wifi
 Scan de QR-code voor meer informatie.
+Handmatig verbinden met het netwerk
 Wilt u nog steeds toegang de instellingenpagina hebben via <span>HTTP-protocol</span>?
 Wanneer u gebruik maakt van HTTPS-protocol, kan een waarschuwingsbericht worden weergegeven om u te informeren over de uitgifte van een beveiligingscertificaat door uw browser.
 De verbinding tussen uw browser en de instellingenpagina van de ASUS-router (ZVDOMAIN_NAMEVZ) blijft, ondanks dit waarschuwingsbericht, beveiligd.

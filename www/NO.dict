@@ -66,7 +66,7 @@ Informasjon er ikke tilgjengelig. Oppdater ruterens fastvare til den nyeste vers
 Ved å starte ruteren på nytt vil alle tilkoblede enheter miste Internettforbindelsen. Alle enhetene får igjen Internettforbindelsen når omstart er fullført. Fortsette?
 Flott
 Svak
-Ok
+OK
 Normal
 Tilkoblingskvalitet
 Legg til AiMesh-tilgangspunkt
@@ -88,6 +88,12 @@ Datahastighet
 Topologi
 Systeminnstillinger
 Statistikk
+Miljøregistrering
+Beregner rutetilkobling …
+Optimalisering av node(r)
+Optimalisering av antennevariasjon
+Antenneregistrering
+Beregner antennevariasjon …
 Powerline connection with good signal quality
 Powerline connection with weak signal quality
 Trådløs forbindelse med meget bra signalkvalitet
@@ -151,6 +157,7 @@ Hvis du vil deaktivere deling av informasjonen din med Trend Micro gjennom følg
 Er du sikker på at du vil trekke tilbake?
 Trekk tilbake
 Tast inn navnet
+Vertsnavnet har blitt bundet til innloggingskontoen i Router-appen. Du må registrere/slette den i Router-appen.
 Automatisk
 Automatic Setting
 Båndbreddegrense
@@ -212,6 +219,8 @@ Hopp
 Ukjent enhet
 Oppgradere om natten
 Upgrade Now
+Bruk standardpassord for lokal innlogging
+Det krypterte standardpassordet for lokal innlogging gir deg en sikker innloggingsprosess når du kobler til denne ASUS-nettverksenheten lokalt.
 Nærmere informasjon får du på <a style="font-weight: bolder;text-decoration: underline;color:#000000;" href="https://www.asus.com/support/" target="_blank">https://www.asus.com/support/</a>
 * En minimal pingpakke bruker ca. 128 byte per intervall. Derfor vil ping-detektoren bruke
 MB per måned
@@ -280,7 +289,10 @@ Fastvareversjon:
 * Sommertid er aktivert i denne tidssonen.
 Systemtid
 * Påminnelse: Systemtiden er ikke synkronisert med en NTP-server.
+Ruterens systemtid har ikke blitt synkronisert med NTP-serveren ennå. Den synkroniseres automatisk når den kobles til Internett.
 Gjestenettverk
+Slik finner du %@
+%@ finner du på etiketten på bak-/undersiden av ASUS-enheten.
 Bruk en port mellom 1024–65535.
 Because of security and compatibility concerns,  IE8 / IE9 / IE10 are no longer supported.
 Things might be bound to broken and perhaps unusable.
@@ -359,6 +371,8 @@ Et sikkert passord må ha en lengde på minst 8 tegn og inneholde både store og
 Annonser ruterens IP-adresse i tillegg til brukerdefinert DNS
 WAN-tilkoblingstype
 Bruk følgende IP-adresse:
+Lokal innlogging
+Konfigurer brukernavn og passord for lokal innlogging for å hindre uautorisert tilgang til ASUS-nettverksenheten din.
 Minst to tegn. Bare alfanumeriske tegn, understreker og bindestreker er godtatt. Det første tegnet kan ikke være bindestrek - eller understrek _.
 Du kan også laste ned [ASUS Lyra] for å koble flere Lyra-enheter til første Lyra.
 Du kan nå trykke &quot;Paringsknappen&quot; på første og andre Lyra å sette opp en til Lyra.
@@ -474,6 +488,8 @@ Svak
 Bra
 Sterk
 Veldig sterk
+Passord for lokal innlogging
+WiFi-passord
 PIN-koden er ikke riktig. Skriv inn riktig PIN-kode og koble til USB adapteren på nytt. Hvis du fortsatt får samme feil, slår du av PIN-kode-funksjonen, og slår den på og prøver på nytt.
 Telefonnummer
 Access Number
@@ -672,6 +688,7 @@ Tast inn en nettverksnøkkel mellom 8 og 63 tegn (bokstaver, tall eller en kombi
 Tast inn en nettverksnøkkel mellom 8 og 63 tegn (bokstaver, tall eller en kombinasjon av disse). Standard trådløse sikkerhetsinnstilling er WPA2-Personal AES.
 Separate 2.4 GHz and 5 GHz
 Separate 2.4 GHz, 5 GHz and 6 GHz
+Det primære trådløse nettverket er konfigurert.
 Kontonavnet kan ikke være tomt.
 Felt med brukernavn eller passord kan ikke være tomme.
 ISP-kontoinnstilling
@@ -822,6 +839,7 @@ Gå til Traffic Limiter (trafikkbegrenser) og deaktiver internett-blokkeringen f
 Koble til internett på nytt.
 Vennligst ta kontakt med nettverksadministratoren.
 Klikk her for å gå til oppsettsiden
+<a>Klikk her</a> for å endre.
 Du kan sjekke og konfigurere innstillingen din selv.
 Hvis problemet vedvarer, kan du endre tilkoblingsinnstillingene manuelt.
 Forny WAN.
@@ -906,8 +924,8 @@ For faster video streaming experience including Youtube, Netflix and Spotify, et
 Nettsurfing
 Denne modusen er egnet for generell surfing for å unngå nettverksforsinkelse under filoverføring.
 Learn-From-Home
-Choose this mode for a smooth streaming of online video-learning experience.This category includes Coursera, Khan, Udemy, TED, edX, etc.
-Choose this mode to ensure a smooth agile online conferencing experience.This category includes VoIP, instant messaging, mail service, etc.
+Choose this mode for a smooth streaming of online video-learning experience. This category includes Coursera, Khan, Udemy, TED, edX, etc.
+Choose this mode to ensure a smooth agile online conferencing experience. This category includes VoIP, instant messaging, mail service, etc.
 Ny konto har ikke lese /skrive-tilgangsrettigheter.
 Legg til ny konto
 Standard tilgangsrettigheter for en ny mappe er lese/skrive.
@@ -1515,6 +1533,7 @@ Vertsnavn levert av ISP:
 Hvis WAN-tilkoblingstypen din er PPTP eller L2TP, legg inn servernavnet eller server-IP-adressen til VPN-serveren.
 Dette feltet lar deg oppgi et vertsnavn for RT-AX53U. Dette forespørres vanligvis av ISP-en din.
 Still inn maksimal grense for nedlastningsbåndbredde. 0 betyr ingen bredbåndsgrense.
+Tilbake
 Deaktiver
 Deaktivert
 Aktivert
@@ -1527,8 +1546,10 @@ WAN innstillinger
 Egenskaper
 Captcha
 Angi captcha.
+Hvis du vil aktivere den, må du gå <a id = \"setting_link\" target=\"_blank\" style=\"text-decoration:underline;\">hit</a> for å endre innstillingene.
 Kontroller at Ethernet-/nettverkskabelen er koblet til
 Ruteren sjekker ASUS-serveren for fastvareoppdateringen.
+Velg andre alternativer, og prøv på nytt.
 Samler ikke inn informasjon om brukere, og styres av sveitsiske personvernlover.
 Klientnavn
 Ikonet
@@ -1635,6 +1656,7 @@ Russia
 Singapore
 The United States
 Canada
+Opprett en konto
 Opprette en gratis konto
 Nivå 2 CTF støttes ikke under PPPoE, PPTP eller L2TP. Endre til Level 1 CTF ved å klikke Bekreft.
 Aktiver HW Accelerator
@@ -1942,7 +1964,7 @@ Problemer med ustabil tilkobling
 Kan ikke koble til trådløst nettverk
 Velg hvilket alternativ som best beskriver ytelsen til din DSL-tjeneste
 Kontaktmetode
-Ditt land / region
+Ditt region
 Avbryt feilsøkingsopptak
 Diagnostisk feilsøkingsloggopptak pågår
 Varighet for diagnostisk feilsøkingsloggopptak
@@ -2246,22 +2268,30 @@ Opprett ny
 Kopier annet
 Sum gjester
 gjester
+Tilby planlagt eller engangsbasert nettverkstilgang.
+Anbefalt for kjøpesentre, treningssentre eller venner.
 Tilgangsgrense
 Kun internettilgang
 Bruk samme innstillinger som
 Bedriftsnettverk
 Tilpasset nettverk
+Ansatt
 Konfigurer et trygt og sikkert nettverk
+Kontor med tilordning av tillatelser til avdelinger
 Opprett et gjestenettverk raskt
 IoT-nettverk
 Du kan enkelt skille ut et nettverk for IoT-enhetene dine
+Anbefalt for overvåkingsenheter, taleassistanse, lysarmaturer, dørklokkekameraer, smartlåser og sensorer.
 Barnenettverk
 Trygg Internett-tilgang for barn
 Gjesteportal
-Opprett en gjesteportal eller Facebook Wi-Fi
+Opprett en gjesteportal
+Opprett tvungen portal for digital markedsføring.
+Anbefalt for restauranter, hoteller eller matbiler.
 Portaltype
 VPN-nettverk
 Opprett en sikker Internett-tilkobling
+Opprett en sikker Internett-tilkobling gjennom VPN. Anbefalt for hjemmekontor, avdelingskontor.
 Denne VPN-profilen er deaktivert. Gå til innstillingssiden for VPN Server, og aktiver den.
 Klikk på Gå til innstillinger for å åpne siden for VPN-innstillinger.
 Denne innstillingen kan ikke velges mens du bruker den andre opprettede profilen.
@@ -2269,8 +2299,15 @@ Privat nettverk
 Det finnes ingen VPN-profil nå. Klikk på [Gå til innstillinger] nedenfor for å gå til siden for VPN-innstillinger og opprette.
 Legg til et nettverk
 Profilliste
+Planlagt nettverk
 Velg et definert nettverk
+Opprett et nettverk basert på scenarioet ditt
+Egendefinert nettverk
+Scenarioutforsker
 Wi-Fi-tidsplan
+Planlegg daglige eller ukentlige tilkoblingstidspunkter for trådløst nettverk.
+Anbefalt for studierom, klasserom eller barn.
+Konfigurer tilgangsnivåer for ulike brukere for bedre nettverkssikkerhet.
 Maskinvareversjon
 Help
 Hjelp gir deg retningslinjer og informasjon om bruk av ruterens funksjoner. Klikk på
@@ -2282,6 +2319,7 @@ Høy
 Høyest
 Høyeste prioriteringspakke
 timer
+HVORDAN INSTALLERE
 Internett-tilkoblingen mislyktes. Prøv igjen, eller be om kontoinnstillingene fra Internett-leverandøren (ISP).
 Velg Internett-leverandørplasseringen.
 Plassering
@@ -2322,7 +2360,7 @@ Du kan koble ASUS-ruteren til IFTTT manuelt ved å kopiere og lime inn aktiverin
 Velg blant de eksisterende appletene, eller lag dine egne appleter på <a id="ifttt_applet_link">ASUS-ruterens kanal</a>
 <a id="ifttt_signin">Logg på</a> IFTTT-kontoen din.
 Automatiser hverdagen med ASUS-ruteren og IFTTT!
-Kom i gang:
+Kom i gang :
 i
 Ruteren kan ikke koble til ASUS-serveren for å se etter fastvareoppdateringer. Last ned den nyeste fastvaren fra produktstøttesiden til ASUS, og oppdater manuelt.
 Band
@@ -2447,6 +2485,9 @@ IPv6 LAN-innstilling
 Native
 OCN Virtual Connect
 v6plus
+Hvis du vil bruke dem, må du rådføre deg med det gyldige portintervallet i %0$@ og endre portnummeret til disse funksjonene til det samsvarende intervallet.
+Det kan oppstå samsvarsfeil med portrelaterte innstillinger i det gjeldende %2$@-portintervallet.
+Portsamsvarsfeil kan oppstå med det spesielle portintervallet %3$@. Det påvirker ikke Internett-tilgangen din, men følgende portrelaterte innstillinger. Hvis du vil bruke dem, må du rådføre deg med det gyldige portintervallet i <a target='_self' style='text-decoration:underline;' href='Main_IPV6Status_Content.asp'>IPv6 Log</a> og endre portnummeret til disse funksjonene til det samsvarende intervallet.
 IPv6 prefiks lengde
 IPv4 Anykast-relé
 Statisk IPv6
@@ -2631,7 +2672,7 @@ Dersom det er oppføringer i MAC-filterlisten, klikk på Bruk for å slette diss
 Bruksanvisning
 Manuelt tildel
 By
-Land/Region
+Region
 Du må kanskje VLAN-ID for å sette opp PTM-tilkoblingen. Ikke endre VLAN ID med mindre Internett-leverandøren ber deg om å gjøre det.
 Denne hurtigguiden hjelper deg gjennom rask konfigurering av RT-AX53U WAN-innstillingene. Velg landet og Internettleverandøren din fra rullegardinlisten, klikk på Neste og angi nødvendig informasjon. Kontakt Internett-leverandøren din for informasjon om DSL-tilkoblingsinnstillingene, hvis nødvendig.
 Du trenger Virtual Path Identifier (VPI) og Virtual Channel Identifier (VCI) for å sette opp ATM PVC. Ikke endre VPI- og VCI-numrene med mindre Internett-leverandøren din ber deg om å gjøre dette.
@@ -2641,6 +2682,8 @@ Merknad:
 Hurtig manuell innstilling
 Henvis til RT-AX53U WAN-innstillingene. Hvis du vil legge til en ny innstilling, følger du instruksjonene på skjermen. Hvis du vil tilpasse den forrige innstillingen, gå til [Advanced Setting] -> [WAN] -> [Internet Connection]-siden.
 Produsent
+Oppdater MAP
+Det tar 1–2 minutter å tilordne MAP-regelen på nytt. Alle de tilkoblede enhetene dine mister Internett-tilkoblingen under oppdateringen.
 Maksimal båndbreddegrense
 Still inn maksimal grense for opplastningsbåndbredde.
 Maksimum datamaskiner
@@ -2692,6 +2735,7 @@ Kunne ikke oppgradere 4G-modemets fastvare. Vent litt mens ruteren startes på n
 Du har lastet opp feil fastvare for å oppgradere modulen. Velg riktig fastvare, og oppgrader på nytt!
 4G-modemets fastvare
 Informasjon om modem for mobilt bredbånd
+Bruk telefonen som modem
 Modemets programvareversjon
 PIN-koden kreves.
 PIN2-koden kreves.
@@ -2822,7 +2866,9 @@ Mål
 Spor rute til vert
 Wake-on-LAN
 Vekking
+Om funksjonen
 Nytt funksjonalitet tilgjengelig
+Funksjonsbeskrivelse
 Nytt mappenavn
 Ny modemfastvare
 Neste side
@@ -2837,6 +2883,7 @@ Slå på WiFi for å bruke WPS.
 Endre autentiseringsmetode til WPA2 eller WPA-Auto for å aktivere WPS.
 Hvis du vil aktivere WPS, må du først deaktivere SSID.
 Note: New patch will be updated regularly, please keep your firmware stay up to date.
+Obs
 Varslingselement
 Antall klienter
 Gå til <a href="https://iplookup.asus.com/nslookup.php" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">https://iplookup.asus.com/nslookup.php</a> for å søke etter en statisk adresse du kan bruke for ASUS DDNS-tjenesten.
@@ -2924,6 +2971,7 @@ Portkartlegging støtter IPTV WAN-grensesnittet for en spesifikk LAN-port. DU ka
 Aktiver Portkartlegging
 LAN-port
 SSH-port
+Portstatus
 Tilkoblingshastigheten for disse portene kan forbedres.
 Se følgende resultater/tips for å feilsøke.
 Ting du kan sjekke
@@ -2933,6 +2981,9 @@ En eldre enhet kan redusere tilkoblingshastigheten.
 Dobbeltsjekk Internett-abonnementet ditt hos Internett-leverandøren.
 Skift ut Ethernet-kabelen med #ETHCABLE eller nyere.
 Denne porten er for
+Når %1$@ konfigureres som %2$@, deaktiveres funksjonen \"%3$@\". Er du sikker på at du vil fortsette?
+Denne funksjonen er deaktivert fordi %1$@ er konfigurert som %2$@.
+%1$@ og %2$@ kan ikke konfigureres som samme port.
 Denne siden viser portviderekoblingsstatusen. Noen P2P-programmer bruker UPnP-protokollen til å åpne porten og portnummeret vises på denne siden.
 RT-AX53U har registrert at tilkoblingstypen er PPPoE. Hvis ja, tast inn brukernavnet/passordet og klikk på Bruk.<br>Hvis ikke, klikk på Manuell innstilling for å angi på nytt.
 Skriv inn brukernavn/passord som du fikk av Internett-leverandøren, og klikk på Neste.
@@ -2994,6 +3045,7 @@ Produktregistrering
 Leverandør
 Innkapslings
 Innkapslingsmodus
+Fellesnøkkel
 Push
 Er du sikker på at du vil slette denne PVC-en?
 Rediger PVC
@@ -3086,6 +3138,20 @@ Duplikat eller identisk VPI- og VCI-innstillinger.
 Systemet starter på nytt nå! Vent og vi vil videresende til hjem for RT-AX53U.
 Skala
 Søker
+Avdelingskontor
+Klasserom
+Kafé
+Ladestasjon for elbil
+Venner
+Hotell
+Handlesenter
+Eksternt arbeidsrom
+Smarthjem
+Restaurant
+Barn
+Taleassistanse
+Overvåkingsenheter
+Hjemmekontor
 sekunder
 Sikkerhetsnivå
 Velg alle
@@ -3128,7 +3194,7 @@ Click on this checkbox if you want to share the config file for debugging. Since
 Innstillinger
 Klikk <a id="redirect_to_setup">Her</a> for å endre. Se <a id="redirect_to_FAQ">Vanlige spørsmål/a> for mer informasjon.
 Sette opp noden
-Place your RT-AX53U router and node(s) in the same room and at least 1 meter apart during the setup process.
+Plasser RT-AX53U-ruteren og noden(e) i samme rom og minst 1 meter unna hverandre under konfigureringen.
 Hold strømmen på og i ventemodus for oppsett av systemet.
 Navn på enhet
 Velg språkinnstillingene som passer for filkrypteringen.
@@ -3279,6 +3345,10 @@ System adjustment
 Temperature unit
 Fan speed
 Endre ruterens påloggingspassord, tidssone og NTP-serverinnstillinger.
+I tillegg til hovednettverket kan du opprette ytterligere egendefinerte nettverk til andre formål.
+Det egendefinerte nettverket er adskilt fra hovednettverkets domene og tilbyr en sikrere tilkobling.
+For hvert egendefinerte nettverk kan du konfigurere ulike krypteringsmetoder, tidsplaner, tillatelser, AiMesh-nettverk, båndbreddebegrensninger osv. for å danne et omfattende nettverksmiljø.
+Vil du legge til et ytterligere trådløst nettverk til spesialbruk?
 Grunnleggende konfigurering
 LAN
 Diverse
@@ -3453,6 +3523,7 @@ Avinstallerer
 Oppdatering via Internett er tilgjengelig
 Oppgraderer
 Opplastingsbåndbredde
+Last opp konfigurasjon
 Opplastningsprioritering
 Data som sendes / sek.
 Data sendt
@@ -3515,6 +3586,10 @@ Nytt delnett
 Ikke merket
 Merket
 Overstyr
+Disse portene brukes av %@.
+Portisolering
+VLAN-profil
+Innstillinger for VLAN-svitsjkontroll
 Denne verdien må være høyere enn
 Denne verdien må være lavere enn
 Client will use VPN to access
@@ -3556,7 +3631,7 @@ Tilpasset konfigurasjon
 RT-AX53U vil automatisk generere en .ovpn-fil med sertifiseringsinstansnøkkelen. Du kan gi en .ovpn-fil med et brukernavn og passord til alle brukere som kobler seg til OpenVPN-serveren.
 Hvis du vil endre innstillingene til OpenVPN-serveren, går du til Avansert innstilling
 Du kan endre standardinnstillingene for OpenVPN-serveren for å gi en tilpasset OPVN-fil for en bestemt tilkoblingstype.
-If your WAN IP address is dynamic, please click <a href="http://ZVDOMAIN_NAMEVZ/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
+If your WAN IP address is dynamic, please click <a href="/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
 Tildel fra DHCP
 Krypteringschiffrering
 Ruting konflikt! <p>Kontroller klientens IP-adresseinnstillinger fra siden Avansert innstilling, eller kontroller rutingtabellen i systemloggen.
@@ -3655,18 +3730,40 @@ Oppdateringen mislyktes. Prøv på nytt.
 Alle VPN-klientene dine kobles til på nytt når du klikker på Bruk. Er du sikker på at du vil fortsette?
 Støttet IKE-versjon
 Klikk her for å konfigurere DDNS.
+* VPN WiFi er allerede i bruk.
+How to set up WireGuard® server?
+How to set up site to site VPN with WireGuard®?
+How to set up WireGuard® client in VPN Fusion?
+VPN-godkjenning
+Klientsertifikat
+Klientnøkkel
+Sertifikatopphevelsesliste
+Det maksimale antallet samtidige aktive VPN-tilkoblinger er begrenset til 2. Du må deaktivere en eksisterende VPN-tilkobling før du aktiverer en annen.
+Systemet kan aktivere én Surfshark-tilkobling om gangen. Du må deaktivere den nåværende Surfshark-tilkoblingen før du aktiverer en annen.
+Standard tilkobling
 VPN-klienter (virtuelt privat nettverk) blir ofte brukt til å koble til en VPN-server for å få tilgang til private ressurser over et offentlig nettverk på en sikker måte.
 Noen enheter som dekodere, smarte TV-er og Blu-ray-spillere støtter ikke VPN-programvare.
 ASUSWRT VPN-funksjonen gir VPN-tilgang til alle enheter i et hjemmenettverk uten å måtte installere VPN-programvare på hver enhet.
+Endepunktadresse
+Endepunktport
+Fordi din nettsikkerhet kommer først.
+Tillatte IP-adresser
 Endre ruterens LAN-delnett. Se disse <a target='_blank'>vanlige spørsmålene</a> for mer detaljert informasjon.
+Vedvarende vedlikehold
 Nett-til-nett-klient/node
 IPSec VPN-klient lar RT-AX53U koble til en nett-til-nett-IPSec-server/-klient eller lar enhetene koble direkte til hverandre node-til-node.
 La oss ta bruken av to RT-AX53U som et eksempel for å forklare node-til-node-nettverket. Du må først opprette en IPSec-nodeprofil på denne siden, så oppretter du en annen node på den andre RT-AX53U med tilsvarende konfigurasjoner.
+Profil
+Bruk på alle enheter
+Tildel enheter til denne profilen
+Slett Profil
+Velg en annen VPN-profil for å avbryte standard Internett-tilgang via WAN.
 Hvis du vil starte en VPN-forbindelse, kan du følge trinnene nedenfor:
 Legg til profil
 Velg en VPN-tilkoblingstype
 Skriv inn VPN-autentiseringsinformasjon fra VPN-leverandøren, og koble til.
 VPN-klient
+Node
 Når du bruker en VPN-klient med en PPPoE-tilkobling, startes ruteren på nytt automatisk for å deaktivere NAT-akselerasjon. Er du sikker på at du vil fortsette?
 Barriere
 Konfigurer Ethernet WAN-innstillinger for RT-AX53U.
@@ -3730,18 +3827,19 @@ Enable Ping to Internet
 TCP MSS Valg
 Bytes
 VLAN ID
-WAN-aggregering kombinerer to nettverktilkoblinger, slik at WAN-hastigheten økes til 2 Gbps. Koble ruterens WAN-port og LAN 4-port til modemets LAN-porter (forsikre deg om at du bruker to kabler med samme spesifikasjon). <a id="wanAgg_faq" target="_blank" style="color:#FFCC00;text-decoration:underline;">WAN-aggregering – ofte stilte spørsmål</a>
+WAN-aggregering
+WAN-aggregering kombinerer to nettverktilkoblinger, slik at WAN-hastigheten økes til 2 Gbps. Koble ruterens #WAN-port og LAN 4-port til modemets LAN-porter (forsikre deg om at du bruker to kabler med samme spesifikasjon). <a id="wanAgg_faq" target="_blank" style="color:#FFCC00;text-decoration:underline;">WAN-aggregering – ofte stilte spørsmål</a>
 Aktiver WAN-aggregering
 Ruteren din har dobbel-WAN aktivert. Hvis du aktiverer WAN-aggregering, deaktiveres dobbel WAN. Er du sikker på at du ønsker å fortsette?
 WAN-aggregering er aktivert på ruteren. Hvis du aktiverer dobbel WAN, deaktiveres WAN-aggregering. Er du sikker på at du ønsker å fortsette?
 WAN-aggregering bruker ruterens LAN 4-port. Hvis du aktiverer IPTV, deaktiveres WAN-aggregering. Er du sikker på at du ønsker å fortsette?
 IPTV bruker ruterens LAN 4-port. Hvis du aktiverer WAN-aggregering, deaktiveres IPTV. Er du sikker på at du ønsker å fortsette?
 Ruteren har både dobbel WAN og IPTV aktivert. Hvis du aktiverer WAN-aggregering, blir dobbel WAN og IPTV deaktivert for å unngå portkonflikter. Er du sikker på at du ønsker å fortsette?
-Forsikre deg om at ruterens WAN-port og modemets LAN-port er tilkoblet med to kabler som har samme spesifikasjon.
+Forsikre deg om at ruterens #WAN-port og modemets LAN-port er tilkoblet med to kabler som har samme spesifikasjon.
 Forsikre deg om at ruterens LAN 4-port og modemets LAN-port er tilkoblet med to kabler som har samme spesifikasjon.
 Gå til tilkoblingssiden for <a href="Advanced_WAN_Content.asp" style="color:#FFCC00;text-decoration:underline;">WAN-internett</a>, for å aktivere WAN-aggregering.
 Hvis WAN-aggregeringen ikke lykkes, utfør de følgende trinn for å prøve på nytt.
-Sørg for at modemets LAN-porter allerede er tilkoblet ruterens WAN og LAN 4 med kabler.
+Sørg for at modemets LAN-porter allerede er tilkoblet ruterens #WAN og LAN 4 med kabler.
 Pass på at modemet har 802.3ad aktivert
 Bekreft at du bruker to kabler med de samme spesifikasjoner (enten to gigabit-kabler eller to 10/100 Mbps-kabler)
 Start om ruteren
@@ -3756,6 +3854,7 @@ WiFi Proxy
 WiFi-radar
 Parametere for WiFi-radar kan konfigureres i innstillingene.
 Blokkeringsliste for roaming
+Wifi-deling
 WiFi-stedsoversikt
 WiFi-stedsoversikt oppdager alle WiFi-nettverk i miljøet ditt.
 Statistikk for trådløs kanal
@@ -4116,7 +4215,7 @@ Bildefilen til startsiden kan ikke være tom.
 Velkommen til
 Jeg har lest og samtykker i <span id='terms_service_hyperlink'>Bruksvilkårene</span>
 Fortsett
-Flere VPN-tilkoblinger
+VPN Fusion
 lar deg koble til flere VPN-servere samtidig og tilordne klientenhetene dine til å koble til ulike VPN-tunneler. Noen enheter som dekodere, smart-TV-er og Blu-ray-spillere støtter ikke VPN-programvare. Denne funksjonen gir VPN-tilgang til slike enheter i et hjemmenettverk uten å installere VPN-programvare, mens smarttelefonen forblir koblet direkte til Internett, ikke via VPN.
 For gamere beskytter en VPN-tilkobling mot DDoS-angrep og hindrer at PC-spillet eller strømmen din kobles fra spillserveren. Ved å lage en VPN-tilkobling kan du også endre IP-adressen til området der spillserveren befinner seg, noe som kan forbedre pingen til spillserverne.
 Start ved å følge trinnene nedenfor:
@@ -4243,7 +4342,10 @@ Ikke minn meg på dette igjen
 *Det gjeldende passordet for innlogging er feil!
 HTTPS er en sikrere protokoll for nettilgang. Vi anbefaler sterkt å gå til instillingssiden for ASUS Router via en HTTPS-protokoll.
 Klikk her for å fortsette.
+Skann QR-kode for å koble til
+Bruk telefonen til å skanne denne QR-koden og koble til gratis wifi
 Skann QR-koden for mer informasjon.
+Koble til nettverk manuelt
 Vil du likevel gå til innstillingssiden via en <span>HTTP-protokoll</span>?
 Når du bruker en HTTP-protokoll, kan du få en advarsel fra nettleseren om problemer med sikkerhetssertifikatet.
 Til tross for denne advarselen, er tilkoblingen mellom nettleseren og innstillingssiden for ASUS Router (ZVDOMAIN_NAMEVZ) sikker.

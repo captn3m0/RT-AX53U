@@ -80,10 +80,10 @@ else{
 document.getElementById("ModelPid_img").src="../images/Model_product.png";
 document.getElementById("ModelPid_img_desktop").src="../images/Model_product.png";
 }
-var check_desc1 = "<#660#>";
-var check_desc2 = "<#661#>";
-var check_desc3 = "<#662#>";
-var check_desc4 = "<#663#>";
+var check_desc1 = "<#676#>";
+var check_desc2 = "<#677#>";
+var check_desc3 = "<#678#>";
+var check_desc4 = "<#679#>";
 if(based_modelid == "RT-N12" || based_modelid == "AP-N12" || hw_ver.search("N12") != -1){ //MODELDEP : N12 serious
 var desc1_split = check_desc1.split("#ZVSPLITVZ#");
 var desc2_split = check_desc2.split("#ZVSPLITVZ#");
@@ -155,11 +155,11 @@ document.getElementById("producticon").style.display = "none";
 document.getElementById("producticon_desktop").style.display = "none";
 if(based_modelid == "RT-AC87U"){
 document.getElementById("noti_wan_uplus").style.display = "none";
-document.getElementById("Productdesc_1").innerHTML = "<#829#>";
+document.getElementById("Productdesc_1").innerHTML = "<#847#>";
 document.getElementById("Productdesc_1").style.color = "#FC0";
-document.getElementById("Productdesc_2").innerHTML = '<#839#>';
-document.getElementById("Productdesc_3").innerHTML = '<#840#>';
-document.getElementById("Productdesc_4").innerHTML = '<#841#>';
+document.getElementById("Productdesc_2").innerHTML = '<#857#>';
+document.getElementById("Productdesc_3").innerHTML = '<#858#>';
+document.getElementById("Productdesc_4").innerHTML = '<#859#>';
 }
 document.getElementById("wan_unplug").style.display = "";
 setTimeout("startPoll();", 2000);
@@ -249,19 +249,19 @@ function uploadSetting(){
 var file_obj = document.form.file;
 var file_obj_name = file_obj.value.toUpperCase();
 if(file_obj_name == ""){
-alert("<#320#>");
+alert("<#332#>");
 file_obj.focus();
 }
 else if(file_obj_name.length < 6 ||
 file_obj_name.lastIndexOf(".CFG") < 0 ||
 file_obj_name.lastIndexOf(".CFG") != (file_obj_name.length)-4){
-alert("<#3123#>");
+alert("<#3189#>");
 file_obj.focus();
 }
 else{
 stopFlag = 1;
 parent.document.getElementById('proceeding_img_text').style.display = "";
-parent.document.getElementById('connHint').innerHTML = "<#3109#>";
+parent.document.getElementById('connHint').innerHTML = "<#3175#>";
 document.form.action = "/upload.cgi";
 document.form.enctype = "multipart/form-data";
 document.form.submit();
@@ -370,7 +370,7 @@ width:220px;
 <input type="hidden" name="sw_mode" value="1">
 <div>
 <div class="desktop_left_field">
-<div style="font-size:42px"><#843#></div>
+<div style="font-size:42px"><#861#></div>
 </div>
 <div class="table_td">
 <div style="font-size:3em;color:#FFF;line-height:50px;margin:15px 23px 0 23px;text-align:center;">Welcome</div><div style="font-size:1.4em;color:#279FD9;text-align:center;margin: 0 23px;">ASUS Networking Family</div><div id="model_description">
@@ -382,12 +382,12 @@ width:220px;
 </ul>
 </div>
 <div id="producticon"><img id="ModelPid_img" style="width:200px;"></div><div id="wan_unplug" style="display:none;text-align:center;">
-<div id="noti_wan_uplus" class="QISGeneralFont" style="color:#FC0;text-align:left;margin:10px 15px;"><#829#></div>
+<div id="noti_wan_uplus" class="QISGeneralFont" style="color:#FC0;text-align:left;margin:10px 15px;"><#847#></div>
 <div><img id="unplugImg" src="/images/WANunplug.png"></div>
 <div><img id="unplugImg1" style="margin-top:-198px;" src="/images/WANunplug_eth.png"></div>
 <div><img id="unplugImg2" style="margin-top:-198px;display:none;" src="/images/WANunplug_usb.png"></div>
 </div>
-<div id="model_welcome_field"><#843#></div>
+<div id="model_welcome_field"><#861#></div>
 <div class="button_welcome">
 <div id="btn_next_step" class="button_active" onclick="startDetect();">START</div>
 <div id="loadingIcon" style="width:100%;margin-top:20px;display:none;"><img src="/images/InternetScan.gif"></div>

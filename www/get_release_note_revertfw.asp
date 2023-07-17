@@ -97,7 +97,7 @@ htmlDecode: htmlDecode
 <body onload="reSize();">
 <textarea id="amas_release_note" cols="63" rows="18" wrap="normal" readonly="readonly" style="width:98%; font-family:Courier New, Courier, mono; font-size:13px;color:#FFFFFF;background-color:rgb(43, 55, 59); word-wrap:normal; border:0px; display:none;">
 </textarea>
-<textarea id="amas_release_note_hint" cols="63" rows="18" wrap="normal" readonly="readonly" style="width:98%; font-family:Courier New, Courier, mono; font-size:13px;color:#FFFFFF;background-color:rgb(43, 55, 59); word-wrap:normal; border:0px;"><#2153#></textarea>
+<textarea id="amas_release_note_hint" cols="63" rows="18" wrap="normal" readonly="readonly" style="width:98%; font-family:Courier New, Courier, mono; font-size:13px;color:#FFFFFF;background-color:rgb(43, 55, 59); word-wrap:normal; border:0px;"><#2175#></textarea>
 </body>
 </html>
 

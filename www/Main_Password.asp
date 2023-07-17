@@ -11,6 +11,7 @@
 <link rel="icon" href="images/favicon.png">
 <title>ASUS Login</title>
 <script language="JavaScript" type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/require/require.min.js"></script>
 <script type="text/javascript" src="/js/httpApi.js"></script>
 <script type="text/javascript" src="/js/https_redirect/https_redirect.js"></script>
 <style>
@@ -100,6 +101,9 @@ display: none;
 .main_content .btn_bg > div{
 margin-right: 8px;
 height: 100%;
+}
+.businessInput{
+background-color: #CCC;
 }
 /*for mobile device*/
 @media screen and (max-width: 1000px){
@@ -196,6 +200,15 @@ return (ui_support[_ptn]) ? ui_support[_ptn] : 0;
 }
 var gobi_support = isSupport("gobi");
 function initial(){
+if(isSupport("BUSINESS")){
+$(".title_name").css({"color": "#000"})
+$(".sub_title_name").css({"color": "#000"})
+$(".form_input").css({
+"color": "#000",
+"border": "1px solid #ccc"
+})
+$(".businessStyle").css({"color": "#000"})
+}
 if(is_KR_sku || is_SG_sku || is_AA_sku)
 $("#KRHint").show();
 if(isIE8 || isIE9){
@@ -287,15 +300,16 @@ function validForm(){
 if(!validator.chkLoginId(document.form.http_username_x)){
 return false;
 }
+if($("#defpassCheckbox").prop('checked')) return true;
 if(document.form.http_passwd_x.value == ""){
-showError("<#268#>");
+showError("<#277#>");
 document.form.http_passwd_x.value = "";
 document.form.http_passwd_x.focus();
 document.form.http_passwd_x.select();
 return false;
 }
 if(document.form.http_passwd_x.value != document.form.http_passwd_2_x.value){
-showError("<#269#>");
+showError("<#278#>");
 document.form.http_passwd_x.value = "";
 document.form.http_passwd_x.focus();
 document.form.http_passwd_x.select();
@@ -306,7 +320,7 @@ if(!validator.chkLoginPw_KR(document.form.http_passwd_x)){
 return false;
 }
 if(document.form.http_passwd_x.value == document.form.http_username_x.value){
-alert("<#337#>");
+alert("<#349#>");
 document.form.http_passwd_x.focus();
 document.form.http_passwd_x.select();
 return false;
@@ -318,7 +332,7 @@ return false;
 }
 }
 if(document.form.http_passwd_x.value == '<% nvram_default_get("http_passwd"); %>'){
-showError("<#492#>");
+showError("<#508#>");
 document.form.http_passwd_x.value = "";
 document.form.http_passwd_x.focus();
 document.form.http_passwd_x.select();
@@ -326,7 +340,7 @@ return false;
 }
 var is_common_string = check_common_string(document.form.http_passwd_x.value, "httpd_password");
 if(document.form.http_passwd_x.value.length > 0 && is_common_string){
-if(!confirm("<#316#>")){
+if(!confirm("<#328#>")){
 document.form.http_passwd_x.focus();
 document.form.http_passwd_x.select();
 return false;
@@ -336,7 +350,15 @@ return true;
 }
 var showLoading_time = 3000;
 function submitForm(){
-var postData = {"restart_httpd": "0", "new_username":document.form.http_username_x.value, "new_passwd":document.form.http_passwd_x.value};
+var postData = {
+"restart_httpd": "0",
+"new_username":document.form.http_username_x.value,
+"new_passwd":document.form.http_passwd_x.value,
+"defpass_enable": $("#defpassCheckbox").prop('checked') ? "1" : "0"
+};
+var sw_mode = '<% nvram_get("sw_mode"); %>';
+if(sw_mode == 3 && '<% nvram_get("wlc_psta"); %>' == 2)
+sw_mode = 2;
 if(validForm()){
 $("#error_status_field").hide();
 $("#btn_modify").hide();
@@ -361,6 +383,9 @@ setTimeout(function(){
 httpApi.chpass(postData);
 }, 100);
 setTimeout(function(){
+if('<% nvram_get("w_Setting"); %>' == '0' && sw_mode != 2)
+location.href = '/QIS_wizard.htm?flag=wireless';
+else
 location.href = "/";
 }, showLoading_time);
 }
@@ -371,7 +396,7 @@ var validator = {
 chkLoginId: function(obj){
 var re = new RegExp("^[a-zA-Z0-9][a-zA-Z0-9\-\_]+$","gi");
 if(obj.value == ""){
-showError("<#264#>");
+showError("<#273#>");
 obj.value = "";
 obj.focus();
 obj.select();
@@ -379,7 +404,7 @@ return false;
 }
 else if(re.test(obj.value)){
 if(obj.value == "root" || obj.value == "guest" || obj.value == "anonymous"){
-showError("<#781#>");
+showError("<#798#>");
 obj.value = "";
 obj.focus();
 obj.select();
@@ -389,9 +414,9 @@ return true;
 }
 else{
 if(obj.value.length < 2)
-showError("<#332#>");
+showError("<#344#>");
 else
-showError("<#2487#>");
+showError("<#2528#>");
 obj.value = "";
 obj.focus();
 obj.select();
@@ -400,28 +425,28 @@ return false;
 },
 chkLoginPw: function(obj){
 if(obj.value.length > 0 && obj.value.length < 5){
-showError("<#331#> <#325#>");
+showError("<#343#> <#337#>");
 obj.value = "";
 obj.focus();
 obj.select();
 return false;
 }
 if(obj.value.length > 32){
-showError("<#323#>");
+showError("<#335#>");
 obj.value = "";
 obj.focus();
 obj.select();
 return false;
 }
 if(obj.value.charAt(0) == '"'){
-showError('<#342#> ["]');
+showError('<#354#> ["]');
 obj.value = "";
 obj.focus();
 obj.select();
 return false;
 }
 else if(obj.value.charAt(obj.value.length - 1) == '"'){
-showError('<#344#> ["]');
+showError('<#356#> ["]');
 obj.value = "";
 obj.focus();
 obj.select();
@@ -435,7 +460,7 @@ invalid_char = invalid_char+obj.value.charAt(i);
 }
 }
 if(invalid_char != ""){
-showError("<#343#> '"+invalid_char+"' !");
+showError("<#355#> '"+invalid_char+"' !");
 obj.value = "";
 obj.focus();
 obj.select();
@@ -450,28 +475,28 @@ if(!/[A-Za-z]/.test(obj.value) || !/[0-9]/.test(obj.value) || string_length < 10
 || !/[\!\"\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\[\\\]\^\_\`\{\|\}\~]/.test(obj.value)
 || /([A-Za-z0-9\!\"\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\[\\\]\^\_\`\{\|\}\~])\1/.test(obj.value)
 ){
-showError("<#337#>");
+showError("<#349#>");
 obj.value = "";
 obj.focus();
 obj.select();
 return false;
 }
 if(obj.value.length > 32){
-showError("<#323#>");
+showError("<#335#>");
 obj.value = "";
 obj.focus();
 obj.select();
 return false;
 }
 if(obj.value.charAt(0) == '"'){
-showError('<#342#> ["]');
+showError('<#354#> ["]');
 obj.value = "";
 obj.focus();
 obj.select();
 return false;
 }
 else if(obj.value.charAt(obj.value.length - 1) == '"'){
-showError('<#344#> ["]');
+showError('<#356#> ["]');
 obj.value = "";
 obj.focus();
 obj.select();
@@ -484,7 +509,7 @@ invalid_char = invalid_char+obj.value.charAt(i);
 }
 }
 if(invalid_char != ""){
-showError("<#343#> '"+invalid_char+"' !");
+showError("<#355#> '"+invalid_char+"' !");
 obj.value = "";
 obj.focus();
 obj.select();
@@ -517,37 +542,71 @@ $("#error_status_field").html(str);
 <tr>
 <td>
 <div class="main_content">
-<div class="title_name"><#2884#></div>
+<div class="title_name"><#2931#></div>
 <div class="sub_title_name">
 <div>
-<#591#>
+<#607#>
 </div>
 <div id="KRHint" style="display:none">
-<#337#>
+<#349#>
 </div>
 </div>
 <div id="router_name_tr" class="ie_title">
-<div><#719#></div>
+<div><#736#></div>
 </div>
 <div>
-<input type="text" name="http_username_x" tabindex="1" class="form_input" maxlength="32" value="" autocapitalize="off" autocomplete="off" placeholder="<#719#>">
+<input type="text" name="http_username_x" tabindex="1" class="form_input" maxlength="32" value="" autocapitalize="off" autocomplete="off" placeholder="<#736#>">
 </div>
 <div id="router_password_tr" class="ie_title">
-<div><#469#></div>
+<div><#483#></div>
 </div>
 <div>
-<input type="password" autocapitalize="off" autocomplete="off" value="" name="http_passwd_x" tabindex="2" class="form_input" maxlength="33" onkeyup="" onpaste="return false;"/ onBlur="" placeholder="<#469#>">
+<input type="password" autocapitalize="off" autocomplete="off" value="" name="http_passwd_x" tabindex="2" class="form_input" maxlength="33" onkeyup="" onpaste="return false;"/ onBlur="" placeholder="<#483#>">
 </div>
 <div id="router_password_confirm_tr" class="ie_title" >
-<div><#1619#></div>
+<div><#1640#></div>
 </div>
 <div>
-<input type="password" autocapitalize="off" autocomplete="off" value="" name="http_passwd_2_x" tabindex="3" class="form_input" maxlength="33" onkeyup="" onpaste="return false;"/ onBlur="" placeholder="<#1619#>">
+<input type="password" autocapitalize="off" autocomplete="off" value="" name="http_passwd_2_x" tabindex="3" class="form_input" maxlength="33" onkeyup="" onpaste="return false;"/ onBlur="" placeholder="<#1640#>">
 </div>
+<div style="font-size: 16pt; display:none" class="businessStyle">
+<input id="defpassCheckbox" type="checkbox" style="height:30px;width:30px;vertical-align: middle;">Use the default settings
+</div>
+<script>
+$("#defpassCheckbox").change(function(){
+var status = $(this).is(':checked');
+if(status){
+$("[name='http_passwd_x']")
+.val("")
+.prop('disabled', true)
+.css({opacity: "0.3"})
+$("[name='http_passwd_2_x']")
+.val("")
+.prop('disabled', true)
+.css({opacity: "0.3"})
+$("[name='http_passwd_x']").addClass("businessInput")
+$("[name='http_passwd_2_x']").addClass("businessInput")
+}
+else{
+$("[name='http_passwd_x']")
+.prop('disabled', false)
+.css({opacity: "1"})
+$("[name='http_passwd_2_x']")
+.prop('disabled', false)
+.css({opacity: "1"})
+$("[name='http_passwd_x']").removeClass("businessInput")
+$("[name='http_passwd_2_x']").removeClass("businessInput")
+}
+})
+if(isSupport("defpass")){
+$("#defpassCheckbox").parent().show();
+$("#defpassCheckbox").prop('checked', true).change()
+}
+</script>
 <div id="error_status_field"></div>
 <div class="btn_bg">
 <div id="btn_modify">
-<input name="btn_modify" type="button" class="button" tabindex="4" onclick="submitForm();" value="<#203#>">
+<input name="btn_modify" type="button" class="button" tabindex="4" onclick="submitForm();" value="<#210#>">
 </div>
 <div id="loadingIcon"></div>
 </div>

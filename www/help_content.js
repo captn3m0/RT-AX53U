@@ -1,286 +1,286 @@
-﻿var productid = '<#843#>';
+﻿var productid = '<#861#>';
 helpcontent[0] = new Array("",
-"<#3828#>",
-"<#3868#>",
-"<#3791#>",
-"<#3903#>",
-"<#3781#>",
-"<#3848#>",
-"<#3918#>",
-"<#3914#>",
-"<#3843#>",
-"<#3838#>",
-"<#3929#><#2477#>", //11
-"<#852#>",
-"<#853#>",
-"<#3793#><br/><#3845#>",
-"<#3817#>",
-"<#3830#>",
+"<#3927#>",
+"<#3967#>",
+"<#3890#>",
+"<#4002#>",
+"<#3880#>",
+"<#3947#>",
+"<#4017#>",
+"<#4013#>",
+"<#3942#>",
+"<#3937#>",
+"<#4028#><#2518#>", //11
+"<#870#>",
+"<#871#>",
+"<#3892#><br/><#3944#>",
+"<#3916#>",
+"<#3929#>",
 "",
-"WEP-64bits: <#852#><br/>WEP-128bits: <#853#>",
-"<#852#><br/><#853#>",
-"<#852#><br/><#853#>",
-"<#852#><br/><#853#>", //21
-'<div><#667#></div><br/><img src="/images/qis/select_wireless.jpg">',
-'<div><#668#></div><br/><img width="350px" src="/images/qis/security_key.png">',
+"WEP-64bits: <#870#><br/>WEP-128bits: <#871#>",
+"<#870#><br/><#871#>",
+"<#870#><br/><#871#>",
+"<#870#><br/><#871#>", //21
+'<div><#683#></div><br/><img src="/images/qis/select_wireless.jpg">',
+'<div><#684#></div><br/><img width="350px" src="/images/qis/security_key.png">',
 "",
-"<#875#>",
-"<#872#>",
+"<#893#>",
+"<#890#>",
 "Smart Connect is the feature which could automatically steer clients to the most appropriate band (2.4GHz, 5GHz-1 and 5GHz-2)." /*untranslated*/
 );
 if ("<% nvram_get("wl2_band"); %>".length == 0)
 helpcontent[0][27] = "Smart Connect is the feature which could automatically steer clients to the most appropriate band (2.4GHz and 5GHz)."; /*untranslated*/
 helpcontent[1] = new Array("",
-"<#3856#>",
-"<#3791#>",
-"<#3873#>",
-"<#3904#>",
-"<#3905#>",
-"<#3906#>",
-"<#3907#>");
+"<#3955#>",
+"<#3890#>",
+"<#3972#>",
+"<#4003#>",
+"<#4004#>",
+"<#4005#>",
+"<#4006#>");
 helpcontent[2] = new Array("",
-"<#3773#>",
-"<#3777#>",
-"<#3775#>");
+"<#3872#>",
+"<#3876#>",
+"<#3874#>");
 helpcontent[3] = new Array("",
-"<#3920#>",
-"<#3922#><p><a href='/Main_LogStatus_Content.asp' target='_blank'><#280#><#1521#></a></p>",
-"<#3924#><p><a href='/Main_LogStatus_Content.asp' target='_blank'><#280#><#1521#></a></p>",
-"<#3880#>",
+"<#4019#>",
+"<#4021#><p><a href='/Main_LogStatus_Content.asp' target='_blank'><#289#><#1540#></a></p>",
+"<#4023#><p><a href='/Main_LogStatus_Content.asp' target='_blank'><#289#><#1540#></a></p>",
+"<#3979#>",
+"<#3995#>",
 "<#3896#>",
-"<#3797#>",
-"<#3823#>",
-"<#3795#>",
-"<#3887#>",
-"<#3933#>",
-"<#3879#>",
-"<#3866#>",
-"<#3938#>",
-"<#3941#>",
-"<#3912#>",
-"<#3916#>",
-"<#3861#>",
-"<#3877#>",
-"[n Only]: <#3890#>",
-"<#3959#>",
-"<#3883#>", //21
-"<#3892#>",
-"<#3935#>",
-"<#3886#> (It's also called [Explicit Beamforming].)", /* untranslated */
-"<#3895#> (It's also called [Implicit Beamforming].)", /* untranslated */
-"<#3855#>",
-"<#3853#>",
-"<#4252#> <#3865#>",
-"<#3927#>",
-"<#3078#>",
-"<#3932#>", //31
-"<#3864#>",
-"<#3865#>",
-"<#3871#>"
+"<#3922#>",
+"<#3894#>",
+"<#3986#>",
+"<#4032#>",
+"<#3978#>",
+"<#3965#>",
+"<#4037#>",
+"<#4040#>",
+"<#4011#>",
+"<#4015#>",
+"<#3960#>",
+"<#3976#>",
+"[n Only]: <#3989#>",
+"<#4058#>",
+"<#3982#>", //21
+"<#3991#>",
+"<#4034#>",
+"<#3985#> (It's also called [Explicit Beamforming].)", /* untranslated */
+"<#3994#> (It's also called [Implicit Beamforming].)", /* untranslated */
+"<#3954#>",
+"<#3952#>",
+"<#4354#> <#3964#>",
+"<#4026#>",
+"<#3130#>",
+"<#4031#>", //31
+"<#3963#>",
+"<#3964#>",
+"<#3970#>"
 );
 helpcontent[4] = new Array("",
-"<#351#>",
-"<#353#>",
-"<#2575#>");
+"<#363#>",
+"<#365#>",
+"<#2616#>");
 helpcontent[5] = new Array("",
-"<#2506#>",
-"<#2516#><#2517#>",
-"<#2529#>",
-"<#2527#>",
-"<#2519#>",
-"<#2579#>",
-"<#2576#>",
-"<#2594#>",
-"<#2521#>",
-"<#352#>",
-"<#2525#>", //11
-"<#2526#>",
+"<#2547#>",
+"<#2557#><#2558#>",
+"<#2570#>",
+"<#2568#>",
 "<#2560#>",
-"<#3063#>",
-"<#3064#>",
+"<#2620#>",
+"<#2617#>",
+"<#2635#>",
+"<#2562#>",
+"<#364#>",
+"<#2566#>", //11
+"<#2567#>",
+"<#2601#>",
+"<#3115#>",
+"<#3116#>",
 "Enable Fast Leave",
-"<#2552#>",
-"<#1701#>");
+"<#2593#>",
+"<#1723#>");
 helpcontent[6] = new Array("",
-"<#3024#>",
-"<#3025#>",
-"<#3026#>",
-"<#3027#>",
-"<#3028#>",
-"<#3029#>",
-"<#3049#>");
+"<#3076#>",
+"<#3077#>",
+"<#3078#>",
+"<#3079#>",
+"<#3080#>",
+"<#3081#>",
+"<#3101#>");
 helpcontent[7] = new Array("",
-"<#289#>",
-"<#311#>",
-"<#309#>",
-"<#2946#>",
-"<#2945#>",
-"<#2943#>",
-"<#2963#>",
-"<#2961#>",
-"<#2969#>",
-"<#2947#>",
-"<#2965#>", //11
+"<#301#>",
+"<#323#>",
+"<#321#>",
+"<#2997#>",
+"<#2996#>",
+"<#2994#>",
+"<#3014#>",
+"<#3012#>",
+"<#3020#>",
+"<#2998#>",
+"<#3016#>", //11
+"<#319#>",
+"<#305#>",
 "<#307#>",
-"<#293#>",
-"<#295#>",
-"<#1515#>",
-"<#486#>",
-"<#2967#>",
-"<#2949#>",
-"<#1514#>",
-"<#2383#>",
-"<#2599#>", //21
-"<#2309#>",
-"<#2398#>",
-"<#2393#>",
-"<#2391#>",
-"<#2392#>",
-"<#598#>",
-"<#2462#>",
-"<#2938#>",
-"<#2939#>", //30
-"<#2953#>", //31
-"<#2956#>",
-"<#2958#>",
-"<#2960#>",
-"<#3705#>",
-"<#3693#>",
-"<#3697#>",
-"<#3699#>",
-"<#3701#>",
-"<#3703#>",
-"<#3691#>", //41
-"<#3689#>",
-"<#3708#>",
-"<#3710#>",
-"<#3712#>",
-"<#3714#>"
+"<#1533#>",
+"<#502#>",
+"<#3018#>",
+"<#3000#>",
+"<#1532#>",
+"<#2421#>",
+"<#2640#>", //21
+"<#2347#>",
+"<#2436#>",
+"<#2431#>",
+"<#2429#>",
+"<#2430#>",
+"<#614#>",
+"<#2503#>",
+"<#2989#>",
+"<#2990#>", //30
+"<#3004#>", //31
+"<#3007#>",
+"<#3009#>",
+"<#3011#>",
+"<#3802#>",
+"<#3790#>",
+"<#3794#>",
+"<#3796#>",
+"<#3798#>",
+"<#3800#>",
+"<#3788#>", //41
+"<#3786#>",
+"<#3805#>",
+"<#3807#>",
+"<#3809#>",
+"<#3811#>"
 );
 helpcontent[8] = new Array("",
-"<#2088#>",
-"<#2094#> Notice that this option will control http and https port access from WAN interface.", /* untranslated */
-"<#2097#>",
-"<#2090#>",
-"<#2092#>",
-"<#2045#>",
-"<#2043#>");
+"<#2110#>",
+"<#2116#> Notice that this option will control http and https port access from WAN interface.", /* untranslated */
+"<#2119#>",
+"<#2112#>",
+"<#2114#>",
+"<#2067#>",
+"<#2065#>");
 helpcontent[9] = new Array("",
+"<#2100#>",
+"<#2102#>",
+"<#2080#>");
+helpcontent[10] = new Array("",
+"<#2076#>",
 "<#2078#>",
 "<#2080#>",
-"<#2058#>");
-helpcontent[10] = new Array("",
-"<#2054#>",
-"<#2056#>",
-"<#2058#>",
-"<#2063#>",
-"<#2061#>");
+"<#2085#>",
+"<#2083#>");
 helpcontent[11] = new Array("",
-"<#2583#>",
-"<#2587#>",
-"<#2580#>",
-"<#592#> <#356#>",
-"<#592#> <#266#>",
-"<#1874#>",
-"<#2591#>",
-"<#2593#>",
+"<#2624#>",
+"<#2628#>",
+"<#2621#>",
+"<#608#> <#368#>",
+"<#608#> <#275#>",
+"<#1896#>",
+"<#2632#>",
+"<#2634#>",
 "For destination IP address, you can:<br/>(a) enter a specific IP address, such as \"192.168.1.2\"<br/>(b) enter IP addresses within one subnet or within the same IP pool, such as \"192.168.1.0/24\"", /* untranslated */
-"<#752#>",
-"<#3481#>",
+"<#769#>",
+"<#3552#>",
 "If there is no client connection for more than 1 minute, the PLC will enter sleep mode (power saving). The PLC will not wake up until the client connects. (It takes about ten seconds to wake up the PLC)", /* untranslated */
 "Enable Login CAPTCHA is to ensure only human users to pass through and prevent brute force login attack.", /* untranslated */
-"<#2133#>");
+"<#2155#>");
 helpcontent[12] = new Array("",
-"<#2227#>",
-"<#2979#>",
-"<#2981#>",
-"<#2983#>");
+"<#2249#>",
+"<#3030#>",
+"<#3032#>",
+"<#3034#>");
 helpcontent[13] = new Array("",
-"<#3943#>",
-"<#3949#>",
-"<#3951#>",
-"<#3875#>",
-"<#3947#>");
+"<#4042#>",
+"<#4048#>",
+"<#4050#>",
+"<#3974#>",
+"<#4046#>");
 helpcontent[14] = new Array("",
-"<#3459#>",
+"<#3530#>",
 "");
 helpcontent[15] = new Array("",
-"", /*<#968#>*/
-"<#975#><p><a href='../Advanced_AiDisk_ftp.asp' target='_parent' hidefocus='true'><#2768#></a></p><!--span style='color:red'><#976#></span-->",
-"<#978#>",
-"<#980#>");
+"", /*<#986#>*/
+"<#993#><p><a href='../Advanced_AiDisk_ftp.asp' target='_parent' hidefocus='true'><#2812#></a></p><!--span style='color:red'><#994#></span-->",
+"<#996#>",
+"<#998#>");
 helpcontent[16] = new Array("",
-"<#1914#><p><#1915#> <a href='/QoS_EZQoS.asp'><#1507#></a></p>");
+"<#1936#><p><#1937#> <a href='/QoS_EZQoS.asp'><#1525#></a></p>");
 helpcontent[17] = new Array("",
-"<#2485#>",
-"<#2486#>",
-"<#2278#>",
-"<#2468#>",
-"<#2469#>",
-"<#2470#>",
-"<#3143#>",
-"<#3141#>",
-"<#3133#>");
+"<#2526#>",
+"<#2527#>",
+"<#2315#>",
+"<#2509#>",
+"<#2510#>",
+"<#2511#>",
+"<#3209#>",
+"<#3207#>",
+"<#3199#>");
 helpcontent[18] = new Array("",
-"<#2075#>",
-"<#2919#>",
-"<#2376#>",
-"<#2919#>",
-"<#3505#>",
-"<#3200#>");
+"<#2097#>",
+"<#2966#>",
+"<#2414#>",
+"<#2966#>",
+"<#3576#>",
+"<#3266#>");
 helpcontent[19] = new Array("",
-"<#3114#>",
-"<#3120#>",
-"<#3124#>",
-"<#3115#>"
+"<#3180#>",
+"<#3186#>",
+"<#3190#>",
+"<#3181#>"
 );
 helpcontent[20] = new Array("",
-'<#1898#>',
-"<#2660#>",
-"<#2644#>",
-"<#1516#>",
-"<#1910#>",
-"<#1912#>",
-"<#156#>");
+'<#1920#>',
+"<#2703#>",
+"<#2687#>",
+"<#1534#>",
+"<#1932#>",
+"<#1934#>",
+"<#163#>");
 helpcontent[21] = new Array("",
-"<#2295#>",
-"<#2300#>",
-"<#2301#>",
-"HSDPA<#2963#>",
-"HSDPA<#2961#>",
-"<#293#>",
-"<#295#>",
-"<#2296#>",
-"<#2285#>",
-"<#2288#>",
-"<#2305#>",
-"<#2298#>",
-"<#2304#>");
+"<#2333#>",
+"<#2338#>",
+"<#2339#>",
+"HSDPA<#3014#>",
+"HSDPA<#3012#>",
+"<#305#>",
+"<#307#>",
+"<#2334#>",
+"<#2323#>",
+"<#2326#>",
+"<#2343#>",
+"<#2336#>",
+"<#2342#>");
 helpcontent[22] = new Array("",
-"<#442#>",
-"<#442#>",
-"<#435#>");
+"<#456#>",
+"<#456#>",
+"<#449#>");
 helpcontent[23] = new Array("",
 "",
 "",
-"<#3225#>",
-"<#3227#>",
-"<#3226#>");
+"<#3291#>",
+"<#3293#>",
+"<#3292#>");
 helpcontent[24] = new Array("",
-"<#293#>", //7,13
-"<#295#>", //7,14
-"<#307#>",//7,12
-"<#309#>",//7,3
-"<#351#>", //4,1
-"<#353#>", //4,2
-"<#356#>", //11,4
-"<#598#>", //7,27
-"<#667#>", //0,22
-"<#668#>"); //0,23
+"<#305#>", //7,13
+"<#307#>", //7,14
+"<#319#>",//7,12
+"<#321#>",//7,3
+"<#363#>", //4,1
+"<#365#>", //4,2
+"<#368#>", //11,4
+"<#614#>", //7,27
+"<#683#>", //0,22
+"<#684#>"); //0,23
 helpcontent[25] = new Array("",
-"<#1813#>",
-"<#1812#>",
-"<#1799#>",
+"<#1835#>",
+"<#1834#>",
+"<#1821#>",
 "This item allows you to tweak the target SNR Margin of VDSL. For instance with a downstream SNR Margin at 8dB, you could set to 7dB or lower value to maximize the downstream performance, 2dB (Max.performance) but please note that the lower the value, DSL modem router will be weaker to defend the line noise, thus sync loss might occur, so please adjust with proper value. However, if your VDSL connection is unstable or not able to establish a connection, for this case then set to a higher value such as 9dB ~ 30dB.",
 "This item allows you to tweak the Tx Power of VDSL. Reduce Tx Power(-1 dB ~ -7 dB) would increase the downstream performance(reduce more Tx Power leads to higher downstream data rate), but will impact upstream and vice versa.",
 "This item configures Rx AGC(Auto Gain Control) GAIN for VDSL, if tweak the Stability Adjustment (VDSL) setting still could not get desired downstream speed, then could try to set Rx AGC GAIN Adjustment to High Performance mode. However if your VDSL connection is unstable and has some CRC then could set to Stable mode.",
@@ -299,24 +299,24 @@ helpcontent[25] = new Array("",
 ""
 );
 helpcontent[26] = new Array("",
-"<#1846#>",
-"<#1855#>",
-"<#1854#>",
-"<#1845#>",
-"<#1856#>",
-"<#1830#>");
+"<#1868#>",
+"<#1877#>",
+"<#1876#>",
+"<#1867#>",
+"<#1878#>",
+"<#1852#>");
 helpcontent[27] = new Array("",
-"<#3987#>: <#3988#><br>" +
-"<#3989#>: <#3990#><br>" +
-"<#3991#>: <#3992#>");
+"<#4086#>: <#4087#><br>" +
+"<#4088#>: <#4089#><br>" +
+"<#4090#>: <#4091#>");
 if('<% nvram_default_get("lan_ipaddr"); %>' != "192.168.1.1"){
-helpcontent[4][1] = "<#351#>".replace("192.168.1.1", '<% nvram_default_get("lan_ipaddr"); %>');
-helpcontent[24][5] = "<#351#>".replace("192.168.1.1", '<% nvram_default_get("lan_ipaddr"); %>');
+helpcontent[4][1] = "<#363#>".replace("192.168.1.1", '<% nvram_default_get("lan_ipaddr"); %>');
+helpcontent[24][5] = "<#363#>".replace("192.168.1.1", '<% nvram_default_get("lan_ipaddr"); %>');
 }
 helpcontent[28] = new Array("");
 helpcontent[29] = new Array("",
-"<#2783#>",
-"<#2772#>");
+"<#2827#>",
+"<#2816#>");
 helpcontent[30] = new Array("",
 "Send alert before monthly alert is reached",/*untranslated*/
 "Cut-off internet if monthly limit is reached");/*untranslated*/
@@ -328,7 +328,7 @@ helpcontent[31] = new Array("",
 "Enter a whitelist URL, also known as walled garden.\nNote: Guest user can fetch the whitelist web content under the domain name without any authentication."/*untranslated*/
 );
 helpcontent[32] = new Array("",
-"<#4134#>",
+"<#4233#>",
 "Enable this option allows VPN clients to access the subnet of your LAN",/*untranslated*/
 "Enable this option allows VPN clients use the Internet from your router instead of the one at their location.",/*untranslated*/
 "Virtual network device type. TUN devices encapsulate IPv4 or IPv6 (OSI Layer 3) while TAP devices encapsulate Ethernet 802.3 (OSI Layer 2).",/*untranslated*/
@@ -340,7 +340,7 @@ helpcontent[32] = new Array("",
 "Add an additional layer of HMAC authentication on top of the TLS control channel to protect against DoS attacks. An OpenVPN static key will be used.",/*untranslated*/ //10
 "This directive will set up an OpenVPN server which will allocate addresses to clients out of the given network/netmask. The server itself will take the \".1\" address of the given network for use as the server-side endpoint of the local TUN/TAP interface.",/*untranslated*/
 "The IP address of the local and remote VPN endpoint in p2p mode.",/*untranslated*/
-"<b><#187#></b>: Use LAN DHCP server to allocate IP address;<br> <b><#186#></b>: Allocate IP address from the Address Pool",/*untranslated*/
+"<b><#194#></b>: Use LAN DHCP server to allocate IP address;<br> <b><#193#></b>: Allocate IP address from the Address Pool",/*untranslated*/
 "The first address and the last address in the pool to be assigned to clients.",/*untranslated*/
 "Response the DNS query from clients.",/*untranslated*/
 "In server mode, provide DNS information to clients.",/*untranslated*/
@@ -358,17 +358,17 @@ helpcontent[32] = new Array("",
 "You can shift original certification of OpenVPN server from your other one or the old ASUS router, rather than create a new one and ask all clients to setup OpenVPN profile again."/*untranslated*/
 );
 helpcontent[33] = new Array("",
-"<#3631#>",
-"<#3649#>"
+"<#3706#>",
+"<#3724#>"
 );
 helpcontent[34] = new Array("",
 "This feature allows system to capture diagnostic System debug log in the background, duration depends on the Diagnostic debug log capture duration option, depends on the option selected, system might transmit single debug log automatically to ASUS Support Team for analysis after capture completed or transmit multiple debug logs over a period of time. Click on the yellow System icon could cancel the debug log capture.",/*untranslated*/
-"<#1923#>",
-"<#2001#>"
+"<#1945#>",
+"<#2023#>"
 );
 helpcontent[35] = new Array("",
-"<#2738#>",
-"<#2753#>",
-"<#2750#>",
-"<#2736#>");
+"<#2782#>",
+"<#2797#>",
+"<#2794#>",
+"<#2780#>");
 

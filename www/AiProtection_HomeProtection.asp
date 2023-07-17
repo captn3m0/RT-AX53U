@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#842#> - <#1240#></title>
+<title><#860#> - <#1258#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <script type="text/javascript" src="/state.js"></script>
@@ -245,7 +245,7 @@ if(document.form.wrs_cc_t.value == "0"){
 document.form.wrs_cc_t.value = timestamp.toString().substring(0, 10);
 }
 if(ctf_disable == 0 && ctf_fa_mode == 2){
-if(!confirm("<#1640#>")){
+if(!confirm("<#1662#>")){
 return false;
 }
 else{
@@ -295,25 +295,25 @@ check_TM_feature();
 if(danger_count != 0){
 $("#router_scan_count").html(danger_count);
 $("#router_scan_count").css("backgroundColor", "#ED1C24");
-$("#router_scan_state").html("<#1275#>");
+$("#router_scan_state").html("<#1293#>");
 }
 else if(risk_count != 0){
 $("#router_scan_count").html(risk_count);
 $("#router_scan_count").css("backgroundColor", "#EF9800");
-$("#router_scan_state").html("<#1277#>");
+$("#router_scan_state").html("<#1295#>");
 }
 else if(safe_count != 0){
 $("#all_security_btn").hide();
 $("#router_scan_count").html(safe_count);
 $("#router_scan_count").css("backgroundColor", "#24A628");
-$("#router_scan_state").html("<#1278#>");
+$("#router_scan_state").html("<#1296#>");
 }
 }
 function close_weakness_status(){
 $('#weakness_div').fadeOut(100);
 }
 function enable_whole_security(){
-if(!confirm("<#1306#>")){
+if(!confirm("<#1324#>")){
 return false;
 }
 var action_script_temp = "";
@@ -464,25 +464,25 @@ document.form.submit();
 function check_login_name_password(){
 if(<% check_acorpw(); %> == 1){
 danger_count++;
-document.getElementById('login_password').innerHTML = "<a href='Advanced_System_Content.asp' target='_blank'><#186#></a>";
+document.getElementById('login_password').innerHTML = "<a href='Advanced_System_Content.asp' target='_blank'><#193#></a>";
 document.getElementById('login_password').className = "status_no";
 document.getElementById('login_password').onmouseover = function(){overHint(10);}
 document.getElementById('login_password').onmouseout = function(){nd();}
 }
 else{
 safe_count++;
-document.getElementById('login_password').innerHTML = "<#187#>";
+document.getElementById('login_password').innerHTML = "<#194#>";
 document.getElementById('login_password').className = "status_yes";
 }
 }
 function check_wireless_password(){
 var nScore = <% check_passwd_strength("wl_key"); %>;
 var oScore = document.getElementById("score");
-if (nScore >= 0 && nScore < 20) { sComplexity = "<#471#>"; }
-else if (nScore >= 20 && nScore < 40) { sComplexity = "<#472#>"; }
-else if (nScore >= 40 && nScore < 60) { sComplexity = "<#473#>"; }
-else if (nScore >= 60 && nScore < 80) { sComplexity = "<#474#>"; }
-else if (nScore >= 80 && nScore <= 100) { sComplexity = "<#475#>"; }
+if (nScore >= 0 && nScore < 20) { sComplexity = "<#485#>"; }
+else if (nScore >= 20 && nScore < 40) { sComplexity = "<#486#>"; }
+else if (nScore >= 40 && nScore < 60) { sComplexity = "<#487#>"; }
+else if (nScore >= 60 && nScore < 80) { sComplexity = "<#488#>"; }
+else if (nScore >= 80 && nScore <= 100) { sComplexity = "<#489#>"; }
 if(nScore >= 0 && nScore < 40){
 danger_count++;
 document.getElementById('score').className = "status_no";
@@ -505,12 +505,12 @@ document.getElementById('score').onmouseout = function(){nd();}
 function check_wireless_encryption(){
 if(<% check_wireless_encryption(); %> == "1"){
 safe_count++;
-document.getElementById('wireless_encryption').innerHTML = "<#474#>";
+document.getElementById('wireless_encryption').innerHTML = "<#488#>";
 document.getElementById('wireless_encryption').className = "status_yes";
 }
 else{
 danger_count++;
-document.getElementById('wireless_encryption').innerHTML = "<a href='Advanced_Wireless_Content.asp' target='_blank'><#472#></a>";
+document.getElementById('wireless_encryption').innerHTML = "<a href='Advanced_Wireless_Content.asp' target='_blank'><#486#></a>";
 document.getElementById('wireless_encryption').className = "status_no";
 document.getElementById('wireless_encryption').onmouseover = function(){overHint(12);}
 document.getElementById('wireless_encryption').onmouseout = function(){nd();}
@@ -520,12 +520,12 @@ function check_WPS(){
 var wps_enable = document.form.wps_enable.value;
 if(wps_enable == 0){
 safe_count++;
-document.getElementById('wps_status').innerHTML = "<#187#>";
+document.getElementById('wps_status').innerHTML = "<#194#>";
 document.getElementById('wps_status').className = "status_yes";
 }
 else{
 risk_count++;
-document.getElementById('wps_status').innerHTML = "<a href='Advanced_WWPS_Content.asp' target='_blank'><#186#></a>";
+document.getElementById('wps_status').innerHTML = "<a href='Advanced_WWPS_Content.asp' target='_blank'><#193#></a>";
 document.getElementById('wps_status').className = "status_no_risk";
 document.getElementById('wps_status').onmouseover = function(){overHint(25);}
 document.getElementById('wps_status').onmouseout = function(){nd();}
@@ -609,13 +609,13 @@ document.form.submit();
 }
 change_wan_unit(wanunit);
 }
-document.getElementById('upnp_service').innerHTML = "<a><#186#></a>";
+document.getElementById('upnp_service').innerHTML = "<a><#193#></a>";
 document.getElementById('upnp_service').className = "status_no_risk";
 document.getElementById('upnp_service').onmouseover = function(){overHint(13);}
 document.getElementById('upnp_service').onmouseout = function(){nd();}
 }
 else{
-document.getElementById('upnp_service').innerHTML = "<#187#>";
+document.getElementById('upnp_service').innerHTML = "<#194#>";
 document.getElementById('upnp_service').className = "status_yes";
 }
 }
@@ -651,13 +651,13 @@ safe_count++;
 }
 }
 if(risk_upnp>0){
-document.getElementById('upnp_service').innerHTML = "<a href='"+redirect_page+"' target='_blank'><#186#></a>";
+document.getElementById('upnp_service').innerHTML = "<a href='"+redirect_page+"' target='_blank'><#193#></a>";
 document.getElementById('upnp_service').className = "status_no_risk";
 document.getElementById('upnp_service').onmouseover = function(){overHint(13);}
 document.getElementById('upnp_service').onmouseout = function(){nd();}
 }
 else{
-document.getElementById('upnp_service').innerHTML = "<#187#>";
+document.getElementById('upnp_service').innerHTML = "<#194#>";
 document.getElementById('upnp_service').className = "status_yes";
 }
 }
@@ -666,12 +666,12 @@ function check_wan_access(){
 var wan_access_enable = document.form.misc_http_x.value;
 if(wan_access_enable == 0){
 safe_count++;
-document.getElementById('access_from_wan').innerHTML = "<#187#>";
+document.getElementById('access_from_wan').innerHTML = "<#194#>";
 document.getElementById('access_from_wan').className = "status_yes";
 }
 else{
 risk_count++;
-document.getElementById('access_from_wan').innerHTML = "<a href='Advanced_System_Content.asp' target='_blank'><#186#></a>";
+document.getElementById('access_from_wan').innerHTML = "<a href='Advanced_System_Content.asp' target='_blank'><#193#></a>";
 document.getElementById('access_from_wan').className = "status_no_risk";
 document.getElementById('access_from_wan').onmouseover = function(){overHint(14);}
 document.getElementById('access_from_wan').onmouseout = function(){nd();}
@@ -681,12 +681,12 @@ function check_ping_form_wan(){
 var wan_ping_enable = document.form.misc_ping_x.value;
 if(wan_ping_enable == 0){
 safe_count++;
-document.getElementById('ping_from_wan').innerHTML = "<#187#>";
+document.getElementById('ping_from_wan').innerHTML = "<#194#>";
 document.getElementById('ping_from_wan').className = "status_yes";
 }
 else{
 risk_count++;
-document.getElementById('ping_from_wan').innerHTML = "<a href='Advanced_BasicFirewall_Content.asp' target='_blank'><#186#></a>";
+document.getElementById('ping_from_wan').innerHTML = "<a href='Advanced_BasicFirewall_Content.asp' target='_blank'><#193#></a>";
 document.getElementById('ping_from_wan').className = "status_no_risk";
 document.getElementById('ping_from_wan').onmouseover = function(){overHint(15);}
 document.getElementById('ping_from_wan').onmouseout = function(){nd();}
@@ -695,12 +695,12 @@ document.getElementById('ping_from_wan').onmouseout = function(){nd();}
 function check_dmz(){
 if(document.form.dmz_ip.value == ""){
 safe_count++;
-document.getElementById('dmz_service').innerHTML = "<#187#>";
+document.getElementById('dmz_service').innerHTML = "<#194#>";
 document.getElementById('dmz_service').className = "status_yes";
 }
 else{
 risk_count++;
-document.getElementById('dmz_service').innerHTML = "<a href='Advanced_Exposed_Content.asp' target='_blank'><#186#></a>";
+document.getElementById('dmz_service').innerHTML = "<a href='Advanced_Exposed_Content.asp' target='_blank'><#193#></a>";
 document.getElementById('dmz_service').className = "status_no_risk";
 document.getElementById('dmz_service').onmouseover = function(){overHint(16);}
 document.getElementById('dmz_service').onmouseout = function(){nd();}
@@ -710,12 +710,12 @@ function check_port_trigger(){
 var port_trigger_enable = document.form.autofw_enable_x.value;
 if(port_trigger_enable == 0){
 safe_count++;
-document.getElementById('port_tirgger').innerHTML = "<#187#>";
+document.getElementById('port_tirgger').innerHTML = "<#194#>";
 document.getElementById('port_tirgger').className = "status_yes";
 }
 else{
 risk_count++;
-document.getElementById('port_tirgger').innerHTML = "<a href='Advanced_PortTrigger_Content.asp' target='_blank'><#186#></a>";
+document.getElementById('port_tirgger').innerHTML = "<a href='Advanced_PortTrigger_Content.asp' target='_blank'><#193#></a>";
 document.getElementById('port_tirgger').className = "status_no_risk";
 document.getElementById('port_tirgger').onmouseover = function(){overHint(17);}
 document.getElementById('port_tirgger').onmouseout = function(){nd();}
@@ -725,12 +725,12 @@ function check_port_forwarding(){
 var port_forwarding_enable = document.form.vts_enable_x.value;
 if(port_forwarding_enable == 0){
 safe_count++;
-document.getElementById('port_forwarding').innerHTML = "<#187#>";
+document.getElementById('port_forwarding').innerHTML = "<#194#>";
 document.getElementById('port_forwarding').className = "status_yes";
 }
 else{
 risk_count++;
-document.getElementById('port_forwarding').innerHTML = "<a href='Advanced_VirtualServer_Content.asp' target='_blank'><#186#></a>";
+document.getElementById('port_forwarding').innerHTML = "<a href='Advanced_VirtualServer_Content.asp' target='_blank'><#193#></a>";
 document.getElementById('port_forwarding').className = "status_no_risk";
 document.getElementById('port_forwarding').onmouseover = function(){overHint(18);}
 document.getElementById('port_forwarding').onmouseout = function(){nd();}
@@ -740,14 +740,14 @@ function check_ftp_anonymous(){
 var ftp_account_mode = document.form.st_ftp_mode.value; //1: shared mode, 2: account mode
 if(ftp_account_mode == 1){
 risk_count++;
-document.getElementById('ftp_account').innerHTML = "<a href='Advanced_AiDisk_ftp.asp' target='_blank'><#186#></a>";
+document.getElementById('ftp_account').innerHTML = "<a href='Advanced_AiDisk_ftp.asp' target='_blank'><#193#></a>";
 document.getElementById('ftp_account').className = "status_no_risk";
 document.getElementById('ftp_account').onmouseover = function(){overHint(19);}
 document.getElementById('ftp_account').onmouseout = function(){nd();}
 }
 else{
 safe_count++;
-document.getElementById('ftp_account').innerHTML = "<#187#>";
+document.getElementById('ftp_account').innerHTML = "<#194#>";
 document.getElementById('ftp_account').className = "status_yes";
 }
 }
@@ -755,14 +755,14 @@ function check_samba_anonymous(){
 var samba_account_mode = document.form.st_samba_mode.value; //1: shared mode, 4: account mode
 if(samba_account_mode == 1){
 risk_count++;
-document.getElementById('samba_account').innerHTML = "<a href='Advanced_AiDisk_samba.asp' target='_blank'><#186#></a>";
+document.getElementById('samba_account').innerHTML = "<a href='Advanced_AiDisk_samba.asp' target='_blank'><#193#></a>";
 document.getElementById('samba_account').className = "status_no_risk";
 document.getElementById('samba_account').onmouseover = function(){overHint(20);}
 document.getElementById('samba_account').onmouseout = function(){nd();}
 }
 else{
 safe_count++;
-document.getElementById('samba_account').innerHTML = "<#187#>";
+document.getElementById('samba_account').innerHTML = "<#194#>";
 document.getElementById('samba_account').className = "status_yes";
 }
 }
@@ -772,36 +772,36 @@ var wrs_vp_enable = document.form.wrs_vp_enable.value;
 var wrs_mals_enable = document.form.wrs_mals_enable.value;
 if(wrs_mals_enable == 1 && document.form.wrs_protect_enable.value == 1){
 safe_count++;
-document.getElementById('wrs_service').innerHTML = "<#187#>";
+document.getElementById('wrs_service').innerHTML = "<#194#>";
 document.getElementById('wrs_service').className = "status_yes";
 }
 else{
 risk_count++;
-document.getElementById('wrs_service').innerHTML = "<a href='AiProtection_HomeProtection.asp' target='_blank'><#186#></a>";
+document.getElementById('wrs_service').innerHTML = "<a href='AiProtection_HomeProtection.asp' target='_blank'><#193#></a>";
 document.getElementById('wrs_service').className = "status_no_risk";
 document.getElementById('wrs_service').onmouseover = function(){overHint(21);}
 document.getElementById('wrs_service').onmouseout = function(){nd();}
 }
 if(wrs_vp_enable == 1 && document.form.wrs_protect_enable.value == 1){
 safe_count++;
-document.getElementById('vp_service').innerHTML = "<#187#>";
+document.getElementById('vp_service').innerHTML = "<#194#>";
 document.getElementById('vp_service').className = "status_yes";
 }
 else{
 risk_count++;
-document.getElementById('vp_service').innerHTML = "<a href='AiProtection_HomeProtection.asp' target='_blank'><#186#></a>";
+document.getElementById('vp_service').innerHTML = "<a href='AiProtection_HomeProtection.asp' target='_blank'><#193#></a>";
 document.getElementById('vp_service').className = "status_no_risk";
 document.getElementById('vp_service').onmouseover = function(){overHint(22);}
 document.getElementById('vp_service').onmouseout = function(){nd();}
 }
 if(wrs_cc_enable == 1 && document.form.wrs_protect_enable.value == 1){
 safe_count++;
-document.getElementById('cc_service').innerHTML = "<#187#>";
+document.getElementById('cc_service').innerHTML = "<#194#>";
 document.getElementById('cc_service').className = "status_yes";
 }
 else{
 risk_count++;
-document.getElementById('cc_service').innerHTML = "<a href='AiProtection_HomeProtection.asp' target='_blank'><#186#></a>";
+document.getElementById('cc_service').innerHTML = "<a href='AiProtection_HomeProtection.asp' target='_blank'><#193#></a>";
 document.getElementById('cc_service').className = "status_no_risk";
 document.getElementById('cc_service').onmouseover = function(){overHint(23);}
 document.getElementById('cc_service').onmouseout = function(){nd();}
@@ -864,7 +864,7 @@ alert("Please input the mail account!");
 return;
 }
 if(address_temp.indexOf("`")!=-1){
-alert("` "+ " <#333#>");
+alert("` "+ " <#345#>");
 document.getElementById('mail_address').focus();
 return;
 }
@@ -935,13 +935,13 @@ $(".shadow").css("display", "none");
 <div id="Loading" class="popup_bg"></div>
 <div id="hiddenMask" class="popup_bg" style="z-index:999;">
 <table cellpadding="5" cellspacing="0" id="dr_sweet_advise" class="dr_sweet_advise" align="center"></table>
-<!--[if lte IE 6.5.]><script>alert("<#1359#>");</script><![endif]-->
+<!--[if lte IE 6.5.]><script>alert("<#1377#>");</script><![endif]-->
 </div>
 <div id="weakness_div" class="weakness">
 <table style="width:99%;">
 <tr>
 <td>
-<div class="weakness_router_status"><#1245#></div>
+<div class="weakness_router_status"><#1263#></div>
 </td>
 </tr>
 <tr>
@@ -949,91 +949,91 @@ $(".shadow").css("display", "none");
 <div>
 <table class="weakness_status" cellspacing="0" cellpadding="4" align="center">
 <tr>
-<th><#1247#> -</th>
+<th><#1265#> -</th>
 <td>
 <div id="login_password"></div>
 </td>
 </tr>
 <tr>
-<th><#1248#> -</th>
+<th><#1266#> -</th>
 <td>
 <div id="score"></div>
 </td>
 </tr>
 <tr>
-<th><#1249#> -</th>
+<th><#1267#> -</th>
 <td>
 <div id="wireless_encryption"></div>
 </td>
 </tr>
 <tr>
-<th><#3969#> -</th>
+<th><#4068#> -</th>
 <td>
 <div id="wps_status"></div>
 </td>
 </tr>
 <tr>
-<th><#1250#> -</th>
+<th><#1268#> -</th>
 <td>
 <div id="upnp_service"></div>
 </td>
 </tr>
 <tr>
-<th><#1251#> -</th>
+<th><#1269#> -</th>
 <td>
 <div id="access_from_wan"></div>
 </td>
 </tr>
 <tr>
-<th><#1252#> -</th>
+<th><#1270#> -</th>
 <td>
 <div id="ping_from_wan"></div>
 </td>
 </tr>
 <tr>
-<th><#1253#> -</th>
+<th><#1271#> -</th>
 <td>
 <div id="dmz_service"></div>
 </td>
 </tr>
 <tr>
-<th><#1254#> -</th>
+<th><#1272#> -</th>
 <td>
 <div id="port_tirgger"></div>
 </td>
 </tr>
 <tr>
-<th><#1255#> -</th>
+<th><#1273#> -</th>
 <td>
 <div id="port_forwarding"></div>
 </td>
 </tr>
 <tr id="ftp_field">
-<th><#1256#> -</th>
+<th><#1274#> -</th>
 <td>
 <div id="ftp_account"></div>
 </td>
 </tr>
 <tr id="samba_field">
-<th><#1257#> -</th>
+<th><#1275#> -</th>
 <td>
 <div id="samba_account"></div>
 </td>
 </tr>
 <tr>
-<th><#1258#> -</th>
+<th><#1276#> -</th>
 <td>
 <div id="wrs_service"></div>
 </td>
 </tr>
 <tr id="vp_service_field">
-<th><#1259#> -</th>
+<th><#1277#> -</th>
 <td>
 <div id="vp_service"></div>
 </td>
 </tr>
 <tr>
-<th><#1197#> -</th>
+<th><#1215#> -</th>
 <td>
 <div id="cc_service"></div>
 </td>
@@ -1047,10 +1047,10 @@ $(".shadow").css("display", "none");
 <table style="margin-top:10px;margin-left:auto;margin-right:auto;">
 <tr>
 <td>
-<input class="button_gen" type="button" onclick="close_weakness_status();" value="<#1648#>">
+<input class="button_gen" type="button" onclick="close_weakness_status();" value="<#1670#>">
 </td>
 <td>
-<input id="all_security_btn" class="button_gen" type="button" onclick="enable_whole_security();" value="<#1673#>">
+<input id="all_security_btn" class="button_gen" type="button" onclick="enable_whole_security();" value="<#1695#>">
 </td>
 </tr>
 </table>
@@ -1062,17 +1062,17 @@ $(".shadow").css("display", "none");
 <table style="width:99%">
 <tr>
 <th>
-<div style="font-size:16px;"><#1193#></div>
+<div style="font-size:16px;"><#1211#></div>
 </th>
 </tr>
 <td>
-<div class="formfontdesc" style="font-size: 14px;"><#1241#></div>
+<div class="formfontdesc" style="font-size: 14px;"><#1259#></div>
 </td>
 <tr>
 <td>
 <table class="FormTable" width="99%" border="1" align="center" cellpadding="4" cellspacing="0">
 <tr>
-<th><#2993#></th>
+<th><#3044#></th>
 <td>
 <div>
 <select class="input_option" id="mail_provider">
@@ -1093,7 +1093,7 @@ $(".shadow").css("display", "none");
 </td>
 </tr>
 <tr>
-<th><#2299#></th>
+<th><#2337#></th>
 <td>
 <div>
 <input type="password" class="input_30_table" id="mail_password" maxlength="100" value="" autocorrect="off" autocapitalize="off">
@@ -1101,20 +1101,20 @@ $(".shadow").css("display", "none");
 </td>
 </tr>
 <tr>
-<th><#2839#></th>
+<th><#2886#></th>
 <td>
 <div>
 <div>
 <input type="checkbox" id="mal_website_item">
-<span style="color: #FFF;"><#1284#></span>
+<span style="color: #FFF;"><#1302#></span>
 </div>
 <div>
 <input type="checkbox" id="vp_item">
-<span style="color: #FFF;"><#1303#></span>
+<span style="color: #FFF;"><#1321#></span>
 </div>
 <div>
 <input type="checkbox" id="cc_item">
-<span style="color: #FFF;"><#1197#></span>
+<span style="color: #FFF;"><#1215#></span>
 </div>
 </div>
 </td>
@@ -1125,8 +1125,8 @@ $(".shadow").css("display", "none");
 <tr>
 <td>
 <div style="text-align:center;margin-top:20px;">
-<input class="button_gen" type="button" onclick="close_alert_preference();" value="<#1648#>">
-<input class="button_gen" type="button" onclick="apply_alert_preference();" value="<#196#>">
+<input class="button_gen" type="button" onclick="close_alert_preference();" value="<#1670#>">
+<input class="button_gen" type="button" onclick="apply_alert_preference();" value="<#203#>">
 </div>
 </td>
 </tr>
@@ -1194,7 +1194,7 @@ $(".shadow").css("display", "none");
 <table width="730px">
 <tr>
 <td align="left">
-<span class="formfonttitle"><#1287#></span>
+<span class="formfonttitle"><#1305#></span>
 </td>
 </tr>
 </table>
@@ -1211,9 +1211,9 @@ $(".shadow").css("display", "none");
 <table>
 <tr>
 <td>
-<div style="width:430px"><#1242#></div>
+<div style="width:430px"><#1260#></div>
 <div style="width:430px">
-<a id="faq" style="text-decoration:underline;" href="" target="_blank"><#1287#> FAQ</a>
+<a id="faq" style="text-decoration:underline;" href="" target="_blank"><#1305#> FAQ</a>
 </div>
 </td>
 <td>
@@ -1235,7 +1235,7 @@ $(".shadow").css("display", "none");
 <div style="margin:10px;">
 <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
 <tr>
-<th><#1655#> <#1287#></th>
+<th><#1677#> <#1305#></th>
 <td>
 <div align="center" class="left" style="width:94px; float:left; cursor:pointer;" id="radio_protection_enable"></div>
 <div class="iphone_switch_container" style="height:32px; width:74px; position: relative; overflow: hidden">
@@ -1264,15 +1264,15 @@ switch_control(0);
 <div class="line_vertical line_1"></div>
 </td>
 <td style="padding:10px;">
-<div style="font-size:18px;text-shadow:1px 1px 0px black;"><#1245#></div>
-<div style="font-size: 14px;color:#FC0;height:auto;padding-top:5px;"><#1246#></div>
+<div style="font-size:18px;text-shadow:1px 1px 0px black;"><#1263#></div>
+<div style="font-size: 14px;color:#FC0;height:auto;padding-top:5px;"><#1264#></div>
 </td>
 <td width="6px">
 <div class="line_vertical"></div>
 </td>
 <td style="width:20%;">
 <div>
-<input class="button_gen" type="button" onclick="showWeaknessTable();" value="<#1671#>">
+<input class="button_gen" type="button" onclick="showWeaknessTable();" value="<#1693#>">
 </div>
 </td>
 <td>
@@ -1295,8 +1295,8 @@ switch_control(0);
 </td>
 <td style="padding:10px;cursor:pointer;" onclick="location.href='AiProtection_MaliciousSitesBlocking.asp'">
 <div>
-<div style="font-size:18px;text-shadow:1px 1px 0px black;"><#1284#></div>
-<div style="font-size: 14px;color:#FC0;height:auto;padding-top:5px;"><#1283#></div>
+<div style="font-size:18px;text-shadow:1px 1px 0px black;"><#1302#></div>
+<div style="font-size: 14px;color:#FC0;height:auto;padding-top:5px;"><#1301#></div>
 </div>
 </td>
 <td width="6px">
@@ -1330,7 +1330,7 @@ applyRule();
 <div id="mals_count_shade" class="shadow shadow_m"></div>
 <div style="text-align:center;">
 <div id="mali_count" style="height:45px;margin:0 auto;line-height: 45px;font-size:38px;color:#FC0;text-shadow:1px 1px 0px black"></div>
-<div style="font-size: 16px;"><#1276#></div>
+<div style="font-size: 16px;"><#1294#></div>
 <div id="mali_time" style="height:25px;color:#A1A7A8"></div>
 </div>
 </div>
@@ -1346,8 +1346,8 @@ applyRule();
 </td>
 <td style="padding:10px;cursor:pointer;" onclick="location.href='AiProtection_IntrusionPreventionSystem.asp'">
 <div>
-<div style="font-size:18px;text-shadow:1px 1px 0px black;"><#1303#></div>
-<div style="font-size: 14px;color:#FC0;height:auto;padding-top:5px;"><#1304#></div>
+<div style="font-size:18px;text-shadow:1px 1px 0px black;"><#1321#></div>
+<div style="font-size: 14px;color:#FC0;height:auto;padding-top:5px;"><#1322#></div>
 </div>
 </td>
 <td width="6px">
@@ -1381,7 +1381,7 @@ applyRule();
 <div id="vp_count_shade" class="shadow shadow_m"></div>
 <div style="text-align:center;">
 <div id="vp_count" style="height:45px;margin:0 auto;line-height: 45px;font-size:38px;color:#FC0;text-shadow:1px 1px 0px black"></div>
-<div style="font-size: 16px;"><#1276#></div>
+<div style="font-size: 16px;"><#1294#></div>
 <div id="vp_time" style="height:25px;color:#A1A7A8"></div>
 </div>
 </div>
@@ -1396,8 +1396,8 @@ applyRule();
 <div style="height:120px;" class="line_vertical line_1"></div>
 </td>
 <td style="padding:10px;cursor:pointer" onclick="location.href='AiProtection_InfectedDevicePreventBlock.asp'">
-<div style="font-size:18px;text-shadow:1px 1px 0px black;"><#1197#></div>
-<div style="font-size: 14px;color:#FC0;height:auto;;padding-top:5px;"><#1196#></div>
+<div style="font-size:18px;text-shadow:1px 1px 0px black;"><#1215#></div>
+<div style="font-size: 14px;color:#FC0;height:auto;;padding-top:5px;"><#1214#></div>
 </td>
 <td>
 <div class="line_vertical"></div>
@@ -1430,7 +1430,7 @@ applyRule();
 <div id="infected_count_shade" class="shadow shadow_m"></div>
 <div style="text-align:center;">
 <div id="infected_count" style="height:45px;margin:0 auto;line-height: 45px;font-size:38px;color:#FC0;text-shadow:1px 1px 0px black"></div>
-<div style="font-size: 16px;"><#1276#></div>
+<div style="font-size: 16px;"><#1294#></div>
 <div id="infected_time" style="height:25px;color:#A1A7A8"></div>
 </div>
 </div>
@@ -1440,7 +1440,7 @@ applyRule();
 </div>
 <div style=";margin:20px 0;text-align:right">
 <div style="display:inline-block">
-<input class="button_gen" type="button" onclick="show_alert_preference();" value="<#1193#>">
+<input class="button_gen" type="button" onclick="show_alert_preference();" value="<#1211#>">
 </div>
 </div>
 <div style="width:96px;height:44px;margin: 10px 0 0 600px;background-image:url('images/New_ui/TrendMirco_logo.svg');background-size: 100%;"></div>

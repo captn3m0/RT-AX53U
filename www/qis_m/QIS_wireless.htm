@@ -122,7 +122,7 @@ document.getElementById('wl2_ssid').addEventListener("paste", function(e){setTim
 document.getElementById('wl2_wpa_psk').addEventListener("paste", function(e){setTimeout(function(){Sync_5ghz(5);},100);});
 }
 if(is_KR_sku){ // MODELDEP by Territory_code
-document.getElementById("wl_psk_desc").innerHTML = "<#671#>";
+document.getElementById("wl_psk_desc").innerHTML = "<#687#>";
 }
 if(!band5g_support){
 document.getElementById("wl_unit_field_1").style.display = "none";
@@ -133,9 +133,9 @@ if(wl_info.band5g_2_support){
 document.getElementById("wl_unit_field_4").style.display = "";
 document.getElementById("wl_unit_field_5").style.display = "";
 document.getElementById("wl_unit_field_6").style.display = "";
-document.getElementById("wl_unit_field_1_1").innerHTML = '5 GHz-1 - <#722#>';
-document.getElementById("syncCheckbox").innerHTML = '<#630#>';
-document.getElementById("syncCheckbox_5_2").innerHTML = '<#631#>';
+document.getElementById("wl_unit_field_1_1").innerHTML = '5 GHz-1 - <#739#>';
+document.getElementById("syncCheckbox").innerHTML = '<#646#>';
+document.getElementById("syncCheckbox_5_2").innerHTML = '<#647#>';
 }
 if(parent.document.QKform.sw_mode.value == 2){
 document.getElementById('RP_UseParentSetting').style.display = "table";
@@ -203,11 +203,11 @@ document.form.wl2_wpa_psk.value = document.form.wl2_wpa_psk_m.value;
 if(document.getElementById('wl0_ssid').disabled == false){
 if(document.form.wl0_wpa_psk.value == ""){
 if(is_KR_sku){ // MODELDEP by Territory_code
-alert("<#328#> <#336#>");
+alert("<#340#> <#348#>");
 document.form.wl0_wpa_psk.focus();
 return false;
 }
-if(!confirm("<#509#>")){
+if(!confirm("<#525#>")){
 document.form.wl0_wpa_psk.focus();
 return false;
 }
@@ -216,7 +216,7 @@ if(document.form.wps_enable.value == 1){
 if(document.form.wps_band.value == 0
 || document.form.wps_dualband.value == 1 //RT-AC87U, dual band WPS
 || (!Rawifi_support && !Qcawifi_support && based_modelid != "RT-AC87U")){ //Broadcom
-if(!confirm("<#3769#>"))
+if(!confirm("<#3868#>"))
 return false;
 }
 }
@@ -240,7 +240,7 @@ return false;
 }
 var is_common_string0 = check_common_string(document.form.wl0_wpa_psk.value, "wpa_key");
 if(is_common_string0){
-if(!confirm("<#316#>")){
+if(!confirm("<#328#>")){
 return false;
 }
 }
@@ -285,11 +285,11 @@ if(band5g_support){
 if (document.getElementById('wl1_ssid').disabled == false){
 if(document.form.wl1_wpa_psk.value == "" && wl_confirm == 0){
 if(is_KR_sku){ // MODELDEP by Territory_code
-alert("<#328#> <#336#>");
+alert("<#340#> <#348#>");
 document.form.wl1_wpa_psk.focus();
 return false;
 }
-if(!confirm("<#509#>")){
+if(!confirm("<#525#>")){
 document.form.wl1_wpa_psk.focus();
 document.form.wl1_wpa_psk.select();
 return false;
@@ -301,7 +301,7 @@ if(document.form.wps_band.value == "1"
 || document.form.wps_dualband.value == "1" //RT-AC87U dual band WPS
 || document.form.wps_multiband.value == "1" //MTK, QCA platform dual band WPS
 || (!Rawifi_support && !Qcawifi_support && based_modelid != "RT-AC87U")){
-if(!confirm("<#3769#>"))
+if(!confirm("<#3868#>"))
 return false;
 }
 }
@@ -323,7 +323,7 @@ return false;
 }
 var is_common_string1 = check_common_string(document.form.wl1_wpa_psk.value, "wpa_key");
 if(is_common_string1){
-if(!confirm("<#316#>")){
+if(!confirm("<#328#>")){
 return false;
 }
 }
@@ -368,12 +368,12 @@ document.form.wl1_wep_x.value = "<% nvram_get("wl1_wep_x"); %>";
 if(wl_info.band5g_2_support){
 if (document.getElementById('wl2_ssid').disabled == false){
 if(is_KR_sku){ // MODELDEP by Territory_code
-alert("<#328#> <#336#>");
+alert("<#340#> <#348#>");
 document.form.wl2_wpa_psk.focus();
 return false;
 }
 if(document.form.wl2_wpa_psk.value == "" && wl_confirm == 0){
-if(!confirm("<#509#>")){
+if(!confirm("<#525#>")){
 document.form.wl2_wpa_psk.focus();
 document.form.wl2_wpa_psk.select();
 return false;
@@ -383,7 +383,7 @@ if(document.form.wl1_wpa_psk.value == ""){
 if((document.form.wps_enable.value == 1 && document.form.wps_band.value == 2)
 || (based_modelid == "RT-AC87U" && document.form.wps_dualband.value == 1)
 || (!Rawifi_support && !Qcawifi_support && based_modelid != "RT-AC87U")){
-if(!confirm("<#3769#>"))
+if(!confirm("<#3868#>"))
 return false;
 }
 }
@@ -404,7 +404,7 @@ return false;
 }
 var is_common_string2 = check_common_string(document.form.wl2_wpa_psk.value, "wpa_key");
 if(is_common_string2){
-if(!confirm("<#316#>")){
+if(!confirm("<#328#>")){
 return false;
 }
 }
@@ -783,7 +783,7 @@ document.form.appendChild(NewInput);
 }
 function show_prev_button(){
 if(parent.document.getElementById("flag").value == "wireless"){
-document.getElementById("prevButton").value = '<#381#>';
+document.getElementById("prevButton").value = '<#395#>';
 document.form.prev_page.value = "/Advanced_Wireless_Content.asp";
 }
 else if(parent.document.getElementById("flag").value == "adv_ap_mode")
@@ -827,7 +827,7 @@ document.form.sync_with_5ghz.checked = false;
 }
 function gotoIndex_wireless(){
 if(parent.w_Setting_tmp == '0'){
-alert("<#601#>");
+alert("<#617#>");
 return false;
 }
 else
@@ -932,7 +932,7 @@ if(smart_connect_desc_flag == '0' && smart_connect_qis_support){
 document.getElementById("smart_connect_desc").style.display = "";
 document.getElementById("btn_next_step").style.display = "none";
 document.getElementById("smartcon_desc_button").style.display = "";
-document.getElementById("smartcon_desc_button").value = "<#204#>";
+document.getElementById("smartcon_desc_button").value = "<#211#>";
 smart_connect_desc_flag = '1';
 parent.document.getElementById("contentM").height = contentM_height_orig;
 }else{
@@ -943,7 +943,7 @@ if(!smart_connect_qis_support){
 document.getElementById("smart_connect_select_table").style.display = "none";
 }
 document.getElementById("btn_next_step").style.display = "";
-document.getElementById("smartcon_desc_button").value = "<#205#>";
+document.getElementById("smartcon_desc_button").value = "<#212#>";
 smart_connect_desc_flag = '0';
 if(document.form.smart_connect_t[0].checked && smart_connect_qis_support)
 change_smart_con('1');
@@ -973,7 +973,7 @@ document.getElementById("wl_unit_field_4").style.display = "";
 document.getElementById("wl_unit_field_5").style.display = "";
 document.getElementById("wl_unit_field_6").style.display = "";
 }
-document.getElementById("wl0_desc_name").innerHTML = "2.4 GHz - <#722#>";
+document.getElementById("wl0_desc_name").innerHTML = "2.4 GHz - <#739#>";
 parent.document.getElementById("contentM").height = document.body.scrollHeight + 20;
 }
 }
@@ -1311,29 +1311,29 @@ display:none;
 }
 </style>
 <div>
-<div style="font-size:1em;padding:10px 0 10px 15px;text-align:left;"><#712#></div>
+<div style="font-size:1em;padding:10px 0 10px 15px;text-align:left;"><#729#></div>
 <div id="smart_connect_desc" style="display:none">
-<div><span style="font-weight:bold; font-style:italic;color:#FC0"><#778#></span>&nbsp<#779#></div>
+<div><span style="font-weight:bold; font-style:italic;color:#FC0"><#795#></span>&nbsp<#796#></div>
 <div style="background: url(/images/New_ui/smart_connect_concept.gif); width: 588px; height: 340px; margin:0 auto"></div>
 </div>
 <div>
 <div id="Continued_PrevSetting" style="display:table;width:100%;padding-left:15px;">
 <div style="display:table-row">
-<div style="display:table-cell;font-size:1em;color:#B8D8FF;vertical-align:middle;"><#600#></div>
+<div style="display:table-cell;font-size:1em;color:#B8D8FF;vertical-align:middle;"><#616#></div>
 <div class="switch_radio" style="display:table-cell;text-align:right;padding-right:90px;">
 <input type="checkbox" id="Cont_PrevSetting" name="Cont_PrevSetting" class="switch" checked>
-<label for="Cont_PrevSetting" class="on_state"><#187#></label>
-<label for="Cont_PrevSetting" class="off_state"><#186#></label>
+<label for="Cont_PrevSetting" class="on_state"><#194#></label>
+<label for="Cont_PrevSetting" class="off_state"><#193#></label>
 </div>
 </div>
 </div>
 <div id="RP_UseParentSetting" style="display:table;width:100%;padding-left:15px;">
 <div style="display:table-row">
-<div style="display:table-cell;font-size:1em;color:#B8D8FF;vertical-align:middle;"><#494#></div>
+<div style="display:table-cell;font-size:1em;color:#B8D8FF;vertical-align:middle;"><#510#></div>
 <div class="switch_radio" style="display:table-cell;text-align:right;padding-right:90px;">
 <input type="checkbox" id="RP_parentSetting" name="RP_parentSetting" class="switch" checked>
-<label for="RP_parentSetting" class="on_state"><#187#></label>
-<label for="RP_parentSetting" class="off_state"><#186#></label>
+<label for="RP_parentSetting" class="on_state"><#194#></label>
+<label for="RP_parentSetting" class="off_state"><#193#></label>
 </div>
 </div>
 </div>
@@ -1344,70 +1344,70 @@ display:none;
 </div>
 <div style="display:table-cell;vertical-align:middle;">
 <div id="smart_connect_select_table">
-<div><input type="radio" value="1" id="smart_connect_t" name="smart_connect_t" class="input" onclick="return change_smart_con(this.value)" <% nvram_match("smart_connect_x", "1", "checked"); %>><#778#></div>
-<div><input type="radio" value="0" name="smart_connect_t" class="input" onclick="return change_smart_con(this.value)" <% nvram_match("smart_connect_x", "0", "checked"); %>><#727#></div>
+<div><input type="radio" value="1" id="smart_connect_t" name="smart_connect_t" class="input" onclick="return change_smart_con(this.value)" <% nvram_match("smart_connect_x", "1", "checked"); %>><#795#></div>
+<div><input type="radio" value="0" name="smart_connect_t" class="input" onclick="return change_smart_con(this.value)" <% nvram_match("smart_connect_x", "0", "checked"); %>><#744#></div>
 </div>
 </div>
 </div>
-<!--div style="margin-left:15px;"><#669#></div-->
+<!--div style="margin-left:15px;"><#685#></div-->
 <div style="margin-bottom:120px;">
-<div id="wl0_desc_name">2.4 GHz - <#722#></div>
-<div style="font-size:1em;color:#B8D8FF;margin-left:15px;">2.4 GHz - <#562#></div>
+<div id="wl0_desc_name">2.4 GHz - <#739#></div>
+<div style="font-size:1em;color:#B8D8FF;margin-left:15px;">2.4 GHz - <#578#></div>
 <div style="margin:1px 27px 10px 15px">
 <input type="text" id="wl0_ssid" name="wl0_ssid" tabindex="3" onkeypress="return validator.isString(this, event);" style="width:100%;height:30px;padding-left:9px;font-size:0.9em;color:#9BA7B1;background-color:rgba(28,28,28,1);border:1px solid #43474B;" maxlength="32" value="default" autocomplete="off" autocorrect="off" autocapitalize="off" onkeyup="Sync_2ghz(2);"/>
 </div>
-<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#427#></div>
+<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#441#></div>
 <div style="margin:1px 27px 10px 15px">
 <input id="wl0_wpa_psk" name="wl0_wpa_psk" type="password" tabindex="4" onBlur="switchType(this, false);" onFocus="switchType(this, true);" value="<% nvram_char_to_ascii("WLANConfig11b", "wl0_wpa_psk"); %>" onkeyup="Sync_2ghz(2);" style="width:100%;height:30px;padding-left:9px;font-size:0.9em;color:#9BA7B1;background-color:rgba(28,28,28,1);border:1px solid #43474B" maxlength="64" autocomplete="off" autocorrect="off" autocapitalize="off"/>
 </div>
 <div id="wl_unit_field_1">
-<div id="wl_unit_field_1_1" style="">5 GHz - <#722#></div>
+<div id="wl_unit_field_1_1" style="">5 GHz - <#739#></div>
 <div style="margin:1px 27px 10px 15px;">
-<input type="checkbox" id="sync_with_2ghz" name="sync_with_2ghz" tabindex="5" class="input" onclick="setTimeout('Sync_2ghz(2);',0);" checked="checked"><span id="syncCheckbox"><#629#></span>
+<input type="checkbox" id="sync_with_2ghz" name="sync_with_2ghz" tabindex="5" class="input" onclick="setTimeout('Sync_2ghz(2);',0);" checked="checked"><span id="syncCheckbox"><#645#></span>
 </div>
 </div>
 <div id="wl_unit_field_2">
-<div style="font-size:1em;color:#B8D8FF;margin-left:15px;">5 GHz - <#562#></div>
+<div style="font-size:1em;color:#B8D8FF;margin-left:15px;">5 GHz - <#578#></div>
 <div style="margin:1px 27px 10px 15px">
 <input type="text" id="wl1_ssid" name="wl1_ssid" tabindex="6" onkeypress="return validator.isString(this, event);" style="width:100%;height:30px;padding-left:9px;font-size:0.9em;color:#9BA7B1;background-color:rgba(28,28,28,1);border:1px solid #43474B" maxlength="32" value="default" autocomplete="off" autocorrect="off" autocapitalize="off" onkeyup="Sync_2ghz(5);"/>
 </div>
 </div>
 <div id="wl_unit_field_3">
-<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#427#></div>
+<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#441#></div>
 <div style="margin:1px 27px 10px 15px">
 <input id="wl1_wpa_psk" name="wl1_wpa_psk" type="password" tabindex="7" onBlur="switchType(this, false);" onFocus="switchType(this, true);" value="<% nvram_char_to_ascii("WLANConfig11b", "wl1_wpa_psk"); %>" onkeyup="Sync_2ghz(5);" style="width:100%;height:30px;padding-left:9px;font-size:0.9em;color:#9BA7B1;background-color:rgba(28,28,28,1);border:1px solid #43474B" maxlength="64" autocomplete="off" autocorrect="off" autocapitalize="off"/>
 </div>
 </div>
 <div id="wl_unit_field_4" style="display:none;">
-<div id="wl_unit_field_1_2" style="">5 GHz-2 - <#722#></div>
+<div id="wl_unit_field_1_2" style="">5 GHz-2 - <#739#></div>
 <div style="margin:1px 27px 10px 15px;">
-<input type="checkbox" id="sync_with_5ghz" name="sync_with_5ghz" tabindex="8" class="input" onclick="setTimeout('Sync_5ghz(2);',0);" checked="checked"><span id="syncCheckbox_5_2"><#629#></span>
+<input type="checkbox" id="sync_with_5ghz" name="sync_with_5ghz" tabindex="8" class="input" onclick="setTimeout('Sync_5ghz(2);',0);" checked="checked"><span id="syncCheckbox_5_2"><#645#></span>
 </div>
 </div>
 <div id="wl_unit_field_5" style="display:none;">
-<div style="font-size:1em;color:#B8D8FF;margin-left:15px;">5 GHz-2 - <#562#></div>
+<div style="font-size:1em;color:#B8D8FF;margin-left:15px;">5 GHz-2 - <#578#></div>
 <div style="margin:1px 27px 10px 15px">
 <input type="text" id="wl2_ssid" name="wl2_ssid" tabindex="9" onkeypress="return validator.isString(this, event);" style="width:100%;height:30px;padding-left:9px;font-size:0.9em;color:#9BA7B1;background-color:rgba(28,28,28,1);border:1px solid #43474B" maxlength="32" value="default" autocomplete="off" autocorrect="off" autocapitalize="off" onkeyup="Sync_5ghz(5);"/>
 </div>
 </div>
 <div id="wl_unit_field_6" style="display:none;margin-bottom:100px;">
-<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#427#></div>
+<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#441#></div>
 <div style="margin:1px 27px 10px 15px">
 <input id="wl2_wpa_psk" name="wl2_wpa_psk" tabindex="10" type="password" onBlur="switchType(this, false);" onFocus="switchType(this, true);" value="<% nvram_char_to_ascii("WLANConfig11b", "wl2_wpa_psk"); %>" onkeyup="Sync_5ghz(5);" style="width:100%;height:30px;padding-left:9px;font-size:0.9em;color:#9BA7B1;background-color:rgba(28,28,28,1);border:1px solid #43474B" class="input_32_table" maxlength="64" autocomplete="off" autocorrect="off" autocapitalize="off"/>
 </div>
 </div>
 </div>
-<div id="wl_psk_desc"><#670#></div>
+<div id="wl_psk_desc"><#686#></div>
 <div style="position:fixed;bottom:36px;width:100%;height:50px;background:rgb(34,34,34);z-index:2;">
 <div id="apply_button" style="width:100%;height:100%;display:table">
 <div id="prevButton" style="display:table-cell;width:50%;vertical-align:middle;text-align:center;display:none" onclick="gotoprev(document.form);">
-<div style="font-size:1em;color:#FFF"><#205#></div>
+<div style="font-size:1em;color:#FFF"><#212#></div>
 </div>
 <div id="smartcon_desc_button" style="display:table-cell;width:50%;vertical-align:middle;text-align:center;display:none" onclick="smartcon_desc_show();">
-<div style="font-size:1em;color:#FFF"><#205#></div>
+<div style="font-size:1em;color:#FFF"><#212#></div>
 </div>
 <div id="btn_next_step" style="display:table-cell;width:100%;height:100%;line-height:50px;;text-align:center;background-color:#279FD9" onclick="submitForm();">
-<div style="font-size:1em;color:#FFF;"><#196#></div>
+<div style="font-size:1em;color:#FFF;"><#203#></div>
 </div>
 </div>
 <div id="loadingIcon" style="width:100%;height:100%;text-align:center;margin-top:20px;display:none;"><img src="/images/InternetScan.gif"></div>
@@ -1416,7 +1416,7 @@ display:none;
 <!--fieldset id="smart_connect_desc" style="border:0; display:none">
 <table class="QISSmartCon_table">
 <tr><td>
-<span id="desc_title"><span style="font-weight:bold; font-style:italic;"><#778#></span> <#779#></span>
+<span id="desc_title"><span style="font-weight:bold; font-style:italic;"><#795#></span> <#796#></span>
 </td></tr>
 <tr>
 <td>
@@ -1429,11 +1429,11 @@ display:none;
 <legend id="Continued_legend">
 <span id="Continued_PrevSetting"></span>
 <span id="radio_Continued_PrevSetting">
-<input type="radio" id="Cont_PrevSetting0" name="Cont_PrevSetting" tabindex="1" class="input" value="0" onclick="PrevSetting(this.value);"><#187#>
-<input type="radio" id="Cont_PrevSetting1" name="Cont_PrevSetting" tabindex="2" class="input" value="1" onclick="PrevSetting(this.value);"><#186#>
+<input type="radio" id="Cont_PrevSetting0" name="Cont_PrevSetting" tabindex="1" class="input" value="0" onclick="PrevSetting(this.value);"><#194#>
+<input type="radio" id="Cont_PrevSetting1" name="Cont_PrevSetting" tabindex="2" class="input" value="1" onclick="PrevSetting(this.value);"><#193#>
 </span>
 <span id="RP_UseParentSetting" style="display:none;">
-<input type="checkbox" id="RP_parentSetting" checked="" onclick="RP_useParentSetting()"><#494#>
+<input type="checkbox" id="RP_parentSetting" checked="" onclick="RP_useParentSetting()"><#510#>
 </span>
 </legend>
 <table id="smart_connect_table" style="display:none;" class="QISSmartCon_table">
@@ -1444,12 +1444,12 @@ display:none;
 <td>
 <table id="smart_connect_select_table">
 <td style="font-style:normal;font-size:13px;font-weight:bold;" >
-<input type="radio" value="1" id="smart_connect_t" name="smart_connect_t" class="input" onclick="return change_smart_con(this.value)" <% nvram_match("smart_connect_x", "1", "checked"); %>><#778#>
+<input type="radio" value="1" id="smart_connect_t" name="smart_connect_t" class="input" onclick="return change_smart_con(this.value)" <% nvram_match("smart_connect_x", "1", "checked"); %>><#795#>
 </td>
 </tr>
 <tr>
 <td style="font-style:normal;font-size:13px;font-weight:bold;">
-<input type="radio" value="0" name="smart_connect_t" class="input" onclick="return change_smart_con(this.value)" <% nvram_match("smart_connect_x", "0", "checked"); %>><#727#>
+<input type="radio" value="0" name="smart_connect_t" class="input" onclick="return change_smart_con(this.value)" <% nvram_match("smart_connect_x", "0", "checked"); %>><#744#>
 </td>
 </tr>
 </table>
@@ -1457,70 +1457,70 @@ display:none;
 </tr>
 </table>
 <br/>
-<div class="QISWireless_DescSetting" align="left"><#669#></div>
+<div class="QISWireless_DescSetting" align="left"><#685#></div>
 <br/>
 <table class="QISform_wireless" width="400" border=0 align="center" cellpadding="4" cellspacing="0">
 <tr>
-<th colspan="2" id="wl0_desc_name" class="QISWireless_DescSecurity">2.4 GHz - <#722#> </th>
+<th colspan="2" id="wl0_desc_name" class="QISWireless_DescSecurity">2.4 GHz - <#739#> </th>
 </tr>
 <tr>
-<th width="160"><span onmouseout="return nd();" onclick="openHint(0, 22);" style="cursor:help;"><#562#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span></th>
+<th width="160"><span onmouseout="return nd();" onclick="openHint(0, 22);" style="cursor:help;"><#578#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span></th>
 <td class="QISformtd">
 <input type="text" id="wl0_ssid" name="wl0_ssid" tabindex="3" onkeypress="return validator.isString(this, event);" style="height:25px;" class="input_32_table" maxlength="32" value="default" autocomplete="off" autocorrect="off" autocapitalize="off" onkeyup="Sync_2ghz(2);"/>
 </td>
 </tr>
 <tr id="wl_unit_field_0">
-<th width="160"><span onmouseout="return nd();" onclick="openHint(0, 23);" style="cursor:help;"><#427#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span></th>
+<th width="160"><span onmouseout="return nd();" onclick="openHint(0, 23);" style="cursor:help;"><#441#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span></th>
 <td class="QISformtd">
 <input id="wl0_wpa_psk" name="wl0_wpa_psk" type="password" tabindex="4" onBlur="switchType(this, false);" onFocus="switchType(this, true);" value="<% nvram_char_to_ascii("WLANConfig11b", "wl0_wpa_psk"); %>" onkeyup="Sync_2ghz(2);" style="height:25px;" class="input_32_table" maxlength="64" autocomplete="off" autocorrect="off" autocapitalize="off"/>
 </td>
 </tr>
 <tr id="wl_unit_field_1">
-<th id="wl_unit_field_1_1" class="QISWireless_DescSecurity">5 GHz - <#722#> </th>
+<th id="wl_unit_field_1_1" class="QISWireless_DescSecurity">5 GHz - <#739#> </th>
 <td class="QISformtd" id="wl_unit_field_1_2" style="padding-top:12px;">
-<input type="checkbox" id="sync_with_2ghz" name="sync_with_2ghz" tabindex="5" class="input" onclick="setTimeout('Sync_2ghz(2);',0);" checked="checked"><span id="syncCheckbox"><#629#></span>
+<input type="checkbox" id="sync_with_2ghz" name="sync_with_2ghz" tabindex="5" class="input" onclick="setTimeout('Sync_2ghz(2);',0);" checked="checked"><span id="syncCheckbox"><#645#></span>
 </td>
 </tr>
 <tr id="wl_unit_field_2">
-<th width="160"><span onmouseout="return nd();" onclick="openHint(0, 22);" style="cursor:help;"><#562#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span></th>
+<th width="160"><span onmouseout="return nd();" onclick="openHint(0, 22);" style="cursor:help;"><#578#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span></th>
 <td class="QISformtd">
 <input type="text" id="wl1_ssid" name="wl1_ssid" tabindex="6" onkeypress="return validator.isString(this, event);" style="height:25px;" class="input_32_table" maxlength="32" value="default" autocomplete="off" autocorrect="off" autocapitalize="off" onkeyup="Sync_2ghz(5);"/>
 </td>
 </tr>
 <tr id="wl_unit_field_3">
-<th width="160"><span onmouseout="return nd();" onclick="openHint(0, 23);" style="cursor:help;"><#427#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span></th>
+<th width="160"><span onmouseout="return nd();" onclick="openHint(0, 23);" style="cursor:help;"><#441#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span></th>
 <td class="QISformtd">
 <input id="wl1_wpa_psk" name="wl1_wpa_psk" type="password" tabindex="7" onBlur="switchType(this, false);" onFocus="switchType(this, true);" value="<% nvram_char_to_ascii("WLANConfig11b", "wl1_wpa_psk"); %>" onkeyup="Sync_2ghz(5);" style="height:25px;" class="input_32_table" maxlength="64" autocomplete="off" autocorrect="off" autocapitalize="off"/>
 </td>
 </tr>
 <tr id="wl_unit_field_4" style="display:none;">
-<th class="QISWireless_DescSecurity">5 GHz-2 - <#722#> </th>
+<th class="QISWireless_DescSecurity">5 GHz-2 - <#739#> </th>
 <td class="QISformtd" id="wl_unit_field_4_2" style="padding-top:12px;">
-<input type="checkbox" id="sync_with_5ghz" name="sync_with_5ghz" tabindex="8" class="input" onclick="setTimeout('Sync_5ghz(2);',0);" checked="checked"><span id="syncCheckbox_5_2"><#629#></span>
+<input type="checkbox" id="sync_with_5ghz" name="sync_with_5ghz" tabindex="8" class="input" onclick="setTimeout('Sync_5ghz(2);',0);" checked="checked"><span id="syncCheckbox_5_2"><#645#></span>
 </td>
 </tr>
 <tr id="wl_unit_field_5" style="display:none;">
-<th width="160"><span onmouseout="return nd();" onclick="openHint(0, 22);" style="cursor:help;"><#562#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span></th>
+<th width="160"><span onmouseout="return nd();" onclick="openHint(0, 22);" style="cursor:help;"><#578#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span></th>
 <td class="QISformtd">
 <input type="text" id="wl2_ssid" name="wl2_ssid" tabindex="9" onkeypress="return validator.isString(this, event);" style="height:25px;" class="input_32_table" maxlength="32" value="default" autocomplete="off" autocorrect="off" autocapitalize="off" onkeyup="Sync_5ghz(5);"/>
 </td>
 </tr>
 <tr id="wl_unit_field_6" style="display:none;">
-<th width="160"><span onmouseout="return nd();" onclick="openHint(0, 23);" style="cursor:help;"><#427#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span></th>
+<th width="160"><span onmouseout="return nd();" onclick="openHint(0, 23);" style="cursor:help;"><#441#><img align="right" style="cursor:pointer;margin-top:-14px\9;" src="/images/New_ui/helpicon.png"></span></th>
 <td class="QISformtd">
 <input id="wl2_wpa_psk" name="wl2_wpa_psk" tabindex="10" type="password" onBlur="switchType(this, false);" onFocus="switchType(this, true);" value="<% nvram_char_to_ascii("WLANConfig11b", "wl2_wpa_psk"); %>" onkeyup="Sync_5ghz(5);" style="height:25px;" class="input_32_table" maxlength="64" autocomplete="off" autocorrect="off" autocapitalize="off"/>
 </td>
 </tr>
 </table>
 <br/>
-<div id="wl_psk_desc" class="QISWireless_DescFont"><#670#></div>
+<div id="wl_psk_desc" class="QISWireless_DescFont"><#686#></div>
 <br/>
 </fieldset>
 <div id="applyBtn" class="apply_gen" style="margin-top:10px">
 <span>
-<input type="button" id="prevButton" value="<#205#>" tabindex="13" onclick="gotoprev(document.form);" style="display:none;" class="button_gen">
-<input type="button" id="smartcon_desc_button" value="<#205#>" tabindex="12" onclick="smartcon_desc_show();" style="display:none;" class="button_gen">
-<input type="button" id="btn_next_step" value="<#196#>" tabindex="11" onclick="submitForm();" class="button_gen">
+<input type="button" id="prevButton" value="<#212#>" tabindex="13" onclick="gotoprev(document.form);" style="display:none;" class="button_gen">
+<input type="button" id="smartcon_desc_button" value="<#212#>" tabindex="12" onclick="smartcon_desc_show();" style="display:none;" class="button_gen">
+<input type="button" id="btn_next_step" value="<#203#>" tabindex="11" onclick="submitForm();" class="button_gen">
 <img id="loadingIcon" style="display:none;" src="/images/InternetScan.gif">
 </span>
 </div-->

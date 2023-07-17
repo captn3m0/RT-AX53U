@@ -147,7 +147,7 @@ var validator_key = {
 var isCurrect = true;
 var altStr = "";
 if(alg == "wep"){
-altStr = "<#345#>";
+altStr = "<#357#>";
 if((keyObj.value.length == 5 || keyObj.value.length == 13) && validator.string(keyObj)){
 isCurrect = true;
 }
@@ -155,7 +155,7 @@ else if((keyObj.value.length == 10 || keyObj.value.length == 26)&& validator.hex
 isCurrect = true;
 }
 else{
-altStr = altStr + "\n<#852#>\n<#853#>";
+altStr = altStr + "\n<#870#>\n<#871#>";
 isCurrect = false;
 }
 }
@@ -164,7 +164,7 @@ isCurrect = true;
 }
 else{
 var psk_length = keyObj.value.length;
-altStr = "<#327#>"
+altStr = "<#339#>"
 if(psk_length < 8 || psk_length > 64){
 isCurrect = false;
 }
@@ -184,13 +184,13 @@ keyPressed = event.keyCode ? event.keyCode : event.which;
 if(keyPressed >= 0 && keyPressed <= 126)
 return true;
 else{
-alert('<#333#>');
+alert('<#345#>');
 return false;
 }
 },
 "isNull" : function(obj){
 if(obj.value == ""){
-alert("<#320#>");
+alert("<#332#>");
 obj.focus();
 obj.select();
 return false;
@@ -284,7 +284,7 @@ if(!validator_key.key(document.getElementById("wl_wpa_psk"), "psk"))
 return false;
 }
 else{
-if(!confirm("<#509#>")){
+if(!confirm("<#525#>")){
 document.form.wl_wpa_psk.focus();
 document.form.wl_wpa_psk.select();
 return false;
@@ -447,12 +447,12 @@ genErrorHint();
 }
 else if(isIPChanged){
 if(wlc_state == 2 && wlc_state_auth == 1){ // auth failure
-parent.document.getElementById('drword').innerHTML = "<#100#>";
+parent.document.getElementById('drword').innerHTML = "<#106#>";
 parent.document.getElementById('drword').innerHTML += "<input type=\"button\" class=\"button_gen_scan\" width=\"72\" onclick=\"javascript:location.href=\'" + retValHandler.dutIP + "/QIS_wizard_m.htm?flag=sitesurvey_mb\';\" value=\"Rescan\">";
 parent.dr_advise();
 }
 else if(wlc_state == 0 && wlc_state_auth == 0){ // P-AP is gone
-parent.document.getElementById('drword').innerHTML = "<#99#>";
+parent.document.getElementById('drword').innerHTML = "<#105#>";
 parent.document.getElementById('drword').innerHTML += "<input type=\"button\" class=\"button_gen_scan\" width=\"72\" onclick=\"javascript:location.href=\'" + retValHandler.dutIP + "/QIS_wizard_m.htm?flag=sitesurvey_mb\';\" value=\"Rescan\">";
 parent.dr_advise();
 }
@@ -510,19 +510,19 @@ $(this).css("background-color", "#708789");
 $(this).find("td").css("color", "#FFFFFF");
 bindEvent.idx = $(this)[0].rowIndex;
 var initRow = '<tr class="inputRow" style="display:none;background-color:#708789;"><td style="height:50px;" colspan="5"><table width="100%"><tr>';
-var connectedHint = '<td style="border:0px;"><span style="color:#FFCC00;"><#110#></span></td>';
-var unEncrypt = '<td style="border:0px;"><span style="color:#FFCC00;"><#109#></span></td>';
-var unSupport = "<td style=\"border:0px;\"><span style=\"color:#FFCC00;\"><#111#></span></td>";
-var networkKey = '<td style="border:0px;"><span style="color:#FFFFFF;"><#427#>:</span><input type="password" id="thekey_tmp" class="input_25_table" style="padding-left:3px;margin-left:5px;width:200px;" autocomplete="off" autocorrect="off" autocapitalize="off"><input type="checkbox" onclick="pass_checked(this, document.getElementById(\'thekey_tmp\'));"><span style="color:#FFF"><#616#></span></td>';
-var connectBtn = '<td style="border:0px;text-align:right"><input style="margin-left:10px;" id="connect_btn" type="button" value="<#195#>" onclick="btnAction.saveWlcVar('+ bindEvent.idx +', false)" class="button_gen"></td></tr>';
-var wep_auth = "<tr><td style=\"border:0px;\"><span style=\"margin-left:5px;color:#FFFFFF;\"><#3782#></span><select id=\"thekey_wep_method_tmp\" class=\"input_option\" style=\"margin-left:5px;\"><option value=\"open\" selected>open</option><option value=\"shared\">shared</option></select>";
-var wepkeyIndex = '<span style="margin-left:5px;color:#FFFFFF;"><#850#></span><select id="thekey_index_tmp" class="input_option" style="margin-left:5px;"><option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></td></tr>';
+var connectedHint = '<td style="border:0px;"><span style="color:#FFCC00;"><#116#></span></td>';
+var unEncrypt = '<td style="border:0px;"><span style="color:#FFCC00;"><#115#></span></td>';
+var unSupport = "<td style=\"border:0px;\"><span style=\"color:#FFCC00;\"><#117#></span></td>";
+var networkKey = '<td style="border:0px;"><span style="color:#FFFFFF;"><#441#>:</span><input type="password" id="thekey_tmp" class="input_25_table" style="padding-left:3px;margin-left:5px;width:200px;" autocomplete="off" autocorrect="off" autocapitalize="off"><input type="checkbox" onclick="pass_checked(this, document.getElementById(\'thekey_tmp\'));"><span style="color:#FFF"><#632#></span></td>';
+var connectBtn = '<td style="border:0px;text-align:right"><input style="margin-left:10px;" id="connect_btn" type="button" value="<#202#>" onclick="btnAction.saveWlcVar('+ bindEvent.idx +', false)" class="button_gen"></td></tr>';
+var wep_auth = "<tr><td style=\"border:0px;\"><span style=\"margin-left:5px;color:#FFFFFF;\"><#3881#></span><select id=\"thekey_wep_method_tmp\" class=\"input_option\" style=\"margin-left:5px;\"><option value=\"open\" selected>open</option><option value=\"shared\">shared</option></select>";
+var wepkeyIndex = '<span style="margin-left:5px;color:#FFFFFF;"><#868#></span><select id="thekey_index_tmp" class="input_option" style="margin-left:5px;"><option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></td></tr>';
 var endOfRow = '</table></td></tr>';
 if(wlc_scan_state != 5)
 initRow = "";
 else if(btnAction.curState == "Connecting"){
 if(wlc_state == 3 && wlc_sbstate == 2){
-connectBtn = '<input style="margin-left:10px;" id="connect_btn" type="button" value="<#195#>" onclick="submitForm()" class="button_gen"> <img id="loadingIcon" style="display:none;" src="/images/InternetScan.gif"></td></tr>';
+connectBtn = '<input style="margin-left:10px;" id="connect_btn" type="button" value="<#202#>" onclick="submitForm()" class="button_gen"> <img id="loadingIcon" style="display:none;" src="/images/InternetScan.gif"></td></tr>';
 if(document.form.wlc_wep.value == 1){
 initRow += networkKey;
 initRow += wepkeyIndex;
@@ -539,7 +539,7 @@ else if(wlc_state == 2){ // success
 initRow = "";
 }
 else
-initRow += '<span style="color:#FFCC00;"><#855#>...</span><img id="loadingIcon" src="/images/InternetScan.gif"></td></tr>';
+initRow += '<span style="color:#FFCC00;"><#873#>...</span><img id="loadingIcon" src="/images/InternetScan.gif"></td></tr>';
 }
 else{
 if(Profiles[bindEvent.idx].alg == "NONE"){
@@ -676,14 +676,14 @@ htmlCode += '<tbody><tr>';
 htmlCode += '<td style="text-align:center;font-size:12px; border-collapse: collapse;border:1;height:45px;" colspan="5">';
 htmlCode += '<span style="color:#FFCC00;line-height:25px;">';
 if(wlc_state_ajax == 2 && wlc_sbstate_ajax == 1){ //connected
-htmlCode += '<#101#>';
+htmlCode += '<#107#>';
 setTimeout('parent.location.href = "/";', 2000);
 }
 else if(wlc_state_ajax == 3 && wlc_sbstate_ajax == 2){ //auth failure
-htmlCode += '<span style="font-weight:bolder;">' + parent.document.getElementById("stassid").innerHTML + '</span> <#100#>';
+htmlCode += '<span style="font-weight:bolder;">' + parent.document.getElementById("stassid").innerHTML + '</span> <#106#>';
 }
 else if(wlc_state_ajax == 3 && wlc_sbstate_ajax == 1){ // p-ap does not exist
-htmlCode += "<#99#>";
+htmlCode += "<#105#>";
 }
 htmlCode += '</span></td></tr></tbody></table>';
 document.getElementById("wlscan_table").innerHTML = htmlCode;
@@ -710,14 +710,14 @@ htmlCode += '<tbody><tr>';
 htmlCode += '<td style="text-align:center;font-size:12px; border-collapse: collapse;border:1;height:45px;" colspan="5">';
 htmlCode += '<span style="color:#FFCC00;line-height:25px;">';
 if(wlc_state_ajax == 1 && wlc_sbstate_ajax == 0){ //connected
-htmlCode += '<#101#>';
+htmlCode += '<#107#>';
 setTimeout('parent.location.href = "/";', 2000);
 }
 else if(wlc_state_ajax == 2 && wlc_sbstate_ajax == 1){ //auth failure
-htmlCode += '<span style="font-weight:bolder;">' + parent.document.getElementById("stassid").innerHTML + '</span> <#100#>';
+htmlCode += '<span style="font-weight:bolder;">' + parent.document.getElementById("stassid").innerHTML + '</span> <#106#>';
 }
 else if(wlc_state_ajax == 0 && wlc_sbstate_ajax == 0){ // p-ap does not exist
-htmlCode += "<#99#>";
+htmlCode += "<#105#>";
 }
 htmlCode += '</span></td></tr></tbody></table>';
 document.getElementById("wlscan_table").innerHTML = htmlCode;
@@ -739,11 +739,11 @@ updateMediaBridgeState();
 }
 }
 else if(wlc_scan_state != 5){ // scanning
-htmlCode +='<div style="text-align:center;"><div style="color:#FFCC00;line-height:25px;"><#106#></div><img style="margin-top:10px;" src="/images/InternetScan.gif"></div>';
+htmlCode +='<div style="text-align:center;"><div style="color:#FFCC00;line-height:25px;"><#112#></div><img style="margin-top:10px;" src="/images/InternetScan.gif"></div>';
 }
 else{ // display aplist
 if(Profiles.length == 0){
-htmlCode +='<tr style="height: 45px;"><td style="text-align:center;font-size:12px; border-collapse: collapse;border:1;" colspan="4"><span style="color:#FFCC00;line-height:25px;"><#107#></span>&nbsp;<img style="margin-top:10px;" src="/images/InternetScan.gif"></td></tr>';
+htmlCode +='<tr style="height: 45px;"><td style="text-align:center;font-size:12px; border-collapse: collapse;border:1;" colspan="4"><span style="color:#FFCC00;line-height:25px;"><#113#></span>&nbsp;<img style="margin-top:10px;" src="/images/InternetScan.gif"></td></tr>';
 }
 else{
 for(var i = 0; i < Profiles.length; i++){
@@ -759,7 +759,7 @@ htmlCode += '<tr style="height: 45px;">';
 ssid_str=handle_show_str(Profiles[i].ssid);
 htmlCode += '<td><span title="' + Profiles[i].macaddr + '">' + ssid_str + '</span>';
 if(retValHandler.isConnected(Profiles[i].state))
-htmlCode += "<span style='color:#FC0;margin-left:10px;'><#189#></span>";
+htmlCode += "<span style='color:#FC0;margin-left:10px;'><#196#></span>";
 htmlCode += "</td>";
 htmlCode += '<td width="15%" style="text-align:center;">' + Profiles[i].channel;
 htmlCode += '<span style="margin-left:5px;">(' + Profiles[i].wlmode + ')</span>';
@@ -989,10 +989,10 @@ color:#FFF;
 }
 </style>
 <div>
-<div style="font-size:1em;padding:10px 0 10px 15px;text-align:left;"><#108#></div>
+<div style="font-size:1em;padding:10px 0 10px 15px;text-align:left;"><#114#></div>
 <div id="wlscan_table" style="margin-bottom:100px;">
 <div style="text-align:center;">
-<div style="color:#FFCC00;line-height:25px;"><#106#></div>
+<div style="color:#FFCC00;line-height:25px;"><#112#></div>
 <img style="margin-top:10px;" src="/images/InternetScan.gif">
 </div>
 <!--div id="74:D0:2B:64:F2:A4" style="border-bottom:1px solid #43474B;padding:15px;display:table;width:100%">
@@ -1040,9 +1040,9 @@ color:#FFF;
 </div>
 </div>
 <div id="manualPAP" style="display:none;">
-<div style="padding: 0 15px;"><#105#></div>
+<div style="padding: 0 15px;"><#111#></div>
 <div id="wl_unit_field" style="margin-left:15px;">
-<div style="font-size:1em;color:#B8D8FF;"><#2327#></div>
+<div style="font-size:1em;color:#B8D8FF;"><#2365#></div>
 <div style="margin: 5px 0 10px 0">
 <select id="wlc_band_manual" class="input_option">
 <option class="content_input_fd" value="2G" selected>2.4GHz</option>
@@ -1050,11 +1050,11 @@ color:#FFF;
 </select>
 </div>
 </div>
-<div style="padding: 0 15px;margin-bottom:5px;"><a style="color:#B8D8FF;text-decoration:initial" href="javascript:void(0);" onClick="openHint(0, 1);"><#562#></a></div>
+<div style="padding: 0 15px;margin-bottom:5px;"><a style="color:#B8D8FF;text-decoration:initial" href="javascript:void(0);" onClick="openHint(0, 1);"><#578#></a></div>
 <div style="padding: 0 15px;">
 <input type="text" id="wlc_ssid_manual" onkeypress="return validator_key.isString(this, event);" style="width:100%;height:30px;font-size:0.9em;color:#9BA7B1;background-color:rgba(28,28,28,1);border:1px solid #43474B" maxlength="32" autocomplete="off" autocorrect="off" autocapitalize="off" onkeyup="Sync_2ghz(5);"/>
 </div>
-<div style="padding: 0 15px;margin: 10px 0 5px"><a style="color:#B8D8FF;text-decoration:initial" href="javascript:void(0);" onClick="openHint(0, 5);"><#3782#></a></div>
+<div style="padding: 0 15px;margin: 10px 0 5px"><a style="color:#B8D8FF;text-decoration:initial" href="javascript:void(0);" onClick="openHint(0, 5);"><#3881#></a></div>
 <div style="padding: 0 15px;">
 <select id="wlc_auth_mode_x_manual" onChange="viewHandler.changeAuthMode(this.value)">
 <option value="open">Open System</option>
@@ -1063,16 +1063,16 @@ color:#FFF;
 </select>
 </div>
 <div id="wl_nmode_hint_manual" style="padding: 0 15px;margin-top:5px;color:#FC0;">
-<#3954#> <#3955#>
+<#4053#> <#4054#>
 </div>
 <div id="encryption_field">
-<div style="padding: 0 15px;margin: 10px 0"><#854#></div>
+<div style="padding: 0 15px;margin: 10px 0"><#872#></div>
 <div style="padding: 0 15px;">
 <select id="wlc_crypto_manual"></select>
 </div>
 </div>
 <div id="key_manual_field">
-<div style="padding: 0 15px;margin: 10px 0 5px"><#427#></div>
+<div style="padding: 0 15px;margin: 10px 0 5px"><#441#></div>
 <div style="padding: 0 15px;">
 <input type="password" id="thekey_manual" name="thekey_manual" style="width:100%;height:30px;font-size:0.9em;color:#9BA7B1;background-color:rgba(28,28,28,1);border:1px solid #43474B" autocomplete="off" autocorrect="off" autocapitalize="off">
 </div>
@@ -1081,10 +1081,10 @@ color:#FFF;
 <div id="footer" style="position:fixed;bottom:36px;width:100%;height:50px;background:rgb(34,34,34);z-index:2;display:none">
 <div id="phase2_footer" style="width:100%;height:100%;display:none">
 <div id="prevButton" style="display:table-cell;width:50%;vertical-align:middle;text-align:center;" onclick="show_pap_info_previous();">
-<div style="font-size:1em;color:#7E8593"><#205#></div>
+<div style="font-size:1em;color:#7E8593"><#212#></div>
 </div>
 <div id="nextButton" style="display:table-cell;width:50%;vertical-align:middle;text-align:center;background-color:#279FD9">
-<div style="font-size:1em;color:#FFF;"><#204#></div>
+<div style="font-size:1em;color:#FFF;"><#211#></div>
 </div>
 </div>
 <div id="phase1_footer" style="width:100%;height:100%;display:none">
@@ -1176,11 +1176,11 @@ color:#FFF;
 <div id="PAPSurvey">
 <!--div style="margin-left:18px;">
 <table width="670px" border="0" cellspacing="0" cellpadding="4" align="center" class="QIS_survey">
-<th onclick="sorter.addBorder(this);sorter.doSorter(1, 'str');" style="cursor:pointer;"><#562#></th>
-<th onclick="sorter.addBorder(this);sorter.doSorter(2, 'num');" width="15%" style="text-align:center;cursor:pointer;"><#849#></th>
-<th onclick="sorter.addBorder(this);sorter.doSorter(3, 'str');" width="20%" style="cursor:pointer;"><#563#></th>
-<th onclick="sorter.addBorder(this);sorter.doSorter(0, 'str');" width="10%" style="text-align:center;cursor:pointer;"><#2327#></th>
-<th onclick="sorter.addBorder(this);sorter.doSorter(5, 'num');" width="10%" id="sigTh" style="border-bottom: 1px solid #FC0;text-align:center;cursor:pointer;"><#713#></th>
+<th onclick="sorter.addBorder(this);sorter.doSorter(1, 'str');" style="cursor:pointer;"><#578#></th>
+<th onclick="sorter.addBorder(this);sorter.doSorter(2, 'num');" width="15%" style="text-align:center;cursor:pointer;"><#867#></th>
+<th onclick="sorter.addBorder(this);sorter.doSorter(3, 'str');" width="20%" style="cursor:pointer;"><#579#></th>
+<th onclick="sorter.addBorder(this);sorter.doSorter(0, 'str');" width="10%" style="text-align:center;cursor:pointer;"><#2365#></th>
+<th onclick="sorter.addBorder(this);sorter.doSorter(5, 'num');" width="10%" id="sigTh" style="border-bottom: 1px solid #FC0;text-align:center;cursor:pointer;"><#730#></th>
 </table>
 </div-->
 <!--div style="height:360px;overflow-y:auto;margin-top:0px;" id="wlscan_table_container">
@@ -1189,7 +1189,7 @@ color:#FFF;
 <tbody>
 <tr>
 <td style="text-align:center;font-size:12px;border-collapse:collapse;border:1;" colspan="4">
-<span style="color:#FFCC00;line-height:25px;"><#106#></span>&nbsp;<img style="margin-top:10px;" src="/images/InternetScan.gif">
+<span style="color:#FFCC00;line-height:25px;"><#112#></span>&nbsp;<img style="margin-top:10px;" src="/images/InternetScan.gif">
 </td>
 </tr>
 </tbody>
@@ -1199,16 +1199,16 @@ color:#FFF;
 </div>
 <div id="manualPAP" style="display:none;">
 <div style="margin-left:25px;" class="QISGeneralFont">
-<#105#>
+<#111#>
 <br/>
 <span style="color:#FC0" id="deviceDiscorvy">
-<#3499#>
+<#3570#>
 </span>
 </div>
 <br><br>
 <table class="QISform" width="400" border=0 align="center" cellpadding="5" cellspacing="0" style="padding-left:30px;">
 <tr id="wl_unit_field">
-<th width="25%"><#2327#></th>
+<th width="25%"><#2365#></th>
 <td>
 <select id="wlc_band_manual" class="input_option">
 <option class="content_input_fd" value="2G" selected>2.4GHz</option>
@@ -1217,13 +1217,13 @@ color:#FFF;
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 1);"><#562#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 1);"><#578#></a></th>
 <td>
 <input type="text" maxlength="32" class="input_32_table" id="wlc_ssid_manual" value="" onkeypress="return validator_key.isString(this, event);" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 5);"><#3782#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 5);"><#3881#></a></th>
 <td>
 <select id="wlc_auth_mode_x_manual" class="input_option" onChange="viewHandler.changeAuthMode(this.value)">
 <option value="open">Open System</option>
@@ -1232,28 +1232,28 @@ color:#FFF;
 <option value="psk2">WPA2-Personal</option>
 </select>
 <div id="wl_nmode_hint_manual" style="margin-top:5px;color:#FC0;">
-<#3954#> <#3955#>
+<#4053#> <#4054#>
 </div>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 6);"><#854#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 6);"><#872#></a></th>
 <td>
 <select id="wlc_crypto_manual" class="input_option"></select>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 9);"><#3844#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 9);"><#3943#></a></th>
 <td>
 <select id="wlc_wep_manual" class="input_option" onChange="viewHandler.changeWepMode();">
-<option value="0"><#848#></option>
+<option value="0"><#866#></option>
 <option value="1">WEP-64bits</option>
 <option value="2">WEP-128bits</option>
 </select>
 </td>
 </tr>
 <tr>
-<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 10);"><#850#></a></th>
+<th><a class="hintstyle" href="javascript:void(0);" onClick="openHint(0, 10);"><#868#></a></th>
 <td>
 <select id="wlc_key_index_manual" class="input_option">
 <option value="1">1</option>
@@ -1264,7 +1264,7 @@ color:#FFF;
 </td>
 </tr>
 <tr>
-<th><#427#></th>
+<th><#441#></th>
 <td>
 <input type="password" id="thekey_manual" name="thekey_manual" class="input_32_table" style="height:25px;" autocomplete="off" autocorrect="off" autocapitalize="off">
 </td>
@@ -1272,25 +1272,25 @@ color:#FFF;
 <tr>
 <th></th>
 <td>
-<input type="checkbox" id="show_pass_manual" onclick="pass_checked(this, document.getElementById('thekey_manual'));"><#616#>
+<input type="checkbox" id="show_pass_manual" onclick="pass_checked(this, document.getElementById('thekey_manual'));"><#632#>
 </td>
 </tr>
 </table>
 </div>
 <div id="localAP" style="display:none">
 <div style="margin-left:25px;" class="QISGeneralFont">
-<#669#>
+<#685#>
 </div>
 <br><br>
 <table id="tblsetting_2" class="QISform" width="400" border=0 align="center" cellpadding="5" cellspacing="0" style="padding-left:100px;">
 <tr>
-<th width="25%"><#562#></th>
+<th width="25%"><#578#></th>
 <td>
 <input type="text" id="wl_ssid" onkeypress="return validator_key.isString(this, event);" style="height:25px;" class="input_32_table" maxlength="32" value="" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th width="25%"><#427#></th>
+<th width="25%"><#441#></th>
 <td>
 <input id="wl_wpa_psk" type="password" value="" style="height:25px;" class="input_32_table" maxlength="65" autocomplete="off" autocorrect="off" autocapitalize="off">
 </td>
@@ -1298,18 +1298,18 @@ color:#FFF;
 <tr>
 <th></th>
 <td>
-<input type="checkbox" onclick="parent.switchType(document.getElementById('wl_wpa_psk'), this.checked, true);"><#616#>
+<input type="checkbox" onclick="parent.switchType(document.getElementById('wl_wpa_psk'), this.checked, true);"><#632#>
 </td>
 </tr>
 </table>
 <input id="rescanBtn" type="button" class="button_gen" width="72" value="Rescan" style="display:none">
 </div>
 <!--div class="apply_gen" style="margin-top:10px">
-<input id="btnPre" type="button" value="<#199#>" onclick='btnAction.goPreStage();' class="button_gen" >
-<input id="btnSubmit" type="button" value="<#195#>" onclick="btnAction.submitForm();" class="button_gen" >
-<input id="btnManual" type="button" value="<#375#>" onclick="btnAction.manual();" class="button_gen">
-<input id="btnRescan" type="button" value="<#602#>" onclick="btnAction.curState='Rescanning';btnAction.rescan();" class="button_gen">
-<input id="btnNext" type="button" value="<#195#>" onclick="btnAction.saveWlcVar(-1)" class="button_gen">
+<input id="btnPre" type="button" value="<#206#>" onclick='btnAction.goPreStage();' class="button_gen" >
+<input id="btnSubmit" type="button" value="<#202#>" onclick="btnAction.submitForm();" class="button_gen" >
+<input id="btnManual" type="button" value="<#389#>" onclick="btnAction.manual();" class="button_gen">
+<input id="btnRescan" type="button" value="<#618#>" onclick="btnAction.curState='Rescanning';btnAction.rescan();" class="button_gen">
+<input id="btnNext" type="button" value="<#202#>" onclick="btnAction.saveWlcVar(-1)" class="button_gen">
 <img id="loadingIcon" style="display:none;" src="/images/InternetScan.gif">
 </div-->
 </div>

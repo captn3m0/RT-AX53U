@@ -8,7 +8,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1">
 <link rel="shortcut icon" href="images/favicon.png">
 <link rel="icon" href="images/favicon.png">
-<title><#842#> - <#3175#></title>
+<title><#860#> - <#3241#></title>
 <link rel="stylesheet" type="text/css" href="index_style.css">
 <link rel="stylesheet" type="text/css" href="form_style.css">
 <link rel="stylesheet" type="text/css" href="/device-map/device-map.css">
@@ -314,8 +314,8 @@ obj_steer_class[x].className='steering_on_'+idx;
 function gen_bsd_steering_div(flag){
 var code = "";
 code +='<table cellspacing="0" cellpadding="4" bordercolor="#6b8fa3" border="1" align="center" width="100%" class="FormTable" id="MainTable1">';
-code +='<thead><tr><td colspan="4"><#3180#></td></tr></thead>';
-code +='<tr id="band_text"><th width="20%"><#2327#></th>';
+code +='<thead><tr><td colspan="4"><#3246#></td></tr></thead>';
+code +='<tr id="band_text"><th width="20%"><#2365#></th>';
 if(start_band_idx == '1'){
 if(band6g_support){
 code +='<td width="40%" align="center" >5 GHz</td><td width="40%" align="center" >6 GHz</td>';
@@ -335,15 +335,15 @@ code +='<td width="27%" align="center" >2.4GHz</td><td width="27%" align="center
 }
 }
 code +='</tr>';
-code +='<tr><th><#1886#></th>';
+code +='<tr><th><#1908#></th>';
 for(i = start_band_idx; i < wl_info.wl_if_total; i++){
 code +='<td>';
-code +='<input onclick="change_lb(1,'+i+');" type="radio" name="wl'+i+'_bsd_steering_balance" value="1"><#187#>';
-code +='<input onclick="change_lb(0,'+i+');" type="radio" name="wl'+i+'_bsd_steering_balance" value="0"><#186#>';
+code +='<input onclick="change_lb(1,'+i+');" type="radio" name="wl'+i+'_bsd_steering_balance" value="1"><#194#>';
+code +='<input onclick="change_lb(0,'+i+');" type="radio" name="wl'+i+'_bsd_steering_balance" value="0"><#193#>';
 code +='</td>';
 }
 code +='</tr>';
-code +='<tr><th><#3181#></th>';
+code +='<tr><th><#3247#></th>';
 for(i = start_band_idx; i < wl_info.wl_if_total; i++){
 code +='<td><span class="steering_on_'+i+'"><div><table><tr>';
 code +='<td style="border:0px;width:35px; padding-left:0px">';
@@ -357,25 +357,25 @@ code +='<tr><th>RSSI</th>';
 for(i = start_band_idx; i < wl_info.wl_if_total; i++){
 code +='<td><span class="steering_on_'+i+'"><div><table><tr><td style="border:0px; padding-left:0px">';
 code +='<select class="input_option" name="wl'+i+'_bsd_steering_rssi_s">';
-code +='<option selected="" value="0" class="content_input_fd"><#2852#></option>';
-code +='<option value="1" class="content_input_fd"><#2851#></option>';
+code +='<option selected="" value="0" class="content_input_fd"><#2899#></option>';
+code +='<option value="1" class="content_input_fd"><#2898#></option>';
 code +='</select></td>';
 code +='<td style="border:0px; padding-left:0px">';
 code +='<input type="text" onkeypress="return validator.isNegativeNumber(this,event)" value="100" class="input_3_table" id="wl'+i+'_bsd_steering_rssi" name="wl'+i+'_bsd_steering_rssi" maxlength="4">';
 code +='<label style="margin-left:5px;">dBm</label></td></tr></table></div></span><span class="steering_unuse_off_'+i+'">- -</span></td>';
 }
 code +='</tr>';
-code +='<tr><th><#2894#></th>';
+code +='<tr><th><#2941#></th>';
 for(i = start_band_idx; i < wl_info.wl_if_total; i++){
 code +='<td><span class="steering_on_'+i+'"><div><table><tr><td style="border:0px;width:35px; padding-left:0px">';
 code +='<div id="slider_wl'+i+'_bsd_steering_phy_l" style="width:80px;"></div></td>';
 code +='<td style="border:0px">';
 code +='<div id="wl'+i+'_bsd_steering_phy_l0_t">< <span style="color:white;" name="wl'+i+'_bsd_steering_phy_l_t" id="wl'+i+'_bsd_steering_phy_l_t">300</span> Mbps</div>';
-code +='<div id="wl'+i+'_bsd_steering_phy_ld_t" style="display:none;"><#1517#></div>';
+code +='<div id="wl'+i+'_bsd_steering_phy_ld_t" style="display:none;"><#1536#></div>';
 code +='</td></tr></table></div></span><span class="steering_unuse_off_'+i+'">- -</span></td>';
 }
 code +='</tr>';
-code +='<tr><th><#2893#></th>';
+code +='<tr><th><#2940#></th>';
 for(i = start_band_idx; i < wl_info.wl_if_total; i++){
 code +='<td><span class="steering_on_'+i+'"><div><table><tr>';
 code +='<td style="border:0px;width:35px; padding-left:0px">';
@@ -383,7 +383,7 @@ code +='<div id="slider_wl'+i+'_bsd_steering_phy_g" style="width:80px;"></div>';
 code +='</td>';
 code +='<td style="border:0px">';
 code +='<div id="wl'+i+'_bsd_steering_phy_g0_t">> <span style="color:white;" name="wl'+i+'_bsd_steering_phy_g_t" id="wl'+i+'_bsd_steering_phy_g_t">300</span> Mbps</div>';
-code +='<div id="wl'+i+'_bsd_steering_phy_gd_t" style="display:none;"><#1517#></div>';
+code +='<div id="wl'+i+'_bsd_steering_phy_gd_t" style="display:none;"><#1536#></div>';
 code +='</td></tr></table></div></span><span class="steering_unuse_off_'+i+'">- -</span></td>';
 }
 code +='</tr>';
@@ -391,7 +391,7 @@ code +='<tr><th>VHT</th>';
 for(i = start_band_idx; i < wl_info.wl_if_total; i++){
 code +='<td style="padding-left:12px"><span class="steering_on_'+i+'">';
 code +='<select class="input_option" name="wl'+i+'_bsd_steering_vht_s">';
-code +='<option selected="" value="0" class="content_input_fd"><#1395#></option>';
+code +='<option selected="" value="0" class="content_input_fd"><#1413#></option>';
 code +='<option value="1" class="content_input_fd">AC only</option>';
 code +='<option value="2" class="content_input_fd">not-allowed</option>';
 code +='</select></span><span class="steering_unuse_off_'+i+'">- -</span></td>';
@@ -411,7 +411,7 @@ $("#bsd_steering_div").find("#band_text > td").eq(1).html("5GHz");
 function gen_bsd_sta_select_div(){
 var code = "";
 code +='<table cellspacing="0" cellpadding="4" bordercolor="#6b8fa3" border="1" align="center" width="100%" class="FormTable" id="MainTable2" style="margin-top:10px">';
-code +='<thead><tr><td colspan="4"><#3176#></td></tr></thead>';
+code +='<thead><tr><td colspan="4"><#3242#></td></tr></thead>';
 code +='<tr><th width="20%">RSSI</th>';
 for(i = start_band_idx; i < wl_info.wl_if_total; i++){
 if('<% nvram_get("smart_connect_x"); %>' == '2' || (!wl_info.band5g_2_support && !wl_info.band6g_support))
@@ -420,8 +420,8 @@ else
 code +='<td width="27%"><div><table><tr>';
 code +='<td style="border:0px; padding-left:0px;">';
 code +='<select class="input_option" name="wl'+i+'_bsd_sta_select_policy_rssi_s">';
-code +='<option selected="" value="0" class="content_input_fd"><#2852#></option>';
-code +='<option value="1" class="content_input_fd"><#2851#></option>';
+code +='<option selected="" value="0" class="content_input_fd"><#2899#></option>';
+code +='<option value="1" class="content_input_fd"><#2898#></option>';
 code +='</select></td>';
 code +='<td style="border:0px; padding-left:0px">';
 code +='<input type="text" onkeypress="return validator.isNegativeNumber(this,event)" value="100" class="input_3_table" id="wl'+i+'_bsd_sta_select_policy_rssi" name="wl'+i+'_bsd_sta_select_policy_rssi" maxlength="4">';
@@ -429,25 +429,25 @@ code +='<label style="margin-left:5px;">dBm</label>';
 code +='</td></tr></table></div></td>';
 }
 code +='</tr>';
-code +='<tr><th><#2894#></th>';
+code +='<tr><th><#2941#></th>';
 for(i = start_band_idx; i < wl_info.wl_if_total; i++){
 code +='<td><div><table><tr>';
 code +='<td style="border:0px;width:35px; padding-left:0px">';
 code +='<div id="slider_wl'+i+'_bsd_sta_select_policy_phy_l" style="width:80px;"></div>';
 code +='</td><td style="border:0px;">';
 code +='<div id="wl'+i+'_bsd_sta_select_policy_phy_l0_t">< <span style="color:white;" name="wl'+i+'_bsd_sta_select_policy_phy_l_t" id="wl'+i+'_bsd_sta_select_policy_phy_l_t">300</span> Mbps</div>';
-code +='<div id="wl'+i+'_bsd_sta_select_policy_phy_ld_t" style="display:none;"><#1517#></div>';
+code +='<div id="wl'+i+'_bsd_sta_select_policy_phy_ld_t" style="display:none;"><#1536#></div>';
 code +='</td></tr></table></div></td>';
 }
 code +='</tr>';
-code +='<tr><th><#2893#></th>';
+code +='<tr><th><#2940#></th>';
 for(i = start_band_idx; i < wl_info.wl_if_total; i++){
 code +='<td><div><table><tr>';
 code +='<td style="border:0px;width:35px; padding-left:0px">';
 code +='<div id="slider_wl'+i+'_bsd_sta_select_policy_phy_g" style="width:80px;"></div>';
 code +='</td><td style="border:0px;">';
 code +='<div id="wl'+i+'_bsd_sta_select_policy_phy_g0_t">> <span style="color:white;" name="wl'+i+'_bsd_sta_select_policy_phy_g_t" id="wl'+i+'_bsd_sta_select_policy_phy_g_t">300</span> Mbps</div>';
-code +='<div id="wl'+i+'_bsd_sta_select_policy_phy_gd_t" style="display:none;"><#1517#></div>';
+code +='<div id="wl'+i+'_bsd_sta_select_policy_phy_gd_t" style="display:none;"><#1536#></div>';
 code +='</td></tr></table></div></td>';
 }
 code +='</tr>';
@@ -455,7 +455,7 @@ code +='<tr><th>VHT</th>';
 for(i = start_band_idx; i < wl_info.wl_if_total; i++){
 code +='<td style="padding-left:12px">';
 code +='<select class="input_option" name="wl'+i+'_bsd_sta_select_policy_vht_s">';
-code +='<option selected="" value="0" class="content_input_fd"><#1395#></option>';
+code +='<option selected="" value="0" class="content_input_fd"><#1413#></option>';
 code +='<option value="1" class="content_input_fd">AC only</option>';
 code +='<option value="2" class="content_input_fd">not-allowed</option>';
 code +='</select></td>';
@@ -472,8 +472,8 @@ $(this).children('td').css("width", "40%");
 function gen_bsd_if_select_div(){
 var code="";
 code +='<table cellspacing="0" cellpadding="4" bordercolor="#6b8fa3" border="1" align="center" width="100%" class="FormTable" id="MainTable2" style="margin-top:10px">';
-code +="<thead><tr><td colspan=\"4\"><#3174#></td></tr></thead>";
-code +='<tr id="target_band_text"><th width="20%"><#2328#></th>';
+code +="<thead><tr><td colspan=\"4\"><#3240#></td></tr></thead>";
+code +='<tr id="target_band_text"><th width="20%"><#2366#></th>';
 if('<% nvram_get("smart_connect_x"); %>' != 2 && (wl_info.band5g_2_support || wl_info.band6g_support)){
 for(i = start_band_idx; i < wl_info.wl_if_total; i++){
 code +='<td width="27%" style="padding:0px 0px 0px 0px;"><div><table><tr>';
@@ -570,7 +570,7 @@ code +='<td width="40%">5GHz-2</td><td width="40%">5GHz-1</td>';
 }
 }
 code +='</tr>';
-code +='<tr><th><#3181#></th>';
+code +='<tr><th><#3247#></th>';
 for(i = start_band_idx; i < wl_info.wl_if_total; i++){
 code +='<td><div><table><tr>';
 code +='<td style="border:0px;width:35px; padding-left:0px">';
@@ -584,7 +584,7 @@ code +='<tr><th>VHT</th>';
 for(i = start_band_idx; i < wl_info.wl_if_total; i++){
 code +='<td style="padding-left:12px">';
 code +='<select onchange="check_vht(this,'+i+');" class="input_option" name="wl'+i+'_bsd_if_qualify_policy_vht_s">';
-code +='<option selected="" value="0" class="content_input_fd"><#1395#></option>';
+code +='<option selected="" value="0" class="content_input_fd"><#1413#></option>';
 code +='<option value="1" class="content_input_fd">AC only</option>';
 code +='</select></td>';
 }
@@ -625,7 +625,7 @@ vht_value = [1];
 add_options_x2(eval(obj_name), vht_desc, vht_value, 1);
 add_options_x2(eval(obj_name1), vht_desc, vht_value, 1);
 }else if(obj.value == 0){
-vht_desc = ["<#1395#>","AC only","not-allowed"];
+vht_desc = ["<#1413#>","AC only","not-allowed"];
 vht_value = [0,1,2];
 add_options_x2(eval(obj_name), vht_desc, vht_value, obj_value);
 add_options_x2(eval(obj_name1), vht_desc, vht_value, obj_value1);
@@ -1644,41 +1644,41 @@ check_power(power_value,'phyrate');
 <tr>
 <td bgcolor="#4D595D" valign="top">
 <div>&nbsp;</div>
-<div class="formfonttitle"><#382#> - <#3175#></div>
+<div class="formfonttitle"><#396#> - <#3241#></div>
 <div style="margin:10px 0 10px 5px;" class="splitLine"></div>
-<div class="formfontdesc"><#3173#></div>
-<div style="text-align:right;margin-top:-36px;padding-bottom:3px;"><input type="button" class="button_gen" value="<#3511#>" onClick="pop_clientlist_listview(true)"></div>
+<div class="formfontdesc"><#3239#></div>
+<div style="text-align:right;margin-top:-36px;padding-bottom:3px;"><input type="button" class="button_gen" value="<#3582#>" onClick="pop_clientlist_listview(true)"></div>
 <div id="bsd_steering_div"></div>
 <div id="bsd_sta_select_div"></div>
 <div id="bsd_if_select_div"></div>
 <table cellspacing="0" cellpadding="4" bordercolor="#6b8fa3" border="1" align="center" width="100%" class="FormTable" id="MainTable2" style="margin-top:10px">
 <thead>
 <tr>
-<td colspan="2"><#3171#></td>
+<td colspan="2"><#3237#></td>
 </tr>
 </thead>
 <tr>
-<th width="20%"><#3179#></th>
+<th width="20%"><#3245#></th>
 <td>
-<input type="text" onkeypress="return validator.isNumber(this,event)" value="100" class="input_6_table" name="windows_time_sec" maxlength="4" autocorrect="off" autocapitalize="off"> <#3088#>
+<input type="text" onkeypress="return validator.isNumber(this,event)" value="100" class="input_6_table" name="windows_time_sec" maxlength="4" autocorrect="off" autocapitalize="off"> <#3154#>
 </td>
 </tr>
 <tr>
-<th><#3177#></th>
+<th><#3243#></th>
 <td>
 <input type="text" onkeypress="return validator.isNumber(this,event)" value="100" class="input_6_table" name="bsd_counts" maxlength="4" autocorrect="off" autocapitalize="off">
 </td>
 </tr>
 <tr>
-<th><#3178#></th>
+<th><#3244#></th>
 <td>
-<input type="text" onkeypress="return validator.isNumber(this,event)" value="100" class="input_6_table" name="dwell_time_sec" maxlength="4" autocorrect="off" autocapitalize="off"> <#3088#>
+<input type="text" onkeypress="return validator.isNumber(this,event)" value="100" class="input_6_table" name="dwell_time_sec" maxlength="4" autocorrect="off" autocapitalize="off"> <#3154#>
 </td>
 </tr>
 </table>
 <div class="apply_gen">
-<input type="button" id="restoreButton" class="button_gen" value="<#3117#>" onclick="restoreRule();">
-<input type="button" id="applyButton" class="button_gen" value="<#196#>" onclick="applyRule();">
+<input type="button" id="restoreButton" class="button_gen" value="<#3183#>" onclick="restoreRule();">
+<input type="button" id="applyButton" class="button_gen" value="<#203#>" onclick="applyRule();">
 </div>
 </td>
 </tr>

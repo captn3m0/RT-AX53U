@@ -335,7 +335,7 @@ var countdownid, rtime_obj;
 var redirect_page = login_info.page;
 var isRouterMode = (htmlEnDeCode.htmlEncode(decodeURIComponent('<% nvram_char_to_ascii("","sw_mode"); %>')) == '1') ? true : false;
 var header_info = [<% get_header_info(); %>][0];
-var ROUTERHOSTNAME = '<#844#>';
+var ROUTERHOSTNAME = '<#862#>';
 var domainNameUrl = header_info.protocol+"://"+ROUTERHOSTNAME+":"+header_info.port;
 var chdom = function(){window.location.href=domainNameUrl};
 (function(){
@@ -369,7 +369,7 @@ document.getElementById("last_time_lock_warning").innerHTML ="You have entered a
 if(flag != ""){
 document.getElementById("error_status_field").style.display ="";
 if(flag == 3){
-document.getElementById("error_status_field").innerHTML ="* <#2488#>";
+document.getElementById("error_status_field").innerHTML ="* <#2529#>";
 }
 else if(flag == 7){
 document.getElementById("error_status_field").innerHTML ="You have entered an incorrect username or password 5 times. Please try again after "+"<span id='rtime'></span>"+" seconds.";
@@ -595,18 +595,18 @@ captcha_pic.src = "captcha.gif" + queryString;
 <div class="div_td img_gap">
 <div class="login_img"></div>
 </div>
-<div class="div_td"><#209#></div>
+<div class="div_td"><#216#></div>
 </div>
-<div class="prod_madelName"><#843#></div>
+<div class="prod_madelName"><#861#></div>
 <div id="login_filed">
-<div class="p1 title_gap"><#726#></div>
-<div id="name_title_ie" style="display:none;margin:20px 0 -10px 78px;" class="p1 title_gap"><#3500#></div>
+<div class="p1 title_gap"><#743#></div>
+<div id="name_title_ie" style="display:none;margin:20px 0 -10px 78px;" class="p1 title_gap"><#3571#></div>
 <div class="title_gap">
-<input type="text" id="login_username" name="login_username" tabindex="1" class="form_input" maxlength="128" autocapitalize="off" autocomplete="off" placeholder="<#3500#>">
+<input type="text" id="login_username" name="login_username" tabindex="1" class="form_input" maxlength="128" autocapitalize="off" autocomplete="off" placeholder="<#3571#>">
 </div>
-<div id="password_title_ie" style="display:none;margin:20px 0 -20px 78px;" class="p1 title_gap"><#2299#></div>
+<div id="password_title_ie" style="display:none;margin:20px 0 -20px 78px;" class="p1 title_gap"><#2337#></div>
 <div class="password_gap">
-<input type="password" name="login_passwd" tabindex="2" class="form_input" maxlength="128" placeholder="<#2299#>" autocapitalize="off" autocomplete="off">
+<input type="password" name="login_passwd" tabindex="2" class="form_input" maxlength="128" placeholder="<#2337#>" autocapitalize="off" autocomplete="off">
 </div>
 <div class="error_hint" style="display:none;" id="error_status_field"></div>
 <div class="warming_desc" style="display:none;" id="last_time_lock_warning"></div>
@@ -616,18 +616,18 @@ captcha_pic.src = "captcha.gif" + queryString;
 <div id="reCaptcha" onclick="regen_captcha();"></div>
 <div class="error_hint" style="display:none; clear:left;" id="error_captcha_field">Captcha is wrong. Please input again.</div>
 </div>
-<div class="button" onclick="login();"><#209#></div>
+<div class="button" onclick="login();"><#216#></div>
 </div>
 <div id="nologin_field" style="display:none;">
 <div class="p1 title_gap"></div>
 <div class="nologin">
-<#2623#>
+<#2664#>
 <div id="logined_ip_str"></div>
 </div>
 </div>
 <div id="logout_field" style="display:none;">
 <div class="p1 title_gap"></div>
-<div class="nologin"><#2624#></div>
+<div class="nologin"><#2665#></div>
 </div>
 </div>
 </div>

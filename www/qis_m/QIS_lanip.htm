@@ -14,7 +14,7 @@
 <script type="text/JavaScript">
 function QKInternet_load_body(){
 if(parent.document.QKform.sw_mode.value == 4) {
-document.getElementById("nextButton").value = "<#196#>";
+document.getElementById("nextButton").value = "<#203#>";
 }
 document.getElementById("lan_proto_button").onclick = function(){change_ip_setting();}
 document.getElementById("lan_dns_button").onclick = function(){display_lan_dns();}
@@ -163,7 +163,7 @@ ip_class = 'B';
 else if(ip_num > C_class_start && ip_num < C_class_end)
 ip_class = 'C';
 else{
-alert(ip_obj.value+" <#334#>");
+alert(ip_obj.value+" <#346#>");
 ip_obj.value = "";
 ip_obj.focus();
 ip_obj.select();
@@ -191,7 +191,7 @@ break;
 }
 }
 if(wrong_netmask == 1){
-alert(netmask_obj.value+" <#334#>");
+alert(netmask_obj.value+" <#346#>");
 netmask_obj.value = default_netmask;
 netmask_obj.focus();
 netmask_obj.select();
@@ -200,7 +200,7 @@ return false;
 var subnet_head = getSubnet(ip_obj.value, netmask_obj.value, "head");
 var subnet_end = getSubnet(ip_obj.value, netmask_obj.value, "end");
 if(ip_num == subnet_head || ip_num == subnet_end){
-alert(ip_obj.value+" <#334#>");
+alert(ip_obj.value+" <#346#>");
 ip_obj.value = "";
 ip_obj.focus();
 ip_obj.select();
@@ -344,54 +344,54 @@ color:#FFF;
 }
 </style>
 <div>
-<div style="font-size:1em;padding:10px 0 10px 15px;text-align:left;"><#350#></div>
+<div style="font-size:1em;padding:10px 0 10px 15px;text-align:left;"><#362#></div>
 <div style="display:table;width:100%;padding-left:15px;">
 <div style="display:table-row">
-<div style="font-size:1em;color:#B8D8FF;display:table-cell;vertical-align:middle;"><#355#></div>
+<div style="font-size:1em;color:#B8D8FF;display:table-cell;vertical-align:middle;"><#367#></div>
 <div class="switch_radio" style="display:table-cell;padding-right:90px;">
 <input type="checkbox" id="lan_proto_button" name="lan_proto_button" class="switch" checked>
-<label for="lan_proto_button" class="on_state"><#187#></label>
-<label for="lan_proto_button" class="off_state"><#186#></label>
+<label for="lan_proto_button" class="on_state"><#194#></label>
+<label for="lan_proto_button" class="off_state"><#193#></label>
 </div>
 </div>
 </div>
 <div id="ip_field">
-<div style="font-size:1em;color:#B8D8FF;margin-left:15px"><#290#></div>
+<div style="font-size:1em;color:#B8D8FF;margin-left:15px"><#302#></div>
 <div style="margin:10px 15px 10px 15px">
 <input type="text" id="lan_ipaddr" name="lan_ipaddr" tabindex="3" onKeyPress="return validator.isIPAddr(this, event);" maxlength="15" style="width:100%;height:30px;padding-left:9px;font-size:0.9em;color:#9BA7B1;background-color:rgba(28,28,28,1);border:1px solid #43474B" autocorrect="off" autocapitalize="off">
 </div>
-<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#312#></div>
+<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#324#></div>
 <div style="margin:10px 15px 10px 15px">
 <input type="text" name="lan_netmask" tabindex="4" onkeypress="return validator.isIPAddr(this, event);" maxlength="15" style="width:100%;height:30px;padding-left:9px;font-size:0.9em;color:#9BA7B1;background-color:rgba(28,28,28,1);border:1px solid #43474B" autocorrect="off" autocapitalize="off">
 </div>
-<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#310#></div>
+<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#322#></div>
 <div style="margin:10px 15px 10px 15px">
 <input type="text" name="lan_gateway" tabindex="5" onKeyPress="return validator.isIPAddr(this, event);" maxlength="15" style="width:100%;height:30px;padding-left:9px;font-size:0.9em;color:#9BA7B1;background-color:rgba(28,28,28,1);border:1px solid #43474B" autocorrect="off" autocapitalize="off">
 </div>
 </div>
 <div id="dns_button_field" style="display:table;width:100%;margin:0 0 10px 0;padding-left:15px;">
 <div style="display:table-row">
-<div style="font-size:1em;color:#B8D8FF;display:table-cell;vertical-align:middle;"><#308#></div>
+<div style="font-size:1em;color:#B8D8FF;display:table-cell;vertical-align:middle;"><#320#></div>
 <div class="switch_radio" style="display:table-cell;padding-right:90px;">
 <input type="checkbox" id="lan_dns_button" name="lan_dns_button" class="switch" checked>
-<label for="lan_dns_button" class="on_state"><#187#></label>
-<label for="lan_dns_button" class="off_state"><#186#></label>
+<label for="lan_dns_button" class="on_state"><#194#></label>
+<label for="lan_dns_button" class="off_state"><#193#></label>
 </div>
 </div>
 </div>
 <div id="dns_field">
-<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#294#></div>
+<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#306#></div>
 <div style="margin:10px 15px 10px 15px">
 <input type="text" name="lan_dns1_x" value="<% nvram_get("lan_dns1_x"); %>" tabindex="8" onkeypress="return validator.isIPAddr(this, event)" maxlength="15" style="width:100%;height:30px;padding-left:9px;font-size:0.9em;color:#9BA7B1;background-color:rgba(28,28,28,1);border:1px solid #43474B" autocorrect="off" autocapitalize="off">
 </div>
-<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#296#></div>
+<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#308#></div>
 <div style="margin:10px 15px 10px 15px">
 <input type="text" name="lan_dns2_x" value="<% nvram_get("lan_dns2_x"); %>" tabindex="9" style="width:100%;height:30px;padding-left:9px;font-size:0.9em;color:#9BA7B1;background-color:rgba(28,28,28,1);border:1px solid #43474B" onkeypress="return validator.isIPAddr(this, event)" maxlength="15" autocorrect="off" autocapitalize="off">
 </div>
 </div>
 <div style="position:fixed;bottom:36px;width:100%;height:50px;background:rgb(34,34,34);z-index:2;">
 <div style="width:100%;height:100%;line-height:50px;text-align:center;background-color:#279FD9" onclick="submitForm();">
-<div id="nextButton" style="font-size:1em;color:#FFF;"><#204#></div>
+<div id="nextButton" style="font-size:1em;color:#FFF;"><#211#></div>
 </div>
 </div>
 </div>

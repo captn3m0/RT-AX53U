@@ -211,7 +211,7 @@ value: aimesh_location_arr[i].value,
 text: aimesh_location_arr[i].text,
 }));
 }
-var location_text = "<#1074#>";
+var location_text = "<#1092#>";
 var location_active = "Home";
 var specific_location = aimesh_location_arr.filter(function(item, index, _array){
 return (item.value == _location);
@@ -240,14 +240,14 @@ $(".location_info_bg .location_hint").show();
 $(".location_info_bg .location_hint").html(_hint);
 };
 if(node_location_text.length == 0){
-show_valid_hint("<#320#>");
+show_valid_hint("<#332#>");
 return false;
 }
 var block_chars_array = ["\""];
 var block_chars_hint = "";
 for(var i = 0; i < block_chars_array.length; i++) {
 if(node_location_text.indexOf(block_chars_array[i]) >= 0)
-block_chars_hint = block_chars_array[i] + " <#2478#>";
+block_chars_hint = block_chars_array[i] + " <#2519#>";
 }
 if(block_chars_hint != "") {
 show_valid_hint(block_chars_hint);
@@ -261,7 +261,7 @@ return false;
 }
 }
 else if(!parent.validator.haveFullWidthChar($obj[0])) {
-show_valid_hint("<#333#>");
+show_valid_hint("<#345#>");
 return false;
 }
 $(".location_info_bg .location_hint").hide();
@@ -379,7 +379,7 @@ if($(".primary_info_bg .custom_select #input_location").is(":focus"))
 return;
 if(_location == "" || _location == undefined)
 _location = "Home";
-var location_text = "<#1074#>";
+var location_text = "<#1092#>";
 var location_active = "Home";
 var specific_location = aimesh_location_arr.filter(function(item, index, _array){
 return (item.value == _location);
@@ -632,7 +632,7 @@ $clientMAC.appendTo($clientMACIPBg);
 $clientMAC.html(nodeClientObj.mac);
 var $clientIP = $("<div>");
 $clientIP.appendTo($clientMACIPBg);
-var nodeIP = (nodeClientObj.ip == "offline") ? "<#1540#>" : nodeClientObj.ip;
+var nodeIP = (nodeClientObj.ip == "offline") ? "<#1561#>" : nodeClientObj.ip;
 $clientIP.html(nodeIP);
 $eachClientContentBg.appendTo($clientListBg);
 var clientListEventData = {"mac" : nodeClientObj.mac, "name" : client_name, "ip" : nodeIP, "callBack" : "AiMesh", "obj" : $(".aimesh_bg.info_right")[0]};
@@ -651,10 +651,10 @@ var reconnect_control = client_get_reconnect_control(select_node_capability, isR
 var gen_bind_element = function() {
 var $client_bind = $("<span>");
 $client_bind.addClass("bind");
-$client_bind.attr("title", "<#1171#>");
+$client_bind.attr("title", "<#1189#>");
 if(nodeClientObj.amesh_bind_mac != ""){
 $client_bind.addClass("unbind");
-$client_bind.attr("title", "<#1172#>");
+$client_bind.attr("title", "<#1190#>");
 }
 $client_bind.prependTo($client_action_bg);
 var parm_node = _node_info;
@@ -674,12 +674,12 @@ var hint = "";
 if(specific_node_data != undefined){
 var node_location_info = transform_location(specific_node_data.mac, specific_node_data);
 var node_name_location = handle_ui_model_name(specific_node_data.model_name, specific_node_data.ui_model_name) + "(" + node_location_info.location_text + ")";
-hint += "<#1137#>".replace("#MODELNAME", node_name_location);
+hint += "<#1155#>".replace("#MODELNAME", node_name_location);
 parm_node = specific_node_data;
 }
 else
-hint += "<#1137#>".replace("#MODELNAME", nodeClientObj.amesh_bind_mac);
-hint += "<#1138#>";
+hint += "<#1155#>".replace("#MODELNAME", nodeClientObj.amesh_bind_mac);
+hint += "<#1156#>";
 var hint_parm = {
 "text": hint,
 "css": "bind_notice"
@@ -694,7 +694,7 @@ if(reconnect_control){
 if(nodeClientObj.isOnline){
 var $client_reconn = $("<span>");
 $client_reconn.addClass("reconn");
-$client_reconn.attr("title", "<#1143#>");
+$client_reconn.attr("title", "<#1161#>");
 $client_reconn.appendTo($client_action_bg);
 var parm = {"client" : clientListEventData, "node" : _node_info};
 $client_reconn.click(parm, client_reconnect);
@@ -737,7 +737,7 @@ httpApi.nvramSet({
 $("#aimesh_hint_msg").empty();
 $("#aimesh_hint_msg").append(popup_hint_api.get_component_text());
 $("#aimesh_hint_msg .hint_text").append(popup_hint_api.get_component_loading());
-$("#aimesh_hint_msg .hint_text").append($("<div>").addClass("client_reconnect_loading_text").html(htmlEnDeCode.htmlEncode("<#1160#>".replace("#CLIENTNAME", client_info.name))));
+$("#aimesh_hint_msg .hint_text").append($("<div>").addClass("client_reconnect_loading_text").html(htmlEnDeCode.htmlEncode("<#1178#>".replace("#CLIENTNAME", client_info.name))));
 $("#aimesh_hint_msg").show();
 adjust_panel_block_top("aimesh_hint_msg", 100);
 client_reconnect_timeout = setTimeout(function(){
@@ -752,14 +752,14 @@ return (item.mac == specific_client.amesh_papMac);
 })[0];
 if(specific_node_data != undefined){
 var node_location_info = transform_location(specific_client.amesh_papMac, specific_node_data);
-var hint = "<#1161#>".replace("#CLIENTNAME", client_info.name).replace("#MODELNAME", handle_ui_model_name(specific_node_data.model_name, specific_node_data.ui_model_name)).replace("#LOCATION", node_location_info.location_text);
+var hint = "<#1179#>".replace("#CLIENTNAME", client_info.name).replace("#MODELNAME", handle_ui_model_name(specific_node_data.model_name, specific_node_data.ui_model_name)).replace("#LOCATION", node_location_info.location_text);
 $("#aimesh_hint_msg .hint_text").append($("<div>").addClass("notice_text").html(htmlEnDeCode.htmlEncode(hint)));
 }
 else
-$("#aimesh_hint_msg .hint_text").append($("<div>").addClass("notice_text").html("<#1541#> " + client_info.name));
+$("#aimesh_hint_msg .hint_text").append($("<div>").addClass("notice_text").html("<#1562#> " + client_info.name));
 }
 else
-$("#aimesh_hint_msg .hint_text").append($("<div>").addClass("notice_text").html("<#1541#> " + client_info.name));
+$("#aimesh_hint_msg .hint_text").append($("<div>").addClass("notice_text").html("<#1562#> " + client_info.name));
 $("#aimesh_hint_msg #action_canacl").hide();
 $("#aimesh_hint_msg #action_ok").unbind("click");
 $("#aimesh_hint_msg #action_ok").click(function(e){
@@ -787,8 +787,8 @@ var display_bind_node_list = function(){
 remove_mask();
 remove_action_other();
 $("#aimesh_hint_msg .hint_text").empty();
-$("#aimesh_hint_msg .hint_text").append($("<div>").addClass("notice_text").html(htmlEnDeCode.htmlEncode("<#1162#>".replace("#CLIENTNAME", client_info.name))));
-$("#aimesh_hint_msg .hint_text").append($("<div>").attr("id","not_support_bind_hint").addClass("notice_text hint").html("* <#1134#> <#1135#>"));
+$("#aimesh_hint_msg .hint_text").append($("<div>").addClass("notice_text").html(htmlEnDeCode.htmlEncode("<#1180#>".replace("#CLIENTNAME", client_info.name))));
+$("#aimesh_hint_msg .hint_text").append($("<div>").attr("id","not_support_bind_hint").addClass("notice_text hint").html("* <#1152#> <#1153#>"));
 var gen_bind_node_component = function(_bind_support, _each_node_info){
 var node_location_info = transform_location(_each_node_info.mac, _each_node_info);
 var $model_info = $("<div>");
@@ -822,7 +822,7 @@ if(click_node_info.mac == _each_node_info.mac)
 $model_check.find(".custom_radio_label").addClass("checked");
 }
 else
-$model_info.append($("<span>").addClass("not_support_hint gray").html("(<#1136#>)"));
+$model_info.append($("<span>").addClass("not_support_hint gray").html("(<#1154#>)"));
 $("#aimesh_hint_msg .hint_text").append($model_info);
 }
 var not_support_bind_node = [];
@@ -888,7 +888,7 @@ var specific_target_data = aimesh_data.cfg_clientlist.filter(function(item, inde
 return (item.mac == _parm.target_mac);
 })[0];
 var node_location_info = transform_location(_parm.target_mac, specific_target_data);
-var result_text = "<#1163#>".replace("#CLIENTNAME", specific_client.name).replace("#MODELNAME", handle_ui_model_name(specific_target_data.model_name, specific_target_data.ui_model_name)).replace("#LOCATION", node_location_info.location_text);
+var result_text = "<#1181#>".replace("#CLIENTNAME", specific_client.name).replace("#MODELNAME", handle_ui_model_name(specific_target_data.model_name, specific_target_data.ui_model_name)).replace("#LOCATION", node_location_info.location_text);
 $("#aimesh_hint_msg .hint_text").empty();
 $("#aimesh_hint_msg .hint_text").append($("<div>").addClass("notice_text").html(htmlEnDeCode.htmlEncode(result_text)));
 remove_sta_binding_list_json(_parm.client_mac);
@@ -916,10 +916,10 @@ return (item.mac == _parm.target_mac);
 var node_location_info = transform_location(_parm.target_mac, specific_target_data);
 $("#aimesh_hint_msg .hint_text").empty();
 var result_text = "";
-result_text += htmlEnDeCode.htmlEncode("<#1164#>".replace("#CLIENTNAME", specific_client.name).replace("#MODELNAME", handle_ui_model_name(specific_target_data.model_name, specific_target_data.ui_model_name)));
+result_text += htmlEnDeCode.htmlEncode("<#1182#>".replace("#CLIENTNAME", specific_client.name).replace("#MODELNAME", handle_ui_model_name(specific_target_data.model_name, specific_target_data.ui_model_name)));
 result_text += "<br>";
-result_text += htmlEnDeCode.htmlEncode("<#1165#>".replace("#CLIENTNAME", specific_client.name));
-result_text += htmlEnDeCode.htmlEncode("<#1166#>");
+result_text += htmlEnDeCode.htmlEncode("<#1183#>".replace("#CLIENTNAME", specific_client.name));
+result_text += htmlEnDeCode.htmlEncode("<#1184#>");
 $("#aimesh_hint_msg .hint_text").append($("<div>").addClass("notice_text").html(result_text));
 $("#aimesh_hint_msg #action_ok").unbind("click");
 $("#aimesh_hint_msg #action_ok").click(function(e){
@@ -937,7 +937,7 @@ $("#aimesh_hint_msg").hide();
 });
 var $action_more_bg = $("<div>");
 $action_more_bg.addClass("action_more_bg");
-$retry = $("<span>").html("<#1167#>");
+$retry = $("<span>").html("<#1185#>");
 $retry.unbind("click");
 $retry.click(function(e){
 e = e || event;
@@ -945,9 +945,9 @@ e.stopPropagation();
 $("#aimesh_hint_msg").find(".action_more_bg").remove();
 $("#aimesh_hint_msg .hint_text").empty();
 var hint = "";
-hint += htmlEnDeCode.htmlEncode("<#1168#>".replace("#CLIENTNAME", specific_client.name).replace("#MODELNAME", handle_ui_model_name(specific_target_data.model_name, specific_target_data.ui_model_name)));
+hint += htmlEnDeCode.htmlEncode("<#1186#>".replace("#CLIENTNAME", specific_client.name).replace("#MODELNAME", handle_ui_model_name(specific_target_data.model_name, specific_target_data.ui_model_name)));
 hint += "<br>";
-hint += htmlEnDeCode.htmlEncode('<#1169#>');
+hint += htmlEnDeCode.htmlEncode('<#1187#>');
 $("#aimesh_hint_msg .hint_text").html(hint);
 $("#aimesh_hint_msg #action_ok").unbind("click");
 $("#aimesh_hint_msg #action_ok").click(function(e){
@@ -1059,10 +1059,10 @@ return (item.mac == clientList[client_info.mac].amesh_bind_mac);
 var hint = "";
 if(specific_node_data != undefined){
 var node_location_info = transform_location(clientList[client_info.mac].amesh_bind_mac, specific_node_data);
-hint = "<#1170#> <#996#>".replace("#CLIENTNAME", client_name).replace("#MODELNAME", handle_ui_model_name(click_node_info.model_name, click_node_info.ui_model_name)).replace("#LOCATION", node_location_info.location_text);
+hint = "<#1188#> <#1014#>".replace("#CLIENTNAME", client_name).replace("#MODELNAME", handle_ui_model_name(click_node_info.model_name, click_node_info.ui_model_name)).replace("#LOCATION", node_location_info.location_text);
 }
 else
-hint = "<#1170#> <#996#>".replace("#CLIENTNAME", client_name).replace("#MODELNAME", clientList[client_info.mac].amesh_bind_mac).replace("(#LOCATION)", "");
+hint = "<#1188#> <#1014#>".replace("#CLIENTNAME", client_name).replace("#MODELNAME", clientList[client_info.mac].amesh_bind_mac).replace("(#LOCATION)", "");
 $("#aimesh_hint_msg .hint_text").html(htmlEnDeCode.htmlEncode(hint));
 $("#aimesh_hint_msg #action_canacl").show();
 $("#aimesh_hint_msg #action_canacl").click(function(e){
@@ -1130,8 +1130,8 @@ return status;
 };
 var rule_status = acl_and_client_bind_count();
 if(isSupport("acl96") && rule_status.client_bind_count >= rule_status.client_bind_allow_maximum){
-$("#aimesh_hint_msg .hint_text").append($("<div>").html("<#1139#>"));
-$("#aimesh_hint_msg .hint_text").append($("<div>").html("<#1142#>"));
+$("#aimesh_hint_msg .hint_text").append($("<div>").html("<#1157#>"));
+$("#aimesh_hint_msg .hint_text").append($("<div>").html("<#1160#>"));
 $("#aimesh_hint_msg .hint_text").append($("<div>").css("color", "#FC0").html("- AiMesh client binding rule"));/* untranslated */
 $("#aimesh_hint_msg #action_canacl").hide();
 $("#aimesh_hint_msg #action_ok").show();
@@ -1143,12 +1143,12 @@ $("#aimesh_hint_msg").hide();
 }
 else if((isSupport("acl96") && !rule_status.acl_all_allow && rule_status.client_bind_count + rule_status.acl_max_count >= rule_status.acl_and_client_bind_allow_maximum) ||
 (!isSupport("acl96") && rule_status.client_bind_count + rule_status.acl_max_count >= rule_status.acl_and_client_bind_allow_maximum)){
-$("#aimesh_hint_msg .hint_text").append($("<div>").html("<#1139#>"));
-$("#aimesh_hint_msg .hint_text").append($("<div>").html("<#1142#>"));
+$("#aimesh_hint_msg .hint_text").append($("<div>").html("<#1157#>"));
+$("#aimesh_hint_msg .hint_text").append($("<div>").html("<#1160#>"));
 if(rule_status.client_bind_count != 0)
 $("#aimesh_hint_msg .hint_text").append($("<div>").css("color", "#FC0").html("- AiMesh client binding rule"));
 if(rule_status.acl_max_count != 0)
-$("#aimesh_hint_msg .hint_text").append($("<div>").css("color", "#FC0").html("- <#2072#>"));
+$("#aimesh_hint_msg .hint_text").append($("<div>").css("color", "#FC0").html("- <#2094#>"));
 $("#aimesh_hint_msg #action_canacl").hide();
 $("#aimesh_hint_msg #action_ok").show();
 $("#aimesh_hint_msg #action_ok").click(function(e){
@@ -1237,9 +1237,9 @@ function network_set_wan_info(){
 $("#network_block .wan_status_bg.wan1").hide();
 var connect_attr = function(){
 this.status = "disconnected";
-this.status_title = "<#217#>";
+this.status_title = "<#226#>";
 this.ip = "- -. - -. - -. - -";
-this.ip_title = "<#3678#>";
+this.ip_title = "<#3775#>";
 this.proto_title = "- -";
 this.wan_title = "<#74#>";
 };
@@ -1266,7 +1266,7 @@ var connect_info =new connect_attr();
 var wan_index = value;
 var wanInfo = httpApi.getWanInfo(wan_index);
 if(dualwan_enabled)
-connect_info.wan_title = (value == 0) ? "<#1859#>" : "<#1866#>";
+connect_info.wan_title = (value == 0) ? "<#1881#>" : "<#1888#>";
 else
 connect_info.wan_title = "<#74#>";
 connect_info.status = wanInfo.status;
@@ -1279,12 +1279,12 @@ set_wan_connect_info(connect_info, value);
 });
 }
 else if(isSwMode("ap")){
-var connect_proto_array = {"dhcp":"<#167#>", "static": "<#168#>", "pppoe": "PPPoE","pptp": "PPTP","l2tp": "L2TP"};
+var connect_proto_array = {"dhcp":"<#174#>", "static": "<#175#>", "pppoe": "PPPoE","pptp": "PPTP","l2tp": "L2TP"};
 var connect_info = new connect_attr();
 connect_info.status = "connect";
-connect_info.status_title = "<#3857#>";
+connect_info.status_title = "<#3956#>";
 connect_info.ip = httpApi.nvramGet(["lan_ipaddr"], true).lan_ipaddr;
-connect_info.ip_title = "<#2504#>";
+connect_info.ip_title = "<#2545#>";
 var lan_proto = httpApi.nvramGet(["lan_proto"], true).lan_proto;
 if(lan_proto != "")
 connect_info.proto_title = connect_proto_array[lan_proto];
@@ -1307,7 +1307,7 @@ function get_connect_quality(_node_info){
 var _re_online = _node_info.online;
 var _re_path = handle_re_path(_node_info.re_path);
 var _quality_info = "";
-var result = {"type":"wired", "quality":0, "css":"wired disconnected", "type_text":"<#3674#>", "quality_text":"<#217#>", "type_mode":""};
+var result = {"type":"wired", "quality":0, "css":"wired disconnected", "type_text":"<#3771#>", "quality_text":"<#226#>", "type_mode":""};
 if(_re_path <= 0 && _re_online == "1")
 return result;
 else{
@@ -1315,11 +1315,11 @@ if(_re_path == "1" || _re_path == "16" || _re_path == "32" || _re_path == "64"){
 var real_port_type = gen_real_port_type(_node_info);
 if(real_port_type.type == "eth"){
 result.type = "wired";
-result.type_text = "<#3674#>";
+result.type_text = "<#3771#>";
 }
 else if(real_port_type.type == "plc"){
 result.type = "plc";
-result.type_text = "<#4227#>";
+result.type_text = "<#4326#>";
 }
 _quality_info = _node_info.wired_port;
 if(_re_online == "1"){
@@ -1388,13 +1388,13 @@ if(real_port_type.type == "eth")
 result.css = "wired disconnected";
 else if(real_port_type.type == "plc")
 result.css = "plc disconnected";
-result.quality_text = "<#217#>";
+result.quality_text = "<#226#>";
 }
 }
 else if(_re_path == "2"){
 _quality_info = _node_info.rssi2g
 result.type = "wireless";
-result.type_text = "<#382#> - 2.4GHz";
+result.type_text = "<#396#> - 2.4GHz";
 if(_re_online == "1"){
 result.quality = 1;
 result.css = "wl_2g weak";
@@ -1403,13 +1403,13 @@ result.quality_text = "<#67#>";
 else{
 result.quality = 0;
 result.css = "disconnected";
-result.quality_text = "<#217#>";
+result.quality_text = "<#226#>";
 }
 }
 else if(_re_path == "128"){
 _quality_info = _node_info.rssi6g
 result.type = "wireless";
-result.type_text = "<#382#> - 6GHz";
+result.type_text = "<#396#> - 6GHz";
 if(_re_online == "1"){
 var rssi = parseInt(_quality_info);
 var css = "weak";
@@ -1438,13 +1438,13 @@ result.css = "wl_6g " + css;
 else{
 result.quality = 0;
 result.css = "disconnected";
-result.quality_text = "<#217#>";
+result.quality_text = "<#226#>";
 }
 }
 else{
 _quality_info = _node_info.rssi5g
 result.type = "wireless";
-result.type_text = "<#382#> - 5GHz";
+result.type_text = "<#396#> - 5GHz";
 if(_re_online == "1"){
 var rssi = parseInt(_quality_info);
 var css = "weak";
@@ -1469,24 +1469,24 @@ result.quality_text = "<#67#>";
 }
 }
 if(_re_path == "4" || _re_path == "6"){
-result.type_text = "<#382#> - 5GHz";
+result.type_text = "<#396#> - 5GHz";
 result.css = "wl_5g " + css;
 }
 else if(_re_path == "8" || _re_path == "10"){
-/*result.type_text = "<#382#> - 5GHz-2";
+/*result.type_text = "<#396#> - 5GHz-2";
 result.css = "wl_5g_2 " + css;*/
-result.type_text = "<#382#> - 5GHz";
+result.type_text = "<#396#> - 5GHz";
 result.css = "wl_5g " + css;
 }
 else{
-result.type_text = "<#382#> - 5GHz";
+result.type_text = "<#396#> - 5GHz";
 result.css = "wl_5g " + css;
 }
 }
 else{
 result.quality = 0;
 result.css = "disconnected";
-result.quality_text = "<#217#>";
+result.quality_text = "<#226#>";
 }
 }
 return result;
@@ -1544,11 +1544,11 @@ return result;
 }
 function network_set_backhaul_info(_node_info, _signal_quality){
 var re_path = handle_re_path(_node_info.re_path);
-var backhaul_parm = {"css":"wired", "band_text":"<#3674#>", "mac":"", "ssid":"", "band":""};
+var backhaul_parm = {"css":"wired", "band_text":"<#3771#>", "mac":"", "ssid":"", "band":""};
 backhaul_parm.mac = cap_mac;
 if(re_path == "1" || re_path == "16" || re_path == "32" || re_path == "64"){
 backhaul_parm.css = "wired";
-backhaul_parm.band_text = "<#3674#>";
+backhaul_parm.band_text = "<#3771#>";
 var wired_mac = _node_info.mac;
 var papObj = aimesh_data.cfg_clientlist.filter(function(item, index, array){
 return ($.inArray(wired_mac, item.wired_mac) != -1)
@@ -1559,13 +1559,13 @@ backhaul_parm.mac = lastPapObj.mac;
 backhaul_parm.band = "wired";
 backhaul_parm.sta_mac = _node_info.mac;
 if(_signal_quality.type == "plc"){
-backhaul_parm.band_text = "<#4227#>";
+backhaul_parm.band_text = "<#4326#>";
 backhaul_parm.band = "plc";
 }
 }
 else if(re_path == "2"){
 backhaul_parm.css = "wl_2g";
-backhaul_parm.band_text = "<#382#> - 2.4GHz";
+backhaul_parm.band_text = "<#396#> - 2.4GHz";
 var papObj = aimesh_data.cfg_clientlist.filter(function(item, index, array){
 return (item.ap2g == _node_info.pap2g);
 })[0];
@@ -1578,7 +1578,7 @@ backhaul_parm.sta_mac = _node_info.sta2g;
 }
 else if(re_path == "128"){
 backhaul_parm.css = "wl_6g";
-backhaul_parm.band_text = "<#382#> - 6GHz";
+backhaul_parm.band_text = "<#396#> - 6GHz";
 var papObj = aimesh_data.cfg_clientlist.filter(function(item, index, array){
 return (item.ap6g == _node_info.pap6g);
 })[0];
@@ -1591,14 +1591,14 @@ backhaul_parm.sta_mac = _node_info.sta6g;
 }
 else if(re_path <= 0){
 backhaul_parm.css = "wired";
-backhaul_parm.band_text = "<#3674#>";
+backhaul_parm.band_text = "<#3771#>";
 backhaul_parm.band = "wired";
 backhaul_parm.mac = cap_mac;
 backhaul_parm.sta_mac = _node_info.mac;
 }
 else{
 backhaul_parm.css = "wl_5g";
-backhaul_parm.band_text = "<#382#> - 5GHz";
+backhaul_parm.band_text = "<#396#> - 5GHz";
 var papObj = aimesh_data.cfg_clientlist.filter(function(item, index, array){
 return (item.ap5g == _node_info.pap5g || item.ap5g1 == _node_info.pap5g);
 })[0];
@@ -1617,7 +1617,7 @@ _obj.find("#backhaul_connect_title").html(backhaul_parm.band_text);
 _obj.find("#backhaul_mac").html(backhaul_parm.mac);
 if(re_path == "1" || re_path == "16" || re_path == "32" || re_path == "64" || re_path <= 0){
 _obj.find(".wired_hide").hide();
-_obj.find("#backhaul_mac_title").html("<#367#>");
+_obj.find("#backhaul_mac_title").html("<#381#>");
 }
 else{
 _obj.find(".wired_hide").show();
@@ -1690,7 +1690,7 @@ set_backhaul_data($(this));
 function network_set_fronthaul_info(_node_info){
 var set_fronthaul_data_wired = function(_obj){
 _obj.find("#fronthaul_connect_title").removeClass().addClass("connect_title horizontal_line");
-_obj.find("#fronthaul_connect_title").html("<#3674#>");
+_obj.find("#fronthaul_connect_title").html("<#3771#>");
 _obj.find(".wired_hide").hide();
 _obj.find("#fronthaul_mac").html(_node_info.mac);
 if(conndiag_support){
@@ -1838,7 +1838,7 @@ ap_band_total_count[value["type"]] = (ap_band_total_count[value["type"]] || 0) +
 var set_fronthaul_data_wl = function(_obj, _ap_info){
 _obj.find("#fronthaul_connect_title").removeClass().addClass("connect_title horizontal_line");
 var type = _ap_info.type;
-var band_text = "<#382#> - " + ((type.substr(0,1) == "2") ? "2.4" : type.substr(0,1)) + " GHz";
+var band_text = "<#396#> - " + ((type.substr(0,1) == "2") ? "2.4" : type.substr(0,1)) + " GHz";
 ap_current_band_count[type] = (ap_current_band_count[type] || 0) + 1;
 if(ap_band_total_count[type] > 1)
 band_text += "-" + ap_current_band_count[type];
@@ -1963,10 +1963,10 @@ e.stopPropagation();
 $("#aimesh_hint_msg").empty();
 $("#aimesh_hint_msg").append(popup_hint_api.get_component_text());
 $("#aimesh_hint_msg").append(popup_hint_api.get_component_action());
-var hint = "<#1070#>";
+var hint = "<#1088#>";
 if(specific_node_data.online == "0"){
 hint += "<br><br>";
-hint += $("<span>").css("color", "#FC0").html("* <#1071#>")[0].outerHTML;
+hint += $("<span>").css("color", "#FC0").html("* <#1089#>")[0].outerHTML;
 }
 $("#aimesh_hint_msg .hint_text").html(hint);
 $("#aimesh_hint_msg #action_canacl").show();
@@ -2012,23 +2012,23 @@ var eap_flag = false;
 var support_eth_num = 0;
 var conn_priority_hint_array = {
 "auto": {
-"title":"<#153#>",
-"desc":"<#1048#>",
+"title":"<#160#>",
+"desc":"<#1066#>",
 "support":false
 },
 "eth": {
-"title":"<#1049#>",
-"desc":"<#1061#> <#1062#>".replace(/#CONNTYPE/g, "<#3674#>"),
+"title":"<#1067#>",
+"desc":"<#1079#> <#1080#>".replace(/#CONNTYPE/g, "<#3771#>"),
 "support":false
 },
 "wifi": {
-"title":"<#1056#>",
-"desc":"<#1060#>",
+"title":"<#1074#>",
+"desc":"<#1078#>",
 "support":false
 },
 "plc": {
-"title":"<#1055#>",
-"desc":"<#1061#> <#1062#>".replace(/#CONNTYPE/g, "<#4227#>"),
+"title":"<#1073#>",
+"desc":"<#1079#> <#1080#>".replace(/#CONNTYPE/g, "<#4326#>"),
 "support":false
 }
 };
@@ -2075,10 +2075,10 @@ conn_priority_hint += $("<span>").addClass("conn_priority_content").html(value["
 }
 });
 conn_priority_hint += "<div class='height_space'></div>";
-conn_priority_hint += $("<span>").addClass("conn_priority_content text_yellow").html("* <#1057#> <#1058#>")[0].outerHTML;
+conn_priority_hint += $("<span>").addClass("conn_priority_content text_yellow").html("* <#1075#> <#1076#>")[0].outerHTML;
 if(eap_flag) {
 conn_priority_hint += "<div class='height_space'></div>";
-conn_priority_hint += $("<span>").addClass("conn_priority_content text_yellow").html("* <#1051#> <#1052#>")[0].outerHTML;
+conn_priority_hint += $("<span>").addClass("conn_priority_content text_yellow").html("* <#1069#> <#1070#>")[0].outerHTML;
 if(support_eth_num <= "1") {//only one eth
 $conn_priority_select_obj.attr("disabled", true);
 $conn_priority_select_obj.children("option").removeAttr("selected").filter("[conn_type=eth]:first").prop("selected", true);
@@ -2111,16 +2111,16 @@ manage_set_preferable_backhaul(specific_node_data, preferable_backhaul_info);
 });
 $("#manage_block").find(".manage_preferable_backhaul").find(".hover_pop_hint_bg").remove();
 var prefer_ap_hint = "";
-prefer_ap_hint += $("<span>").addClass("prefer_ap_content").html("<#1152#>")[0].outerHTML;
+prefer_ap_hint += $("<span>").addClass("prefer_ap_content").html("<#1170#>")[0].outerHTML;
 prefer_ap_hint += "<div class='height_space'></div>";
-prefer_ap_hint += $("<span>").addClass("prefer_ap_content").html("* <#1153#> <#1154#>")[0].outerHTML;
+prefer_ap_hint += $("<span>").addClass("prefer_ap_content").html("* <#1171#> <#1172#>")[0].outerHTML;
 prefer_ap_hint += "<div class='height_space'></div>";
 prefer_ap_hint += "<ul class='list_item'>";
-prefer_ap_hint += "<li><#1155#></li>";
-prefer_ap_hint += "<li><#1156#> <#1157#></li>";
+prefer_ap_hint += "<li><#1173#></li>";
+prefer_ap_hint += "<li><#1174#> <#1175#></li>";
 prefer_ap_hint += "</ul>";
 prefer_ap_hint += "<div class='height_space'></div>";
-prefer_ap_hint += $("<span>").addClass("prefer_ap_content").html("<#1158#>")[0].outerHTML;
+prefer_ap_hint += $("<span>").addClass("prefer_ap_content").html("<#1176#>")[0].outerHTML;
 var hint_parm = {
 "text": prefer_ap_hint,
 "css": "prefer_ap_icon"
@@ -2149,7 +2149,7 @@ $("#manage_block").find(".manage_lacp #lacp_icon").hide();
 });
 $("#manage_block").find(".manage_lacp").find(".hover_pop_hint_bg").remove();
 var hint_parm = {
-"text": "<#2785#>",
+"text": "<#2829#>",
 "css": "lacp_icon"
 };
 $("#manage_block").find(".manage_lacp #lacp_icon").removeClass("hover_pop_hint").addClass("hover_pop_hint");
@@ -2356,15 +2356,15 @@ if(switch_status){
 $("#aimesh_hint_msg").empty();
 $("#aimesh_hint_msg").append(popup_hint_api.get_component_text());
 $("#aimesh_hint_msg").append(popup_hint_api.get_component_action());
-var hint = "<#1187#>";
+var hint = "<#1205#>";
 if(wl_radio_enable_count == 1){
 hint += "<br><br>";
-hint += $("<span>").css("color", "#FC0").html("<#1188#>")[0].outerHTML;
+hint += $("<span>").css("color", "#FC0").html("<#1206#>")[0].outerHTML;
 hint += "<br>";
-hint += "<#1112#>";
+hint += "<#1130#>";
 }
 hint += "<br><br>";
-hint += "<#3112#>";
+hint += "<#3178#>";
 $("#aimesh_hint_msg .hint_text").html(hint);
 $("#aimesh_hint_msg #action_canacl").show();
 $("#aimesh_hint_msg #action_canacl").unbind("click");
@@ -2613,7 +2613,7 @@ $("#aimesh_hint_msg").show();
 adjust_panel_block_top("aimesh_hint_msg", 100);
 };
 if(aimesh_data.cfg_clientlist.length == "1"){
-var hint = "<#1149#>";
+var hint = "<#1167#>";
 show_hint(hint);
 return false;
 }
@@ -2644,9 +2644,9 @@ if(check_format){
 var apply_and_loading = function(_second){
 httpApi.nvramSet(nvramSet_obj);
 showLoading();
-var hint = "<#1146#> <#1147#> <#497#>";
+var hint = "<#1164#> <#1165#> <#513#>";
 if(re_reconnect_mode == "node")
-hint = "<#1148#> <#497#>".replace("#MODELNAME", _node_info.ui_model_name);
+hint = "<#1166#> <#513#>".replace("#MODELNAME", _node_info.ui_model_name);
 $("#proceeding_main_txt").html(hint);
 setTimeout(hideLoading, 1000*_second);
 var time = 0;
@@ -2668,13 +2668,13 @@ else{
 $("#aimesh_hint_msg").empty();
 $("#aimesh_hint_msg").append(popup_hint_api.get_component_text());
 $("#aimesh_hint_msg").append(popup_hint_api.get_component_action());
-var hint = "<#1144#> <#1145#> <#996#>";
+var hint = "<#1162#> <#1163#> <#1014#>";
 if(re_reconnect_mode == "node")
 hint = "Your " + _node_info.ui_model_name + " is going to reconnect to your AiMesh system.";/* untranslated */
 $("#aimesh_hint_msg .hint_text").append($("<div>").css("margin-bottom", "10px").html(hint));
 var $never_ask_element = $("<div>");
 $never_ask_element.append($("<input/>").attr({"type":"checkbox", "id":"never_ask_reconnect"}));
-$never_ask_element.append($("<label>").attr({"for":"never_ask_reconnect"}).css({"top":"-2px", "position":"relative","font-size":"14px"}).html("<#1159#>"));
+$never_ask_element.append($("<label>").attr({"for":"never_ask_reconnect"}).css({"top":"-2px", "position":"relative","font-size":"14px"}).html("<#1177#>"));
 $("#aimesh_hint_msg .hint_text").append($never_ask_element);
 $("#aimesh_hint_msg #action_canacl").show();
 $("#aimesh_hint_msg #action_canacl").unbind("click");
@@ -2743,7 +2743,7 @@ jstree_refresh();
 }());
 }
 function manage_get_preferable_backhaul(_node_info){
-var result = {"text": "<#153#>", "pref_mac": "", "pref_node_exist":false};
+var result = {"text": "<#160#>", "pref_mac": "", "pref_node_exist":false};
 if("config" in _node_info) {
 if("prefer_ap" in _node_info.config) {
 if("amas_wlc_target_bssid" in _node_info.config.prefer_ap) {
@@ -2770,7 +2770,7 @@ var node_name_location = handle_ui_model_name(_node_info.model_name, _node_info.
 if(isSupport("amas_eap")){
 var amas_eap_bhmode = httpApi.nvramGet(["amas_eap_bhmode"]).amas_eap_bhmode;
 if(amas_eap_bhmode != "0" && amas_eap_bhmode != ""){
-var hint = "<#1179#>".replace("#MODELNAME", node_name_location) + "<br><#1180#><#1181#>";
+var hint = "<#1197#>".replace("#MODELNAME", node_name_location) + "<br><#1198#><#1199#>";
 $("#aimesh_hint_msg .hint_text").append($("<div>").addClass("notice_text").html(hint));
 $("#aimesh_hint_msg").show();
 $("#aimesh_hint_msg #action_canacl").hide();
@@ -2785,10 +2785,10 @@ adjust_panel_block_top("aimesh_hint_msg", 100);
 return;
 }
 }
-var hint = "<#1151#>".replace("#MODELNAME", node_name_location);
+var hint = "<#1169#>".replace("#MODELNAME", node_name_location);
 $("#aimesh_hint_msg .hint_text").append($("<div>").addClass("notice_text").html(hint));
 if(_pref_info.pref_mac != "" && !_pref_info.pref_node_exist)
-$("#aimesh_hint_msg .hint_text").append($("<div>").addClass("notice_text hint").html("* <#1175#>"));
+$("#aimesh_hint_msg .hint_text").append($("<div>").addClass("notice_text hint").html("* <#1193#>"));
 var $auto_info = $("<div>");
 $auto_info.addClass("notice_text horizontal_line")
 $auto_info.css("cursor", "pointer");
@@ -2799,7 +2799,7 @@ e.stopPropagation();
 $("#aimesh_hint_msg .hint_text .custom_radio_label").removeClass("checked");
 $(this).find(".custom_radio_label").addClass("checked");
 });
-$auto_info.append( $("<span>").addClass("notice_text_blue model_info no_location").html("<#153#>"));
+$auto_info.append( $("<span>").addClass("notice_text_blue model_info no_location").html("<#160#>"));
 var $auto_check = $("<div>").addClass("custom_radio_bg no_location").append($("<span>").addClass("custom_radio_label"));
 $auto_check.attr({"id":"auto"});
 $auto_info.append($auto_check);
@@ -2820,7 +2820,7 @@ $(this).find(".custom_radio_label").addClass("checked");
 });
 var $model_name = $("<span>").addClass("notice_text_blue model_info").html(handle_ui_model_name(_each_node_info.model_name, _each_node_info.ui_model_name));
 if(_each_node_info.online == "0")
-$model_name.append($("<span>").addClass("model_info offline").html("(<#1540#>)"));
+$model_name.append($("<span>").addClass("model_info offline").html("(<#1561#>)"));
 $model_info.append($model_name);
 $model_info.append("<br>");
 var $model_location = $("<span>").addClass("notice_text_location model_info").html(node_location_info.location_text);
@@ -2899,12 +2899,12 @@ return false;
 $("#aimesh_hint_msg").empty();
 $("#aimesh_hint_msg").append(popup_hint_api.get_component_text());
 $("#aimesh_hint_msg").append(popup_hint_api.get_component_action());
-$("#aimesh_hint_msg .hint_text").append($("<div>").html("<#370#>!"));
+$("#aimesh_hint_msg .hint_text").append($("<div>").html("<#384#>!"));
 if(target_mac == "")
-$("#aimesh_hint_msg .hint_text").append($("<div>").html("<#1176#>"));
+$("#aimesh_hint_msg .hint_text").append($("<div>").html("<#1194#>"));
 else{
 var re = /#MODELNAME/g;
-var str = "Your #MODELNAME and its end devices will lose connection temporarily. <#1177#> <#1178#>";/* untranslated */
+var str = "Your #MODELNAME and its end devices will lose connection temporarily. <#1195#> <#1196#>";/* untranslated */
 var hint = str.replace(re, node_name_location);
 $("#aimesh_hint_msg .hint_text").append($("<div>").html(hint));
 }
@@ -2966,7 +2966,7 @@ $model_name.html(handle_ui_model_name(model_name, ui_model_name));
 $(".primary_info_bg").find("#model_name").html($model_name);
 if(node_not_support_feature[mac].length > 0) {
 $model_name.addClass("node_feature_notice");
-var hint = "<#1130#> <#1131#> <#1132#>";
+var hint = "<#1148#> <#1149#> <#1150#>";
 hint += "<ul class='list_item'>";
 $.each(node_not_support_feature[mac], function( index, value ) {
 hint += "<li>" + value + "</li>";
@@ -2999,7 +2999,7 @@ e.stopPropagation();
 $(".primary_info_bg").find(".fw_version_text").append($fw_icon);
 $(".primary_info_bg").find(".fw_version_text_bg").find(".hover_pop_hint_bg").remove();
 var hint_parm = {
-"text": "<#2152#>",
+"text": "<#2174#>",
 "css": "fw_icon"
 };
 $(".primary_info_bg").find(".fw_version_text_bg .fw_icon").after(gen_hint_component(hint_parm));
@@ -3486,7 +3486,7 @@ if(isSupport("WL_SCHED_V2") || isSupport("WL_SCHED_V3")) {
 var node_capability = httpApi.aimesh_get_node_capability(specific_node_data);
 if(!node_capability.sched_v2) {
 var show_notice = false;
-for(var i = 0; i < parent.wl_info.wl_if_total; i += 1) {
+for(var i = 0; i < wl_info.wl_if_total; i += 1) {
 var wl_timesched = httpApi.nvramGet(["wl" + i + "_timesched"])["wl" + i + "_timesched"];
 if(wl_timesched == "1") {
 show_notice = true;
@@ -3504,7 +3504,7 @@ var amas_eap_bhmode = httpApi.nvramGet(["amas_eap_bhmode"]).amas_eap_bhmode;
 if(amas_eap_bhmode != "0" && amas_eap_bhmode != "") {
 var node_capability = httpApi.aimesh_get_node_capability(specific_node_data);
 if(!node_capability.ethernet_backhaul_mode) {
-node_not_support_feature[node_mac].push("<#1110#>");
+node_not_support_feature[node_mac].push("<#1128#>");
 $model_name.addClass("node_feature_notice");
 }
 }
@@ -3518,7 +3518,7 @@ var $client_num_bg = $("<div>");
 $client_num_bg.appendTo($node_info_bg);
 var $client_title = $("<span>");
 $client_title.appendTo($client_num_bg);
-$client_title.html("<#2130#>");
+$client_title.html("<#2152#>");
 var $client_num = $("<span>");
 var node_client_list = ciient_get_specific_client_list("all", specific_node_data.mac);
 $client_num.html(node_client_list.online);
@@ -3573,16 +3573,16 @@ $text.html(_text);
 $content_bg.append($text);
 return $content_bg;
 };
-$connect_line_info_bg.append(gen_line_info("wired", "great", "<#94#>"));
-$connect_line_info_bg.append(gen_line_info("wired", "weak", "<#95#>"));
-$connect_line_info_bg.append(gen_line_info("wireless", "great", "<#92#>"));
-$connect_line_info_bg.append(gen_line_info("wireless", "weak", "<#93#>"));
-$connect_line_info_bg.append(gen_line_info("plc", "great", "<#90#>"));
-$connect_line_info_bg.append(gen_line_info("plc", "weak", "<#91#>"));
-$connect_line_info_bg.append(gen_line_info("", "disconnected", "<#217#>"));
+$connect_line_info_bg.append(gen_line_info("wired", "great", "<#100#>"));
+$connect_line_info_bg.append(gen_line_info("wired", "weak", "<#101#>"));
+$connect_line_info_bg.append(gen_line_info("wireless", "great", "<#98#>"));
+$connect_line_info_bg.append(gen_line_info("wireless", "weak", "<#99#>"));
+$connect_line_info_bg.append(gen_line_info("plc", "great", "<#96#>"));
+$connect_line_info_bg.append(gen_line_info("plc", "weak", "<#97#>"));
+$connect_line_info_bg.append(gen_line_info("", "disconnected", "<#226#>"));
 var $faq = $("<div>");
 $faq.addClass("faq_bg");
-var faq_text = "<#96#>";
+var faq_text = "<#102#>";
 faq_text += "<br>";
 faq_text += "<a id='connect_line_info_faq' href='' target='_blank' style='text-decoration:underline;'>FAQ.</a>";
 $faq.html(faq_text);
@@ -3623,11 +3623,11 @@ $("#aimesh_hint_msg").empty();
 $("#aimesh_hint_msg").append(popup_hint_api.get_component_text());
 $("#aimesh_hint_msg").append(popup_hint_api.get_component_action());
 var hint = "";
-hint += "<#1182#>";
+hint += "<#1200#>";
 hint += "<br>";
-hint += "<#1183#> <#1184#>".replace("#RE_MAXNUM", cfg_re_maxnum);
+hint += "<#1201#> <#1202#>".replace("#RE_MAXNUM", cfg_re_maxnum);
 hint += "<br>";
-hint += "<#1185#>";
+hint += "<#1203#>";
 $("#aimesh_hint_msg .hint_text").html(hint);
 $("#aimesh_hint_msg #action_canacl").hide();
 $("#aimesh_hint_msg #action_ok").show();
@@ -3653,7 +3653,7 @@ pop_win.resizeTo(screen.width, screen.height);
 };
 var get_onboardingstatus = httpApi.hookGet("get_onboardingstatus", true);
 if(get_onboardingstatus.cfg_ready != "1"){
-alert("<#3485#>");
+alert("<#3556#>");
 return false;
 }
 popup_onboarding();
@@ -3683,7 +3683,7 @@ event.stopPropagation();
 manage_set_reconnect_control("all");
 }
 function transform_location(_nodeMac, _node_info){
-var result = {"location_text":"<#1074#>", "location_active_css":"Home"};
+var result = {"location_text":"<#1092#>", "location_active_css":"Home"};
 var node_location_text = "Home";
 var isReNode = (_nodeMac != cap_mac) ? true : false;
 if(isReNode){
@@ -3770,7 +3770,7 @@ option.text = _text;
 option.conn_type = _conn_type;
 return JSON.parse(JSON.stringify(option));
 };
-option_array.push(gen_option_attr("3", ((_eap_flag) ? "<#153#> (<#1054#>)" : "<#153#>"), "auto"));
+option_array.push(gen_option_attr("3", ((_eap_flag) ? "<#160#> (<#1072#>)" : "<#160#>"), "auto"));
 var port_mapping = [{value:"1", text:"WAN"}, {value:"2", text:"LAN"}];//Def
 var interface_mapping = [{value:"1", text:"Ethernet"}, {value:"2", text:"WiFi"}, {value:"3", text:"Powerline"}];//Type
 var eth_rate_mapping = [{value:"1", text:"10M"}, {value:"2", text:"100M"}, {value:"3", text:"1G"}, {value:"4", text:"2.5G"}, {value:"5", text:"5G"},
@@ -3840,7 +3840,7 @@ conn_prio_type += " " + if_text;
 if(port_idx >= 1)
 conn_prio_type += port_idx;
 }
-var option_text = (_eap_flag) ? "<#1064#>" : "<#1063#>";
+var option_text = (_eap_flag) ? "<#1082#>" : "<#1081#>";
 option_text = option_text.replace("#CONNPRIOTYPE", conn_prio_type);
 var option_conn_type = conn_type;
 if(_eap_flag && conn_type == "wifi")
@@ -3851,7 +3851,7 @@ option_array.push(gen_option_attr(option_value, option_text, option_conn_type));
 }
 }
 if(option_array.length == 1)
-option_array.push(gen_option_attr("2", ((_eap_flag) ? "<#1053#>" : "<#1049#>"), "eth"));
+option_array.push(gen_option_attr("2", ((_eap_flag) ? "<#1071#>" : "<#1067#>"), "eth"));
 return option_array;
 }
 function handle_re_path(_re_path){
@@ -3864,8 +3864,8 @@ return $("<div>").addClass("hint_text");
 },
 "get_component_action": function(){
 var $action_bg = $("<div>").addClass("action_bg");
-var $action_canacl = $("<input/>").attr({"id":"action_canacl", "type":"button", "value":"<#199#>"}).addClass("button_gen");
-var $action_ok = $("<input/>").attr({"id":"action_ok", "type":"button", "value":"<#1665#>"}).addClass("button_gen");
+var $action_canacl = $("<input/>").attr({"id":"action_canacl", "type":"button", "value":"<#206#>"}).addClass("button_gen");
+var $action_ok = $("<input/>").attr({"id":"action_ok", "type":"button", "value":"<#1687#>"}).addClass("button_gen");
 $action_bg.append($action_canacl).append($action_ok);
 return $action_bg;
 },
@@ -3888,7 +3888,7 @@ $(document).ready(initial_AiMesh);
 <div class="aimesh_bg info_left">
 <div class="node_btn_control">
 <div onclick="add_node();"><span class="add_icon"><#71#></span></div>
-<div id="optimization_btn" onclick="optimization_node();"><span class="refresh_icon"><#1143#></span></div>
+<div id="optimization_btn" onclick="optimization_node();"><span class="refresh_icon"><#1161#></span></div>
 </div>
 <div id="jstree"></div>
 <div class="connect_info_bg">
@@ -3909,7 +3909,7 @@ $(document).ready(initial_AiMesh);
 <div id="model_name" class="model_name"></div>
 <div class="mac_info"><span>MAC</span><span id="mac"></span></div>
 </div>
-<div class="model_icon"><div title="<#1645#>" class="model_icon_exchange"></div></div>
+<div class="model_icon"><div title="<#1667#>" class="model_icon_exchange"></div></div>
 </div>
 </div>
 <div class="item_space"></div>
@@ -3930,7 +3930,7 @@ $(document).ready(initial_AiMesh);
 </div>
 <div class="item_bg fw_version">
 <div class="fw_version_title_bg">
-<div><#2139#></div>
+<div><#2161#></div>
 </div>
 <div class="fw_version_text_bg">
 <div>
@@ -3941,11 +3941,11 @@ $(document).ready(initial_AiMesh);
 <div class="item_bg category">
 <div id="client" class="category_bg" onclick="control_category_block('client')">
 <div class="client"></div>
-<div><#2130#></div>
+<div><#2152#></div>
 </div>
 <div id="network" class="category_bg" onclick="control_category_block('network')">
 <div class="network"></div>
-<div><#2799#></div>
+<div><#2843#></div>
 </div>
 <div id="manage" class="category_bg" onclick="control_category_block('manage')">
 <div class="manage"></div>
@@ -3956,14 +3956,14 @@ $(document).ready(initial_AiMesh);
 <div id="client_block" class="category_block">
 <div class="card_block_bg">
 <div class="client_num_bg">
-<div class="left"><span><#1622#></span></div>
-<div class="right"><span id="client_num"></span> <#1542#></div>
+<div class="left"><span><#1643#></span></div>
+<div class="right"><span id="client_num"></span> <#1563#></div>
 <div class="clearBoth"></div>
 </div>
 <div class="client_tab_bg">
-<div id="all" class="all" onclick="client_set_tab('all');"><#1543#></div>
-<div id="wired" class="wired" onclick="client_set_tab('wired');"><#3313#></div>
-<div id="wireless" class="wireless" onclick="client_set_tab('wireless');"><#3314#></div>
+<div id="all" class="all" onclick="client_set_tab('all');"><#1564#></div>
+<div id="wired" class="wired" onclick="client_set_tab('wired');"><#3383#></div>
+<div id="wireless" class="wireless" onclick="client_set_tab('wireless');"><#3384#></div>
 <div class="clearBoth"></div>
 </div>
 <div class="client_list_bg"></div>
@@ -3986,12 +3986,12 @@ $(document).ready(initial_AiMesh);
 </div>
 </div>
 <div>
-<span id="wan_connect_status" class="connect_status disconnected"><#217#></span>
+<span id="wan_connect_status" class="connect_status disconnected"><#226#></span>
 </div>
 <div class="wan_connect_info">
 <div>
 <div id="wan_connect_ip_title" class="connect_info_title">
-<#3678#>
+<#3775#>
 </div>
 <div id="wan_connect_ip" class="connect_info_text">
 - -. - -. - -. - -
@@ -3999,10 +3999,10 @@ $(document).ready(initial_AiMesh);
 </div>
 <div>
 <div class="connect_info_title">
-<#192#>
+<#199#>
 </div>
 <div id="wan_connect_type" class="connect_info_text">
-<#167#>
+<#174#>
 </div>
 </div>
 </div>
@@ -4018,12 +4018,12 @@ $(document).ready(initial_AiMesh);
 </div>
 </div>
 <div>
-<span id="wan_connect_status" class="connect_status disconnected"><#217#></span>
+<span id="wan_connect_status" class="connect_status disconnected"><#226#></span>
 </div>
 <div class="wan_connect_info">
 <div>
 <div id="wan_connect_ip_title" class="connect_info_title">
-<#3678#>
+<#3775#>
 </div>
 <div id="wan_connect_ip" class="connect_info_text">
 - -. - -. - -. - -
@@ -4031,10 +4031,10 @@ $(document).ready(initial_AiMesh);
 </div>
 <div>
 <div class="connect_info_title">
-<#192#>
+<#199#>
 </div>
 <div id="wan_connect_type" class="connect_info_text">
-<#167#>
+<#174#>
 </div>
 </div>
 </div>
@@ -4051,7 +4051,7 @@ $(document).ready(initial_AiMesh);
 </div>
 <div class="uplink_type_bg">
 <div class="uplink_connect_info_bg">
-<div id="uplink_connect_type" class="uplink_type_title disconnected"><#382#> - 5GHz</div>
+<div id="uplink_connect_type" class="uplink_type_title disconnected"><#396#> - 5GHz</div>
 <div class="uplink_type_ip">IP : <span id="uplink_connect_ip">- - . - - . - - . - -</span></div>
 </div>
 <div class="uplink_icon_bg">
@@ -4059,7 +4059,7 @@ $(document).ready(initial_AiMesh);
 </div>
 </div>
 <div id="uplink_type_mode_bg">
-<span class="uplink_type_mode_title"><#4228#></span>
+<span class="uplink_type_mode_title"><#4327#></span>
 <br>
 <span id="uplink_type_mode" class="uplink_type_title"></span>
 </div>
@@ -4086,7 +4086,7 @@ $(document).ready(initial_AiMesh);
 <div class="manage_title">
 <span class="connect_title horizontal_line"><#79#></span>
 </div>
-<div class="manage_disconnected"><#1186#></div>
+<div class="manage_disconnected"><#1204#></div>
 <div class="manage_switch_led horizontal_line manage_function_item">
 <div class="manage_common_title manage_common_separate_bg left">LED</div>
 <div class="manage_common_separate_bg right">
@@ -4094,45 +4094,45 @@ $(document).ready(initial_AiMesh);
 </div>
 </div>
 <div class="manage_slider_led horizontal_line manage_function_item">
-<div class="manage_common_title manage_common_separate_bg left"><#4152#></div>
+<div class="manage_common_title manage_common_separate_bg left"><#4251#></div>
 <div class="manage_common_separate_bg right">
 <div id='led_slider' class='led_slider'></div>
 </div>
 </div>
 <div class="manage_conn_priority horizontal_line dropdown_item_bg manage_function_item">
 <div class="manage_common_title">
-<div><#1059#></div>
+<div><#1077#></div>
 <div id="conn_priority_icon" class="bubble_icon info"></div>
 </div>
 <div>
 <select id="conn_priority_select" class="dropdown_select">
-<option value="3"><#153#></option>
-<option value="2"><#1049#></option>
+<option value="3"><#160#></option>
+<option value="2"><#1067#></option>
 </select>
 </div>
 </div>
 <div class="manage_preferable_backhaul horizontal_line two_text_item_bg manage_function_item">
 <div class="manage_common_title">
-<div><#1150#></div>
+<div><#1168#></div>
 <div id="prefer_ap_icon" class="bubble_icon info"></div>
 </div>
 <div>
 <div class="managment_icon preferable_backhaul_icon"></div>
-<span class="preferable_backhaul_text"><#153#></span>
+<span class="preferable_backhaul_text"><#160#></span>
 </div>
 </div>
 <div class="manage_lacp horizontal_line dropdown_item_bg manage_function_item">
-<div class="manage_common_title"><#2782#><span id="lacp_icon" class="bubble_icon info"></span></div>
+<div class="manage_common_title"><#2826#><span id="lacp_icon" class="bubble_icon info"></span></div>
 <div>
 <select id="lacp_select" class="dropdown_select">
-<option value="1"><#3846#></option>
-<option value="0"><#3847#></option>
+<option value="1"><#3945#></option>
+<option value="0"><#3946#></option>
 </select>
 </div>
 </div>
 <div class="manage_switch_wifi horizontal_line manage_function_item sub_item_bg">
 <div>
-<div class="manage_common_title manage_common_separate_bg left"><#3921#></div>
+<div class="manage_common_title manage_common_separate_bg left"><#4020#></div>
 <div class="manage_common_separate_bg right">
 <div id="switch_wifi" class="arrow_icon down"></div>
 </div>
@@ -4140,19 +4140,19 @@ $(document).ready(initial_AiMesh);
 <div class="manage_sub_item_bg"></div>
 </div>
 <div class="manage_usb_app horizontal_line manage_function_item">
-<div class="manage_common_title manage_common_separate_bg left"><#379#></div>
+<div class="manage_common_title manage_common_separate_bg left"><#393#></div>
 <div class="manage_common_separate_bg right">
 <div id="usb_app" class="arrow_icon right"></div>
 </div>
 </div>
 <div class="manage_switch_ctrl horizontal_line manage_function_item">
-<div class="manage_common_title manage_common_separate_bg left"><#3241#></div>
+<div class="manage_common_title manage_common_separate_bg left"><#3307#></div>
 <div class="manage_common_separate_bg right">
 <div id="switch_ctrl" class="arrow_icon right"></div>
 </div>
 </div>
 <div class="manage_reconnect_node horizontal_line manage_function_item">
-<div class="manage_common_title manage_common_separate_bg left"><#1143#></div>
+<div class="manage_common_title manage_common_separate_bg left"><#1161#></div>
 <div class="manage_common_separate_bg right">
 <div class="managment_icon reconnect_icon"></div>
 </div>

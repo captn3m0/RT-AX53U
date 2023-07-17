@@ -88,6 +88,12 @@ Adatsebesség
 Topológia
 Rendszerbeállítások
 Statisztika
+Környezet észlelése
+Útvonalcsatlakozás becslése...
+Csomópont(ok) optimalizálása
+Antennadiverzitás optimalizálása
+Antennaérzékelés
+Antennadiverzitás becslése...
 Powerline connection with good signal quality
 Powerline connection with weak signal quality
 Vezeték nélküli csatlakozás kitűnő jelminőséggel
@@ -151,6 +157,7 @@ Ha azt szeretné, hogy az információk ne legyenek megosztva a Trend Micro vál
 Biztosan vissza szeretné vonni az információk megosztását?
 Visszavonás
 Gépelje be a nevet
+A Router alkalmazás bejelentkezési fiókjához van kötve az állomásnév, regisztrálja/törölje Router alkalmazásban, illetve alkalmazásból.
 Auto
 Automatic Setting
 Sávszélesség-korlátozó
@@ -212,6 +219,8 @@ Kihagyás
 Ismeretlen eszköz
 Frissítés éjszaka
 Upgrade Now
+Alapértelmezett helyi bejelentkezési jelszó használata
+Az alapértelmezett, titkosított helyi bejelentkezési jelszó biztonságos bejelentkezést tesz lehetővé, amikor helyben csatlakozik ehhez az ASUS hálózati eszközhöz.
 A további részletekért látogasson el a <a style="font-weight: bolder;text-decoration: underline;color:#000000;" href="https://www.asus.com/support/" target="_blank">https://www.asus.com/support/</a> oldalra.
 * A minimális ping csomag intervallumonként kb. 128 bájtot fogyaszt, ezért a ping érzékelőhavonta
 MByte havonta
@@ -280,7 +289,10 @@ Firmware verzió:
 * Ebben az időzónában a nyári időszámítás engedélyezett.
 Rendszeridő
 * Emlékeztető: A rendszeridő nincs szinkronizálva az NTP kiszolgálóval.
+Még nem történt meg a routerrendszere idejének az NTP-kiszolgálóval való szinkronizálása. Az internethez való kapcsolódás után automatikusan megtörténik a szinkronizálás.
 Vendéghálózat
+Hol találom a %@
+A %@ az ASUS-eszköz hátulján/alján lévő címkén található.
 Kérjük használjon egy porto 1024-65535 között.
 Because of security and compatibility concerns,  IE8 / IE9 / IE10 are no longer supported.
 Things might be bound to broken and perhaps unusable.
@@ -359,6 +371,8 @@ Az erőteljes jelszónak legalább nyolc karakterből KELL állnia, nagybetűkb�
 A router IP-jének közzététele a felhasználó által megadott DNS mellett
 WAN-kapcsolat típusa
 A következő IP-cím használata:
+Helyi bejelentkezés
+Állítson be Helyi bejelentkezési felhasználónevet és jelszót, hogy megakadályozza az ASUS hálózati eszközhöz való jogosulatlan hozzáférést.
 Legalább két karakter. Csak alfanumerikus karakterek, alsó vonás és kötőjel használható. Az első karakter nem lehet kötőjel („-”) vagy alsó vonás („_”).
 Ugyanakkor letöltheti az [ASUS Lyra] alkalmazást is további Lyra eszközök csatlakoztatásához az első Lyrához.
 Most megnyomhatja a &quot;Párosítás gombot&quot; az első és második Lyrán, hogy egy újabb Lyrát állítson be.
@@ -474,6 +488,8 @@ Gyenge
 Jó
 Erős
 Nagyon erős
+Helyi bejelentkezési jelszó
+WiFi-jelszó
 Hibás PIN-kód. Kérjük, adja meg a helyes PIN-kódot, majd csatlakoztassa újra az USB-adaptert. Ha a hiba fennmarad, kapcsolja ki a PIN-kód funkciót, majd kapcsolja vissza és próbálja meg újra.
 Telefonszám
 Access Number
@@ -672,6 +688,7 @@ Adjon meg egy 8–63 karakter hosszúságú hálózati kulcsot (betűkből, szá
 Adjon meg egy 8–63 karakter hosszúságú hálózati kulcsot (betűkből, számokból vagy azok kombinációjából állhat). Az alapértelmezett vezeték nélküli biztonsági beállítás WPA2-Personal AES.
 Separate 2.4 GHz and 5 GHz
 Separate 2.4 GHz, 5 GHz and 6 GHz
+Megtörtént a fő vezeték nélküli hálózat létrehozása.
 A fióknév mező nem maradhat üresen.
 A Felhasználónév / Jelszó mező nem lehet üres.
 ISP fiókbeállítás
@@ -822,6 +839,7 @@ Emelje fennebb az internet lezárás korlátozásának határát.
 Újracsatlakozás az internethez
 Kérjük, lépjen kapcsolatba a rendszergazdával.
 Kattintson ide, hogy a beállítások oldalra lépjen
+<a>Kattintson ide</a> a módosításhoz.
 Végezze el a beállítások konfigurálását.
 Ha a probléma továbbra is fennáll, kézzel módosítsa a kapcsolat beállításait.
 kapcsolja be a WAN-t.
@@ -906,8 +924,8 @@ For faster video streaming experience including Youtube, Netflix and Spotify, et
 Internetes Böngészés
 Ez a mód általános webböngészéshez és a fájltovábbításkor előforduló hálózati késleltetés elkerüléséhez megfelelő.
 Learn-From-Home
-Choose this mode for a smooth streaming of online video-learning experience.This category includes Coursera, Khan, Udemy, TED, edX, etc.
-Choose this mode to ensure a smooth agile online conferencing experience.This category includes VoIP, instant messaging, mail service, etc.
+Choose this mode for a smooth streaming of online video-learning experience. This category includes Coursera, Khan, Udemy, TED, edX, etc.
+Choose this mode to ensure a smooth agile online conferencing experience. This category includes VoIP, instant messaging, mail service, etc.
 Az új fiók nem rendelkezik olvasás/írás engedéllyel.
 Új fiók hozzáadása
 Az új mappa alapértelmezett elérési jogosultsága: olvasás/írás.
@@ -1515,6 +1533,7 @@ ISP által megadott állomásnév:
 Ha az Ön WAN kapcsolatának típusa statikus PPTP vagy L2TP, adja meg a VPN szerver nevét vagy IP-címét.
 Ez a mező lehetővé teszi a RT-AX53U gépnevének megadását. Általában az Ö ISP-je igényli.
 Állítsa be a maximális letöltési sávszélesség-korlátot. A 0 (nulla) azt jelenti, hogy nincs sávszélesség-korlát.
+Vissza
 Letiltás
 Letiltva
 Engedélyezve
@@ -1527,8 +1546,10 @@ WAN beállításokra
 Képesség
 Képen megjelenített karakterek
 Kérjük, adja meg a képen megjelenített karaktereket.
+Ha engedélyezni akarj, akkor a beállítások megváltoztatása érdekében <a id = \"setting_link\" target=\"_blank\" style=\"text-decoration:underline;\">itt</a> jelölje be.
 Győződjön meg arról, hogy az Ethernet-/hálózati kábel megfelelően van csatlakoztatva
 A router az ASUS szerverén keresi a legfrissebb firmware-változatot.
+Válasszon más beállításokat, majd próbálja meg újból.
 Nem gyűjt információkat a felhasználókról, és a svájci adatvédelmi törvény hatálya alatt áll.
 Kliens neve
 Ikon
@@ -1635,6 +1656,7 @@ Russia
 Singapore
 The United States
 Kanada
+Hozzon létre egy fiókot.
 Ingyenes fiók létrehozása
 A 2. szintű CTF a PPPoE, PPTP vagy L2TP használata esetén nem támogatott. Az 1. szintű CTF-re történő átváltáshoz kattintson a Megerősítés gombra.
 HW gyorsítás engedélyezése
@@ -1942,7 +1964,7 @@ Instabil csatlakozási probléma
 Nem lehet csatlakozni a vezeték nélküli hálózathoz
 Válassza ki azt a lehetőséget, amely leginkább jellemzi DSL eszköze teljesítményét
 Kapcsolattartási módszer
-Az Ön országa / régiója
+Az Ön régiója
 Hibakeresés rögzítésének visszavonása
 A diagnosztikai hibakeresési napló rögzítése folyamatban van
 Diagnosztikai hibakeresési napló rögzítésének időtartama
@@ -2246,22 +2268,30 @@ Kapcsolja be a WiFi funkciót a vendéghálózat működtetéséhez.
 Másik másolása
 Összes vendég
 vendég
+Ütemezett vagy egyszeri hozzáférés biztosítása a hálózathoz.
+Bevásárlóközpont, edzőterem, vagy barátok esetén ajánlott.
 Hozzáférési korlát
 Csak internet-hozzáférés
 Ugyanazon beállítások használata, mint
 Üzleti hálózat
 Testreszabott hálózat
+Munkavállaló
 Biztonságos hálózat beállítása
+A részlegekhez engedélyeket rendelő iroda
 Vendéghálózat gyors kialakítása
 IoT hálózat
 Könnyen elkülönített hálózatot biztosíthat IoT-eszközei számára
+Felügyeleti eszközök, hangvezérelt asszisztens, csillárok, kamerás ajtócsengők, okos ajtózárak és érzékelők esetén ajánlott.
 Gyerekhálózat
 Biztosítja a gyermekek internethozzáférésének biztonságát
 Vendégportál
-Vendégportál vagy Facebook WiFi kialakítása
+Vendégportál kialakítása
+Hozzon létre digitális marketing hitelesítési portált.
+Éttermek, szállodák vagy mozgó ételárusító teherautók számára ajánlott.
 Portál típusa
 VPN hálózat
 Biztonságos internetkapcsolat létrehozása
+Biztonságos internetkapcsolat létrehozása helyi magánhálózaton keresztül. Otthoni munkavégzéshez, fiókirodához ajánlott.
 Ez a VPN-profil le van tiltva. Kérjük, lépjen a VPN szerverbeállítások oldalára, és engedélyezze.
 Kattintson az alábbi [ Ugrás a Beállításokra ] gombra a VPN-beállítások oldalra lépéshez.
 Ez a beállítás nem választható ki a másik létrehozott profil használatakor.
@@ -2269,8 +2299,15 @@ Otthoni hálózat
 Jelenleg nincs VPN-profil. Kattintson az alábbi „Ugrás a Beállításokra” gombra a VPN-beállítások oldalra lépéshez és a létrehozáához.
 Hálózat hozzáadása
 Profillista
+Ütemezett hálózat
 Egy meghatározott hálózat kiválasztása
+A saját forgatókönyve alapján hozzon létre egy hálózatot.
+Önmeghatározó hálózat
+Forgatókönyv kezelő
 WiFi ütemezése
+Tervezze meg a napi vagy heti hálózaton töltött időt a vezeték nélküli hálózat esetén.
+Távtanulás, osztályterem vagy gyermekek esetén ajánlott.
+A hálózati biztonság növelése érdekében végezze el a különböző használatok hozzáférési szintjeinek a beállítását.
 Hardver verziója
 Help
 A súgó útmutatást és tájékoztatást ad a router funkcióinak használatáról. Kattintson a
@@ -2282,6 +2319,7 @@ Magas
 Legmagasabb
 A legmagasabb prioritású csomag
 óra
+HOGYAN ÁLLÍTHATÓ BE?
 Az internetkapcsolat megszakadt. Kérjük, próbálkozzon újra, vagy ellenőrizze a fiókbeállításait az internetszolgáltatónál.
 Kérjük, adja meg az internetszolgáltatója helyét.
 Helyszín
@@ -2322,7 +2360,7 @@ Az ASUS Router és az IFTTT manuális párosításához másolja ki az alábbi a
 Válasszon a meglévő appletek közül, vagy hozza létre saját appletjeit az <a id="ifttt_applet_link">ASUS Router csatornán</a>.
 <a id="ifttt_signin">Jelentkezzen be</a> az IFTTT-fiókjába.
 Kezdjen el egy automatizált életet az ASUS Router és az IFTTT segítségével!
-Első lépések:
+Kezdés :
 ebben:
 A router nem tud kapcsolódni az ASUS szerveréhez a firmware frissítésének megkereséséhez. Töltse le a legújabb firmware-t az ASUS terméktámogatási oldaláról, és manuálisan frissítse.
 Sáv
@@ -2447,6 +2485,9 @@ IPv6 LAN beállítás
 Native
 OCN Virtual Connect
 v6plus
+Ha használni akarja azokat, akkor %0$@ segítségével keresse meg a használható porttartományt, majd úgy változtassa meg e funkció portszámát, hogy az illeszkedjen a tartományhoz.
+Előfordulhat, hogy a jelenlegi %2$@ porttartományban a porttal kapcsolatos beállítások eltérési problémába ütköznek.
+Előfordulhat, hogy a speciális %3$@ porttartományban port eltérési probléma merül fel. Ez nem érinti az internetkapcsolatát, viszont érinti a következő porttal kapcsolatos beállításokat. Ha használni akarja azokat, akkor <a target='_self' style='text-decoration:underline;' href='Main_IPV6Status_Content.asp'>IPv6 Log</a> segítségével keresse meg a használható porttartományt, majd úgy változtassa meg e funkció portszámát, hogy az illeszkedjen a tartományhoz.
 IPv6 előtag hossza
 IPv4 csomópont-választásos relé
 Statikus IPv6
@@ -2631,7 +2672,7 @@ Ha a MAC-szűrő listán bejegyzések vannak, kattintson az Alkalmaz gombra azok
 Kézikönyv
 Manuális kiosztás
 Város
-Ország/Vidék
+Vidék
 You might need the VLAN ID to set up the PTM connection. Do not change the VLAN ID unless your ISP instructs you to do so.
 Ez a Gyors beállítás végigvezeti Önt a RT-AX53U WAN beállításainak elvégzésén. Kérjük, válassza ki országát és az ISP nevét a legördülő listáról, kattintson a Következő gombra, majd adja meg a szükséges információt. Lépjen kapcsolatba internet-szolgáltatójával (ISP) további információért az DSL-kapcsolat beállításait illetően, amennyiben szükséges.
 Virtual Path Identifier (VPI) és Virtual Channel Identifier (VCI) szükséges az ATM PVC beállításához. Ne módosítsa a VPI és VCI számokat, kivéve ha az ISP erre utasítja.
@@ -2641,6 +2682,8 @@ Megjegyzés:
 Gyors manuális beállítás
 A RT-AX53U WAN beállításaira vonatkozik. Ha új beállítást kíván hozzáadni, kövesse a képernyőn megjelenő utasításokat. Ha korábbi beállítást kíván módosítani, lépjen az [Speciális beállítások] -> [WAN] -> [Internetkapcsolat] oldalra.
 Gyártó
+MAP frissítése
+1-2 perc szükséges az MAP-szabály ismételt hozzárendeléséhez. A frissítés során valamennyi kapcsolódott eszköze elveszíti az internetkapcsolatát.
 Maximális sávszélesség-korlát
 Állítsa be a maximális feltöltési sávszélesség-korlátot
 Számítógépek max. száma
@@ -2692,6 +2735,7 @@ Nem sikerült frissíteni a 4G modem firmware-ét. Kérjük, várjon egy kicsit,
 Helytelen firmware-t töltött fel a modul frissítéséhez. Válassza ki a megfelelőt, és frissítsen újra!
 4G modem firmware
 Mobil szélessávú modem adatai
+Telefon modemkénti használata
 Modem szoftververziója
 A PIN-kód megadása kötelező.
 A PIN2-kód megadása kötelező.
@@ -2822,7 +2866,9 @@ Cél
 Útfelderítés a gazdagéphez
 Ébresztés LAN-ra
 Ébresztés
+A funkció bemutatása
 Új funkció érhető el
+Funkció leírása
 Új mappanév
 Új modem-firmware
 Következő oldal
@@ -2837,6 +2883,7 @@ Kapcsolja be a WiFi-t a WPS használatához.
 A WPS engedélyezéséhez módosítsa a hitelesítési módszert a WPA2 vagy a WPA-Auto opcióra.
 Ha engedélyezni kívánja a WPS-t, előbb le kell tiltania az SSID elrejtését.
 Note: New patch will be updated regularly, please keep your firmware stay up to date.
+Értesítés
 Értesítési elem
 Kliensek száma
 Ugorjon a <a href="https://iplookup.asus.com/nslookup.php" target="_blank" style="font-family:Lucida Console;text-decoration:underline;">https://iplookup.asus.com/nslookup.php</a> elemre statikus cím kereséséhez, amelyet az ASUS DDNS szolgáltatással használhat.
@@ -2924,6 +2971,7 @@ A Port leképzés támogatja az IPTV WAN felületet adott LAN port esetében. V�
 Port leképzés engedélyezése
 LAN-port
 SSH-port
+Port állapota
 A kapcsolat sebessége javítható eze(ke)n a port(ok)on.
 Kérjük, tekintse meg az alábbi eredményeket/tippeket a hibaelhárításhoz.
 Ellenőrizendők
@@ -2933,6 +2981,9 @@ A régebbi eszközök lassíthatják a kapcsolat sebességét.
 Ellenőrizze az internetszolgáltatójánál, hogy milyen csomagot használ.
 Cserélje ki az Ethernet-kábelt #ETHCABLE vagy újabb verzióra.
 Ez a port a következőhöz való
+%1$@ %2$@ helyett való konfigurálása letiltja \"%3$@\" funkciót, biztosan folytatja?
+%1$@ %2$@ helyett való konfugurálása letiltja ezt a funkciót.
+%1$@ és %2$@ nem konfigurálható ugyanarra a portra.
 Ez az oldal mutatja a porttovábbítás állapotát. Egyes P2P programok az UPnP protokollt használják a port megnyitására, és a port száma ezen az oldalon látható.
 A RT-AX53U azt észlelte, hogy a kapcsolat típusa PPPoE. Amennyiben igen, billentyűzze be a felhasználónevet/jelszót, és kattintson az Alkalmaz gombra.<br>Amennyiben nem, kattintson a Kézi beállítás gombra az újbóli beállításához.
 Kérjük, gépelje be a felhasználónevet/jelszót, amelyet internetszolgáltatója (ISP) megadott, majd kattintson a Következő gombra.
@@ -2994,6 +3045,7 @@ Termékregisztráció
 Szolgáltató
 Beágyazási
 Beágyazási mód
+Nyilvános kulcs
 Tolás
 Biztos, hogy törölni akarja ezt a PVC-t?
 PVC szerkesztés
@@ -3086,6 +3138,20 @@ Duplikált vagy változatlan VPI és VCI beállítások.
 A rendszer újraindítása folyamatban van! Kérjük, várjon, majd átirányítjuk a RT-AX53U kezdőlapjára.
 Lépték
 Beolvasás
+Fiókiroda
+Osztályterem
+Kávézó
+Elektromos jármű töltőállomás
+Barátok
+Szálloda
+Bevásárlóközpont
+Távtanulás
+Intelligens otthon
+Étterem
+Gyerekek
+Hangvezérelt asszisztencia
+Felügyeleti eszközök
+Otthoni munkavégzés
 másodpderc
 Biztonsági szint
 Összes kijelölése
@@ -3128,7 +3194,7 @@ Click on this checkbox if you want to share the config file for debugging. Since
 Beállítások
 Kattintson <a id="redirect_to_setup">ide</a> a módosításhoz. Bővebb részletekért lásd ezt a <a id="redirect_to_FAQ">GYIK-et</a>.
 Állítsa be a csomópontot
-Place your RT-AX53U router and node(s) in the same room and at least 1 meter apart during the setup process.
+Ugyanabban a helységben, egymástól legalább 1 m-es távolságra legyen(ek) elhelyezve a RT-AX53U routere és a csomópont(ok) a beállítási eljárás során.
 Tartsa bekapcsolva és legyen készenléti állapotban a rendszer beállításához.
 Eszköz neve
 Válassza ki a fájlkódolásnak megfelelő nyelvbeállítást.
@@ -3279,6 +3345,10 @@ System adjustment
 Temperature unit
 Fan speed
 A router bejelentkezési jelszó, időzóna és NTP-szerver beállítások módosítása.
+A főhálózattól elkülönítve, különböző célokra további öndefiniált hálózatot hozhat létre.
+Az öndefiniált hálózat le van választva főhálózat domainjéről és biztonságosabb kapcsolatot biztosít.
+Átfogó hálózati környezet biztosítása érdekébe, mindegyik öndefiniált hálózatban eltérő titkosítási módot, ütemezést, engedélyeket, AiMesh hálózatot, sávszélesség korlátozásokat stb. állíthat be.
+Egy további vezeték nélküli hálózatot akar speciális célokra hozzáadni?
 Egyszerű konfiguráció
 LAN
 Vegyes
@@ -3453,6 +3523,7 @@ Eltávolítás...
 Online frissítés elérhető
 Frissítés...
 Feltöltési sávszélesség
+Konfiguráció feltöltése
 Feltöltési prioritás
 Adatok küldése/mp
 Küldött adatok
@@ -3515,6 +3586,10 @@ Az ASUS RT-AX53U router támogatja a címke alapú VLAN-hálózat használatát,
 Címkézetlen
 Címkézett
 Felülírás
+%@ használja e porto(ka)t.
+Port elkülönítés
+VLAN-profil
+VLAN-kapcsoló vezérlő beállítások
 Ennek az értéknek nagyobbnak kell lennie mint
 Ennek az értéknek alacsonyabbnak kell lennie mint
 Client will use VPN to access
@@ -3556,7 +3631,7 @@ Egyedi konfiguráció
 RT-AX53U automatikusan generál egy .ovpn fájlt, a hitelesítési kulccsal együtt. Megadhatja az .ovpn fájlt felhasználónévvel és jelszóval minden felhasználónak aki az OpenVPN kiszolgálóhoz csatlakozik.
 Az OpenVPN kiszolgáló beállításainak megváltoztatásához lépjen Speciális beállítások
 Megváltoztathatja az OpenVPN kiszolgáló alapértelmezett beállításait, hogy egyedi .ovpn fájlt nyújtson specifikus csatlakozási típusnak.
-If your WAN IP address is dynamic, please click <a href="http://ZVDOMAIN_NAMEVZ/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
+If your WAN IP address is dynamic, please click <a href="/Advanced_ASUSDDNS_Content.asp" target="_blank" style="text-decoration:underline;">here</a> to set the DDNS.
 Kijelölés DHCP által
 Titkosítási rejtjel
 Útválasztási ütközés! <p>Kérjük, ellenőrizze a kliens IP-cím beálíltásait az Speciális beállítások oldalon, vagy ellenőrizze az útválasztási táblázatot a rendszernaplóban.
@@ -3655,18 +3730,40 @@ A frissítés sikertelen, próbálkozzon újra.
 Miután az Alkalmaz elemre kattint, az összes VPN kliens újrakapcsolódik. Biztosan folytatja?
 Támogatott IKE-verzió
 kattintson ide a DDNS beállításához.
+A VPN WiFi már használatban van.
+nélküli router] Hogyan állítsuk be a WireGuard® szervert?
+Hogyan állítsunk be site to site VPN-t a WireGuard®-dal?
+Hogyan állítsuk be a WireGuard® klienst a VPN Fusionben?
+VPN-hitelesítés
+Ügyféltanúsítvány
+Ügyfélkulcs
+Tanúsítvány-visszavonási lista
+Az egyidejűleg aktív VPN-kapcsolatok száma 2-re van korlátozva. Kérjük, hogy egy meglévő VPN kapcsolatot deaktiváljon, mielőtt egy másikat aktiválna.
+A rendszer egyszerre csak egy Surfshark kapcsolatot tud aktiválni. Kérjük, hogy deaktiválja a jelenlegi Surfshark kapcsolatot, mielőtt másikat aktivál.
+Alapértelmezett kapcsolat
 A VPN (Virtual Private Network) klienseket gyakran használják VPN kiszolgálóhoz való csatlakozáshoz, hogy privát erőforrásokat érjenek el biztonságosan nyilvános hálózaton keresztül.
 Egyes eszközök, úgy mint vevőegységek, okos TV-k és Blu-ray lejátszók nem támogatják a VPN szoftvert.
 Az ASUSWRT VPN funkció VPN hozzáférést nyújt minden eszköznek az otthoni hálózaton, anélkül, hogy VPN szoftvert kellene telepíteni minden eszközön.
+Végpont címe
+Végpont portja
+Mert az Ön online biztonsága a legfontosabb.
+Engedélyezett IP-címek
 Változtassa meg a routere helyi hálózatának az alhálózatát, további információkért a <a target='_blank'>GYIK</a> című részt nézze meg.
+Tartós keepalive
 Hálózatközti kliens/társgép
 Az IPSec VPN-kliens lehetővé teszi, hogy a RT-AX53U egy hálózatközti IPSec-kiszolgálóhoz/klienshez csatlakozzon, vagy lehetővé teszi, hogy a készülékek közvetlenül egymáshoz csatlakozzanak társközi módon.
 A társközi hálózat megismeréséhez vegyünk példaként két RT-AX53U készüléket. Először létre kell hoznia ezen az oldalon egy IPSec-társgépprofilt, majd létre kell hoznia egy másik társgépet a másik RT-AX53U készüléken a kapcsolódó konfigurációkkal.
+Profil
+Alkalmazás az összes eszközön
+Eszközök hozzárendelése ehhez a profilhoz
+Profil törlése
+Kérjük, válasszon egy másik VPN-profilt a alapértelmezett internetes WAN törléséhez.
 VPN csatlakozás indításához közesse az alábbi lépéseket:
 Profil hozáadása
 Válasszon VPN csatlakozás típust
 Adja meg a VPN hitelesítési információt amelyet a VPN szolgáltatója adott, majd csatlakozzon.
 VPN-kliens
+Peer
 Amikor Ön egy  VPN klienst használ egy PPPoE csatlakozáshoz, a router automatikusan újraindul, hogy letiltsa a NAT gyorsítást- Biztosan akarja folytatni?
 Korlát
 Konfigurálja a RT-AX53U Ethernet WAN-beállításait.
@@ -3730,18 +3827,19 @@ Enable Ping to Internet
 TCP MSS opció
 bájt
 VLAN ID
-A WAN Aggregation két hálózati kapcsolatot egyesít, így a WAN sebessége akár 2Gb/s-ra is nőhet. Csatlakoztassa az útválasztó WAN portját és LAN 4-es portját a modem LAN portjaihoz (győződjön meg arról, hogy egyforma specifikációval rendelkező kábeleket használ). <a id="wanAgg_faq" target="_blank" style="color:#FFCC00;text-decoration:underline;">WAN Aggregation GYIK</a>
+WAN-összefogás
+A WAN Aggregation két hálózati kapcsolatot egyesít, így a WAN sebessége akár 2Gb/s-ra is nőhet. Csatlakoztassa az útválasztó #WAN portját és LAN 4-es portját a modem LAN portjaihoz (győződjön meg arról, hogy egyforma specifikációval rendelkező kábeleket használ). <a id="wanAgg_faq" target="_blank" style="color:#FFCC00;text-decoration:underline;">WAN Aggregation GYIK</a>
 WAN-aggregáció engedélyezése
 Az útválasztón engedélyezett a kettős WAN. A WAN Aggregation engedélyezése letiltja a kettős WAN funkciót. Biztosan folytatja?
 Az útválasztón engedélyezett a WAN Aggregation. A kettős WAN engedélyezése letiltja a WAN Aggregation funkciót. Biztosan folytatja?
 A WAN Aggregation az útválasztó LAN 4-es portját használja. Az IPTV engedélyezése letiltja a WAN Aggregation funkciót. Biztosan folytatja?
 Az IPTV az útválasztó LAN 4-es portját használja. A WAN Aggregation engedélyezése letiltja az IPTV funkciót. Biztosan folytatja?
 Az útválasztón engedélyezett a kettős WAN és az IPTV. A WAN Aggregation engedélyezése letiltja a kettős WAN és IPTV funkciót , hogy elkerülhető legyen a portütközés. Biztosan folytatja?
-Győződjön meg arról, hogy az útválasztó WAN portja és a modem LAN portja két egyforma specifikációval rendelkező kábelellel van csatlakoztatva.
+Győződjön meg arról, hogy az útválasztó #WAN portja és a modem LAN portja két egyforma specifikációval rendelkező kábelellel van csatlakoztatva.
 Győződjön meg arról, hogy az útválasztó LAN 4-es portja és a modem LAN portja két egyforma specifikációval rendelkező kábelellel van csatlakoztatva.
 A WAN Aggregation engedélyezéséhez lépjen a <a href="Advanced_WAN_Content.asp" style="color:#FFCC00;text-decoration:underline;">WAN-Internet csatlakoztatás című oldalra</a>.
 Ha a WAN aggregáció nem sikeres, kérjük kövesse az alábbi lépéseket az újrapróbáláshoz.
-Győződjön meg róla, hogy a modem LAN portjai már csatlakoznak – kábellel – a router WAN és LAN 4 portjaihoz.
+Győződjön meg róla, hogy a modem LAN portjai már csatlakoznak – kábellel – a router #WAN és LAN 4 portjaihoz.
 Győződjön meg hogy a modemen engedélyezve van a 802.3ad szabvány
 Ellenőrizze, hogy a két kábel azonos tulajdonságú (vagy gigabit & gigabit vagy 10/100 & 10/100 Mbps)
 Indítsa újra aroutert
@@ -3756,6 +3854,7 @@ WiFi Proxy
 WiFi Radar
 A beállítások lehetővé teszik, hogy konfigurálja a WiFi Radar paramétereit.
 Vándorlási blokkolási lista
+WiFi megosztás
 WiFi Site Survey
 A WiFi Site Survey megkeresi az összes WiFi-hálózatot az adott környezetben.
 Vezeték nélküli csatornák statisztikája
@@ -4116,7 +4215,7 @@ A kezdőoldal képfájlja nem lehet üres.
 Üdvözli Önt a(z)
 Elolvastam és elfogadom a <span id='terms_service_hyperlink'>Szolgáltatási feltételeket</span>
 Folytatás
-Több VPN-kapcsolat
+A VPN Fusion
 használatával egyszerre több VPN-kiszolgálóhoz csatlakozhat, és hozzárendelheti a klienskészülékeit, hogy azok különböző VPN-alagutakhoz csatlakozzanak. Bizonyos készülékek, például a set-top boxok, az intelligens televíziók és a Blu-ray-lejátszók nem támogatják a VPN szoftver használatát. Ez a funkció VPN-kapcsolaton keresztüli hozzáférést biztosít az ilyen készülékekhez egy otthoni hálózaton, amelyhez nem szükséges VPN-szoftvert telepíteni, és eközben az okostelefonja nem a VPN-hez, hanem az internethez csatlakozik.
 Játékok esetében a VPN-kapcsolat kivédi a DDoS-támadásokat, hogy a PC-játékok és a lejátszott streamek közben ne szakadjon meg a kapcsolat a játékkiszolgálókkal. A VPN-kapcsolat létrehozása az IP-címet is arra a tartományra módosíthatja, ahol a játékkiszolgáló található, ami javítja a játékkiszolgálók pingelését.
 A kezdéshez végezze el az alábbi lépéseket:
@@ -4243,7 +4342,10 @@ Ne emlékeztessen újra
 *A jelenlegi bejelentkezési jelszó helytelen!
 A HTTPS egy viszonylag biztonságosabb webhozzáférési protokoll. Javasoljuk, hogy az ASUS routerbeállítási oldalára a HTTPS protokollon keresztül lépjen be.
 Kattintson ide a folytatáshoz.
+QR-kód beolvasása kapcsolódáshoz
+A telefont használja e QR-kód beolvasására és a WiFi-hálózathoz való ingyenes kapcsolódáshoz
 További részletekért olvassa be a QR-kódot.
+Kézi kapcsolatlétesítés a hálózattal
 Szeretne továbbra is a <span>HTTP protokollal</span> hozzáférni a beállítási oldalhoz?
 HTTPS protokoll használata esetén előfordulhat, hogy a böngészőben figyelmeztető üzenet jelenik meg, amely a biztonsági tanúsítvánnyal kapcsolatos problémáról tájékoztat.
 A böngésző és az ASUS routerbeállítási oldala (ZVDOMAIN_NAMEVZ) közötti kapcsolat e figyelmeztető üzenet ellenére is biztonságos marad.

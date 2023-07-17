@@ -38,17 +38,17 @@ setTimeout("parent.ajaxGetStatus();", 5000);
 }
 else{ //page_modified == 0
 if(parent.getConnectingStatus() == 2 || parent.getConnectingStatus() == 4){
-alert("<#110#>");
+alert("<#116#>");
 parent.closePopup("connecting_table");
 }
 else if(parent.getConnectingStatus() == 3 || parent.getConnectingStatus() == 5){
 parent.closePopup("connecting_table");
 parent.showKeyPanel();
-parent.$("#wl_key_table tbody td:first").html("<span style='color:#FFCC00;'><#1407#></span>");
+parent.$("#wl_key_table tbody td:first").html("<span style='color:#FFCC00;'><#1425#></span>");
 }
 else{
 parent.closePopup('connecting_table');
-alert("<#99#>");
+alert("<#105#>");
 parent.ajaxGetData();
 }
 }

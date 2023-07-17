@@ -50,13 +50,13 @@ document.form.prev_page.value = parent.document.QKform.prev_page.value;
 parent.document.QKform.prev_page.value = "QIS_internet_ip.htm";
 }
 else if(parent.document.getElementById("flag").value == "pppoe"){
-document.getElementById("prevButton").value = '<#381#>';
+document.getElementById("prevButton").value = '<#395#>';
 document.form.prev_page.value = "../Advanced_WAN_Content.asp";
 }
 }
 function submitForm(o, s){
 if(document.form.wan_pppoe_username.value.length == 0){
-alert("<#674#>");
+alert("<#691#>");
 document.form.wan_pppoe_username.select();
 document.form.wan_pppoe_username.focus();
 return false;
@@ -169,14 +169,14 @@ var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#352#>";
+document.getElementById("check_mac").innerHTML="<#364#>";
 return false;
 }else if(flag == 2){
 var childsel=document.createElement("div");
 childsel.setAttribute("id","check_mac");
 childsel.style.color="#FFCC00";
 obj.parentNode.appendChild(childsel);
-document.getElementById("check_mac").innerHTML="<#313#>";
+document.getElementById("check_mac").innerHTML="<#325#>";
 return false;
 }else{
 document.getElementById("check_mac") ? document.getElementById("check_mac").style.display="none" : true;
@@ -382,18 +382,18 @@ margin:0;
 }
 </style>
 <div>
-<div style="font-size:1em;padding:10px 0 10px 15px;text-align:left;"><#483#></div>
-<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#3500#></div>
+<div style="font-size:1em;padding:10px 0 10px 15px;text-align:left;"><#499#></div>
+<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#3571#></div>
 <div style="margin:10px 15px 10px 15px">
 <input type="text" name="wan_pppoe_username" maxlength="64" value="" tabindex="1" style="width:100%;height:30px;padding-left:9px;font-size:0.9em;color:#9BA7B1;background-color:rgba(28,28,28,1);border:1px solid #43474B" onkeypress="return validator.isString(this, event);" size="36" autocapitalize="off" autocomplete="off"/>
 </div>
-<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#481#></div>
+<div style="font-size:1em;color:#B8D8FF;margin-left:15px;"><#497#></div>
 <div style="margin:10px 15px 10px 15px">
 <input type="password" id="wan_pppoe_passwd" name="wan_pppoe_passwd" maxlength="64" value="" tabindex="2" style="width:100%;height:30px;padding-left:9px;font-size:0.9em;color:#9BA7B1;background-color:rgba(28,28,28,1);border:1px solid #43474B" onkeypress="return validator.isString(this, event);" size="36" autocomplete="off" autocorrect="off" autocapitalize="off"/>
 </div>
 <div style="display:table;width:100%;">
 <div style="display:table-row">
-<div style="display:table-cell;font-size:1em;color:#B8D8FF;padding-left: 15px;" onclick="overlib('<#486#>', FIXX, 270, FIXY, 30);" onmouseout="return nd();"><#172#></div>
+<div style="display:table-cell;font-size:1em;color:#B8D8FF;padding-left: 15px;" onclick="overlib('<#502#>', FIXX, 270, FIXY, 30);" onmouseout="return nd();"><#179#></div>
 <div style="display:table-cell;background-image:url('../images/qis/icon_MAC_clone.svg');background-repeat:no-repeat;width:66px;height:20px;" onclick="showMAC();"></div>
 </div>
 </div>
@@ -402,11 +402,11 @@ margin:0;
 </div>
 <div id="vpn_info_radio" style="display:table;width:100%;padding-left:15px;">
 <div style="display:table-row">
-<div style="font-size:1em;color:#B8D8FF;display:table-cell;vertical-align:middle;"><#658#></div>
+<div style="font-size:1em;color:#B8D8FF;display:table-cell;vertical-align:middle;"><#674#></div>
 <div class="switch_radio" style="display:table-cell;text-align:right;padding-right:90px;">
 <input type="checkbox" id="vpn_client_check" class="switch" onclick="enable_vpn_client(this)">
-<label for="vpn_client_check" class="on_state"><#187#></label>
-<label for="vpn_client_check" class="off_state"><#186#></label>
+<label for="vpn_client_check" class="on_state"><#194#></label>
+<label for="vpn_client_check" class="off_state"><#193#></label>
 </div>
 </div>
 </div>
@@ -420,15 +420,15 @@ margin:0;
 </div>
 <div style="display:none">
 <input type="checkbox" id="specialisp" name="specialisp" onclick="enable_ISP_special();">
-<span class="QISGeneralFont" style="margin-left:0px;font-style:normal;color:#66CCFF;font-size:14px;font-weight:bolder;"><#485#></span>
+<span class="QISGeneralFont" style="margin-left:0px;font-style:normal;color:#66CCFF;font-size:14px;font-weight:bolder;"><#501#></span>
 </div>
 <div style="position:fixed;bottom:36px;width:100%;height:50px;background:rgb(34,34,34);z-index:2;">
 <div style="width:100%;height:100%;display:table">
 <div style="display:table-cell;width:50%;vertical-align:middle;text-align:center;" onclick="gotoprev(document.form);">
-<div style="font-size:1em;color:#7E8593"><#205#></div>
+<div style="font-size:1em;color:#7E8593"><#212#></div>
 </div>
 <div style="display:table-cell;width:50%;vertical-align:middle;text-align:center;background-color:#279FD9" onclick="submitForm();">
-<div style="font-size:1em;color:#FFF;"><#204#></div>
+<div style="font-size:1em;color:#FFF;"><#211#></div>
 </div>
 </div>
 </div>
