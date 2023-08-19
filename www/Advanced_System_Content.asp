@@ -532,7 +532,7 @@ if(restart_httpd_flag) {
 action_script_tmp += "restart_httpd;";
 if (('<% nvram_get("enable_ftp"); %>' == "1")
 && ('<% nvram_get("ftp_tls"); %>' == "1")) {
-action_script_tmp += ";restart_ftpd";
+action_script_tmp += "restart_ftpd;";
 }
 }
 if(restart_firewall_flag)
@@ -749,9 +749,9 @@ var timezones = [
 ["NST3.30DST", "(GMT-03:30) <#3438#>"],
 ["EBST3", "(GMT-03:00) <#3439#>"], //EBST3DST_1
 ["UTC3", "(GMT-03:00) <#3440#>"],
+["UTC3DST", "(GMT-03:00) <#3518#>"], //UTC2DST
 ["UTC2_1", "(GMT-02:00) <#3441#>"], //EBST3DST_2
 ["UTC2", "(GMT-02:00) <#3442#>"],
-["UTC2DST", "(GMT-02:00) <#3518#>"],
 ["EUT1DST", "(GMT-01:00) <#3443#>"],
 ["UTC1", "(GMT-01:00) <#3444#>"],
 ["GMT0", "(GMT) <#3445#>"],

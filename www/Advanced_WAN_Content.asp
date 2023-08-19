@@ -33,6 +33,7 @@ max-width:330px;
 #dns_list_Block{
 font-family: Arial, Helvetica, MS UI Gothic, MS P Gothic, Microsoft Yahei UI, sans-serif;
 width:825px;
+border: 1px solid #FFF;
 }
 </style>
 <script type="text/javascript" src="/state.js"></script>
@@ -1448,7 +1449,7 @@ code += "</table>";
 code += "</td></tr></tbody></table>";
 code += "<div style='margin-top:10px;margin-bottom:20px;width:100%;text-align:center;'>";
 code += "<input class='button_gen' type='button' onclick='closeDNSListView()' value='<#206#>'>";
-code += "<input class='button_gen' type='button' onclick='Update_DNS_service()' style='margin-left:15px;' value='<#1687#>'>";
+code += "<input class='button_gen' type='button' onclick='Update_DNS_service()' style='margin-left:15px;' value='<#1688#>'>";
 code += "</div>";
 $("#dns_list_Block").html(code);
 if(document.form.wan_dnsenable_x.value == 1) //Auto
@@ -1507,7 +1508,14 @@ document.form.wan_dns2_x.value = DNSService[m].ServiceIP2;
 }
 }
 }
-closeDNSListView();
+httpApi.nvramSet({
+wan_unit: wan_unit_flag,
+wan_dnsenable_x: document.form.wan_dnsenable_x.value,
+wan_dns1_x: document.form.wan_dns1_x.value,
+wan_dns2_x: document.form.wan_dns2_x.value,
+action_mode: "apply",
+rc_service: "restart_wan_if "+wan_unit_flag
+}, closeDNSListView());
 Update_DNS_status();
 }
 function cal_panel_block(obj){
